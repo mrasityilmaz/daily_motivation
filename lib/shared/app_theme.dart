@@ -1,15 +1,28 @@
+import 'package:daily_motivation/injection/injection_container.dart';
+import 'package:daily_motivation/shared/theme/color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:stacked_themes/stacked_themes.dart';
 
-final class AppTheme {
-  factory AppTheme() => _instance ??= AppTheme._();
+part 'theme/app_theme.dart';
+part 'theme/custom/sign_view_theme.dart';
 
-  AppTheme._();
-  static AppTheme? _instance;
+final class AppTheme implements _AppDarkTheme, _AppLightTheme {
+  factory AppTheme() => instance;
 
-  final ThemeData _themeData = ThemeData(
-    primarySwatch: Colors.blue,
-    visualDensity: VisualDensity.adaptivePlatformDensity,
-  );
+  AppTheme._internal();
+  static final AppTheme instance = AppTheme._internal();
 
-  ThemeData get themeData => _themeData;
+  @override
+  ColorScheme get colorScheme => themeData.colorScheme;
+
+  @override
+  TextTheme get textTheme => themeData.textTheme;
+
+  @override
+  ThemeData get themeData => locator<ThemeService>().isDarkMode ? darkTheme : lightTheme;
+
+  ThemeData get darkTheme => _AppDarkTheme().themeData;
+  ThemeData get lightTheme => _AppLightTheme().themeData;
 }

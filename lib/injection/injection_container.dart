@@ -1,13 +1,14 @@
 import 'package:cookie_jar/cookie_jar.dart';
+import 'package:daily_motivation/core/constants/api_constants.dart';
+import 'package:daily_motivation/core/extensions/list_extension.dart';
+import 'package:daily_motivation/data/repositories/example_repo/data_sources/example_hive_repository.dart';
+import 'package:daily_motivation/domain/repositories/example_repository/data_sources/ilocal_repository.dart';
+import 'package:daily_motivation/injection/injection_container.config.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'package:my_coding_setup/core/constants/api_constants.dart';
-import 'package:my_coding_setup/core/extensions/list_extension.dart';
-import 'package:my_coding_setup/data/repositories/example_repo/data_sources/example_hive_repository.dart';
-import 'package:my_coding_setup/domain/repositories/example_repository/data_sources/ilocal_repository.dart';
-import 'package:my_coding_setup/injection/injection_container.config.dart';
 import 'package:rest_api_package/requests/rest_api_request.dart';
 import 'package:rest_api_package/rest_api_package.dart';
+import 'package:stacked_themes/stacked_themes.dart';
 
 final locator = GetIt.instance;
 late final DataType environmentTag;
@@ -39,6 +40,10 @@ Future<void> configureDependencies({String? defaultEnv}) async {
   ///
   await _initSource<RestApiHttpService>(
     source: RestApiHttpService(Dio(), DefaultCookieJar(), APIConstants.baseURL),
+  );
+
+  await _initSource<ThemeService>(
+    source: ThemeService.getInstance(),
   );
 
   ///

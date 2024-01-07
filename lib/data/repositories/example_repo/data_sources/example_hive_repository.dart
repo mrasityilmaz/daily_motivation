@@ -1,4 +1,4 @@
-import 'package:my_coding_setup/domain/repositories/example_repository/data_sources/ilocal_repository.dart';
+import 'package:daily_motivation/domain/repositories/example_repository/data_sources/ilocal_repository.dart';
 
 class ExampleHiveRepository implements IExampleLocalRepository {
   ///

@@ -1,4 +1,4 @@
-package com.example.my_coding_setup
+package com.example.daily_motivation
 
 import io.flutter.embedding.android.FlutterActivity
 
