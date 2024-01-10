@@ -45,6 +45,7 @@ dependencies:
   auto_size_text: ^3.0.0
   visibility_detector: ^0.4.0+2
   sliver_tools: ^0.2.12
+  path_provider: ^2.1.2
 
 ###
 ### Dependencies
@@ -89,6 +90,9 @@ flutter:
   assets:
     - assets/
     - assets/category_icons/
+    - assets/quotes/
+    - assets/quotes/en/
+    - assets/quotes/tr/
     - test/fixtures/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

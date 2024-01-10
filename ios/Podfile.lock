@@ -5,15 +5,9 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - "no_screenshot (0.0.1+4)":
-    - Flutter
-    - ScreenProtectorKit (~> 1.2.0)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - ScreenProtectorKit (1.2.0)
-  - screenshot_callback (0.0.1):
-    - Flutter
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -24,28 +18,21 @@ PODS:
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_statusbarcolor_ns (from `.symlinks/plugins/flutter_statusbarcolor_ns/ios`)
-  - no_screenshot (from `.symlinks/plugins/no_screenshot/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
-  - screenshot_callback (from `.symlinks/plugins/screenshot_callback/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
 
 SPEC REPOS:
   trunk:
     - FMDB
-    - ScreenProtectorKit
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
   flutter_statusbarcolor_ns:
     :path: ".symlinks/plugins/flutter_statusbarcolor_ns/ios"
-  no_screenshot:
-    :path: ".symlinks/plugins/no_screenshot/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
-  screenshot_callback:
-    :path: ".symlinks/plugins/screenshot_callback/ios"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
   sqflite:
@@ -55,10 +42,7 @@ SPEC CHECKSUMS:
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   flutter_statusbarcolor_ns: 68a360889d88d7915ae524e422aeab62e4063804
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  no_screenshot: 9755402d8c6142353ac9e6874d6d8292370f2960
   path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
-  ScreenProtectorKit: 823e5b0342eea5acd7e9b8d92956a5a7f9c2ce40
-  screenshot_callback: b173e7f4bd8d2ef14a9a5e5a77c0ac6a47578608
   shared_preferences_foundation: 5b919d13b803cadd15ed2dc053125c68730e5126
   sqflite: 31f7eba61e3074736dff8807a9b41581e4f7f15a
 

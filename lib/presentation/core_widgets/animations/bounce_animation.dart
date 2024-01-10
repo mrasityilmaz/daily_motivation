@@ -24,7 +24,7 @@ class BounceAnimationState extends State<BounceAnimation> with SingleTickerProvi
       duration: const Duration(
         milliseconds: 200,
       ),
-      upperBound: 0.2,
+      upperBound: 0.1,
     )..addListener(() {
         setState(() {});
       });
