@@ -2,20 +2,21 @@ part of '../home_view.dart';
 
 @immutable
 final class _SwipableBodySection extends StatelessWidget {
-  const _SwipableBodySection();
+  const _SwipableBodySection(this.list);
+  final List<Map<String, dynamic>> list;
 
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
-      itemCount: 50,
+      itemCount: list.length,
       scrollDirection: Axis.vertical,
       clipBehavior: Clip.none,
       physics: const ClampingScrollPhysics(),
       onPageChanged: (c) {},
       itemBuilder: (context, index) {
-        return const _QuoteTextSection(
-          quote: 'You only live once, but if you do it right, once is enough.',
-          author: '- Mae West',
+        return _QuoteTextSection(
+          quote: list[index]['quote'].toString(),
+          author: '- ${list[index]['author']}',
         );
       },
     );

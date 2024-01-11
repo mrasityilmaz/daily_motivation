@@ -21,7 +21,7 @@ final class _QuoteTextSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             AutoSizeText(
-              'You only live once, but if you do it right, once is enough.',
+              quote,
               style: context.textTheme.headlineMedium?.copyWith(
                 color: Colors.white,
                 fontWeight: FontWeight.w500,
@@ -36,7 +36,7 @@ final class _QuoteTextSection extends StatelessWidget {
             ),
             SizedBox(height: context.normalValue),
             AutoSizeText(
-              '- Mae West',
+              author,
               style: context.textTheme.titleMedium?.copyWith(
                 color: Colors.white,
                 fontWeight: FontWeight.w500,

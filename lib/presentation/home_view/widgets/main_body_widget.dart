@@ -9,33 +9,12 @@ final class _MainBodyWidget extends StatefulWidget {
 }
 
 class _MainBodyWidgetState extends State<_MainBodyWidget> {
-  Future<String> get _localPath async {
-    final directory = await getApplicationDocumentsDirectory();
-    return directory.path;
-  }
+  Future<List<Map<String, dynamic>>> readFile() async {
+    final quotesString = await rootBundle.loadString('assets/quotes/all_quotes.json');
 
-  Future<File> get _localFile async {
-    final path = await _localPath;
-    return File('$path/tsttr.json');
-  }
+    final quotes = json.decode(quotesString) as Map<String, dynamic>;
 
-  Future<void> _writeJson() async {
-    final Stopwatch stopwatch = Stopwatch()..start();
-    final mapData = await readFile();
-    final file = await _localFile;
-
-    await file.writeAsString(mapData).then((value) {
-      stopwatch.stop();
-      print('Time elapsed: ${stopwatch.elapsed}');
-    });
-  }
-
-  Future<String> readFile() async {
-    final quotesString = await rootBundle.loadString('assets/quotes/tr/all_quotes_tr.json');
-
-    final quotes = json.decode(quotesString);
-
-    final String categorssss = (quotes as Map<String, dynamic>).entries.map((e) => e.key).toList().toString();
+    final List<Map<String, dynamic>> quotesList = (quotes['religion']['tr_quotes'] as List).map((e) => e as Map<String, dynamic>).toList();
 
     // final List<({String categoryName, List<Map<String, dynamic>> quotes})> quotesList = List<({String categoryName, List<Map<String, dynamic>> quotes})>.empty(growable: true);
 
@@ -51,14 +30,23 @@ class _MainBodyWidgetState extends State<_MainBodyWidget> {
     // quotesList.map((e) => {e.categoryName.toLowerCase().trim(): e.quotes}).toList().forEach(lastMap.addAll);
 
     // return json.encode(lastMap);
-    return '';
+    return quotesList;
   }
 
   @override
   void initState() {
-    _writeJson();
+    start();
     super.initState();
   }
+
+  Future<void> start() async {
+    final quotes = await readFile();
+    setState(() {
+      quotesList = quotes;
+    });
+  }
+
+  List<Map<String, dynamic>> quotesList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -76,13 +64,13 @@ class _MainBodyWidgetState extends State<_MainBodyWidget> {
         child: Column(
           children: [
             const _TopSection(),
-            const Expanded(
+            Expanded(
               child: Stack(
                 children: [
                   Positioned.fill(
-                    child: _SwipableBodySection(),
+                    child: _SwipableBodySection(quotesList),
                   ),
-                  Positioned.fill(
+                  const Positioned.fill(
                     child: _LikeAndOtherButtonsSection(),
                   ),
                 ],
