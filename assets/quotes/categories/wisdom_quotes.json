@@ -1,0 +1,3102 @@
+{
+    "tr_quotes": [
+        {
+            "category": "Bilgelik",
+            "quote": "Bilgi gerçeklerin birikimidir, oysa bilgelik neyin önemli ve önemli olmadığını ayırt edebilme becerisidir.",
+            "author": "John Izzo",
+            "id": "hs9vmq7tx"
+        },
+        {
+            "category": "Bilgelik",
+            "quote": "Bilgelik, insanlık ve cesaret; üç evrensel değer.",
+            "author": "Konfüçyüs",
+            "id": "ma0wutwcx"
+        },
+        {
+            "category": "Bilgelik",
+            "quote": "Kıymet bilmek ne büyük bir bilgelik.",
+            "author": "Sedat Balun",
+            "id": "qhqj6d0c3"
+        },
+        {
+            "category": "Bilgelik",
+            "quote": "Bilge kişi bilgeliği arar, akılsız kişi onu bulduğunu düşünür.",
+            "author": "İran arasözleri",
+            "id": "v8kf0basm"
+        },
+        {
+            "category": "Bilgelik",
+            "quote": "Büyüklük sadedir. Basittir. Şunu anlayın: Sadece aritmetiğin dört kuralı değişmez ve kalıcıdır. Nihai bilgelik budur.",
+            "author": "Yevgeni İvanoviç Zamyatin",
+            "id": "uqu5n246q"
+        },
+        {
+            "category": "Bilgelik",
+            "quote": "Biraz kendini unut, işığın bilgelik, sıcaklığın merhamet olduğunu bil.",
+            "author": "Paulo Coelho",
+            "id": "ykxvyd9yc"
+        },
+        {
+            "category": "Bilgelik",
+            "quote": "Nezaketten daha büyük ne gibi bir bilgelik bulabilirsiniz?",
+            "author": "Jean-Jacques Rousseau",
+            "id": "w0u7wc445"
+        },
+        {
+            "category": "Bilgelik",
+            "quote": "Daha az sorun olmasını ummaktan vazgeçip daha fazla bilgelik istemeliyiz.",
+            "author": "Robin Sharma",
+            "id": "jxo8yr5gb"
+        }
+    ],
+    "en_quotes": [
+        {
+            "category": "Wisdom",
+            "quote": "Adopt the pace of nature: her secret is patience",
+            "author": "Ralph Waldo Emerson",
+            "id": "0myow7oz8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Yesterday is history, tomorrow is a mystery, today is God's gift, that's why we call it the present",
+            "author": "Joan Rivers",
+            "id": "gkfcb80vj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures",
+            "author": "Lao Tzu",
+            "id": "257myme7x"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Talent is God-given; be humble. Fame is man-given; be thankful. Conceit is self-given; be careful",
+            "author": "Harvey Mackay",
+            "id": "aqr7dhmh4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In every walk with nature one receives far more than he seeks",
+            "author": "John Muir",
+            "id": "euje6m6ve"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "True knowledge exists in knowing that you know nothing",
+            "author": "Socrates",
+            "id": "483byqh7y"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The journey of a thousand miles begins with one step",
+            "author": "Lao Tzu",
+            "id": "18wv5eam1"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom, compassion, and courage are the three universally recognized moral qualities of men",
+            "author": "Confucius",
+            "id": "hzx7d9rxo"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Silence at the proper season is wisdom, and better than any speech",
+            "author": "Plutarch",
+            "id": "sxqeoe2b5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "O, what a tangled web we weave when first we practise to deceive!",
+            "author": "Walter Scott",
+            "id": "ayztklzqb"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Genius is one percent inspiration and ninety-nine percent perspiration",
+            "author": "Thomas A. Edison",
+            "id": "7rejjy3gn"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Talent is God given. Be humble. Fame is man-given. Be grateful. Conceit is self-given. Be careful",
+            "author": "John Wooden",
+            "id": "uqdsyk7hc"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Kindness is more important than wisdom, and the recognition of this is the beginning of wisdom",
+            "author": "Theodore Isaac Rubin",
+            "id": "ahvgvodia"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowledge is knowing that a tomato is a fruit. Wisdom is knowing not to put it in a fruit salad",
+            "author": "Brian O'Driscoll",
+            "id": "ocevxcj9z"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Spectacular achievement is always preceded by unspectacular preparation",
+            "author": "Robert H. Schuller",
+            "id": "h10jl2vxg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "When in doubt, don't",
+            "author": "Benjamin Franklin",
+            "id": "6bqevnlgg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "He is no fool who gives what he cannot keep to gain what he cannot lose",
+            "author": "Jim Elliot",
+            "id": "izrd8ikbh"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "That old law about 'an eye for an eye' leaves everybody blind. The time is always right to do the right thing",
+            "author": "Martin Luther King, Jr.",
+            "id": "l7aiz2aau"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Obstacles are those frightful things you see when you take your eyes off your goal",
+            "author": "Henry Ford",
+            "id": "2765jt34r"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Don't gain the world and lose your soul; wisdom is better than silver or gold",
+            "author": "Bob Marley",
+            "id": "d233w5dfz"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "As you walk down the fairway of life you must smell the roses, for you only get to play one round",
+            "author": "Ben Hogan",
+            "id": "lczjejmbj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "All things must come to the soul from its roots, from where it is planted",
+            "author": "Saint Teresa of Avila",
+            "id": "dgnjy5uqt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "None knows the weight of another's burden",
+            "author": "George Herbert",
+            "id": "38y045s4u"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We are made wise not by the recollection of our past, but by the responsibility for our future",
+            "author": "George Bernard Shaw",
+            "id": "ncqdibzwf"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Make it your habit not to be critical about small things",
+            "author": "Edward Everett Hale",
+            "id": "e5yds6gou"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Habit, if not resisted, soon becomes necessity",
+            "author": "Saint Augustine",
+            "id": "ope2bzbaw"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Never find fault with the absent",
+            "author": "Alexander Pope",
+            "id": "0wxpaygwx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Never tell people how to do things. Tell them what to do and they will surprise you with their ingenuity",
+            "author": "George S. Patton",
+            "id": "sf71wtzpl"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It's the little details that are vital. Little things make big things happen",
+            "author": "John Wooden",
+            "id": "pva2koji5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The way you see people is the way you treat them, and the way you treat them is what they become",
+            "author": "Johann Wolfgang von Goethe",
+            "id": "k7njf6gfz"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Where there is charity and wisdom, there is neither fear nor ignorance",
+            "author": "Francis of Assisi",
+            "id": "r8s0fcq5d"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Nature and books belong to the eyes that see them",
+            "author": "Ralph Waldo Emerson",
+            "id": "xrq67ls07"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "You've got to go out on a limb sometimes because that's where the fruit is",
+            "author": "Will Rogers",
+            "id": "vqcbr932c"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "He who lives in harmony with himself lives in harmony with the universe",
+            "author": "Marcus Aurelius",
+            "id": "vrci1u098"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Step with care and great tact, and remember that Life's a Great Balancing Act",
+            "author": "Dr. Seuss",
+            "id": "bb9gkivpi"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you don't know where you are going, any road will get you there",
+            "author": "Lewis Carroll",
+            "id": "31oouxbjl"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Leave no stone unturned",
+            "author": "Euripides",
+            "id": "n7c1t3dct"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The day of fortune is like a harvest day, We must be busy when the corn is ripe",
+            "author": "Torquato Tasso",
+            "id": "khxm31u7r"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To advise is not to compel",
+            "author": "Anton Chekhov",
+            "id": "0wluav37g"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A good head and a good heart are always a formidable combination",
+            "author": "Nelson Mandela",
+            "id": "pdh9342lf"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowing others is wisdom, knowing yourself is Enlightenment",
+            "author": "Lao Tzu",
+            "id": "dk2gsd80n"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "People don't notice whether it's winter or summer when they're happy",
+            "author": "Anton Chekhov",
+            "id": "tgbw4ah96"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A long habit of not thinking a thing wrong gives it a superficial appearance of being right",
+            "author": "Thomas Paine",
+            "id": "m1aet4hxs"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wise kings generally have wise counselors; and he must be a wise man himself who is capable of distinguishing one",
+            "author": "Diogenes",
+            "id": "1elf0c3no"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "There are many ways of going forward, but only one way of standing still",
+            "author": "Franklin D. Roosevelt",
+            "id": "ae7e5q24e"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom begins in wonder",
+            "author": "Socrates",
+            "id": "elhjjtwd1"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Be as you wish to seem",
+            "author": "Socrates",
+            "id": "4miy87dm2"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The truest wisdom is a resolute determination",
+            "author": "Napoleon Bonaparte",
+            "id": "vyedwed2r"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Blessed are those who give without remembering and take without forgetting",
+            "author": "Elizabeth Bibesco",
+            "id": "7ek2fekzj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wise men make more opportunities than they find",
+            "author": "Francis Bacon",
+            "id": "otksg4t7o"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The opportunity for brotherhood presents itself every time you meet a human being",
+            "author": "Jane Wyman",
+            "id": "vx9akwrjn"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you only have a hammer, you tend to see every problem as a nail",
+            "author": "Abraham Maslow",
+            "id": "uqt818g3p"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom oft times consists of knowing what to do next",
+            "author": "Herbert Hoover",
+            "id": "l7nme7x44"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It has long been an axiom of mine that the little things are infinitely the most important",
+            "author": "Arthur Conan Doyle",
+            "id": "em655hso6"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The greater our knowledge increases the more our ignorance unfolds",
+            "author": "John F. Kennedy",
+            "id": "ytztekyk2"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Give me a lever long enough and a fulcrum on which to place it, and I shall move the world",
+            "author": "Archimedes",
+            "id": "eos8qe9x1"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It's not what happens to you, but how you react to it that matters",
+            "author": "Epictetus",
+            "id": "7s20hwncx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "They must often change, who would be constant in happiness or wisdom",
+            "author": "Confucius",
+            "id": "g04jryx6d"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "All human wisdom is summed up in two words; wait and hope",
+            "author": "Alexandre Dumas",
+            "id": "mqdx1fa0w"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In wisdom gathered over time I have found that every experience is a form of exploration",
+            "author": "Ansel Adams",
+            "id": "7be5zkpdd"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The invariable mark of wisdom is to see the miraculous in the common",
+            "author": "Ralph Waldo Emerson",
+            "id": "jofik2ag5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The final wisdom of life requires not the annulment of incongruity but the achievement of serenity within and above it",
+            "author": "Reinhold Niebuhr",
+            "id": "9unv7s5wn"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Start wide, expand further, and never look back",
+            "author": "Arnold Schwarzenegger",
+            "id": "yt6fup989"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The young man knows the rules, but the old man knows the exceptions",
+            "author": "Oliver Wendell Holmes, Sr.",
+            "id": "c9gvhjycq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Beware, so long as you live, of judging men by their outward appearance",
+            "author": "Jean de La Fontaine",
+            "id": "kbivq7qra"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The opinion which other people have of you is their problem, not yours",
+            "author": "Elisabeth Kubler-Ross",
+            "id": "e7uahzyly"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you want a thing done well, do it yourself",
+            "author": "Napoleon Bonaparte",
+            "id": "drf0ojb97"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowledge without justice ought to be called cunning rather than wisdom",
+            "author": "Plato",
+            "id": "edsl5g2qj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Never interrupt someone doing what you said couldn't be done",
+            "author": "Amelia Earhart",
+            "id": "220dsghpd"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Before we acquire great power we must acquire wisdom to use it well",
+            "author": "Ralph Waldo Emerson",
+            "id": "ahp64bzko"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Honesty is the best policy",
+            "author": "Benjamin Franklin",
+            "id": "kecm6qt06"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "What wisdom can you find that is greater than kindness?",
+            "author": "Jean-Jacques Rousseau",
+            "id": "nyeh343v8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We don't receive wisdom; we must discover it for ourselves after a journey that no one can take for us or spare us",
+            "author": "Marcel Proust",
+            "id": "07ipu5gno"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "My advice to you is not to inquire why or whither, but just enjoy your ice cream while it's on your plate",
+            "author": "Thornton Wilder",
+            "id": "xopsbcv4k"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Of all the things which wisdom provides to make us entirely happy, much the greatest is the possession of friendship",
+            "author": "Epicurus",
+            "id": "7pjkgmyvh"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Singleness of purpose is one of the chief essentials for success in life, no matter what may be one's aim",
+            "author": "John D. Rockefeller",
+            "id": "3gcgb7jv0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To embrace the whole world in friendship is wisdom. This wisdom is not changeable like the flowers that bloom and fade",
+            "author": "Thiruvalluvar",
+            "id": "cv7hz58a9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Follow your instincts. That's where true wisdom manifests itself",
+            "author": "Oprah Winfrey",
+            "id": "l5o2bhpdv"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is the knowledge of good and evil, not the strength to choose between the two",
+            "author": "John Cheever",
+            "id": "m7nexnq25"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Better mad with the rest of the world than wise alone",
+            "author": "Baltasar Gracian",
+            "id": "rud4y2rpg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Logic is the beginning of wisdom, not the end",
+            "author": "Leonard Nimoy",
+            "id": "6e286gy3k"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "With pride, there are many curses. With humility, there come many blessings",
+            "author": "Ezra Taft Benson",
+            "id": "kr5zg7k93"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I'd rather regret the things I've done than regret the things I haven't done",
+            "author": "Lucille Ball",
+            "id": "gad1gnlh0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Your sacred space is where you can find yourself again and again",
+            "author": "Joseph Campbell",
+            "id": "7qu4jvbyf"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Ignorant men raise questions that wise men answered a thousand years ago",
+            "author": "Johann Wolfgang von Goethe",
+            "id": "7eiza0k2i"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Nothing that you have not given away will ever be really yours",
+            "author": "C. S. Lewis",
+            "id": "kky86kvb8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The virtue of justice consists in moderation, as regulated by wisdom",
+            "author": "Aristotle",
+            "id": "7593y6zho"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Don't taunt the alligator until after you've crossed the creek",
+            "author": "Dan Rather",
+            "id": "cuoxxesf2"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To light one candle to God and another to the Devil is the principle of wisdom",
+            "author": "Jose Bergamin",
+            "id": "en01j7xr9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Gray hairs are signs of wisdom if you hold your tongue, speak and they are but hairs, as in the young",
+            "author": "Rabindranath Tagore",
+            "id": "cwu1qs02r"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If I am fool, it is, at least, a doubting one; and I envy no one the certainty of his self-approved wisdom",
+            "author": "Lord Byron",
+            "id": "lc0djucll"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is oftentimes nearer when we stoop than when we soar",
+            "author": "William Wordsworth",
+            "id": "ghodjeyqt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The wisdom of the wise, and the experience of ages, may be preserved by quotation",
+            "author": "Isaac D'Israeli",
+            "id": "xut2s2xew"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The motto of chivalry is also the motto of wisdom; to serve all, but love only one",
+            "author": "Honore de Balzac",
+            "id": "b3fhm87sr"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "They whom truth and wisdom lead, can gather honey from a weed",
+            "author": "William Cowper",
+            "id": "lcz92kisf"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To wear your heart on your sleeve isn't a very good plan; you should wear it inside, where it functions best",
+            "author": "Margaret Thatcher",
+            "id": "jwcdysnhm"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Climb the mountains and get their good tidings",
+            "author": "John Muir",
+            "id": "cbsvdmvey"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Kindness is wisdom",
+            "author": "Philip James Bailey",
+            "id": "hgrdlugq6"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A heart well prepared for adversity in bad times hopes, and in good times fears for a change in fortune",
+            "author": "Horace",
+            "id": "qkcffo5xx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Once you label me you negate me",
+            "author": "Soren Kierkegaard",
+            "id": "j1twr5nfw"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Avoid having your ego so close to your position that when your position falls, your ego goes with it",
+            "author": "Colin Powell",
+            "id": "ok4jgvmb5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We need to hear stories from older women. There's a wealth of wisdom and real resilience there, but they're silenced",
+            "author": "Hannah Gadsby",
+            "id": "1f299n16y"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "You can observe a lot by watching",
+            "author": "Yogi Berra",
+            "id": "yr307jl9r"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you were to offer a thirsty man all wisdom, you would not please him more than if you gave him a drink",
+            "author": "Sophocles",
+            "id": "xmlb65bc6"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "But life is long. And it is the long run that balances the short flare of interest and passion",
+            "author": "Sylvia Plath",
+            "id": "8h53nusrq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is always an overmatch for strength",
+            "author": "Phil Jackson",
+            "id": "fywnooa0t"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The extreme limit of wisdom, that's what the public calls madness",
+            "author": "Jean Cocteau",
+            "id": "oovovmg57"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Today's mighty oak is just yesterday's nut, that held its ground",
+            "author": "David Icke",
+            "id": "9t6h6amta"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The art of storytelling is reaching its end because the epic side of truth, wisdom, is dying out",
+            "author": "Walter Benjamin",
+            "id": "fvrg2yhw9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Always be a first-rate version of yourself, instead of a second-rate version of somebody else",
+            "author": "Judy Garland",
+            "id": "m83h22k6s"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Start with what is right rather than what is acceptable",
+            "author": "Franz Kafka",
+            "id": "zw0ulnk0y"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The hours of folly are measured by the clock; but of wisdom, no clock can measure",
+            "author": "William Blake",
+            "id": "pog39bgrx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Pure, holy simplicity confounds all the wisdom of this world and the wisdom of the flesh",
+            "author": "Francis of Assisi",
+            "id": "t8g0ajywc"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It's easier to resist at the beginning than at the end",
+            "author": "Leonardo da Vinci",
+            "id": "bnywijz6n"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The time to repair the roof is when the sun is shining",
+            "author": "John F. Kennedy",
+            "id": "xk9oc4hkt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "There are three faithful friends - an old wife, an old dog, and ready money",
+            "author": "Benjamin Franklin",
+            "id": "emyqkimum"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The attempt to combine wisdom and power has only rarely been successful and then only for a short while",
+            "author": "Albert Einstein",
+            "id": "7flgw4skn"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The truth is not for all men, but only for those who seek it",
+            "author": "Ayn Rand",
+            "id": "7oh57s8vr"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "There is more wisdom in your body than in your deepest philosophy",
+            "author": "Friedrich Nietzsche",
+            "id": "pbygrycoh"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Sorrow is knowledge, those that know the most must mourn the deepest, the tree of knowledge is not the tree of life",
+            "author": "Lord Byron",
+            "id": "k4d78ki9h"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Life is a travelling to the edge of knowledge, then a leap taken",
+            "author": "D. H. Lawrence",
+            "id": "dope9sqs4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you set out to be liked, you would be prepared to compromise on anything at any time, and you would achieve nothing",
+            "author": "Margaret Thatcher",
+            "id": "oi5g45w5b"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Democracy is a pathetic belief in the collective wisdom of individual ignorance",
+            "author": "H. L. Mencken",
+            "id": "t1ur5maug"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Swim upstream. Go the other way. Ignore the conventional wisdom",
+            "author": "Sam Walton",
+            "id": "q07s9glab"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowledge which is divorced from justice, may be called cunning rather than wisdom",
+            "author": "Marcus Tullius Cicero",
+            "id": "n2kd84vfr"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To know how to grow old is the master work of wisdom, and one of the most difficult chapters in the great art of living",
+            "author": "Herman Melville",
+            "id": "v2bpu68mx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you have the guts to keep making mistakes, your wisdom and intelligence leap forward with huge momentum",
+            "author": "Holly Near",
+            "id": "59ea4az9l"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Think big thoughts but relish small pleasures",
+            "author": "H. Jackson Brown, Jr.",
+            "id": "fjydf459g"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To profit from good advice requires more wisdom than to give it",
+            "author": "Wilson Mizner",
+            "id": "ddeqi7t89"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Dost thou love life? Then do not squander time, for that is the stuff life is made of",
+            "author": "Benjamin Franklin",
+            "id": "lm9bqg9oi"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Every man is a damn fool for at least five minutes every day; wisdom consists in not exceeding the limit",
+            "author": "Elbert Hubbard",
+            "id": "c97bfl8ek"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The sum of wisdom is that time is never lost that is devoted to work",
+            "author": "Ralph Waldo Emerson",
+            "id": "1mvy8c8eo"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is not wisdom but Authority that makes a law",
+            "author": "Thomas Hobbes",
+            "id": "xtklakxvx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It requires wisdom to understand wisdom: the music is nothing if the audience is deaf",
+            "author": "Walter Lippmann",
+            "id": "s4tgazbio"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Music is a higher revelation than all wisdom and philosophy",
+            "author": "Ludwig van Beethoven",
+            "id": "0tewud91y"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom stands at the turn in the road and calls upon us publicly, but we consider it false and despise its adherents",
+            "author": "Khalil Gibran",
+            "id": "9ktc4sv6e"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Earthly wisdom is doing what comes naturally. Godly wisdom is doing what the Holy Spirit compels us to do",
+            "author": "Charles Stanley",
+            "id": "sy7hxnkpd"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom consists of the anticipation of consequences",
+            "author": "Norman Cousins",
+            "id": "ybt9x6e30"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is the neglect of timely repair that makes rebuilding necessary",
+            "author": "Richard Whately",
+            "id": "nz9sl1ays"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "How many cares one loses when one decides not to be something but to be someone",
+            "author": "Coco Chanel",
+            "id": "rvudv79un"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom alone is the science of other sciences",
+            "author": "Plato",
+            "id": "8dt9u4u0x"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Commitment is an act, not a word",
+            "author": "Jean-Paul Sartre",
+            "id": "ekmks6uvg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To conquer fear is the beginning of wisdom",
+            "author": "Bertrand Russell",
+            "id": "y925c2x55"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Rich people without wisdom and learning are but sheep with golden fleeces",
+            "author": "Solon",
+            "id": "sdjgvznmo"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The function of wisdom is to discriminate between good and evil",
+            "author": "Marcus Tullius Cicero",
+            "id": "spia3lxsg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We cannot become what we need to be by remaining what we are",
+            "author": "Max de Pree",
+            "id": "bwkoits9n"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Mistakes are the usual bridge between inexperience and wisdom",
+            "author": "Phyllis Theroux",
+            "id": "9kt3l6m92"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The art of being wise is the art of knowing what to overlook",
+            "author": "William James",
+            "id": "v8fw6tmky"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom comes alone through suffering",
+            "author": "Aeschylus",
+            "id": "1uojdzj5o"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Every silver lining has a cloud",
+            "author": "Mary Kay Ash",
+            "id": "gnkyyeybu"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wise sayings often fall on barren ground, but a kind word is never thrown away",
+            "author": "Arthur Helps",
+            "id": "rrktgkwer"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Never accept ultimatums, conventional wisdom, or absolutes",
+            "author": "Christopher Reeve",
+            "id": "0tkgypili"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The fall of dropping water wears away the Stone",
+            "author": "Lucretius",
+            "id": "3wfw23mka"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Since human wisdom cannot secure us from accidents, it is the greatest effort of reason to bear them well",
+            "author": "John Paul Jones",
+            "id": "d9dk1mbim"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Genius unrefined resembles a flash of lightning, but wisdom is like the sun",
+            "author": "Franz Grillparzer",
+            "id": "bqga4lyjh"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I know that inner wisdom is more precious than wealth. The more you spend it, the more you gain",
+            "author": "Oprah Winfrey",
+            "id": "l6nlpt7mv"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If the world were perfect, it wouldn't be",
+            "author": "Yogi Berra",
+            "id": "jvqk2jxqp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "You need to have extraordinary wisdom to be the forerunner",
+            "author": "Ma Huateng",
+            "id": "91pszbfn1"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Kisses are a better fate than wisdom",
+            "author": "e. e. cummings",
+            "id": "xnuq86z1o"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The clouds may drop down titles and estates, and wealth may seek us, but wisdom must be sought",
+            "author": "Edward Young",
+            "id": "71qr0y0ac"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "All wisdom does not reside in Delhi",
+            "author": "P. Chidambaram",
+            "id": "uwk9o4lka"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Preconceived notions are the locks on the door to wisdom",
+            "author": "Mary Browne",
+            "id": "m5w0sdzur"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is the province of knowledge to speak, and it is the privilege of wisdom to listen",
+            "author": "Oliver Wendell Holmes, Sr.",
+            "id": "jh14odccd"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I'm married. My wife, Stella - a beautiful woman. She's brought a lot of peace to my life, a lot of wisdom",
+            "author": "Anthony Hopkins",
+            "id": "fjlmvnukz"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Without courage, wisdom bears no fruit",
+            "author": "Baltasar Gracian",
+            "id": "upto9hprx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Learning sleeps and snores in libraries, but wisdom is everywhere, wide awake, on tiptoe",
+            "author": "Josh Billings",
+            "id": "dromx7d0g"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you call failures experiments, you can put them in your resume and claim them as achievements",
+            "author": "Mason Cooley",
+            "id": "amw5h1gge"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To win without risk is to triumph without glory",
+            "author": "Pierre Corneille",
+            "id": "vksh1d8jz"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A fool flatters himself, a wise man flatters the fool",
+            "author": "Edward G. Bulwer-Lytton",
+            "id": "l9hqzmvry"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "He who lives by the crystal ball soon learns to eat ground glass",
+            "author": "Edgar Fiedler",
+            "id": "c5ozezbqz"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Data is not information, information is not knowledge, knowledge is not understanding, understanding is not wisdom",
+            "author": "Clifford Stoll",
+            "id": "z88th5dlm"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowledge is a process of piling up facts; wisdom lies in their simplification",
+            "author": "Martin H. Fischer",
+            "id": "9q6duhjv0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "People seldom refuse help, if one offers it in the right way",
+            "author": "A. C. Benson",
+            "id": "s88zdgfyn"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "After all my possessions had been burned, God gave me the wisdom to return to Jerusalem",
+            "author": "Shmuel Yosef Agnon",
+            "id": "rudzvngvb"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If I don't have wisdom, I can teach you only ignorance",
+            "author": "Leo Buscaglia",
+            "id": "i34lolap5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Tragedy is a tool for the living to gain wisdom, not a guide by which to live",
+            "author": "Robert Kennedy",
+            "id": "o4boftuap"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom cannot come by railroad or automobile or aeroplane, or be hurried up by telegraph or telephone",
+            "author": "John Burroughs",
+            "id": "cgf5cy59v"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom comes from within. Knowledge is acquired and can sometimes put a screen on your wisdom",
+            "author": "A. R. Rahman",
+            "id": "uhntpu2e7"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Public opinion is no more than this: what people think that other people think",
+            "author": "Alfred Austin",
+            "id": "49meko5k2"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "All of us, at certain moments of our lives, need to take advice and to receive help from other people",
+            "author": "Alexis Carrel",
+            "id": "9oh4bqs9k"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Applause is a receipt, not a bill",
+            "author": "Dale Carnegie",
+            "id": "3cwel0f48"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A monarchy conducted with infinite wisdom and infinite benevolence is the most perfect of all possible governments",
+            "author": "Ezra Stiles",
+            "id": "u1cjcc3ol"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The pine stays green in winter... wisdom in hardship",
+            "author": "Norman Douglas",
+            "id": "mcklc66dx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Appearances are often deceiving",
+            "author": "Aesop",
+            "id": "j3xij0d3p"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Who in their infinite wisdom decreed that Little League uniforms be white? Certainly not a mother",
+            "author": "Erma Bombeck",
+            "id": "d2lv5knu0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To keep your secret is wisdom; but to expect others to keep it is folly",
+            "author": "Samuel Johnson",
+            "id": "3mqeg5p5i"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If fortune favors you do not be elated; if she frowns do not despond",
+            "author": "Ausonius",
+            "id": "e4gmuxvbi"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "One part of wisdom is knowing what you don't need anymore and letting it go",
+            "author": "Jane Fonda",
+            "id": "90xpm7ip9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Cleverness is not wisdom",
+            "author": "Euripides",
+            "id": "wqkjwruuk"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is not from reason that justice springs, but goodness is born of wisdom",
+            "author": "Maurice Maeterlinck",
+            "id": "m0pokm70r"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Always keep an open mind and a compassionate heart",
+            "author": "Phil Jackson",
+            "id": "dag7zxu16"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom consists not so much in knowing what to do in the ultimate as knowing what to do next",
+            "author": "Herbert Hoover",
+            "id": "nks8rsgm2"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "For the Holy Ghost blesses us with optimism and wisdom at times of challenge that we simply cannot muster on our own",
+            "author": "Sheri L. Dew",
+            "id": "kjclt9ezz"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In complete darkness, it is only knowledge and wisdom that separates us",
+            "author": "Janet Jackson",
+            "id": "yu3b3d0hu"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The weak have remedies, the wise have joys; superior wisdom is superior bliss",
+            "author": "Edward Young",
+            "id": "0147pmz79"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A man should always consider how much he has more than he wants",
+            "author": "Joseph Addison",
+            "id": "m3sa3t0tq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To know one's self is wisdom, but not to know one's neighbors is genius",
+            "author": "Minna Antrim",
+            "id": "ny9t9203d"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The doorstep to the temple of wisdom is a knowledge of our own ignorance",
+            "author": "Benjamin Franklin",
+            "id": "wzxj7fjts"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Our happiness depends on wisdom all the way",
+            "author": "Sophocles",
+            "id": "4y2uzcfff"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We gain the strength of the temptation we resist",
+            "author": "Ralph Waldo Emerson",
+            "id": "dyum5wvai"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Whatever you do in life, surround yourself with smart people who'll argue with you",
+            "author": "John Wooden",
+            "id": "zih2j2dm8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "From the errors of others, a wise man corrects his own",
+            "author": "Publilius Syrus",
+            "id": "tyeke5i5n"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is a characteristic of wisdom not to do desperate things",
+            "author": "Henry David Thoreau",
+            "id": "1b92w8oqh"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowledge comes, but wisdom lingers",
+            "author": "Alfred Lord Tennyson",
+            "id": "ax5n02xhl"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "All this worldly wisdom was once the unamiable heresy of some wise man",
+            "author": "Henry David Thoreau",
+            "id": "terwrblot"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Who is wise in love, love most, say least",
+            "author": "Alfred Lord Tennyson",
+            "id": "qd2nx3v9t"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The doors of wisdom are never shut",
+            "author": "Benjamin Franklin",
+            "id": "6epo3ga3e"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In life, all good things come hard, but wisdom is the hardest to come by",
+            "author": "Lucille Ball",
+            "id": "5rh1m9dwu"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We are wiser than we know",
+            "author": "Ralph Waldo Emerson",
+            "id": "xfano9e0a"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Does wisdom perhaps appear on the earth as a raven which is inspired by the smell of carrion?",
+            "author": "Friedrich Nietzsche",
+            "id": "vv2w5ft26"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Never does nature say one thing and wisdom another",
+            "author": "Juvenal",
+            "id": "r8rrze3up"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I didn't get where I am today by worryin' about how I'd feel tomorrow",
+            "author": "Ron White",
+            "id": "q5lo350vb"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I hope our wisdom will grow with our power, and teach us, that the less we use our power the greater it will be",
+            "author": "Thomas Jefferson",
+            "id": "j2bh0eqmq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom has its root in goodness, not goodness its root in wisdom",
+            "author": "Ralph Waldo Emerson",
+            "id": "a67mzto7b"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "There are three classes of men; lovers of wisdom, lovers of honor, and lovers of gain",
+            "author": "Plato",
+            "id": "j4s0gnkyk"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Ignorance and bungling with love are better than wisdom and skill without",
+            "author": "Henry David Thoreau",
+            "id": "vv9vfhygw"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A little knowledge that acts is worth infinitely more than much knowledge that is idle",
+            "author": "Khalil Gibran",
+            "id": "t9mu9u60f"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Memory is the mother of all wisdom",
+            "author": "Aeschylus",
+            "id": "bqrifxetg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Nine-tenths of wisdom is being wise in time",
+            "author": "Theodore Roosevelt",
+            "id": "0h2juqgsi"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A mistake is simply another way of doing things",
+            "author": "Katharine Graham",
+            "id": "3zb753m8h"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "When you betray somebody else, you also betray yourself",
+            "author": "Isaac Bashevis Singer",
+            "id": "usuv01qd8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Few people have the wisdom to prefer the criticism that would do them good, to the praise that deceives them",
+            "author": "Francois de La Rochefoucauld",
+            "id": "2nhicb9gb"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Cunning... is but the low mimic of wisdom",
+            "author": "Plato",
+            "id": "zhof26j2x"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We never understand how little we need in this world until we know the loss of it",
+            "author": "James M. Barrie",
+            "id": "dyreessds"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Each of us finds his unique vehicle for sharing with others his bit of wisdom",
+            "author": "Ram Dass",
+            "id": "ow3vav65e"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If suffering brings wisdom, I would wish to be less wise",
+            "author": "William Butler Yeats",
+            "id": "q56cttvi4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Nobody can give you wiser advice than yourself",
+            "author": "Marcus Tullius Cicero",
+            "id": "auulrrmwx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A poem begins in delight and ends in wisdom",
+            "author": "Robert Frost",
+            "id": "6hwkh537m"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Our character is what we do when we think no one is looking",
+            "author": "H. Jackson Brown, Jr.",
+            "id": "hjyd65fq4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Champions invariably have fervent philosophical beliefs. Philosophy, in its simplest terms, means 'the love of wisdom.'",
+            "author": "Zig Ziglar",
+            "id": "xo3wx6plv"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom I know is social. She seeks her fellows. But Beauty is jealous, and illy bears the presence of a rival",
+            "author": "Thomas Jefferson",
+            "id": "ifa25b40n"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is good even for old men to learn wisdom",
+            "author": "Aeschylus",
+            "id": "wf8raue3u"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "When you give yourself, you receive more than you give",
+            "author": "Antoine de Saint-Exupery",
+            "id": "nk206flnv"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The best way to predict the future is to invent it",
+            "author": "Alan Kay",
+            "id": "db7doxb08"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It doesn't matter how much wisdom you have. If you don't have position, you have nothing. That's the tragedy of India",
+            "author": "Rahul Gandhi",
+            "id": "civez84i2"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Use what talents you possess; the woods would be very silent if no birds sang there except those that sang best",
+            "author": "Henry Van Dyke",
+            "id": "rus7qygy9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The lure of the distant and the difficult is deceptive. The great opportunity is where you are",
+            "author": "John Burroughs",
+            "id": "ujcv0lhe3"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is the power to put our time and our knowledge to the proper use",
+            "author": "Thomas J. Watson",
+            "id": "r6869xcnw"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Our deeds determine us, as much as we determine our deeds",
+            "author": "George Eliot",
+            "id": "z6e4hxx12"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The higher we are placed, the more humbly we should walk",
+            "author": "Marcus Tullius Cicero",
+            "id": "yoms4f37j"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Many sophisticated, intelligent people lack wisdom and common sense",
+            "author": "Joyce Meyer",
+            "id": "z9hnfxdjr"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Man's wisdom is his best friend; folly his worst enemy",
+            "author": "William Temple",
+            "id": "yh1dnlrg9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Both in thought and in feeling, even though time be real, to realise the unimportance of time is the gate of wisdom",
+            "author": "Bertrand Russell",
+            "id": "e63gyixsh"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "This is the highest wisdom that I own; freedom and life are earned by those alone who conquer them each day anew",
+            "author": "Johann Wolfgang von Goethe",
+            "id": "2juk8l5pt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Strength and wisdom are not opposing values",
+            "author": "William J. Clinton",
+            "id": "gk5u89oia"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The wheel that squeaks the loudest is the one that gets the grease",
+            "author": "Josh Billings",
+            "id": "e4ht30q6l"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "When a thing is done, it's done. Don't look back. Look forward to your next objective",
+            "author": "George C. Marshall",
+            "id": "jwofb7ely"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Slow and steady wins the race",
+            "author": "Robert Lloyd",
+            "id": "oym1lgpje"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is the nature of the wise to resist pleasures, but the foolish to be a slave to them",
+            "author": "Epictetus",
+            "id": "6mu7bz9l2"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A closed mouth catches no flies",
+            "author": "Miguel de Cervantes",
+            "id": "22iwuji1u"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is impossible to love and to be wise",
+            "author": "Francis Bacon",
+            "id": "wycih6dop"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It isn't what you do, but how you do it",
+            "author": "John Wooden",
+            "id": "4r6kkr4ht"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is found only in truth",
+            "author": "Johann Wolfgang von Goethe",
+            "id": "26fllocf5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom has never made a bigot, but learning has",
+            "author": "Josh Billings",
+            "id": "ni6bl3xk9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Strong characters are brought out by change of situation, and gentle ones by permanence",
+            "author": "Jean Paul",
+            "id": "1w5g5bk22"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Between saying and doing, many a pair of shoes is worn out",
+            "author": "Iris Murdoch",
+            "id": "z2xcbiq3a"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Vanity can easily overtake wisdom. It usually overtakes common sense",
+            "author": "Julian Casablancas",
+            "id": "5by24xmi4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Be happy. It's one way of being wise",
+            "author": "Sidonie Gabrielle Colette",
+            "id": "2ohtm0tsp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom sails with wind and time",
+            "author": "John Florio",
+            "id": "a3hz84n41"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A proverb is the wisdom of many and the wit of one",
+            "author": "Lord John Russell",
+            "id": "q5qejmej5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Plodding wins the race",
+            "author": "Aesop",
+            "id": "o1ow9urxw"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Please all, and you will please none",
+            "author": "Aesop",
+            "id": "hgocu88ig"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Irony is the gaiety of reflection and the joy of wisdom",
+            "author": "Anatole France",
+            "id": "cnku8sgon"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Love is the wisdom of the fool and the folly of the wise",
+            "author": "Samuel Johnson",
+            "id": "zzgwe7uit"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A ruffled mind makes a restless pillow",
+            "author": "Charlotte Bronte",
+            "id": "o6whmpj55"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Back of every mistaken venture and defeat is the laughter of wisdom, if you listen",
+            "author": "Carl Sandburg",
+            "id": "t6rov0bnj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowledge is proud that it knows so much; wisdom is humble that it knows no more",
+            "author": "William Cowper",
+            "id": "2atvd5629"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The superior man blames himself. The inferior man blames others",
+            "author": "Don Shula",
+            "id": "9z7vllm36"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Set your course by the stars, not by the lights of every passing ship",
+            "author": "Omar N. Bradley",
+            "id": "m2yl6bxt3"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If we continue to develop our technology without wisdom or prudence, our servant may prove to be our executioner",
+            "author": "Omar N. Bradley",
+            "id": "wpy4a2mb3"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The road of excess leads to the palace of wisdom",
+            "author": "William Blake",
+            "id": "ll31o6ibj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "There is a wisdom of the head, and a wisdom of the heart",
+            "author": "Charles Dickens",
+            "id": "k2y9yitqg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A loving heart is the truest wisdom",
+            "author": "Charles Dickens",
+            "id": "zgi9ovwjx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We can be knowledgable with other men's knowledge but we cannot be wise with other men's wisdom",
+            "author": "Michel de Montaigne",
+            "id": "3piyglt9c"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Great wisdom is generous; petty wisdom is contentious. Great speech is impassioned, small speech cantankerous",
+            "author": "Zhuangzi",
+            "id": "tqkqj6qmi"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I don't have the strength or wisdom to get through a single day without guidance and grace from God",
+            "author": "Tony Dungy",
+            "id": "su4yofny1"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Fear cannot be without hope nor hope without fear",
+            "author": "Baruch Spinoza",
+            "id": "dzjur49eh"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Everything in the world may be endured except continual prosperity",
+            "author": "Johann Wolfgang von Goethe",
+            "id": "0jd2n0mg4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Habit is the nursery of errors",
+            "author": "Victor Hugo",
+            "id": "4h1fp26hd"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Tis but a part we see, and not a whole",
+            "author": "Alexander Pope",
+            "id": "oitz78mhp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Mixing one's wines may be a mistake, but old and new wisdom mix admirably",
+            "author": "Bertolt Brecht",
+            "id": "znmrkxhtk"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A man begins cutting his wisdom teeth the first time he bites off more than he can chew",
+            "author": "Herb Caen",
+            "id": "w5yn63uwv"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you want to go east, don't go west",
+            "author": "Ramakrishna",
+            "id": "v55ekj4h4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Rightly defined philosophy is simply the love of wisdom",
+            "author": "Marcus Tullius Cicero",
+            "id": "b0hb8o465"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A mouse does not rely on just one hole",
+            "author": "Plautus",
+            "id": "d4g3r1a2j"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "True wisdom listens more, talks less and can get along with all types of people",
+            "author": "Kiana Tom",
+            "id": "mizes00j7"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "You always have two choices: your commitment versus your fear",
+            "author": "Sammy Davis, Jr.",
+            "id": "01aup7eal"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Music is your own experience, your own thoughts, your wisdom",
+            "author": "Charlie Parker",
+            "id": "ioyyq9sqp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Doubt is the vestibule through which all must pass before they can enter into the temple of wisdom",
+            "author": "Charles Caleb Colton",
+            "id": "iido9sb8f"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "There is no wisdom of man that can change men or change nations; it is the power and wisdom of God that can",
+            "author": "Yemi Osinbajo",
+            "id": "kd7i2io47"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Seek the lofty by reading, hearing and seeing great work at some moment every day",
+            "author": "Thornton Wilder",
+            "id": "u0np6m0dl"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The greater the step forward in knowledge, the greater is the one taken backward in search of wisdom",
+            "author": "Stephen Gardiner",
+            "id": "lovymcb0f"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I consider wisdom supernatural because it isn't taught by men - it's a gift from God",
+            "author": "Joyce Meyer",
+            "id": "eu96rl4of"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Purity engenders Wisdom, Passion avarice, and Ignorance folly, infatuation and darkness",
+            "author": "Cyril Connolly",
+            "id": "6o3fxdk96"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Once I turned 35, I got the bonus of some wisdom and began to accept life on its own terms",
+            "author": "Mike Myers",
+            "id": "k80mir04j"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you want to be found stand where the seeker seeks",
+            "author": "Sidney Lanier",
+            "id": "20xhqo7w0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "What happens is not as important as how you react to what happens",
+            "author": "Ellen Glasgow",
+            "id": "dzch4sii5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is knowing what to do next; virtue is doing it",
+            "author": "David Starr Jordan",
+            "id": "f2mye69rq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Pain is the doorway to wisdom and to truth",
+            "author": "Keith Miller",
+            "id": "eon0lol2s"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "No one wants advice - only corroboration",
+            "author": "John Steinbeck",
+            "id": "sjglfcnkj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Magnanimity in politics is not seldom the truest wisdom; and a great empire and little minds go ill together",
+            "author": "Edmund Burke",
+            "id": "cgnrm4moa"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A prudent question is one-half of wisdom",
+            "author": "Francis Bacon",
+            "id": "ww0l08l8v"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Holy wisdom confounds Satan and all his wickednesses",
+            "author": "Francis of Assisi",
+            "id": "xj2sw6xrd"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Trouble shared is trouble halved",
+            "author": "Lee Iacocca",
+            "id": "e18adyh21"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Man is only great when he acts from passion",
+            "author": "Benjamin Disraeli",
+            "id": "vsdgnfwt5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The wisdom of the wise and the experience of the ages are perpetuated by quotations",
+            "author": "Benjamin Disraeli",
+            "id": "wc2t8smrt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Though sages may pour out their wisdom's treasure, there is no sterner moralist than pleasure",
+            "author": "Lord Byron",
+            "id": "czzn6q9ig"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Silence is true wisdom's best reply",
+            "author": "Euripides",
+            "id": "prx478gh9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is like the seed put in the soil - the more one sows, the greater the harvest",
+            "author": "Orison Swett Marden",
+            "id": "bqk2t3y8e"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The truest greatness lies in being kind, the truest wisdom in a happy mind",
+            "author": "Ella Wheeler Wilcox",
+            "id": "olt6o8avc"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Of prosperity mortals can never have enough",
+            "author": "Aeschylus",
+            "id": "8uaumf591"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "One of the greatest pieces of economic wisdom is to know what you do not know",
+            "author": "John Kenneth Galbraith",
+            "id": "5i10emqnn"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The soul's joy lies in doing",
+            "author": "Percy Bysshe Shelley",
+            "id": "q7vp83ht1"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "You must accept responsibility for your actions, but not the credit for your achievements",
+            "author": "Denis Waitley",
+            "id": "o0wkp6kzt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Science is always discovering odd scraps of magical wisdom and making a tremendous fuss about its cleverness",
+            "author": "Aleister Crowley",
+            "id": "9198as4h8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "All free governments are managed by the combined wisdom and folly of the people",
+            "author": "James A. Garfield",
+            "id": "klz9gsseu"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Not engaging in ignorance is wisdom",
+            "author": "Bodhidharma",
+            "id": "t1f7cft36"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Young people, you need the wisdom of age, just as some of us older ones need your enthusiasm for life",
+            "author": "Ezra Taft Benson",
+            "id": "ffcf02ukh"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Thinking is not enough. There is no final enough of wisdom, experience - any... thing",
+            "author": "William S. Burroughs",
+            "id": "mieje51p0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I gave my beauty and my youth to men. I am going to give my wisdom and experience to animals",
+            "author": "Brigitte Bardot",
+            "id": "6is1ym433"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "When an opponent comes forward, move in and greet him; if he wants to pull back, send him on his way",
+            "author": "Morihei Ueshiba",
+            "id": "0m6qxu4ev"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is not who is right, but what is right, that is of importance",
+            "author": "Thomas Huxley",
+            "id": "95fnmlvvk"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom and knowledge are the most valuable things in the body",
+            "author": "Masayoshi Son",
+            "id": "pc1rcts7s"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The more one pleases everybody, the less one pleases profoundly",
+            "author": "Stendhal",
+            "id": "6r7ngqb46"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Repeat anything often enough and it will start to become you",
+            "author": "Tom Hopkins",
+            "id": "potl2su41"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We do not sit as a superlegislature to weigh the wisdom of legislation",
+            "author": "William O. Douglas",
+            "id": "381ojhs5p"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is a kind of knowledge. It is knowledge of the nature, career, and consequences of human values",
+            "author": "Sidney Hook",
+            "id": "7q8x1g9f8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Perspective is worth 80 IQ points",
+            "author": "Alan Kay",
+            "id": "0wp0f5hge"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The future has already arrived. It's just not evenly distributed yet",
+            "author": "William Gibson",
+            "id": "gbd57zi6v"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Even youngish men can acquire wisdom as time goes by",
+            "author": "John Bercow",
+            "id": "azp81y15e"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Good nature is worth more than knowledge, more than money, more than honor, to the persons who possess it",
+            "author": "Henry Ward Beecher",
+            "id": "clw8qzv21"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "My mother is a great source of advice and wisdom and consolation for me",
+            "author": "Katherine Heigl",
+            "id": "2vx83xulo"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Experiences are savings which a miser puts aside. Wisdom is an inheritance which a wastrel cannot exhaust",
+            "author": "Karl Kraus",
+            "id": "l3uo9o3jc"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Counsel woven into the fabric of real life is wisdom",
+            "author": "Walter Benjamin",
+            "id": "3ph10qqj8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Deliberately seek opportunities for kindness, sympathy, and patience",
+            "author": "Evelyn Underhill",
+            "id": "kwjbmget1"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Above all, you must fight conceit, envy, and every kind of ill-feeling in your heart",
+            "author": "Abraham Cahan",
+            "id": "90iw4mtwb"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom we know is the knowledge of good and evil, not the strength to choose between the two",
+            "author": "John Cheever",
+            "id": "crwqrv7x5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I do not believe in the collective wisdom of individual ignorance",
+            "author": "Thomas Carlyle",
+            "id": "80f880t6q"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Quick decisions are unsafe decisions",
+            "author": "Sophocles",
+            "id": "32a038k8x"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Much wisdom often goes with fewest words",
+            "author": "Sophocles",
+            "id": "5ux4pmh83"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Self-suggestion makes you master of yourself",
+            "author": "W. Clement Stone",
+            "id": "d6syb796d"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is that apprehension of heavenly things to which the spirit rises through love",
+            "author": "Honore de Balzac",
+            "id": "49evxjoyg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is the mind that maketh good or ill, That maketh wretch or happy, rich or poor",
+            "author": "Michel de Montaigne",
+            "id": "56nzxpw0y"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I'm now the elder in the position of doling out wisdom and trying to mend fences",
+            "author": "Jane Fonda",
+            "id": "892w1txkc"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Along with success comes a reputation for wisdom",
+            "author": "Euripides",
+            "id": "ga7orqv37"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Surely wisdom will come as we listen to learn from children, parents, partners, neighbors, Church leaders, and the Lord",
+            "author": "Russell M. Nelson",
+            "id": "jx3k5o5iq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "That which seems the height of absurdity in one generation often becomes the height of wisdom in another",
+            "author": "Adlai Stevenson I",
+            "id": "nb87lfaoi"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Science gives us knowledge, but only philosophy can give us wisdom",
+            "author": "Will Durant",
+            "id": "r5jkhhcsj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "An ounce of cheerfulness is worth a pound of sadness to serve God with",
+            "author": "Thomas Fuller",
+            "id": "ly40x8jnj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The wisdom of man never yet contrived a system of taxation that would operate with perfect equality",
+            "author": "Andrew Jackson",
+            "id": "kpgr11j97"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is a sacred communion",
+            "author": "Victor Hugo",
+            "id": "utlnwhjs9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is wisdom in prosperity, when all is as thou wouldn't have it, to fear and suspect the worst",
+            "author": "Desiderius Erasmus",
+            "id": "zq11kfls6"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Look twice before you leap",
+            "author": "Charlotte Bronte",
+            "id": "wkpbbpw48"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It's not the having, it's the getting",
+            "author": "Elizabeth Taylor",
+            "id": "bn51q7ld7"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Now that I am sixty, I see why the idea of elder wisdom has passed from currency",
+            "author": "John Updike",
+            "id": "g5s7d5el8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Putting is like wisdom - partly a natural gift and partly the accumulation of experience",
+            "author": "Arnold Palmer",
+            "id": "9e49pqfrc"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you do not express your own original ideas, if you do not listen to your own being, you will have betrayed yourself",
+            "author": "Rollo May",
+            "id": "56hk7lc45"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "More helpful than all wisdom is one draught of simple human pity that will not forsake us",
+            "author": "George Eliot",
+            "id": "bj3x7xegy"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In the vain laughter of folly wisdom hears half its applause",
+            "author": "George Eliot",
+            "id": "qooom9jom"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "For all my education, accomplishments, and so called 'wisdom'... I can't fathom my own heart",
+            "author": "Michael Caine",
+            "id": "8uirr8g1c"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The wisdom of age: don't stop walking",
+            "author": "Mason Cooley",
+            "id": "hsmetbcow"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "At sixty, I know little more about wisdom than I did at thirty, but I know a great deal more about folly",
+            "author": "Mason Cooley",
+            "id": "p4ks8hykj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The more you meditate on the laws of Moses, the more striking and brighter does their wisdom appear",
+            "author": "John Quincy Adams",
+            "id": "1x0p1e55d"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I think I got a lot of life skills; I got a lot of wisdom; I've seen a lot of bad things happen to a lot of good people",
+            "author": "Young Jeezy",
+            "id": "qh9gtb2ik"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In the frank expression of conflicting opinions lies the greatest promise of wisdom in governmental action",
+            "author": "Louis D. Brandeis",
+            "id": "mks42ts9s"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Sciences may be learned by rote, but wisdom not",
+            "author": "Laurence Sterne",
+            "id": "x6elw1dp9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If you wish to reach the highest, begin at the lowest",
+            "author": "Publilius Syrus",
+            "id": "itqp8hlaz"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I'm not a mom, but I think the word 'mother' is about wisdom",
+            "author": "Margaret Cho",
+            "id": "4o6xihjik"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I'm a member of the 1960s generation. We didn't have any wisdom",
+            "author": "P. J. O'Rourke",
+            "id": "co04jw01g"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is not attained by years, but by ability",
+            "author": "Plautus",
+            "id": "ka1j3ves6"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A great memory is never made synonymous with wisdom, any more than a dictionary would be called a treatise",
+            "author": "John Henry Newman",
+            "id": "acsjmag8b"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowledge shrinks as wisdom grows",
+            "author": "Alfred North Whitehead",
+            "id": "ppt964i19"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I praise loudly. I blame softly",
+            "author": "Catherine the Great",
+            "id": "70v8zhp1w"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "When defeat is inevitable, it is wisest to yield",
+            "author": "Quintilian",
+            "id": "bubmj760z"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I've always shied away from conventional wisdom, though I know the power of it",
+            "author": "Peter Jennings",
+            "id": "4pmxezo08"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I'm not wise, but the beginning of wisdom is there; it's like relaxing into - and an acceptance of - things",
+            "author": "Tina Turner",
+            "id": "e8hhq7nnm"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I haven't any wisdom - just a child like everybody else. I'm not as great as Frank Lloyd Wright",
+            "author": "Philip Johnson",
+            "id": "2k4ibvb5m"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Never reach out your hand unless you're willing to extend an arm",
+            "author": "Pope Paul VI",
+            "id": "z8ywzzzop"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The greatest wisdom is to realize one's lack of it",
+            "author": "Constantin Stanislavski",
+            "id": "tq2dzr0ii"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom begins at the end",
+            "author": "Daniel Webster",
+            "id": "fcf8cgwjz"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Let me warn you, if you start chasing after views, you'll be left without bread and without views",
+            "author": "Nikolai Gogol",
+            "id": "mizlvaz7b"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "There's a real wisdom to not saying a thing",
+            "author": "Willem Dafoe",
+            "id": "jxvnzugd7"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom lies neither in fixity nor in change, but in the dialectic between the two",
+            "author": "Octavio Paz",
+            "id": "8o3ft7xme"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "With age comes a greater wisdom, an ease and comfort with oneself",
+            "author": "Cherie Lunghi",
+            "id": "nd9wj6wp0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Mainstream media tend to just mouth the conventional wisdom, to see everything through the filter of right and left",
+            "author": "Arianna Huffington",
+            "id": "cdidyv7fn"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Year's end is neither an end nor a beginning but a going on, with all the wisdom that experience can instill in us",
+            "author": "Hal Borland",
+            "id": "4g09v3r2n"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Though I am fascinated by knowledge, I am even more fascinated by wisdom",
+            "author": "Abraham Verghese",
+            "id": "70i5dv16z"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Keep well; that is the half of wisdom and of happiness",
+            "author": "Emile Zola",
+            "id": "ax79mrhyj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Perhaps too much of everything is as bad as too little",
+            "author": "Edna Ferber",
+            "id": "ci83qh535"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It takes a great man to give sound advice tactfully, but a greater to accept it graciously",
+            "author": "Logan Pearsall Smith",
+            "id": "1d5ko913e"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "What is man's ultimate direction in life? It is to look for love, truth, virtue, and beauty",
+            "author": "Shinichi Suzuki",
+            "id": "h1ie0n1u4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is keeping a sense of fallibility of all our views and opinions",
+            "author": "Gerald Brenan",
+            "id": "4kpa7nk2y"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I'll come to you with gifts of knowledge, wisdom and truth",
+            "author": "Barry White",
+            "id": "9yozc5o3y"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is astonishing with how little wisdom mankind can be governed, when that little wisdom is its own",
+            "author": "William Inge",
+            "id": "bpvniijw5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In your 20s you can be pretty, but you don't accomplish real beauty until you find wisdom and depth",
+            "author": "Evangeline Lilly",
+            "id": "iv0vnxeyo"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom doesn't necessarily come with age. Sometimes age just shows up all by itself",
+            "author": "Tom Wilson",
+            "id": "p325ib9lt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Lord, give us the wisdom to utter words that are gentle and tender, for tomorrow we may have to eat them",
+            "author": "Mo Udall",
+            "id": "cod1kay33"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Doubt the conventional wisdom unless you can verify it with reason and experiment",
+            "author": "Steve Albini",
+            "id": "nb5pokqw3"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Beauty, the eternal Spouse of the Wisdom of God and Angel of his Presence thru' all creation",
+            "author": "Robert Bridges",
+            "id": "pz6cfgkao"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Some folks are wise and some are otherwise",
+            "author": "Tobias Smollett",
+            "id": "637p9ul8g"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Better than the strength of men and horses is our wisdom",
+            "author": "Xenophanes",
+            "id": "nsx5ty2v9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If people can't acknowledge the wisdom of indigenous cultures, then that's their loss",
+            "author": "Jay Griffiths",
+            "id": "fqcqn37xk"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "All human wisdom works and has worries and grief as reward",
+            "author": "Johann Georg Hamann",
+            "id": "d73olb0mi"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Contemplation and wisdom are highest achievements and man is not totally at home with them",
+            "author": "Gabriel Marcel",
+            "id": "qmkrw36bp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "My dad was a man of great wisdom in his short time here",
+            "author": "Bonnie Hunt",
+            "id": "2hxcu4dga"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I have studied many philosophers and many cats. The wisdom of cats is infinitely superior",
+            "author": "Hippolyte Taine",
+            "id": "ml03ecdeo"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is the abstract of the past, but beauty is the promise of the future",
+            "author": "Oliver Wendell Holmes, Sr.",
+            "id": "xxj5sqti4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "When you doubt, abstain",
+            "author": "Ambrose Bierce",
+            "id": "mshwj8zqr"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Almost every wise saying has an opposite one, no less wise, to balance it",
+            "author": "George Santayana",
+            "id": "cdxp1nsj4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom comes by disillusionment",
+            "author": "George Santayana",
+            "id": "b5ch78xw0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The hunger for facile wisdom is the root of all false philosophy",
+            "author": "George Santayana",
+            "id": "72tm3z1lr"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowing that you are going to die is, I suspect, the beginning of wisdom",
+            "author": "Terry Pratchett",
+            "id": "0gjwalckv"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom outweighs any wealth",
+            "author": "Sophocles",
+            "id": "jegc3e1su"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is the supreme part of happiness",
+            "author": "Sophocles",
+            "id": "b75s9jyg0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A short saying often contains much wisdom",
+            "author": "Sophocles",
+            "id": "q6dglb4v3"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I prefer the folly of enthusiasm to the indifference of wisdom",
+            "author": "Anatole France",
+            "id": "1gpr97btk"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is great folly to wish to be wise all alone",
+            "author": "Francois de La Rochefoucauld",
+            "id": "n5rvd8pev"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We give advice, but we cannot give the wisdom to profit by it",
+            "author": "Francois de La Rochefoucauld",
+            "id": "fbclvj9rk"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "However glorious an action in itself, it ought not to pass for great if it be not the effect of wisdom and intention",
+            "author": "Francois de La Rochefoucauld",
+            "id": "jla7l2sen"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The most certain sign of wisdom is cheerfulness",
+            "author": "Michel de Montaigne",
+            "id": "e8yiwq5et"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In my definition of consciousness, consciousness is the same thing as life. What wisdom traditions also call spirit",
+            "author": "Deepak Chopra",
+            "id": "jlglgz5rr"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Some wisdom you must learn from one who's wise",
+            "author": "Euripides",
+            "id": "qo8bnupyq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Look around for a place to sow a few seeds",
+            "author": "Henry Van Dyke",
+            "id": "nphq3iorz"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is not wisdom when it is derived from books alone",
+            "author": "Horace",
+            "id": "8d54mhj21"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is knowledge which has become a part of one's being",
+            "author": "Orison Swett Marden",
+            "id": "94mfblqgu"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Common sense in an uncommon degree is what the world calls wisdom",
+            "author": "Samuel Taylor Coleridge",
+            "id": "42n1tugmx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The enemy of the conventional wisdom is not ideas but the march of events",
+            "author": "John Kenneth Galbraith",
+            "id": "qk20o47lq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Rarely promise, but, if lawful, constantly perform",
+            "author": "William Penn",
+            "id": "0rv5glffn"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "First appearance deceives many",
+            "author": "Ovid",
+            "id": "addm5yhn7"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Few of the many wise apothegms which have been uttered have prevented a single foolish action",
+            "author": "Thomas Babington Macaulay",
+            "id": "zj4yhn8ce"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I always want to be a messenger, a person that, you know, that's not afraid to pass on wisdom",
+            "author": "Mary J. Blige",
+            "id": "48cyn5aro"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Full of wisdom are the ordinations of fate",
+            "author": "Friedrich Schiller",
+            "id": "d1e9a0amf"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "They would need to be already wise, in order to love wisdom",
+            "author": "Friedrich Schiller",
+            "id": "2onscsw97"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is humble that he knows no more",
+            "author": "William Cowper",
+            "id": "r30mx841l"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In seeking wisdom thou art wise; in imagining that thou hast attained it - thou art a fool",
+            "author": "Philip Stanhope, 4th Earl of Chesterfield",
+            "id": "bm4w26za1"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "In youth and beauty, wisdom is but rare!",
+            "author": "Homer",
+            "id": "uhzwqu92h"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Our own physical body possesses a wisdom which we who inhabit the body lack. We give it orders which make no sense",
+            "author": "Henry Miller",
+            "id": "10ssi23ik"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The seat of knowledge is in the head; of wisdom, in the heart. We are sure to judge wrong, if we do not feel right",
+            "author": "William Hazlitt",
+            "id": "6q83usil3"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To think ill of mankind and not wish ill to them, is perhaps the highest wisdom and virtue",
+            "author": "William Hazlitt",
+            "id": "c1hsy63h5"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We must learn from the sermons of Christ, the wisdom of Laotzu, the teachings of Buddha",
+            "author": "Charles Lindbergh",
+            "id": "zgx4ey4lr"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Enraging liberals is simply one of the more enjoyable side effects of my wisdom",
+            "author": "Rush Limbaugh",
+            "id": "mnsgo5uia"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I reject most conventional wisdom",
+            "author": "Rush Limbaugh",
+            "id": "zx98x0oiu"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Blessed are they who seek to learn wisdom",
+            "author": "Ezra Taft Benson",
+            "id": "aksbmg2ui"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Economists often like startling theorems, results which seem to run counter to conventional wisdom",
+            "author": "Joseph Stiglitz",
+            "id": "i808580kx"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Men who know themselves are no longer fools. They stand on the threshold of the door of Wisdom",
+            "author": "Havelock Ellis",
+            "id": "5sn8k6usc"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Let deeds match words",
+            "author": "Plautus",
+            "id": "g16j94fpw"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Not by age but by capacity is wisdom acquired",
+            "author": "Plautus",
+            "id": "vaibcr5r6"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Let us act on what we have, since we have not what we wish",
+            "author": "John Henry Newman",
+            "id": "6g9lt8i29"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom is the quality that keeps you from getting into situations where you need it",
+            "author": "Doug Larson",
+            "id": "d1sc1do72"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Never cut what you can untie",
+            "author": "Joseph Joubert",
+            "id": "db8cjl0yp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "With age comes wisdom",
+            "author": "S. Sreesanth",
+            "id": "ihf05qnvt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is plain to me that our prelates, in granting indulgences, do commonly blaspheme the wisdom of God",
+            "author": "John Wycliffe",
+            "id": "cnjq6v3oq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The difference between chirping out of turn and a faux pas depends on what kind of a bar you're in",
+            "author": "Wilson Mizner",
+            "id": "c92dmnplb"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We all admire the wisdom of people who come to us for advice",
+            "author": "Arthur Helps",
+            "id": "mmnabtmb7"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It's very hard to know what wisdom is",
+            "author": "James Hillman",
+            "id": "17qairont"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Suffering is one of life's great teachers",
+            "author": "Bryant H. McGill",
+            "id": "udjlyb7ll"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "If an idea is indeed sensible, it will eventually become just part of the accepted wisdom",
+            "author": "Nigel Farage",
+            "id": "c04kk1shv"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is not white hair that engenders wisdom",
+            "author": "Menander",
+            "id": "e9vr4ypmu"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Discipline is wisdom and vice versa",
+            "author": "M. Scott Peck",
+            "id": "57qctw7p2"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "There's a beauty to wisdom and experience that cannot be faked. It's impossible to be mature without having lived",
+            "author": "Amy Grant",
+            "id": "8zb5ov8qj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A man may learn wisdom even from a foe",
+            "author": "Aristophanes",
+            "id": "c82rbyao7"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Moderation is the inseparable companion of wisdom, but with it genius has not even a nodding acquaintance",
+            "author": "Charles Caleb Colton",
+            "id": "a0bk4lcoi"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "There is often, in the affairs of government, more efficiency and wisdom in non-action than in action",
+            "author": "John C. Calhoun",
+            "id": "j0dm3cei2"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "A promise made is a debt unpaid",
+            "author": "Robert W. Service",
+            "id": "m6r518p3c"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The thing that we possess, that machines don't, is the ability to exhibit wisdom",
+            "author": "Herbie Hancock",
+            "id": "9g9o90u93"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Without wisdom, the future has no meaning, no valuable purpose",
+            "author": "Herbie Hancock",
+            "id": "f8cz3d83u"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "You can practice to attain knowledge, but you can't practice to attain wisdom",
+            "author": "Herbie Hancock",
+            "id": "4g2e7mt1z"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To build a great company, which is a CEO's job, sometimes you have to stand up against conventional wisdom",
+            "author": "Carly Fiorina",
+            "id": "7ofebe253"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Many of us spend half of our time wishing for things we could have if we didn't spend half our time wishing",
+            "author": "Alexander Woollcott",
+            "id": "bszdwlsvt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I used to think I was going to die wise, and now, the one wisdom I have is I know very little",
+            "author": "Mary Steenburgen",
+            "id": "f7op6bizo"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I associate wisdom and grace with age",
+            "author": "Christy Turlington",
+            "id": "nlu7coxfd"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We all have within us a deep wisdom, but sometimes we don't know we have it",
+            "author": "Shakti Gawain",
+            "id": "if7lahbu6"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Conventional wisdom is not always the best wisdom",
+            "author": "Doug Ducey",
+            "id": "rojk911sp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom too often never comes, and so one ought not to reject it merely because it comes late",
+            "author": "Felix Frankfurter",
+            "id": "0901m1cs4"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The sweetest of all sounds is praise",
+            "author": "Xenophon",
+            "id": "l5eifgyrt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is always our own self that we find at the end of the journey. The sooner we face that self, the better",
+            "author": "Ella Maillart",
+            "id": "ty3jqmw6e"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is much more difficult to measure nonperformance than performance",
+            "author": "Harold S. Geneen",
+            "id": "k0mzqkh9t"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "As we work to reweave the strands of connection, we can be supported by the wisdom and lovingkindness of others",
+            "author": "Sharon Salzberg",
+            "id": "28fp1ipq1"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Even wisdom has to yield to self-interest",
+            "author": "Pindar",
+            "id": "djujofcxe"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Outside of hip-hop, it was in comics that I most often found the aesthetics and wisdom of my world reflected",
+            "author": "Ta-Nehisi Coates",
+            "id": "3dom5u53i"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I think with experience and age, you gain knowledge and wisdom",
+            "author": "Nick Foles",
+            "id": "gkczbsvfb"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It used to be, it is accepted scientific wisdom the Earth is flat, and this heretic named Galileo was branded a denier",
+            "author": "Ted Cruz",
+            "id": "zp14vo0qi"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "I am thinking of taking a fifth wife. Why not? Solomon had a thousand wives and he is a synonym for wisdom",
+            "author": "John Barrymore",
+            "id": "kaixndtjp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Wisdom may best arise from a humbling reality",
+            "author": "Michael Leunig",
+            "id": "66uezn0cd"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is astonishing what force, purity, and wisdom it requires for a human being to keep clear of falsehoods",
+            "author": "Margaret Fuller",
+            "id": "kkcbeydy8"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is better to rust out than wear out",
+            "author": "Edwin Markham",
+            "id": "opfp4lf5y"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Virtues are acquired through endeavor, which rests wholly upon yourself",
+            "author": "Sidney Lanier",
+            "id": "08b06r8dp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The wisdom of the wise is an uncommon degree of common sense",
+            "author": "William Inge",
+            "id": "pzya4j7bg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Combine the extremes, and you will have the true center",
+            "author": "Karl Wilhelm Friedrich Schlegel",
+            "id": "hdg3dw5c9"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The conventional wisdom is that if you are gay, you cannot play the romantic straight lead in a movie",
+            "author": "Ian Mckellen",
+            "id": "2ws4xidfe"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Giving opens the way for receiving",
+            "author": "Florence Scovel Shinn",
+            "id": "wgqtw93kb"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Some coaches pray for wisdom. I pray for 260-pound tackles. They'll give me plenty of wisdom",
+            "author": "Chuck Noll",
+            "id": "0mt54tyz3"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It isn't right to judge strength as better than good wisdom",
+            "author": "Xenophanes",
+            "id": "kq0tyz0zg"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "The less you talk, the more you're listened to",
+            "author": "Pauline Phillips",
+            "id": "tptpg3uvp"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "You have to know when to stop - that's wisdom",
+            "author": "Hubert de Givenchy",
+            "id": "r1md2irtl"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "He who devotes sixteen hours a day to hard study may become at sixty as wise as he thought himself at twenty",
+            "author": "Mary Wilson Little",
+            "id": "704hyr6uq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Knowledge is marvelous, but wisdom is even better",
+            "author": "Kay Redfield Jamison",
+            "id": "mk762ttfq"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "He was gifted with the sly, sharp instinct for self-preservation that passes for wisdom among the rich",
+            "author": "Evelyn Waugh",
+            "id": "l1no3c0sv"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "We thought, because we had power, we had wisdom",
+            "author": "Stephen Vincent Benet",
+            "id": "b1pknyo5y"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Our wisdom comes from our experience, and our experience comes from our foolishness",
+            "author": "Sacha Guitry",
+            "id": "52xvzmwjr"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "This fear of the Lord is indeed the beginning of wisdom. This consciousness of sin is the straight pathway to heaven",
+            "author": "Joseph Barber Lightfoot",
+            "id": "ol4qdidl0"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "To keep your secret is wisdom; to expect others to keep it is folly",
+            "author": "William Samuel Johnson",
+            "id": "g6g7z9wzj"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "It is costly wisdom that is bought by experience",
+            "author": "Roger Ascham",
+            "id": "h9g3pu6of"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Meditation is the soul's perspective glass",
+            "author": "Owen Feltham",
+            "id": "iip8ueb07"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "Everything important always begins from something trivial",
+            "author": "Donald Hall",
+            "id": "fht2hbqjv"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "You can't sweep other people off their feet, if you can't be swept off your own",
+            "author": "Clarence Day",
+            "id": "dkvwj1nqt"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "This is what I learned: that everybody is talented, original and has something important to say",
+            "author": "Brenda Ueland",
+            "id": "yrrmqmcr7"
+        },
+        {
+            "category": "Wisdom",
+            "quote": "He dares to be a fool, and that is the first step in the direction of wisdom",
+            "author": "James Huneker",
+            "id": "0qhfmldc4"
+        }
+    ]
+}

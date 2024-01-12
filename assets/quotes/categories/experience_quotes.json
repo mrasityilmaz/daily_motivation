@@ -1,0 +1,1800 @@
+{
+    "tr_quotes": [
+        {
+            "category": "Tecrübe",
+            "quote": "Bir kayıptan öğrenirseniz, kaybetmiş olmazsınız.",
+            "author": "Austin O'Malley",
+            "id": "sccvuber1"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Kişinin gerçeklikle nasıl yüzleştiği bir seçimdir.",
+            "author": "Martin Heidegger",
+            "id": "d59uzjhdb"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, bilginin anasıdır.",
+            "author": "Cervantes",
+            "id": "pycizwyyq"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübesiz akıl, bir iş beceremez.",
+            "author": "Che Lehmann",
+            "id": "80gqmoqh2"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, ruhu ve kalbi iyileştirir.",
+            "author": "Alman Atasözü",
+            "id": "3jg90oqgf"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, herkesin hatalarına verdiği addır.",
+            "author": "Oscar Wilde",
+            "id": "lhwerygkk"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe aklın hocası, düşüncenin de rehberidir.",
+            "author": "Anonim",
+            "id": "xx6vjcu3r"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Önceki hatalarıma selam söyle. Onların adı artık tecrübe.",
+            "author": "Anonim",
+            "id": "zrbu1kc3k"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, hayatın sana kel kaldıktan sonra tarak vermesidir.",
+            "author": "Anonim",
+            "id": "8pnzj8lv5"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe sert bir öğretmendir. Önce sınav yapar sonra ders verir.",
+            "author": "Anonim",
+            "id": "x4vspanqe"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Hayat ya cesur bir tecrübedir ya da hiçbir şey değildir.",
+            "author": "Helen Keller",
+            "id": "4oag6rldf"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Geçirilen en kötü tecrübeler, en faydalı olanlardır.",
+            "author": "Thornton Wilder",
+            "id": "rc8chip7o"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübenin en büyük gayesi, bize vazifelerimizi öğretmektir.",
+            "author": "B. Auerbach",
+            "id": "ut4a2okms"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "En iyi hayat kaideleri, insanın bizzat tecrübe ettikleridir.",
+            "author": "Anselm Feurbach",
+            "id": "2uwtn0kig"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, her maskenin altında duranı, daha o maske inmeden tanımaktır.",
+            "author": "Anonim",
+            "id": "81i0kac4s"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Hayatta en pahalı şey tecrübedir. Çünkü kazanmak için kaybetmek gerekir.",
+            "author": "Anonim",
+            "id": "l846vkv7q"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Eğitimdeki temel zorluk, fikirlerden tecrübe çıkarmaktır.",
+            "author": "George Santayana",
+            "id": "z0whyqvjg"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Bazen olgunlaşmak için incinmek, tecrübe kazanmak için kaybetmek gerekir.",
+            "author": "Anonim",
+            "id": "qopegdjf8"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübelerimizle biliyoruz ki kimse tecrübelerden, ders almıyor.",
+            "author": "Bernard Shaw",
+            "id": "l84lb77ow"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Her şeyi kaybetseniz bile, tecrübeleriniz size kalır.",
+            "author": "Thomas Babington Macaulay",
+            "id": "m11ccjqmw"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe tarak gibidir; hayat insana verir ama kel olduğu zaman.",
+            "author": "Belçika Atasözü",
+            "id": "oddet6x88"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "İnsanlar tecrübeleri kadar değil, tecrübe kapasiteleri kadar bilgedir.",
+            "author": "Bernard Shaw",
+            "id": "kkd14wfnd"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Deneyimden bilgece yararlanırsanız, hiçbir şey zaman kaybı değildir.",
+            "author": "Aguste Rodes",
+            "id": "4129gxs24"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Hayat çözülmesi gereken bir problem değil, tecrübe edilmesi gereken bir gerçekliktir.",
+            "author": "Anonim",
+            "id": "jkqcxj891"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Bütün sahip olduğumuz bilginin tecrübe ile başladığına şüphe yoktur.",
+            "author": "İmmanuel Kant",
+            "id": "8cy3mz44z"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübeler, en iyi öğretmenlerdir; yalnız, okul masrafları biraz çoktur.",
+            "author": "Thomas Cariyle",
+            "id": "vnzltg3dn"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe bir gözlüktür, onların sayesinde ikinci defa daha iyi görürsünüz.",
+            "author": "Henrich Ibsen",
+            "id": "7700rr3t4"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübelerime dayanarak söyleyebilirim ki; bir kadın ne kadar güzelse o kadar manyaktır.",
+            "author": "Anonim",
+            "id": "n9o9y1lrn"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Yalnızca yapmış olduklarımızdan değil, kaçındığımız işlerden de sorumluyuz.",
+            "author": "Jean B. Moliere",
+            "id": "zf4pzbkyt"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "İyi insan mutluluk, kötü insan tecrübe, yanlış insan ders, mükemmel insan iz bırakır.",
+            "author": "La Edri",
+            "id": "lhpzq5bdf"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Başkalarının acılarından, geçmiş felaketlerden ders alanlar, gerçekten mutlu kimselerdir.",
+            "author": "Hz. Ali",
+            "id": "mcrtcv1kb"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, okulların en gelişmişidir, o okulda, aptallar bile bir şeyler öğrenirler.",
+            "author": "Benjamin Franklin",
+            "id": "xgqmsbhr8"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Gençlerin, kendi kendilerine kazandıkları tecrübeler, kendilerinin en iyi yardımcılarıdır.",
+            "author": "E. Gebiel",
+            "id": "wibbeb3bz"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, bir insanın başından geçenler değil, başından geçenlerin bıraktığı izlerdir.",
+            "author": "Henry Huxley",
+            "id": "5uicja0km"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Acaba dünyada, başkalarının tecrübelerinden istifade edecek kadar akıllı bir insan var mıdır?",
+            "author": "Voltaire",
+            "id": "yxmk5g941"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Yaşlanarak değil, yaşayarak tecrübe kazanılır. Zaman insanları değil, armutları olgunlaştırır.",
+            "author": "Peyami Safa",
+            "id": "kw1tqxmha"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "İnsanın kazandığı tecrübeler, ölçü ile yapılan giysilere benzerler; kim kazanmışsa yalnız ona yararlar.",
+            "author": "Carlo Levi",
+            "id": "1ng067npo"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Bir insanın tecrübesini başından ne geçtiği değil, başından geçenlerden nasıl yararlandığını gösterir.",
+            "author": "Henry Huxley",
+            "id": "eb618bm9q"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe okulunun öğrenim ücreti yüksektir; ama akılsızlara bir şeyler öğretebilen, başka okul da yoktur.",
+            "author": "Jonathan Swift",
+            "id": "vtnxyl3q9"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Hayatın türlü çağlarına hep taptaze geliriz ve yaşamımız ne olursa olsun, çok kere tecrübeden yoksun bulunuruz.",
+            "author": "François de La Rochefaucauld",
+            "id": "ve7d4dge3"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Deneyimden bilgece yararlanırsanız, hiçbir şey zaman kaybı değildir.",
+            "author": "Anonim",
+            "id": "tmnjjn866"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Yaşlanarak değil yaşayarak tecrübe kazanılır, zaman insanları değil armutları olgunlaştırır.",
+            "author": "Peyami Safa",
+            "id": "th0ntpy1g"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, ruhu ve kalbi iyileştirir.",
+            "author": "Alman Atasözü",
+            "id": "472nbq3zy"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, bilginin anasıdır.",
+            "author": "Cervantes",
+            "id": "kluigc0sj"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe hayatın insana kel olduktan sonra tarak vermesidir.",
+            "author": "Anonim",
+            "id": "wxnuzv3rf"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, zalim bir öğretmendir; önce imtihan eder, sonra öğretir.",
+            "author": "Anonim",
+            "id": "k5brtozzk"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "En iyi hayat kaideleri, insanın bizzat tecrübe ettikleridir.",
+            "author": "Anonim",
+            "id": "0za01lgcj"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe, okulların en gelişmişidir, o okulda, aptallar bile bir şeyler öğrenirler.",
+            "author": "Anonim",
+            "id": "scfefs636"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "İnsanın kazandığı tecrübeler, ölçü ile yapılan giysilere benzerler; kim kazanmışsa yalnız ona yararlar.",
+            "author": "Anonim",
+            "id": "patzoriq5"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Eğitimdeki temel zorluk, fikirlerden tecrübe çıkarmaktır.",
+            "author": "Anonim",
+            "id": "bi52sng40"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Değişmek zaman gerektirmez tecrübe gerektirir...",
+            "author": "Anonim",
+            "id": "uj408y1ga"
+        },
+        {
+            "category": "Tecrübe",
+            "quote": "Tecrübe tarak gibidir; hayat insana verir ama kel olduğu zaman.",
+            "author": "Belçika Atasözü",
+            "id": "frssypgoy"
+        }
+    ],
+    "en_quotes": [
+        {
+            "category": "Experience",
+            "quote": "Good judgment comes from experience, and a lot of that comes from bad judgment",
+            "author": "Will Rogers",
+            "id": "0ijs3jz84"
+        },
+        {
+            "category": "Experience",
+            "quote": "No man ever steps in the same river twice, for it's not the same river and he's not the same man",
+            "author": "Heraclitus",
+            "id": "w786sbrft"
+        },
+        {
+            "category": "Experience",
+            "quote": "The way we experience the world around us is a direct reflection of the world within us",
+            "author": "Gabrielle Bernstein",
+            "id": "rl2ntye6y"
+        },
+        {
+            "category": "Experience",
+            "quote": "The reward of suffering is experience",
+            "author": "Harry S Truman",
+            "id": "02m1udxan"
+        },
+        {
+            "category": "Experience",
+            "quote": "Practice does not make perfect. Only perfect practice makes perfect",
+            "author": "Vince Lombardi",
+            "id": "2lu7c1epj"
+        },
+        {
+            "category": "Experience",
+            "quote": "For me, life is about experience and being a good person",
+            "author": "Chris Hemsworth",
+            "id": "89vrgdl16"
+        },
+        {
+            "category": "Experience",
+            "quote": "Food is not just eating energy. It's an experience",
+            "author": "Guy Fieri",
+            "id": "fezhhr0jv"
+        },
+        {
+            "category": "Experience",
+            "quote": "Adventure is worthwhile",
+            "author": "Aesop",
+            "id": "50gpoiks9"
+        },
+        {
+            "category": "Experience",
+            "quote": "Your life will be a blessed and balanced experience if you first honor your identity and priority",
+            "author": "Russell M. Nelson",
+            "id": "qty5jjg5z"
+        },
+        {
+            "category": "Experience",
+            "quote": "Architecture is about experience: not only visual but also what you can touch, what you can feel",
+            "author": "Ma Yansong",
+            "id": "c96jn9a66"
+        },
+        {
+            "category": "Experience",
+            "quote": "It's a lovely experience walking around a museum by yourself",
+            "author": "Brad Pitt",
+            "id": "a1h9pz4ow"
+        },
+        {
+            "category": "Experience",
+            "quote": "An identity would seem to be arrived at by the way in which the person faces and uses his experience",
+            "author": "James Baldwin",
+            "id": "zaw733oz8"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is the teacher of all things",
+            "author": "Julius Caesar",
+            "id": "o9ejoxtsb"
+        },
+        {
+            "category": "Experience",
+            "quote": "The wise are instructed by reason, average minds by experience, the stupid by necessity and the brute by instinct",
+            "author": "Marcus Tullius Cicero",
+            "id": "pc9s9rx5y"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is a dim lamp, which only lights the one who bears it",
+            "author": "Louis-Ferdinand Celine",
+            "id": "zrlc3a44h"
+        },
+        {
+            "category": "Experience",
+            "quote": "We are not human beings having a spiritual experience. We are spiritual beings having a human experience",
+            "author": "Pierre Teilhard de Chardin",
+            "id": "9rssg3w0l"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience without theory is blind, but theory without experience is mere intellectual play",
+            "author": "Immanuel Kant",
+            "id": "p5jkv7loq"
+        },
+        {
+            "category": "Experience",
+            "quote": "The whole world, as we experience it visually, comes to us through the mystic realm of color",
+            "author": "Hans Hofmann",
+            "id": "vpld486v4"
+        },
+        {
+            "category": "Experience",
+            "quote": "The soul should always stand ajar, ready to welcome the ecstatic experience",
+            "author": "Emily Dickinson",
+            "id": "hmozzjx8d"
+        },
+        {
+            "category": "Experience",
+            "quote": "Nothing ever becomes real till it is experienced",
+            "author": "John Keats",
+            "id": "rx2eelaj8"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is one thing you can't get for nothing",
+            "author": "Oscar Wilde",
+            "id": "48znykt4u"
+        },
+        {
+            "category": "Experience",
+            "quote": "If you want to run, run a mile. If you want to experience a different life, run a marathon",
+            "author": "Emil Zatopek",
+            "id": "rnkl2shy4"
+        },
+        {
+            "category": "Experience",
+            "quote": "I grew up like a neglected weed - ignorant of liberty, having no experience of it",
+            "author": "Harriet Tubman",
+            "id": "63t0ootsy"
+        },
+        {
+            "category": "Experience",
+            "quote": "A shirt's not just a shirt. It's the experience of what goes into that shirt",
+            "author": "Michael Bastian",
+            "id": "80c1muyvo"
+        },
+        {
+            "category": "Experience",
+            "quote": "The sky is the limit. You never have the same experience twice",
+            "author": "Frank McCourt",
+            "id": "yhjcyyp8c"
+        },
+        {
+            "category": "Experience",
+            "quote": "Any institutions' alumni are key to its growth. We are focused on giving a global experience to our students",
+            "author": "Shiv Nadar",
+            "id": "fzrl5sxo6"
+        },
+        {
+            "category": "Experience",
+            "quote": "Best thing that's happened this year? Maybe Hostel. It was a great experience. I loved it",
+            "author": "Jay Hernandez",
+            "id": "ti9ttkdll"
+        },
+        {
+            "category": "Experience",
+            "quote": "The spectacles of experience; through them you will see clearly a second time",
+            "author": "Henrik Ibsen",
+            "id": "3qe4e2r8t"
+        },
+        {
+            "category": "Experience",
+            "quote": "To me the arcade experience is the ultimate gaming experience",
+            "author": "Eugene Jarvis",
+            "id": "qacbdtmfi"
+        },
+        {
+            "category": "Experience",
+            "quote": "Each morning when I awake, I experience again a supreme pleasure - that of being Salvador Dali",
+            "author": "Salvador Dali",
+            "id": "mws47hczd"
+        },
+        {
+            "category": "Experience",
+            "quote": "There's simply no substitute for experience in terms of aviation safety",
+            "author": "Chesley Sullenberger",
+            "id": "bxep4z9ce"
+        },
+        {
+            "category": "Experience",
+            "quote": "Judgement comes from experience, and experience comes from bad judgement",
+            "author": "Simon Bolivar",
+            "id": "3yih3jn70"
+        },
+        {
+            "category": "Experience",
+            "quote": "The next time you experience a blackout, take some solace by looking at the sky. You will not recognize it",
+            "author": "Nassim Nicholas Taleb",
+            "id": "qfo5vhld5"
+        },
+        {
+            "category": "Experience",
+            "quote": "It has been my experience that folks who have no vices have very few virtues",
+            "author": "Abraham Lincoln",
+            "id": "rtpojtto5"
+        },
+        {
+            "category": "Experience",
+            "quote": "All growth is a leap in the dark, a spontaneous unpremeditated act without benefit of experience",
+            "author": "Henry Miller",
+            "id": "7y1k9f68b"
+        },
+        {
+            "category": "Experience",
+            "quote": "Making sushi is an art, and experience is everything",
+            "author": "Nobu Matsuhisa",
+            "id": "3eav5g387"
+        },
+        {
+            "category": "Experience",
+            "quote": "For me, there is no such thing as a negative experience",
+            "author": "A. P. J. Abdul Kalam",
+            "id": "lq0vuq43r"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is like a comb that life gives you when you are bald",
+            "author": "Navjot Singh Sidhu",
+            "id": "cwk816vmd"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience teaches only the teachable",
+            "author": "Aldous Huxley",
+            "id": "6umaofrkf"
+        },
+        {
+            "category": "Experience",
+            "quote": "Innocence can be more powerful than experience",
+            "author": "Alejandro Gonzalez Inarritu",
+            "id": "vgn6rc29i"
+        },
+        {
+            "category": "Experience",
+            "quote": "To wear a floral shirt is an experience",
+            "author": "Brian Wilson",
+            "id": "gzenmo4wa"
+        },
+        {
+            "category": "Experience",
+            "quote": "Android is often given as a free replacement for a feature phone, and the experience isn't as good as an iPhone",
+            "author": "Phil Schiller",
+            "id": "rywsb0wzq"
+        },
+        {
+            "category": "Experience",
+            "quote": "Customer loyalty comes from consistent experience. They learn to count on you",
+            "author": "Jimmy John Liautaud",
+            "id": "5glaa662d"
+        },
+        {
+            "category": "Experience",
+            "quote": "It's been said that astronomy is a humbling and, I might add, a character-building experience",
+            "author": "Carl Sagan",
+            "id": "9bpbmtw3z"
+        },
+        {
+            "category": "Experience",
+            "quote": "To reach something good it is very useful to have gone astray, and thus acquire experience",
+            "author": "Saint Teresa of Avila",
+            "id": "twus096jp"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience praises the most happy the one who made the most people happy",
+            "author": "Karl Marx",
+            "id": "sx7emq7ec"
+        },
+        {
+            "category": "Experience",
+            "quote": "From start to finish, my experience with 'Moonlight' has been the most unique thing",
+            "author": "Trevante Rhodes",
+            "id": "vpv9hufte"
+        },
+        {
+            "category": "Experience",
+            "quote": "It is a heartening experience to know that you are loved and being missed",
+            "author": "Sridevi",
+            "id": "meo6h3oos"
+        },
+        {
+            "category": "Experience",
+            "quote": "When we shift our perception, our experience changes",
+            "author": "Lindsay Wagner",
+            "id": "ewt4a9e5d"
+        },
+        {
+            "category": "Experience",
+            "quote": "All adventures, especially into new territory, are scary",
+            "author": "Sally Ride",
+            "id": "e90r0ciko"
+        },
+        {
+            "category": "Experience",
+            "quote": "My path has not been determined. I shall have more experiences and pass many more milestones",
+            "author": "Agnetha Faltskog",
+            "id": "3tf4oqin0"
+        },
+        {
+            "category": "Experience",
+            "quote": "We shall not grow wiser before we learn that much that we have done was very foolish",
+            "author": "Friedrich August von Hayek",
+            "id": "becqnvbqz"
+        },
+        {
+            "category": "Experience",
+            "quote": "It's a great, great experience to finally get the reception that you know you rightfully deserve",
+            "author": "Kendrick Lamar",
+            "id": "qdeirb6qt"
+        },
+        {
+            "category": "Experience",
+            "quote": "I love the work that goes into making a movie and creating a different world. It is a wholesome experience",
+            "author": "Anushka Sharma",
+            "id": "ot2chmrwl"
+        },
+        {
+            "category": "Experience",
+            "quote": "I'm afraid, based on my own experience, that fascism will come to America in the name of national security",
+            "author": "Jim Garrison",
+            "id": "masf6dbku"
+        },
+        {
+            "category": "Experience",
+            "quote": "The words printed here are concepts. You must go through the experiences",
+            "author": "Saint Augustine",
+            "id": "4abj7n8ir"
+        },
+        {
+            "category": "Experience",
+            "quote": "We deem those happy who from the experience of life have learnt to bear its ills without being overcome by them",
+            "author": "Carl Jung",
+            "id": "4eyzaqavm"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience has shown how deeply the seeds of war are planted by economic rivalry and social injustice",
+            "author": "Harry S Truman",
+            "id": "izy2uk7p6"
+        },
+        {
+            "category": "Experience",
+            "quote": "Sometimes you are lucky, sometimes you're unlucky. It all weighs out at the end. That is my experience at least",
+            "author": "Toto Wolff",
+            "id": "pza0cj39t"
+        },
+        {
+            "category": "Experience",
+            "quote": "The prism through which you experience life is so unique. There is no objective experience",
+            "author": "Sterling K. Brown",
+            "id": "wctd7prsy"
+        },
+        {
+            "category": "Experience",
+            "quote": "The social element has really transformed the gaming experience",
+            "author": "Bobby Kotick",
+            "id": "s4bs2f5m9"
+        },
+        {
+            "category": "Experience",
+            "quote": "I have learned that a bitter experience can make you stronger",
+            "author": "Mel Gibson",
+            "id": "fskdcp2au"
+        },
+        {
+            "category": "Experience",
+            "quote": "Life is full of change and uncertainty. We know this. We experience it on a daily basis",
+            "author": "Carre Otis",
+            "id": "xmti5ph40"
+        },
+        {
+            "category": "Experience",
+            "quote": "Every experience, good or bad, you have to learn from",
+            "author": "Patrick Mahomes",
+            "id": "xzm3oegpm"
+        },
+        {
+            "category": "Experience",
+            "quote": "Missionary work has never been easy, and yet the joyful rewards cannot be equaled by any other experience",
+            "author": "Gordon B. Hinckley",
+            "id": "rf3cfmdyw"
+        },
+        {
+            "category": "Experience",
+            "quote": "The key to education is the experience of beauty",
+            "author": "Friedrich Schiller",
+            "id": "xt0s3vi9c"
+        },
+        {
+            "category": "Experience",
+            "quote": "True intuitive expertise is learned from prolonged experience with good feedback on mistakes",
+            "author": "Daniel Kahneman",
+            "id": "9kjniwo3s"
+        },
+        {
+            "category": "Experience",
+            "quote": "I've always loved the experience of working together with other people toward an artistic goal",
+            "author": "Trey Anastasio",
+            "id": "tbls34av8"
+        },
+        {
+            "category": "Experience",
+            "quote": "I want to have an 'Eat, Pray, Love' experience where I drop off the face of the planet and move to Greece",
+            "author": "Jennifer Hyman",
+            "id": "seyjk9jtw"
+        },
+        {
+            "category": "Experience",
+            "quote": "Faces are the ledgers of our experience",
+            "author": "Richard Avedon",
+            "id": "gvjfj9j3b"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is something you don't get until just after you need it",
+            "author": "Steven Wright",
+            "id": "beav4kvp5"
+        },
+        {
+            "category": "Experience",
+            "quote": "We choose our joys and sorrows long before we experience them",
+            "author": "Khalil Gibran",
+            "id": "s41cwskxi"
+        },
+        {
+            "category": "Experience",
+            "quote": "Art is the imposing of a pattern on experience, and our aesthetic enjoyment is recognition of the pattern",
+            "author": "Alfred North Whitehead",
+            "id": "q00g8cpem"
+        },
+        {
+            "category": "Experience",
+            "quote": "Difficult times always create opportunities for you to experience more love in your life",
+            "author": "Barbara De Angelis",
+            "id": "zmjofpxdx"
+        },
+        {
+            "category": "Experience",
+            "quote": "Maturity and experience are part of my liberation",
+            "author": "Alicia Keys",
+            "id": "ce70u7il1"
+        },
+        {
+            "category": "Experience",
+            "quote": "The head learns new things, but the heart forever practices old experiences",
+            "author": "Henry Ward Beecher",
+            "id": "55de9job7"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is a good teacher, but she sends in terrific bills",
+            "author": "Minna Antrim",
+            "id": "im0cytd3x"
+        },
+        {
+            "category": "Experience",
+            "quote": "The responsibility of a writer is to excavate the experience of the people who produced him",
+            "author": "James Baldwin",
+            "id": "7hvxm9fw1"
+        },
+        {
+            "category": "Experience",
+            "quote": "Police officers see everything, and they experience everything, and they don't always act correctly",
+            "author": "Cheo Hodari Coker",
+            "id": "femqajh9q"
+        },
+        {
+            "category": "Experience",
+            "quote": "Art is a direct reflection of the life you live. What you experience comes out in your work",
+            "author": "Dianne Reeves",
+            "id": "kptz5wcxy"
+        },
+        {
+            "category": "Experience",
+            "quote": "The essence of a role-playing game is that it is a group, cooperative experience",
+            "author": "Gary Gygax",
+            "id": "m00c6gx7r"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience keeps a dear school, but fools will learn in no other",
+            "author": "Benjamin Franklin",
+            "id": "nb6teexw2"
+        },
+        {
+            "category": "Experience",
+            "quote": "Everything that we experience every day leaves a long-lasting impression",
+            "author": "Pharrell Williams",
+            "id": "favxwwxm5"
+        },
+        {
+            "category": "Experience",
+            "quote": "It's just been such an amazing experience from the day I started on 'Smackdown.'",
+            "author": "Carmella",
+            "id": "zco9xyxv2"
+        },
+        {
+            "category": "Experience",
+            "quote": "People around the world, they want the authentic Starbucks experience",
+            "author": "Howard Schultz",
+            "id": "o2aabl4y1"
+        },
+        {
+            "category": "Experience",
+            "quote": "I know from experience that you should never give up on yourself or others, no matter what",
+            "author": "George Foreman",
+            "id": "6wimc9p6l"
+        },
+        {
+            "category": "Experience",
+            "quote": "I'm not a genius. I'm just a tremendous bundle of experience",
+            "author": "R. Buckminster Fuller",
+            "id": "2v22yc2fo"
+        },
+        {
+            "category": "Experience",
+            "quote": "My experience as a refugee had made me strong; I could survive anything, even the world of fashion",
+            "author": "Alek Wek",
+            "id": "obnqomchw"
+        },
+        {
+            "category": "Experience",
+            "quote": "If you do build a great experience, customers tell each other about that. Word of mouth is very powerful",
+            "author": "Jeff Bezos",
+            "id": "h9masgphx"
+        },
+        {
+            "category": "Experience",
+            "quote": "Loneliness is and always has been the central and inevitable experience of every man",
+            "author": "Thomas Wolfe",
+            "id": "7ku3znzag"
+        },
+        {
+            "category": "Experience",
+            "quote": "Most of the people that I deal with are human. So I've had a lot of experience with that",
+            "author": "Carl Sagan",
+            "id": "d63ptosi8"
+        },
+        {
+            "category": "Experience",
+            "quote": "No matter what you're doing, live it. Make an experience. Have fun. Relate to someone. Take them in. Learn",
+            "author": "Minka Kelly",
+            "id": "9ytuy43rj"
+        },
+        {
+            "category": "Experience",
+            "quote": "All experience is an arch, to build upon",
+            "author": "Henry Adams",
+            "id": "k3ojjjvid"
+        },
+        {
+            "category": "Experience",
+            "quote": "What one has not experienced, one will never understand in print",
+            "author": "Isadora Duncan",
+            "id": "bhk0trlwy"
+        },
+        {
+            "category": "Experience",
+            "quote": "I need to take everything one step at a time. If I think about that too much, I'll miss this amazing experience",
+            "author": "Shanice Williams",
+            "id": "a85j24un4"
+        },
+        {
+            "category": "Experience",
+            "quote": "Every single 'no' that you get, you know that that was an experience that you learned from. Keep going",
+            "author": "Kirstin Maldonado",
+            "id": "ff2f8ygul"
+        },
+        {
+            "category": "Experience",
+            "quote": "To be a good director, you have to have good life experience. I'm getting there",
+            "author": "Thomas Brodie-Sangster",
+            "id": "xhmu9oi1l"
+        },
+        {
+            "category": "Experience",
+            "quote": "Example is the best precept",
+            "author": "Aesop",
+            "id": "m03oiyf2n"
+        },
+        {
+            "category": "Experience",
+            "quote": "See any detour as an opportunity to experience new things",
+            "author": "H. Jackson Brown, Jr.",
+            "id": "hkhq7znkq"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience really does make you better, man",
+            "author": "Alan Vega",
+            "id": "eralwxza0"
+        },
+        {
+            "category": "Experience",
+            "quote": "You are about to have your first experience with a Greek lunch. I will kill you if you pretend to like it",
+            "author": "Jackie Kennedy",
+            "id": "4zmmm0fnt"
+        },
+        {
+            "category": "Experience",
+            "quote": "One thorn of experience is worth a whole wilderness of warning",
+            "author": "James Russell Lowell",
+            "id": "89wcj9rng"
+        },
+        {
+            "category": "Experience",
+            "quote": "Two things control men's nature, instinct and experience",
+            "author": "Blaise Pascal",
+            "id": "40hasms86"
+        },
+        {
+            "category": "Experience",
+            "quote": "Happy Days was a wonderful, wonderful experience and I would not have traded it for the world",
+            "author": "Marion Ross",
+            "id": "cs22ryras"
+        },
+        {
+            "category": "Experience",
+            "quote": "Social connection is such a basic feature of human experience that when we are deprived of it, we suffer",
+            "author": "Leonard Mlodinow",
+            "id": "dt3o98j9c"
+        },
+        {
+            "category": "Experience",
+            "quote": "The great thing about Snapchat is your fans can get a detailed experience of what your life is like behind the scenes",
+            "author": "Antonio Brown",
+            "id": "oyy84n7t6"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience which was once claimed by the aged is now claimed exclusively by the young",
+            "author": "Gilbert K. Chesterton",
+            "id": "k1qwvdsea"
+        },
+        {
+            "category": "Experience",
+            "quote": "It was a great experience to work with director A. L. Vijay",
+            "author": "Keerthy Suresh",
+            "id": "o47glkk6a"
+        },
+        {
+            "category": "Experience",
+            "quote": "It is about the entire experience. It's not just a new seat. It's not just new meals. It's not just better wines",
+            "author": "Oscar Munoz",
+            "id": "9oad6f160"
+        },
+        {
+            "category": "Experience",
+            "quote": "The writing process for me is pretty much always the same - it's a solitary experience",
+            "author": "Sheryl Crow",
+            "id": "wdd5966yx"
+        },
+        {
+            "category": "Experience",
+            "quote": "In art school, you learn that design is much more than the look and feel of something - it's the whole experience",
+            "author": "Joe Gebbia",
+            "id": "eo5jdj1na"
+        },
+        {
+            "category": "Experience",
+            "quote": "Nothing is a waste of time if you use the experience wisely",
+            "author": "Auguste Rodin",
+            "id": "b0o4ko94x"
+        },
+        {
+            "category": "Experience",
+            "quote": "Everything is discursive opinion instead of direct experience",
+            "author": "A. R. Ammons",
+            "id": "14l25rngi"
+        },
+        {
+            "category": "Experience",
+            "quote": "I didn't get to experience proper autumn until I was eighteen and heading off to college on the East Coast!",
+            "author": "Alexandra Bracken",
+            "id": "w8ll7itxm"
+        },
+        {
+            "category": "Experience",
+            "quote": "I want the poem to be an experience - for both the listener and for myself",
+            "author": "Anne Waldman",
+            "id": "2evdkvity"
+        },
+        {
+            "category": "Experience",
+            "quote": "A moment's insight is sometimes worth a life's experience",
+            "author": "Oliver Wendell Holmes, Sr.",
+            "id": "0w701r9hm"
+        },
+        {
+            "category": "Experience",
+            "quote": "Quality is a direct experience independent of and prior to intellectual abstractions",
+            "author": "Robert M. Pirsig",
+            "id": "q4lv8yujy"
+        },
+        {
+            "category": "Experience",
+            "quote": "A world-changing vision often necessitates a profound simplicity in the user experience",
+            "author": "Joe Gebbia",
+            "id": "jwwu64aa1"
+        },
+        {
+            "category": "Experience",
+            "quote": "Nothing which has entered into our experience is ever lost",
+            "author": "William Ellery Channing",
+            "id": "wpgri9p2o"
+        },
+        {
+            "category": "Experience",
+            "quote": "You don't cheat anybody out of their experience, whatever it is",
+            "author": "Andre Agassi",
+            "id": "344bs1x6n"
+        },
+        {
+            "category": "Experience",
+            "quote": "Being in love is the only transcendent experience",
+            "author": "Armistead Maupin",
+            "id": "vg310wyqf"
+        },
+        {
+            "category": "Experience",
+            "quote": "A man who carries a cat by the tail learns something he can learn in no other way",
+            "author": "Mark Twain",
+            "id": "81tb0mh6j"
+        },
+        {
+            "category": "Experience",
+            "quote": "The years teach much which the days never know",
+            "author": "Ralph Waldo Emerson",
+            "id": "bdi0x5w0k"
+        },
+        {
+            "category": "Experience",
+            "quote": "You learn from a conglomeration of the incredible past - whatever experience gotten in any way whatsoever",
+            "author": "Bob Dylan",
+            "id": "rj1vdqqrg"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience, as a desire for experience, does not come off. We must not study ourselves while having an experience",
+            "author": "Friedrich Nietzsche",
+            "id": "owmkngxtr"
+        },
+        {
+            "category": "Experience",
+            "quote": "Skill is the unified force of experience, intellect and passion in their operation",
+            "author": "John Ruskin",
+            "id": "m4akco5d5"
+        },
+        {
+            "category": "Experience",
+            "quote": "Life is the art of drawing without an eraser",
+            "author": "John W. Gardner",
+            "id": "32s5ktlp2"
+        },
+        {
+            "category": "Experience",
+            "quote": "Hands-on experience is the best way to learn about all the interdisciplinary aspects of robotics",
+            "author": "Rodney Brooks",
+            "id": "nn2jnr3fw"
+        },
+        {
+            "category": "Experience",
+            "quote": "Education is when you read the fine print. Experience is what you get if you don't",
+            "author": "Pete Seeger",
+            "id": "t3i0nfvqq"
+        },
+        {
+            "category": "Experience",
+            "quote": "Follow that will and that way which experience confirms to be your own",
+            "author": "Carl Jung",
+            "id": "xh24ry4gy"
+        },
+        {
+            "category": "Experience",
+            "quote": "I speak to the black experience, but I am always talking about the human condition",
+            "author": "Maya Angelou",
+            "id": "2bcm2nbsb"
+        },
+        {
+            "category": "Experience",
+            "quote": "A proverb is a short sentence based on long experience",
+            "author": "Miguel de Cervantes",
+            "id": "jixy03jhl"
+        },
+        {
+            "category": "Experience",
+            "quote": "Is there anyone so wise as to learn by the experience of others?",
+            "author": "Voltaire",
+            "id": "rfkr1e1bz"
+        },
+        {
+            "category": "Experience",
+            "quote": "Every day is a new journey for me, and I feel like, in my lifetime, I've been blessed to experience such a lot",
+            "author": "Bindi Irwin",
+            "id": "kb59pgv82"
+        },
+        {
+            "category": "Experience",
+            "quote": "Racism exists, but it is far less rampant than ignorance, and ignorance can be cured through experience",
+            "author": "Candace Owens",
+            "id": "scfuq7485"
+        },
+        {
+            "category": "Experience",
+            "quote": "The more you are blessed with experience, the fuller and the more enriched you are in your craft",
+            "author": "Aishwarya Rai Bachchan",
+            "id": "1ghne3ur3"
+        },
+        {
+            "category": "Experience",
+            "quote": "Do I wish I had never endured postpartum depression? Absolutely. But to deny the experience is to deny who I am",
+            "author": "Bryce Dallas Howard",
+            "id": "jal6cvvt3"
+        },
+        {
+            "category": "Experience",
+            "quote": "Good design to me is both appearance and functionality together. It's the experience that makes it good design",
+            "author": "Michael Graves",
+            "id": "hgzv7yq9n"
+        },
+        {
+            "category": "Experience",
+            "quote": "The only real security that a man can have in this world is a reserve of knowledge, experience and ability",
+            "author": "Henry Ford",
+            "id": "b3gkndlwa"
+        },
+        {
+            "category": "Experience",
+            "quote": "The experience of pain or loss can be a formidably motivating force",
+            "author": "John C. Maxwell",
+            "id": "iq8hw671k"
+        },
+        {
+            "category": "Experience",
+            "quote": "The act of birth is the first experience of anxiety, and thus the source and prototype of the affect of anxiety",
+            "author": "Sigmund Freud",
+            "id": "my4bg0mmq"
+        },
+        {
+            "category": "Experience",
+            "quote": "Good judgement comes from experience. Sometimes, experience comes from bad judgement",
+            "author": "Christian Slater",
+            "id": "27g6kdrgb"
+        },
+        {
+            "category": "Experience",
+            "quote": "When you have really exhausted an experience you always reverence and love it",
+            "author": "Albert Camus",
+            "id": "f9egtr06y"
+        },
+        {
+            "category": "Experience",
+            "quote": "Men are wise in proportion, not to their experience, but to their capacity for experience",
+            "author": "George Bernard Shaw",
+            "id": "dtjyhnr8n"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience does not err. Only your judgments err by expecting from her what is not in her power",
+            "author": "Leonardo da Vinci",
+            "id": "temu0drzd"
+        },
+        {
+            "category": "Experience",
+            "quote": "The essence of life is finding something you really love and then making the daily experience worthwhile",
+            "author": "Denis Waitley",
+            "id": "v2ca753wa"
+        },
+        {
+            "category": "Experience",
+            "quote": "Brooklyn is not the easiest place to grow up in, although I wouldn't change that experience for anything",
+            "author": "Neil Diamond",
+            "id": "3ja92lcud"
+        },
+        {
+            "category": "Experience",
+            "quote": "Sleep - the most beautiful experience in life - except drink",
+            "author": "W. C. Fields",
+            "id": "t3112vuyw"
+        },
+        {
+            "category": "Experience",
+            "quote": "Remember, we are not human beings having a spiritual experience. We are spiritual beings having a human experience",
+            "author": "Stephen Covey",
+            "id": "n2abqssyx"
+        },
+        {
+            "category": "Experience",
+            "quote": "Mistakes are painful when they happen, but years later a collection of mistakes is what is called experience",
+            "author": "Denis Waitley",
+            "id": "tag6gpxw8"
+        },
+        {
+            "category": "Experience",
+            "quote": "When we learn from experience, the scars of sin can lead us to restoration and a renewed intimacy with God",
+            "author": "Charles Stanley",
+            "id": "qfhwe521i"
+        },
+        {
+            "category": "Experience",
+            "quote": "Man, I'm a conspiracy theorist by nature. You can't experience the federal penal system and not be somewhat skeptical",
+            "author": "T.I.",
+            "id": "r68i8yos2"
+        },
+        {
+            "category": "Experience",
+            "quote": "The only relevant test of the validity of a hypothesis is comparison of prediction with experience",
+            "author": "Milton Friedman",
+            "id": "wy267lfki"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is that marvelous thing that enables you to recognize a mistake when you make it again",
+            "author": "Franklin P. Jones",
+            "id": "2w8f0etbl"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is a great teacher",
+            "author": "John Legend",
+            "id": "rtejfcwty"
+        },
+        {
+            "category": "Experience",
+            "quote": "I'm a culture vulture, and I just want to experience it all",
+            "author": "Debbie Harry",
+            "id": "oae00ml4d"
+        },
+        {
+            "category": "Experience",
+            "quote": "In my experience, being busy and working hard is the key to sanity/happiness",
+            "author": "Jemima Khan",
+            "id": "wwtoe6tzo"
+        },
+        {
+            "category": "Experience",
+            "quote": "Extreme programming is an emotional experience",
+            "author": "Kent Beck",
+            "id": "7tqmijl09"
+        },
+        {
+            "category": "Experience",
+            "quote": "Playing on the Burj Al Arab helipad was an unforgettable experience, and the view of Dubai was incredible",
+            "author": "Ma Long",
+            "id": "ow1luxo1e"
+        },
+        {
+            "category": "Experience",
+            "quote": "Sydney's a beautiful city. It was a great experience",
+            "author": "Barbara Hershey",
+            "id": "358xunp7i"
+        },
+        {
+            "category": "Experience",
+            "quote": "Whoever doesn't know it must learn and find by experience that 'a quiet conscience makes one strong!'",
+            "author": "Anne Frank",
+            "id": "9rbdi8ei6"
+        },
+        {
+            "category": "Experience",
+            "quote": "The noblest search is the search for excellence",
+            "author": "Lyndon B. Johnson",
+            "id": "ltmb2zqoi"
+        },
+        {
+            "category": "Experience",
+            "quote": "I mean, if you didn't get it or if you didn't feel like you enjoyed it, sometimes that experience can change",
+            "author": "Keanu Reeves",
+            "id": "k0v6w3nev"
+        },
+        {
+            "category": "Experience",
+            "quote": "The value of experience is not in seeing much, but in seeing wisely",
+            "author": "William Osler",
+            "id": "ei79lu96e"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is what you get while looking for something else",
+            "author": "Federico Fellini",
+            "id": "bvdpv27xr"
+        },
+        {
+            "category": "Experience",
+            "quote": "I have but one lamp by which my feet are guided, and that is the lamp of experience",
+            "author": "Patrick Henry",
+            "id": "k8j529fc3"
+        },
+        {
+            "category": "Experience",
+            "quote": "I'm a game designer, so I care about the whole experience",
+            "author": "Jenova Chen",
+            "id": "r74nfwt76"
+        },
+        {
+            "category": "Experience",
+            "quote": "Wherever the wind blows me, I'll go! My eventual goal is to have enough experience to produce something on my own",
+            "author": "Fawad Khan",
+            "id": "n3nj8gxpc"
+        },
+        {
+            "category": "Experience",
+            "quote": "It's such a fun experience getting to kind of create something from nothing with your best friend",
+            "author": "Maddie Marlow",
+            "id": "n46wl7vv7"
+        },
+        {
+            "category": "Experience",
+            "quote": "If merely 'feeling good' could decide, drunkenness would be the supremely valid human experience",
+            "author": "William James",
+            "id": "85bk78iwy"
+        },
+        {
+            "category": "Experience",
+            "quote": "I'd rather have a lot of talent and a little experience than a lot of experience and a little talent",
+            "author": "John Wooden",
+            "id": "imgsnrnpf"
+        },
+        {
+            "category": "Experience",
+            "quote": "What is easy is seldom excellent",
+            "author": "Samuel Johnson",
+            "id": "50nsef6qh"
+        },
+        {
+            "category": "Experience",
+            "quote": "Conviction without experience makes for harshness",
+            "author": "Flannery O'Connor",
+            "id": "qi34fqrfe"
+        },
+        {
+            "category": "Experience",
+            "quote": "There are many truths of which the full meaning cannot be realized until personal experience has brought it home",
+            "author": "John Stuart Mill",
+            "id": "wm4fxypcq"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is the extract of suffering",
+            "author": "Arthur Helps",
+            "id": "jcdfh07o5"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience teaches us that we do not always receive the blessings we ask for in prayer",
+            "author": "Mary Baker Eddy",
+            "id": "1de8a7cnp"
+        },
+        {
+            "category": "Experience",
+            "quote": "I've always believed you go to literature to find the shared human experience, not the categorized human experience",
+            "author": "Alice McDermott",
+            "id": "zvfe0kcpr"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is the only prophecy of wise men",
+            "author": "Alphonse de Lamartine",
+            "id": "wiqhpma87"
+        },
+        {
+            "category": "Experience",
+            "quote": "If we could sell our experiences for what they cost us, we'd all be millionaires",
+            "author": "Pauline Phillips",
+            "id": "ljo8bohyd"
+        },
+        {
+            "category": "Experience",
+            "quote": "The more accurately one can illuminate a particular human experience, the better the work of art",
+            "author": "Claire Messud",
+            "id": "uptv5fbgm"
+        },
+        {
+            "category": "Experience",
+            "quote": "I write about my life and my own experience, but I also write about things that I have no knowledge of whatsoever",
+            "author": "Reeve Carney",
+            "id": "q1i6dfpvl"
+        },
+        {
+            "category": "Experience",
+            "quote": "Life is an aggregate of experience, which continually surprises us",
+            "author": "Ron Carlson",
+            "id": "fy7i5foro"
+        },
+        {
+            "category": "Experience",
+            "quote": "A bicycle has transformed my experience of London",
+            "author": "Iain Glen",
+            "id": "aqieoeeq7"
+        },
+        {
+            "category": "Experience",
+            "quote": "Many of the insights of the saint stem from their experience as sinners",
+            "author": "Eric Hoffer",
+            "id": "oyhgg7w1q"
+        },
+        {
+            "category": "Experience",
+            "quote": "Everyone should just drive out to the Mojave Desert and just experience it, and it's a fun place to live",
+            "author": "Bill Burr",
+            "id": "ul8f4szwu"
+        },
+        {
+            "category": "Experience",
+            "quote": "There is nothing so easy to learn as experience and nothing so hard to apply",
+            "author": "Josh Billings",
+            "id": "k6d64p2nj"
+        },
+        {
+            "category": "Experience",
+            "quote": "Not to transmit an experience is to betray it",
+            "author": "Elie Wiesel",
+            "id": "y5x5xsxbu"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is what enables you to recognize a mistake when you make it again",
+            "author": "Earl Wilson",
+            "id": "iuxieq608"
+        },
+        {
+            "category": "Experience",
+            "quote": "There are some hurts that we experience that can be forgiven but we won't forget them",
+            "author": "Joyce Meyer",
+            "id": "jzlv9li0d"
+        },
+        {
+            "category": "Experience",
+            "quote": "Connecting dots is not that rewarding of an experience",
+            "author": "Damon Lindelof",
+            "id": "gd5p3431b"
+        },
+        {
+            "category": "Experience",
+            "quote": "Not the fruit of experience, but experience itself, is the end",
+            "author": "Walter Pater",
+            "id": "pro2gk6gf"
+        },
+        {
+            "category": "Experience",
+            "quote": "Language is not simply a reporting device for experience but a defining framework for it",
+            "author": "Benjamin Whorf",
+            "id": "3g659x8pj"
+        },
+        {
+            "category": "Experience",
+            "quote": "God is only a great imaginative experience",
+            "author": "D. H. Lawrence",
+            "id": "jwkag4qmg"
+        },
+        {
+            "category": "Experience",
+            "quote": "It is only in adventure that some people succeed in knowing themselves - in finding themselves",
+            "author": "Andre Gide",
+            "id": "hcc6edddu"
+        },
+        {
+            "category": "Experience",
+            "quote": "But inner experience is only one source of human knowledge",
+            "author": "Muhammad Iqbal",
+            "id": "9egcva87q"
+        },
+        {
+            "category": "Experience",
+            "quote": "Good judgment comes from experience, and experience comes from bad judgment",
+            "author": "Rita Mae Brown",
+            "id": "9bwaoqhr8"
+        },
+        {
+            "category": "Experience",
+            "quote": "I have always loved blizzards, if only because of the driving experience - which is definitely an acquired taste",
+            "author": "Hunter S. Thompson",
+            "id": "g85n633s1"
+        },
+        {
+            "category": "Experience",
+            "quote": "Deep experience is never peaceful",
+            "author": "Henry James",
+            "id": "vb66t1380"
+        },
+        {
+            "category": "Experience",
+            "quote": "I am very happy since when I am in different cities I can experience and learn different cultures!",
+            "author": "Yani Tseng",
+            "id": "no9se76ru"
+        },
+        {
+            "category": "Experience",
+            "quote": "There are some things you only learn through experience",
+            "author": "Joe Namath",
+            "id": "xwkfuesyy"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is a good school. But the fees are high",
+            "author": "Heinrich Heine",
+            "id": "e3kl6h6e9"
+        },
+        {
+            "category": "Experience",
+            "quote": "Most of the images of reality on which we base our actions are really based on vicarious experience",
+            "author": "Albert Bandura",
+            "id": "xl676eh7w"
+        },
+        {
+            "category": "Experience",
+            "quote": "Food is our common ground, a universal experience",
+            "author": "James Beard",
+            "id": "q4dz8d6nx"
+        },
+        {
+            "category": "Experience",
+            "quote": "I became an academic so that I could share my knowledge and experience with students",
+            "author": "Vivek Wadhwa",
+            "id": "imford8de"
+        },
+        {
+            "category": "Experience",
+            "quote": "Everyone has a breakup in their lives, and I think everyone should experience love",
+            "author": "Hansika Motwani",
+            "id": "k18el5zun"
+        },
+        {
+            "category": "Experience",
+            "quote": "Good judgment comes from experience and experience comes from bad judgment",
+            "author": "Fred Brooks",
+            "id": "fd8z6im1m"
+        },
+        {
+            "category": "Experience",
+            "quote": "Doesn't all experience crumble in the end to mere literary material?",
+            "author": "Ellen Glasgow",
+            "id": "fse0jnmmr"
+        },
+        {
+            "category": "Experience",
+            "quote": "I've learnt so much over time and with the experience that I've gained. You can't please everyone",
+            "author": "Alexis Sanchez",
+            "id": "rrimsisuk"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience is the child of thought, and thought is the child of action",
+            "author": "Benjamin Disraeli",
+            "id": "5iqa04n0x"
+        },
+        {
+            "category": "Experience",
+            "quote": "The experience of God, or in any case the possibility of experiencing God, is innate",
+            "author": "Alice Walker",
+            "id": "6fax2bytb"
+        },
+        {
+            "category": "Experience",
+            "quote": "All adventure is now reactionary",
+            "author": "William F. Buckley, Jr.",
+            "id": "8ezapot8d"
+        },
+        {
+            "category": "Experience",
+            "quote": "I go by instinct - I don't worry about experience",
+            "author": "Barbra Streisand",
+            "id": "5gi82rjf8"
+        },
+        {
+            "category": "Experience",
+            "quote": "See, when I paint, it is an experience that, at its best, is transcending reality",
+            "author": "Keith Haring",
+            "id": "lcco8am7f"
+        },
+        {
+            "category": "Experience",
+            "quote": "As artists, we can't help but infuse our art with our own experience, so your experience becomes informative",
+            "author": "Rachel Morrison",
+            "id": "ilbllx17f"
+        },
+        {
+            "category": "Experience",
+            "quote": "Real love is a permanently self-enlarging experience",
+            "author": "M. Scott Peck",
+            "id": "7j4xk441m"
+        },
+        {
+            "category": "Experience",
+            "quote": "But my experience is that people who have been through painful, difficult times are filled with compassion",
+            "author": "Amy Grant",
+            "id": "togcv7won"
+        },
+        {
+            "category": "Experience",
+            "quote": "Working through experience is best for me, just being there and trying to get into the mode",
+            "author": "Ludacris",
+            "id": "2890ab33p"
+        },
+        {
+            "category": "Experience",
+            "quote": "I didn't think; I experimented",
+            "author": "Anthony Burgess",
+            "id": "rtouf2cm1"
+        },
+        {
+            "category": "Experience",
+            "quote": "Ordinary professionalism and 20 years' experience can accomplish a lot, but it can't access the hidden places",
+            "author": "Jeanette Winterson",
+            "id": "q1rynxqld"
+        },
+        {
+            "category": "Experience",
+            "quote": "I'll admit I was curious about coaching a national team, but my experience with Greece was sufficient",
+            "author": "Claudio Ranieri",
+            "id": "ol25a46y4"
+        },
+        {
+            "category": "Experience",
+            "quote": "Information's pretty thin stuff unless mixed with experience",
+            "author": "Clarence Day",
+            "id": "pdod2p9p4"
+        },
+        {
+            "category": "Experience",
+            "quote": "I used to think I'd like to have been a pioneer on the Oregon Trail, experience untamed America",
+            "author": "Tracie Peterson",
+            "id": "i1w0vsi3c"
+        },
+        {
+            "category": "Experience",
+            "quote": "There is no aspect of our experience not molded in some way by metaphor's almost imperceptible touch",
+            "author": "James Geary",
+            "id": "gdky9bn36"
+        },
+        {
+            "category": "Experience",
+            "quote": "Comedy is a shared experience, and I think it's great to open that to a wide demographic",
+            "author": "Dave Coulier",
+            "id": "huen4rvah"
+        },
+        {
+            "category": "Experience",
+            "quote": "Everything has been said before, but since nobody listens we have to keep going back and beginning all over again",
+            "author": "Andre Gide",
+            "id": "klcj632pg"
+        },
+        {
+            "category": "Experience",
+            "quote": "An optimist is a guy that has never had much experience",
+            "author": "Don Marquis",
+            "id": "st7qev3xf"
+        },
+        {
+            "category": "Experience",
+            "quote": "All the suffering and joy we experience depend on conditions",
+            "author": "Bodhidharma",
+            "id": "q0jxzm00r"
+        },
+        {
+            "category": "Experience",
+            "quote": "With experience in boxing, you learn how to be a scientific boxer and how to fight easy",
+            "author": "Manny Pacquiao",
+            "id": "9x83el566"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience enables you to recognize a mistake when you make it again",
+            "author": "Franklin P. Jones",
+            "id": "ypqq6v9q8"
+        },
+        {
+            "category": "Experience",
+            "quote": "The only thing we have learnt from experience is that we learn nothing from experience",
+            "author": "Chinua Achebe",
+            "id": "76mly2rk9"
+        },
+        {
+            "category": "Experience",
+            "quote": "We are each responsible for all of our experiences",
+            "author": "Louise L. Hay",
+            "id": "leprnf44j"
+        },
+        {
+            "category": "Experience",
+            "quote": "Our experience is composed rather of illusions lost than of wisdom acquired",
+            "author": "Joseph Roux",
+            "id": "swdifckob"
+        },
+        {
+            "category": "Experience",
+            "quote": "I think we are a product of all our experiences",
+            "author": "Sanford I. Weill",
+            "id": "4kd6r1821"
+        },
+        {
+            "category": "Experience",
+            "quote": "Experience: that most brutal of teachers. But you learn, my God do you learn",
+            "author": "William Nicholson",
+            "id": "xpyv3doam"
+        },
+        {
+            "category": "Experience",
+            "quote": "Tragedy makes you grow up",
+            "author": "Jane Campion",
+            "id": "7x7zidogj"
+        },
+        {
+            "category": "Experience",
+            "quote": "Every moment is an experience",
+            "author": "Jake Roberts",
+            "id": "qct06j1er"
+        },
+        {
+            "category": "Experience",
+            "quote": "All experience is subjective",
+            "author": "Gregory Bateson",
+            "id": "vaz8t695n"
+        },
+        {
+            "category": "Experience",
+            "quote": "The more you do, the more experience you have and the next time it will be easier to choose the right thing",
+            "author": "Andy Lau",
+            "id": "vty3rpmta"
+        },
+        {
+            "category": "Experience",
+            "quote": "Few people even scratch the surface, much less exhaust the contemplation of their own experience",
+            "author": "Randolph Bourne",
+            "id": "wpestk7zn"
+        },
+        {
+            "category": "Experience",
+            "quote": "Defeat is a wonderful experience if it motivates you to never forget you're only as good as your last performance",
+            "author": "Paul Heyman",
+            "id": "2vjlz7v36"
+        },
+        {
+            "category": "Experience",
+            "quote": "My experiences have taught me a lot and I'm happy with my learnings, if not with what I went through to learn",
+            "author": "Ally Sheedy",
+            "id": "0dpz97sig"
+        },
+        {
+            "category": "Experience",
+            "quote": "All that I know I learned after I was thirty",
+            "author": "Georges Clemenceau",
+            "id": "ekfagdrs2"
+        },
+        {
+            "category": "Experience",
+            "quote": "By experience we find out a short way by a long wandering",
+            "author": "Roger Ascham",
+            "id": "qo98lq8dv"
+        },
+        {
+            "category": "Experience",
+            "quote": "Color is an intense experience on its own",
+            "author": "Jim Hodges",
+            "id": "ap8h86614"
+        },
+        {
+            "category": "Experience",
+            "quote": "Explorers have to be ready to die lost",
+            "author": "Russell Hoban",
+            "id": "3pzmu9v7m"
+        },
+        {
+            "category": "Experience",
+            "quote": "Bitter experience has taught us how fundamental our values are and how great the mission they represent",
+            "author": "Jan Peter Balkenende",
+            "id": "tgyw5l1rf"
+        },
+        {
+            "category": "Experience",
+            "quote": "Judgment comes from experience - and experience comes from bad judgment",
+            "author": "Walter Wriston",
+            "id": "w75feevu7"
+        }
+    ]
+}

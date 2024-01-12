@@ -1,0 +1,744 @@
+{
+    "tr_quotes": [
+        {
+            "category": "Eğlenceli",
+            "quote": "Dünyanın sağlığını ve ruhun huzurunu bozmayan zevkler alınız.",
+            "author": "Epicuros",
+            "id": "k1fpys50s"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Hayatta en büyük eğlence, başkalarının yapamazsın dediğini yapmaktır.",
+            "author": "Walter Bagehot",
+            "id": "afqw4vnkh"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Eğlencesiz yaşam, tek bir bar bulunmayan bitmek bilmez bir yola benzer.",
+            "author": "Demokritos",
+            "id": "cpsiahrxo"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Eğlence ve sanatın gücü var. Kültürümüz eğlence tarafından diğer etkilere göre daha fazla şekillenir.",
+            "author": "A. Ali Ural",
+            "id": "f7tb1w4t4"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Eğlence sanattaki resimlerdeki renk gibidir.",
+            "author": "Martin Kipperbenger",
+            "id": "pqfca7y7j"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Hiçbir eğlence okuma kadar ucuz ya da kalıcı bir zevktir.",
+            "author": "Mary Worley Montgau",
+            "id": "127gf601t"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Her çağın eğlencesi, kendine özgüdür.",
+            "author": "N. B. Despreaux",
+            "id": "dmvjah87x"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Ne dersek diyelim, eğlence olmayan ülkelerde yaşlanmak pek de keyifli bir iş sayılmaz.",
+            "author": "Louis Ferdinand Celine",
+            "id": "f2az41aqq"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Eğlenceli şehirlerden uzak olmak, insanların yollarından uzak olmaktır.",
+            "author": "Homeros",
+            "id": "3idr5fxrf"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Bir insanın asıl karakteri, eğlencesi ile anlaşılır.",
+            "author": "Reynolds",
+            "id": "zcvtx195b"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Hayatta en büyük eğlence başkalarının yapamazsın dediğini yapmaktır.",
+            "author": "Walter Bagehot",
+            "id": "4szs0rnlk"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Yarını tehlikeye atacak eğlencelerden, uzak durmalısınız.",
+            "author": "George Herbert",
+            "id": "w9ujcqvuv"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "İçinde biraz acı katılmamış eğlence yoktur, şu dünyada.",
+            "author": "Şeyh Sadi",
+            "id": "4umvndggz"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Tanrı, bütün eğlenceleri suçsuz yaratmıştır.",
+            "author": "Norton",
+            "id": "o1iwuj7qc"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "İşiniz sizin için oyun gibiyse iş, eğlencelerden daha eğlenceli olur.",
+            "author": "Noel Coward",
+            "id": "obmu61xve"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Dünya hayatı bir oyun ve eğlenceden ibaret. İşte geldik gidiyoruz, şen olasın Halep şehri.",
+            "author": "Mustafa Kutlu",
+            "id": "rh3dc97pk"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Hiçbir şey neşesini kaçırmamalı insanın. Üzüntülerinden eğlence yaratabilmeli kendine.",
+            "author": "A. Ali Ural",
+            "id": "zxt5iebvt"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Çoğu zaman pek eğlenmem, geri kalan zamanlarda ise hiç eğlenmem.",
+            "author": "Woody Allen",
+            "id": "lyw6liqyc"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Dinlenmek ve eğlenmek, yaşamın onsuz edilemez gereksinimlerindendir.",
+            "author": "Aristoteles",
+            "id": "8ct4dbwmb"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Eğlence ancak ilaca ihtiyacı olmayanlara devadır.",
+            "author": "Jose Saramago",
+            "id": "c0ji8x992"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Yaz akşamları eğlenme zamanıdır, hayattan tat almaya bakın",
+            "author": "Anonim",
+            "id": "2ivcxfp1s"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Bir eğlenceye kendilerini göstermek için, gelenlerde vardır.",
+            "author": "Ovidius",
+            "id": "4wtgqntth"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "O aşkın pesinde değildi, eğlencenin pesindeydi. Oysa ask ve eğlence ayni değildir. Hatta eğlence, hafiflik aşkı oldurur.",
+            "author": "Ahmet Ümit",
+            "id": "ipzwxz8xi"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Korkunun egemenliği altında yaşamamıza rağmen, ahali daima gülen bir topluluk olmuştur. Eğlence ve espri anlayışımız vardı. Bizim neşemiz kocamandı ve hiçbir zaman dizginlenemezdi.",
+            "author": "Jack London",
+            "id": "mkmcmx57z"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Yeni dünyada eğlence, kültürün yerini alıyor.",
+            "author": "Zülfü Livaneli",
+            "id": "1n2re1ibt"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Kötülük akılsızlar için eğlence gibidir. Aklı başında olanlar içinse bilgelik aynı şeydir.",
+            "author": "Anonim",
+            "id": "ase8icfrt"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Yüreğinizin yalnızlığında barınamaz olunca da dudaklarınızda yaşarsınız; bir oyalanma ve eğlence olur ses.",
+            "author": "Halil Cibran",
+            "id": "x4dva0ko2"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Aşk biri bana aşık olduğu zaman eğlencelidir, ben aşık olduğum da ise eğlence dayanılmaz bir ıstıraba döner.",
+            "author": "Ahmet Altan",
+            "id": "qm8uikdsw"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Hayatını eğlenerek yaşamak istiyorsan kalbini hep çocuk tut",
+            "author": "Osho",
+            "id": "m6jv0w05u"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Eğlence nereden ben oradayım çünkü ben eğlenceli biriyim",
+            "author": "Anonim",
+            "id": "5hmragv84"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Tüm eğlence biçimlerini yasaklayan babam, tek eğlence kaynağımız olmak zorunda kalmıştı.",
+            "author": "Paul Theroux",
+            "id": "66wkcdfjx"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Mutsuz kişileri sadece eğlence gibi gören mutlu insanlara lanet olsun.",
+            "author": "Johann Wolfgang Von Goethe",
+            "id": "l5wfm5cjs"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Bir çocuk oyun oynamalıdır, onun oyun-eğlence saatleri olmalıdır.",
+            "author": "Immanuel Kant",
+            "id": "grb81dot1"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "İnanın bana! Hayattan en büyük verimi ve en büyük zevki almanın sırrı tehlikeli bir hayat yaşamaktır!",
+            "author": "Friedrich Wilhelm Nietzsche",
+            "id": "qm49dpf6x"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Okuma alışkanlığı hiç eksilmeyen tek zevktir; tüm öteki zevkler yitip gitse de o kalır.",
+            "author": "Anthony Trollope",
+            "id": "47y39rf71"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Aynı işçilerin, aynı işte, sürekli aynı şeyi yapmaları, gücü ve insanın hayvansal ruhunun akıp gitmesini engeller. İşlerin değiştirilmesi ise zevk ve eğlenceyi getirir.",
+            "author": "Karl Marx",
+            "id": "oeeztg0dy"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Zevk için olmasa bile ümitsizlik yüzünden de çalışmak gerek. Çünkü açıkça anlaşılmaktadır ki, çalışmak eğlenmekten daha eğlenceli olur.",
+            "author": "Anonim",
+            "id": "qbrnwzsqm"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "En iyisi, zevklerden el etek çekmek değil, zevk almakta yozlaşmadan ustalaşmak.",
+            "author": "Aristippos",
+            "id": "z7nx4lyfy"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Kitap okuyalım ve dans edelim: Bu iki eğlence dünyaya asla zarar vermez.",
+            "author": "Voltaire",
+            "id": "vp98qdey6"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Tıpkı arı gibi, işimizi eğlenerek: yapmalıyız.",
+            "author": "Oliver Goldsmith",
+            "id": "dfo51qvuj"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "İnsan iki bölümden oluşur, aklı ve bedeni; ama beden daha eğlenceli.",
+            "author": "Woody Allen",
+            "id": "9tfp0unkj"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Görev duygusuyla alınan zevk, zevk olmaktan çıkar.",
+            "author": "Ovidius",
+            "id": "a40xzaxtw"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Uçan balık yakalamak çok hoş bir eğlence olabilir; ama oltayla balık tutmak için aynı şeyi söyleyemem: oltanın bir ucunda bir solucan, öbür ucunda bir enayi.",
+            "author": "Samuel Johnson",
+            "id": "b3s0tsehh"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Yalnız insanların, kendi içinde başlayıp bitirdikleri eğlenceleri vardır.",
+            "author": "Oğuz Atay",
+            "id": "ueonamc86"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Zararsız eğlencelerin düşmanları dünyanın yönetimini ele geç irs el erdi, baharı takvimden, gençliği de insan yaşamından çıkarıp atarlardı.",
+            "author": "Honore de Balzac",
+            "id": "9rrsk6hc0"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Can sıkıntısı da aşırı eğlence arayışına sebep verebilir; başka amaçlardan yoksun insanlar genelde eğlenceyi bir amaç haline getirirler.",
+            "author": "Anonim",
+            "id": "n8sumbqbb"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Dinlenmek ve eğlenmek, yaşamın onsuz edilemez gereksinimlerindendir.",
+            "author": "Aristoteles",
+            "id": "igrqsi7iq"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Hep gergin duran yay çabuk kırılır. Gerektiğinde iyi düşünebilmesi için ruhun biraz eğlenmesi de gerekir.",
+            "author": "Phaidros",
+            "id": "i43apln64"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Yarını tehlikeye atacak eğlencelerden uzak durmalısın.",
+            "author": "George Herbert",
+            "id": "8ec8ze8z9"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Hep benim gibi düşünen kimselerle konuşmaktan sıkılırım. Yansıma ile oynamak ilk önceleri eğlenceli gelse de sonunda can sıkar.",
+            "author": "Thomas Carlyle",
+            "id": "yz33ht6ny"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Eğlencesiz yaşam, tek bir bar bulunmayan bitmek bilmez bir yola benzer.",
+            "author": "Demokritos",
+            "id": "wbyd0kdc9"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Parayı, zevk ve eğlenceyi seven veya şöhret peşinde koşan biri, aynı zamanda insanları da seven biri olamaz.",
+            "author": "Epictetos",
+            "id": "wtcot1zz2"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Eğlence iyilikle birlikte olursa çok iyi, iyilikle birlikte olmazsa yıkıcı…",
+            "author": "İsokrates",
+            "id": "hbszbrosr"
+        },
+        {
+            "category": "Eğlenceli",
+            "quote": "Hiçbir şey tüm fikirlerini değiştirmek kadar eğlenceli değildir.",
+            "author": "Laurence Sterne",
+            "id": "z0998j09i"
+        }
+    ],
+    "en_quotes": [
+        {
+            "category": "Funny",
+            "quote": "Remember, today is the tomorrow you worried about yesterday",
+            "author": "Dale Carnegie",
+            "id": "4hspywdp3"
+        },
+        {
+            "category": "Funny",
+            "quote": "Light travels faster than sound. This is why some people appear bright until you hear them speak",
+            "author": "Alan Dundes",
+            "id": "ydmroxjly"
+        },
+        {
+            "category": "Funny",
+            "quote": "Never argue with stupid people, they will drag you down to their level and then beat you with experience",
+            "author": "Mark Twain",
+            "id": "1tiyrh6yp"
+        },
+        {
+            "category": "Funny",
+            "quote": "As you get older three things happen. The first is your memory goes, and I can't remember the other two",
+            "author": "Norman Wisdom",
+            "id": "z7d0xvkhb"
+        },
+        {
+            "category": "Funny",
+            "quote": "Before you judge a man, walk a mile in his shoes. After that who cares?... He's a mile away and you've got his shoes!",
+            "author": "Billy Connolly",
+            "id": "p3iky5yaz"
+        },
+        {
+            "category": "Funny",
+            "quote": "My psychiatrist told me I was crazy and I said I want a second opinion. He said okay, you're ugly too",
+            "author": "Rodney Dangerfield",
+            "id": "ilmgyv29k"
+        },
+        {
+            "category": "Funny",
+            "quote": "If you could kick the person in the pants responsible for most of your trouble, you wouldn't sit for a month",
+            "author": "Theodore Roosevelt",
+            "id": "oo61do627"
+        },
+        {
+            "category": "Funny",
+            "quote": "Worrying is like paying a debt you don't owe",
+            "author": "Mark Twain",
+            "id": "n7295al7q"
+        },
+        {
+            "category": "Funny",
+            "quote": "If you find it hard to laugh at yourself, I would be happy to do it for you",
+            "author": "Groucho Marx",
+            "id": "16vf2kiu4"
+        },
+        {
+            "category": "Funny",
+            "quote": "The only mystery in life is why the kamikaze pilots wore helmets",
+            "author": "Al McGuire",
+            "id": "522zo1tq2"
+        },
+        {
+            "category": "Funny",
+            "quote": "The early bird gets the worm, but the second mouse gets the cheese",
+            "author": "Steven Wright",
+            "id": "a972545lw"
+        },
+        {
+            "category": "Funny",
+            "quote": "Better to remain silent and be thought a fool than to speak out and remove all doubt",
+            "author": "Abraham Lincoln",
+            "id": "04p5jw6rb"
+        },
+        {
+            "category": "Funny",
+            "quote": "When I was a boy I was told that anybody could become President. I'm beginning to believe it",
+            "author": "Clarence Darrow",
+            "id": "iiaupl9vj"
+        },
+        {
+            "category": "Funny",
+            "quote": "I was born to make mistakes, not to fake perfection",
+            "author": "Drake",
+            "id": "2hwz5b0n3"
+        },
+        {
+            "category": "Funny",
+            "quote": "Forgive your enemies, but never forget their names",
+            "author": "John F. Kennedy",
+            "id": "jhip90f80"
+        },
+        {
+            "category": "Funny",
+            "quote": "Going to church doesn't make you a Christian any more than going to a garage makes you an automobile",
+            "author": "Billy Sunday",
+            "id": "uq3z30qpc"
+        },
+        {
+            "category": "Funny",
+            "quote": "To steal ideas from one person is plagiarism; to steal from many is research",
+            "author": "Steven Wright",
+            "id": "ay2p94jkd"
+        },
+        {
+            "category": "Funny",
+            "quote": "Life is hard; it's harder if you're stupid",
+            "author": "John Wayne",
+            "id": "aozoq2pon"
+        },
+        {
+            "category": "Funny",
+            "quote": "A woman's mind is cleaner than a man's: She changes it more often",
+            "author": "Oliver Herford",
+            "id": "78nnhgn9i"
+        },
+        {
+            "category": "Funny",
+            "quote": "Always remember that you are absolutely unique. Just like everyone else",
+            "author": "Margaret Mead",
+            "id": "b6ee32s4p"
+        },
+        {
+            "category": "Funny",
+            "quote": "Here's something to think about: How come you never see a headline like 'Psychic Wins Lottery'?",
+            "author": "Jay Leno",
+            "id": "9lkq6joj9"
+        },
+        {
+            "category": "Funny",
+            "quote": "Crocodiles are easy. They try to kill and eat you. People are harder. Sometimes they pretend to be your friend first",
+            "author": "Steve Irwin",
+            "id": "n2fz0pxb3"
+        },
+        {
+            "category": "Funny",
+            "quote": "People who think they know everything are a great annoyance to those of us who do",
+            "author": "Isaac Asimov",
+            "id": "kp4990ulz"
+        },
+        {
+            "category": "Funny",
+            "quote": "The duty of a patriot is to protect his country from its government",
+            "author": "Edward Abbey",
+            "id": "0fjejyrj3"
+        },
+        {
+            "category": "Funny",
+            "quote": "Don't cry because it's over. Smile because it happened",
+            "author": "Dr. Seuss",
+            "id": "agsdqdr3y"
+        },
+        {
+            "category": "Funny",
+            "quote": "I have wondered at times what the Ten Commandments would have looked like if Moses had run them through the US Congress",
+            "author": "Ronald Reagan",
+            "id": "1bmuog7p3"
+        },
+        {
+            "category": "Funny",
+            "quote": "Politicians and diapers must be changed often, and for the same reason",
+            "author": "Mark Twain",
+            "id": "cljfdesrn"
+        },
+        {
+            "category": "Funny",
+            "quote": "We never really grow up, we only learn how to act in public",
+            "author": "Bryan White",
+            "id": "t1oyudhj5"
+        },
+        {
+            "category": "Funny",
+            "quote": "Having sex is like playing bridge. If you don't have a good partner, you'd better have a good hand",
+            "author": "Woody Allen",
+            "id": "s30o3iicl"
+        },
+        {
+            "category": "Funny",
+            "quote": "If life gives you lemons, you should make lemonade. And try to find somebody who's life gives them vodka, and have a party",
+            "author": "Ron White",
+            "id": "79gl138v6"
+        },
+        {
+            "category": "Funny",
+            "quote": "The best thing about the future is that it comes one day at a time",
+            "author": "Abraham Lincoln",
+            "id": "feolil0cu"
+        },
+        {
+            "category": "Funny",
+            "quote": "A computer once beat me at chess, but it was no match for me at kick boxing",
+            "author": "Emo Philips",
+            "id": "hrpgi4hoe"
+        },
+        {
+            "category": "Funny",
+            "quote": "Suppose you were an idiot, and suppose you were a member of Congress; but I repeat myself",
+            "author": "Mark Twain",
+            "id": "kak4kxwcj"
+        },
+        {
+            "category": "Funny",
+            "quote": "Haters are just confused admirers because they can't figure out the reason why everyone loves you",
+            "author": "Jeffree Star",
+            "id": "7q01xk4cm"
+        },
+        {
+            "category": "Funny",
+            "quote": "Money is not the most important thing in the world. Love is. Fortunately, I love money",
+            "author": "Jackie Mason",
+            "id": "d0a6p4hrl"
+        },
+        {
+            "category": "Funny",
+            "quote": "My doctor told me that jogging could add years to my life. I think he was right. I feel ten years older already",
+            "author": "Milton Berle",
+            "id": "o5ilcja7b"
+        },
+        {
+            "category": "Funny",
+            "quote": "You can't have everything. Where would you put it?",
+            "author": "Steven Wright",
+            "id": "6qiyvljxk"
+        },
+        {
+            "category": "Funny",
+            "quote": "Progress isn't made by early risers. It's made by lazy men trying to find easier ways to do something",
+            "author": "Robert A. Heinlein",
+            "id": "dbucrrr1x"
+        },
+        {
+            "category": "Funny",
+            "quote": "By the time a man realizes that his father was right, he has a son who thinks he's wrong",
+            "author": "Charles Wadsworth",
+            "id": "6fviet3bn"
+        },
+        {
+            "category": "Funny",
+            "quote": "Always borrow money from a pessimist. He won't expect it back",
+            "author": "Oscar Wilde",
+            "id": "gvj1una82"
+        },
+        {
+            "category": "Funny",
+            "quote": "You can observe a lot by just watching",
+            "author": "Yogi Berra",
+            "id": "g9lc09h13"
+        },
+        {
+            "category": "Funny",
+            "quote": "The road to success is dotted with many tempting parking spaces",
+            "author": "Will Rogers",
+            "id": "ksbtrsr5n"
+        },
+        {
+            "category": "Funny",
+            "quote": "Some cause happiness wherever they go; others, whenever they go",
+            "author": "Oscar Wilde",
+            "id": "plq2kt1td"
+        },
+        {
+            "category": "Funny",
+            "quote": "If you think nobody cares if you're alive, try missing a couple of car payments",
+            "author": "Earl Wilson",
+            "id": "jo7hxzpbu"
+        },
+        {
+            "category": "Funny",
+            "quote": "I couldn't repair your brakes, so I made your horn louder",
+            "author": "Steven Wright",
+            "id": "vi61ma2b1"
+        },
+        {
+            "category": "Funny",
+            "quote": "Never under any circumstances take a sleeping pill and a laxative on the same night",
+            "author": "Dave Barry",
+            "id": "bcyqn3za4"
+        },
+        {
+            "category": "Funny",
+            "quote": "People often say that motivation doesn't last. Well, neither does bathing - that's why we recommend it daily",
+            "author": "Zig Ziglar",
+            "id": "ps6zz2ep4"
+        },
+        {
+            "category": "Funny",
+            "quote": "As a child my family's menu consisted of two choices: take it or leave it",
+            "author": "Buddy Hackett",
+            "id": "ajg6sd195"
+        },
+        {
+            "category": "Funny",
+            "quote": "Why do they call it \"rush hour\" when nothing moves?",
+            "author": "Robin Williams",
+            "id": "9sxnfsen4"
+        },
+        {
+            "category": "Funny",
+            "quote": "The only reason some people get lost in thought is because it's unfamiliar territory",
+            "author": "Paul Fix",
+            "id": "cn1gevjq7"
+        },
+        {
+            "category": "Funny",
+            "quote": "If you want your children to listen, try talking softly - to someone else",
+            "author": "Ann Landers",
+            "id": "83prfsbpj"
+        },
+        {
+            "category": "Funny",
+            "quote": "A day without sunshine is like, you know, night",
+            "author": "Steve Martin",
+            "id": "n478szsux"
+        },
+        {
+            "category": "Funny",
+            "quote": "If women ran the world, we wouldn't have wars, just intense negotiations every 28 days",
+            "author": "Robin Williams",
+            "id": "cpgc11o03"
+        },
+        {
+            "category": "Funny",
+            "quote": "A lot of people are afraid of heights. Not me, I'm afraid of widths",
+            "author": "Steven Wright",
+            "id": "twmz6p1f3"
+        },
+        {
+            "category": "Funny",
+            "quote": "Leave something for someone but dont leave someone for something",
+            "author": "Enid Blyton",
+            "id": "vet601i10"
+        },
+        {
+            "category": "Funny",
+            "quote": "A great pleasure in life is doing what people say you cannot do",
+            "author": "Walter Bagehot",
+            "id": "dq32aul5l"
+        },
+        {
+            "category": "Funny",
+            "quote": "I am' is reportedly the shortest sentence in the English language. Could it be that 'I do' is the longest sentence?",
+            "author": "George Carlin",
+            "id": "s10kegvov"
+        },
+        {
+            "category": "Funny",
+            "quote": "Son, if you really want something in life, you have to work for it. Now quiet, they're about to announce the lottery numbers",
+            "author": "Matt Groening",
+            "id": "a4vfxkc1b"
+        },
+        {
+            "category": "Funny",
+            "quote": "A clear conscience is usually the sign of a bad memory",
+            "author": "Steven Wright",
+            "id": "6ybt25vxe"
+        },
+        {
+            "category": "Funny",
+            "quote": "If the black box flight recorder is never damaged during a plane crash, why isn’t the whole airplane made out of that stuff?",
+            "author": "George Carlin",
+            "id": "kqg3vwms3"
+        },
+        {
+            "category": "Funny",
+            "quote": "Life moves pretty fast. If you don't stop and look around once in a while, you could miss it",
+            "author": "John Hughes",
+            "id": "lc2qrdycf"
+        },
+        {
+            "category": "Funny",
+            "quote": "Never put off till tomorrow what you can do day after tomorrow just as well",
+            "author": "Mark Twain",
+            "id": "3l5b01n5c"
+        },
+        {
+            "category": "Funny",
+            "quote": "Love conquers all things except poverty and toothache",
+            "author": "Mae West",
+            "id": "0y4bdpczt"
+        },
+        {
+            "category": "Funny",
+            "quote": "The man who smiles when things go wrong has thought of someone to blame it on",
+            "author": "Robert Bloch",
+            "id": "rjrjv3ubz"
+        },
+        {
+            "category": "Funny",
+            "quote": "Government is like a baby. An alimentary canal with a big appetite at one end and no sense of responsibility at the other",
+            "author": "Ronald Reagan",
+            "id": "0gk45qblc"
+        },
+        {
+            "category": "Funny",
+            "quote": "A black cat crossing your path signifies that the animal is going somewhere",
+            "author": "Groucho Marx",
+            "id": "dg8ly7o3p"
+        },
+        {
+            "category": "Funny",
+            "quote": "Good advice is something a man gives when he is too old to set a bad example",
+            "author": "Francois de La Rochefoucauld",
+            "id": "lb67r90zw"
+        },
+        {
+            "category": "Funny",
+            "quote": "Opportunity dances with those already on the dance floor",
+            "author": "H. Jackson Brown, Jr.",
+            "id": "3p8wxpg50"
+        },
+        {
+            "category": "Funny",
+            "quote": "We learn from experience that men never learn anything from experience",
+            "author": "George Bernard Shaw",
+            "id": "2l2pz4xuc"
+        }
+    ]
+}

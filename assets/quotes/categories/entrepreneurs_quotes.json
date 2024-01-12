@@ -1,0 +1,1014 @@
+{
+    "tr_quotes": [
+        {
+            "category": "Girişimci",
+            "quote": "Kendimizi, kendi düşüncemizle kaldırıyor, kendi vizyonumuzun üzerine tırmanıyoruz.",
+            "author": "Orison Swett Marden",
+            "id": "fs471aoms"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Sevdiğiniz işi yapın.",
+            "author": "Steve Jobs",
+            "id": "dhrs71heo"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Şirket kurmak evlenip çocuk sahip olmaya benzer.",
+            "author": "Matt Brezina",
+            "id": "35gfvyqug"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Eğer bir şeye inanıyorsanız, geceleri ve haftasonları da çalışın. Kendinizi çalışıyor gibi hissetmeyeceksiniz.",
+            "author": "Kevin Rose",
+            "id": "wnox2hbl2"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "İnsanlara fikrinizi anlatın. İlgisizlikleri veya şüpheleri sizi motive eder.",
+            "author": "Todd Garland",
+            "id": "btyg5zs4r"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "İnsanlar ne istediklerini bilmezler ve kötülemekte aceleci davranırlar. Bunu bir fırsat olarak kullanın.",
+            "author": "Gary Vaynerchuck",
+            "id": "0gtiqhium"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Kendimizle rekaber ediyoruz, başkalarının nasıl hareket edeceğini kontrol edemeyiz.",
+            "author": "Pete Cashmore",
+            "id": "27788mc6h"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "İşimizi hiç bir zaman müşteri hizmetleri olarak görmedik. Biz sadece müşterilerimize nasıl davranılmak istiyorsak öyle davranıyoruz.",
+            "author": "Sally Strebel",
+            "id": "ccf0adc8j"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Korkuya dayalı kararlar vermeyin.",
+            "author": "Jake Nickell",
+            "id": "gjrcvhy7x"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Yaptığı işte başarılı olan tanıdıklarımın her biri, o işi severek yaptıkları için başarılılar",
+            "author": "Joe Penna",
+            "id": "d0vmvevst"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Yöneticiler size nerede olduğunuzu söyler; liderler ise nereye doğru gittiğinizi.",
+            "author": "Michael Lopp",
+            "id": "vgf733o93"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Canımı sıkan şeyler bana fikir olarak geri döner.",
+            "author": "Josh James",
+            "id": "zwl43viki"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Mümkün olduğunca kendi ayaklarınızın üzerinde durun.",
+            "author": "Garrett Camp",
+            "id": "2zt9fnrjo"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Rakiplerinizi unutun ve müşterilerinize odaklanın.",
+            "author": "Jack Ma",
+            "id": "6i9te9sjn"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Uzun vadeli düşündüğüm için kendimle gurur duymak hoşuma gidiyor, çok uzun vadeli olmadıkça.",
+            "author": "Mark Zuckerberg",
+            "id": "m2itwp03d"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Ürünleriniz müşterileriniz için rakiplerinizinkinden daha kolay satın alınabilinir olsun, aksi taktirde onları rakiplerinize kaptırabilirsiniz.",
+            "author": "Mark Cuban",
+            "id": "cbd3nn1fy"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Başarısızlığınız sonucunda aslanlar tarafından yenilmediğiniz bir dünyada yaşıyoruz. Yapmanız gereken gidip başka bir iş bulmak.",
+            "author": "Michael Arrington,",
+            "id": "eu5e3xg26"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Yeni bir şey yaratırken ölçüm yapmak zordur, insanlar ürününüzü ilk kullanan olmayı istemezler.",
+            "author": "Joshua Schachter",
+            "id": "01yuxbzmi"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Her ne düşünüyorsanız, daha büyük düşünün.",
+            "author": "Tony Heiser",
+            "id": "z2scrk24i"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Ukala olma. Gösterişli olma. Her zaman senden daha iyi biri var.",
+            "author": "Tony Hsieh",
+            "id": "mbo88dow2"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Bütün insanlar girişimcidir. Bir işletme kurmaları gerektiği için değil, yaratma arzusu insan DNA'sında kodlandığı için.",
+            "author": "Reid Hoffman",
+            "id": "a60rnt0oc"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Çok fazla tavsiye almayın. Birkaç istisna dışında vermek için çok fazla tavsiyeye sahip çoğu insan yaptıkları her şeyi genelleştirir. Her şeyi fazla analiz etmeyin. Sadece bir şeyler yapın ve işe yarayıp yaramadıklarını öğrenin.",
+            "author": "Ben Silbermann",
+            "id": "wbznoet0k"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Mesele nakavt olup olmadığınız değil, ayağa kalkıp kalkmayacağınızdır.",
+            "author": "Vince Lombardi",
+            "id": "vc0gxsugv"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Zor zamanlar asla dayanmaz, ama zor insanlar bunu yapar.",
+            "author": "Robert H. Schuller",
+            "id": "9l82iu3pt"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Fikrinizi açıkça paylaşın ve insanlarla konuşun. Motivasyonlarını artırmak için ilgi eksikliklerini veya şüphelerini kullan.",
+            "author": "Todd Garland",
+            "id": "rf9brw83u"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Eğer hayallerinizi takip etme cesaretimiz varsa, tüm hayallerimiz gerçekleşebilir.",
+            "author": "Walt Disney",
+            "id": "3r16pd7o7"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Değişimin sırrı, tüm enerjinizi eskiyi karşı değil yeniyi inşa etmek için odaklamaktır.",
+            "author": "Socrates",
+            "id": "lypz2oiio"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Kendinizi itin, çünkü kimse sizin için yapmaz.",
+            "author": "Anonim",
+            "id": "c8cb0ts6z"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Bazen, sonralar hiç gelmez. Şimdi yap.",
+            "author": "Anonim",
+            "id": "a2yugyjbn"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Hayal Et. İste. Yap!",
+            "author": "Anonim",
+            "id": "lu3nkowo7"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Başarı sizi öylece bulmaz. Onu aramalısınız",
+            "author": "Anonim",
+            "id": "lh0d6mslg"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Bir şey için ne kadar çok çalışırsanız, ona ulaştığınızda o kadar yoğun hislere sahip olursunuz.",
+            "author": "Anonim",
+            "id": "zg6z1qu8g"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Yorgun olduğunuz zaman durmayın. İşiniz bittiğinde durun.",
+            "author": "Anonim",
+            "id": "tdutn0kel"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Kendi suyunu taşımaya başladığında, her damlanın değerini öğreneceksin",
+            "author": "Anonim",
+            "id": "vitkylmu7"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Kararlılıkla uyan. Memnuniyetle yatağa git.",
+            "author": "Anonim",
+            "id": "r92k8xcdf"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Bugün gelecekteki benliğinizin size teşekkür edeceği bir şey yapın.",
+            "author": "Anonim",
+            "id": "fh91eu79b"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Zor olacak, ama zor imkânsız demek değil.",
+            "author": "Anonim",
+            "id": "9mmrnzwn1"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Fırsat için bekleme. Fırsat yarat.",
+            "author": "Anonim",
+            "id": "qg3bm8t1w"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Bazen zayıf yönlerimizi göstermek için değil, güçlü yönlerimizi keşfetmek için test ediliriz.",
+            "author": "Anonim",
+            "id": "gpwmj96iz"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Başarının anahtarı engellere değil hedeflere odaklanmaktır.",
+            "author": "Anonim",
+            "id": "rol25bd8p"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Gerçekten önemsediğiniz bir şey üzerinde çalışıyorsanız, zorlanmanız gerekmez. Vizyon sizi çekecektir.",
+            "author": "Steve Jobs",
+            "id": "ggx48rjy4"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "İtibarınız maaş çekinizden daha önemlidir ve dürüstlüğünüz kariyerinizden daha değerlidir.",
+            "author": "Ryan Freitas",
+            "id": "qkafg2393"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Kendinizi kaliteli insanlarla ilişkilendirin, çünkü yalnız kalmak kötü bir işletmeye sahip olmaktan daha iyidir.",
+            "author": "Booker T. Washington",
+            "id": "tpw0wpulo"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "İtibar kazanmak 20 yıl, yıkmak beş dakika sürüyor. Eğer bunu düşünürsen, işleri farklı yapacaksın.",
+            "author": "Warren Buffett",
+            "id": "xdnwepg7w"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Bir dağa nasıl tırmanacağınız tepeye ulaşmaktan daha önemlidir.",
+            "author": "Yvon Chouinard",
+            "id": "qt7jm9rov"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Eğer liderlik etmek istiyorsanız, zamanınızın en az %40’ını kendinizi yönetmeye yatırın. %30’unu üstlerinizi, %15’ini arkadaşlarınızı yönetmeye yatırın.",
+            "author": "Dee Hock",
+            "id": "0h09ss2wj"
+        },
+        {
+            "category": "Girişimci",
+            "quote": "Başarılı olma kararlılığım yeterince güçlü olursa başarısızlık beni asla geçmeyecektir.",
+            "author": "Og Mandino",
+            "id": "3s4zj0dj3"
+        }
+    ],
+    "en_quotes": [
+        {
+            "category": "Entrepreneurs",
+            "quote": "Only the paranoid survive.",
+            "author": "Andy Grove",
+            "id": "84pk65tmg"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "You have to see failure as the beginning and the middle, but never entertain it as an end.",
+            "author": "Jessica Herrin",
+            "id": "hfc8ob64h"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Success depends on employees. For me knowing and connecting with my employees is very important.",
+            "author": "Divine Ndhlukula",
+            "id": "opce5ybwo"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t let others convince you that the idea is good when your gut tells you it’s bad.",
+            "author": "Kevin Rose",
+            "id": "ml9jnwotb"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t get distracted. Never tell yourself that you need to be the biggest brand in the whole world. Start by working on what you need at the present moment and then what you need to do tomorrow. So, set yourself manageable targets.",
+            "author": "Jas Bagniewski",
+            "id": "828domf8t"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If you can offer a free tier that provides a lot of value, it will naturally help your product to spread much more rapidly.",
+            "author": "Melanie Perkins",
+            "id": "1hyxls9gp"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "In the age of transparency, honesty, and generosity, even in the form of an apology, generate goodwill.",
+            "author": "Alexander Asseily",
+            "id": "sakbgkqs2"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If we tried to think of a good idea, we wouldn’t have been able to think of a good idea. You just have to find the solution for a problem in your own life.",
+            "author": "Brian Chesky",
+            "id": "brbhouiwz"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "One of the greatest skills of leadership is being unflappable. Anytime you do anything in the world; there’s going to be criticism.",
+            "author": "Arianna Huffington",
+            "id": "r6ggb626k"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Selling is not a pushy, winner-takes-all, macho act. It is an empathy-led, process-driven, and knowledge-intensive discipline. Because, in the end, people buy from people.",
+            "author": "Subroto Bagchi",
+            "id": "bmlr8i5ff"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Ignore the hype of the startups that you see in the press. Mostly, it’s a pack of lies. Half of these startups will be dead in a year. So, focus on building your business so you can be the one left standing.",
+            "author": "Jules Pieri",
+            "id": "7de6nxo20"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "It’s important to realize that brand is much more than a logo and slogan. A brand is who your company is: how you function and make decisions.",
+            "author": "Joanna McFarland",
+            "id": "25auvjswh"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Do not focus on numbers. Focus on doing what you do best. It’s about building a community who want to visit your site every day because you create value and offer expertise.",
+            "author": "Cassey Ho",
+            "id": "l1mqdylp1"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "When in doubt, bootstrap. Using your own personal resources is the easiest way to start a business. You don’t have to convince investors about the merits of your idea. You just have to convince yourself.",
+            "author": "Ryan Holmes",
+            "id": "wmvmn5k8u"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "You have to see failure as the beginning and the middle, but never entertain it as an end.",
+            "author": "Jessica Herrin",
+            "id": "7zvyo1uc5"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Starting a company extracts so much energy and conviction that not having a clear-cut goal and meaningful mission can hamper your success. This is why, at Virta, our mission was clearly defined: reverse early type-2 diabetes in 100 million people by 2025.",
+            "author": "Sami Inkinen",
+            "id": "s2uw0njm9"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If you know too much before the start, then you will get overwhelmed. Come up with an original idea, and don’t copy because there will be no passion. You need that otherworldly passion. Just start.",
+            "author": "Jeni Britton Bauer",
+            "id": "qyov4x989"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t assume that borrowing lots of money can make your startup fly. There are many things to the business other than investors, and it’s possible to succeed with your startup without breaking the bank.",
+            "author": "Barnaby Lashbrooke",
+            "id": "bbqwg3x94"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t try to do everything by yourself, but try to connect with people and resources. Having that discipline and perseverance is really important.",
+            "author": "Chieu Cao",
+            "id": "uwr3zfgrf"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "It’s necessary to find a mentor who can invest time to know your personal capabilities and business model.",
+            "author": "Nigel Davies",
+            "id": "h1p71ve1b"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "You have to get good at ceding control and not taking things personally. Even seasoned entrepreneurs have struggled with that. I think it’s about not taking failures personally and also not taking successes personally.",
+            "author": "Leila Janah",
+            "id": "hcd8fbybh"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "No matter how many customers you have, each is an individual. The day you start thinking of them as this amorphous ‘collection’ and stop thinking of them as people is the day you start going out of business.",
+            "author": "Dharmesh Shah",
+            "id": "l0229o245"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Your ability to attract, evaluate, and forge strong working relationships with co-founders, early employees, and investors often mean the difference between failure and success.",
+            "author": "Clara Shih",
+            "id": "ragq4pm9z"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Fundraising is much easier now because of crowdfunding. Take advantage of that.",
+            "author": "Constantin Bisanz",
+            "id": "fxmtq61hj"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Being a woman in business doesn’t come without challenges. My advice? Surround yourself with other supportive women that encourage you, share ideas, and get you motivated.",
+            "author": "Jessica Alba",
+            "id": "o8feodf14"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "My advice is to focus on the importance of forging a long-term relationship, whether with colleagues, partners, or customers. It is often easy to get caught up in short-term decisions.",
+            "author": "Sheila Lirio Marcelo",
+            "id": "2kvtj6pm3"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If you’re starting something on your own, you better have a passion for it, because this is hard work.",
+            "author": "Sallie Krawcheck",
+            "id": "ug24mcmr2"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Be nicer to your customers than your competitors.",
+            "author": "Richard Reed",
+            "id": "yx1o3lh3s"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Passion, creativity, and resilience are the most crucial skills in business. If you’ve got those, you’re ready to embark on the journey.",
+            "author": "Jo Malone",
+            "id": "b6tsb7dum"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If you are working on a product that’s going to be consumer-facing, then feedback is invaluable. You should be out there being brave and talking to people and asking for feedback as much as possible.",
+            "author": "Emily Brooke",
+            "id": "tkanshryr"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "In the age of transparency, honesty, and generosity, even in the form of an apology, generate goodwill.",
+            "author": "Alexander Asseily",
+            "id": "2dzglhxrp"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Sometimes, it doesn’t hurt to ask. I have been in the news many times just by calling on the news channel and asking them about featuring my business.",
+            "author": "Lori Cheek",
+            "id": "5ezp7bc05"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Remain self-funded as long as possible.",
+            "author": "Garrett Camp",
+            "id": "eaol6x6gl"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Start as small as you can. When I started SkinnyMe Tea, I had $24 in the bank, and I was entirely self-funded. If you are not embarrassed by the first version of your product; you’ve launched too late.",
+            "author": "Gretta Rose van Riel",
+            "id": "28cvirg3o"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "As a founder, lay all the possible scenarios -- from best to worst -- in front of you, so you don’t get surprised when something happens.",
+            "author": "Brian Wong",
+            "id": "u3rgii3dh"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "We learned many things while building FourSquare. One of the most important lessons is to be clear to investors about what the company will and will not do. And be open about the priorities of the things that have to be done.",
+            "author": "Dennis Crowley",
+            "id": "ngdcxutew"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t let others convince you that the idea is good when your gut tells you it’s bad.",
+            "author": "Kevin Rose",
+            "id": "2k2andt8o"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If you tune it so that you have zero chance of failure, you usually also have zero chance of success. The key is to look at ways for when you get to your failure checkpoint, you know to stop.",
+            "author": "Reid Hoffman",
+            "id": "rrr3gehmw"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Some days you're smiling and thinking you're going to make this thing rock. Then the next day a pipe breaks and your costs look too high. You have to learn to keep your eyes on an ultimate goal. If you lose sight of that goal, you have to get out.",
+            "author": "Hamdi Ulukaya",
+            "id": "59tlnohuk"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If something is important enough, or you believe something is important enough, even if you are scared, you will keep going.",
+            "author": "Elon Musk",
+            "id": "3qwz081w9"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "ne of the things I tend to do is open myself up to a variety of voices. I try to expose myself to the kind of culture shock that occurs when you talk to people who speak a different language.",
+            "author": "Pierre Omidyar",
+            "id": "gaar9oq3n"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If you start thinking you are good at something, that's often the day you stop trying to be better and open the back door for someone to come after you. That's why we always aim higher. We never feel like we're done.",
+            "author": "Drew Houston",
+            "id": "j2hgn38p0"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Only the paranoid survive.",
+            "author": "Andy Grove",
+            "id": "k31ksf2jp"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Most of us want to tell our coworkers or friends, or husbands or wives, our ideas. For what reason? We want validation. But I feel ideas are most vulnerable in their infancy. Out of love and concern, friends and family give all the reasons or objections on why [you] shouldn't do it. I didn't want to risk that.",
+            "author": "Sara Blakely",
+            "id": "0xbs4lmg7"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "I'm always tweaking, always trying to make it better, constantly moving the levers and dials.",
+            "author": "Steve Ells",
+            "id": "c59vcl5nj"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "It starts with not having a hangover with the way things used to be.",
+            "author": "Kevin Plank",
+            "id": "tvf5vkz7h"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "There is something artificial when everyone is agreeing with each other. It's useful to indulge people who don't agree, and see their viewpoint or force yourself to explain things better.",
+            "author": "David Sack",
+            "id": "zpgvb0f0m"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If you are not getting traction on your idea, you try few things. You try pushing harder, cleaning up something, building up to something aggressively -- but if it doesn’t get traction, then don’t bother.",
+            "author": "Vijay Sharma",
+            "id": "10yyvmptu"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "It’s very important for entrepreneurs to look for people in the company who are not afraid of failures, for example, intrapreneurs. They make a business more successful by thinking like an entrepreneur -- but within a company.",
+            "author": "Chirag Kulkarni",
+            "id": "195k6xykc"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If we are going to be part of the solution, we have to engage the problems.",
+            "author": "Majora Carter",
+            "id": "az1qpdcw9"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "[Don’t] let anyone convince you that your dream, your vision to be an entrepreneur, is something that you shouldn’t do. What often happens is that people who are well meaning, who really care for us, are afraid for us and talk us out of it.",
+            "author": "Cathy Hughes",
+            "id": "r3ab3wt63"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Five days a week, I read my goals before I go to sleep and when I wake up. There are 10 goals around health, family and business with expiration dates, and I update them every six months.",
+            "author": "Daymond John",
+            "id": "xhm7ykoaz"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "There is no royal flower-strewn path to success. And if there is, I have not found it, for whatever success I have attained has been the result of much hard work and many sleepless nights.",
+            "author": "Madam C.J. Walker",
+            "id": "kcce8j7ym"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "All our dreams can come true, if we have the courage to pursue them.",
+            "author": "Walt Disney",
+            "id": "10fsu62d3"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Our chief want in life, is someone who shall make us do what we can. This is the service of a friend. With him, we are easily great.",
+            "author": "Ralph Waldo Emerson",
+            "id": "80k06kbcz"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Tough times never last, but tough people do.",
+            "author": "Robert H. Schuller",
+            "id": "gdi25f0zp"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t worry about being successful but work toward being significant and the success will naturally follow.",
+            "author": "Oprah Winfrey",
+            "id": "t5420qsoh"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Remember why you started.",
+            "author": "",
+            "id": "80pqq3cms"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "There is nothing more beautiful than someone who goes out of their way to make life beautiful for others.",
+            "author": "Mandy Hale",
+            "id": "vq4r3sgjx"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "The way to get started is to quit talking and begin doing.",
+            "author": "Walt Disney",
+            "id": "br8lyw96f"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "The Team! The Team! The Team!",
+            "author": "Bo Schembechler",
+            "id": "nvsbe9git"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "You have to believe it before you see it.",
+            "author": "",
+            "id": "wgl76jq55"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Be so good they can’t ignore you.",
+            "author": "Steve Martin",
+            "id": "4f0zimxkm"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Never underestimate the power of a t-shirt.",
+            "author": "",
+            "id": "q1n285b8l"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Be the change you wish to see in the world.",
+            "author": "Mahatma Gandhi",
+            "id": "ksaxgi5py"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "An entrepreneur tends to bite off a little more than he can chew hoping he’ll quickly learn how to chew it.",
+            "author": "Roy Ash",
+            "id": "rg0he1cop"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "We all have things we must do that we don’t really care to do and things we must do that we don’t mind doing, then there’s the goofing off.",
+            "author": "Mi Oon",
+            "id": "kc9dpsf1x"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "A ship in the harbor is safe, but that is not what ships are built for.",
+            "author": "John A. Shedd",
+            "id": "onsy4jahi"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If you don’t have big dreams and goals, you’ll end up working for someone that does.",
+            "author": "",
+            "id": "80p809j76"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "I have not failed. I’ve just found 10,000 ways that won’t work.",
+            "author": "Thomas Edison",
+            "id": "0v9c070bm"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t worry about failure; you only have to be right once.",
+            "author": "Drew Houston",
+            "id": "1x18qyz65"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "In carrying out e-commerce, the most important thing is to keep doing what you are doing right now with passion, to keep it up.",
+            "author": "Jack Ma",
+            "id": "28txcuj5u"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Someone is sitting in the shade today because someone planted a tree a long time ago.",
+            "author": "Warren Buffett",
+            "id": "kdpy0jfvz"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Try not to become a man of success. Rather become a man of value.",
+            "author": "Albert Einstein",
+            "id": "gdoj4yu6z"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t risk more than you can afford to lose!",
+            "author": "The Backroads Bosslady",
+            "id": "ikduvezwj"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Knowledge without action is meaningless",
+            "author": "Abu Bakr",
+            "id": "us0lupid4"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Never give up on a dream just because of the time it will take to accomplish it.",
+            "author": "",
+            "id": "kwv28lx8o"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Service is the rent we pay for being. It is the very purpose of life, and not something you do in your spare time.",
+            "author": "Marian Wright Edelman",
+            "id": "msm9wmrig"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Life’s too short to learn from your own mistakes. So learn from others.",
+            "author": "",
+            "id": "1au9inpni"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "My biggest motivation? Just to keep challenging myself. I see life almost like one long University education that I never had — every day I’m learning something new.",
+            "author": "Richard Branson",
+            "id": "j2i040omc"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Every time you state what you want or believe, you’re the first to hear it. It’s a message to both you and others about what you think is possible. Don’t put a ceiling on yourself.",
+            "author": "Oprah Winfrey",
+            "id": "0l3or5xh1"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.",
+            "author": "Steve Jobs",
+            "id": "unomk14km"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "I knew that if I failed I wouldn’t regret that, but I knew the one thing I might regret is not trying.",
+            "author": "Jeff Bezos",
+            "id": "w0plljwl0"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Whether you think you can, or think you can’t — you’re right.",
+            "author": "Henry Ford",
+            "id": "qoejr420d"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t limit yourself. Many people limit themselves to what they think they can do. You can go as far as your mind lets you. What you believe, remember, you can achieve.",
+            "author": "Mary Kay Ash",
+            "id": "m3ra4u0dn"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "You don’t learn to walk by following rules. You learn by doing and falling over.",
+            "author": "Richard Branson",
+            "id": "ftdlxt92k"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "When you find an idea that you just can’t stop thinking about, that’s probably a good one to pursue.",
+            "author": "Josh James",
+            "id": "xoio6b08x"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "It’s not about ideas. It’s about making ideas happen.",
+            "author": "Scott Belsky",
+            "id": "zxplbuswd"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Entrepreneur is someone who has a vision for something and a want to create.",
+            "author": "David Karp",
+            "id": "5fj21x9tw"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "The only thing worse than starting something and failing… is not starting something.",
+            "author": "Seth Godin",
+            "id": "r1y92ls0m"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "When I’m old and dying, I plan to look back on my life and say ‘wow, that was an adventure,’ not ‘wow, I sure felt safe.",
+            "author": "Tom Preston-Werner",
+            "id": "w3jmw8v0j"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "The fastest way to change yourself is to hang out with people who are already the way you want to be.",
+            "author": "Reid Hoffman",
+            "id": "fatf02m7j"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "I don’t look to jump over 7-foot bars — I look for 1-foot bars that I can step over.",
+            "author": "Warren Buffett",
+            "id": "qg3djkj9a"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "I don’t look to jump over 7-foot bars — I look for 1-foot bars that I can step over.",
+            "author": "Warren Buffett",
+            "id": "jnzxddx0f"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "In the end, a vision without the ability to execute it is probably a hallucination.",
+            "author": "Steve Case",
+            "id": "c9fapvzkv"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Fearlessness is like a muscle. I know from my own life that the more I exercise it the more natural it becomes to not let my fears run me.",
+            "author": "Arianna Huffington",
+            "id": "2ei2eihbg"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Embrace what you don’t know, especially in the beginning, because what you don’t know can become your greatest asset. It ensures that you will absolutely be doing things different from everybody else.",
+            "author": "Sara Blakely",
+            "id": "ir67o6gtb"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Risk more than others think is safe. Dream more than others think is practical.",
+            "author": "Howard Schultz",
+            "id": "b65j0dnrq"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "The way to get started is to quit talking and begin doing.",
+            "author": "Walt Disney",
+            "id": "2v8n2yzlm"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "High expectations are the key to everything.",
+            "author": "Sam Walton",
+            "id": "ng9fohi74"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t be afraid to assert yourself, have confidence in your abilities and don’t let the bastards get you down.",
+            "author": "Michael Bloomberg",
+            "id": "hu1g8xryz"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "There are lots of bad reasons to start a company. But there’s only one good, legitimate reason, and I think you know what it is: it’s to change the world.",
+            "author": "Phil Libin",
+            "id": "f8h5v4uvy"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Everything started as nothing.",
+            "author": "Ben Weissenstein",
+            "id": "8nyyuqzsl"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "The important thing is not being afraid to take a chance. Remember, the greatest failure is to not try. Once you find something you love to do, be the best at doing it.",
+            "author": "Debbi Fields",
+            "id": "q0bl13bxc"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "You shouldn’t focus on why you can’t do something, which is what most people do. You should focus on why perhaps you can, and be one of the exceptions.",
+            "author": "Steve Case",
+            "id": "9h02luwnp"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Empower yourself and realize the importance of contributing to the world by living your talent. Work on what you love. You are responsible for the talent that has been entrusted to you.",
+            "author": "Catharina Bruns",
+            "id": "8a9h4pimu"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "You have to believe it before you see it.",
+            "author": "Jeremiah",
+            "id": "xud3f9ij9"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Be so good they can’t ignore you.",
+            "author": "Steve Martin",
+            "id": "wmny9nwxg"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Our greatest glory is not in never failing, but in rising every time we fail.",
+            "author": "Confucius",
+            "id": "y80t2e8bz"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "An entrepreneur tends to bite off a little more than he can chew hoping he’ll quickly learn how to chew it.",
+            "author": "Roy Ash",
+            "id": "o2v89gemr"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "A ship in the harbor is safe, but that is not what ships are built for.",
+            "author": "John A. Shedd",
+            "id": "wr04ko2sb"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t risk more than you can afford to lose!",
+            "author": "Backroads Bosslady",
+            "id": "km189l49r"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t let others convince you that the idea is good when your gut tells you it’s bad.",
+            "author": "Kevin Rose",
+            "id": "jiwj1im2f"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "In the age of transparency, honesty, and generosity, even in the form of an apology, generate goodwill.",
+            "author": "Alexander Asseily",
+            "id": "e7iel6jm8"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Don’t worry about funding if you don’t need it. Today it’s cheaper to start a business than ever.",
+            "author": "Noah Everett",
+            "id": "4pn8jbomc"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If you’re starting something on your own, you better have a passion for it, because this is hard work.",
+            "author": "Sallie Krawcheck",
+            "id": "fmu0cdrgw"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Remain self-funded as long as possible.",
+            "author": "Garrett Camp",
+            "id": "ytjc9xa4s"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "As a founder, lay all the possible scenarios – from best to worst – in front of you, so you don’t get surprised when something happens.",
+            "author": "Brian Wong",
+            "id": "j7i301jeh"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "If we are going to be part of the solution, we have to engage the problems.",
+            "author": "Majora Carter",
+            "id": "unfvgm00p"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "The best way to predict the future is to create it.",
+            "author": "Peter Drucker",
+            "id": "p0kjd4v8k"
+        },
+        {
+            "category": "Entrepreneurs",
+            "quote": "Winners never quit and quitters never win.",
+            "author": "Vince Lombardi",
+            "id": "xpt9kjyxw"
+        }
+    ]
+}

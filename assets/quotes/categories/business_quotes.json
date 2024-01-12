@@ -1,0 +1,2088 @@
+{
+    "tr_quotes": [
+        {
+            "category": "İş",
+            "quote": "Hayırlı bir iş yapmak istiyorsan bugünün işini yarına bırakma; çünkü yarına kadar ne olacağı belli değildir.",
+            "author": "Hz. Ali",
+            "id": "vvcvara5u"
+        },
+        {
+            "category": "İş",
+            "quote": "İnsan, bir işin delisi olmadan akıllısı olamıyor.",
+            "author": "Ali Suad",
+            "id": "3wwqtyczk"
+        },
+        {
+            "category": "İş",
+            "quote": "İş hayatı denilen şeyin iş değil, hayat olduğunu geç kalmadan öğrenin.",
+            "author": "B. C. Forbes",
+            "id": "8opugn8tj"
+        },
+        {
+            "category": "İş",
+            "quote": "İşine hâkim ol, işinin sana hâkim olmasına izin verme.",
+            "author": "Benjamin Franklin",
+            "id": "s3uf7vxuo"
+        },
+        {
+            "category": "İş",
+            "quote": "İşinin yapılmasını istiyorsan kendin git, istemiyorsan başkasını gönder.",
+            "author": "Benjamin Franklin",
+            "id": "divxm7rrq"
+        },
+        {
+            "category": "İş",
+            "quote": "Her insan, üstün bir işi yapamaz ama basit bir işi üstün bir ruhla yapabilir.",
+            "author": "Booker T. Washington",
+            "id": "js4kdbcok"
+        },
+        {
+            "category": "İş",
+            "quote": "Yapılacak işler, yapılanların yanında ne kadar da çok!",
+            "author": "Cecil Rhodes",
+            "id": "khq28zvnm"
+        },
+        {
+            "category": "İş",
+            "quote": "Başkasından daha fazla iş yapmıyorsanız ondan üstün olduğunuzu ispat etmek için boşuna çabalamayın.",
+            "author": "Cervantes",
+            "id": "0ozsyeeu8"
+        },
+        {
+            "category": "İş",
+            "quote": "Üzerinde durduğun işi seversen onu daha iyi bir hâle getirmekten zevk duyarsın.",
+            "author": "Charles Schwab",
+            "id": "zlv3m9h00"
+        },
+        {
+            "category": "İş",
+            "quote": "Bir işe girişmek için iyi bir gerekçemiz yoksa ona başlamamak için iyi bir nedenimiz var demektir.",
+            "author": "Cicero",
+            "id": "5tos2j9n0"
+        },
+        {
+            "category": "İş",
+            "quote": "Eğer kafa işçisiyseniz yaptığınız işin çokluğu ile nadiren yorulursunuz, yapmadığınız işin miktarı sizi daha çok yorar.",
+            "author": "Dale Carnegie",
+            "id": "jd6gyl7im"
+        },
+        {
+            "category": "İş",
+            "quote": "İşsiz adam durgun su gibidir, bozulup kirlenir.",
+            "author": "De Laterne",
+            "id": "cfip59ee3"
+        },
+        {
+            "category": "İş",
+            "quote": "Çabukluğu iş başında geçen zamanla değil, işin ilerlemesiyle ölçmek gerekir.",
+            "author": "Francis Bacon",
+            "id": "xjm393e1u"
+        },
+        {
+            "category": "İş",
+            "quote": "Bize değer kazandıran şeyler, yaptığımız işlerdir.",
+            "author": "G. Bancroft",
+            "id": "wrv3prelg"
+        },
+        {
+            "category": "İş",
+            "quote": "İşlerin yükü ruha iyi gelir, kurtulduğu zaman daha serbestçe oynar ve hayatın tadını alır.",
+            "author": "Goethe",
+            "id": "66nw3o28r"
+        },
+        {
+            "category": "İş",
+            "quote": "Zor iş, zamanında yapmamız gerekip de yapmadığımız kolay işlerin birikmesiyle oluşur.",
+            "author": "Henry Ford",
+            "id": "biouflfos"
+        },
+        {
+            "category": "İş",
+            "quote": "İşine bağlı olan insanın kafasına düşünceler kendiliğinden doğar.",
+            "author": "Henry Ford",
+            "id": "4n1afjxx4"
+        },
+        {
+            "category": "İş",
+            "quote": "Kendimiz hakkında yapabileceğimize inandığımız şeylere göre hüküm veririz, başkaları ise bizim hakkımızda yapmış olduğumuz işlere göre hüküm verirler.",
+            "author": "Henry W. Longfellow",
+            "id": "mjdarjrd4"
+        },
+        {
+            "category": "İş",
+            "quote": "Yaptığınız iş, ne kadar insanı mutlu ediyorsa o derecede büyük ve değerlidir.",
+            "author": "Hutcheson",
+            "id": "ncedv6ldr"
+        },
+        {
+            "category": "İş",
+            "quote": "Şeytan, işlerini gördürmek için işsiz elleri seçer.",
+            "author": "Isaac Watts",
+            "id": "4dvgdzdqa"
+        },
+        {
+            "category": "İş",
+            "quote": "Bir metre iş yapmayı, bir kilometre söz vermeye değişmem.",
+            "author": "James Howell",
+            "id": "dglcbmy9l"
+        },
+        {
+            "category": "İş",
+            "quote": "Bir insanı doyurmak istiyorsanız ona her gün balık vermeyin, balık tutmayı öğretin.",
+            "author": "Konfüçyüs",
+            "id": "fozboowip"
+        },
+        {
+            "category": "İş",
+            "quote": "Bilgili insanlar işini maaş karşılığı değil, bir hayat görevi olarak yerine getirir.",
+            "author": "Konfüçyüs",
+            "id": "8szv69guh"
+        },
+        {
+            "category": "İş",
+            "quote": "Yapılan iş ne kadar parlak olursa olsun, yüksek bir amacın sonucu değilse büyük sayılmamalıdır.",
+            "author": "La Rochefoucauld",
+            "id": "p53w77l26"
+        },
+        {
+            "category": "İş",
+            "quote": "Küçük işleri iyi yapmak, büyük işleri daha iyi yapabilmeye giden yoldur.",
+            "author": "Lamb",
+            "id": "45utyohl7"
+        },
+        {
+            "category": "İş",
+            "quote": "Büyük işler başarıp şeref kazandıktan sonra çekilmeyi bilmeli.",
+            "author": "Lao Tzu",
+            "id": "9bzb3itaq"
+        },
+        {
+            "category": "İş",
+            "quote": "İşi çok olanların gözyaşları için zamanları yoktur.",
+            "author": "Lord Byron",
+            "id": "y66x53wj2"
+        },
+        {
+            "category": "İş",
+            "quote": "İşi görmek istiyorsanız az kişiyle, laf etmek istiyorsanız çok kişiyle ekip kurunuz.",
+            "author": "Mancur Olson",
+            "id": "8j4tnnz7k"
+        },
+        {
+            "category": "İş",
+            "quote": "İş, bir kere geri kalırsa hiçbir zaman ilerlemez.",
+            "author": "Hz. Ömer",
+            "id": "9ivpphvx0"
+        },
+        {
+            "category": "İş",
+            "quote": "Dikkatsiz ve özensiz yapılan işler, bizi her zaman yükümlülük altına sokar.",
+            "author": "Samuel Smiles",
+            "id": "czum3iw7z"
+        },
+        {
+            "category": "İş",
+            "quote": "Kalbinizi işinizin, işinizi de kalbinizin içine yerleştirmelisiniz.",
+            "author": "Thomas John Watson",
+            "id": "p9aivfgug"
+        },
+        {
+            "category": "İş",
+            "quote": "İş, ibadetin en mukaddesidir.",
+            "author": "Tolstoy",
+            "id": "nu5uut5co"
+        },
+        {
+            "category": "İş",
+            "quote": "İş, bizi üç felaketten uzaklaştırır; can sıkıntısı, kötülük ve ihtiyaç.",
+            "author": "Voltaire",
+            "id": "bfr7qfjjc"
+        },
+        {
+            "category": "İş",
+            "quote": "Mutlu olmak ve sağlığınızı korumak isterseniz en az iki üç zevkli işle uğraşmanız şarttır.",
+            "author": "William Churchill",
+            "id": "d4c5rbk8m"
+        },
+        {
+            "category": "İş",
+            "quote": "İş, keyfi engeller ama farklı keyifler getirir.",
+            "author": "William Feather",
+            "id": "jaebxbemf"
+        },
+        {
+            "category": "İş",
+            "quote": "Eğer işiniz başka hiçbir şeye zaman bırakmayacak kadar yoğunsa sizinle ya da işinizle ilgili yanlış giden bir şeyler var demektir.",
+            "author": "William J. H. Boetcker",
+            "id": "20vgai8ih"
+        },
+        {
+            "category": "İş",
+            "quote": "Küçük işler, basit insanları mağrur yapar.",
+            "author": "Willam Shakespeare",
+            "id": "sky8wnklh"
+        },
+        {
+            "category": "İş",
+            "quote": "Hangi işe girersen gir, önce sonunu düşün; sonu düşünülmeyen işler insana zarar getirir.",
+            "author": "Yusuf Has Hacip",
+            "id": "shscfnkeu"
+        },
+        {
+            "category": "İş",
+            "quote": "İş hayatındaki en büyük yetenek diğerleriyle iyi geçinip onların yaptıklarında etkili olabilmektir.",
+            "author": "John Hancock",
+            "id": "8gx4k3z12"
+        },
+        {
+            "category": "İş",
+            "quote": "Eğer en iyi yüz ticari kuruluşu incelemeye kalkarsanız, eminim büyük bir çoğunluğunun başarısının özgün ve yenilikçi satış metodlarında gizli olduğunu farkedeceksiniz.",
+            "author": "W. Alton Jones",
+            "id": "abxj0g5c2"
+        },
+        {
+            "category": "İş",
+            "quote": "İş hayatı inanç talep eder, ciddiyet gerektirir, yürek ister, dürüstçe bencilliktir, hata affetmez ve hayatın ta kendisidir.",
+            "author": "William Feater",
+            "id": "0et3c78ua"
+        },
+        {
+            "category": "İş",
+            "quote": "İnsanlar ihtiyacı olan şeyleri nadiren alırlar. İnsanlar istediklerini alırlar.",
+            "author": "Seth Godin",
+            "id": "ddpjjlx2z"
+        },
+        {
+            "category": "İş",
+            "quote": "Cüretkarca, korkusuzca, pervasızca yaşa. Rekabet içinde olmanın tadını çıkarmak için elinden gelenin en iyisini yap.",
+            "author": "Henry J. Kaiser",
+            "id": "xyln8ualh"
+        },
+        {
+            "category": "İş",
+            "quote": "İş adamı ticari bir takip içindedir. Ticari olarak takip edilen şey ise paradır.",
+            "author": "Ambrose Bierce",
+            "id": "z68syzi7w"
+        },
+        {
+            "category": "İş",
+            "quote": "Bir iş açmak çok kolaydır; onu açık tutmak ise çok zordur.",
+            "author": "Çin Atasözü",
+            "id": "p90uaen06"
+        },
+        {
+            "category": "İş",
+            "quote": "İşler asla zor değildir. Yeterki onları küçük parçalara bölebilelim.",
+            "author": "Henry Ford",
+            "id": "ye7go4won"
+        },
+        {
+            "category": "İş",
+            "quote": "Milletler orduları yüzünden birbirlerine güvensiz değiller. Birbirlerine güven duymadıkları için orduları var.",
+            "author": "Ronald Reagan",
+            "id": "zba6m7v3j"
+        },
+        {
+            "category": "İş",
+            "quote": "Bir adam sadece para kazanmak fikriyle işe başladıysa, büyük ihtimalle, yapamayacaktır.",
+            "author": "Joyce Claude Hall",
+            "id": "5l3ddix6p"
+        },
+        {
+            "category": "İş",
+            "quote": "İş hayatı sekse benzer. İyi olduğu zaman çok iyidir; pek iyi olmadığı zaman, yinede iyidir.",
+            "author": "George Katona",
+            "id": "o79b14oic"
+        },
+        {
+            "category": "İş",
+            "quote": "Fırsatlardan yararlananların baş yardımcıları onları kaçıranlardır.",
+            "author": "Özdemir Asaf",
+            "id": "25ttv95sk"
+        },
+        {
+            "category": "İş",
+            "quote": "Allah kuşlara rızık verir, fakat kuşlar bu yiyeceği arayıp bulmak zorundadır.",
+            "author": "Latin Atasözü",
+            "id": "fyaatbo3t"
+        },
+        {
+            "category": "İş",
+            "quote": "Ticaret: Başka bir insanın cebindeki parayı kibarca alabilme sanatı.",
+            "author": "Max Amsterdam",
+            "id": "nkd5neeik"
+        },
+        {
+            "category": "İş",
+            "quote": "Ne en güçlü olan tür hayatta kalır, ne de en zeki olan, ancak değişime en çok adapte olabilendir hayatta kalan.",
+            "author": "Charles Darwin",
+            "id": "wu5qg15v7"
+        }
+    ],
+    "en_quotes": [
+        {
+            "category": "Business",
+            "quote": "Great things in business are never done by one person. They're done by a team of people",
+            "author": "Steve Jobs",
+            "id": "xmjrvv5vv"
+        },
+        {
+            "category": "Business",
+            "quote": "A brand for a company is like a reputation for a person. You earn reputation by trying to do hard things well",
+            "author": "Jeff Bezos",
+            "id": "4y0avf3rh"
+        },
+        {
+            "category": "Business",
+            "quote": "The superior man understands what is right; the inferior man understands what will sell",
+            "author": "Confucius",
+            "id": "0kr5w6hz4"
+        },
+        {
+            "category": "Business",
+            "quote": "Just because something doesn't do what you planned it to do doesn't mean it's useless",
+            "author": "Thomas A. Edison",
+            "id": "c46gv4ht4"
+        },
+        {
+            "category": "Business",
+            "quote": "The golden rule for every business man is this: 'Put yourself in your customer's place.'",
+            "author": "Orison Swett Marden",
+            "id": "t24evarhv"
+        },
+        {
+            "category": "Business",
+            "quote": "You can't be successful in business without taking risks. It's really that simple",
+            "author": "Adena Friedman",
+            "id": "jxntud3uf"
+        },
+        {
+            "category": "Business",
+            "quote": "Sustainability has to be a way of life to be a way of business",
+            "author": "Anand Mahindra",
+            "id": "kn2wy2i8n"
+        },
+        {
+            "category": "Business",
+            "quote": "I promise you... nobody cares about your business except for you. Nobody",
+            "author": "Arvind Gupta",
+            "id": "wltee8n28"
+        },
+        {
+            "category": "Business",
+            "quote": "As an entrepreneur, I am focused on my business",
+            "author": "Bhavish Aggarwal",
+            "id": "bn1eyasif"
+        },
+        {
+            "category": "Business",
+            "quote": "If you listen to your fears, you will die never knowing what a great person you might have been",
+            "author": "Robert H. Schuller",
+            "id": "9fdvhc20g"
+        },
+        {
+            "category": "Business",
+            "quote": "The business of art is to reveal the relation between man and his environment",
+            "author": "D. H. Lawrence",
+            "id": "02cdn1cmi"
+        },
+        {
+            "category": "Business",
+            "quote": "Profitability is coming from productivity, efficiency, management, austerity, and the way to manage the business",
+            "author": "Carlos Slim",
+            "id": "w47cdx9p7"
+        },
+        {
+            "category": "Business",
+            "quote": "Meetings are indispensable when you don't want to do anything",
+            "author": "John Kenneth Galbraith",
+            "id": "bmz8ry4px"
+        },
+        {
+            "category": "Business",
+            "quote": "If anything is good for pounding humility into you permanently, it's the restaurant business",
+            "author": "Anthony Bourdain",
+            "id": "c7plihhmo"
+        },
+        {
+            "category": "Business",
+            "quote": "So much of life is a negotiation - so even if you're not in business, you have opportunities to practice all around you",
+            "author": "Kevin O'Leary",
+            "id": "oomf9c5or"
+        },
+        {
+            "category": "Business",
+            "quote": "It's OK to have your eggs in one basket as long as you control what happens to that basket",
+            "author": "Elon Musk",
+            "id": "odl79fyae"
+        },
+        {
+            "category": "Business",
+            "quote": "I want to put a ding in the universe",
+            "author": "Steve Jobs",
+            "id": "twsz5wbxw"
+        },
+        {
+            "category": "Business",
+            "quote": "Informed decision-making comes from a long tradition of guessing and then blaming others for inadequate results",
+            "author": "Scott Adams",
+            "id": "x0agvg1yc"
+        },
+        {
+            "category": "Business",
+            "quote": "Life is an exciting business, and most exciting when it is lived for others",
+            "author": "Helen Keller",
+            "id": "d86hbjvib"
+        },
+        {
+            "category": "Business",
+            "quote": "If Satan wasn't around, churches would go out of business",
+            "author": "Marilyn Manson",
+            "id": "57ry6wmn1"
+        },
+        {
+            "category": "Business",
+            "quote": "The best way to look at any business is from the standpoint of the clients",
+            "author": "Jamie Dimon",
+            "id": "5k0qujem9"
+        },
+        {
+            "category": "Business",
+            "quote": "Personal relationships are always the key to good business. You can buy networking; you can't buy friendships",
+            "author": "Lindsay Fox",
+            "id": "dobepm27i"
+        },
+        {
+            "category": "Business",
+            "quote": "Empathy is one of our greatest tools of business that is most underused",
+            "author": "Daniel Lubetzky",
+            "id": "atv5vxdz6"
+        },
+        {
+            "category": "Business",
+            "quote": "No enterprise is more likely to succeed than one concealed from the enemy until it is ripe for execution",
+            "author": "Niccolo Machiavelli",
+            "id": "f00mtb7tw"
+        },
+        {
+            "category": "Business",
+            "quote": "All you have in business is your reputation - so it's very important that you keep your word",
+            "author": "Richard Branson",
+            "id": "c8giioova"
+        },
+        {
+            "category": "Business",
+            "quote": "I learned the life of business, commerce - it's an art",
+            "author": "Emmanuel Macron",
+            "id": "5q1xesf6r"
+        },
+        {
+            "category": "Business",
+            "quote": "Looking for love is tricky business, like whipping a carousel horse",
+            "author": "George Cukor",
+            "id": "a8f1rqgxp"
+        },
+        {
+            "category": "Business",
+            "quote": "Sales are contingent upon the attitude of the salesman - not the attitude of the prospect",
+            "author": "W. Clement Stone",
+            "id": "6qe2kl1mx"
+        },
+        {
+            "category": "Business",
+            "quote": "It is the artist's business to create sunshine when the sun fails",
+            "author": "Romain Rolland",
+            "id": "1yeqehul4"
+        },
+        {
+            "category": "Business",
+            "quote": "There's no reason to be the richest man in the cemetery. You can't do any business from there",
+            "author": "Colonel Sanders",
+            "id": "mwe4xst6x"
+        },
+        {
+            "category": "Business",
+            "quote": "There's no business like show business, but there are several businesses like accounting",
+            "author": "David Letterman",
+            "id": "z8cen4gc3"
+        },
+        {
+            "category": "Business",
+            "quote": "I want to put H&M and Zara out of business",
+            "author": "Jennifer Hyman",
+            "id": "rphi6d93k"
+        },
+        {
+            "category": "Business",
+            "quote": "If it doesn't sell, it isn't creative",
+            "author": "David Ogilvy",
+            "id": "qolt1o736"
+        },
+        {
+            "category": "Business",
+            "quote": "There's nobody in the business strong enough to scare me",
+            "author": "Tupac Shakur",
+            "id": "z8cu3eitv"
+        },
+        {
+            "category": "Business",
+            "quote": "If you don't drive your business, you will be driven out of business",
+            "author": "B. C. Forbes",
+            "id": "3mytb8wpb"
+        },
+        {
+            "category": "Business",
+            "quote": "A satisfied customer is the best business strategy of all",
+            "author": "Michael LeBoeuf",
+            "id": "v044pew8n"
+        },
+        {
+            "category": "Business",
+            "quote": "In the business world, the rearview mirror is always clearer than the windshield",
+            "author": "Warren Buffett",
+            "id": "6hegjxyh4"
+        },
+        {
+            "category": "Business",
+            "quote": "Don't let your ego get too close to your position, so that if your position gets shot down, your ego doesn't go with it",
+            "author": "Colin Powell",
+            "id": "x3xbovuid"
+        },
+        {
+            "category": "Business",
+            "quote": "The greatest ability in business is to get along with others and to influence their actions",
+            "author": "John Hancock",
+            "id": "gilww6oaz"
+        },
+        {
+            "category": "Business",
+            "quote": "We're all working together; that's the secret",
+            "author": "Sam Walton",
+            "id": "ilscgu9cc"
+        },
+        {
+            "category": "Business",
+            "quote": "Cricket is my passion; it is my first love. So I will not act in my movies, as they will just be a side business for me",
+            "author": "Harbhajan Singh",
+            "id": "yi2crkc8o"
+        },
+        {
+            "category": "Business",
+            "quote": "Content marketing is one of the most effective ways to promote your business online - but only when it's done right",
+            "author": "John Rampton",
+            "id": "shty1895y"
+        },
+        {
+            "category": "Business",
+            "quote": "Small business people are people with goals and values that can't be calculated on a profit and loss statement",
+            "author": "Linda McMahon",
+            "id": "yu3upxjbs"
+        },
+        {
+            "category": "Business",
+            "quote": "In the end, all business operations can be reduced to three words: people, product, and profits",
+            "author": "Lee Iacocca",
+            "id": "h9036y219"
+        },
+        {
+            "category": "Business",
+            "quote": "Justice means minding one's own business and not meddling with other men's concerns",
+            "author": "Plato",
+            "id": "0lsld4j5m"
+        },
+        {
+            "category": "Business",
+            "quote": "The business schools reward difficult complex behavior more than simple behavior, but simple behavior is more effective",
+            "author": "Warren Buffett",
+            "id": "k2f3rol8r"
+        },
+        {
+            "category": "Business",
+            "quote": "War is the business of barbarians",
+            "author": "Napoleon Bonaparte",
+            "id": "npdc80t3z"
+        },
+        {
+            "category": "Business",
+            "quote": "The wrong personality with the greatest resume in a business will not grow that business",
+            "author": "Jon Taffer",
+            "id": "ggyn7qc62"
+        },
+        {
+            "category": "Business",
+            "quote": "Punctuality is one of the cardinal business virtues: always insist on it in your subordinates",
+            "author": "Don Marquis",
+            "id": "0vmy0lpne"
+        },
+        {
+            "category": "Business",
+            "quote": "Your premium brand had better be delivering something special, or it's not going to get the business",
+            "author": "Warren Buffett",
+            "id": "bmo37g43i"
+        },
+        {
+            "category": "Business",
+            "quote": "Our main business is not to see what lies dimly at a distance, but to do what lies clearly at hand",
+            "author": "Thomas Carlyle",
+            "id": "gdxojtnvr"
+        },
+        {
+            "category": "Business",
+            "quote": "Business is never so healthy as when, like a chicken, it must do a certain amount of scratching around for what it gets",
+            "author": "Henry Ford",
+            "id": "0xhwqeoey"
+        },
+        {
+            "category": "Business",
+            "quote": "If you don't understand the details of your business you are going to fail",
+            "author": "Jeff Bezos",
+            "id": "8d7zd3hhr"
+        },
+        {
+            "category": "Business",
+            "quote": "If you owe the bank $100 that's your problem. If you owe the bank $100 million, that's the bank's problem",
+            "author": "J. Paul Getty",
+            "id": "9t11iym03"
+        },
+        {
+            "category": "Business",
+            "quote": "Try, try, try, and keep on trying is the rule that must be followed to become an expert in anything",
+            "author": "W. Clement Stone",
+            "id": "7fq6ei4et"
+        },
+        {
+            "category": "Business",
+            "quote": "Team synergy has an extraordinary impact on business results",
+            "author": "Patrick Lencioni",
+            "id": "jveoxgc4r"
+        },
+        {
+            "category": "Business",
+            "quote": "Sustainable fishing is a fraud. It's a marketing term that really means 'business as usual.'",
+            "author": "Paul Watson",
+            "id": "41cv79ra0"
+        },
+        {
+            "category": "Business",
+            "quote": "What business do we have telling people who to vote for? They probably know more about it than we do",
+            "author": "Stan Laurel",
+            "id": "7wdtfa7mo"
+        },
+        {
+            "category": "Business",
+            "quote": "Word of mouth is the best medium of all",
+            "author": "William Bernbach",
+            "id": "nflkm4nik"
+        },
+        {
+            "category": "Business",
+            "quote": "The purpose of a business is to create a customer",
+            "author": "Peter Drucker",
+            "id": "mnh4gbvzk"
+        },
+        {
+            "category": "Business",
+            "quote": "I am certainly not one of those who need to be prodded. In fact, if anything, I am the prod",
+            "author": "Winston Churchill",
+            "id": "37wvuieh1"
+        },
+        {
+            "category": "Business",
+            "quote": "A business absolutely devoted to service will have only one worry about profits. They will be embarrassingly large",
+            "author": "Henry Ford",
+            "id": "ir878lym4"
+        },
+        {
+            "category": "Business",
+            "quote": "My personal life is only my business and the business of the people who are close to me",
+            "author": "Ileana D'Cruz",
+            "id": "urfh7vw1p"
+        },
+        {
+            "category": "Business",
+            "quote": "Every good business story has a conflict and triumph at the core and a turning point where a transformation takes place",
+            "author": "Dinesh Paliwal",
+            "id": "1w3om0wip"
+        },
+        {
+            "category": "Business",
+            "quote": "A business like an automobile, has to be driven, in order to get results",
+            "author": "B. C. Forbes",
+            "id": "gz9q8x7hd"
+        },
+        {
+            "category": "Business",
+            "quote": "On my business card, I am a corporate president. In my mind, I am a computer programmer. But in my heart, I am a gamer",
+            "author": "Satoru Iwata",
+            "id": "e7efqqbg8"
+        },
+        {
+            "category": "Business",
+            "quote": "A consultant is someone who saves his client almost enough to pay his fee",
+            "author": "Arnold H. Glasow",
+            "id": "vchihrdnk"
+        },
+        {
+            "category": "Business",
+            "quote": "Great companies are built on great products",
+            "author": "Elon Musk",
+            "id": "vh1rad3iv"
+        },
+        {
+            "category": "Business",
+            "quote": "Ideas pull the trigger, but instinct loads the gun",
+            "author": "Don Marquis",
+            "id": "maa6n6wbk"
+        },
+        {
+            "category": "Business",
+            "quote": "Politics is just like show business. You have a hell of an opening, coast for a while, and then have a hell of a close",
+            "author": "Ronald Reagan",
+            "id": "iye9u12hu"
+        },
+        {
+            "category": "Business",
+            "quote": "I just make it my business to get along with people so I can have fun. It's that simple",
+            "author": "Betty White",
+            "id": "ze2ibkd3h"
+        },
+        {
+            "category": "Business",
+            "quote": "People can talk all they want; that doesn't affect how I go about my business",
+            "author": "Colin Kaepernick",
+            "id": "e8ntzozsp"
+        },
+        {
+            "category": "Business",
+            "quote": "Competition is the keen cutting edge of business, always shaving away at costs",
+            "author": "Henry Ford",
+            "id": "vhqa20sze"
+        },
+        {
+            "category": "Business",
+            "quote": "If one does not know to which port one is sailing, no wind is favorable",
+            "author": "Lucius Annaeus Seneca",
+            "id": "h4tmzb23p"
+        },
+        {
+            "category": "Business",
+            "quote": "It's safe to say headphones is a good business",
+            "author": "DJ Khaled",
+            "id": "v4zpa561y"
+        },
+        {
+            "category": "Business",
+            "quote": "I wear two hats. The one is business and increasing my shareholders' value; the other is social responsibility",
+            "author": "Guler Sabanci",
+            "id": "5ba1wdnrh"
+        },
+        {
+            "category": "Business",
+            "quote": "The true measure of the value of any business leader and manager is performance",
+            "author": "Brian Tracy",
+            "id": "vo1snvmpg"
+        },
+        {
+            "category": "Business",
+            "quote": "Most of what we call management consists of making it difficult for people to get their work done",
+            "author": "Peter Drucker",
+            "id": "ztut9ircc"
+        },
+        {
+            "category": "Business",
+            "quote": "Any business, no matter what it is, lives or dies by the customer reaction it creates",
+            "author": "Jon Taffer",
+            "id": "vq0cb173x"
+        },
+        {
+            "category": "Business",
+            "quote": "Punctuality is the soul of business",
+            "author": "Thomas Chandler Haliburton",
+            "id": "6bn9zx8q7"
+        },
+        {
+            "category": "Business",
+            "quote": "Perhaps one of the most important accomplishments of my administration has been minding my own business",
+            "author": "Calvin Coolidge",
+            "id": "mw80odfx6"
+        },
+        {
+            "category": "Business",
+            "quote": "When in doubt, mumble; when in trouble, delegate; when in charge, ponder",
+            "author": "James H. Boren",
+            "id": "hvbyyrqkb"
+        },
+        {
+            "category": "Business",
+            "quote": "If there's one thing that's certain in business, it's uncertainty",
+            "author": "Stephen Covey",
+            "id": "zshs97o32"
+        },
+        {
+            "category": "Business",
+            "quote": "The consumer isn't a moron; she is your wife",
+            "author": "David Ogilvy",
+            "id": "sn76e36ag"
+        },
+        {
+            "category": "Business",
+            "quote": "Appreciate everything your associates do for the business",
+            "author": "Sam Walton",
+            "id": "3vhe4fbro"
+        },
+        {
+            "category": "Business",
+            "quote": "If you want to kill any idea in the world, get a committee working on it",
+            "author": "Charles Kettering",
+            "id": "m4bd22qlz"
+        },
+        {
+            "category": "Business",
+            "quote": "Our business is infested with idiots who try to impress by using pretentious jargon",
+            "author": "David Ogilvy",
+            "id": "bccuh2p80"
+        },
+        {
+            "category": "Business",
+            "quote": "The names are bigger, the show is worldwide, but I get a royal pass into life in the broadcasting business",
+            "author": "Larry King",
+            "id": "y2wtntevi"
+        },
+        {
+            "category": "Business",
+            "quote": "A lot of people in the movie business don't have a point of reference for me; nobody really knows who I am",
+            "author": "Andre Holland",
+            "id": "brljkogxw"
+        },
+        {
+            "category": "Business",
+            "quote": "Tearing apart a community, a business, and a family will make America worse off, every time",
+            "author": "Pete Buttigieg",
+            "id": "jbc3826ae"
+        },
+        {
+            "category": "Business",
+            "quote": "I may be kindly, I am ordinarily gentle, but in my line of business I am obliged to will terribly what I will at all",
+            "author": "Catherine the Great",
+            "id": "6afpdpf9e"
+        },
+        {
+            "category": "Business",
+            "quote": "Embrace your fire - even in hard times. A down economy can actually be a great time to start a business",
+            "author": "Jean Chatzky",
+            "id": "k21f24u8a"
+        },
+        {
+            "category": "Business",
+            "quote": "In modern business it is not the crook who is to be feared most, it is the honest man who doesn't know what he is doing",
+            "author": "William Wordsworth",
+            "id": "779ywm0i3"
+        },
+        {
+            "category": "Business",
+            "quote": "The whole business is built on ego, vanity, self-satisfaction, and it's total crap to pretend it's not",
+            "author": "George Michael",
+            "id": "76hlcnrkw"
+        },
+        {
+            "category": "Business",
+            "quote": "I am not yet ready to be Tsar. I know nothing of the business of ruling",
+            "author": "Nicholas II of Russia",
+            "id": "v7a0p8o6n"
+        },
+        {
+            "category": "Business",
+            "quote": "There is not a week that goes by that I don't have a dream that I am back in the business",
+            "author": "Alan Gerry",
+            "id": "fg39ct72s"
+        },
+        {
+            "category": "Business",
+            "quote": "Contrary to popular opinion, the hustle is not a new dance step - it is an old business procedure",
+            "author": "Fran Lebowitz",
+            "id": "b8q2souya"
+        },
+        {
+            "category": "Business",
+            "quote": "Remember, if your business isn't making money, then you and your employees aren't, either",
+            "author": "Michael Gerber",
+            "id": "2wpppfj80"
+        },
+        {
+            "category": "Business",
+            "quote": "I rate enthusiasm even above professional skill",
+            "author": "Edward Appleton",
+            "id": "xbs8i2zgg"
+        },
+        {
+            "category": "Business",
+            "quote": "Childhood is a tricky business. Usually, something goes wrong",
+            "author": "Maurice Sendak",
+            "id": "33v8wn67n"
+        },
+        {
+            "category": "Business",
+            "quote": "As a small businessperson, you have no greater leverage than the truth",
+            "author": "John Greenleaf Whittier",
+            "id": "mu81jba05"
+        },
+        {
+            "category": "Business",
+            "quote": "Nobody forces you to work at Wal-Mart. Start your own business! Sell something to Wal-Mart!",
+            "author": "Kevin O'Leary",
+            "id": "kzvoimdtk"
+        },
+        {
+            "category": "Business",
+            "quote": "I'm in a business where no one cares about anything except how well your last collection sold",
+            "author": "Calvin Klein",
+            "id": "edooz9v7r"
+        },
+        {
+            "category": "Business",
+            "quote": "The herd instinct among forecasters makes sheep look like independent thinkers",
+            "author": "Edgar Fiedler",
+            "id": "h0lvdgb7s"
+        },
+        {
+            "category": "Business",
+            "quote": "Ask five economists and you'll get five different answers - six if one went to Harvard",
+            "author": "Edgar Fiedler",
+            "id": "qsxg6v9y6"
+        },
+        {
+            "category": "Business",
+            "quote": "The pursuit of eternity is no longer the prerogative of the gods - it is the business of us all, here and now",
+            "author": "Bob Brown",
+            "id": "43z1o1l24"
+        },
+        {
+            "category": "Business",
+            "quote": "I buy when other people are selling",
+            "author": "J. Paul Getty",
+            "id": "y8zwrq29i"
+        },
+        {
+            "category": "Business",
+            "quote": "Industry is fortune's right hand, and frugality its left",
+            "author": "John Ray",
+            "id": "xq42pdgs8"
+        },
+        {
+            "category": "Business",
+            "quote": "Business is a team sport",
+            "author": "Greg Brenneman",
+            "id": "r49z82rl4"
+        },
+        {
+            "category": "Business",
+            "quote": "In the luxury business, you have to build on heritage",
+            "author": "Bernard Arnault",
+            "id": "rre5toxt8"
+        },
+        {
+            "category": "Business",
+            "quote": "Prophesy is a good line of business, but it is full of risks",
+            "author": "Mark Twain",
+            "id": "7ir7eqmsy"
+        },
+        {
+            "category": "Business",
+            "quote": "Politics is not a game. It is an earnest business",
+            "author": "Winston Churchill",
+            "id": "cy12557vs"
+        },
+        {
+            "category": "Business",
+            "quote": "I believe you have to be willing to be misunderstood if you're going to innovate",
+            "author": "Jeff Bezos",
+            "id": "8k61xavw3"
+        },
+        {
+            "category": "Business",
+            "quote": "When you see corruption, when you see injustice, you speak up. You don't just shut up and say it's none of my business",
+            "author": "Manal al-Sharif",
+            "id": "guwl5cpcy"
+        },
+        {
+            "category": "Business",
+            "quote": "Time is the scarcest resource and unless it is managed nothing else can be managed",
+            "author": "Peter Drucker",
+            "id": "qcrhmep86"
+        },
+        {
+            "category": "Business",
+            "quote": "This photographing is really the business of stealing",
+            "author": "Diane Arbus",
+            "id": "41jexjpxl"
+        },
+        {
+            "category": "Business",
+            "quote": "Joy is the serious business of Heaven",
+            "author": "C. S. Lewis",
+            "id": "kc7f2tilo"
+        },
+        {
+            "category": "Business",
+            "quote": "If I don't get along with Democrats, I'm sort of, like, out of business",
+            "author": "Donald Trump",
+            "id": "ebmwpazqm"
+        },
+        {
+            "category": "Business",
+            "quote": "There is no time for cut-and-dried monotony. There is time for work. And time for love. That leaves no other time!",
+            "author": "Coco Chanel",
+            "id": "id6u697z1"
+        },
+        {
+            "category": "Business",
+            "quote": "Only he is successful in his business who makes that pursuit which affords him the highest pleasure sustain him",
+            "author": "Henry David Thoreau",
+            "id": "6hf3jwsvh"
+        },
+        {
+            "category": "Business",
+            "quote": "A shady business never yields a sunny life",
+            "author": "B. C. Forbes",
+            "id": "6b645sl8k"
+        },
+        {
+            "category": "Business",
+            "quote": "It's none of their business that you have to learn how to write. Let them think you were born that way",
+            "author": "Ernest Hemingway",
+            "id": "0okxjav2i"
+        },
+        {
+            "category": "Business",
+            "quote": "I am careful not to confuse excellence with perfection. Excellence I can reach for; perfection is God's business",
+            "author": "Michael J. Fox",
+            "id": "6ulagvrpa"
+        },
+        {
+            "category": "Business",
+            "quote": "Management teams aren't good at asking questions. In business school, we train them to be good at giving answers",
+            "author": "Clayton M. Christensen",
+            "id": "c59zggpn4"
+        },
+        {
+            "category": "Business",
+            "quote": "The keystone of successful business is cooperation. Friction retards progress",
+            "author": "James Cash Penney",
+            "id": "7fzoztki2"
+        },
+        {
+            "category": "Business",
+            "quote": "Business has only two functions - marketing and innovation",
+            "author": "Milan Kundera",
+            "id": "45y4vs5d4"
+        },
+        {
+            "category": "Business",
+            "quote": "I may be president of the United States, but my private life is nobody's damned business",
+            "author": "Chester A. Arthur",
+            "id": "lssy3yd8t"
+        },
+        {
+            "category": "Business",
+            "quote": "Let all your things have their places; let each part of your business have its time",
+            "author": "Benjamin Franklin",
+            "id": "ov6xrraa8"
+        },
+        {
+            "category": "Business",
+            "quote": "I happened to come along in the music business when there was no trend",
+            "author": "Elvis Presley",
+            "id": "2lgwo7ade"
+        },
+        {
+            "category": "Business",
+            "quote": "We take the hamburger business more seriously than anyone else",
+            "author": "Ray Kroc",
+            "id": "btfa8x9dt"
+        },
+        {
+            "category": "Business",
+            "quote": "The only business of the head in the world is to bow a ceaseless obeisance to the heart",
+            "author": "William Butler Yeats",
+            "id": "o6adidq9w"
+        },
+        {
+            "category": "Business",
+            "quote": "If you're a sponsor, and you're doing business globally, to bring your guests to South Florida is pretty nice",
+            "author": "Wayne Huizenga",
+            "id": "4ltjrc1nr"
+        },
+        {
+            "category": "Business",
+            "quote": "I do not believe a man can ever leave his business. He ought to think of it by day and dream of it by night",
+            "author": "Henry Ford",
+            "id": "im4rypf7h"
+        },
+        {
+            "category": "Business",
+            "quote": "The first mistake in public business is the going into it",
+            "author": "Benjamin Franklin",
+            "id": "1iigthx3k"
+        },
+        {
+            "category": "Business",
+            "quote": "If you cannot work with love but only with distaste, it is better that you should leave your work",
+            "author": "Khalil Gibran",
+            "id": "56bpafh54"
+        },
+        {
+            "category": "Business",
+            "quote": "We don't seem to be able to check crime, so why not legalize it and then tax it out of business?",
+            "author": "Will Rogers",
+            "id": "td78jfp15"
+        },
+        {
+            "category": "Business",
+            "quote": "The successful man is the one who finds out what is the matter with his business before his competitors do",
+            "author": "Roy L. Smith",
+            "id": "lcic12obp"
+        },
+        {
+            "category": "Business",
+            "quote": "Business today consists in persuading crowds",
+            "author": "T. S. Eliot",
+            "id": "bpu40xwb9"
+        },
+        {
+            "category": "Business",
+            "quote": "The successful business executive can handle challenges and solve problems at a remarkable clip",
+            "author": "Zig Ziglar",
+            "id": "cndzrzrrq"
+        },
+        {
+            "category": "Business",
+            "quote": "Start a part-time business and make as many mistakes as you possibly can while you still have your daytime job",
+            "author": "Robert Kiyosaki",
+            "id": "ljnhiawun"
+        },
+        {
+            "category": "Business",
+            "quote": "It's not what you pay a man, but what he costs you that counts",
+            "author": "Will Rogers",
+            "id": "04bza7bd9"
+        },
+        {
+            "category": "Business",
+            "quote": "No person will make a great business who wants to do it all himself or get all the credit",
+            "author": "Andrew Carnegie",
+            "id": "d04itrnp0"
+        },
+        {
+            "category": "Business",
+            "quote": "Unless you can fake sincerity, you'll get nowhere in this business",
+            "author": "Roger Stone",
+            "id": "tqpp7e25h"
+        },
+        {
+            "category": "Business",
+            "quote": "Details create the big picture",
+            "author": "Sanford I. Weill",
+            "id": "7ymrx7llf"
+        },
+        {
+            "category": "Business",
+            "quote": "This free will business is a bit terrifying anyway. It's almost pleasanter to obey, and make the most of it",
+            "author": "Ugo Betti",
+            "id": "zl78zibpe"
+        },
+        {
+            "category": "Business",
+            "quote": "I never called my work an 'art'. It's part of show business, the business of building entertainment",
+            "author": "Walt Disney",
+            "id": "57wsnerwb"
+        },
+        {
+            "category": "Business",
+            "quote": "It is awfully important to know what is and what is not your business",
+            "author": "Gertrude Stein",
+            "id": "kgzpc7qjc"
+        },
+        {
+            "category": "Business",
+            "quote": "For the merchant, even honesty is a financial speculation",
+            "author": "Charles Baudelaire",
+            "id": "ss09gdwky"
+        },
+        {
+            "category": "Business",
+            "quote": "If you can build a business up big enough, it's respectable",
+            "author": "Will Rogers",
+            "id": "1toyaf2ao"
+        },
+        {
+            "category": "Business",
+            "quote": "The movies are the only business where you can go out front and applaud yourself",
+            "author": "Will Rogers",
+            "id": "jurf8xhdh"
+        },
+        {
+            "category": "Business",
+            "quote": "Music is spiritual. The music business is not",
+            "author": "Van Morrison",
+            "id": "f3pty85i1"
+        },
+        {
+            "category": "Business",
+            "quote": "Carpe per diem - seize the check",
+            "author": "Robin Williams",
+            "id": "irr4g1be2"
+        },
+        {
+            "category": "Business",
+            "quote": "Hell, there are no rules here - we're trying to accomplish something",
+            "author": "Thomas A. Edison",
+            "id": "9r6ogzb1s"
+        },
+        {
+            "category": "Business",
+            "quote": "If you spend your life competing with business men, what do you have? A bank account and ulcers!",
+            "author": "Marilyn Monroe",
+            "id": "zvad5tgcj"
+        },
+        {
+            "category": "Business",
+            "quote": "Starting a business is not for everyone. Starting a business - I'd say, number one is have a high pain threshold",
+            "author": "Elon Musk",
+            "id": "glwmxpxdp"
+        },
+        {
+            "category": "Business",
+            "quote": "If I love you, what business is it of yours?",
+            "author": "Johann Wolfgang von Goethe",
+            "id": "ttbfrs3e5"
+        },
+        {
+            "category": "Business",
+            "quote": "An economist's guess is liable to be as good as anybody else's",
+            "author": "Will Rogers",
+            "id": "7zc2xe4j6"
+        },
+        {
+            "category": "Business",
+            "quote": "I get to play golf for a living. What more can you ask for - getting paid for doing what you love",
+            "author": "Tiger Woods",
+            "id": "5cqt3k27n"
+        },
+        {
+            "category": "Business",
+            "quote": "I myself am a parent in a small business. Number of employees: one",
+            "author": "P. J. O'Rourke",
+            "id": "ar20fnyw6"
+        },
+        {
+            "category": "Business",
+            "quote": "If you're as honest and fair as you can be, not only in business but in life, things will work out",
+            "author": "Kate Spade",
+            "id": "dht961oh5"
+        },
+        {
+            "category": "Business",
+            "quote": "If you deprive yourself of outsourcing and your competitors do not, you're putting yourself out of business",
+            "author": "Lee Kuan Yew",
+            "id": "e7tsg1atm"
+        },
+        {
+            "category": "Business",
+            "quote": "In this business, you gotta hustle",
+            "author": "Tiny Tim",
+            "id": "im9kaml1y"
+        },
+        {
+            "category": "Business",
+            "quote": "The profession of book writing makes horse racing seem like a solid, stable business",
+            "author": "John Steinbeck",
+            "id": "vd0g5paaq"
+        },
+        {
+            "category": "Business",
+            "quote": "I must create a system or be enslaved by another mans; I will not reason and compare: my business is to create",
+            "author": "William Blake",
+            "id": "wqclyv2fi"
+        },
+        {
+            "category": "Business",
+            "quote": "Young lawyers attend the courts, not because they have business there, but because they have no business",
+            "author": "Washington Irving",
+            "id": "24gj08wke"
+        },
+        {
+            "category": "Business",
+            "quote": "Girls shouldn't worry about being the equal of men in the business world",
+            "author": "Marilyn Monroe",
+            "id": "3ejujbl2w"
+        },
+        {
+            "category": "Business",
+            "quote": "The things most people want to know about are usually none of their business",
+            "author": "George Bernard Shaw",
+            "id": "n2aq0cuvo"
+        },
+        {
+            "category": "Business",
+            "quote": "The challenge of the retail business is the human condition",
+            "author": "Howard Schultz",
+            "id": "08jsuga8v"
+        },
+        {
+            "category": "Business",
+            "quote": "My vision is to build an e-commerce ecosystem that allows consumers and businesses to do all aspects of business online",
+            "author": "Jack Ma",
+            "id": "nccek08sd"
+        },
+        {
+            "category": "Business",
+            "quote": "I'm always a fan of good business moves",
+            "author": "Future",
+            "id": "azx8bchwm"
+        },
+        {
+            "category": "Business",
+            "quote": "Steve Jobs once asked me for some advice about retail, but I said, 'I am not sure at all we are in the same business.'",
+            "author": "Bernard Arnault",
+            "id": "egk2f9910"
+        },
+        {
+            "category": "Business",
+            "quote": "Wise are those who learn that the bottom line doesn't always have to be their top priority",
+            "author": "William Arthur Ward",
+            "id": "td38klnrn"
+        },
+        {
+            "category": "Business",
+            "quote": "The business of feeding people is the most amazing business in the world",
+            "author": "Jose Andres",
+            "id": "dufvjuimy"
+        },
+        {
+            "category": "Business",
+            "quote": "Follow sound business trends, not fashion trends",
+            "author": "Janice Dickinson",
+            "id": "serkaspve"
+        },
+        {
+            "category": "Business",
+            "quote": "When people take advantage of you and make a business out of it, that's not nice",
+            "author": "Edgardo Osorio",
+            "id": "9mp3ymqgc"
+        },
+        {
+            "category": "Business",
+            "quote": "In tough times, one has to see if the fundamentals of the business are good or not",
+            "author": "Naveen Tewari",
+            "id": "rnjvvvtho"
+        },
+        {
+            "category": "Business",
+            "quote": "Everyone's got unfinished business with Barcelona. They're the greatest team in the world",
+            "author": "Frank Lampard",
+            "id": "ny3rzvij9"
+        },
+        {
+            "category": "Business",
+            "quote": "The best decision I ever made, period, was to get into the music business",
+            "author": "Ja Rule",
+            "id": "omqjbj0ai"
+        },
+        {
+            "category": "Business",
+            "quote": "Now I say that with cruelty and oppression it is everybody's business to interfere when they see it",
+            "author": "Anna Sewell",
+            "id": "fwam13hn8"
+        },
+        {
+            "category": "Business",
+            "quote": "The work of the individual still remains the spark that moves mankind ahead even more than teamwork",
+            "author": "Igor Sikorsky",
+            "id": "dv4td9gro"
+        },
+        {
+            "category": "Business",
+            "quote": "Let your Discourse with Men of Business be Short and Comprehensive",
+            "author": "George Washington",
+            "id": "yyipil5ov"
+        },
+        {
+            "category": "Business",
+            "quote": "Regard it as just as desirable to build a chicken house as to build a cathedral",
+            "author": "Frank Lloyd Wright",
+            "id": "19ludnx7b"
+        },
+        {
+            "category": "Business",
+            "quote": "The way I run my business seems to be easier than the way I run my life",
+            "author": "Donald Trump",
+            "id": "6qdt9tqhx"
+        },
+        {
+            "category": "Business",
+            "quote": "When you're eight years old nothing is your business",
+            "author": "Lenny Bruce",
+            "id": "hw9pf0pdk"
+        },
+        {
+            "category": "Business",
+            "quote": "Profit is the most global aspect of a business, and it is cross-functional",
+            "author": "Carlos Ghosn",
+            "id": "1y3n53y0i"
+        },
+        {
+            "category": "Business",
+            "quote": "I think any opportunity you have to be green, whether it's in business or in everyday life, you should take it",
+            "author": "Lauren Conrad",
+            "id": "jv5ryxgu9"
+        },
+        {
+            "category": "Business",
+            "quote": "Business is all about risk taking and managing uncertainties and turbulence",
+            "author": "Gautam Adani",
+            "id": "4wilqv9xg"
+        },
+        {
+            "category": "Business",
+            "quote": "Intellectual property has the shelf life of a banana",
+            "author": "Bill Gates",
+            "id": "z46dcmi06"
+        },
+        {
+            "category": "Business",
+            "quote": "In business or in life, don't follow the wagon tracks too closely",
+            "author": "H. Jackson Brown, Jr.",
+            "id": "0an5brv2z"
+        },
+        {
+            "category": "Business",
+            "quote": "More business is lost every year through neglect than through any other cause",
+            "author": "Rose Kennedy",
+            "id": "jfujh64go"
+        },
+        {
+            "category": "Business",
+            "quote": "Let us permit nature to have her way. She understands her business better than we do",
+            "author": "Michel de Montaigne",
+            "id": "3fzxkbe8p"
+        },
+        {
+            "category": "Business",
+            "quote": "Being beautiful is not so fun when you're in a business with all men",
+            "author": "Lady Gaga",
+            "id": "eyunuk139"
+        },
+        {
+            "category": "Business",
+            "quote": "Test fast, fail fast, adjust fast",
+            "author": "Tom Peters",
+            "id": "12d36305z"
+        },
+        {
+            "category": "Business",
+            "quote": "If a business does well, the stock eventually follows",
+            "author": "Warren Buffett",
+            "id": "jvcmf9c21"
+        },
+        {
+            "category": "Business",
+            "quote": "Our favorite holding period is forever",
+            "author": "Warren Buffett",
+            "id": "iatt8ga5t"
+        },
+        {
+            "category": "Business",
+            "quote": "An advertising agency is 85 percent confusion and 15 percent commission",
+            "author": "Fred Allen",
+            "id": "0abtphfdw"
+        },
+        {
+            "category": "Business",
+            "quote": "Don't go getting mixed up in the business of your betters, or you'll land in trouble too big for you",
+            "author": "J. R. R. Tolkien",
+            "id": "tzsm17a96"
+        },
+        {
+            "category": "Business",
+            "quote": "An organization, no matter how well designed, is only as good as the people who live and work in it",
+            "author": "Dee Hock",
+            "id": "v5rnj1d22"
+        },
+        {
+            "category": "Business",
+            "quote": "Learn to bet on yourself and have confidence in your own decisions. No one knows your business better than you",
+            "author": "Leah Busque",
+            "id": "4pph3k0of"
+        },
+        {
+            "category": "Business",
+            "quote": "In business, the competition will bite you if you keep running, if you stand still, they will swallow you",
+            "author": "Victor Kiam",
+            "id": "utq4y5fxe"
+        },
+        {
+            "category": "Business",
+            "quote": "No one on his deathbed ever said, I wish I had spent more time on my business",
+            "author": "Paul Tsongas",
+            "id": "1rdbmed2k"
+        },
+        {
+            "category": "Business",
+            "quote": "It's unwise in business to have one client or two clients. It's unwise in electricity to have one source or two sources",
+            "author": "Scott Pruitt",
+            "id": "caby2ie3s"
+        },
+        {
+            "category": "Business",
+            "quote": "There is so much headache and hassle involved in starting a business or running a business",
+            "author": "Parker Conrad",
+            "id": "5m7av1ye5"
+        },
+        {
+            "category": "Business",
+            "quote": "We are not in the business of iron ore. Whatever captive iron ore sources we have, we use it to make steel",
+            "author": "Lakshmi Mittal",
+            "id": "lf8bb8lgm"
+        },
+        {
+            "category": "Business",
+            "quote": "The great leaders are like the best conductors - they reach beyond the notes to reach the magic in the players",
+            "author": "Blaine Lee",
+            "id": "w7xcd8v5e"
+        },
+        {
+            "category": "Business",
+            "quote": "The meek shall inherit the Earth, but not its mineral rights",
+            "author": "J. Paul Getty",
+            "id": "7ozt5expy"
+        },
+        {
+            "category": "Business",
+            "quote": "Reason and judgment are the qualities of a leader",
+            "author": "Tacitus",
+            "id": "ed50nqavb"
+        },
+        {
+            "category": "Business",
+            "quote": "Business is about people. It's about passion. It's about bold ideas, bold small ideas or bold large ideas",
+            "author": "Tom Peters",
+            "id": "qafpm6hqp"
+        },
+        {
+            "category": "Business",
+            "quote": "We cannot make events. Our business is wisely to improve them",
+            "author": "Samuel Adams",
+            "id": "hgn3mned8"
+        },
+        {
+            "category": "Business",
+            "quote": "Everybody's business is nobody's business, and nobody's business is my business",
+            "author": "Clara Barton",
+            "id": "0sqqythmt"
+        },
+        {
+            "category": "Business",
+            "quote": "The business of America is business",
+            "author": "Calvin Coolidge",
+            "id": "rns7igrno"
+        },
+        {
+            "category": "Business",
+            "quote": "The secret of business is to know something that nobody else knows",
+            "author": "Aristotle Onassis",
+            "id": "u7y63ry93"
+        },
+        {
+            "category": "Business",
+            "quote": "My father told me, never have partners",
+            "author": "Howard Hughes",
+            "id": "0v2h8acmu"
+        },
+        {
+            "category": "Business",
+            "quote": "We applaud any company making business decisions that empower women",
+            "author": "Whitney Wolfe Herd",
+            "id": "34v3xjofl"
+        },
+        {
+            "category": "Business",
+            "quote": "In this business, if you don't pay your debts you're finished",
+            "author": "Roger Stone",
+            "id": "b0ekpjwkl"
+        },
+        {
+            "category": "Business",
+            "quote": "I'm not in the business of reading tea leaves. I don't have a crystal ball",
+            "author": "Christine Lagarde",
+            "id": "chcetji8u"
+        },
+        {
+            "category": "Business",
+            "quote": "Every young man would do well to remember that all successful business stands on the foundation of morality",
+            "author": "Henry Ward Beecher",
+            "id": "ntuj39rbs"
+        },
+        {
+            "category": "Business",
+            "quote": "Farming's always been my business",
+            "author": "Howlin' Wolf",
+            "id": "9k9nyvst7"
+        },
+        {
+            "category": "Business",
+            "quote": "Speak to Him often of your business, your plans, your troubles, your fears - of everything that concerns you",
+            "author": "Alphonsus Liguori",
+            "id": "zgaqexnrk"
+        },
+        {
+            "category": "Business",
+            "quote": "My juices needed restoring. I needed a sabbatical from the record business",
+            "author": "Norman Granz",
+            "id": "v3741i5qo"
+        },
+        {
+            "category": "Business",
+            "quote": "I should be paid to go out. You see, I'm good for business. I class up a joint",
+            "author": "Rene Ricard",
+            "id": "ewr8nfu91"
+        },
+        {
+            "category": "Business",
+            "quote": "Yes, we can do business in Nepal and still succeed. That is what I proved",
+            "author": "Binod Chaudhary",
+            "id": "xmyp6374k"
+        },
+        {
+            "category": "Business",
+            "quote": "I don't think it's a good idea to plan to sell a company",
+            "author": "Elon Musk",
+            "id": "l3rqzrmih"
+        },
+        {
+            "category": "Business",
+            "quote": "I don't create companies for the sake of creating companies, but to get things done",
+            "author": "Elon Musk",
+            "id": "saxc4pnoc"
+        },
+        {
+            "category": "Business",
+            "quote": "Employees make the best dates. You don't have to pick them up and they're always tax-deductible",
+            "author": "Andy Warhol",
+            "id": "dme3o385t"
+        },
+        {
+            "category": "Business",
+            "quote": "Nothing so conclusively proves a man's ability to lead others as what he does from day to day to lead himself",
+            "author": "Thomas J. Watson",
+            "id": "o6vweiqfy"
+        },
+        {
+            "category": "Business",
+            "quote": "Whenever an individual or a business decides that success has been attained, progress stops",
+            "author": "Thomas J. Watson",
+            "id": "5tcxt0gjm"
+        },
+        {
+            "category": "Business",
+            "quote": "I find it rather easy to portray a businessman. Being bland, rather cruel and incompetent comes naturally to me",
+            "author": "John Cleese",
+            "id": "hocs67w70"
+        },
+        {
+            "category": "Business",
+            "quote": "An economist is an expert who will know tomorrow why the things he predicted yesterday didn't happen today",
+            "author": "Laurence J. Peter",
+            "id": "v8wht6j6x"
+        },
+        {
+            "category": "Business",
+            "quote": "I never really studied business in school. I kind of wish I had, but how boring is that?",
+            "author": "Mick Jagger",
+            "id": "s094gyuv5"
+        },
+        {
+            "category": "Business",
+            "quote": "I want to be remembered as the football player I was. The private person is nobody's business",
+            "author": "Zlatan Ibrahimovic",
+            "id": "rndfjdhz1"
+        },
+        {
+            "category": "Business",
+            "quote": "I see a lot of opportunity in Internet-related start-ups, and second is the solar business",
+            "author": "Masayoshi Son",
+            "id": "70wf402st"
+        },
+        {
+            "category": "Business",
+            "quote": "So little done, so much to do",
+            "author": "Cecil Rhodes",
+            "id": "vawv9wikf"
+        },
+        {
+            "category": "Business",
+            "quote": "I'm not in the business of warning people",
+            "author": "John Bercow",
+            "id": "lp71zk9ao"
+        },
+        {
+            "category": "Business",
+            "quote": "I'm not a driven businessman, but a driven artist. I never think about money. Beautiful things make money",
+            "author": "John Dalberg-Acton",
+            "id": "28xzz6tzv"
+        },
+        {
+            "category": "Business",
+            "quote": "The fundamentals of your business are like free throws: emphasize and practice them to perfection",
+            "author": "Cathy Engelbert",
+            "id": "jwda5lu4d"
+        },
+        {
+            "category": "Business",
+            "quote": "You get traded. It happens. It's part of the business",
+            "author": "Jimmy Butler",
+            "id": "6fqqokazr"
+        },
+        {
+            "category": "Business",
+            "quote": "A revised schedule is to business what a new season is to an athlete or a new canvas to an artist",
+            "author": "Norman Ralph Augustine",
+            "id": "8525hs1eo"
+        },
+        {
+            "category": "Business",
+            "quote": "We got extremely lucky. It's a tough business to work with",
+            "author": "Lloyd Banks",
+            "id": "rblgpumcm"
+        },
+        {
+            "category": "Business",
+            "quote": "A bankruptcy judge can fix your balance sheet, but he cannot fix your company",
+            "author": "Gordon Bethune",
+            "id": "qwaxun36n"
+        },
+        {
+            "category": "Business",
+            "quote": "My father had the main barber- and beauty-supply business in the African-American community in Buffalo",
+            "author": "Helene D. Gayle",
+            "id": "jijc417r5"
+        },
+        {
+            "category": "Business",
+            "quote": "We are in the business of gathering the news. We're not in the business of talking about the news",
+            "author": "Aaron Brown",
+            "id": "kt3fwk2fn"
+        },
+        {
+            "category": "Business",
+            "quote": "I really want to get into the clothing business",
+            "author": "Eva Gutowski",
+            "id": "h49zwm7rf"
+        },
+        {
+            "category": "Business",
+            "quote": "Business news is sexy",
+            "author": "Maria Bartiromo",
+            "id": "r4yyas3ce"
+        },
+        {
+            "category": "Business",
+            "quote": "One's mind has a way of making itself up in the background, and it suddenly becomes clear what one means to do",
+            "author": "A. C. Benson",
+            "id": "5sl5ijh0g"
+        },
+        {
+            "category": "Business",
+            "quote": "Our customers' business interests are heavily dependent on the oil and gas industry",
+            "author": "Karen Katz",
+            "id": "l7gpvke4q"
+        },
+        {
+            "category": "Business",
+            "quote": "It's called a pen. It's like a printer, hooked straight to my brain",
+            "author": "Dale Dauten",
+            "id": "tx5w05nk1"
+        },
+        {
+            "category": "Business",
+            "quote": "Let me tell you quite bluntly that this king business has given me personally nothing but headaches",
+            "author": "Mohammed Reza Pahlavi",
+            "id": "doo0kmrjo"
+        },
+        {
+            "category": "Business",
+            "quote": "I never expect business to be easy",
+            "author": "Pier Luigi Loro Piana",
+            "id": "s99hgla6n"
+        },
+        {
+            "category": "Business",
+            "quote": "We've got a low turnover management group and executive group who've grown up in the business",
+            "author": "Fred L. Turner",
+            "id": "o3sf2oos8"
+        },
+        {
+            "category": "Business",
+            "quote": "If you fire people, you fire customers",
+            "author": "Ferdinand Piech",
+            "id": "5i9mgsssk"
+        },
+        {
+            "category": "Business",
+            "quote": "The gambling known as business looks with austere disfavor upon the business known as gambling",
+            "author": "Ambrose Bierce",
+            "id": "skg1ypwzq"
+        },
+        {
+            "category": "Business",
+            "quote": "Corporation: An ingenious device for obtaining profit without individual responsibility",
+            "author": "Ambrose Bierce",
+            "id": "tfqgaiwzl"
+        },
+        {
+            "category": "Business",
+            "quote": "Remind people that profit is the difference between revenue and expense. This makes you look smart",
+            "author": "Scott Adams",
+            "id": "z0nmwy405"
+        },
+        {
+            "category": "Business",
+            "quote": "A company is only as good as the people it keeps",
+            "author": "Mary Kay Ash",
+            "id": "m6ncjroyr"
+        },
+        {
+            "category": "Business",
+            "quote": "When times are bad is when the real entrepreneurs emerge",
+            "author": "Robert Kiyosaki",
+            "id": "v9olzmfej"
+        },
+        {
+            "category": "Business",
+            "quote": "Business is a combination of war and sport",
+            "author": "Andre Maurois",
+            "id": "tqofr69zq"
+        },
+        {
+            "category": "Business",
+            "quote": "My son is now an 'entrepreneur.' That's what you're called when you don't have a job",
+            "author": "Ted Turner",
+            "id": "12wsa9iuu"
+        },
+        {
+            "category": "Business",
+            "quote": "We don't have a monopoly. We have market share. There's a difference",
+            "author": "Steve Ballmer",
+            "id": "t8td5gr1h"
+        },
+        {
+            "category": "Business",
+            "quote": "What we've gone through in the last several years has caused some people to question 'Can we trust Microsoft?'",
+            "author": "Steve Ballmer",
+            "id": "fxzod3btq"
+        },
+        {
+            "category": "Business",
+            "quote": "Exchange ideas frequently",
+            "author": "James Cash Penney",
+            "id": "j9uj26tk5"
+        },
+        {
+            "category": "Business",
+            "quote": "Don't simply retire from something; have something to retire to",
+            "author": "Harry Emerson Fosdick",
+            "id": "zbd9742u6"
+        },
+        {
+            "category": "Business",
+            "quote": "The opportunity is often lost by deliberating",
+            "author": "Publilius Syrus",
+            "id": "itlg96a5u"
+        },
+        {
+            "category": "Business",
+            "quote": "I don't think meals have any business being deductible. I'm for separation of calories and corporations",
+            "author": "Ralph Nader",
+            "id": "rz44o6whx"
+        },
+        {
+            "category": "Business",
+            "quote": "If you have one good idea, people will lend you twenty",
+            "author": "Marie von Ebner-Eschenbach",
+            "id": "0rs7o0lrl"
+        },
+        {
+            "category": "Business",
+            "quote": "Inside every working anarchy, there's an Old Boy Network",
+            "author": "Mitch Kapor",
+            "id": "02zmisyb3"
+        },
+        {
+            "category": "Business",
+            "quote": "Lots of folks confuse bad management with destiny",
+            "author": "Kin Hubbard",
+            "id": "sw2x2malv"
+        },
+        {
+            "category": "Business",
+            "quote": "People will buy anything that is 'one to a customer.'",
+            "author": "Sinclair Lewis",
+            "id": "vvpzw7xfh"
+        },
+        {
+            "category": "Business",
+            "quote": "The buck stops with the guy who signs the checks",
+            "author": "Rupert Murdoch",
+            "id": "mme94y5jt"
+        },
+        {
+            "category": "Business",
+            "quote": "Every day I get up and look through the Forbes list of the richest people in America. If I'm not there, I go to work",
+            "author": "Robert Orben",
+            "id": "or06zwh9c"
+        },
+        {
+            "category": "Business",
+            "quote": "The invisible hand of the market always moves faster and better than the heavy hand of government",
+            "author": "Mitt Romney",
+            "id": "gri48ltek"
+        },
+        {
+            "category": "Business",
+            "quote": "Never argue with a profit",
+            "author": "Jeff Rich",
+            "id": "qxukr0rbf"
+        },
+        {
+            "category": "Business",
+            "quote": "A group or an artist shouldn't get his money until his boss gets his",
+            "author": "Bobby Darin",
+            "id": "c9ecbupq1"
+        },
+        {
+            "category": "Business",
+            "quote": "To command is to serve, nothing more and nothing less",
+            "author": "Andre Malraux",
+            "id": "ivbnh1324"
+        },
+        {
+            "category": "Business",
+            "quote": "That's the trick in this business: if you want longevity, just keep people guessing a little bit",
+            "author": "Kelsey Grammer",
+            "id": "eosihtst7"
+        },
+        {
+            "category": "Business",
+            "quote": "The fastest way to succeed is to look as if you're playing by somebody else's rules, while quietly playing by your own",
+            "author": "Michael Korda",
+            "id": "45axfiuyn"
+        },
+        {
+            "category": "Business",
+            "quote": "If you have to forecast, forecast often",
+            "author": "Edgar Fiedler",
+            "id": "8974onxg5"
+        },
+        {
+            "category": "Business",
+            "quote": "If an actor knows how to milk a cow, I always know it will not be difficult to be in business with him",
+            "author": "Werner Herzog",
+            "id": "3utwkvvcu"
+        },
+        {
+            "category": "Business",
+            "quote": "First-rate people hire first-rate people; second-rate people hire third-rate people",
+            "author": "Leo Rosten",
+            "id": "i7s4we3uy"
+        },
+        {
+            "category": "Business",
+            "quote": "Markets change, tastes change, so the companies and the individuals who choose to compete in those markets must change",
+            "author": "An Wang",
+            "id": "x7dq7roc2"
+        },
+        {
+            "category": "Business",
+            "quote": "The final test of a leader is that he leaves behind him in other men the conviction and the will to carry on",
+            "author": "Walter Lippmann",
+            "id": "a8tljowju"
+        },
+        {
+            "category": "Business",
+            "quote": "Family farms and small businesses are the backbone of our communities",
+            "author": "Tom Allen",
+            "id": "z99bl2yq2"
+        },
+        {
+            "category": "Business",
+            "quote": "A manager doesn't hear the cheers",
+            "author": "Alvin Dark",
+            "id": "2l5vwkl52"
+        },
+        {
+            "category": "Business",
+            "quote": "Business must be the solution, not the problem",
+            "author": "Dennis Weaver",
+            "id": "3jwwkbb9h"
+        },
+        {
+            "category": "Business",
+            "quote": "Business can be a source of progressive change",
+            "author": "Jerry Greenfield",
+            "id": "2a2ds2ew6"
+        },
+        {
+            "category": "Business",
+            "quote": "Go to your business, pleasure, whilst I go to my pleasure, business",
+            "author": "William Wycherley",
+            "id": "m17s6m3hn"
+        },
+        {
+            "category": "Business",
+            "quote": "Don't worry about people stealing your ideas. If your ideas are any good, you'll have to ram them down people's throats",
+            "author": "Howard Aiken",
+            "id": "3zjgqau70"
+        },
+        {
+            "category": "Business",
+            "quote": "Cannibals prefer those who have no spines",
+            "author": "Stanislaw Lem",
+            "id": "mc8k788rd"
+        },
+        {
+            "category": "Business",
+            "quote": "If you want improvements in coal, you've got to keep people in the business",
+            "author": "Matt Mead",
+            "id": "h888ssyqi"
+        },
+        {
+            "category": "Business",
+            "quote": "Business is in itself a power",
+            "author": "Garet Garrett",
+            "id": "k7jrka6aq"
+        },
+        {
+            "category": "Business",
+            "quote": "Our new attitude is how can we put you in front of our customer",
+            "author": "Terry Semel",
+            "id": "pr4duo20v"
+        },
+        {
+            "category": "Business",
+            "quote": "Only a monopolist could study a business and ruin it by giving away products",
+            "author": "Scott McNealy",
+            "id": "343gag5fm"
+        },
+        {
+            "category": "Business",
+            "quote": "The incestuous relationship between government and big business thrives in the dark",
+            "author": "Jack Anderson",
+            "id": "i8zt68s5y"
+        },
+        {
+            "category": "Business",
+            "quote": "The leader who exercises power with honor will work from the inside out, starting with himself",
+            "author": "Blaine Lee",
+            "id": "g5mmk84wa"
+        }
+    ]
+}

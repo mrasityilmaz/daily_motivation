@@ -1,0 +1,2196 @@
+{
+    "tr_quotes": [
+        {
+            "category": "Yenilenme",
+            "quote": "Bitişleri yeni başlangıçlara öncülük ettiği için kutlayın.",
+            "author": "Jonathan Lockwood Huie",
+            "id": "uxdsi2pvz"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Bu değişim dünyasında, gelen hiçbir şey kalmaz ve giden hiçbir şey kaybolmaz.",
+            "author": "Anne Sophie Swetchine",
+            "id": "wzqpulwu4"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Kalbinizi değiştirerek hayatınızı değiştirirsiniz.",
+            "author": "John Porter",
+            "id": "p2vpgvpoe"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Büyüklüğümüz, dünyayı yeniden yaratabilmemizden daha ziyade kendimizi yeniden yaratabilmemizdedir.",
+            "author": "Mahatma Gandhi",
+            "id": "nktc4wta0"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Değişim sabırsızlar için bir süreç değildir.",
+            "author": "Barbara Reinhold",
+            "id": "85ue5oqfy"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yardım eden bir el bulabileceğiniz en iyi yer, kendi kolunuzun ucudur.",
+            "author": "İsveç Atasözü",
+            "id": "p9bxmqtwt"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Şu an ne olduğunu, bugüne kadar ne olduğun; ileride ne olacağını, şu an yaptığın belirler.",
+            "author": "Buddha",
+            "id": "4yp0jbq4o"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Değişim, ancak içeriden açılabilen bir kapıdır.",
+            "author": "Terry Neil",
+            "id": "y6ymt63uq"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Olabileceğiniz şeyi olmak için asla çok geç değildir.",
+            "author": "George Eliot",
+            "id": "uwtk91x6b"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "İki sebepten dolayı değişirsiniz: Ya yeterince öğrendiğinizden değişmek ister, ya da yeterince incindiğinizden değişmek zorunda kalırsınız.",
+            "author": "Anonim",
+            "id": "chs1xxuff"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yaşam sanatı kendini sürekli olarak etrafındakilere adapte etmektir.",
+            "author": "Kazuko Okokaura",
+            "id": "7nl4kp0uj"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Ekildiğin yerde büyü.",
+            "author": "Atasözü",
+            "id": "7owo15rd4"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Eşsiz olarak doğdun. Bir kopya olarak ölme.",
+            "author": "John Mason",
+            "id": "uy1xtefmo"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Değişimi yaratmazsan, değişim seni yaratacaktır.",
+            "author": "Anonim",
+            "id": "87zjm6njw"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Sonuçlara odaklanırsan asla değişemezsin. Değişime odaklanırsan sonuç alırsın.",
+            "author": "Jack Dixon",
+            "id": "lmv0s825w"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Her gün bir yolculuktur ve yolculuğun kendisi yuvadır.",
+            "author": "Basho",
+            "id": "dpzmmp42b"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Bazı insanlar büyük ve etkileyici değişim arzu ederler. Bazı insanlar yavaş ve sağlam bir rotayı tercih eder. Senin için doğru olanı yap.",
+            "author": "Julie Morgenstern",
+            "id": "rwp48ryg8"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Değiştiğimizde her şey değişir.",
+            "author": "Henri-Frédéric Amiel",
+            "id": "tw1os0wo2"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Gerçek bir diyalogda iki taraf da değişmeye isteklidir.",
+            "author": "Thich Nhat Hanh",
+            "id": "l4fj8xj4x"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Aklınızı düzeltirseniz, hayatınızın taşları yerine oturur.",
+            "author": "Lao Tzu",
+            "id": "01zfr3p8q"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Vücudunuz eşsizdir. O bizim uyanışımızın aracıdır. Ona iyi bakın.",
+            "author": "Buddha",
+            "id": "pxzroilop"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Hayatta başlıca iki seçim vardır: koşulları olduğu gibi kabul etmek, ya da onları değiştirme sorumluluğunu kabul etmek .",
+            "author": "Denis Waitley",
+            "id": "f49nc55i9"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Her şey bir günde değişebilir ve o da belki bugündür.",
+            "author": "Anonim",
+            "id": "5bjsdw5nk"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yalnız unutulmuş şeyler; yenidir.",
+            "author": "Rose Bertin",
+            "id": "ka7pjqw51"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Her kim değişimi reddederse çürümeye mahkûmdur.",
+            "author": "Harold Wilson",
+            "id": "3x17ae1l1"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Beğenilen şeyler ya yeni, ya da gerçekten yüksektir.",
+            "author": "Hollanda Özdeyişi",
+            "id": "37zzokyj3"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Her an değiştirmeliyiz. Yenilenmeli, gençleştirmeliyiz kendimizi; yoksa katılaşırız.",
+            "author": "Goethe",
+            "id": "0jrzpyg9f"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yenilik vardır ki sağlam, eskiler vardır ki çürük değildir.",
+            "author": "M.Selahattin Şimşek",
+            "id": "l1gvii8vr"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "İnsanların en çok korktuğu şey yeni bir adım atmak, yeni bir söz söylemektir.",
+            "author": "Dostoyevski",
+            "id": "9xx8ckwyu"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yeni çareler uygulamayan, yeni belalar beklemelidir; çünkü zaman en büyük yenilikçi.",
+            "author": "Francis Bacon",
+            "id": "kmkrao9ru"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "İlericilik, yeniliğe düşman halkı yenilikçi yapma mücadelesidir.",
+            "author": "Yalçın Küçük",
+            "id": "wltdu9vk3"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Benim maksadım kargaşa yaratmak değildir ben sadece zamanı değiştirme çabasındayım.",
+            "author": "Aamir Khan",
+            "id": "grxxlnxdm"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Dünle beraber gitti cancağızım, ne kadar söz varsa düne ait, şimdi yeni şeyler söylemek lazım.",
+            "author": "Mevlana",
+            "id": "3pm9tmces"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Hiçbir şey bütün bütün yeni değildir. Özgünlük bir etkiden doğar.",
+            "author": "Pierre Gxotte",
+            "id": "g18vsvu4l"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Rekabet dünyasında iki seçeneğiniz vardır. Kaybedebilirsiniz. Ya da kazanmak istiyorsanız, değişirsiniz.",
+            "author": "Lester C. Thurow",
+            "id": "xfj1xqz4w"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yaptığımız şeyler kadar yapamadıklarımızdan da gurur duyuyorum. Yenilik bin şeye hayır demektir.",
+            "author": "Steve Jobs",
+            "id": "34a7mvv7u"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Türk milletinin istidadı ve kesin kararı, medeniyet yolunda durmadan, yılmadan ilerlemektir.",
+            "author": "Atatürk",
+            "id": "0al09jof1"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Ne kazandığın başarılarda takılı kal ne de hatalarında ısrar et. Bunların yerine tekrar başla; şimdinin her değerli anında yeniden başla.",
+            "author": "Neale Donald Walsch",
+            "id": "vej1hgr3b"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yaşayacak yenilikler, ancak eskiyi bilenlerden çıkar.",
+            "author": "Cenap Şahabettin",
+            "id": "nmnuj1pm5"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yaratıcılık” yeni şeyler düşünmek, “Yenilik” yeni şeyler yapmaktır.",
+            "author": "Levitt",
+            "id": "kmc4vhudx"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yenilikler, ancak onlar için yer açtığınız zaman yaşantınıza girebilirler.",
+            "author": "Marlo Morgan",
+            "id": "9zuq3tquy"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Yeniliğinden daha yeni, yeniliğinden hiçbir şey yitirmeyenlerdir.",
+            "author": "Ali Suad",
+            "id": "78aro0ez5"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Sen değişirsen, şansın da değişir.",
+            "author": "Konfüçyüs",
+            "id": "gy6eivp3w"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Eğer zihnimi değiştirirsem, etrafımdaki dünyayı ve sorunlarını algılayışımı da değiştiririm.",
+            "author": "Steve Chandler",
+            "id": "ydp3br76q"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Değişmeyen tek şey, değişimin kendisidir.",
+            "author": "Heraclitus",
+            "id": "cafuhynrx"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Herhangi bir yerden veya her yerden başlayabiliriz. Yeter ki orada bir değişim olsun ve bu benimle başlasın.",
+            "author": "M. Ferguson",
+            "id": "x6pq06k0x"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Şeyler ne kadar değişirlerse, o kadar aynı kalırlar.",
+            "author": "Alphonce Karr",
+            "id": "ryzp8s96g"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Bir şeyler değiştirmek isteyen insan önce kendinden başlamalıdır.",
+            "author": "Sokrates",
+            "id": "uet0i0ry4"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Rüzgarın yönünü değiştiremediğinde, yelkenlerini rüzgara göre ayarla.",
+            "author": "Xsentius",
+            "id": "agxju6o0n"
+        },
+        {
+            "category": "Yenilenme",
+            "quote": "Her değişim daima başka değişimlere ihtiyaç gösterir.",
+            "author": "Niccola Machieavelli",
+            "id": "98mrxble3"
+        }
+    ],
+    "en_quotes": [
+        {
+            "category": "Start Change",
+            "quote": "I can't change my personality. I'll always smile, but I'll be more focused",
+            "author": "Katarina Johnson-Thompson",
+            "id": "nhspzx3dv"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Sometimes if you want to see a change for the better, you have to take things into your own hands",
+            "author": "Clint Eastwood",
+            "id": "duchr108h"
+        },
+        {
+            "category": "Start Change",
+            "quote": "My personality is that I like to express myself, and that is not something I will look to change",
+            "author": "Dele Alli",
+            "id": "exxc8lcoa"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I'm like a tree. My leaves might change color, but my roots are the same",
+            "author": "Rose Namajunas",
+            "id": "i8k3tfncz"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Growth is painful. Change is painful. But, nothing is as painful as staying stuck where you do not belong",
+            "author": "N. R. Narayana Murthy",
+            "id": "ion4i9h33"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you can't change your fate, change your attitude",
+            "author": "Charles Revson",
+            "id": "0osvnl8wv"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Your surroundings may change but your essence and your personality pretty much stay the same",
+            "author": "Jenna Dewan",
+            "id": "r9zr9bedn"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Progress is impossible without change, and those who cannot change their minds cannot change anything",
+            "author": "George Bernard Shaw",
+            "id": "tmfqnriqa"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Creative thinking inspires ideas. Ideas inspire change",
+            "author": "Barbara Januszkiewicz",
+            "id": "nzoi0ey95"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Climate change is the environmental challenge of this generation, and it is imperative that we act before it's too late",
+            "author": "John Delaney",
+            "id": "ry6rq0tyx"
+        },
+        {
+            "category": "Start Change",
+            "quote": "One good teacher in a lifetime may sometimes change a delinquent into a solid citizen",
+            "author": "Philip Wylie",
+            "id": "0koib7bbj"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I know my soul is beautiful; I know I'm a good person. And that will never change for me",
+            "author": "Khloe Kardashian",
+            "id": "m148lh4s4"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Some people don't like change, but you need to embrace change if the alternative is disaster",
+            "author": "Elon Musk",
+            "id": "kdubhfumk"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Ignorance is always afraid of change",
+            "author": "Jawaharlal Nehru",
+            "id": "9agyytyfg"
+        },
+        {
+            "category": "Start Change",
+            "quote": "As a leader, the first person I need to lead is me. The first person that I should try to change is me",
+            "author": "John C. Maxwell",
+            "id": "oy564b8xe"
+        },
+        {
+            "category": "Start Change",
+            "quote": "There is nothing permanent except change",
+            "author": "Heraclitus",
+            "id": "52bpa0d98"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A small group of thoughtful people could change the world. Indeed, it's the only thing that ever has",
+            "author": "Margaret Mead",
+            "id": "u0rofv0j0"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The world is not a static place. People change, evolve",
+            "author": "Mahesh Bhatt",
+            "id": "cxehfavtn"
+        },
+        {
+            "category": "Start Change",
+            "quote": "It's always good to change and keep things fresh, whether it's a hairstyle or wardrobe",
+            "author": "Sheamus",
+            "id": "ya19isme2"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Empathy is the starting point for creating a community and taking action. It's the impetus for creating change",
+            "author": "Max Carver",
+            "id": "i6bm2nwcn"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A change of environment is pretty refreshing",
+            "author": "Owen Farrell",
+            "id": "3a68m79ls"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you do not change direction, you may end up where you are heading",
+            "author": "Lao Tzu",
+            "id": "apbeed2sx"
+        },
+        {
+            "category": "Start Change",
+            "quote": "One thing modeling taught me is that the spotlight can change everything",
+            "author": "Liya Kebede",
+            "id": "ytd2et0qd"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The way to change the world is through individual responsibility and taking local action in your own community",
+            "author": "Jeff Bridges",
+            "id": "w8aqwyalz"
+        },
+        {
+            "category": "Start Change",
+            "quote": "With only one bag, you can change your outfit completely",
+            "author": "Sonia Rykiel",
+            "id": "2ivz98lpe"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The good and bad things are what form us as people... change makes us grow",
+            "author": "Kate Winslet",
+            "id": "595dncvpj"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you change the way you look at things, the things you look at change",
+            "author": "Wayne Dyer",
+            "id": "4c5kot4fy"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You must be the change you wish to see in the world",
+            "author": "Mahatma Gandhi",
+            "id": "sl165js2a"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Climate change is a terrible problem, and it absolutely needs to be solved. It deserves to be a huge priority",
+            "author": "Bill Gates",
+            "id": "9ykuuzh8y"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The first step toward change is awareness. The second step is acceptance",
+            "author": "Nathaniel Branden",
+            "id": "7tjw3jx3u"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A change in the weather is sufficient to recreate the world and ourselves",
+            "author": "Marcel Proust",
+            "id": "nhddversu"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Asking questions is the first way to begin change",
+            "author": "Kubra Sait",
+            "id": "87itb2mhn"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You want to be the pebble in the pond that creates the ripple for change",
+            "author": "Tim Cook",
+            "id": "heysfoamz"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I benefit from a change of scenery; it's always inspiring",
+            "author": "Kurt Vile",
+            "id": "37p9lcfmr"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Excellent firms don't believe in excellence - only in constant improvement and constant change",
+            "author": "Tom Peters",
+            "id": "06is7u3f0"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The rules of survival never change, whether you're in a desert or in an arena",
+            "author": "Bear Grylls",
+            "id": "fy42oen9n"
+        },
+        {
+            "category": "Start Change",
+            "quote": "What's dangerous is not to evolve",
+            "author": "Jeff Bezos",
+            "id": "pc4f11bdy"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you get stuck, draw with a different pen. Change your tools; it may free your thinking",
+            "author": "Paul Arden",
+            "id": "wzauqzkem"
+        },
+        {
+            "category": "Start Change",
+            "quote": "How can people change their minds about us if they don't know who we are?",
+            "author": "Harvey Milk",
+            "id": "lc3cp80rp"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change comes from reflection",
+            "author": "Genesis P-Orridge",
+            "id": "tjmqoe0t3"
+        },
+        {
+            "category": "Start Change",
+            "quote": "As engineers, we were going to be in a position to change the world - not just study it",
+            "author": "Henry Petroski",
+            "id": "6hbh4s5dw"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Teachers can change lives with just the right mix of chalk and challenges",
+            "author": "Joyce Meyer",
+            "id": "yhx4cusfo"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People can change, learn, and grow, and it's better to face your demons instead of perpetually running away from them",
+            "author": "Jessica Rothe",
+            "id": "0uirl4c9h"
+        },
+        {
+            "category": "Start Change",
+            "quote": "All your mannerisms change easily when you have inch-long acrylic nails",
+            "author": "Margot Robbie",
+            "id": "924rgg3r1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is always good. It brings you to a new place",
+            "author": "Lee Ranaldo",
+            "id": "3qiq3rikw"
+        },
+        {
+            "category": "Start Change",
+            "quote": "It's not the destination that matters. It's the change of scene",
+            "author": "Brian Eno",
+            "id": "swimveror"
+        },
+        {
+            "category": "Start Change",
+            "quote": "It is really interesting to change your hair color after being blond your entire life",
+            "author": "Ross Lynch",
+            "id": "7ofa8f0jb"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you want to have clean ideas, change them as often as your shirt",
+            "author": "Francis Picabia",
+            "id": "0ih3ssqw9"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A change of season calls for a change of scent that is both energizing and refreshing",
+            "author": "Hannah Bronfman",
+            "id": "pdrwsita8"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Boxing is serious. It's not a game. Just one punch - change life",
+            "author": "Gennady Golovkin",
+            "id": "rwzsim8tj"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You may not be able to change a situation, but with humor you can change your attitude about it",
+            "author": "Allen Klein",
+            "id": "q3pvkm1gm"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Never believe that a few caring people can't change the world. For, indeed, that's all who ever have",
+            "author": "Margaret Mead",
+            "id": "hqlnbrq64"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Aging gracefully means being flexible, being open, allowing change, enjoying change and loving yourself",
+            "author": "Wendy Whelan",
+            "id": "bng3gg07c"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The ones who are crazy enough to think that they can change the world are the ones who do",
+            "author": "John McAfee",
+            "id": "o99cd9sef"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Adaptability is a great asset to have because life is so unpredictable, and things can change overnight for any of us",
+            "author": "Chanda Kochhar",
+            "id": "1abmi6cdg"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A change of scenery can help everything",
+            "author": "Drew Pomeranz",
+            "id": "kotid71qd"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The most important skill you need is the ability to learn how to change and grow",
+            "author": "Scott Cook",
+            "id": "chdr0ymem"
+        },
+        {
+            "category": "Start Change",
+            "quote": "There is no question that climate change is happening; the only arguable point is what part humans are playing in it",
+            "author": "David Attenborough",
+            "id": "rv4nwwet9"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I'm very interested in how people change",
+            "author": "Nathan Englander",
+            "id": "7vvagx7wh"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I like to change. A new lamp, a piece of art, can transform a room",
+            "author": "Madonna Ciccone",
+            "id": "x0fjkwrsq"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You don't change your style by changing your bag. You change it with your clothes",
+            "author": "Stefano Gabbana",
+            "id": "roq5ylr8u"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I don't know if my hairstyles reflect that, but I am someone who enjoys change",
+            "author": "Cobi Jones",
+            "id": "4f5fh21oy"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Whatever you do, be happy with you. Don't conform. You are who you are, and you shouldn't change that for anybody",
+            "author": "Aimee Teegarden",
+            "id": "jz7yz1cw1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "In true dialogue, both sides are willing to change",
+            "author": "Thich Nhat Hanh",
+            "id": "ee75uxjj4"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Things don't have to change the world to be important",
+            "author": "Steve Jobs",
+            "id": "waoxr2cgf"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Hair color is the easiest way to change your appearance, but a bad dye job might draw more attention to you",
+            "author": "Lisa Lutz",
+            "id": "vq6pud5qk"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I believe global warming and climate change are real threats to our planet",
+            "author": "Andrew Cuomo",
+            "id": "i943fcr7m"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Miracles happen everyday, change your perception of what a miracle is and you'll see them all around you",
+            "author": "Jon Bon Jovi",
+            "id": "5wx2hjh0x"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A lot can change in the editing room",
+            "author": "Diane Lane",
+            "id": "u725a806v"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People change over the years, and that changes situations for good and for bad",
+            "author": "Bobby Knight",
+            "id": "1z52s0xiz"
+        },
+        {
+            "category": "Start Change",
+            "quote": "We cannot change anything until we accept it. Condemnation does not liberate, it oppresses",
+            "author": "Carl Jung",
+            "id": "0n3ujq838"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I was willing to accept what I couldn't change",
+            "author": "A. P. J. Abdul Kalam",
+            "id": "5gz65tee9"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Face the facts of being what you are, for that is what changes what you are",
+            "author": "Soren Kierkegaard",
+            "id": "ckos04hct"
+        },
+        {
+            "category": "Start Change",
+            "quote": "On climate change, we often don't fully appreciate that it is a problem. We think it is a problem waiting to happen",
+            "author": "Kofi Annan",
+            "id": "pigeholze"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The blockchain is the financial challenge of our time. It is going to change the way that our financial world operates",
+            "author": "Blythe Masters",
+            "id": "ghfbjoknh"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Once I find a bag that I love, I wear it always. I just don't change my bags. I literally find one and stay with it",
+            "author": "Cara Delevingne",
+            "id": "a6z44ho53"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You cannot expect to achieve new goals or move beyond your present circumstances unless you change",
+            "author": "Les Brown",
+            "id": "1klo6gb50"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change, like sunshine, can be a friend or a foe, a blessing or a curse, a dawn or a dusk",
+            "author": "William Arthur Ward",
+            "id": "jni8jerd2"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People can cry much easier than they can change",
+            "author": "James Baldwin",
+            "id": "el3mxotjo"
+        },
+        {
+            "category": "Start Change",
+            "quote": "One must change one's tactics every ten years if one wishes to maintain one's superiority",
+            "author": "Napoleon Bonaparte",
+            "id": "2r3muwsr1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I change my mind a lot. I usually don't agree with what I say very much. I'm an awful liar",
+            "author": "David Bowie",
+            "id": "qapossrki"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I wake up every day in a different headspace, so on any given day, my hairstyle will change",
+            "author": "Dawn Richard",
+            "id": "dv2knxlod"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Logic will never change emotion or perception",
+            "author": "Edward de Bono",
+            "id": "ckz385ttx"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Whenever you're feeling moments of discomfort, that means true change is happening for you",
+            "author": "John David Washington",
+            "id": "pd4r29xuk"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you want to make enemies, try to change something",
+            "author": "Woodrow Wilson",
+            "id": "sgtm1jn60"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Goals allow you to control the direction of change in your favor",
+            "author": "Brian Tracy",
+            "id": "f5aavkpof"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The first resistance to social change is to say it's not necessary",
+            "author": "Gloria Steinem",
+            "id": "bqcyd51rk"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Obviously, if I could go back and change anything, I would be a perfect man. And I know there's no perfect man",
+            "author": "Allen Iverson",
+            "id": "883t882i1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "To change ones life: Start immediately. Do it flamboyantly",
+            "author": "William James",
+            "id": "5fihneckp"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I don't know that love changes. People change. Circumstances change",
+            "author": "Nicholas Sparks",
+            "id": "e25mynre9"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You will never change your life until you change something you do daily",
+            "author": "Mike Murdock",
+            "id": "uqub86gcs"
+        },
+        {
+            "category": "Start Change",
+            "quote": "When we, as a nation, put our minds to something, when we truly choose to care about something, change always happens",
+            "author": "Megan Rapinoe",
+            "id": "ahjigcu1t"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Don't ever forget that a small group of thoughtful people can change the world, it's the only thing that ever has",
+            "author": "Aaron Sorkin",
+            "id": "0dtqq32we"
+        },
+        {
+            "category": "Start Change",
+            "quote": "It takes but one person, one moment, one conviction, to start a ripple of change",
+            "author": "Donna Brazile",
+            "id": "un4t71lk6"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I believe people change. I think that they can learn from mistakes",
+            "author": "Kevin Plank",
+            "id": "qv5f6u3v2"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you begin to understand what you are without trying to change it, then what you are undergoes a transformation",
+            "author": "Jiddu Krishnamurti",
+            "id": "983n2lxuy"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Just when I think I have learned the way to live, life changes",
+            "author": "Hugh Prather",
+            "id": "piurkol6b"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Like it or not, the world evolves, priorities change and so do you",
+            "author": "Marilu Henner",
+            "id": "qcfa78jj6"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Repentance means you change your mind so deeply that it changes you",
+            "author": "Bruce Wilkinson",
+            "id": "xlte74zee"
+        },
+        {
+            "category": "Start Change",
+            "quote": "What is necessary to change a person is to change his awareness of himself",
+            "author": "Abraham Maslow",
+            "id": "o4fc01smc"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The only way to make sense out of change is to plunge into it, move with it, and join the dance",
+            "author": "Alan Watts",
+            "id": "1dc8s59gx"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Movement is life;' and it is well to be able to forget the past, and kill the present by continual change",
+            "author": "Jules Verne",
+            "id": "f8f0746kj"
+        },
+        {
+            "category": "Start Change",
+            "quote": "In order to change the world, you have to get your head together first",
+            "author": "Jimi Hendrix",
+            "id": "m057amgs3"
+        },
+        {
+            "category": "Start Change",
+            "quote": "It all happened the way it was supposed to. I wouldn't change anything. I had such a great run",
+            "author": "Carol Burnett",
+            "id": "p117bfkus"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I don't believe in the after life, although I am bringing a change of underwear",
+            "author": "Woody Allen",
+            "id": "tnfpi1y2s"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I was born not knowing and have had only a little time to change that here and there",
+            "author": "Richard P. Feynman",
+            "id": "arfmyljkc"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Cinema is a mirror that can change the world",
+            "author": "Diego Luna",
+            "id": "ri1e8oeyg"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Each one of us can make a difference. Together we make change",
+            "author": "Barbara Mikulski",
+            "id": "dkkky2fxh"
+        },
+        {
+            "category": "Start Change",
+            "quote": "We cannot change the cards we are dealt, just how we play the game",
+            "author": "Randy Pausch",
+            "id": "ie63xsl2a"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Good intentions never change anything. They only become a deeper and deeper rut",
+            "author": "Joyce Meyer",
+            "id": "ctkcttaqf"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Company cultures are like country cultures. Never try to change one. Try, instead, to work with what you've got",
+            "author": "Peter Drucker",
+            "id": "7e8djmt31"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Progress is a nice word. But change is its motivator. And change has its enemies",
+            "author": "Robert Kennedy",
+            "id": "32rfll37q"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Anyone who does anything creative is always gonna want to change",
+            "author": "Will Ferrell",
+            "id": "8uibljd45"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You can't change what happened. But you can still change what will happen",
+            "author": "Sebastian Vettel",
+            "id": "x3xl8dnll"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You must welcome change as the rule but not as your ruler",
+            "author": "Denis Waitley",
+            "id": "13la8hqu0"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Small change, small wonders - these are the currency of my endurance and ultimately of my life",
+            "author": "Barbara Kingsolver",
+            "id": "n1w00bzag"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You can't think about things you want to change. Just be yourself",
+            "author": "Ethan Embry",
+            "id": "3fegs8we6"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If your life changes, we can change the world, too",
+            "author": "Yoko Ono",
+            "id": "jigtgdc5a"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The most useless are those who never change through the years",
+            "author": "James M. Barrie",
+            "id": "v5dj0b7b4"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Bravery is the engine of change",
+            "author": "Aisha Tyler",
+            "id": "z8d6xy72v"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People don't realize that lighting can change the whole look of a place and the feel",
+            "author": "Bobby Berk",
+            "id": "1l16ln4u5"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You can't change how people act, but what you can change is how you react",
+            "author": "Bonnie Hammer",
+            "id": "cpolcbxdv"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I think you can change your belief, but sometimes your behavior takes a lot longer",
+            "author": "Tara Westover",
+            "id": "0b4rxrhhg"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You've got to change incentives for good behavior as opposed to just disincentivizing bad behavior",
+            "author": "Gavin Newsom",
+            "id": "mxl3kuciq"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I still believe that if your aim is to change the world, journalism is a more immediate short-term weapon",
+            "author": "Tom Stoppard",
+            "id": "t3vhzuufe"
+        },
+        {
+            "category": "Start Change",
+            "quote": "First impressions matter. Most people don't change their political views radically from the ones they first hold",
+            "author": "Bill Kristol",
+            "id": "nfbnvayxs"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A hero is someone right who doesn't change",
+            "author": "George Foreman",
+            "id": "4hbmwjxa9"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The thing that lies at the foundation of positive change, the way I see it, is service to a fellow human being",
+            "author": "Lech Walesa",
+            "id": "mhcma3wre"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People are fed up with seeing the same thing over and over. They want a qualitative change",
+            "author": "Amitabh Bachchan",
+            "id": "sqxau7d81"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is always a little bit strange",
+            "author": "Brendon Urie",
+            "id": "75ulze6cz"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you want to change the world, find someone to help you paddle",
+            "author": "William H. McRaven",
+            "id": "9pywb1k3w"
+        },
+        {
+            "category": "Start Change",
+            "quote": "There is nothing so stable as change",
+            "author": "Bob Dylan",
+            "id": "iyxygrvyo"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People change all the time",
+            "author": "Tony Shalhoub",
+            "id": "ee8o98wck"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The effects of climate change are real and must be acted on",
+            "author": "Joe Biden",
+            "id": "ftt10j4wt"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you're going to change things, you have to be with the people who hold the levers",
+            "author": "Ruth Bader Ginsburg",
+            "id": "7qv38z195"
+        },
+        {
+            "category": "Start Change",
+            "quote": "No real social change has ever been brought about without a revolution... revolution is but thought carried into action",
+            "author": "Emma Goldman",
+            "id": "up3tvzr22"
+        },
+        {
+            "category": "Start Change",
+            "quote": "It's time to bring a change because the world is changing. Let's open our minds and live in present",
+            "author": "Qandeel Baloch",
+            "id": "sgyg8m5f5"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Apologies are great, but they don't really change anything. You know what does? Action",
+            "author": "Stella Young",
+            "id": "ht2mk70wq"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change your opinions, keep to your principles; change your leaves, keep intact your roots",
+            "author": "Victor Hugo",
+            "id": "eic6a5o9f"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Be content with what you are, and wish not change; nor dread your last day, nor long for it",
+            "author": "Marcus Aurelius",
+            "id": "oukxd7r8m"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Injuries obviously change the way you approach the game",
+            "author": "Brett Favre",
+            "id": "ntmzqf8vk"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People change their positions all the time, the way they change their wives",
+            "author": "Michael Cohen",
+            "id": "jn0crqyik"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A new car is not going to change your life",
+            "author": "Monica Ali",
+            "id": "uz3vl04q6"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The need for change bulldozed a road down the center of my mind",
+            "author": "Maya Angelou",
+            "id": "5e8l7nwk8"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Being friends with anyone for 30 years is no easy task - people change, they drift apart, they move on",
+            "author": "Alana Stewart",
+            "id": "5gu4alhl2"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you want to change the world, start off by making your bed",
+            "author": "William H. McRaven",
+            "id": "xivawh2fv"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Certainly, there were tough times, but no, you can't go back and change it. So, why dwell on it?",
+            "author": "Alex Smith",
+            "id": "f678q44q7"
+        },
+        {
+            "category": "Start Change",
+            "quote": "That's why I want to change Mississippi. You don't run away from problems - you just face them",
+            "author": "Fannie Lou Hamer",
+            "id": "opnngwzdn"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The question is not whether we are able to change but whether we are changing fast enough",
+            "author": "Angela Merkel",
+            "id": "4uvq7jb5s"
+        },
+        {
+            "category": "Start Change",
+            "quote": "There are good and bad times, but our mood changes more often than our fortune",
+            "author": "Thomas Carlyle",
+            "id": "6jmajevsn"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The ability to change constantly and effectively is made easier by high-level continuity",
+            "author": "Michael Porter",
+            "id": "elgzs50c9"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Lighting is a good way to change the look of a place without spending much",
+            "author": "Bobby Berk",
+            "id": "tdzkm0cvc"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Actually, I'm 5-8 and change without shoes. With shoes, 5-9",
+            "author": "Nate Robinson",
+            "id": "hfp2hc576"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Climate change is moving faster than we are, but we don't give up because we know that climate action is the only path",
+            "author": "Antonio Guterres",
+            "id": "v2dx2k8xr"
+        },
+        {
+            "category": "Start Change",
+            "quote": "That's something we real big on - just being real, authentic, being yourself, not letting this lifestyle change you",
+            "author": "YG",
+            "id": "xz5fkybad"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Words are powerful; if you change your words, you can change your life",
+            "author": "Joyce Meyer",
+            "id": "x1zqln7ri"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Voting is the only way to make change in a democracy",
+            "author": "Christine Todd Whitman",
+            "id": "1q6baulfp"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Nothing endures but change",
+            "author": "Heraclitus",
+            "id": "0kfjudaaw"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I'm a Gemini, so I change my mind every day",
+            "author": "Natalie Portman",
+            "id": "cpmgsazsa"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I think there are certain ways that people are always themselves, but I do think people change",
+            "author": "Mike White",
+            "id": "18uy8nou8"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is inevitable. Change for the better is a full-time job",
+            "author": "Adlai Stevenson I",
+            "id": "n3eq34ft9"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I may be a living legend, but that sure don't help when I've got to change a flat tire",
+            "author": "Roy Orbison",
+            "id": "y88shbd07"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The robots are coming, whether we like it or not, and will change our economy in dramatic ways",
+            "author": "Kristen Soltis Anderson",
+            "id": "9iqttei3x"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Relentless, repetitive self talk is what changes our self-image",
+            "author": "Denis Waitley",
+            "id": "mevxhiygo"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The world is changing very fast. Big will not beat small anymore. It will be the fast beating the slow",
+            "author": "Rupert Murdoch",
+            "id": "kwec23jno"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People change, they grow",
+            "author": "Jacob Young",
+            "id": "57dr4zc62"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Do not let circumstances control you. You change your circumstances",
+            "author": "Jackie Chan",
+            "id": "anzb9rnl1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is hard and requires constant struggle and determination",
+            "author": "Sadiq Khan",
+            "id": "8ex1neo27"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Ultimately, when you have to deal with a whole country, priorities change",
+            "author": "Toby Regbo",
+            "id": "2an5h6anv"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If we don't change direction soon, we'll end up where we're going",
+            "author": "Irwin Corey",
+            "id": "uy2wvks80"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is inevitable. Change is constant",
+            "author": "Benjamin Disraeli",
+            "id": "5yyle746n"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Without change, something sleeps inside us, and seldom awakens. The sleeper must awaken",
+            "author": "Frank Herbert",
+            "id": "jhsnqdnc4"
+        },
+        {
+            "category": "Start Change",
+            "quote": "When you are through changing, you are through",
+            "author": "Bruce Barton",
+            "id": "p64nq9643"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Yes, I tried to change the classical style in a way that people who don't understand it can enjoy",
+            "author": "Nusrat Fateh Ali Khan",
+            "id": "xywlihaww"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Everything can change at any moment, suddenly and forever",
+            "author": "Paul Auster",
+            "id": "7cdtjto54"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Some programming languages manage to absorb change, but withstand progress",
+            "author": "Alan Perlis",
+            "id": "v82tbgzfh"
+        },
+        {
+            "category": "Start Change",
+            "quote": "There's no reason to change what you are, but if you're not being you, then you need to acknowledge that",
+            "author": "Marilyn Manson",
+            "id": "5swhwtkqn"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You're only as young as the last time you changed your mind",
+            "author": "Timothy Leary",
+            "id": "ouarvn094"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Good leaders make sense of change in the world... then imparts that insight to the team",
+            "author": "Dan Pena",
+            "id": "m2y1sr4wd"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I don't think there's a major change between runway and real life anymore",
+            "author": "Francois Nars",
+            "id": "aatvttto6"
+        },
+        {
+            "category": "Start Change",
+            "quote": "When you blame others, you give up your power to change",
+            "author": "Robert Anthony",
+            "id": "hn3l2bfyo"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People change. I wouldn't like to be accountable for the interviews I've done, or the person I was when I was 20, 21",
+            "author": "Robbie Williams",
+            "id": "5tsb9uqcr"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I just don't believe that you have to come in and insult people when you want to change things",
+            "author": "Sydney Schanberg",
+            "id": "lqd4ysgtd"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If something is good, it's always good. You don't have to change it",
+            "author": "Tony Bennett",
+            "id": "xr386mo7h"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I try to contrast; life today is full of contrast... We have to change",
+            "author": "Gianni Versace",
+            "id": "uy74eav0o"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I'm all about change, and I know things are going to move forward in life, and that's just how it goes",
+            "author": "Kid Rock",
+            "id": "xz9onrpek"
+        },
+        {
+            "category": "Start Change",
+            "quote": "We can't create change until we recognize and check our own actions",
+            "author": "Ashley Graham",
+            "id": "ti8chp6wd"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Just because everything is different doesn't mean anything has changed",
+            "author": "Irene Peter",
+            "id": "ht7lr0z9w"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you're going to vote yes and change the law. You have to know what's in it. You can't depend on other people",
+            "author": "Justin Amash",
+            "id": "y9vqo7e19"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Heat of blood makes young people change their inclinations often, and habit makes old ones keep to theirs a great while",
+            "author": "Francois de La Rochefoucauld",
+            "id": "bbcgsw6ri"
+        },
+        {
+            "category": "Start Change",
+            "quote": "No one person can change the world, but one and one and one add up",
+            "author": "Sylvie Guillem",
+            "id": "0h6m8rpqn"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A fanatic is one who can't change his mind and won't change the subject",
+            "author": "Winston Churchill",
+            "id": "sr1vw1fel"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A leopard does not change his spots, or change his feeling that spots are rather a credit",
+            "author": "Ivy Compton-Burnett",
+            "id": "mesr6lo31"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Things do not change; we change",
+            "author": "Henry David Thoreau",
+            "id": "oj3p95pcj"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The way to bring about change is to be proactive and active",
+            "author": "Octavia Spencer",
+            "id": "7x73vzn22"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is vital, improvement the logical form of change",
+            "author": "James Cash Penney",
+            "id": "0pj215f2z"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change in all things is sweet",
+            "author": "Aristotle",
+            "id": "vgsqtjo2v"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Don't change on me. Don't extort me unless you intend to do it forever",
+            "author": "Tupac Shakur",
+            "id": "2cwcgfhrk"
+        },
+        {
+            "category": "Start Change",
+            "quote": "India is home, and that's never going to change",
+            "author": "Deepika Padukone",
+            "id": "w8tu8zhcv"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I think daughters can change the perception of their fathers",
+            "author": "Ruth Bader Ginsburg",
+            "id": "z3s3ww9ij"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Loss is nothing else but change, and change is Nature's delight",
+            "author": "Marcus Aurelius",
+            "id": "3hl8zcrxa"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The universe is change; our life is what our thoughts make it",
+            "author": "Marcus Aurelius",
+            "id": "93e1a4sa6"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Shoes can change an outfit",
+            "author": "Tina Knowles",
+            "id": "jg2qa99ne"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The curious paradox is that when I accept myself just as I am, then I can change",
+            "author": "Carl Rogers",
+            "id": "tb136s4t9"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Everyone should change; otherwise, you can't grow as a person in life",
+            "author": "Mahesh Babu",
+            "id": "bmqnw3t16"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I think AIDS can be won. I think we can win this fight. It is winnable. But it means behavior change",
+            "author": "Franklin Graham",
+            "id": "t8drk2iyk"
+        },
+        {
+            "category": "Start Change",
+            "quote": "There are many things we do not want about the world. Let us not just mourn them. Let us change them",
+            "author": "Ferdinand Marcos",
+            "id": "43wjw9dnb"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Life belongs to the living, and he who lives must be prepared for changes",
+            "author": "Johann Wolfgang von Goethe",
+            "id": "bzvjlatfe"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The Titanic hit the iceberg not because they could not see it coming but because they could not change direction",
+            "author": "Dean Devlin",
+            "id": "sit3m7muw"
+        },
+        {
+            "category": "Start Change",
+            "quote": "He who is fixed to a star does not change his mind",
+            "author": "Leonardo da Vinci",
+            "id": "fkra9ike1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "There are two kinds of fools: those who can't change their opinions and those who won't",
+            "author": "Josh Billings",
+            "id": "5r0mpopro"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You have to change the set, stay ahead of the curve",
+            "author": "Carson Daly",
+            "id": "gsr887krt"
+        },
+        {
+            "category": "Start Change",
+            "quote": "It is never too late to change the way you eat - once you do, your body will thank you with a longer and healthier life",
+            "author": "David H. Murdock",
+            "id": "uvwd74982"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If I have to change my lifestyle, I don't want to live",
+            "author": "Robert Mapplethorpe",
+            "id": "nh3tq228g"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Acting is magical. Change your look and your attitude, and you can be anyone",
+            "author": "Alicia Witt",
+            "id": "kq3vzrdq7"
+        },
+        {
+            "category": "Start Change",
+            "quote": "We have to evolve, we have to change, and in order to do that, we have to initiate the change",
+            "author": "Edwin Catmull",
+            "id": "oz81q20m8"
+        },
+        {
+            "category": "Start Change",
+            "quote": "And Seaman, just like a falling oak, manages to change direction",
+            "author": "John Motson",
+            "id": "nsw6nliyi"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I'm not going to change; I'm going to keep grinding. I'm going to do all I can to win",
+            "author": "Ezekiel Elliott",
+            "id": "bxuyzy6qo"
+        },
+        {
+            "category": "Start Change",
+            "quote": "One change always leaves the way open for the establishment of others",
+            "author": "Niccolo Machiavelli",
+            "id": "qzvmo9zm1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Let the great world spin for ever down the ringing grooves of change",
+            "author": "Alfred Lord Tennyson",
+            "id": "2v2yvlwy6"
+        },
+        {
+            "category": "Start Change",
+            "quote": "To change what you get, you must change who you are",
+            "author": "Vernon Howard",
+            "id": "2mmza31w5"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is hard, but change is good",
+            "author": "Henry Rollins",
+            "id": "frrom7gq1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you have an opportunity to help others or incite change, it feels like a moral obligation to do so",
+            "author": "Elizabeth Chambers",
+            "id": "b5czwzycq"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I literally change my phone number 10 times a year and I don't ever save my contacts",
+            "author": "Rob Kardashian",
+            "id": "41ustuj9i"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I pretty much use the same stuff live that I use in the studio. I don't like the feel to change too much",
+            "author": "Joey Jordison",
+            "id": "eam79ss4h"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Like the Internet, Bitcoin will change the way people interact and do business around the world",
+            "author": "Erik Voorhees",
+            "id": "wy913anx5"
+        },
+        {
+            "category": "Start Change",
+            "quote": "He that will not apply new remedies must expect new evils; for time is the greatest innovator",
+            "author": "Francis Bacon",
+            "id": "xvh5fxm24"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Become a student of change. It is the only thing that will remain constant",
+            "author": "Anthony J. D'Angelo",
+            "id": "x3jtwuwgq"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The Marines was a fresh start - that is why they shave your head. I wish they would let you change your name",
+            "author": "Drew Carey",
+            "id": "b3swvbt12"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Very often a change of self is needed more than a change of scene",
+            "author": "A. C. Benson",
+            "id": "ir0jiiog1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Things of this world are in so constant a flux, that nothing remains long in the same state",
+            "author": "John Locke",
+            "id": "qyu8lfi0h"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Most people already know what they're doing wrong. When I get them to church I want to tell them that you can change",
+            "author": "Joel Osteen",
+            "id": "93401jqcu"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Lord, where we are wrong, make us willing to change; where we are right, make us easy to live with",
+            "author": "Peter Marshall",
+            "id": "hlxej5s3p"
+        },
+        {
+            "category": "Start Change",
+            "quote": "All change means disorganization of the old and organization of the new",
+            "author": "Saul Alinsky",
+            "id": "qgn6lvx5m"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Friendships that have stood the test of time and change are surely best",
+            "author": "Joseph Parry",
+            "id": "rqo6sgfjg"
+        },
+        {
+            "category": "Start Change",
+            "quote": "People got insights into what was bothering them, but they hardly did a damn thing to change",
+            "author": "Albert Ellis",
+            "id": "trxpevg04"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You have to modernise; you have to change - you can't just be traditional for the fun of being traditional",
+            "author": "Richard Rogers",
+            "id": "mezlb09e1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I can't change the past. It made me what I am",
+            "author": "Shonda Rhimes",
+            "id": "qhdqkmgyv"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The things you cannot change you can't waste your time on",
+            "author": "Fernando Torres",
+            "id": "4cwhlhsre"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I change, like every single normal person",
+            "author": "Kevin Pietersen",
+            "id": "dqq53vkeu"
+        },
+        {
+            "category": "Start Change",
+            "quote": "In a progressive country change is constant; change is inevitable",
+            "author": "Benjamin Disraeli",
+            "id": "kmo4kg4yz"
+        },
+        {
+            "category": "Start Change",
+            "quote": "All things are only transitory",
+            "author": "Johann Wolfgang von Goethe",
+            "id": "p5t1w8c8m"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A small behavioral change can also lead to embracing a wider checklist of healthier choices",
+            "author": "Chuck Norris",
+            "id": "qs8brn455"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I like working with people. I believe change can only come through collaboration",
+            "author": "Alain de Botton",
+            "id": "bk4vbfuho"
+        },
+        {
+            "category": "Start Change",
+            "quote": "We'll try and be very aggressive, we'll try and speed up and change gears, and we'll see who's going to win",
+            "author": "Rafael Nadal",
+            "id": "hwxo4p9ax"
+        },
+        {
+            "category": "Start Change",
+            "quote": "He who rejects change is the architect of decay. The only human institution which rejects progress is the cemetery",
+            "author": "Harold Wilson",
+            "id": "o5vh0wdmm"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Progressive, radical, or even revolutionary change has always come from below",
+            "author": "Tom Morello",
+            "id": "3vmknplyr"
+        },
+        {
+            "category": "Start Change",
+            "quote": "In football, the good thing is things can change in a second",
+            "author": "Didier Drogba",
+            "id": "wygir1eek"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you knew you could change your lifestyle and diet and avoid heart disease and other things, you should do it",
+            "author": "Laila Ali",
+            "id": "5iuu8ppr7"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The point of the essay is to change things",
+            "author": "Edward Tufte",
+            "id": "q6sk00ve4"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is the only constant. Hanging on is the only sin",
+            "author": "Denise McCluggage",
+            "id": "qkbpwx5jd"
+        },
+        {
+            "category": "Start Change",
+            "quote": "We must all obey the great law of change. It is the most powerful law of nature",
+            "author": "Edmund Burke",
+            "id": "1nj9mue1g"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Things alter for the worse spontaneously, if they be not altered for the better designedly",
+            "author": "Francis Bacon",
+            "id": "e5pn85aiu"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Remember that life's big changes rarely give advance warning",
+            "author": "H. Jackson Brown, Jr.",
+            "id": "o2gjhcdm3"
+        },
+        {
+            "category": "Start Change",
+            "quote": "In times of rapid change, experience could be your worst enemy",
+            "author": "J. Paul Getty",
+            "id": "dxa32j0m3"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I think you should always bear in mind that entropy is not on your side",
+            "author": "Elon Musk",
+            "id": "rrc2rmjs3"
+        },
+        {
+            "category": "Start Change",
+            "quote": "All things must change to something new, to something strange",
+            "author": "Henry Wadsworth Longfellow",
+            "id": "3jyel37is"
+        },
+        {
+            "category": "Start Change",
+            "quote": "For changes to be of any true value, they've got to be lasting and consistent",
+            "author": "Tony Robbins",
+            "id": "z5y3wfx8n"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you want to change the world - I do - you have to start with yourself",
+            "author": "Varg Vikernes",
+            "id": "n5m5rxf18"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The world of marketing has changed. You can lead the change or be a victim of change",
+            "author": "Denise Morrison",
+            "id": "yj4y29mhz"
+        },
+        {
+            "category": "Start Change",
+            "quote": "My phone blows up all the time. I had to change my number",
+            "author": "Calvin Johnson",
+            "id": "sckfb7u1m"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The more things change, the more they are the same",
+            "author": "Alphonse Karr",
+            "id": "b3b2rowhh"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Could we change our attitude, we should not only see life differently, but life itself would come to be different",
+            "author": "Katherine Mansfield",
+            "id": "7mxotinij"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Time is change; we measure its passing by how much things alter",
+            "author": "Nadine Gordimer",
+            "id": "8hsamo78o"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Looking inward and understanding where you made mistakes in the past helps you set up for change",
+            "author": "Steve Ells",
+            "id": "06venkayr"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change and renewal are themes in life, aren't they? We keep growing throughout life",
+            "author": "Susan Minot",
+            "id": "pqwo70rrr"
+        },
+        {
+            "category": "Start Change",
+            "quote": "All I want to do is change the world",
+            "author": "W. Clement Stone",
+            "id": "7h8eg5iwi"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Opinions are made to be changed - or how is truth to be got at?",
+            "author": "Lord Byron",
+            "id": "gfzfpo9p1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change alone is unchanging",
+            "author": "Heraclitus",
+            "id": "2s18abrug"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I want to change the perception about Latinos worldwide. I think people don't know yet how cool we are",
+            "author": "J Balvin",
+            "id": "3hdrz43br"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change brings opportunity",
+            "author": "Nido Qubein",
+            "id": "2f702pfyf"
+        },
+        {
+            "category": "Start Change",
+            "quote": "It is not necessary to change. Survival is not mandatory",
+            "author": "W. Edwards Deming",
+            "id": "8yx4v44h5"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Not only is women's work never done, the definition keeps changing",
+            "author": "Bill Copeland",
+            "id": "40lwf125t"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The garden is growth and change and that means loss as well as constant new treasures to make up for a few disasters",
+            "author": "May Sarton",
+            "id": "oxakwx10z"
+        },
+        {
+            "category": "Start Change",
+            "quote": "You can be a catalyst for change but change never really entirely happens just because of one guy",
+            "author": "Robert Griffin III",
+            "id": "na3zp331m"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Weep not that the world changes - did it keep a stable, changeless state, it were cause indeed to weep",
+            "author": "William Cullen Bryant",
+            "id": "i1sfj63kk"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is such hard work",
+            "author": "Billy Crystal",
+            "id": "f8k2wecnk"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I cannot say whether things will get better if we change; what I can say is they must change if they are to get better",
+            "author": "Georg C. Lichtenberg",
+            "id": "6yze1in71"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Everything in life that we really accept undergoes a change",
+            "author": "Katherine Mansfield",
+            "id": "zrelrjowb"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Any change, even a change for the better, is always accompanied by drawbacks and discomforts",
+            "author": "Arnold Bennett",
+            "id": "zqmixpkpo"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I don't know if you can change things, but it's a drop in the ocean",
+            "author": "Julie Walters",
+            "id": "y2y4ur317"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Anyone who thinks there's safety in numbers hasn't looked at the stock market pages",
+            "author": "Irene Peter",
+            "id": "xlhab3uf3"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The world changes in direct proportion to the number of people willing to be honest about their lives",
+            "author": "Armistead Maupin",
+            "id": "kultotik7"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Every generation is gonna keep changing, and you just have to embrace the change",
+            "author": "Wyclef Jean",
+            "id": "jrqyrxx7r"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Sometimes it's the smallest decisions that can change your life forever",
+            "author": "Keri Russell",
+            "id": "bzmlkzryc"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Grass-roots work is not flashy, and rarely celebrated on the national media level, but that is where change begins",
+            "author": "Ilyasah Shabazz",
+            "id": "2srz9lx27"
+        },
+        {
+            "category": "Start Change",
+            "quote": "In not my, but our collective hands, is held the promise of change",
+            "author": "Mark Sanford",
+            "id": "ud00zeyaz"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Taste may change, but inclination never",
+            "author": "Francois de La Rochefoucauld",
+            "id": "o8xy34u90"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The world hates change, yet it is the only thing that has brought progress",
+            "author": "Charles Kettering",
+            "id": "0spza58wi"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The foolish and the dead alone never change their opinions",
+            "author": "James Russell Lowell",
+            "id": "amy8jpa9d"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change occurs in direct proportion to dissatisfaction, but dissatisfaction never changes",
+            "author": "Douglas Horton",
+            "id": "14jlpww0i"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Since we cannot change reality, let us change the eyes which see reality",
+            "author": "Nikos Kazantzakis",
+            "id": "zz41ullqh"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Excuses change nothing, but make everyone feel better",
+            "author": "Mason Cooley",
+            "id": "rgccxick1"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Because things are the way they are, things will not stay the way they are",
+            "author": "Bertolt Brecht",
+            "id": "spall0xld"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Illness strikes men when they are exposed to change",
+            "author": "Herodotus",
+            "id": "dtdai54ma"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Christians are supposed not merely to endure change, nor even to profit by it, but to cause it",
+            "author": "Harry Emerson Fosdick",
+            "id": "04gwvbrkj"
+        },
+        {
+            "category": "Start Change",
+            "quote": "What we call progress is the exchange of one nuisance for another nuisance",
+            "author": "Havelock Ellis",
+            "id": "kj0f0vcnl"
+        },
+        {
+            "category": "Start Change",
+            "quote": "When you jump for joy, beware that no one moves the ground from beneath your feet",
+            "author": "Stanislaw Jerzy Lec",
+            "id": "vivydw691"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If we don't change, we don't grow. If we don't grow, we aren't really living",
+            "author": "Gail Sheehy",
+            "id": "nhz5k06rf"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you want to change attitudes, start with a change in behavior",
+            "author": "William Glasser",
+            "id": "ue02ghkdc"
+        },
+        {
+            "category": "Start Change",
+            "quote": "When it becomes more difficult to suffer than to change... you will change",
+            "author": "Robert Anthony",
+            "id": "qf41tla2d"
+        },
+        {
+            "category": "Start Change",
+            "quote": "A lot of people get impatient with the pace of change",
+            "author": "James Levine",
+            "id": "3o4i0xu3i"
+        },
+        {
+            "category": "Start Change",
+            "quote": "As with anything creative, change is inevitable",
+            "author": "Enya",
+            "id": "k2dqk9dk9"
+        },
+        {
+            "category": "Start Change",
+            "quote": "I shall not change my course because those who assume to be better than I desire it",
+            "author": "Victoria Woodhull",
+            "id": "mw6ckbkl7"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is not only likely, it's inevitable",
+            "author": "Barbara Sher",
+            "id": "wmy8m27wp"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The main dangers in this life are the people who want to change everything... or nothing",
+            "author": "Nancy Astor",
+            "id": "0xbtryu19"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you can change three lives in 10, three lives in a hundred, that's got to be good, hasn't it?",
+            "author": "Ian Botham",
+            "id": "om7414mil"
+        },
+        {
+            "category": "Start Change",
+            "quote": "The moral world is as little exempt as the physical world from the law of ceaseless change, of perpetual flux",
+            "author": "James G. Frazer",
+            "id": "nwfkyfwtc"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change is tough, people don't like it, but it is necessary. Take two aspirins and call me in the morning",
+            "author": "Christopher Bond",
+            "id": "49qsui69d"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you want to change the culture, you will have to start by changing the organization",
+            "author": "Mary Douglas",
+            "id": "v85bhbnr6"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Perfection is immutable. But for things imperfect, change is the way to perfect them",
+            "author": "Owen Feltham",
+            "id": "m7v21zjbq"
+        },
+        {
+            "category": "Start Change",
+            "quote": "If you feel like it's difficult to change, you will probably have a harder time succeeding",
+            "author": "Andrea Jung",
+            "id": "v3zi1fbip"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Change means that what was before wasn't perfect. People want things to be better",
+            "author": "Esther Dyson",
+            "id": "nm4d0ys27"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Our fathers valued change for the sake of its results; we value it in the act",
+            "author": "Alice Meynell",
+            "id": "nw6qboway"
+        },
+        {
+            "category": "Start Change",
+            "quote": "Serve the dinner backward, do anything - but for goodness sake, do something weird",
+            "author": "Elsa Maxwell",
+            "id": "63h71nimm"
+        }
+    ]
+}
