@@ -3,7 +3,7 @@ part of '../home_view.dart';
 @immutable
 final class _SwipableBodySection extends StatelessWidget {
   const _SwipableBodySection(this.list);
-  final List<Map<String, dynamic>> list;
+  final List<QuoteModel> list;
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +14,10 @@ final class _SwipableBodySection extends StatelessWidget {
       physics: const ClampingScrollPhysics(),
       onPageChanged: (c) {},
       itemBuilder: (context, index) {
+        final QuoteModel quoteModel = list[index];
         return _QuoteTextSection(
-          quote: list[index]['quote'].toString(),
-          author: '- ${list[index]['author']}',
+          quote: quoteModel.quote,
+          author: '- ${quoteModel.author}',
         );
       },
     );

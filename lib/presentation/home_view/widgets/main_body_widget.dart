@@ -9,44 +9,21 @@ final class _MainBodyWidget extends StatefulWidget {
 }
 
 class _MainBodyWidgetState extends State<_MainBodyWidget> {
-  Future<List<Map<String, dynamic>>> readFile() async {
-    final quotesString = await rootBundle.loadString('assets/quotes/all_quotes.json');
-
-    final quotes = json.decode(quotesString) as Map<String, dynamic>;
-
-    final List<Map<String, dynamic>> quotesList = (quotes['religion']['tr_quotes'] as List).map((e) => e as Map<String, dynamic>).toList();
-
-    // final List<({String categoryName, List<Map<String, dynamic>> quotes})> quotesList = List<({String categoryName, List<Map<String, dynamic>> quotes})>.empty(growable: true);
-
-    // final categoriesList = quotes.map((e) => e['category'] as String).toSet().toList();
-
-    // for (final category in categoriesList) {
-    //   final quotesForCategory = quotes.where((e) => e['category'] == category).toList();
-    //   quotesList.add((categoryName: category, quotes: quotesForCategory.map((e) => e as Map<String, dynamic>).toList()));
-    // }
-
-    // final Map<String, dynamic> lastMap = {};
-
-    // quotesList.map((e) => {e.categoryName.toLowerCase().trim(): e.quotes}).toList().forEach(lastMap.addAll);
-
-    // return json.encode(lastMap);
-    return quotesList;
-  }
-
   @override
   void initState() {
-    start();
+    fetch();
     super.initState();
   }
 
-  Future<void> start() async {
-    final quotes = await readFile();
-    setState(() {
-      quotesList = quotes;
+  Future<void> fetch() async {
+    await locator<CategoryService>().readCategoryFromAssets(categoryKey: Categories.fallinglove.key, locale: 'en').then((value) {
+      setState(() {
+        quotesList = value;
+      });
     });
   }
 
-  List<Map<String, dynamic>> quotesList = [];
+  List<QuoteModel> quotesList = [];
 
   @override
   Widget build(BuildContext context) {

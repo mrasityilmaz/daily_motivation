@@ -1,6 +1,6 @@
 import 'package:daily_motivation/core/errors/errors.dart';
 import 'package:daily_motivation/core/extensions/dartz_extension.dart';
-import 'package:daily_motivation/data/models/example_model.dart';
+import 'package:daily_motivation/data/models/quote_model.dart';
 import 'package:daily_motivation/domain/repositories/example_repository/i_example_repository.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:dartz/dartz.dart';
@@ -33,15 +33,15 @@ void main() async {
     test('getSomeData Test', () async {
       final result = await exampleRepository.getSomeData();
 
-      expect(result, isA<Right<Failure, ExampleModel>>());
-      expect(result.asRight(), isA<ExampleModel>());
+      expect(result, isA<Right<Failure, QuoteModel>>());
+      expect(result.asRight(), isA<QuoteModel>());
     });
 
     test('getSomeListData Successfuly Fetch Test', () async {
       final result = await exampleRepository.getSomeListData();
 
-      expect(result, isA<Right<Failure, List<ExampleModel>>>());
-      expect(result.asRight(), isA<List<ExampleModel>>());
+      expect(result, isA<Right<Failure, List<QuoteModel>>>());
+      expect(result.asRight(), isA<List<QuoteModel>>());
     });
   });
 }
