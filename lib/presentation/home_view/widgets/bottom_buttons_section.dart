@@ -1,11 +1,11 @@
 part of '../home_view.dart';
 
 @immutable
-final class _BottomButtonsSection extends StatelessWidget {
+final class _BottomButtonsSection extends SelectorViewModelWidget<HomeViewModel, Categories?> {
   const _BottomButtonsSection();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, Categories? selectedCategory) {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -28,7 +28,7 @@ final class _BottomButtonsSection extends StatelessWidget {
                     child: const CategoriesBottomSheet(),
                   );
                 },
-                text: 'General',
+                text: selectedCategory?.name ?? '',
                 icon: const Icon(
                   CupertinoIcons.square_grid_2x2,
                   color: Colors.white,
@@ -39,8 +39,18 @@ final class _BottomButtonsSection extends StatelessWidget {
               const Spacer(),
               AdvancedButtonWidget.icon(
                 backgroundColor: context.colors.onBackground.withOpacity(.1),
-                onPressed: () {
-                  locator<ThemeService>().toggleDarkLightTheme();
+                onPressed: () async {
+                  await AppDialogs.instance.showModalBottomSheetDialog<void>(
+                    context,
+                    backgroundColor: Colors.transparent,
+                    constraints: BoxConstraints(maxHeight: context.mediaQuery.size.height * .9),
+                    elevation: 0,
+                    useRootNavigator: true,
+                    isScrollControlled: true,
+
+                    // shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: context.radius16.resolve(TextDirection.ltr).topLeft)),
+                    child: const ThemesBottomSheet(),
+                  );
                 },
                 icon: Icon(
                   Platform.isAndroid ? Icons.format_paint_rounded : CupertinoIcons.paintbrush,
@@ -66,6 +76,11 @@ final class _BottomButtonsSection extends StatelessWidget {
         const _AdBanner(),
       ],
     );
+  }
+
+  @override
+  Categories? selector(HomeViewModel viewModel) {
+    return viewModel.selectedCategory;
   }
 }
 

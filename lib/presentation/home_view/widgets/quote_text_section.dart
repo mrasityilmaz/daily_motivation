@@ -1,7 +1,7 @@
 part of '../home_view.dart';
 
 @immutable
-final class _QuoteTextSection extends StatelessWidget {
+final class _QuoteTextSection extends SelectorViewModelWidget<HomeViewModel, ThemeConfigurationModel> {
   const _QuoteTextSection({
     required this.quote,
     required this.author,
@@ -11,7 +11,7 @@ final class _QuoteTextSection extends StatelessWidget {
   final String author;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ThemeConfigurationModel currentThemeConfiguration) {
     return Padding(
       padding: context.screenPaddingHorizontal,
       child: FractionallySizedBox(
@@ -22,9 +22,11 @@ final class _QuoteTextSection extends StatelessWidget {
           children: [
             AutoSizeText(
               quote,
-              style: context.textTheme.headlineMedium?.copyWith(
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
+              style: GoogleFonts.getFont(
+                currentThemeConfiguration.fontName,
+                color: currentThemeConfiguration.textColor,
+                fontWeight: FontWeight.w400,
+                fontSize: context.textTheme.headlineMedium?.fontSize ?? 26,
               ),
               maxFontSize: context.textTheme.headlineSmall?.fontSize ?? 26,
               maxLines: 18,
@@ -37,9 +39,11 @@ final class _QuoteTextSection extends StatelessWidget {
             SizedBox(height: context.normalValue),
             AutoSizeText(
               author,
-              style: context.textTheme.titleMedium?.copyWith(
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
+              style: GoogleFonts.getFont(
+                currentThemeConfiguration.fontName,
+                color: currentThemeConfiguration.textColor,
+                fontWeight: FontWeight.w400,
+                fontSize: context.textTheme.titleMedium?.fontSize ?? 22,
               ),
               maxFontSize: context.textTheme.titleMedium?.fontSize ?? 22,
               maxLines: 1,
@@ -50,5 +54,10 @@ final class _QuoteTextSection extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  @override
+  ThemeConfigurationModel selector(HomeViewModel viewModel) {
+    return viewModel.currentThemeConfiguration;
   }
 }

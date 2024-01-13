@@ -47,6 +47,7 @@ dependencies:
   sliver_tools: ^0.2.12
   path_provider: ^2.1.2
   easy_localization: ^3.0.3
+  image_pixels: ^3.0.1
 
 ###
 ### Dependencies
@@ -91,6 +92,7 @@ flutter:
   assets:
     - assets/
     - assets/translations/
+    - assets/backgrounds/
     - assets/new_category_icons/
     - assets/quotes/
     - assets/quotes/categories/

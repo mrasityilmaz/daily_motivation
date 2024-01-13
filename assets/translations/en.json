@@ -1,5 +1,8 @@
 {
 	"categoriesKey": {
+		"general": "General",
+		"myquotes": "My Quotes",
+		"favorites": "My Favorites",
 		"art": "Art",
 		"dreams": "Dreams",
 		"enjoy_the_moment": "Enjoy the moment",

@@ -2,7 +2,11 @@ import 'package:daily_motivation/core/constants/categories_enum.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 enum CategoryGroup {
-  general('general', []),
+  general('general', [
+    Categories.general,
+    Categories.myquotes,
+    Categories.favorites,
+  ]),
   inspirational('inspirational', [
     Categories.art,
     Categories.dreams,

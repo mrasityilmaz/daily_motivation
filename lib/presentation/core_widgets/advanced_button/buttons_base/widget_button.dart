@@ -29,14 +29,14 @@ final class _WidgetButton extends StatelessWidget {
       key: animate,
       child: ElevatedButton(
         onPressed: onPressed != null
-            ? () {
+            ? () async {
                 if (bounceIt) {
                   try {
-                    animate.currentState?.startAnimation();
+                    await animate.currentState?.startAnimation(callback: () async => onPressed!.call());
                   } catch (e) {}
+                } else {
+                  onPressed!.call();
                 }
-
-                onPressed!.call();
               }
             : null,
         style: TextButton.styleFrom(

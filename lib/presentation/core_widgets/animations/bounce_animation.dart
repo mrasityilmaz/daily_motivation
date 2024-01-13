@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 @immutable
 final class BounceAnimation extends StatefulWidget {
-  const BounceAnimation({super.key, this.child, this.duration});
+  const BounceAnimation({super.key, this.child});
 
   final Widget? child;
-  final Duration? duration;
 
   @override
   BounceAnimationState createState() => BounceAnimationState();
@@ -15,16 +14,14 @@ class BounceAnimationState extends State<BounceAnimation> with SingleTickerProvi
   late double _scale;
   late AnimationController _animate;
 
-  Duration get userDuration => widget.duration ?? const Duration(milliseconds: 100);
-
   @override
   void initState() {
     _animate = AnimationController(
       vsync: this,
       duration: const Duration(
-        milliseconds: 200,
+        milliseconds: 150,
       ),
-      upperBound: 0.1,
+      upperBound: 0.05,
     )..addListener(() {
         setState(() {});
       });
@@ -46,10 +43,11 @@ class BounceAnimationState extends State<BounceAnimation> with SingleTickerProvi
     );
   }
 
-  void startAnimation() {
-    _animate.forward();
-    Future.delayed(userDuration, () {
-      _animate.reverse();
-    });
+  Future<void> startAnimation({required Future<void> Function() callback}) async {
+    await _animate.forward();
+    await Future.wait([
+      callback(),
+      _animate.reverse(),
+    ]);
   }
 }

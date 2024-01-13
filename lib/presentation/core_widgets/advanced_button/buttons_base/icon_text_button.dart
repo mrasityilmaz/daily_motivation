@@ -40,14 +40,14 @@ final class _IconTextButton extends StatelessWidget {
           style: textStyle?.copyWith(color: textColor ?? context.colors.onPrimary) ?? context.textTheme.bodyMedium?.copyWith(color: textColor ?? context.colors.onPrimary),
         ),
         onPressed: onPressed != null
-            ? () {
+            ? () async {
                 if (bounceIt) {
                   try {
-                    animate.currentState?.startAnimation();
+                    await animate.currentState?.startAnimation(callback: () async => onPressed!.call());
                   } catch (e) {}
+                } else {
+                  onPressed!.call();
                 }
-
-                onPressed!.call();
               }
             : null,
         style: TextButton.styleFrom(

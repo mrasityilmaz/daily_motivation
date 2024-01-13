@@ -1,6 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 
 enum Categories {
+  general(key: 'general', isPremium: false),
+  favorites(key: 'favorites', isPremium: false),
+  myquotes(key: 'myquotes', isPremium: false),
   art(key: 'art', isPremium: false),
   dreams(key: 'dreams', isPremium: false),
   enjoythemoment(key: 'enjoy_the_moment', isPremium: false),

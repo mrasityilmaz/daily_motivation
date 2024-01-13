@@ -29,14 +29,14 @@ final class _IconButton extends StatelessWidget {
       child: IconButton(
         icon: icon,
         onPressed: onPressed != null
-            ? () {
+            ? () async {
                 if (bounceIt) {
                   try {
-                    animate.currentState?.startAnimation();
+                    await animate.currentState?.startAnimation(callback: () async => onPressed!.call());
                   } catch (e) {}
+                } else {
+                  onPressed!.call();
                 }
-
-                onPressed!.call();
               }
             : null,
         style: IconButton.styleFrom(

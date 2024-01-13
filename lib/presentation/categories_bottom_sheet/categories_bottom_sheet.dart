@@ -1,9 +1,21 @@
+import 'package:daily_motivation/core/constants/categories_enum.dart';
 import 'package:daily_motivation/core/constants/category_group_enum.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
+import 'package:daily_motivation/data/services/category_service/quote_and_category_service.dart';
+import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/slivers/mutli_sliver_grid.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked/stacked.dart';
+
+part 'categories_bottom_sheet_viewmodel.dart';
+part 'widgets/app_bar_widget.dart';
+part 'widgets/body_widget.dart';
+part 'widgets/categories_section.dart';
+part 'widgets/category_card_widget.dart';
 
 @immutable
 final class CategoriesBottomSheet extends StatelessWidget {
@@ -11,131 +23,26 @@ final class CategoriesBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DraggableScrollableSheet(
-      initialChildSize: 1,
-      builder: (context, scrollController) => ClipRRect(
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-        child: Scaffold(
-          backgroundColor: context.colors.surface,
-          appBar: AppBar(
-            backgroundColor: context.colors.surface,
-            title: Text(
-              'Categories',
-              style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+    return ViewModelBuilder<_CategoriesBottomSheetViewModel>.nonReactive(
+      viewModelBuilder: _CategoriesBottomSheetViewModel.new,
+      builder: (context, model, child) {
+        return DraggableScrollableSheet(
+          initialChildSize: 1,
+          builder: (context, scrollController) => ClipRRect(
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+            child: Stack(
+              children: [
+                Scaffold(
+                  backgroundColor: context.colors.surface,
+                  appBar: const _CategoriesBottomSheetAppBar(),
+                  body: _BodyWidget(scrollController: scrollController),
+                ),
+                const ViewModelLoadingIndicator<_CategoriesBottomSheetViewModel>(),
+              ],
             ),
-            centerTitle: true,
-            actions: [
-              AdvancedButtonWidget.text(
-                text: 'Kilitleri Kaldır',
-                backgroundColor: Colors.transparent,
-                onPressed: () {},
-              ),
-            ],
           ),
-          body: CustomScrollView(
-            controller: scrollController,
-            slivers: [
-              SliverToBoxAdapter(
-                child: Padding(
-                  padding: context.screenPadding + context.paddingNormalBottom,
-                  child: AdvancedButtonWidget.text(
-                    expand: true,
-                    text: 'Create your own mix',
-                    onPressed: () {},
-                    textStyle: context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              ...CategoryGroup.values.map((e) {
-                return MultiSliverGridSection(
-                  title: Container(
-                    height: kToolbarHeight,
-                    decoration: BoxDecoration(
-                      color: context.appColors.secondBlackColor,
-                    ),
-                    padding: context.screenPaddingHorizontal,
-                    child: Row(
-                      children: [
-                        Text(e.name, style: context.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold)),
-                      ],
-                    ),
-                  ),
-                  gridChildrenPadding: context.screenPaddingHorizontal * .5 + context.paddingMediumBottom + context.screenPaddingTop,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: context.screenPaddingHorizontal.horizontal / 4,
-                    mainAxisSpacing: context.screenPaddingHorizontal.horizontal / 4,
-                    childAspectRatio: 2,
-                  ),
-                  items: e.subCategories.map((s) {
-                    return Opacity(
-                      opacity: s.isPremium ? .4 : 1,
-                      child: AdvancedButtonWidget(
-                        expand: true,
-                        onPressed: s.isPremium ? null : () {},
-                        bounceIt: true,
-                        padding: EdgeInsets.zero,
-                        child: Stack(
-                          children: [
-                            Positioned.fill(
-                              child: Padding(
-                                padding: context.paddingLowRight * .5 + context.paddingLowBottom * .5,
-                                child: FractionallySizedBox(
-                                  heightFactor: .7,
-                                  alignment: Alignment.bottomRight,
-                                  child: FittedBox(
-                                    alignment: Alignment.bottomRight,
-                                    fit: BoxFit.fitHeight,
-                                    child: Image.asset(s.iconPath),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: context.paddingLow,
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                  s.name,
-                                  style: context.textTheme.bodyMedium?.copyWith(color: context.colors.onSurface, fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                            ),
-                            if (s.isPremium) ...[
-                              Positioned.fill(
-                                child: FractionallySizedBox(
-                                  heightFactor: .7,
-                                  child: Padding(
-                                    padding: context.paddingLow,
-                                    child: FittedBox(
-                                      fit: BoxFit.fitHeight,
-                                      child: Icon(
-                                        CupertinoIcons.lock_fill,
-                                        size: 26,
-                                        color: context.colors.onPrimary,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ],
-                        ),
-                      ),
-                    );
-                  }).toList(),
-                );
-              }),
-              SliverSafeArea(
-                minimum: context.adaptiveScreenPaddingBottom + context.paddingMediumBottom,
-                sliver: const SliverToBoxAdapter(
-                  child: SizedBox(),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

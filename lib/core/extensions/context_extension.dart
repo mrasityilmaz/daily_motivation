@@ -25,6 +25,8 @@ extension ThemeExtensionn on BuildContext {
 
   ColorScheme get colors => Theme.of(this).colorScheme;
   AppColorScheme get appColors => AppColorScheme.instance;
+
+  Color getXorColor(Color color) => _adjustColorBasedOnIntensity(color);
 }
 
 extension Themmeee on ThemeData {
@@ -89,6 +91,10 @@ extension PageExtension on BuildContext {
 }
 
 extension DurationExtension on BuildContext {
+  Duration get duration150 => const Duration(milliseconds: 150);
+  Duration get duration200 => const Duration(milliseconds: 200);
+  Duration get duration250 => const Duration(milliseconds: 250);
+  Duration get duration300 => const Duration(milliseconds: 300);
   Duration get lowDuration => const Duration(milliseconds: 500);
   Duration get normalDuration => const Duration(seconds: 1);
 }
@@ -99,4 +105,16 @@ extension RadiusExtension on BuildContext {
   BorderRadiusGeometry get radius12 => BorderRadius.circular(12);
   BorderRadiusGeometry get radius16 => BorderRadius.circular(16);
   BorderRadiusGeometry get radius20 => BorderRadius.circular(20);
+}
+
+Color _adjustColorBasedOnIntensity(Color originalColor) {
+  // Renk değerini yoğunluğa (luminance) göre kontrol et
+  final double intensity = originalColor.computeLuminance();
+
+  // Belirli bir eşik değeri ile karşılaştır
+  const double threshold = 0.49;
+
+  // Eğer yoğunluk eşik değerinden küçükse (siyah tonlarına yakın),
+  // beyazımsı bir renge çevir, değilse tam tersini yap
+  return intensity < threshold ? const Color(0xFFFFFFFF) : const Color(0xFF000000);
 }
