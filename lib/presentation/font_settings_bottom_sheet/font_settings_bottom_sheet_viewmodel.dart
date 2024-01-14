@@ -12,6 +12,15 @@ final class _FontSettingsBottomSheetViewModel extends ReactiveViewModel {
   List<String> get allBackgroundList => _themeConfigurationService.allBackgroundList;
   List<DefaultFontsEnum> get allDefaultFontList => _themeConfigurationService.defaultFontList;
 
+  int? _selectedBottomButtonIndex;
+
+  int? get selectedBottomButtonIndex => _selectedBottomButtonIndex;
+
+  void setSelectedBottomButtonIndex(int? index) {
+    _selectedBottomButtonIndex = index;
+    notifyListeners();
+  }
+
   Future<void> updateThemeConfiguration({required ThemeConfigurationModel model}) async {
     await _themeConfigurationService.changeThemeConfiguration(model: model);
   }
