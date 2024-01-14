@@ -3,7 +3,10 @@ import 'dart:async';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/core/navigator/app_navigator.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
+import 'package:daily_motivation/presentation/dialogs/lock_overlay_dialog.dart';
+import 'package:daily_motivation/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 
 final class AppDialogs {
   factory AppDialogs() => instance;
@@ -60,22 +63,23 @@ final class AppDialogs {
     );
   }
 
-//   ///
-//   /// Custom Progress Show Dialog Function
-//   ///
+  ///
+  /// Custom Progress Show Dialog Function
+  ///
 
-//   FutureOr<T?> _showDialog<T>(BuildContext context, {required Widget child}) async {
-//     ProgressOverlayDialog.instance.closeOverlay();
-//     LockOverlayDialog.instance.closeOverlay();
-//     return showDialog<T?>(
-//       context: context,
-//       barrierDismissible: false,
-//       useSafeArea: false,
-//       builder: (BuildContext context) {
-//         return _AnimatedBody(
-//           child: child,
-//         );
-//       },
-//     );
-//   }
+  FutureOr<T?> showDialog<T>(BuildContext context, {required Widget child, bool barrierDismissible = true, Alignment alignment = Alignment.center, Color? barrierColor}) async {
+    ProgressOverlayDialog.instance.closeOverlay();
+    LockOverlayDialog.instance.closeOverlay();
+
+    return showAnimatedDialog<T?>(
+      context: context,
+      duration: const Duration(milliseconds: 400),
+      animationType: DialogTransitionType.scale,
+      curve: Curves.easeInOutExpo,
+      alignment: alignment,
+      barrierColor: barrierColor ?? context.colors.scrim.withOpacity(.4),
+      barrierDismissible: barrierDismissible,
+      builder: (context) => child,
+    );
+  }
 }

@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'quote_model.freezed.dart';
@@ -21,6 +22,15 @@ class QuoteModel with _$QuoteModel, EquatableMixin {
     required String author,
     required String id,
   }) = _QuoteModel;
+
+  factory QuoteModel.empty() {
+    return QuoteModel(
+      category: '',
+      quote: '',
+      author: 'Raşit Yılmaz',
+      id: UniqueKey().toString(),
+    );
+  }
 
   const QuoteModel._();
 

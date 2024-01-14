@@ -31,10 +31,10 @@ final class __Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       minimum: context.adaptiveScreenPaddingBottom + EdgeInsets.only(top: context.adaptiveScreenPaddingBottom.bottom),
-      child: Column(
+      child: const Column(
         children: [
-          const _TopSection(),
-          const Expanded(
+          _TopSection(),
+          Expanded(
             child: Stack(
               children: [
                 Positioned.fill(
@@ -45,9 +45,6 @@ final class __Body extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          SizedBox(
-            height: context.screenPadding.bottom * 1.5,
           ),
         ],
       ),

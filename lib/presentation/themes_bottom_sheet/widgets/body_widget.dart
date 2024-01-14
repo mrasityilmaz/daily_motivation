@@ -22,11 +22,12 @@ final class _BodyWidget extends ViewModelWidget<_ThemesBottomSheetViewModel> {
             ),
             itemBuilder: (context, index) {
               final String currentBackgroundPath = viewModel.allBackgroundList[index];
-              final String currentFontName = viewModel.allFontList[index];
+              final DefaultFontsEnum currentFont = viewModel.allDefaultFontList[index % viewModel.allDefaultFontList.length];
 
               return _ImageBoxWidget(
-                fontName: currentFontName,
+                font: currentFont,
                 backgroundPath: currentBackgroundPath,
+                isLocked: index > 8,
                 onChanged: (newBg) async {
                   await viewModel.updateThemeConfiguration(model: newBg);
                 },

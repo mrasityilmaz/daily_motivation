@@ -6,6 +6,7 @@ import 'package:daily_motivation/data/models/theme_configuration_model/theme_con
 import 'package:daily_motivation/data/services/category_service/quote_and_category_service.dart';
 import 'package:daily_motivation/data/services/theme_configuration_service/theme_configuration_service.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:stacked/stacked.dart';
 
 final class HomeViewModel extends ReactiveViewModel {
@@ -17,6 +18,10 @@ final class HomeViewModel extends ReactiveViewModel {
   List<QuoteModel> get currentQuoteList => listenableCategoryService.currentQuotes;
   Categories? get selectedCategory => listenableCategoryService.selectedCategory;
   ThemeConfigurationModel get currentThemeConfiguration => listenableThemeConfigurationService.currentThemeConfiguration;
+
+  QuoteModel get currentQuote => currentQuoteList.isNotEmpty ? currentQuoteList[_currentPage] : QuoteModel.empty();
+
+  int get _currentPage => pageController.hasClients ? pageController.page!.round() : 0;
 
   /// Fetches quotes for the selected category.
   ///
@@ -31,4 +36,16 @@ final class HomeViewModel extends ReactiveViewModel {
 
   @override
   List<ListenableServiceMixin> get listenableServices => [_categoryService, _themeConfigurationService];
+
+  ///
+  ///
+  ///  UI Controllers
+  ///
+  final PageController pageController = PageController();
+
+  @override
+  void dispose() {
+    pageController.dispose();
+    super.dispose();
+  }
 }

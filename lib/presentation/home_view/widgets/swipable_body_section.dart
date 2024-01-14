@@ -12,6 +12,7 @@ final class _SwipableBodySection extends ViewModelWidget<HomeViewModel> {
       clipBehavior: Clip.none,
       physics: const ClampingScrollPhysics(),
       onPageChanged: (c) {},
+      controller: viewModel.pageController,
       itemBuilder: (context, index) {
         final QuoteModel quoteModel = viewModel.currentQuoteList[index];
         return _QuoteTextSection(

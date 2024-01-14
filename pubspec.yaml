@@ -48,6 +48,8 @@ dependencies:
   path_provider: ^2.1.2
   easy_localization: ^3.0.3
   image_pixels: ^3.0.1
+  flutter_animated_dialog: ^2.0.1
+  animated_custom_dropdown: ^3.0.0
 
 ###
 ### Dependencies

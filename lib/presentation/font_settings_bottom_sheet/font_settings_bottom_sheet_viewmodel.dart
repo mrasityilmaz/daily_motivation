@@ -1,6 +1,9 @@
-part of 'themes_bottom_sheet.dart';
+part of 'font_settings_bottom_sheet.dart';
 
-final class _ThemesBottomSheetViewModel extends ReactiveViewModel {
+final class _FontSettingsBottomSheetViewModel extends ReactiveViewModel {
+  _FontSettingsBottomSheetViewModel({required this.quoteModel});
+  late final QuoteModel quoteModel;
+
   final ThemeConfigurationService _themeConfigurationService = locator<ThemeConfigurationService>();
   ThemeConfigurationService get _listenableThemeConfigurationService => listenableServices.first as ThemeConfigurationService;
 

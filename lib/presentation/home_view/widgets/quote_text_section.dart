@@ -23,14 +23,14 @@ final class _QuoteTextSection extends SelectorViewModelWidget<HomeViewModel, The
             AutoSizeText(
               quote,
               style: GoogleFonts.getFont(
+                fontSize: currentThemeConfiguration.maxFontSize / 1.2,
                 currentThemeConfiguration.fontName,
                 color: currentThemeConfiguration.textColor,
                 fontWeight: FontWeight.w400,
-                fontSize: context.textTheme.headlineMedium?.fontSize ?? 26,
               ),
-              maxFontSize: context.textTheme.headlineSmall?.fontSize ?? 26,
+              maxFontSize: currentThemeConfiguration.maxFontSize,
+              minFontSize: currentThemeConfiguration.minFontSize,
               maxLines: 18,
-              minFontSize: context.textTheme.labelMedium?.fontSize ?? 14,
               overflow: TextOverflow.ellipsis,
               softWrap: true,
               stepGranularity: .5,

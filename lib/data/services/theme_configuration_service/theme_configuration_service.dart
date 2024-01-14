@@ -1,6 +1,6 @@
+import 'package:daily_motivation/core/constants/default_fonts_enum.dart';
 import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:injectable/injectable.dart';
 import 'package:stacked/stacked.dart';
 
@@ -13,7 +13,9 @@ final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigu
     _themeConfiguration = ReactiveValue<ThemeConfigurationModel>(
       ThemeConfigurationModel(
         backgroundPath: defaultBackgroundPath,
-        fontName: defaultFontName,
+        fontName: defaultFont.fontFamily,
+        maxFontSize: defaultFont.maxFontSize,
+        minFontSize: defaultFont.minFontSize,
         textColor: Colors.white,
       ),
     );

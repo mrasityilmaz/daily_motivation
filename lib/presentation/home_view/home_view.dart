@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -12,6 +13,7 @@ import 'package:daily_motivation/presentation/categories_bottom_sheet/categories
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:daily_motivation/presentation/dialogs/app_dialogs.dart';
+import 'package:daily_motivation/presentation/font_settings_bottom_sheet/font_settings_bottom_sheet.dart';
 import 'package:daily_motivation/presentation/home_view/home_viewmodel.dart';
 import 'package:daily_motivation/presentation/themes_bottom_sheet/themes_bottom_sheet.dart';
 import 'package:flutter/cupertino.dart';
@@ -26,7 +28,7 @@ part 'widgets/like_and_other_buttons_section.dart';
 part 'widgets/main_body_widget.dart';
 part 'widgets/quote_text_section.dart';
 part 'widgets/swipable_body_section.dart';
-part 'widgets/top_section.dart';
+part 'widgets/top_buttons_section.dart';
 
 @immutable
 @RoutePage(name: 'HomeViewRoute')
