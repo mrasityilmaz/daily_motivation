@@ -84,9 +84,10 @@ final class _BottomButtonsSection extends ViewModelWidget<HomeViewModel> {
                       await AppDialogs.instance.showModalBottomSheetDialog<void>(
                         context,
                         backgroundColor: Colors.transparent,
-                        constraints: BoxConstraints(maxHeight: context.mediaQuery.size.height, minHeight: context.height),
+                        constraints: BoxConstraints(maxHeight: context.mediaQuery.size.height, minHeight: context.mediaQuery.size.height),
                         elevation: 0,
                         useRootNavigator: true,
+                        enableDrag: false,
                         isScrollControlled: true,
 
                         // shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: context.radius16.resolve(TextDirection.ltr).topLeft)),
