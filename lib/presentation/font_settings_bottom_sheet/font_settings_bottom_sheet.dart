@@ -14,13 +14,14 @@ import 'package:daily_motivation/presentation/core_widgets/advanced_button/advan
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:daily_motivation/vendor/slider_shape_override.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_box_transform/flutter_box_transform.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stacked/stacked.dart';
 
 part 'font_settings_bottom_sheet_viewmodel.dart';
 part 'mixins/calculator_tools_mixin.dart';
+part 'mixins/screen_design_tools_mixin.dart';
 part 'mixins/services_mixin.dart';
 part 'mixins/text_style_tools_mixin.dart';
 part 'widgets/body_widget.dart';

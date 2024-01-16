@@ -7,7 +7,8 @@
 		{
 			"name": "daily_motivation",
 			"request": "launch",
-			"type": "dart"
+			"type": "dart",
+			
 		},
 		{
 			"name": "daily_motivation (profile mode)",

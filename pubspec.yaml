@@ -42,7 +42,6 @@ dependencies:
   stacked_themes: ^0.3.12
   cached_network_image: ^3.3.1
   auto_route: ^7.8.4
-  auto_size_text: ^3.0.0
   visibility_detector: ^0.4.0+2
   sliver_tools: ^0.2.12
   path_provider: ^2.1.2
@@ -50,6 +49,8 @@ dependencies:
   image_pixels: ^3.0.1
   flutter_animated_dialog: ^2.0.1
   animated_custom_dropdown: ^3.0.0
+  flutter_box_transform: ^0.4.2
+  auto_size_text: ^3.0.0
 
 ###
 ### Dependencies
@@ -87,6 +88,8 @@ dev_dependencies:
 ### Dev Dependencies
 ###
 ##############################################################################################################################
+
+
 flutter:
 
   uses-material-design: true

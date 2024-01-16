@@ -5,7 +5,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:daily_motivation/assets.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/core/navigator/app_navigator.dart';
 import 'package:daily_motivation/data/models/quote_model.dart';
 import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:daily_motivation/injection/injection_container.dart';

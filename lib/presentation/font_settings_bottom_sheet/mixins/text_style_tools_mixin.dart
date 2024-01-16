@@ -7,6 +7,9 @@ mixin TextStyleToolsMixin on ReactiveViewModel {
   final GlobalKey _autoSizeTextKey = GlobalKey();
 
   GlobalKey get autoSizeTextKey => _autoSizeTextKey;
+  final GlobalKey _autoSizeGroupKey = GlobalKey();
+
+  GlobalKey get autoSizeGroupKey => _autoSizeGroupKey;
 
   ///
   /// Variables
