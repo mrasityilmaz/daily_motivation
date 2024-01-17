@@ -56,6 +56,7 @@ final class _IconTextButton extends StatelessWidget {
           minimumSize: expand ? const Size(double.infinity, kMinInteractiveDimension) : null,
           fixedSize: expand ? const Size(double.infinity, kMinInteractiveDimension) : null,
           padding: padding,
+          elevation: 0,
           splashFactory: InkSparkle.constantTurbulenceSeedSplashFactory,
         ),
       ),

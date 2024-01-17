@@ -47,6 +47,7 @@ final class _TextButton extends StatelessWidget {
           fixedSize: expand ? const Size(double.infinity, kMinInteractiveDimension) : null,
           shape: shape ?? RoundedRectangleBorder(borderRadius: context.radius12),
           padding: padding,
+          elevation: 0,
           splashFactory: InkSparkle.constantTurbulenceSeedSplashFactory,
         ),
         child: Text(

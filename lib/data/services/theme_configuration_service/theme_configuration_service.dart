@@ -1,29 +1,31 @@
 import 'package:daily_motivation/core/constants/default_fonts_enum.dart';
+import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
+import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:stacked/stacked.dart';
 
+part 'screen_design_tools_mixin.dart';
 part 'theme_configuration_service_mixin.dart';
 
 @immutable
 @LazySingleton()
-final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigurationserviceMixin {
+final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigurationserviceMixin, _ScreenDesignToolsMixin {
+  ///
+  ///
+  ///
   ThemeConfigurationService() {
-    _themeConfiguration = ReactiveValue<ThemeConfigurationModel>(
-      ThemeConfigurationModel(
-        backgroundPath: defaultBackgroundPath,
-        fontName: defaultFont.fontFamily,
-        maxFontSize: defaultFont.maxFontSize,
-        minFontSize: defaultFont.minFontSize,
-        textColor: Colors.white,
-      ),
-    );
-
+    _initConfig();
     listenToReactiveValues([_themeConfiguration]);
   }
+  final HiveService _hiveService = HiveService.instance;
 
-  Future<void> init() async {}
+  Future<void> init(BuildContext context) async {
+    try {} catch (e) {
+      debugPrint(e.toString());
+    }
+  }
 
   ///
   /// Reactive Values
@@ -39,8 +41,33 @@ final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigu
   Future<void> changeThemeConfiguration({required ThemeConfigurationModel model}) async {
     try {
       _themeConfiguration.value = model;
+      await _hiveService.setCurrentThemeConfiguration(model);
+    } catch (e) {
+      debugPrint(e.toString());
+    }
+  }
 
-      // TODOsave configuraiton
+  ////
+  ///
+  /// Init
+  ///
+  void _initConfig() {
+    try {
+      final ThemeConfigurationModel? cachedThemeConfig = _hiveService.currentThemeConfiguration;
+
+      if (cachedThemeConfig != null) {
+        _themeConfiguration = ReactiveValue<ThemeConfigurationModel>(cachedThemeConfig);
+      } else {
+        _themeConfiguration = ReactiveValue<ThemeConfigurationModel>(
+          ThemeConfigurationModel(
+            backgroundPath: defaultBackgroundPath,
+            fontName: defaultFont.fontFamily,
+            maxFontSize: defaultFont.maxFontSize,
+            minFontSize: defaultFont.minFontSize,
+            textColor: Colors.white,
+          ),
+        );
+      }
     } catch (e) {
       debugPrint(e.toString());
     }

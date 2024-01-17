@@ -1,3 +1,4 @@
+import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -40,6 +41,14 @@ class QuoteModel with _$QuoteModel, EquatableMixin {
   List<Object?> get props => [
         id,
       ];
+
+  QuoteHiveModel get toHiveModel => QuoteHiveModel(
+        author: author,
+        createdAt: DateTime.now().toUtc(),
+        id: id,
+        category: category,
+        quote: quote,
+      );
 }
 
 

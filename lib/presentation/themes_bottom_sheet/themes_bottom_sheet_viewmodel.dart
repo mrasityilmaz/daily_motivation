@@ -10,7 +10,7 @@ final class _ThemesBottomSheetViewModel extends ReactiveViewModel {
   List<DefaultFontsEnum> get allDefaultFontList => _themeConfigurationService.defaultFontList;
 
   Future<void> updateThemeConfiguration({required ThemeConfigurationModel model}) async {
-    await _themeConfigurationService.changeThemeConfiguration(model: model);
+    await runBusyFuture(Future.delayed(const Duration(milliseconds: 500), () => _themeConfigurationService.changeThemeConfiguration(model: model)));
   }
 
   @override

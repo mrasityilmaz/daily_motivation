@@ -1,4 +1,5 @@
 import 'package:daily_motivation/core/navigator/app_navigator.dart';
+import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/shared/app_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -9,6 +10,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ThemeManager.initialise();
   await EasyLocalization.ensureInitialized();
+
+  await HiveService.instance.init();
 
   ///
   await configureDependencies();

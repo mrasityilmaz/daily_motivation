@@ -62,26 +62,10 @@ final class _BodyWidget extends ViewModelWidget<_FontSettingsBottomSheetViewMode
         text: 'Move',
         onPressed: () {
           if (viewModel.selectedBottomButtonIndex == 4) {
-            if (viewModel.finalRect != null) {
-              viewModel
-                ..setTextRect(viewModel.finalRect)
-                ..setFinalRect(null);
-            } else {}
             viewModel.setSelectedBottomButtonIndex(null);
             return;
           }
           viewModel.setSelectedBottomButtonIndex(4);
-
-          if (viewModel.finalRect != null) {
-            viewModel
-              ..setTextRect(viewModel.finalRect)
-              ..setFinalRect(null);
-          } else {
-            final RenderBox? renderBox = viewModel.autoSizeGroupKey.currentContext?.findRenderObject() as RenderBox?;
-            final Rect widgetRect = (renderBox?.localToGlobal(Offset.zero) ?? Offset.zero) & (renderBox?.size ?? Size.zero);
-
-            viewModel.setTextRect(widgetRect);
-          }
         },
         child: const __MoveAndResizeSizeChild()
       ),
@@ -159,12 +143,10 @@ final class _BodyWidget extends ViewModelWidget<_FontSettingsBottomSheetViewMode
         ),
         child: Stack(
           children: [
-            if (viewModel.finalRect != null) ...[
-              Positioned.fromRect(rect: viewModel.finalRect!, child: const _QuoteAndAuthorWidget()),
-            ] else if (viewModel.textRect == null) ...[
-              const Positioned.fill(child: _QuoteAndAuthorWidget()),
-            ] else ...[
+            if (viewModel.textRect != null) ...[
               const _ResizableContainer(),
+            ] else ...[
+              const _QuoteAndAuthorWidget(),
             ],
           ],
         ),
@@ -188,129 +170,230 @@ final class _QuoteAndAuthorWidget extends ViewModelWidget<_FontSettingsBottomShe
     // );
 
     if (viewModel.textRect != null) {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Flexible(
-            fit: FlexFit.tight,
-            child: Align(
-              alignment: viewModel.textAlign.toAlignment,
-              child: AutoSizeText.rich(
+      return Center(
+        child: ColoredBox(
+          color: Colors.amber,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              AutoSizeText.rich(
                 TextSpan(
                   text: viewModel.quoteModel.quote,
                   children: [
                     TextSpan(
-                      text: '\n\n-${viewModel.quoteModel.author}',
-                      style: viewModel.authorTextStyle.copyWith(fontSize: viewModel.quoteFontSize * .75),
+                      text: '\n\n${viewModel.quoteModel.author}',
+                      style: GoogleFonts.getFont(
+                        viewModel.currentThemeConfiguration.fontName,
+                        color: viewModel.currentThemeConfiguration.textColor,
+                        fontWeight: FontWeight.w400,
+                        fontSize: context.textTheme.titleMedium?.fontSize ?? 22,
+                      ),
                     ),
                   ],
                 ),
-                style: viewModel.quoteTextStyle,
+                style: GoogleFonts.getFont(
+                  fontSize: viewModel.currentThemeConfiguration.maxFontSize / 1.2,
+                  viewModel.currentThemeConfiguration.fontName,
+                  color: viewModel.currentThemeConfiguration.textColor,
+                  fontWeight: FontWeight.w400,
+                ),
                 maxLines: 18,
                 overflow: TextOverflow.ellipsis,
-                textAlign: viewModel.textAlign,
+                textAlign: TextAlign.center,
                 key: viewModel.autoSizeTextKey,
               ),
-            ),
+              // AutoSizeText(
+              //   quote,
+              //   style: GoogleFonts.getFont(
+              //     fontSize: currentThemeConfiguration.maxFontSize / 1.2,
+              //     currentThemeConfiguration.fontName,
+              //     color: currentThemeConfiguration.textColor,
+              //     fontWeight: FontWeight.w400,
+              //   ),
+              //   maxFontSize: currentThemeConfiguration.maxFontSize,
+              //   minFontSize: currentThemeConfiguration.minFontSize,
+              //   maxLines: 18,
+              //   overflow: TextOverflow.ellipsis,
+              //   softWrap: true,
+              //   stepGranularity: .5,
+              //   textAlign: TextAlign.center,
+              // ),
+              // SizedBox(height: context.normalValue),
+              // AutoSizeText(
+              //   author,
+              //   style: GoogleFonts.getFont(
+              //     currentThemeConfiguration.fontName,
+              //     color: currentThemeConfiguration.textColor,
+              //     fontWeight: FontWeight.w400,
+              //     fontSize: context.textTheme.titleMedium?.fontSize ?? 22,
+              //   ),
+              //   maxFontSize: context.textTheme.titleMedium?.fontSize ?? 22,
+              //   maxLines: 1,
+              //   minFontSize: context.textTheme.titleSmall?.fontSize ?? 14,
+              //   textAlign: TextAlign.center,
+              // ),
+            ],
           ),
-          // SizedBox(height: context.lowValue),
-          // Align(
-          //   alignment: viewModel.textAlign.toAlignment,
-          //   child: AutoSizeText(
-          //     '-${viewModel.quoteModel.author}',
-          //     style: viewModel.authorTextStyle.copyWith(fontSize: viewModel.quoteFontSize * .65),
-          //     maxLines: 1,
-          //     minFontSize: viewModel.currentThemeConfiguration.minFontSize,
-          //     textAlign: viewModel.textAlign,
-          //   ),
-          // ),
-        ],
+        ),
       );
     }
 
-    if (viewModel.finalRect != null) {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Flexible(
-            fit: FlexFit.tight,
-            child: Align(
-              alignment: viewModel.textAlign.toAlignment,
-              child: AutoSizeText.rich(
+    return Positioned.fill(
+      left: viewModel._themeConfigurationService.defaultRect.left,
+      right: context.width - viewModel._themeConfigurationService.defaultRect.right,
+      top: viewModel._themeConfigurationService.defaultRect.top - 16,
+      child: Center(
+        child: ColoredBox(
+          color: Colors.amber,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              AutoSizeText.rich(
                 TextSpan(
                   text: viewModel.quoteModel.quote,
                   children: [
                     TextSpan(
                       text: '\n\n-${viewModel.quoteModel.author}',
-                      style: viewModel.authorTextStyle.copyWith(fontSize: viewModel.quoteFontSize * .75),
+                      style: GoogleFonts.getFont(
+                        viewModel.currentThemeConfiguration.fontName,
+                        color: viewModel.currentThemeConfiguration.textColor,
+                        fontWeight: FontWeight.w400,
+                        fontSize: context.textTheme.titleMedium?.fontSize ?? 22,
+                      ),
                     ),
                   ],
                 ),
-                style: viewModel.quoteTextStyle,
+                style: GoogleFonts.getFont(
+                  fontSize: viewModel.currentThemeConfiguration.maxFontSize / 1.2,
+                  viewModel.currentThemeConfiguration.fontName,
+                  color: viewModel.currentThemeConfiguration.textColor,
+                  fontWeight: FontWeight.w400,
+                ),
                 maxLines: 18,
                 overflow: TextOverflow.ellipsis,
-                textAlign: viewModel.textAlign,
+                textAlign: TextAlign.center,
                 key: viewModel.autoSizeTextKey,
               ),
-            ),
+              // AutoSizeText(
+              //   quote,
+              //   style: GoogleFonts.getFont(
+              //     fontSize: currentThemeConfiguration.maxFontSize / 1.2,
+              //     currentThemeConfiguration.fontName,
+              //     color: currentThemeConfiguration.textColor,
+              //     fontWeight: FontWeight.w400,
+              //   ),
+              //   maxFontSize: currentThemeConfiguration.maxFontSize,
+              //   minFontSize: currentThemeConfiguration.minFontSize,
+              //   maxLines: 18,
+              //   overflow: TextOverflow.ellipsis,
+              //   softWrap: true,
+              //   stepGranularity: .5,
+              //   textAlign: TextAlign.center,
+              // ),
+              // SizedBox(height: context.normalValue),
+              // AutoSizeText(
+              //   author,
+              //   style: GoogleFonts.getFont(
+              //     currentThemeConfiguration.fontName,
+              //     color: currentThemeConfiguration.textColor,
+              //     fontWeight: FontWeight.w400,
+              //     fontSize: context.textTheme.titleMedium?.fontSize ?? 22,
+              //   ),
+              //   maxFontSize: context.textTheme.titleMedium?.fontSize ?? 22,
+              //   maxLines: 1,
+              //   minFontSize: context.textTheme.titleSmall?.fontSize ?? 14,
+              //   textAlign: TextAlign.center,
+              // ),
+            ],
           ),
-          // SizedBox(height: context.lowValue),
-          // Align(
-          //   alignment: viewModel.textAlign.toAlignment,
-          //   child: AutoSizeText(
-          //     '-${viewModel.quoteModel.author}',
-          //     style: viewModel.authorTextStyle.copyWith(fontSize: viewModel.quoteFontSize * .65),
-          //     maxLines: 1,
-          //     minFontSize: viewModel.currentThemeConfiguration.minFontSize,
-          //     textAlign: viewModel.textAlign,
-          //   ),
-          // ),
-        ],
-      );
-    }
-    return Padding(
-      padding: context.screenPaddingHorizontal,
-      child: FractionallySizedBox(
-        heightFactor: .85,
-        alignment: const Alignment(0, -.6),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(
-              key: viewModel.autoSizeGroupKey,
-              children: [
-                Align(
-                  alignment: viewModel.textAlign.toAlignment,
-                  child: AutoSizeText(
-                    viewModel.quoteModel.quote,
-                    key: viewModel.autoSizeTextKey,
-                    style: viewModel.quoteTextStyle,
-                    minFontSize: viewModel.currentThemeConfiguration.minFontSize,
-                    maxLines: 18,
-                    overflow: TextOverflow.ellipsis,
-                    softWrap: true,
-                    stepGranularity: .5,
-                    textAlign: viewModel.textAlign,
-                  ),
-                ),
-                SizedBox(height: context.lowValue),
-                Align(
-                  alignment: viewModel.textAlign.toAlignment,
-                  child: AutoSizeText(
-                    '-${viewModel.quoteModel.author}',
-                    style: viewModel.authorTextStyle,
-                    maxLines: 1,
-                    minFontSize: viewModel.currentThemeConfiguration.minFontSize,
-                    textAlign: viewModel.textAlign,
-                  ),
-                ),
-              ],
-            ),
-          ],
         ),
       ),
     );
+
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Flexible(
+          fit: FlexFit.tight,
+          child: Align(
+            alignment: viewModel.textAlign.toAlignment,
+            child: AutoSizeText.rich(
+              TextSpan(
+                text: viewModel.quoteModel.quote,
+                children: [
+                  TextSpan(
+                    text: '\n\n-${viewModel.quoteModel.author}',
+                    style: viewModel.authorTextStyle.copyWith(fontSize: viewModel.quoteFontSize * .75),
+                  ),
+                ],
+              ),
+              style: viewModel.quoteTextStyle,
+              maxLines: 18,
+              overflow: TextOverflow.ellipsis,
+              textAlign: viewModel.textAlign,
+              key: viewModel.autoSizeTextKey,
+            ),
+          ),
+        ),
+        // SizedBox(height: context.lowValue),
+        // Align(
+        //   alignment: viewModel.textAlign.toAlignment,
+        //   child: AutoSizeText(
+        //     '-${viewModel.quoteModel.author}',
+        //     style: viewModel.authorTextStyle.copyWith(fontSize: viewModel.quoteFontSize * .65),
+        //     maxLines: 1,
+        //     minFontSize: viewModel.currentThemeConfiguration.minFontSize,
+        //     textAlign: viewModel.textAlign,
+        //   ),
+        // ),
+      ],
+    );
+
+    // return Padding(
+    //   padding: context.screenPaddingHorizontal,
+    //   child: FractionallySizedBox(
+    //     heightFactor: .85,
+    //     alignment: const Alignment(0, -.6),
+    //     child: Column(
+    //       mainAxisSize: MainAxisSize.min,
+    //       mainAxisAlignment: MainAxisAlignment.center,
+    //       children: [
+    //         Column(
+    //           key: viewModel.autoSizeGroupKey,
+    //           children: [
+    //             Align(
+    //               alignment: viewModel.textAlign.toAlignment,
+    //               child: AutoSizeText(
+    //                 viewModel.quoteModel.quote,
+    //                 key: viewModel.autoSizeTextKey,
+    //                 style: viewModel.quoteTextStyle,
+    //                 minFontSize: viewModel.currentThemeConfiguration.minFontSize,
+    //                 maxLines: 18,
+    //                 overflow: TextOverflow.ellipsis,
+    //                 softWrap: true,
+    //                 stepGranularity: .5,
+    //                 textAlign: viewModel.textAlign,
+    //               ),
+    //             ),
+    //             SizedBox(height: context.lowValue),
+    //             Align(
+    //               alignment: viewModel.textAlign.toAlignment,
+    //               child: AutoSizeText(
+    //                 '-${viewModel.quoteModel.author}',
+    //                 style: viewModel.authorTextStyle,
+    //                 maxLines: 1,
+    //                 minFontSize: viewModel.currentThemeConfiguration.minFontSize,
+    //                 textAlign: viewModel.textAlign,
+    //               ),
+    //             ),
+    //           ],
+    //         ),
+    //       ],
+    //     ),
+    //   ),
+    // );
   }
 }
 
@@ -524,14 +607,7 @@ final class __MoveAndResizeSizeChild extends ViewModelWidget<_FontSettingsBottom
           const Spacer(),
           AdvancedButtonWidget.text(
             text: 'Save',
-            onPressed: viewModel.textRect != null
-                ? () async {
-                    viewModel
-                      ..setSelectedBottomButtonIndex(null)
-                      ..setFinalRect(viewModel.textRect)
-                      ..setTextRect(null);
-                  }
-                : null,
+            onPressed: viewModel.textRect != null ? () async {} : null,
           ),
         ],
       ),
@@ -548,7 +624,7 @@ final class _ResizableContainer extends ViewModelWidget<_FontSettingsBottomSheet
     return TransformableBox(
       rect: viewModel.textRect,
       resizeModeResolver: () => ResizeMode.freeform,
-      clampingRect: viewModel.safeAreaRect,
+      clampingRect: viewModel._themeConfigurationService.safeAreaRect,
       // constraints: const BoxConstraints(minHeight: kMinInteractiveDimension, minWidth: kMinInteractiveDimension),
       onChanged: (result, event) {
         final double newfontSize = (((result.oldRect.width + result.oldRect.height) / 2) + ((result.rect.width + result.rect.height) / 2)) * .1;

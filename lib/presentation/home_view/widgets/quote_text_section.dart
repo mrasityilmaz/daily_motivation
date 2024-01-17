@@ -1,5 +1,7 @@
 part of '../home_view.dart';
 
+// TODOCHANGE SELECTORVİEWMODELWIDGET
+
 @immutable
 final class _QuoteTextSection extends SelectorViewModelWidget<HomeViewModel, ThemeConfigurationModel> {
   const _QuoteTextSection({

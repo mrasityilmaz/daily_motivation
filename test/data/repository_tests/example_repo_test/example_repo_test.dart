@@ -1,6 +1,6 @@
 import 'package:daily_motivation/core/errors/errors.dart';
 import 'package:daily_motivation/core/extensions/dartz_extension.dart';
-import 'package:daily_motivation/data/models/quote_model.dart';
+import 'package:daily_motivation/data/models/quote_model/quote_model.dart';
 import 'package:daily_motivation/domain/repositories/example_repository/i_example_repository.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:dartz/dartz.dart';

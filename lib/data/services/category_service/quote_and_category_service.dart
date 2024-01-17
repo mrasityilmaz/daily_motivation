@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:daily_motivation/core/constants/categories_enum.dart';
-import 'package:daily_motivation/data/models/quote_model.dart';
+import 'package:daily_motivation/data/models/quote_model/quote_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';

@@ -29,7 +29,9 @@ final class _BodyWidget extends ViewModelWidget<_ThemesBottomSheetViewModel> {
                 backgroundPath: currentBackgroundPath,
                 isLocked: index > 8,
                 onChanged: (newBg) async {
-                  await viewModel.updateThemeConfiguration(model: newBg);
+                  await viewModel.updateThemeConfiguration(model: newBg).then((value) {
+                    locator<AppRouter>().pop();
+                  });
                 },
               );
             },

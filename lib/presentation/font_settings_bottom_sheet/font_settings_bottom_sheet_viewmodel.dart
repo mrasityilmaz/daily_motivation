@@ -1,7 +1,7 @@
 part of 'font_settings_bottom_sheet.dart';
 
-final class _FontSettingsBottomSheetViewModel extends ReactiveViewModel with CalculatorMixin, ServicesMixin, TextStyleToolsMixin, ScreenDesignToolsMixin {
-  _FontSettingsBottomSheetViewModel({required this.quoteModel, required this.context}) {
+final class _FontSettingsBottomSheetViewModel extends ReactiveViewModel with CalculatorMixin, ServicesMixin, TextStyleToolsMixin {
+  _FontSettingsBottomSheetViewModel({required this.quoteModel, required this.context, required this.widgetDefaultRect}) {
     quoteTextStyle = GoogleFonts.getFont(
       fontSize: currentThemeConfiguration.maxFontSize / 1.2,
       currentThemeConfiguration.fontName,
@@ -18,15 +18,23 @@ final class _FontSettingsBottomSheetViewModel extends ReactiveViewModel with Cal
       decorationColor: currentThemeConfiguration.textColor,
     );
 
-    // WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-    //   final RenderBox? renderBox = autoSizeTextKey.currentContext?.findRenderObject() as RenderBox?;
-    //   _textRect = (renderBox?.localToGlobal(Offset.zero) ?? Offset.zero) & (renderBox?.size ?? Size.zero);
-    // });
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      final RenderBox? renderBox = autoSizeTextKey.currentContext?.findRenderObject() as RenderBox?;
 
-    setSafeAreaRect(context);
+      final Rect widgetRect = (renderBox?.localToGlobal(Offset.zero) ?? Offset.zero) & (renderBox?.size ?? Size.zero);
+
+      print(widgetRect);
+
+      // setTextRect(
+      //   Rect.fromLTWH(_themeConfigurationService.defaultOffset.dx, _themeConfigurationService.defaultOffset.dy, width, height),
+      // );
+
+      notifyListeners();
+    });
   }
   late final QuoteModel quoteModel;
   late final BuildContext context;
+  late final Rect widgetDefaultRect;
 
   int? _selectedBottomButtonIndex;
 

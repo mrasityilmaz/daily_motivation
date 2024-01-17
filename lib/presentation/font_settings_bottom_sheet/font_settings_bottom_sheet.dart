@@ -6,7 +6,7 @@ import 'package:daily_motivation/core/constants/default_fonts_enum.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/core/extensions/list_extension.dart';
 import 'package:daily_motivation/core/extensions/text_align_extension.dart';
-import 'package:daily_motivation/data/models/quote_model.dart';
+import 'package:daily_motivation/data/models/quote_model/quote_model.dart';
 import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:daily_motivation/data/services/theme_configuration_service/theme_configuration_service.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
@@ -21,20 +21,24 @@ import 'package:stacked/stacked.dart';
 
 part 'font_settings_bottom_sheet_viewmodel.dart';
 part 'mixins/calculator_tools_mixin.dart';
-part 'mixins/screen_design_tools_mixin.dart';
 part 'mixins/services_mixin.dart';
 part 'mixins/text_style_tools_mixin.dart';
 part 'widgets/body_widget.dart';
 
 @immutable
 final class FontSettingsBottomSheet extends StatelessWidget {
-  const FontSettingsBottomSheet({required this.quoteModel, super.key});
+  const FontSettingsBottomSheet({
+    required this.quoteModel,
+    super.key,
+    this.textAreaRect = Rect.zero,
+  });
   final QuoteModel quoteModel;
+  final Rect textAreaRect;
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<_FontSettingsBottomSheetViewModel>.nonReactive(
-      viewModelBuilder: () => _FontSettingsBottomSheetViewModel(quoteModel: quoteModel, context: context),
+      viewModelBuilder: () => _FontSettingsBottomSheetViewModel(quoteModel: quoteModel, context: context, widgetDefaultRect: textAreaRect),
       builder: (context, model, child) {
         return Stack(
           children: [

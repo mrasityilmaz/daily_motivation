@@ -43,6 +43,7 @@ final class _IconButton extends StatelessWidget {
           backgroundColor: backgroundColor ?? context.colors.primary,
           shape: shape ?? RoundedRectangleBorder(borderRadius: context.radius12),
           padding: padding,
+          elevation: 0,
           splashFactory: InkSparkle.constantTurbulenceSeedSplashFactory,
         ),
       ),

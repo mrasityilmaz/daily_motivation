@@ -5,15 +5,16 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:daily_motivation/assets.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/data/models/quote_model.dart';
+import 'package:daily_motivation/data/models/quote_model/quote_model.dart';
 import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
+import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/presentation/categories_bottom_sheet/categories_bottom_sheet.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:daily_motivation/presentation/dialogs/app_dialogs.dart';
-import 'package:daily_motivation/presentation/font_settings_bottom_sheet/font_settings_bottom_sheet.dart';
 import 'package:daily_motivation/presentation/home_view/home_viewmodel.dart';
+import 'package:daily_motivation/presentation/settings_bottom_sheet/settings_bottom_sheet.dart';
 import 'package:daily_motivation/presentation/themes_bottom_sheet/themes_bottom_sheet.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ final class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.nonReactive(
       viewModelBuilder: HomeViewModel.new,
-      onViewModelReady: (viewModel) async => viewModel.init(),
+      onViewModelReady: (viewModel) async => viewModel.init(context),
       builder: (context, model, child) {
         return const Stack(
           children: [

@@ -71,6 +71,43 @@ final class _BottomButtonsSection extends ViewModelWidget<HomeViewModel> {
                   ),
                 ),
               ),
+              // SizedBox(
+              //   width: context.lowValue,
+              // ),
+              // ClipRRect(
+              //   borderRadius: context.radius12,
+              //   child: BackdropFilter(
+              //     filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
+              //     child: AdvancedButtonWidget.icon(
+              //       backgroundColor: context.colors.scrim.withOpacity(.3),
+              //       onPressed: () async {
+              //         // print(MatrixUtils.transformRect(
+              //         //     ?.getTransformTo((viewModel.textAreaKey.currentContext?.findRenderObject() as RenderBox?)?.parent),
+              //         //     Offset.zero & (viewModel.textAreaKey.currentContext?.findRenderObject() as RenderBox?)?.size));
+              //         await AppDialogs.instance.showModalBottomSheetDialog<void>(
+              //           context,
+              //           backgroundColor: Colors.transparent,
+              //           constraints: BoxConstraints(maxHeight: context.mediaQuery.size.height, minHeight: context.mediaQuery.size.height),
+              //           elevation: 0,
+              //           useRootNavigator: true,
+              //           enableDrag: false,
+              //           isScrollControlled: true,
+
+              //           // shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: context.radius16.resolve(TextDirection.ltr).topLeft)),
+
+              //           child: FontSettingsBottomSheet(
+              //             quoteModel: viewModel.currentQuote,
+              //           ),
+              //         );
+              //       },
+              //       icon: Icon(
+              //         Platform.isAndroid ? Icons.text_fields_rounded : CupertinoIcons.textformat_size,
+              //         color: Colors.white,
+              //         size: 32,
+              //       ),
+              //     ),
+              //   ),
+              // ),
               SizedBox(
                 width: context.lowValue,
               ),
@@ -84,37 +121,14 @@ final class _BottomButtonsSection extends ViewModelWidget<HomeViewModel> {
                       await AppDialogs.instance.showModalBottomSheetDialog<void>(
                         context,
                         backgroundColor: Colors.transparent,
-                        constraints: BoxConstraints(maxHeight: context.mediaQuery.size.height, minHeight: context.mediaQuery.size.height),
+                        constraints: BoxConstraints(maxHeight: context.mediaQuery.size.height * .9),
                         elevation: 0,
                         useRootNavigator: true,
-                        enableDrag: false,
                         isScrollControlled: true,
 
                         // shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: context.radius16.resolve(TextDirection.ltr).topLeft)),
-                        child: FontSettingsBottomSheet(
-                          quoteModel: viewModel.currentQuote,
-                        ),
+                        child: const SettingsBottomSheet(),
                       );
-                    },
-                    icon: Icon(
-                      Platform.isAndroid ? Icons.text_fields_rounded : CupertinoIcons.textformat_size,
-                      color: Colors.white,
-                      size: 32,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: context.lowValue,
-              ),
-              ClipRRect(
-                borderRadius: context.radius12,
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
-                  child: AdvancedButtonWidget.icon(
-                    backgroundColor: context.colors.scrim.withOpacity(.3),
-                    onPressed: () {
-                      locator<ThemeService>().toggleDarkLightTheme();
                     },
                     icon: Icon(
                       Platform.isAndroid ? Icons.settings : CupertinoIcons.settings,
