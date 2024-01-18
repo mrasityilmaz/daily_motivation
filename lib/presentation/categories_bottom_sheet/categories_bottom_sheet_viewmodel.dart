@@ -13,7 +13,9 @@ final class _CategoriesBottomSheetViewModel extends ReactiveViewModel {
           await _categoryService.changeCategory(category: category, locale: locale);
         }),
       );
-    } catch (e) {}
+    } catch (e, s) {
+      LoggerService.instance.catchLog(e, s);
+    }
   }
 
   @override

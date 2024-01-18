@@ -44,7 +44,9 @@ final class _IconTextButton extends StatelessWidget {
                 if (bounceIt) {
                   try {
                     await animate.currentState?.startAnimation(callback: () async => onPressed!.call());
-                  } catch (e) {}
+                  } catch (e, s) {
+                    LoggerService.instance.catchLog(e, s);
+                  }
                 } else {
                   onPressed!.call();
                 }

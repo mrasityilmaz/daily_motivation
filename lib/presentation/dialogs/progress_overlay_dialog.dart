@@ -2,6 +2,7 @@
 
 import 'dart:async';
 
+import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/base_loading_indicator_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -60,6 +61,8 @@ final class ProgressOverlayDialog {
         _overlayEntry?.remove();
         _overlayEntry = null;
       }
-    } catch (e) {}
+    } catch (e, s) {
+      LoggerService.instance.catchLog(e, s);
+    }
   }
 }

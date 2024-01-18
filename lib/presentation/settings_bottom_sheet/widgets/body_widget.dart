@@ -35,10 +35,18 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
                       },
                     ),
                     _SettingsRowWidget(
-                      icon: CupertinoIcons.heart_fill,
-                      iconColor: Colors.red.shade600,
-                      title: 'Favoriler',
-                      onPressed: () {},
+                      icon: Platform.isAndroid ? Icons.format_quote_rounded : CupertinoIcons.quote_bubble,
+                      title: 'Alıntılarım',
+                      onPressed: () async {
+                        await locator<AppRouter>().push(const MyQuotesViewRoute());
+                      },
+                    ),
+                    _SettingsRowWidget(
+                      icon: Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
+                      title: 'Hatırlatıcılar',
+                      onPressed: () async {
+                        await locator<AppRouter>().push(const RemindersViewRoute());
+                      },
                     ),
                   ],
                 ),
@@ -76,10 +84,13 @@ final class _SettingsRowWidget extends StatelessWidget {
         onPressed: onPressed,
         child: Row(
           children: [
-            Icon(
-              icon,
-              color: iconColor,
-              size: 30,
+            Padding(
+              padding: context.paddingLowTop * .5,
+              child: Icon(
+                icon,
+                color: iconColor,
+                size: 30,
+              ),
             ),
             SizedBox(
               width: context.screenPadding.left,

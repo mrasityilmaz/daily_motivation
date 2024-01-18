@@ -4,6 +4,7 @@ import 'package:daily_motivation/core/constants/categories_enum.dart';
 import 'package:daily_motivation/core/constants/category_group_enum.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/core/navigator/app_navigator.dart';
+import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/data/services/category_service/quote_and_category_service.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';

@@ -1,0 +1,78 @@
+part of '../reminders_view.dart';
+
+@immutable
+final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
+  const _ReminderRowWidget({required this.quote}) : super(reactive: false);
+  final QuoteHiveModel quote;
+
+  @override
+  Widget build(BuildContext context, _RemindersViewModel viewModel) {
+    return Padding(
+      padding: context.paddingLowBottom,
+      child: Slidable(
+        // Specify a key if the Slidable is dismissible.
+        key: ValueKey(quote.id),
+
+        endActionPane: ActionPane(
+          motion: const ScrollMotion(),
+          children: [
+            SlidableAction(
+              onPressed: (ctx) async => {},
+              borderRadius: BorderRadius.circular(8),
+              backgroundColor: context.colors.background,
+              label: 'Remove',
+              icon: Platform.isAndroid ? Icons.delete_outline_rounded : CupertinoIcons.trash,
+              padding: EdgeInsets.zero,
+              foregroundColor: Colors.red.shade600,
+            ),
+            SlidableAction(
+              onPressed: (ctx) async => {},
+              borderRadius: BorderRadius.circular(8),
+              backgroundColor: context.colors.background,
+              label: 'Edit',
+              icon: Platform.isAndroid ? Icons.edit_note_rounded : CupertinoIcons.pencil_circle,
+              padding: EdgeInsets.zero,
+            ),
+          ],
+        ),
+
+        child: Container(
+          width: double.maxFinite,
+          decoration: BoxDecoration(color: context.colors.onBackground.withOpacity(.05), borderRadius: context.radius8),
+          padding: context.paddingLowHorizontal + context.paddingLowVertical * 1.2,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                quote.quote,
+                style: context.textTheme.titleSmall,
+              ),
+              const SizedBox(height: 4),
+              Row(
+                children: [
+                  if (quote.author.isNotEmpty) ...[
+                    Text(
+                      quote.author,
+                      style: context.textTheme.bodySmall?.copyWith(color: context.colors.onBackground.withOpacity(.7), fontWeight: FontWeight.w600, fontStyle: FontStyle.italic),
+                    ),
+                  ],
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () async {
+                      await Clipboard.setData(ClipboardData(text: '${quote.quote} \n - ${quote.author}'));
+                    },
+                    child: Icon(
+                      Icons.copy,
+                      color: context.colors.onBackground.withOpacity(.25),
+                      size: 16,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

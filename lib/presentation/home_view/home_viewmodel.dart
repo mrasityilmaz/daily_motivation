@@ -1,6 +1,7 @@
 // ignore_for_file: comment_references
 
 import 'package:daily_motivation/core/constants/categories_enum.dart';
+import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/data/models/quote_model/quote_model.dart';
 import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:daily_motivation/data/services/category_service/quote_and_category_service.dart';
@@ -43,7 +44,9 @@ final class HomeViewModel extends ReactiveViewModel {
       pageController.addListener(() {
         currentQuoteIsLiked.value = HiveService.instance.isQuoteLiked(currentQuote.id);
       });
-    } catch (e) {}
+    } catch (e, s) {
+      LoggerService.instance.catchLog(e, s);
+    }
   }
 
   @override

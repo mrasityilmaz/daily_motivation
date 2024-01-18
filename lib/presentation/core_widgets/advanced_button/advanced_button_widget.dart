@@ -1,4 +1,5 @@
 import 'package:daily_motivation/core/extensions/context_extension.dart';
+import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/presentation/core_widgets/animations/bounce_animation.dart';
 import 'package:flutter/material.dart';
 

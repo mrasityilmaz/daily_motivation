@@ -7,11 +7,11 @@ part of 'env.dart';
 // **************************************************************************
 
 class _Env {
-  static const List<int> _enviedkeyapiKey = [2125560222, 447630406, 4176651898];
+  static const List<int> _enviedkeyapiKey = [2709279139, 2988713168, 754399879];
   static const List<int> _envieddataapiKey = [
-    2125560309,
-    447630371,
-    4176651779
+    2709279176,
+    2988713141,
+    754399998
   ];
   static final String apiKey = String.fromCharCodes(
     List.generate(_envieddataapiKey.length, (i) => i, growable: false)

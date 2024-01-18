@@ -8,10 +8,11 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 
 part 'mixin/liked_quote_mixin.dart';
+part 'mixin/my_quotes_mixin.dart';
 part 'mixin/theme_config_mixin.dart';
 
 @immutable
-final class HiveService with _ThemeConfigurationServiceMixin, _LikedQuoteServiceMixin {
+final class HiveService with _ThemeConfigurationServiceMixin, _LikedQuoteServiceMixin, _MyQuotesServiceMixin {
   factory HiveService() {
     return instance;
   }
@@ -32,5 +33,6 @@ final class HiveService with _ThemeConfigurationServiceMixin, _LikedQuoteService
 
     await Hive.openBox<ThemeConfigurationModel>(HiveConstants.themeConfigurationBoxKey);
     await Hive.openBox<QuoteHiveModel>(HiveConstants.likedQuotesBoxKey);
+    await Hive.openBox<QuoteHiveModel>(HiveConstants.myQuotesBoxKey);
   }
 }
