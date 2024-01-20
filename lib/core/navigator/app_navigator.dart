@@ -6,7 +6,7 @@ import 'package:daily_motivation/presentation/my_quotes_view/my_quotes_view.dart
 import 'package:daily_motivation/presentation/my_quotes_view/subviews/add_new_or_edit_quote_view.dart';
 import 'package:daily_motivation/presentation/onboard_view/onboard_view.dart';
 import 'package:daily_motivation/presentation/reminders_view/reminders_view.dart';
-import 'package:daily_motivation/presentation/reminders_view/subviews/add_new_or_edit_reminder_view.dart';
+import 'package:daily_motivation/presentation/reminders_view/subviews/add_new_or_edit_reminder/add_new_or_edit_reminder_view.dart';
 import 'package:injectable/injectable.dart';
 
 part 'app_navigator.gr.dart';

@@ -6,14 +6,17 @@ import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:daily_motivation/presentation/core_widgets/basic/choose_circle_icon.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/textfield/textfield_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/textfield/textformfield_widget.dart';
+import 'package:daily_motivation/presentation/dialogs/app_dialogs.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 part 'add_new_or_edit_reminder_viewmodel.dart';
+part 'widgets/equal_interval_section.dart';
 
 @immutable
 @RoutePage(name: 'AddNewOrEditReminderViewRoute')
@@ -244,7 +247,7 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
                       padding: context.paddingLowVertical * 1.5 + context.paddingLowHorizontal,
                       child: Row(
                         children: [
-                          _ChooseCircleIcon(viewModel.selectedScheduleIndex == 0),
+                          ChooseCircleIcon(isSelected: viewModel.selectedScheduleIndex == 0),
                           SizedBox(
                             width: context.lowValue,
                           ),
@@ -280,49 +283,7 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
                         // showTimePicker(context: context, initialTime: TimeOfDay.now(),).then((value) {});
                       },
                     ),
-                    AnimatedCrossFade(
-                      duration: const Duration(milliseconds: 300),
-                      firstChild: const SizedBox(),
-                      secondChild: Padding(
-                        padding: context.paddingNormalVertical,
-                        child: Column(
-                          children: [
-                            const _TimeRangeRow(),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: SingleChildScrollView(
-                                    scrollDirection: Axis.horizontal,
-                                    child: Row(
-                                      children: List.generate(24, (index) {
-                                        return Padding(
-                                          padding: context.paddingLowLeft,
-                                          child: AdvancedButtonWidget.text(
-                                            text: 'x${index + 1}',
-                                            textStyle: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
-                                            backgroundColor: context.colors.background,
-                                            textColor: context.colors.primary,
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius: context.radius8,
-                                              side: BorderSide(
-                                                color: context.colors.primary,
-                                                width: 2,
-                                              ),
-                                            ),
-                                            onPressed: () {},
-                                          ),
-                                        );
-                                      }).toList(),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      crossFadeState: viewModel.selectedScheduleIndex == 0 ? CrossFadeState.showSecond : CrossFadeState.showFirst,
-                    ),
+                    const _EqualIntervalSection(),
                     SizedBox(
                       height: context.lowValue,
                     ),
@@ -331,7 +292,7 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
                       padding: context.paddingLowVertical * 1.5 + context.paddingLowHorizontal,
                       child: Row(
                         children: [
-                          _ChooseCircleIcon(viewModel.selectedScheduleIndex == 1),
+                          ChooseCircleIcon(isSelected: viewModel.selectedScheduleIndex == 1),
                           SizedBox(
                             width: context.lowValue,
                           ),
@@ -425,117 +386,6 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
           ),
         ),
       ],
-    );
-  }
-}
-
-class _TimeRangeRow extends StatelessWidget {
-  const _TimeRangeRow({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: context.paddingNormalBottom + context.paddingLowTop,
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                AdvancedButtonWidget.text(
-                  text: '09:00',
-                  expand: true,
-                  textStyle: context.textTheme.titleMedium,
-                  onPressed: () {
-                    showTimePicker(
-                      context: context,
-                      initialTime: TimeOfDay.now(),
-                      builder: (context, child) {
-                        return CupertinoTimerPicker(
-                          backgroundColor: context.colors.background,
-                          onTimerDurationChanged: print,
-                          mode: CupertinoTimerPickerMode.hm,
-                        );
-                      },
-                    );
-                  },
-                ),
-                Padding(
-                  padding: context.paddingLowLeft * .5,
-                  child: Text('Start at', style: context.textTheme.bodySmall?.copyWith(color: context.colors.onBackground.withOpacity(.75))),
-                ),
-              ],
-            ),
-          ),
-          Padding(
-            padding: context.paddingLowHorizontal + context.paddingLowBottom * 1.5,
-            child: Text(
-              ':',
-              style: context.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onBackground.withOpacity(.5)),
-            ),
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                AdvancedButtonWidget.text(
-                  text: '22:00',
-                  expand: true,
-                  textStyle: context.textTheme.titleMedium,
-                  onPressed: () {
-                    showTimePicker(
-                      context: context,
-                      initialTime: TimeOfDay.now(),
-                      builder: (context, child) {
-                        return CupertinoTimerPicker(
-                          backgroundColor: context.colors.background,
-                          onTimerDurationChanged: print,
-                          mode: CupertinoTimerPickerMode.hm,
-                        );
-                      },
-                    );
-                  },
-                ),
-                Padding(
-                  padding: context.paddingLowLeft * .5,
-                  child: Text('End to', style: context.textTheme.bodySmall?.copyWith(color: context.colors.onBackground.withOpacity(.75))),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-@immutable
-final class _ChooseCircleIcon extends StatelessWidget {
-  const _ChooseCircleIcon(this.isSelected);
-  final bool isSelected;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 16,
-      height: 16,
-      decoration: BoxDecoration(
-        color: context.colors.background,
-        shape: BoxShape.circle,
-        border: Border.all(
-          color: isSelected ? context.colors.primary : context.colors.primary.withOpacity(.5),
-          width: 2,
-        ),
-      ),
-      child: Container(
-        margin: const EdgeInsets.all(2),
-        decoration: BoxDecoration(
-          color: isSelected ? context.colors.primary : context.colors.background,
-          shape: BoxShape.circle,
-        ),
-      ),
     );
   }
 }

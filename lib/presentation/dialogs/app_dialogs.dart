@@ -1,10 +1,13 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/core/navigator/app_navigator.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
+import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:daily_motivation/presentation/dialogs/lock_overlay_dialog.dart';
 import 'package:daily_motivation/presentation/dialogs/progress_overlay_dialog.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 
@@ -81,5 +84,70 @@ final class AppDialogs {
       barrierDismissible: barrierDismissible,
       builder: (context) => child,
     );
+  }
+
+  Future<TimeOfDay?> showAdaptiveTimePicker(BuildContext context, {required TimeOfDay initialTime}) async {
+    if (Platform.isAndroid) {
+      return showTimePicker(
+        context: context,
+        initialTime: initialTime,
+      );
+    } else {
+      TimeOfDay time = initialTime;
+      return showDialog(
+        context,
+        child: StatefulBuilder(
+          builder: (context, setState) {
+            return AlertDialog(
+              insetPadding: EdgeInsets.zero,
+              alignment: Alignment.center,
+              contentPadding: EdgeInsets.zero,
+              actionsPadding: context.paddingLow * 1.2,
+              shape: RoundedRectangleBorder(borderRadius: context.radius12),
+              actions: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: AdvancedButtonWidget.text(
+                        text: 'OK',
+                        onPressed: () {
+                          Navigator.of(context).pop(time);
+                        },
+                        expand: true,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(
+                    height: context.height * .3,
+                    width: context.width * .75,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Expanded(
+                          child: CupertinoDatePicker(
+                            use24hFormat: true,
+                            onDateTimeChanged: (value) {
+                              setState(() {
+                                time = TimeOfDay.fromDateTime(value);
+                              });
+                            },
+                            mode: CupertinoDatePickerMode.time,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
+      );
+    }
   }
 }
