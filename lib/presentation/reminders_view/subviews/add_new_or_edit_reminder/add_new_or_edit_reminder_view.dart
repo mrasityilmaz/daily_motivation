@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 part 'add_new_or_edit_reminder_viewmodel.dart';
+part 'widgets/custom_interval_section.dart';
 part 'widgets/equal_interval_section.dart';
 
 @immutable
@@ -327,36 +328,7 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
                         viewModel.setSelectedScheduleIndex(1);
                       },
                     ),
-                    AnimatedCrossFade(
-                      duration: const Duration(milliseconds: 300),
-                      firstChild: const SizedBox(),
-                      secondChild: Padding(
-                        padding: context.paddingNormalVertical,
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Text('1.', style: context.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold)),
-                                const SizedBox(
-                                  width: 8,
-                                ),
-                                Expanded(
-                                  child: AdvancedButtonWidget.text(
-                                    text: '09:00',
-                                    textStyle: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-                                    textColor: context.colors.onBackground.withOpacity(.7),
-                                    backgroundColor: context.colors.primary.withOpacity(.25),
-                                    onPressed: () {},
-                                    expand: true,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      crossFadeState: viewModel.selectedScheduleIndex == 1 ? CrossFadeState.showSecond : CrossFadeState.showFirst,
-                    ),
+                    const _CustomIntervalSection(),
                   ],
                 ),
               ],

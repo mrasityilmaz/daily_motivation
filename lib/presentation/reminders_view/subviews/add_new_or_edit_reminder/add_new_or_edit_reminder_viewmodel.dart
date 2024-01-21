@@ -60,17 +60,41 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel {
     notifyListeners();
   }
 
-  final List<({int index, TimeOfDay? time})> _customIntervalValue = List<({int index, TimeOfDay? time})>.from([(index: 0, time: null)]);
+  List<({int index, TimeOfDay? time})> _customIntervalValue = List<({int index, TimeOfDay? time})>.empty(growable: true);
 
-  List<({int index, TimeOfDay? time})> get customIntervalValue => _customIntervalValue;
+  List<({int index, TimeOfDay? time})> get customIntervalValue => _customIntervalValue.where((element) => element.time != null).toList()..sort((a, b) => a.index.compareTo(b.index));
 
   void addCustomIntervalTimeValue({required int index, TimeOfDay? time}) {
     _customIntervalValue.add((index: index, time: time));
     notifyListeners();
   }
 
+  void onReorderCustomInterval({required int oldIndex, required int newIndex}) {
+    if (newIndex > _customIntervalValue.length) {
+      newIndex = _customIntervalValue.length;
+    }
+    if (oldIndex < newIndex) {
+      newIndex--;
+    }
+
+    final oldValue = _customIntervalValue[oldIndex];
+
+    _customIntervalValue
+      ..removeAt(oldIndex)
+      ..insert(newIndex, (index: newIndex, time: oldValue.time));
+
+    notifyListeners();
+  }
+
   void removeCustomIntervalTimeValue({required int index}) {
     _customIntervalValue.removeWhere((element) => element.index == index);
+
+    _customIntervalValue = _customIntervalValue.map((e) {
+      if (e.index > index) {
+        return (index: e.index - 1, time: e.time);
+      }
+      return e;
+    }).toList();
     notifyListeners();
   }
 
