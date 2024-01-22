@@ -11,39 +11,12 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
       firstChild: const SizedBox(),
       secondChild: Column(
         children: [
-          ReorderableListView.builder(
+          ListView.builder(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             padding: EdgeInsets.zero,
-            proxyDecorator: (child, index, animation) {
-              return child;
-            },
-            footer: Padding(
-              padding: context.paddingNormalTop,
-              child: Row(
-                children: [
-                  Expanded(
-                    child: AdvancedButtonWidget.text(
-                      text: 'Add Time',
-                      backgroundColor: context.colors.background,
-                      shape: RoundedRectangleBorder(borderRadius: context.radius12, side: BorderSide(color: context.colors.primary, width: 1.5)),
-                      expand: true,
-                      textColor: context.colors.primary,
-                      onPressed: () async {
-                        await AppDialogs.instance.showAdaptiveTimePicker(context, initialTime: TimeOfDay.now()).then((value) {
-                          if (value != null) {
-                            print(viewModel.customIntervalValue.length);
-                            viewModel.addCustomIntervalTimeValue(index: viewModel.customIntervalValue.length, time: value);
-                          }
-                        });
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ),
             itemBuilder: (context, index) {
-              final ({int index, TimeOfDay? time}) currentValue = viewModel.customIntervalValue[index];
+              final TimeOfDay currentValue = viewModel.customIntervalValue[index];
 
               return Material(
                 key: ValueKey(index),
@@ -51,10 +24,6 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
                   padding: context.paddingLowVertical,
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.drag_handle_rounded,
-                        color: context.colors.onBackground.withOpacity(.5),
-                      ),
                       SizedBox(
                         width: kMinInteractiveDimension * .75,
                         child: Center(
@@ -73,34 +42,54 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
                             ),
                             color: context.colors.onBackground.withOpacity(.05),
                           ),
-                          child: Center(child: Text(currentValue.time!.format(context), style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold))),
+                          child: Center(child: Text(currentValue.format(context), style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold))),
                         ),
                       ),
-                      if (currentValue.time != null && viewModel.customIntervalValue.length > 1) ...[
-                        InkWell(
-                          onTap: () {
-                            viewModel.removeCustomIntervalTimeValue(index: index);
-                          },
-                          borderRadius: BorderRadius.circular(100),
-                          child: const SizedBox(
-                            width: kMinInteractiveDimension * .75,
-                            height: kMinInteractiveDimension * .75,
-                            child: Center(
-                              child: Icon(CupertinoIcons.minus_circle, color: Colors.red),
-                            ),
+                      InkWell(
+                        onTap: () {
+                          viewModel.removeCustomIntervalTimeValue(index: index);
+                        },
+                        borderRadius: BorderRadius.circular(100),
+                        child: const SizedBox(
+                          width: kMinInteractiveDimension * .75,
+                          height: kMinInteractiveDimension * .75,
+                          child: Center(
+                            child: Icon(CupertinoIcons.minus_circle, color: Colors.red),
                           ),
                         ),
-                      ],
+                      ),
                     ],
                   ),
                 ),
               );
             },
             itemCount: viewModel.customIntervalValue.length,
-            onReorder: (int oldIndex, int newIndex) {
-              viewModel.onReorderCustomInterval(oldIndex: oldIndex, newIndex: newIndex);
-            },
           ),
+          if (viewModel.customIntervalValue.length <= 24) ...[
+            Padding(
+              padding: context.paddingNormalTop,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: AdvancedButtonWidget.text(
+                      text: 'Add Time',
+                      backgroundColor: context.colors.background,
+                      shape: RoundedRectangleBorder(borderRadius: context.radius12, side: BorderSide(color: context.colors.primary, width: 1.5)),
+                      expand: true,
+                      textColor: context.colors.primary,
+                      onPressed: () async {
+                        await AppDialogs.instance.showAdaptiveTimePicker(context, initialTime: TimeOfDay.now()).then((value) {
+                          if (value != null) {
+                            viewModel.addCustomIntervalTimeValue(time: value);
+                          }
+                        });
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
           SizedBox(
             height: context.mediumValue,
           ),

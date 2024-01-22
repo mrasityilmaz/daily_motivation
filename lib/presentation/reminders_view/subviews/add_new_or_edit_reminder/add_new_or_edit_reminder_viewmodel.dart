@@ -60,46 +60,23 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel {
     notifyListeners();
   }
 
-  List<({int index, TimeOfDay? time})> _customIntervalValue = List<({int index, TimeOfDay? time})>.empty(growable: true);
+  final List<TimeOfDay> _customIntervalValue = List<TimeOfDay>.empty(growable: true);
 
-  List<({int index, TimeOfDay? time})> get customIntervalValue => _customIntervalValue.where((element) => element.time != null).toList()..sort((a, b) => a.index.compareTo(b.index));
+  List<TimeOfDay> get customIntervalValue => _customIntervalValue..sort((a, b) => a.hour.compareTo(b.hour) == 0 ? a.minute.compareTo(b.minute) : a.hour.compareTo(b.hour));
 
-  void addCustomIntervalTimeValue({required int index, TimeOfDay? time}) {
-    _customIntervalValue.add((index: index, time: time));
-    notifyListeners();
-  }
-
-  void onReorderCustomInterval({required int oldIndex, required int newIndex}) {
-    if (newIndex > _customIntervalValue.length) {
-      newIndex = _customIntervalValue.length;
-    }
-    if (oldIndex < newIndex) {
-      newIndex--;
-    }
-
-    final oldValue = _customIntervalValue[oldIndex];
-
-    _customIntervalValue
-      ..removeAt(oldIndex)
-      ..insert(newIndex, (index: newIndex, time: oldValue.time));
-
+  void addCustomIntervalTimeValue({required TimeOfDay time}) {
+    _customIntervalValue.add(time);
     notifyListeners();
   }
 
   void removeCustomIntervalTimeValue({required int index}) {
-    _customIntervalValue.removeWhere((element) => element.index == index);
+    _customIntervalValue.removeAt(index);
 
-    _customIntervalValue = _customIntervalValue.map((e) {
-      if (e.index > index) {
-        return (index: e.index - 1, time: e.time);
-      }
-      return e;
-    }).toList();
     notifyListeners();
   }
 
-  void setCustomIntervalTimeValue({required int index, TimeOfDay? time}) {
-    _customIntervalValue[index] = (index: index, time: time);
+  void setCustomIntervalTimeValue({required int index, required TimeOfDay time}) {
+    _customIntervalValue[index] = time;
     notifyListeners();
   }
 }
