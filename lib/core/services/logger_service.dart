@@ -12,8 +12,12 @@ final class LoggerService {
 
   static final Logger logger = Logger();
 
-  void printLog(String message) {
-    logger.i(message);
+  void printLog(
+    String message,
+  ) {
+    logger.i(
+      message,
+    );
   }
 
   void printErrorLog(Object e, StackTrace s) {

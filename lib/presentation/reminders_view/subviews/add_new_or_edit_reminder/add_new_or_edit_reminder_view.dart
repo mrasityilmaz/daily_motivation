@@ -1,8 +1,7 @@
-import 'dart:io';
-
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
+import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
@@ -11,11 +10,14 @@ import 'package:daily_motivation/presentation/core_widgets/loading_indicator/vie
 import 'package:daily_motivation/presentation/core_widgets/textfield/textfield_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/textfield/textformfield_widget.dart';
 import 'package:daily_motivation/presentation/dialogs/app_dialogs.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 part 'add_new_or_edit_reminder_viewmodel.dart';
+part 'mixins/custom_interval_calculator_mixin.dart';
+part 'mixins/equal_interval_calculator_mixin.dart';
 part 'widgets/custom_interval_section.dart';
 part 'widgets/equal_interval_section.dart';
 
@@ -65,92 +67,92 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
             padding: context.screenPadding,
             child: Column(
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Notification Icon',
-                      style: context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onBackground.withOpacity(.75)),
-                    ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.info_outlined,
-                          color: context.colors.onBackground.withOpacity(.4),
-                          size: 16,
-                        ),
-                        const SizedBox(width: 4),
-                        AutoSizeText(
-                          'Icon is optional\nIf not provided, it will be set to default',
-                          maxLines: 2,
-                          style: context.textTheme.bodySmall?.copyWith(color: context.colors.onBackground.withOpacity(.4), fontStyle: FontStyle.italic),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: context.lowValue,
-                    ),
-                    SizedBox(
-                      height: context.width * .2,
-                      child: Row(
-                        children: [
-                          Container(
-                            height: context.width * .2,
-                            width: context.width * .2,
-                            decoration: BoxDecoration(
-                              color: context.appColors.surfaceColor.withOpacity(.2),
-                              borderRadius: BorderRadius.circular(8),
-                            ),
-                            child: FractionallySizedBox(
-                              heightFactor: .45,
-                              widthFactor: .45,
-                              child: FittedBox(
-                                child: Icon(
-                                  Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            width: context.lowValue,
-                          ),
-                          Expanded(
-                            child: SizedBox(
-                              height: context.width * .2,
-                              child: ListView.builder(
-                                itemCount: Colors.primaries.length,
-                                scrollDirection: Axis.horizontal,
-                                itemBuilder: (context, index) {
-                                  return Container(
-                                    margin: context.paddingLowLeft,
-                                    height: context.width * .2,
-                                    width: context.width * .2,
-                                    decoration: BoxDecoration(
-                                      color: Colors.primaries[index].withOpacity(.2),
-                                      borderRadius: BorderRadius.circular(8),
-                                    ),
-                                    child: FractionallySizedBox(
-                                      heightFactor: .45,
-                                      widthFactor: .45,
-                                      child: FittedBox(
-                                        child: Icon(
-                                          Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
-                                        ),
-                                      ),
-                                    ),
-                                  );
-                                },
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: context.normalValue,
-                ),
+                // Column(
+                //   crossAxisAlignment: CrossAxisAlignment.start,
+                //   children: [
+                //     Text(
+                //       'Notification Icon',
+                //       style: context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onBackground.withOpacity(.75)),
+                //     ),
+                //     Row(
+                //       children: [
+                //         Icon(
+                //           Icons.info_outlined,
+                //           color: context.colors.onBackground.withOpacity(.4),
+                //           size: 16,
+                //         ),
+                //         const SizedBox(width: 4),
+                //         AutoSizeText(
+                //           'Icon is optional\nIf not provided, it will be set to default',
+                //           maxLines: 2,
+                //           style: context.textTheme.bodySmall?.copyWith(color: context.colors.onBackground.withOpacity(.4), fontStyle: FontStyle.italic),
+                //         ),
+                //       ],
+                //     ),
+                //     SizedBox(
+                //       height: context.lowValue,
+                //     ),
+                //     SizedBox(
+                //       height: context.width * .2,
+                //       child: Row(
+                //         children: [
+                //           Container(
+                //             height: context.width * .2,
+                //             width: context.width * .2,
+                //             decoration: BoxDecoration(
+                //               color: context.appColors.surfaceColor.withOpacity(.2),
+                //               borderRadius: BorderRadius.circular(8),
+                //             ),
+                //             child: FractionallySizedBox(
+                //               heightFactor: .45,
+                //               widthFactor: .45,
+                //               child: FittedBox(
+                //                 child: Icon(
+                //                   Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
+                //                 ),
+                //               ),
+                //             ),
+                //           ),
+                //           SizedBox(
+                //             width: context.lowValue,
+                //           ),
+                //           Expanded(
+                //             child: SizedBox(
+                //               height: context.width * .2,
+                //               child: ListView.builder(
+                //                 itemCount: Colors.primaries.length,
+                //                 scrollDirection: Axis.horizontal,
+                //                 itemBuilder: (context, index) {
+                //                   return Container(
+                //                     margin: context.paddingLowLeft,
+                //                     height: context.width * .2,
+                //                     width: context.width * .2,
+                //                     decoration: BoxDecoration(
+                //                       color: Colors.primaries[index].withOpacity(.2),
+                //                       borderRadius: BorderRadius.circular(8),
+                //                     ),
+                //                     child: FractionallySizedBox(
+                //                       heightFactor: .45,
+                //                       widthFactor: .45,
+                //                       child: FittedBox(
+                //                         child: Icon(
+                //                           Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
+                //                         ),
+                //                       ),
+                //                     ),
+                //                   );
+                //                 },
+                //               ),
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ],
+                // ),
+                // SizedBox(
+                //   height: context.normalValue,
+                // ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -239,6 +241,42 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
                     Text(
                       'Notification Schedule',
                       style: context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onBackground.withOpacity(.75)),
+                    ),
+                    Row(
+                      children: List.generate(7, (index) => index).map(
+                        (e) {
+                          final bool isSelected = viewModel.isDaysOfWeekSelected(e);
+                          return Expanded(
+                            child: Padding(
+                              padding: context.paddingLowVertical + (e != 0 ? context.paddingLowLeft * .5 : EdgeInsets.zero),
+                              child: AdvancedButtonWidget(
+                                expand: true,
+                                backgroundColor: isSelected ? context.colors.primary : context.colors.background,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  side: BorderSide(
+                                    color: isSelected ? context.colors.primary : context.colors.primary.withOpacity(.5),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  viewModel.addOrRemoveSelectedDaysOfWeekIndex(e);
+                                },
+                                padding: context.paddingLow * .1,
+                                child: AutoSizeText(
+                                  'weekdays.${e + 1}wd'.tr(),
+                                  style: context.textTheme.bodyMedium?.copyWith(
+                                    color: isSelected ? context.colors.onPrimary : context.colors.primary,
+                                    fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                                  ),
+                                  maxLines: 1,
+                                  maxFontSize: context.textTheme.titleMedium!.fontSize!,
+                                  minFontSize: context.textTheme.labelSmall!.fontSize!,
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      ).toList(),
                     ),
                     SizedBox(
                       height: context.lowValue,
@@ -348,7 +386,13 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
                     child: AdvancedButtonWidget.text(
                       text: 'Save',
                       textStyle: context.textTheme.titleMedium,
-                      onPressed: () {},
+                      onPressed: () {
+                        if (viewModel.selectedScheduleIndex == 0) {
+                          viewModel.equalIntervalSchedules;
+                        } else {
+                          debugPrint('Custom Interval Schedules: ${viewModel.customIntervalValue}');
+                        }
+                      },
                       expand: true,
                     ),
                   ),

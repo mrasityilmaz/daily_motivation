@@ -104,5 +104,14 @@
 		"calm": "Sakin Kalmak",
 		"hard_times": "Zor Zamanlar",
 		"religion": "Din"
+	},
+	"weekdays": {
+		"1wd": "Pzt",
+		"2wd": "Sal",
+		"3wd": "Çar",
+		"4wd": "Per",
+		"5wd": "Cum",
+		"6wd": "Cmt",
+		"7wd": "Paz"
 	}
 }

@@ -104,5 +104,14 @@
 		"calm": "Calm Down",
 		"hard_times": "Hard times",
 		"religion": "Religions"
+	},
+	"weekdays": {
+		"1wd": "Mon",
+		"2wd": "Tue",
+		"3wd": "Wed",
+		"4wd": "Thu",
+		"5wd": "Fri",
+		"6wd": "Sat",
+		"7wd": "Sun"
 	}
 }

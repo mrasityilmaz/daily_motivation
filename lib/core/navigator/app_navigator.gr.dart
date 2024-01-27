@@ -29,6 +29,7 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<QuoteHiveModel?>(
         routeData: routeData,
         child: AddNewOrEditReminderView<QuoteHiveModel?>(
+          key: args.key,
           editQuote: args.editQuote,
         ),
       );
@@ -58,7 +59,7 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     RemindersViewRoute.name: (routeData) {
-      return AutoRoutePage<QuoteHiveModel?>(
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const RemindersView(),
       );
@@ -70,6 +71,7 @@ abstract class _$AppRouter extends RootStackRouter {
 /// [AddNewOrEditQuoteView<dynamic>]
 class AddNewOrEditQuoteViewRoute extends PageRouteInfo<AddNewOrEditQuoteViewRouteArgs> {
   AddNewOrEditQuoteViewRoute({
+    Key? key,
     QuoteHiveModel? editQuote,
     List<PageRouteInfo>? children,
   }) : super(
@@ -102,11 +104,13 @@ class AddNewOrEditQuoteViewRouteArgs {
 /// [AddNewOrEditReminderView<dynamic>]
 class AddNewOrEditReminderViewRoute extends PageRouteInfo<AddNewOrEditReminderViewRouteArgs> {
   AddNewOrEditReminderViewRoute({
+    Key? key,
     QuoteHiveModel? editQuote,
     List<PageRouteInfo>? children,
   }) : super(
           AddNewOrEditReminderViewRoute.name,
           args: AddNewOrEditReminderViewRouteArgs(
+            key: key,
             editQuote: editQuote,
           ),
           initialChildren: children,
@@ -119,14 +123,17 @@ class AddNewOrEditReminderViewRoute extends PageRouteInfo<AddNewOrEditReminderVi
 
 class AddNewOrEditReminderViewRouteArgs {
   const AddNewOrEditReminderViewRouteArgs({
+    this.key,
     this.editQuote,
   });
+
+  final Key? key;
 
   final QuoteHiveModel? editQuote;
 
   @override
   String toString() {
-    return 'AddNewOrEditReminderViewRouteArgs{ editQuote: $editQuote}';
+    return 'AddNewOrEditReminderViewRouteArgs{key: $key, editQuote: $editQuote}';
   }
 }
 

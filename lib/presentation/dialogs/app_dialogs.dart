@@ -94,6 +94,10 @@ final class AppDialogs {
       );
     } else {
       TimeOfDay time = initialTime;
+      final DateTime now = DateTime.now();
+
+      final DateTime initialTime0 = DateTime(now.year, now.month, now.day, initialTime.hour, initialTime.minute);
+
       return showDialog(
         context,
         child: StatefulBuilder(
@@ -130,6 +134,7 @@ final class AppDialogs {
                       children: [
                         Expanded(
                           child: CupertinoDatePicker(
+                            initialDateTime: initialTime0,
                             use24hFormat: true,
                             onDateTimeChanged: (value) {
                               setState(() {

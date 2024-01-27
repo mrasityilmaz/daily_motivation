@@ -7,6 +7,7 @@ import 'package:daily_motivation/presentation/my_quotes_view/subviews/add_new_or
 import 'package:daily_motivation/presentation/onboard_view/onboard_view.dart';
 import 'package:daily_motivation/presentation/reminders_view/reminders_view.dart';
 import 'package:daily_motivation/presentation/reminders_view/subviews/add_new_or_edit_reminder/add_new_or_edit_reminder_view.dart';
+import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
 part 'app_navigator.gr.dart';
@@ -19,6 +20,7 @@ class AppRouter extends _$AppRouter {
         CustomRoute(
           page: OnboardViewRoute.page,
           transitionsBuilder: TransitionsBuilders.slideRightWithFade,
+
           // initial: true,
         ),
         AutoRoute(page: HomeViewRoute.page, initial: true),

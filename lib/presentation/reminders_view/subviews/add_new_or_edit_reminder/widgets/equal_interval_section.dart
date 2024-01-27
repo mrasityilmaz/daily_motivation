@@ -43,11 +43,11 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AdvancedButtonWidget.text(
-                  text: viewModel.equalIntervalValue.start?.format(context) ?? '09:00',
+                  text: viewModel.equalIntervalValue.start.format(context),
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
                   onPressed: () async {
-                    await AppDialogs.instance.showAdaptiveTimePicker(context, initialTime: TimeOfDay.now()).then((value) {
+                    await AppDialogs.instance.showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.start).then((value) {
                       if (value != null) {
                         viewModel.setEqualIntervalStartValue(start: value);
                       }
@@ -73,13 +73,13 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AdvancedButtonWidget.text(
-                  text: viewModel.equalIntervalValue.end?.format(context) ?? '22:00',
+                  text: viewModel.equalIntervalValue.end.format(context),
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
                   onPressed: () async {
-                    await AppDialogs.instance.showAdaptiveTimePicker(context, initialTime: TimeOfDay.now()).then((value) {
+                    await AppDialogs.instance.showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.end).then((value) {
                       if (value != null) {
-                        viewModel.setEqualIntervalStartValue(start: value);
+                        viewModel.setEqualIntervalEndValue(end: value);
                       }
                     });
                   },
@@ -109,12 +109,13 @@ final class __StartAndEndTimePickerRowWidget extends ViewModelWidget<_AddNewOrEd
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: List.generate(24, (index) {
-                final bool isSelected = viewModel.equalIntervalValue.interval == index + 1;
+              children: viewModel.equalIntervalKeyList.map((e) {
+                final bool isSelected = viewModel.equalIntervalValue.interval == e.$1 + 1;
                 return Padding(
+                  key: e.$2,
                   padding: context.paddingLowLeft,
                   child: AdvancedButtonWidget.text(
-                    text: 'x${index + 1}',
+                    text: 'x${e.$1 + 1}',
                     textStyle: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
                     backgroundColor: isSelected ? context.colors.primary : context.colors.background,
                     textColor: !isSelected ? context.colors.primary : context.colors.background,
@@ -126,7 +127,13 @@ final class __StartAndEndTimePickerRowWidget extends ViewModelWidget<_AddNewOrEd
                       ),
                     ),
                     onPressed: () {
-                      viewModel.setEqualIntervalIntervalValue(interval: index + 1);
+                      viewModel.setEqualIntervalIntervalValue(interval: e.$1 + 1);
+                      if (e.$2.currentContext != null) {
+                        try {
+                          Scrollable.ensureVisible(e.$2.currentContext!, duration: const Duration(milliseconds: 300));
+                          // ignore: empty_catches
+                        } catch (e) {}
+                      }
                     },
                   ),
                 );
