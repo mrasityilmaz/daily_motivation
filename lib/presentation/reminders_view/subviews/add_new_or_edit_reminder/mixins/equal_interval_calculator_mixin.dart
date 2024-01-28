@@ -42,7 +42,14 @@ mixin EqualIntervalCalculatorMixin on BaseViewModel {
   ///
   ///
 
-  List<TimeOfDay> get equalIntervalSchedules => _calculateEqualIntervalSchedules();
+  List<TimeOfDay> get equalIntervalScheduleList => _calculateEqualIntervalSchedules();
+
+  ReminderNotificationEqualScheduleModel get equalIntervalScheduleModel => ReminderNotificationEqualScheduleModel(
+        notificationStartTime: _equalIntervalValue.start,
+        notificationEndTime: _equalIntervalValue.end,
+        notificationInterval: _equalIntervalValue.interval,
+        notificationSchedules: _calculateEqualIntervalSchedules(),
+      );
 
   List<TimeOfDay> _calculateEqualIntervalSchedules() {
     final List<TimeOfDay> schedules = List<TimeOfDay>.empty(growable: true);

@@ -5,6 +5,10 @@ mixin CustomIntervalCalculatorMixin on BaseViewModel {
 
   List<TimeOfDay> get customIntervalValue => _customIntervalValue..sort((a, b) => a.hour.compareTo(b.hour) == 0 ? a.minute.compareTo(b.minute) : a.hour.compareTo(b.hour));
 
+  ReminderNotificationScheduleCustomIntervalModel get customIntervalScheduleModel => ReminderNotificationScheduleCustomIntervalModel(
+        notificationSchedules: _customIntervalValue,
+      );
+
   void addCustomIntervalTimeValue({required TimeOfDay time}) {
     _customIntervalValue.add(time);
     notifyListeners();

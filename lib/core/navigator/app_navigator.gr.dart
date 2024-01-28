@@ -20,6 +20,7 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<QuoteHiveModel?>(
         routeData: routeData,
         child: AddNewOrEditQuoteView<QuoteHiveModel?>(
+          key: args.key,
           editQuote: args.editQuote,
         ),
       );
@@ -77,6 +78,7 @@ class AddNewOrEditQuoteViewRoute extends PageRouteInfo<AddNewOrEditQuoteViewRout
   }) : super(
           AddNewOrEditQuoteViewRoute.name,
           args: AddNewOrEditQuoteViewRouteArgs(
+            key: key,
             editQuote: editQuote,
           ),
           initialChildren: children,
@@ -89,14 +91,17 @@ class AddNewOrEditQuoteViewRoute extends PageRouteInfo<AddNewOrEditQuoteViewRout
 
 class AddNewOrEditQuoteViewRouteArgs {
   const AddNewOrEditQuoteViewRouteArgs({
+    this.key,
     this.editQuote,
   });
+
+  final Key? key;
 
   final QuoteHiveModel? editQuote;
 
   @override
   String toString() {
-    return 'AddNewOrEditQuoteViewRouteArgs{ editQuote: $editQuote}';
+    return 'AddNewOrEditQuoteViewRouteArgs{key: $key, editQuote: $editQuote}';
   }
 }
 

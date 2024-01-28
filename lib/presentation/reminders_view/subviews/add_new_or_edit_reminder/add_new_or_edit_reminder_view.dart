@@ -3,6 +3,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:daily_motivation/data/models/reminder_model/reminder_model.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/basic/choose_circle_icon.dart';
@@ -388,9 +389,11 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
                       textStyle: context.textTheme.titleMedium,
                       onPressed: () {
                         if (viewModel.selectedScheduleIndex == 0) {
-                          viewModel.equalIntervalSchedules;
                         } else {
-                          debugPrint('Custom Interval Schedules: ${viewModel.customIntervalValue}');
+                          final ReminderNotificationScheduleCustomIntervalModel customIntervalModel =
+                              ReminderNotificationScheduleCustomIntervalModel.fromJson(viewModel.customIntervalScheduleModel.toJson());
+                          debugPrint(customIntervalModel.toJson().toString());
+                          // debugPrint('Custom Interval Schedules: ${viewModel.customIntervalValue}');
                         }
                       },
                       expand: true,

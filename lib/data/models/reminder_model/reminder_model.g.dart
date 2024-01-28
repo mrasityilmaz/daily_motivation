@@ -14,9 +14,16 @@ _$ReminderModelImpl _$$ReminderModelImplFromJson(Map<String, dynamic> json) =>
       notificationDaysInWeek: (json['notificationDaysInWeek'] as List<dynamic>)
           .map((e) => e as int)
           .toList(),
-      notificationSchedules: (json['notificationSchedules'] as List<dynamic>)
-          .map((e) => DateTime.parse(e as String))
-          .toList(),
+      notificationEqualSchedule: json['notificationEqualSchedule'] == null
+          ? null
+          : ReminderNotificationEqualScheduleModel.fromJson(
+              json['notificationEqualSchedule'] as Map<String, dynamic>),
+      notificationCustomIntervalSchedule:
+          json['notificationCustomIntervalSchedule'] == null
+              ? null
+              : ReminderNotificationScheduleCustomIntervalModel.fromJson(
+                  json['notificationCustomIntervalSchedule']
+                      as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$ReminderModelImplToJson(_$ReminderModelImpl instance) =>
@@ -25,7 +32,46 @@ Map<String, dynamic> _$$ReminderModelImplToJson(_$ReminderModelImpl instance) =>
       'notificationTitle': instance.notificationTitle,
       'notificationBody': instance.notificationBody,
       'notificationDaysInWeek': instance.notificationDaysInWeek,
-      'notificationSchedules': instance.notificationSchedules
-          .map((e) => e.toIso8601String())
-          .toList(),
+      'notificationEqualSchedule': instance.notificationEqualSchedule,
+      'notificationCustomIntervalSchedule':
+          instance.notificationCustomIntervalSchedule,
     };
+
+_$ReminderNotificationEqualScheduleModelImpl
+    _$$ReminderNotificationEqualScheduleModelImplFromJson(
+            Map<String, dynamic> json) =>
+        _$ReminderNotificationEqualScheduleModelImpl(
+          notificationStartTime:
+              _timeOfDayFromJson(json['notificationStartTime'] as String?),
+          notificationEndTime:
+              _timeOfDayFromJson(json['notificationEndTime'] as String?),
+          notificationInterval: json['notificationInterval'] as int?,
+          notificationSchedules:
+              _listTimeOfDayFromJson(json['notificationSchedules'] as String?),
+        );
+
+Map<String, dynamic> _$$ReminderNotificationEqualScheduleModelImplToJson(
+        _$ReminderNotificationEqualScheduleModelImpl instance) =>
+    <String, dynamic>{
+      'notificationStartTime': _timeOfDayToJson(instance.notificationStartTime),
+      'notificationEndTime': _timeOfDayToJson(instance.notificationEndTime),
+      'notificationInterval': instance.notificationInterval,
+      'notificationSchedules':
+          _listTimeOfDayToJson(instance.notificationSchedules),
+    };
+
+_$ReminderNotificationScheduleCustomIntervalModelImpl
+    _$$ReminderNotificationScheduleCustomIntervalModelImplFromJson(
+            Map<String, dynamic> json) =>
+        _$ReminderNotificationScheduleCustomIntervalModelImpl(
+          notificationSchedules:
+              _listTimeOfDayFromJson(json['notificationSchedules'] as String?),
+        );
+
+Map<String, dynamic>
+    _$$ReminderNotificationScheduleCustomIntervalModelImplToJson(
+            _$ReminderNotificationScheduleCustomIntervalModelImpl instance) =>
+        <String, dynamic>{
+          'notificationSchedules':
+              _listTimeOfDayToJson(instance.notificationSchedules),
+        };
