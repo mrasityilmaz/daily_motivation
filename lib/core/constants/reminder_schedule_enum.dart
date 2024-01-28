@@ -1,0 +1,1 @@
+enum ReminderScheduleEnum { equalInterval, customInterval }

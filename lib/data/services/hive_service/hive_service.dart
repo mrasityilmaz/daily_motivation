@@ -1,7 +1,9 @@
 import 'package:daily_motivation/core/constants/hive_constants.dart';
-import 'package:daily_motivation/data/models/hive_adapters/quote_config_adapter/quote_config_adapter.dart';
+import 'package:daily_motivation/data/models/hive_adapters/quote_hive_adapter/quote_hive_adapter.dart';
+import 'package:daily_motivation/data/models/hive_adapters/reminder_hive_adapter/reminder_hive_adapter.dart';
 import 'package:daily_motivation/data/models/hive_adapters/theme_config_adapter/theme_config_adapter.dart';
 import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:daily_motivation/data/models/reminder_model/reminder_model.dart';
 import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -12,7 +14,7 @@ part 'mixin/my_quotes_mixin.dart';
 part 'mixin/theme_config_mixin.dart';
 
 @immutable
-final class HiveService with _ThemeConfigurationServiceMixin, _LikedQuoteServiceMixin, _MyQuotesServiceMixin {
+final class HiveService with _ThemeConfigurationServiceMixin, _MyQuotesServiceMixin, _LikedQuoteServiceMixin {
   factory HiveService() {
     return instance;
   }
@@ -29,10 +31,12 @@ final class HiveService with _ThemeConfigurationServiceMixin, _LikedQuoteService
 
     Hive
       ..registerAdapter(ThemeConfigHiveAdapter())
-      ..registerAdapter(QuoteHiveAdapter());
+      ..registerAdapter(QuoteHiveAdapter())
+      ..registerAdapter(ReminderHiveAdapter());
 
     await Hive.openBox<ThemeConfigurationModel>(HiveConstants.themeConfigurationBoxKey);
     await Hive.openBox<QuoteHiveModel>(HiveConstants.likedQuotesBoxKey);
     await Hive.openBox<QuoteHiveModel>(HiveConstants.myQuotesBoxKey);
+    await Hive.openBox<ReminderModel>(HiveConstants.remindersBoxKey);
   }
 }

@@ -44,6 +44,10 @@ mixin EqualIntervalCalculatorMixin on BaseViewModel {
 
   List<TimeOfDay> get equalIntervalScheduleList => _calculateEqualIntervalSchedules();
 
+  bool get isEqualIntervalTimeValueValid {
+    return _equalIntervalValue.interval != null;
+  }
+
   ReminderNotificationEqualScheduleModel get equalIntervalScheduleModel => ReminderNotificationEqualScheduleModel(
         notificationStartTime: _equalIntervalValue.start,
         notificationEndTime: _equalIntervalValue.end,
@@ -51,25 +55,22 @@ mixin EqualIntervalCalculatorMixin on BaseViewModel {
         notificationSchedules: _calculateEqualIntervalSchedules(),
       );
 
+  /// Calculates equal interval schedules based on the start time, end time, and interval value.
+  /// Returns a list of [TimeOfDay] objects representing the calculated schedules.
   List<TimeOfDay> _calculateEqualIntervalSchedules() {
     final List<TimeOfDay> schedules = List<TimeOfDay>.empty(growable: true);
 
     if (_equalIntervalValue.interval != null) {
       final TimeOfDay startTime = _equalIntervalValue.start;
-
       final TimeOfDay endTime = _equalIntervalValue.end;
 
       final int intervalMinute = _calculateDifference(startTime, endTime) ~/ _equalIntervalValue.interval!;
-
       final int interval = _equalIntervalValue.interval!;
 
       for (var i = 0; i < interval; i++) {
         if (i == 0) {
           schedules.add(startTime);
         } else {
-          ///
-          /// New hour and minute calculation
-          ///
           final int hour = startTime.hour + (intervalMinute * i) ~/ 60;
           final int minute = startTime.minute + (intervalMinute * i) % 60;
           final TimeOfDay calculatedTimeOfDay = TimeOfDay(hour: hour, minute: minute);
@@ -88,6 +89,13 @@ mixin EqualIntervalCalculatorMixin on BaseViewModel {
     return schedules;
   }
 
+  /// Calculates the difference in minutes between two [TimeOfDay] values.
+  ///
+  /// The difference is calculated by subtracting the hour and minute values of [time1]
+  /// from the hour and minute values of [time2], taking the absolute value of each difference,
+  /// and then returning the total difference in minutes.
+  ///
+  /// Returns the difference in minutes between [time1] and [time2].
   int _calculateDifference(TimeOfDay time1, TimeOfDay time2) {
     final int hourDifference = (time2.hour - time1.hour).abs();
     final int minuteDifference = (time2.minute - time1.minute).abs();

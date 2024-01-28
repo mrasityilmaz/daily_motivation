@@ -1,11 +1,11 @@
 part of '../add_new_or_edit_reminder_view.dart';
 
 @immutable
-final class _EqualIntervalSection extends SelectorViewModelWidget<_AddNewOrEditReminderViewModel, int> {
+final class _EqualIntervalSection extends SelectorViewModelWidget<_AddNewOrEditReminderViewModel, ReminderScheduleEnum?> {
   const _EqualIntervalSection();
 
   @override
-  Widget build(BuildContext context, int selectedScheduleIndex) {
+  Widget build(BuildContext context, ReminderScheduleEnum? selectedScheduleType) {
     return AnimatedCrossFade(
       duration: const Duration(milliseconds: 300),
       firstChild: const SizedBox(),
@@ -18,13 +18,13 @@ final class _EqualIntervalSection extends SelectorViewModelWidget<_AddNewOrEditR
           ],
         ),
       ),
-      crossFadeState: selectedScheduleIndex == 0 ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+      crossFadeState: selectedScheduleType == ReminderScheduleEnum.equalInterval ? CrossFadeState.showSecond : CrossFadeState.showFirst,
     );
   }
 
   @override
-  int selector(_AddNewOrEditReminderViewModel viewModel) {
-    return viewModel.selectedScheduleIndex;
+  ReminderScheduleEnum? selector(_AddNewOrEditReminderViewModel viewModel) {
+    return viewModel.selectedScheduleType;
   }
 }
 

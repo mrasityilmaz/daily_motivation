@@ -4,25 +4,68 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualInter
   _AddNewOrEditReminderViewModel();
 
   final HiveService _hiveService = HiveService.instance;
-  late final TextEditingController quoteTextController;
-  late final TextEditingController authorTextController;
+  late final TextEditingController titleTextController;
+  late final TextEditingController messageTextController;
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   bool get isFormValid => formKey.currentState?.validate() ?? false;
 
-  String get quote => quoteTextController.text;
+  String get title => titleTextController.text;
 
-  String get author => authorTextController.text.trim().isNotEmpty ? authorTextController.text : '';
+  String get message => messageTextController.text.trim().isNotEmpty ? messageTextController.text : '';
 
-  int _selectedScheduleIndex = -1;
-
-  int get selectedScheduleIndex => _selectedScheduleIndex;
-
-  void setSelectedScheduleIndex(int index) {
-    _selectedScheduleIndex = index;
-    notifyListeners();
+  void _clearAllFields() {
+    titleTextController.clear();
+    messageTextController.clear();
   }
+
+  void onReady() {
+    titleTextController = TextEditingController();
+    messageTextController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    titleTextController.dispose();
+    messageTextController.dispose();
+    super.dispose();
+  }
+
+  bool get formIsValid {
+    return isFormValid &&
+        ((isCustomIntervalTimeValueValid && _selectedScheduleType == ReminderScheduleEnum.customInterval) ||
+            (isEqualIntervalTimeValueValid && selectedScheduleType == ReminderScheduleEnum.equalInterval)) &&
+        selectedDaysOfWeekIndex.isNotEmpty;
+  }
+
+  Future<void> save() async {
+    try {
+      if (formIsValid) {
+        await runBusyFuture(
+          Future(
+            () => () {
+              final ReminderModel reminderModel = ReminderModel(
+                notificationId: const Uuid().v4(),
+                notificationTitle: title,
+                notificationBody: message,
+                notificationDaysInWeek: selectedDaysOfWeekIndex,
+                notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+                notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
+              );
+            },
+          ),
+        );
+      }
+    } catch (e, s) {
+      LoggerService.instance.catchLog(e, s);
+    }
+  }
+
+  ///
+  /// Selected days of week
+  ///
+  ///
 
   final List<int> _selectedDaysOfWeekIndex = List<int>.empty(growable: true);
 
@@ -39,20 +82,18 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualInter
     notifyListeners();
   }
 
-  void _clearTextFields() {
-    quoteTextController.clear();
-    authorTextController.clear();
-  }
+  ///
+  /// Selected schedule type
+  /// Equal interval or custom interval
+  ///
+  ///
 
-  void onReady() {
-    quoteTextController = TextEditingController();
-    authorTextController = TextEditingController();
-  }
+  ReminderScheduleEnum? _selectedScheduleType;
 
-  @override
-  void dispose() {
-    quoteTextController.dispose();
-    authorTextController.dispose();
-    super.dispose();
+  ReminderScheduleEnum? get selectedScheduleType => _selectedScheduleType;
+
+  void setSelectedScheduleType(ReminderScheduleEnum type) {
+    _selectedScheduleType = type;
+    notifyListeners();
   }
 }

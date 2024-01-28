@@ -24,4 +24,8 @@ mixin CustomIntervalCalculatorMixin on BaseViewModel {
     _customIntervalValue[index] = time;
     notifyListeners();
   }
+
+  bool get isCustomIntervalTimeValueValid {
+    return _customIntervalValue.isNotEmpty;
+  }
 }
