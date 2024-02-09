@@ -2,10 +2,13 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:daily_motivation/core/constants/reminder_schedule_enum.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
+import 'package:daily_motivation/core/navigator/app_navigator.dart';
 import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
 import 'package:daily_motivation/data/models/reminder_model/reminder_model.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
+import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/basic/choose_circle_icon.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
@@ -25,8 +28,8 @@ part 'widgets/custom_interval_section.dart';
 part 'widgets/equal_interval_section.dart';
 
 @immutable
-@RoutePage(name: 'AddNewOrEditReminderViewRoute')
-final class AddNewOrEditReminderView<T extends QuoteHiveModel?> extends StatelessWidget {
+@RoutePage<ReminderModel>(name: 'AddNewOrEditReminderViewRoute')
+final class AddNewOrEditReminderView<T> extends StatelessWidget {
   const AddNewOrEditReminderView({super.key, this.editQuote});
   final QuoteHiveModel? editQuote;
 

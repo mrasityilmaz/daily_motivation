@@ -4,6 +4,7 @@ import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/core/navigator/app_navigator.dart';
 import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/my_quote_service.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
@@ -17,8 +18,8 @@ import 'package:uuid/uuid.dart';
 part 'add_new_or_edit_quote_viewmodel.dart';
 
 @immutable
-@RoutePage(name: 'AddNewOrEditQuoteViewRoute')
-final class AddNewOrEditQuoteView<T extends QuoteHiveModel?> extends StatelessWidget {
+@RoutePage<QuoteHiveModel>(name: 'AddNewOrEditQuoteViewRoute')
+final class AddNewOrEditQuoteView<T> extends StatelessWidget {
   const AddNewOrEditQuoteView({super.key, this.editQuote});
   final QuoteHiveModel? editQuote;
 

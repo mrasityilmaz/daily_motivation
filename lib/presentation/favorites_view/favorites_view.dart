@@ -4,6 +4,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/liked_quote_service.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:flutter/cupertino.dart';

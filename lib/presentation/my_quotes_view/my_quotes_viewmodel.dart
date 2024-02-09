@@ -1,17 +1,17 @@
 part of 'my_quotes_view.dart';
 
 final class _MyQuotesViewModel extends BaseViewModel {
-  final HiveService _hiveService = HiveService.instance;
+  final MyQuoteBoxService _myQuoteBoxService = HiveService.instance.myQuoteBoxService;
 
   final List<QuoteHiveModel> _myQuoteListStatic = List<QuoteHiveModel>.empty(growable: true);
-  List<QuoteHiveModel> get _myQuoteListBasedHive => _hiveService.myQuoteList;
+  List<QuoteHiveModel> get _myQuoteListBasedHive => _myQuoteBoxService.myQuoteList;
   List<QuoteHiveModel> get myQuoteList => [..._myQuoteListStatic, ..._myQuoteListBasedHive]
     ..sort((a, b) => b.createdAt.compareTo(a.createdAt))
     ..toSet();
 
   Future<void> _deleteQuote(String quoteId) async {
     try {
-      await runBusyFuture(_hiveService.deleteMyQuote(quoteId), busyObject: ValueKey(quoteId));
+      await runBusyFuture(_myQuoteBoxService.deleteMyQuote(quoteId), busyObject: ValueKey(quoteId));
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }

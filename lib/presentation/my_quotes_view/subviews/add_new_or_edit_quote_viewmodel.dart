@@ -5,7 +5,7 @@ final class _AddNewQuoteViewModel extends BaseViewModel {
 
   final QuoteHiveModel? editQuote;
 
-  final HiveService _hiveService = HiveService.instance;
+  final MyQuoteBoxService _myQuoteBoxService = HiveService.instance.myQuoteBoxService;
   late final TextEditingController quoteTextController;
   late final TextEditingController authorTextController;
 
@@ -25,10 +25,10 @@ final class _AddNewQuoteViewModel extends BaseViewModel {
             late final QuoteHiveModel quoteModel;
             if (editQuote != null) {
               quoteModel = editQuote!.copyWith(quote: quoteTextController.text, author: authorTextController.text);
-              await _hiveService.editMyQuotes(quoteHiveModel: quoteModel);
+              await _myQuoteBoxService.editMyQuotes(quoteHiveModel: quoteModel);
             } else {
               quoteModel = newQuoteModel;
-              await _hiveService.addMyQuote(quoteModel);
+              await _myQuoteBoxService.addMyQuote(quoteModel);
             }
             _clearTextFields();
 

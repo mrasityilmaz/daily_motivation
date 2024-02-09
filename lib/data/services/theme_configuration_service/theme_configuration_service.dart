@@ -1,6 +1,7 @@
 import 'package:daily_motivation/core/constants/default_fonts_enum.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/theme_config_service.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
@@ -19,7 +20,7 @@ final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigu
     _initConfig();
     listenToReactiveValues([_themeConfiguration]);
   }
-  final HiveService _hiveService = HiveService.instance;
+  final ThemeConfigurationBoxService _configurationBoxService = HiveService.instance.themeConfigurationBoxService;
 
   Future<void> init(BuildContext context) async {
     try {} catch (e) {
@@ -41,7 +42,7 @@ final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigu
   Future<void> changeThemeConfiguration({required ThemeConfigurationModel model}) async {
     try {
       _themeConfiguration.value = model;
-      await _hiveService.setCurrentThemeConfiguration(model);
+      await _configurationBoxService.setCurrentThemeConfiguration(model);
     } catch (e) {
       debugPrint(e.toString());
     }
@@ -53,7 +54,7 @@ final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigu
   ///
   void _initConfig() {
     try {
-      final ThemeConfigurationModel? cachedThemeConfig = _hiveService.currentThemeConfiguration;
+      final ThemeConfigurationModel? cachedThemeConfig = _configurationBoxService.currentThemeConfiguration;
 
       if (cachedThemeConfig != null) {
         _themeConfiguration = ReactiveValue<ThemeConfigurationModel>(cachedThemeConfig);

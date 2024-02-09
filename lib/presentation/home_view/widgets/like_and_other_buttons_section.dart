@@ -30,10 +30,10 @@ final class _LikeAndOtherButtonsSection extends ViewModelWidget<HomeViewModel> {
                     onPressed: () async {
                       await HapticFeedback.mediumImpact().then((value) async {
                         if (isLikedValue) {
-                          await HiveService.instance.unLikeQuote(viewModel.currentQuote.id);
+                          await HiveService.instance.likedQuoteBoxService.unLikeQuote(viewModel.currentQuote.id);
                           viewModel.currentQuoteIsLiked.value = false;
                         } else {
-                          await HiveService.instance.likeQuote(viewModel.currentQuote.toHiveModel);
+                          await HiveService.instance.likedQuoteBoxService.likeQuote(viewModel.currentQuote.toHiveModel);
                           viewModel.currentQuoteIsLiked.value = true;
                         }
                       });

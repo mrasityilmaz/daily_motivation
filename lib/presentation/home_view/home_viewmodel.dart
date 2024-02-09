@@ -42,7 +42,7 @@ final class HomeViewModel extends ReactiveViewModel {
       );
 
       pageController.addListener(() {
-        currentQuoteIsLiked.value = HiveService.instance.isQuoteLiked(currentQuote.id);
+        currentQuoteIsLiked.value = HiveService.instance.likedQuoteBoxService.isQuoteLiked(currentQuote.id);
       });
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);

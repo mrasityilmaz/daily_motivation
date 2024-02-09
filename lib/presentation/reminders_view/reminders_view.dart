@@ -3,14 +3,14 @@ import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/core/navigator/app_navigator.dart';
-import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:daily_motivation/data/models/reminder_model/reminder_model.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:stacked/stacked.dart';
 
@@ -70,7 +70,11 @@ final class RemindersView extends StatelessWidget {
                         ),
                       ),
                       onPressed: () async {
-                        await locator<AppRouter>().push(AddNewOrEditReminderViewRoute());
+                        final ReminderModel? result = await locator<AppRouter>().push(AddNewOrEditReminderViewRoute());
+
+                        if (result != null) {
+                          model.notifyListeners();
+                        }
                       },
                     ),
                   ),
@@ -94,16 +98,16 @@ final class _RemindersViewBodyWidget extends ViewModelWidget<_RemindersViewModel
   Widget build(BuildContext context, _RemindersViewModel viewModel) {
     return CustomScrollView(
       slivers: [
-        // SliverPadding(
-        //   padding: context.screenPadding,
-        //   sliver: SliverList.builder(
-        //     itemCount: viewModel.myQuoteList.length,
-        //     itemBuilder: (context, index) {
-        //       final quote = viewModel.myQuoteList[index];
-        //       return _QuoteRowWidget(quote: quote);
-        //     },
-        //   ),
-        // ),
+        SliverPadding(
+          padding: context.screenPadding,
+          sliver: SliverList.builder(
+            itemCount: viewModel.reminders.length,
+            itemBuilder: (context, index) {
+              final reminder = viewModel.reminders[index];
+              return _ReminderRowWidget(reminder: reminder);
+            },
+          ),
+        ),
         SliverSafeArea(
           minimum: context.adaptiveScreenPaddingBottom + context.paddingMediumBottom,
           sliver: const SliverToBoxAdapter(

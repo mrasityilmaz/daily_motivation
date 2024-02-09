@@ -2,20 +2,16 @@ import 'package:daily_motivation/core/constants/hive_constants.dart';
 import 'package:daily_motivation/data/models/hive_adapters/quote_hive_adapter/quote_hive_adapter.dart';
 import 'package:daily_motivation/data/models/hive_adapters/reminder_hive_adapter/reminder_hive_adapter.dart';
 import 'package:daily_motivation/data/models/hive_adapters/theme_config_adapter/theme_config_adapter.dart';
-import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
-import 'package:daily_motivation/data/models/reminder_model/reminder_model.dart';
-import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:daily_motivation/data/services/hive_service/boxes/liked_quote_service.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/my_quote_service.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/reminder_service.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/theme_config_service.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 
-part 'boxes/liked_quote_mixin.dart';
-part 'boxes/my_quotes_mixin.dart';
-part 'boxes/theme_config_mixin.dart';
-
 @immutable
-final class HiveService with _ThemeConfigurationServiceMixin, _MyQuotesServiceMixin, _LikedQuoteServiceMixin {
+final class HiveService {
   factory HiveService() {
     return instance;
   }
@@ -27,7 +23,10 @@ final class HiveService with _ThemeConfigurationServiceMixin, _MyQuotesServiceMi
   ///
   ///
 
-  final LikedQuoteBoxService likedQuoteBoxService = LikedQuoteBoxService(box: Hive.box<QuoteHiveModel>(HiveConstants.likedQuotesBoxKey));
+  final LikedQuoteBoxService likedQuoteBoxService = LikedQuoteBoxService(boxKey: HiveConstants.likedQuotesBoxKey);
+  final MyQuoteBoxService myQuoteBoxService = MyQuoteBoxService(boxKey: HiveConstants.myQuotesBoxKey);
+  final ThemeConfigurationBoxService themeConfigurationBoxService = ThemeConfigurationBoxService(boxKey: HiveConstants.themeConfigurationBoxKey);
+  final ReminderBoxService reminderBoxService = ReminderBoxService(boxKey: HiveConstants.remindersBoxKey);
 
   ///
   ///
@@ -44,15 +43,15 @@ final class HiveService with _ThemeConfigurationServiceMixin, _MyQuotesServiceMi
     Hive
       ..registerAdapter(ThemeConfigHiveAdapter())
       ..registerAdapter(QuoteHiveAdapter())
-      ..registerAdapter(ReminderHiveAdapter());
+      ..registerAdapter(ReminderHiveAdapter())
+      ..registerAdapter(ReminderNotificationEqualScheduleModelHiveAdapter())
+      ..registerAdapter(ReminderNotificationScheduleCustomIntervalModelHiveAdapter());
 
     await Future.wait([
       likedQuoteBoxService.initBox(),
+      myQuoteBoxService.initBox(),
+      themeConfigurationBoxService.initBox(),
+      reminderBoxService.initBox(),
     ]);
-
-    await Hive.openBox<ThemeConfigurationModel>(HiveConstants.themeConfigurationBoxKey);
-    await Hive.openBox<QuoteHiveModel>(HiveConstants.likedQuotesBoxKey);
-    await Hive.openBox<QuoteHiveModel>(HiveConstants.myQuotesBoxKey);
-    await Hive.openBox<ReminderModel>(HiveConstants.remindersBoxKey);
   }
 }

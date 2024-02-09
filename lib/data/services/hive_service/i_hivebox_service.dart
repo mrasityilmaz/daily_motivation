@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 abstract class IHiveBoxService<E> {
-  IHiveBoxService({required this.box});
+  IHiveBoxService({required this.boxKey});
 
-  final Box<E> box;
+  final String boxKey;
+  late final Box<E> box;
 
   @mustCallSuper
   Future<void> clearBox() async {
@@ -13,6 +14,6 @@ abstract class IHiveBoxService<E> {
 
   @mustCallSuper
   Future<void> initBox() async {
-    await Hive.openBox<E>(box.name);
+    await Hive.openBox<E>(boxKey);
   }
 }

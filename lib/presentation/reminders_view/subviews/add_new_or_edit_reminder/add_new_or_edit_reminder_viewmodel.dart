@@ -3,7 +3,7 @@ part of 'add_new_or_edit_reminder_view.dart';
 final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin {
   _AddNewOrEditReminderViewModel();
 
-  final HiveService _hiveService = HiveService.instance;
+  final ReminderBoxService _reminderBoxService = HiveService.instance.reminderBoxService;
   late final TextEditingController titleTextController;
   late final TextEditingController messageTextController;
 
@@ -18,6 +18,8 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualInter
   void _clearAllFields() {
     titleTextController.clear();
     messageTextController.clear();
+    _selectedDaysOfWeekIndex.clear();
+    _selectedScheduleType = null;
   }
 
   void onReady() {
@@ -42,20 +44,21 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualInter
   Future<void> save() async {
     try {
       if (formIsValid) {
-        await runBusyFuture(
-          Future(
-            () => () {
-              final ReminderModel reminderModel = ReminderModel(
-                notificationId: const Uuid().v4(),
-                notificationTitle: title,
-                notificationBody: message,
-                notificationDaysInWeek: selectedDaysOfWeekIndex,
-                notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
-                notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
-              );
-            },
-          ),
+        final ReminderModel reminderModel = ReminderModel(
+          notificationId: const Uuid().v4(),
+          notificationTitle: title,
+          notificationBody: message,
+          notificationDaysInWeek: selectedDaysOfWeekIndex,
+          notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+          notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
         );
+        await runBusyFuture(
+          _reminderBoxService.addReminder(reminderModel),
+        );
+
+        _clearAllFields();
+
+        await locator<AppRouter>().pop<ReminderModel>(reminderModel);
       }
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);

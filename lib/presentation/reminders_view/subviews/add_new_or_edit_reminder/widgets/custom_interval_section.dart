@@ -95,7 +95,7 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
           ),
         ],
       ),
-      crossFadeState: viewModel.selectedScheduleType == 1 ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+      crossFadeState: viewModel.selectedScheduleType == ReminderScheduleEnum.customInterval ? CrossFadeState.showSecond : CrossFadeState.showFirst,
     );
   }
 }
