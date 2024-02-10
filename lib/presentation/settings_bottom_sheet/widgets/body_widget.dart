@@ -48,6 +48,14 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
                         await locator<AppRouter>().push(const RemindersViewRoute());
                       },
                     ),
+                    _SettingsRowWidget(
+                      icon: Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
+                      iconColor: context.colors.primary,
+                      title: 'Alıntı Bildirimleri',
+                      onPressed: () async {
+                        await locator<AppRouter>().push(QuoteNotificationsViewRoute());
+                      },
+                    ),
                   ],
                 ),
               ],

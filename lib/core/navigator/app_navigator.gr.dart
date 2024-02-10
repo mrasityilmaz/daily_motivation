@@ -16,8 +16,7 @@ abstract class _$AppRouter extends RootStackRouter {
   @override
   final Map<String, PageFactory> pagesMap = {
     AddNewOrEditQuoteViewRoute.name: (routeData) {
-      final args = routeData.argsAs<AddNewOrEditQuoteViewRouteArgs>(
-          orElse: () => const AddNewOrEditQuoteViewRouteArgs());
+      final args = routeData.argsAs<AddNewOrEditQuoteViewRouteArgs>(orElse: () => const AddNewOrEditQuoteViewRouteArgs());
       return AutoRoutePage<QuoteHiveModel>(
         routeData: routeData,
         child: AddNewOrEditQuoteView<dynamic>(
@@ -27,13 +26,12 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     AddNewOrEditReminderViewRoute.name: (routeData) {
-      final args = routeData.argsAs<AddNewOrEditReminderViewRouteArgs>(
-          orElse: () => const AddNewOrEditReminderViewRouteArgs());
+      final args = routeData.argsAs<AddNewOrEditReminderViewRouteArgs>(orElse: () => const AddNewOrEditReminderViewRouteArgs());
       return AutoRoutePage<ReminderModel>(
         routeData: routeData,
         child: AddNewOrEditReminderView<dynamic>(
           key: args.key,
-          editQuote: args.editQuote,
+          reminder: args.reminder,
         ),
       );
     },
@@ -61,6 +59,16 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const OnboardView(),
       );
     },
+    QuoteNotificationsViewRoute.name: (routeData) {
+      final args = routeData.argsAs<QuoteNotificationsViewRouteArgs>(orElse: () => const QuoteNotificationsViewRouteArgs());
+      return AutoRoutePage<QuoteNotificationModel>(
+        routeData: routeData,
+        child: QuoteNotificationsView<dynamic>(
+          key: args.key,
+          quoteNotification: args.quoteNotification,
+        ),
+      );
+    },
     RemindersViewRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -72,8 +80,7 @@ abstract class _$AppRouter extends RootStackRouter {
 
 /// generated route for
 /// [AddNewOrEditQuoteView<dynamic>]
-class AddNewOrEditQuoteViewRoute
-    extends PageRouteInfo<AddNewOrEditQuoteViewRouteArgs> {
+class AddNewOrEditQuoteViewRoute extends PageRouteInfo<AddNewOrEditQuoteViewRouteArgs> {
   AddNewOrEditQuoteViewRoute({
     Key? key,
     QuoteHiveModel? editQuote,
@@ -89,8 +96,7 @@ class AddNewOrEditQuoteViewRoute
 
   static const String name = 'AddNewOrEditQuoteViewRoute';
 
-  static const PageInfo<AddNewOrEditQuoteViewRouteArgs> page =
-      PageInfo<AddNewOrEditQuoteViewRouteArgs>(name);
+  static const PageInfo<AddNewOrEditQuoteViewRouteArgs> page = PageInfo<AddNewOrEditQuoteViewRouteArgs>(name);
 }
 
 class AddNewOrEditQuoteViewRouteArgs {
@@ -111,40 +117,38 @@ class AddNewOrEditQuoteViewRouteArgs {
 
 /// generated route for
 /// [AddNewOrEditReminderView<dynamic>]
-class AddNewOrEditReminderViewRoute
-    extends PageRouteInfo<AddNewOrEditReminderViewRouteArgs> {
+class AddNewOrEditReminderViewRoute extends PageRouteInfo<AddNewOrEditReminderViewRouteArgs> {
   AddNewOrEditReminderViewRoute({
     Key? key,
-    QuoteHiveModel? editQuote,
+    ReminderModel? reminder,
     List<PageRouteInfo>? children,
   }) : super(
           AddNewOrEditReminderViewRoute.name,
           args: AddNewOrEditReminderViewRouteArgs(
             key: key,
-            editQuote: editQuote,
+            reminder: reminder,
           ),
           initialChildren: children,
         );
 
   static const String name = 'AddNewOrEditReminderViewRoute';
 
-  static const PageInfo<AddNewOrEditReminderViewRouteArgs> page =
-      PageInfo<AddNewOrEditReminderViewRouteArgs>(name);
+  static const PageInfo<AddNewOrEditReminderViewRouteArgs> page = PageInfo<AddNewOrEditReminderViewRouteArgs>(name);
 }
 
 class AddNewOrEditReminderViewRouteArgs {
   const AddNewOrEditReminderViewRouteArgs({
     this.key,
-    this.editQuote,
+    this.reminder,
   });
 
   final Key? key;
 
-  final QuoteHiveModel? editQuote;
+  final ReminderModel? reminder;
 
   @override
   String toString() {
-    return 'AddNewOrEditReminderViewRouteArgs{key: $key, editQuote: $editQuote}';
+    return 'AddNewOrEditReminderViewRouteArgs{key: $key, reminder: $reminder}';
   }
 }
 
@@ -202,6 +206,43 @@ class OnboardViewRoute extends PageRouteInfo<void> {
   static const String name = 'OnboardViewRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [QuoteNotificationsView<dynamic>]
+class QuoteNotificationsViewRoute extends PageRouteInfo<QuoteNotificationsViewRouteArgs> {
+  QuoteNotificationsViewRoute({
+    Key? key,
+    QuoteNotificationModel? quoteNotification,
+    List<PageRouteInfo>? children,
+  }) : super(
+          QuoteNotificationsViewRoute.name,
+          args: QuoteNotificationsViewRouteArgs(
+            key: key,
+            quoteNotification: quoteNotification,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'QuoteNotificationsViewRoute';
+
+  static const PageInfo<QuoteNotificationsViewRouteArgs> page = PageInfo<QuoteNotificationsViewRouteArgs>(name);
+}
+
+class QuoteNotificationsViewRouteArgs {
+  const QuoteNotificationsViewRouteArgs({
+    this.key,
+    this.quoteNotification,
+  });
+
+  final Key? key;
+
+  final QuoteNotificationModel? quoteNotification;
+
+  @override
+  String toString() {
+    return 'QuoteNotificationsViewRouteArgs{key: $key, quoteNotification: $quoteNotification}';
+  }
 }
 
 /// generated route for

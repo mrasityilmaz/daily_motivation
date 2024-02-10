@@ -1,9 +1,11 @@
 import 'package:daily_motivation/core/constants/hive_constants.dart';
 import 'package:daily_motivation/data/models/hive_adapters/quote_hive_adapter/quote_hive_adapter.dart';
+import 'package:daily_motivation/data/models/hive_adapters/quote_notification_hive_adapter/quote_notification_hive_adapter.dart';
 import 'package:daily_motivation/data/models/hive_adapters/reminder_hive_adapter/reminder_hive_adapter.dart';
 import 'package:daily_motivation/data/models/hive_adapters/theme_config_adapter/theme_config_adapter.dart';
 import 'package:daily_motivation/data/services/hive_service/boxes/liked_quote_service.dart';
 import 'package:daily_motivation/data/services/hive_service/boxes/my_quote_service.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/quote_notification_service.dart';
 import 'package:daily_motivation/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:daily_motivation/data/services/hive_service/boxes/theme_config_service.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +29,7 @@ final class HiveService {
   final MyQuoteBoxService myQuoteBoxService = MyQuoteBoxService(boxKey: HiveConstants.myQuotesBoxKey);
   final ThemeConfigurationBoxService themeConfigurationBoxService = ThemeConfigurationBoxService(boxKey: HiveConstants.themeConfigurationBoxKey);
   final ReminderBoxService reminderBoxService = ReminderBoxService(boxKey: HiveConstants.remindersBoxKey);
+  final QuoteNotificationBoxService quoteNotificationBoxService = QuoteNotificationBoxService(boxKey: HiveConstants.quoteNotificationBoxKey);
 
   ///
   ///
@@ -45,13 +48,17 @@ final class HiveService {
       ..registerAdapter(QuoteHiveAdapter())
       ..registerAdapter(ReminderHiveAdapter())
       ..registerAdapter(ReminderNotificationEqualScheduleModelHiveAdapter())
-      ..registerAdapter(ReminderNotificationScheduleCustomIntervalModelHiveAdapter());
+      ..registerAdapter(ReminderNotificationScheduleCustomIntervalModelHiveAdapter())
+      ..registerAdapter(QuoteNotificationHiveAdapter())
+      ..registerAdapter(QuoteNotificationEqualScheduleModelHiveAdapter())
+      ..registerAdapter(QuoteNotificationScheduleCustomIntervalModelHiveAdapter());
 
     await Future.wait([
       likedQuoteBoxService.initBox(),
       myQuoteBoxService.initBox(),
       themeConfigurationBoxService.initBox(),
       reminderBoxService.initBox(),
+      quoteNotificationBoxService.initBox(),
     ]);
   }
 }

@@ -1,7 +1,9 @@
 part of 'add_new_or_edit_reminder_view.dart';
 
 final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin {
-  _AddNewOrEditReminderViewModel();
+  _AddNewOrEditReminderViewModel({this.editReminderModel});
+
+  final ReminderModel? editReminderModel;
 
   final ReminderBoxService _reminderBoxService = HiveService.instance.reminderBoxService;
   late final TextEditingController titleTextController;
@@ -23,8 +25,43 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualInter
   }
 
   void onReady() {
-    titleTextController = TextEditingController();
-    messageTextController = TextEditingController();
+    titleTextController = TextEditingController(
+      text: editReminderModel?.notificationTitle,
+    );
+    messageTextController = TextEditingController(
+      text: editReminderModel?.notificationBody,
+    );
+
+    if (editReminderModel != null) {
+      _initEditReminderValue();
+    }
+  }
+
+  void _initEditReminderValue() {
+    _selectedDaysOfWeekIndex
+      ..clear()
+      ..addAll(editReminderModel?.notificationDaysInWeek ?? []);
+
+    if (editReminderModel?.notificationCustomIntervalSchedule != null) {
+      _selectedScheduleType = ReminderScheduleEnum.customInterval;
+      _customIntervalValue
+        ..clear()
+        ..addAll(editReminderModel?.notificationCustomIntervalSchedule?.notificationSchedules ?? []);
+    } else if (editReminderModel?.notificationEqualSchedule != null) {
+      _selectedScheduleType = ReminderScheduleEnum.equalInterval;
+
+      setEqualIntervalEndValue(
+        end: editReminderModel?.notificationEqualSchedule?.notificationEndTime,
+      );
+
+      setEqualIntervalStartValue(
+        start: editReminderModel?.notificationEqualSchedule?.notificationStartTime,
+      );
+
+      setEqualIntervalIntervalValue(
+        interval: editReminderModel?.notificationEqualSchedule?.notificationInterval ?? 0,
+      );
+    }
   }
 
   @override
@@ -44,25 +81,57 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualInter
   Future<void> save() async {
     try {
       if (formIsValid) {
-        final ReminderModel reminderModel = ReminderModel(
-          notificationId: const Uuid().v4(),
-          notificationTitle: title,
-          notificationBody: message,
-          notificationDaysInWeek: selectedDaysOfWeekIndex,
-          notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
-          notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
-        );
-        await runBusyFuture(
-          _reminderBoxService.addReminder(reminderModel),
-        );
-
-        _clearAllFields();
-
-        await locator<AppRouter>().pop<ReminderModel>(reminderModel);
+        if (editReminderModel != null) {
+          await _saveEditedReminder();
+        } else {
+          await _saveNewReminder();
+        }
       }
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
+  }
+
+  /// Saves a new reminder.
+  ///
+  /// This method is responsible for saving a new reminder. It is an asynchronous method that returns a [Future] with no return value ([void]).
+  /// Use this method to save a new reminder in the application.
+  /// Example usage:
+  /// ```dart
+  /// await _saveNewReminder();
+  /// ```
+  Future<void> _saveNewReminder() async {
+    final ReminderModel reminderModel = ReminderModel(
+      notificationId: const Uuid().v4(),
+      notificationTitle: title,
+      notificationBody: message,
+      notificationDaysInWeek: selectedDaysOfWeekIndex,
+      notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+      notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
+    );
+
+    await runBusyFuture(
+      _reminderBoxService.addReminder(reminderModel),
+    );
+
+    await locator<AppRouter>().pop<ReminderModel>(reminderModel);
+  }
+
+  Future<void> _saveEditedReminder() async {
+    final ReminderModel reminderModel = ReminderModel(
+      notificationId: editReminderModel!.notificationId,
+      notificationDaysInWeek: selectedDaysOfWeekIndex,
+      notificationTitle: title,
+      notificationBody: message,
+      notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+      notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
+    );
+
+    await runBusyFuture(
+      _reminderBoxService.updateReminder(reminderModel.notificationId, reminderModel),
+    );
+
+    await locator<AppRouter>().pop<ReminderModel>(reminderModel);
   }
 
   ///

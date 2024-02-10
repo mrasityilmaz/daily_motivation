@@ -17,7 +17,7 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
           motion: const ScrollMotion(),
           children: [
             SlidableAction(
-              onPressed: (ctx) async => {},
+              onPressed: (ctx) async => viewModel.onPressedDeleteReminderButton(reminder.notificationId),
               borderRadius: BorderRadius.circular(8),
               backgroundColor: context.colors.background,
               label: 'Remove',
@@ -26,7 +26,7 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
               foregroundColor: Colors.red.shade600,
             ),
             SlidableAction(
-              onPressed: (ctx) async => {},
+              onPressed: (ctx) async => viewModel.onTapEditReminder(reminder),
               borderRadius: BorderRadius.circular(8),
               backgroundColor: context.colors.background,
               label: 'Edit',
@@ -45,44 +45,106 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
             children: [
               Text(
                 reminder.notificationTitle,
-                style: context.textTheme.titleSmall,
+                style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w600),
+                maxLines: 1,
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 2),
               Text(
                 reminder.notificationBody,
-                style: context.textTheme.titleSmall,
+                style: context.textTheme.titleSmall?.copyWith(color: context.colors.onBackground.withOpacity(.75)),
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
               ),
-              const SizedBox(height: 4),
-              Text(
-                reminder.notificationDaysInWeek.join(', '),
-                style: context.textTheme.titleSmall,
+              Padding(
+                padding: context.paddingLowVertical,
+                child: Row(
+                  children: reminder.notificationDaysInWeek
+                      .map(
+                        (e) => Container(
+                          margin: context.paddingLowRight * .5,
+                          padding: context.paddingLow * .5,
+                          decoration: ShapeDecoration(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4),
+                              side: BorderSide(
+                                width: 1.2,
+                                color: context.colors.primary,
+                              ),
+                            ),
+                          ),
+                          child: AutoSizeText(
+                            'weekdays.${e + 1}wd'.tr(),
+                            style: context.textTheme.bodySmall?.copyWith(
+                              color: context.colors.primary,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            maxLines: 1,
+                            maxFontSize: context.textTheme.bodySmall!.fontSize!,
+                            minFontSize: context.textTheme.labelSmall!.fontSize!,
+                          ),
+                        ),
+                      )
+                      .toList(),
+                ),
               ),
-              const SizedBox(height: 4),
-              Text(
-                reminder.notificationEqualSchedule?.notificationSchedules.join(', ') ?? reminder.notificationCustomIntervalSchedule?.notificationSchedules.join(', ') ?? '',
-                style: context.textTheme.titleSmall,
-              ),
-              const SizedBox(height: 16),
-              Text(
-                reminder.toJson().entries.map((e) {
-                  if (e.value is List) {
-                    return '${e.key}: ${e.value.join(', ')}';
-                  }
-                  if (e.value is Map) {
-                    return '${e.key}: ${e.value.entries.map((e) => '${e.key}: ${e.value}').join(', ')}';
-                  }
-                  if (e.value is ReminderNotificationEqualScheduleModel) {
-                    return '${e.key}: ${e.value.toJson().entries.map((e) => '${e.key}: ${e.value}').join(', ')}';
-                  }
-                  if (e.value is ReminderNotificationScheduleCustomIntervalModel) {
-                    return '${e.key}: ${e.value.toJson().entries.map((e) => '${e.key}: ${e.value}').join(', ')}';
-                  }
-
-                  return '${e.key}: ${e.value}';
-                }).join('\n'),
-                maxLines: 20,
-                style: context.textTheme.titleSmall,
-              ),
+              if (reminder.notificationEqualSchedule != null) ...[
+                Row(
+                  children: [
+                    Expanded(
+                      child: AutoSizeText.rich(
+                        TextSpan(
+                          text: 'Start from ',
+                          children: [
+                            TextSpan(
+                              text: reminder.notificationEqualSchedule!.notificationStartTime?.format(context),
+                              style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
+                            ),
+                            const TextSpan(
+                              text: '\rto\r',
+                            ),
+                            TextSpan(
+                              text: reminder.notificationEqualSchedule!.notificationEndTime?.format(context),
+                              style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
+                            ),
+                            TextSpan(
+                              text: ' - ${reminder.notificationEqualSchedule!.notificationInterval!} times a day',
+                              style: context.textTheme.titleSmall,
+                            ),
+                          ],
+                        ),
+                        maxLines: 1,
+                        maxFontSize: context.textTheme.titleSmall!.fontSize!,
+                        minFontSize: context.textTheme.labelSmall!.fontSize!,
+                        style: context.textTheme.titleSmall,
+                      ),
+                    ),
+                  ],
+                ),
+              ] else if (reminder.notificationCustomIntervalSchedule != null) ...[
+                Row(
+                  children: [
+                    Expanded(
+                      child: AutoSizeText.rich(
+                        TextSpan(
+                          text: 'Hours:\r\r',
+                          children: reminder.notificationCustomIntervalSchedule!.notificationSchedules
+                              .map(
+                                (e) => TextSpan(
+                                  text: "${e.format(context)}${reminder.notificationCustomIntervalSchedule!.notificationSchedules.last == e ? '' : ', '}",
+                                  style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
+                                ),
+                              )
+                              .toList(),
+                        ),
+                        maxLines: 2,
+                        maxFontSize: context.textTheme.titleSmall!.fontSize!,
+                        minFontSize: context.textTheme.labelSmall!.fontSize!,
+                        style: context.textTheme.titleSmall,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ],
           ),
         ),

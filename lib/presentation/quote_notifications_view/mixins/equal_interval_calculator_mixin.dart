@@ -1,4 +1,4 @@
-part of '../add_new_or_edit_reminder_view.dart';
+part of '../quote_notification_view.dart';
 
 mixin EqualIntervalCalculatorMixin on BaseViewModel {
   final List<(int index, GlobalKey itemKey)> _equalIntervalKeyList = List<(int index, GlobalKey itemKey)>.generate(24, (index) => (index, GlobalKey()));
@@ -55,7 +55,7 @@ mixin EqualIntervalCalculatorMixin on BaseViewModel {
     return _equalIntervalValue.interval != null;
   }
 
-  ReminderNotificationEqualScheduleModel get equalIntervalScheduleModel => ReminderNotificationEqualScheduleModel(
+  QuoteNotificationEqualScheduleModel get equalIntervalScheduleModel => QuoteNotificationEqualScheduleModel(
         notificationStartTime: _equalIntervalValue.start,
         notificationEndTime: _equalIntervalValue.end,
         notificationInterval: _equalIntervalValue.interval,

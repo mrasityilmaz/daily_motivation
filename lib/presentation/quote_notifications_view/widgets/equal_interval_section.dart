@@ -1,7 +1,7 @@
-part of '../add_new_or_edit_reminder_view.dart';
+part of '../quote_notification_view.dart';
 
 @immutable
-final class _EqualIntervalSection extends SelectorViewModelWidget<_AddNewOrEditReminderViewModel, ReminderScheduleEnum?> {
+final class _EqualIntervalSection extends SelectorViewModelWidget<_QuoteNotificationViewModel, ReminderScheduleEnum?> {
   const _EqualIntervalSection();
 
   @override
@@ -23,17 +23,17 @@ final class _EqualIntervalSection extends SelectorViewModelWidget<_AddNewOrEditR
   }
 
   @override
-  ReminderScheduleEnum? selector(_AddNewOrEditReminderViewModel viewModel) {
+  ReminderScheduleEnum? selector(_QuoteNotificationViewModel viewModel) {
     return viewModel.selectedScheduleType;
   }
 }
 
 @immutable
-final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewModel> {
+final class __TimeRangeRow extends ViewModelWidget<_QuoteNotificationViewModel> {
   const __TimeRangeRow();
 
   @override
-  Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
+  Widget build(BuildContext context, _QuoteNotificationViewModel viewModel) {
     return Padding(
       padding: context.paddingNormalBottom + context.paddingLowTop,
       child: Row(
@@ -98,11 +98,11 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
 }
 
 @immutable
-final class __StartAndEndTimePickerRowWidget extends ViewModelWidget<_AddNewOrEditReminderViewModel> {
+final class __StartAndEndTimePickerRowWidget extends ViewModelWidget<_QuoteNotificationViewModel> {
   const __StartAndEndTimePickerRowWidget();
 
   @override
-  Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
+  Widget build(BuildContext context, _QuoteNotificationViewModel viewModel) {
     return Row(
       children: [
         Expanded(

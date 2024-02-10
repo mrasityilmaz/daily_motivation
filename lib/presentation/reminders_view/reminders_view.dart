@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:daily_motivation/core/navigator/app_navigator.dart';
 import 'package:daily_motivation/data/models/reminder_model/reminder_model.dart';
@@ -9,6 +10,7 @@ import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -69,13 +71,7 @@ final class RemindersView extends StatelessWidget {
                           color: context.colors.primary,
                         ),
                       ),
-                      onPressed: () async {
-                        final ReminderModel? result = await locator<AppRouter>().push(AddNewOrEditReminderViewRoute());
-
-                        if (result != null) {
-                          model.notifyListeners();
-                        }
-                      },
+                      onPressed: model.onTapAddNewReminder,
                     ),
                   ),
                 ],
@@ -101,9 +97,9 @@ final class _RemindersViewBodyWidget extends ViewModelWidget<_RemindersViewModel
         SliverPadding(
           padding: context.screenPadding,
           sliver: SliverList.builder(
-            itemCount: viewModel.reminders.length,
+            itemCount: viewModel.reminderList.length,
             itemBuilder: (context, index) {
-              final reminder = viewModel.reminders[index];
+              final reminder = viewModel.reminderList[index];
               return _ReminderRowWidget(reminder: reminder);
             },
           ),

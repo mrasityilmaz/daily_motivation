@@ -2,40 +2,35 @@ import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:daily_motivation/core/constants/reminder_schedule_enum.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/core/navigator/app_navigator.dart';
 import 'package:daily_motivation/core/services/logger_service.dart';
-import 'package:daily_motivation/data/models/reminder_model/reminder_model.dart';
+import 'package:daily_motivation/data/models/quote_notification_model/quote_notification_model.dart';
 import 'package:daily_motivation/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
-import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/basic/choose_circle_icon.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
-import 'package:daily_motivation/presentation/core_widgets/textfield/textfield_widget.dart';
-import 'package:daily_motivation/presentation/core_widgets/textfield/textformfield_widget.dart';
 import 'package:daily_motivation/presentation/dialogs/app_dialogs.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:uuid/uuid.dart';
 
-part 'add_new_or_edit_reminder_viewmodel.dart';
 part 'mixins/custom_interval_calculator_mixin.dart';
 part 'mixins/equal_interval_calculator_mixin.dart';
+part 'quote_notifications_viewmodel.dart';
 part 'widgets/custom_interval_section.dart';
 part 'widgets/equal_interval_section.dart';
 
 @immutable
-@RoutePage<ReminderModel>(name: 'AddNewOrEditReminderViewRoute')
-final class AddNewOrEditReminderView<T> extends StatelessWidget {
-  const AddNewOrEditReminderView({super.key, this.reminder});
-  final ReminderModel? reminder;
+@RoutePage<QuoteNotificationModel>(name: 'QuoteNotificationsViewRoute')
+final class QuoteNotificationsView<T> extends StatelessWidget {
+  const QuoteNotificationsView({super.key, this.quoteNotification});
+  final QuoteNotificationModel? quoteNotification;
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.nonReactive(
-      viewModelBuilder: () => _AddNewOrEditReminderViewModel(editReminderModel: reminder),
+      viewModelBuilder: () => _QuoteNotificationViewModel(editQuoteNotification: quoteNotification),
       onViewModelReady: (viewModel) => viewModel.onReady(),
       builder: (context, model, child) {
         return Stack(
@@ -44,14 +39,14 @@ final class AddNewOrEditReminderView<T> extends StatelessWidget {
               appBar: AppBar(
                 backgroundColor: context.colors.surface,
                 title: Text(
-                  reminder != null ? 'Edit Reminder' : 'New Reminder',
+                  quoteNotification != null ? 'Edit Quote Notification' : 'New Quote Notification',
                   style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                 ),
                 centerTitle: true,
               ),
-              body: const _AddNewOrEditReminderViewBodyWidget(),
+              body: const _QuoteNotificationViewBodyWidget(),
             ),
-            const ViewModelLoadingIndicator<_AddNewOrEditReminderViewModel>(),
+            const ViewModelLoadingIndicator<_QuoteNotificationViewModel>(),
           ],
         );
       },
@@ -60,11 +55,11 @@ final class AddNewOrEditReminderView<T> extends StatelessWidget {
 }
 
 @immutable
-final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewOrEditReminderViewModel> {
-  const _AddNewOrEditReminderViewBodyWidget();
+final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotificationViewModel> {
+  const _QuoteNotificationViewBodyWidget();
 
   @override
-  Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
+  Widget build(BuildContext context, _QuoteNotificationViewModel viewModel) {
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(
@@ -185,10 +180,6 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
                       SizedBox(
                         height: context.lowValue,
                       ),
-                      CustomTextFieldWidget(
-                        controller: viewModel.titleTextController,
-                        hintText: 'Title',
-                      ),
                     ],
                   ),
                   SizedBox(
@@ -218,24 +209,6 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
                       ),
                       SizedBox(
                         height: context.lowValue,
-                      ),
-                      ConstrainedBox(
-                        constraints: BoxConstraints.tightFor(height: context.height * .15),
-                        child: CustomTextFormFieldWidget(
-                          controller: viewModel.messageTextController,
-                          verticalTextAlign: TextAlignVertical.top,
-                          hintText: 'Message',
-                          maxLines: null,
-                          expands: true,
-                          validator: (p0) {
-                            if (p0 == null || p0.isEmpty || p0.trim().isEmpty || p0.replaceAll(' ', '').isEmpty) {
-                              return 'Message cannot be empty';
-                            } else if (p0.length < 3) {
-                              return 'Message cannot be smaller than 3 characters';
-                            }
-                            return null;
-                          },
-                        ),
                       ),
                     ],
                   ),
