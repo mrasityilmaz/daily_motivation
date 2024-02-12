@@ -1,6 +1,6 @@
 part of 'quote_notification_view.dart';
 
-final class _QuoteNotificationViewModel extends BaseViewModel with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin {
+final class _QuoteNotificationViewModel extends BaseViewModel with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin, SelectedCategoriesMixin {
   _QuoteNotificationViewModel({this.editQuoteNotification});
 
   final QuoteNotificationModel? editQuoteNotification;
@@ -21,6 +21,10 @@ final class _QuoteNotificationViewModel extends BaseViewModel with EqualInterval
     _selectedDaysOfWeekIndex
       ..clear()
       ..addAll(editQuoteNotification?.notificationDaysInWeek ?? []);
+
+    _selectedCategories
+      ..clear()
+      ..addAll(editQuoteNotification?.notificationCategories ?? []);
 
     if (editQuoteNotification?.notificationCustomIntervalSchedule != null) {
       _selectedScheduleType = ReminderScheduleEnum.customInterval;
@@ -55,9 +59,9 @@ final class _QuoteNotificationViewModel extends BaseViewModel with EqualInterval
     try {
       if (formIsValid) {
         if (editQuoteNotification != null) {
-          await _saveEditedReminder();
+          await _saveEditedQuotedNotification();
         } else {
-          await _saveNewReminder();
+          await _saveNewQuoteNotification();
         }
       }
     } catch (e, s) {
@@ -73,7 +77,7 @@ final class _QuoteNotificationViewModel extends BaseViewModel with EqualInterval
   /// ```dart
   /// await _saveNewReminder();
   /// ```
-  Future<void> _saveNewReminder() async {
+  Future<void> _saveNewQuoteNotification() async {
     // final ReminderModel reminderModel = ReminderModel(
     //   notificationId: const Uuid().v4(),
 
@@ -89,7 +93,7 @@ final class _QuoteNotificationViewModel extends BaseViewModel with EqualInterval
     // await locator<AppRouter>().pop<ReminderModel>(reminderModel);
   }
 
-  Future<void> _saveEditedReminder() async {
+  Future<void> _saveEditedQuotedNotification() async {
     // final ReminderModel reminderModel = ReminderModel(
     //   notificationId: editQuoteNotification!.notificationId,
     //   notificationDaysInWeek: selectedDaysOfWeekIndex,

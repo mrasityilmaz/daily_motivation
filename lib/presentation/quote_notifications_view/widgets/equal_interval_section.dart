@@ -123,7 +123,6 @@ final class __StartAndEndTimePickerRowWidget extends ViewModelWidget<_QuoteNotif
                       borderRadius: context.radius8,
                       side: BorderSide(
                         color: context.colors.primary,
-                        width: 2,
                       ),
                     ),
                     onPressed: () {
