@@ -92,7 +92,7 @@ mixin EqualIntervalCalculatorMixin on BaseViewModel {
         }
       }
     }
-    LoggerService.instance.printLog('Schedules: $schedules');
+
     return schedules;
   }
 

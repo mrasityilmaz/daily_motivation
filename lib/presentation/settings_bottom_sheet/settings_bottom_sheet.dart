@@ -8,10 +8,12 @@ import 'package:daily_motivation/presentation/core_widgets/loading_indicator/vie
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_themes/stacked_themes.dart';
 
 part 'settings_bottom_sheet_viewmodel.dart';
 part 'widgets/app_bar_widget.dart';
 part 'widgets/body_widget.dart';
+part 'widgets/settings_row_widget.dart';
 
 @immutable
 final class SettingsBottomSheet extends StatelessWidget {
@@ -24,6 +26,7 @@ final class SettingsBottomSheet extends StatelessWidget {
       builder: (context, model, child) {
         return DraggableScrollableSheet(
           initialChildSize: 1,
+          minChildSize: .5,
           builder: (context, scrollController) => ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
             child: Stack(

@@ -13,7 +13,7 @@ part 'quote_and_category_service_mixin.dart';
 @LazySingleton()
 final class QuoteAndCategoryService with ListenableServiceMixin, _QuoteAndCategoryServiceMixin {
   QuoteAndCategoryService() {
-    listenToReactiveValues([_selectedCategory, _quotes]);
+    listenToReactiveValues([_selectedCategories, _quotes]);
   }
 
   Future<void> init() async {
@@ -21,20 +21,24 @@ final class QuoteAndCategoryService with ListenableServiceMixin, _QuoteAndCatego
   }
 
   ///
+  // TODOBUraya premium geldiğinde free kullanıcılar için yalnızca bir seçim yapma izni eklenicek
+  ///
+
+  ///
   /// Reactive Values
   ///
   final ReactiveValue<List<QuoteModel>> _quotes = ReactiveValue<List<QuoteModel>>([]);
-  final ReactiveValue<Categories> _selectedCategory = ReactiveValue<Categories>(Categories.general);
+  final ReactiveValue<List<Categories>> _selectedCategories = ReactiveValue<List<Categories>>([Categories.general]);
 
   ///
   /// Reactive Values Getters
   ///
-  Categories get selectedCategory => _selectedCategory.value;
+  List<Categories> get selectedCategories => _selectedCategories.value;
   List<QuoteModel> get currentQuotes => _quotes.value;
 
-  Future<void> changeCategory({required Categories category, String locale = 'tr'}) async {
+  Future<void> changeCategory({required List<Categories> categories, String locale = 'tr'}) async {
     try {
-      _selectedCategory.value = category;
+      _selectedCategories.value = categories;
       await _fetchQuotesForSelectedCategory(locale: locale);
     } catch (e) {
       debugPrint(e.toString());
@@ -51,7 +55,7 @@ final class QuoteAndCategoryService with ListenableServiceMixin, _QuoteAndCatego
   /// Finally, it notifies the listeners about the changes.
   Future<void> _fetchQuotesForSelectedCategory({String locale = 'tr'}) async {
     await _changeSelectedCategory(
-      categoryKey: _selectedCategory.value,
+      categoryKeys: _selectedCategories.value,
       onQuotesChanged: (List<QuoteModel> quotes) {
         _quotes.value = quotes;
       },

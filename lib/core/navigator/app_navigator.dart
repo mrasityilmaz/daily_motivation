@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
-import 'package:daily_motivation/data/models/quote_notification_model/quote_notification_model.dart';
 import 'package:daily_motivation/data/models/reminder_model/reminder_model.dart';
 import 'package:daily_motivation/presentation/favorites_view/favorites_view.dart';
 import 'package:daily_motivation/presentation/home_view/home_view.dart';

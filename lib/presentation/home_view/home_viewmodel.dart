@@ -19,7 +19,7 @@ final class HomeViewModel extends ReactiveViewModel {
 
   List<QuoteModel> get currentQuoteList => listenableCategoryService.currentQuotes;
 
-  Categories? get selectedCategory => listenableCategoryService.selectedCategory;
+  List<Categories>? get selectedCategories => listenableCategoryService.selectedCategories;
   ThemeConfigurationModel get currentThemeConfiguration => listenableThemeConfigurationService.currentThemeConfiguration;
 
   QuoteModel get currentQuote => currentQuoteList.isNotEmpty ? currentQuoteList[_currentPage] : QuoteModel.empty();

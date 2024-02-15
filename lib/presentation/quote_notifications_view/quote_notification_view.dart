@@ -4,10 +4,12 @@ import 'package:daily_motivation/core/constants/categories_enum.dart';
 import 'package:daily_motivation/core/constants/reminder_schedule_enum.dart';
 import 'package:daily_motivation/core/extensions/categories_extension.dart';
 import 'package:daily_motivation/core/extensions/context_extension.dart';
+import 'package:daily_motivation/core/navigator/app_navigator.dart';
 import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/data/models/quote_notification_model/quote_notification_model.dart';
-import 'package:daily_motivation/data/services/hive_service/boxes/reminder_service.dart';
+import 'package:daily_motivation/data/services/hive_service/boxes/quote_notification_service.dart';
 import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
+import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:daily_motivation/presentation/core_widgets/basic/choose_circle_icon.dart';
 import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
@@ -16,6 +18,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'package:uuid/uuid.dart';
 
 part 'mixins/custom_interval_calculator_mixin.dart';
 part 'mixins/equal_interval_calculator_mixin.dart';
@@ -26,15 +29,14 @@ part 'widgets/equal_interval_section.dart';
 part 'widgets/notification_categories_section.dart';
 
 @immutable
-@RoutePage<QuoteNotificationModel>(name: 'QuoteNotificationsViewRoute')
-final class QuoteNotificationsView<T> extends StatelessWidget {
-  const QuoteNotificationsView({super.key, this.quoteNotification});
-  final QuoteNotificationModel? quoteNotification;
+@RoutePage(name: 'QuoteNotificationsViewRoute')
+final class QuoteNotificationsView extends StatelessWidget {
+  const QuoteNotificationsView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.nonReactive(
-      viewModelBuilder: () => _QuoteNotificationViewModel(editQuoteNotification: quoteNotification),
+      viewModelBuilder: _QuoteNotificationViewModel.new,
       onViewModelReady: (viewModel) => viewModel.onReady(),
       builder: (context, model, child) {
         return Stack(

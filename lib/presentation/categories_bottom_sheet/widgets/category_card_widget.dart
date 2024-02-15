@@ -10,8 +10,16 @@ final class _SubCategoriesButton extends ViewModelWidget<_CategoriesBottomSheetV
 
   @override
   Widget build(BuildContext context, _CategoriesBottomSheetViewModel viewModel) {
+    final bool isSelected = viewModel.isCategorySelected(category);
     return AdvancedButtonWidget(
       expand: true,
+      backgroundColor: isSelected ? context.colors.primary.withOpacity(.75) : context.colors.primary.withOpacity(.2),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+        side: BorderSide(
+          color: context.colors.primary.withOpacity(.3),
+        ),
+      ),
       onPressed: category.isPremium
           ? () async {
               await AppDialogs.instance.showDialog<void>(
@@ -31,7 +39,7 @@ final class _SubCategoriesButton extends ViewModelWidget<_CategoriesBottomSheetV
               );
             }
           : () async {
-              await viewModel.changeCategory(category: category, locale: context.locale.languageCode).then((value) {});
+              await viewModel.changeCategory(category: [category], locale: context.locale.languageCode).then((value) {});
             },
       padding: EdgeInsets.zero,
       child: Stack(
@@ -56,11 +64,11 @@ final class _SubCategoriesButton extends ViewModelWidget<_CategoriesBottomSheetV
               alignment: Alignment.topLeft,
               child: Text(
                 category.name,
-                style: context.textTheme.bodyMedium?.copyWith(color: context.colors.onSurface, fontWeight: FontWeight.w600),
+                style: context.textTheme.bodyMedium?.copyWith(color: isSelected ? context.colors.onPrimary : context.colors.onBackground.withOpacity(.75), fontWeight: FontWeight.w600),
               ),
             ),
           ),
-          if (category.isPremium && viewModel.selectedCategory != category) ...[
+          if (category.isPremium && !isSelected) ...[
             Align(
               alignment: Alignment.bottomLeft,
               child: FractionallySizedBox(
@@ -73,14 +81,14 @@ final class _SubCategoriesButton extends ViewModelWidget<_CategoriesBottomSheetV
                     child: Icon(
                       CupertinoIcons.lock_fill,
                       size: 26,
-                      color: context.colors.onPrimary,
+                      color: context.colors.onBackground,
                     ),
                   ),
                 ),
               ),
             ),
           ],
-          if (viewModel.selectedCategory == category) ...[
+          if (isSelected) ...[
             Align(
               alignment: Alignment.bottomLeft,
               child: FractionallySizedBox(

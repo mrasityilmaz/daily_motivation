@@ -10,20 +10,20 @@ mixin _QuoteAndCategoryServiceMixin {
   ///
   ///
   Future<void> _changeSelectedCategory({
-    required Categories? categoryKey,
+    required List<Categories>? categoryKeys,
     required ValueChanged<List<QuoteModel>> onQuotesChanged,
     String locale = 'tr',
   }) async {
     try {
       final List<QuoteModel> quotes = List<QuoteModel>.empty(growable: true);
-      if (categoryKey == null || categoryKey == Categories.general) {
+      if (categoryKeys?.isEmpty == true || categoryKeys?.contains(Categories.general) == true) {
         await _readGeneralQuotes(locale: locale).then((value) {
           quotes
             ..clear()
             ..addAll(value);
         });
       } else {
-        await _readQuotesWithCategory(category: categoryKey, locale: locale).then((value) {
+        await _readQuotesWithCategory(category: categoryKeys!.first, locale: locale).then((value) {
           quotes
             ..clear()
             ..addAll(value);

@@ -60,13 +60,9 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     QuoteNotificationsViewRoute.name: (routeData) {
-      final args = routeData.argsAs<QuoteNotificationsViewRouteArgs>(orElse: () => const QuoteNotificationsViewRouteArgs());
-      return AutoRoutePage<QuoteNotificationModel>(
+      return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: QuoteNotificationsView<dynamic>(
-          key: args.key,
-          quoteNotification: args.quoteNotification,
-        ),
+        child: const QuoteNotificationsView(),
       );
     },
     RemindersViewRoute.name: (routeData) {
@@ -209,40 +205,17 @@ class OnboardViewRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [QuoteNotificationsView<dynamic>]
-class QuoteNotificationsViewRoute extends PageRouteInfo<QuoteNotificationsViewRouteArgs> {
-  QuoteNotificationsViewRoute({
-    Key? key,
-    QuoteNotificationModel? quoteNotification,
-    List<PageRouteInfo>? children,
-  }) : super(
+/// [QuoteNotificationsView]
+class QuoteNotificationsViewRoute extends PageRouteInfo<void> {
+  const QuoteNotificationsViewRoute({List<PageRouteInfo>? children})
+      : super(
           QuoteNotificationsViewRoute.name,
-          args: QuoteNotificationsViewRouteArgs(
-            key: key,
-            quoteNotification: quoteNotification,
-          ),
           initialChildren: children,
         );
 
   static const String name = 'QuoteNotificationsViewRoute';
 
-  static const PageInfo<QuoteNotificationsViewRouteArgs> page = PageInfo<QuoteNotificationsViewRouteArgs>(name);
-}
-
-class QuoteNotificationsViewRouteArgs {
-  const QuoteNotificationsViewRouteArgs({
-    this.key,
-    this.quoteNotification,
-  });
-
-  final Key? key;
-
-  final QuoteNotificationModel? quoteNotification;
-
-  @override
-  String toString() {
-    return 'QuoteNotificationsViewRouteArgs{key: $key, quoteNotification: $quoteNotification}';
-  }
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

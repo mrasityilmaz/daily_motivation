@@ -12,7 +12,7 @@ final class _CategoriesSection extends StatelessWidget {
       title: Container(
         height: kToolbarHeight,
         decoration: BoxDecoration(
-          color: context.appColors.secondBlackColor,
+          color: context.appColors.greyColor,
         ),
         padding: context.screenPaddingHorizontal,
         child: Row(
@@ -26,7 +26,7 @@ final class _CategoriesSection extends StatelessWidget {
         crossAxisCount: 2,
         crossAxisSpacing: context.screenPaddingHorizontal.horizontal / 4,
         mainAxisSpacing: context.screenPaddingHorizontal.horizontal / 4,
-        childAspectRatio: 2,
+        childAspectRatio: 2.3,
       ),
       items: categoryGroup.subCategories.map((s) {
         return _SubCategoriesButton(

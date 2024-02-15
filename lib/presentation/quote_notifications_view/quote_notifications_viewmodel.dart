@@ -1,18 +1,18 @@
 part of 'quote_notification_view.dart';
 
 final class _QuoteNotificationViewModel extends BaseViewModel with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin, SelectedCategoriesMixin {
-  _QuoteNotificationViewModel({this.editQuoteNotification});
+  _QuoteNotificationViewModel();
 
-  final QuoteNotificationModel? editQuoteNotification;
+  final QuoteNotificationBoxService _quoteNotificationBoxService = HiveService.instance.quoteNotificationBoxService;
 
-  final ReminderBoxService _reminderBoxService = HiveService.instance.reminderBoxService;
+  late final QuoteNotificationModel? _oldQuoteNotificationModel = _quoteNotificationBoxService.quoteNotificationValue;
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   bool get isFormValid => formKey.currentState?.validate() ?? false;
 
   void onReady() {
-    if (editQuoteNotification != null) {
+    if (_oldQuoteNotificationModel != null) {
       _initEditReminderValue();
     }
   }
@@ -20,30 +20,30 @@ final class _QuoteNotificationViewModel extends BaseViewModel with EqualInterval
   void _initEditReminderValue() {
     _selectedDaysOfWeekIndex
       ..clear()
-      ..addAll(editQuoteNotification?.notificationDaysInWeek ?? []);
+      ..addAll(_oldQuoteNotificationModel?.notificationDaysInWeek ?? []);
 
     _selectedCategories
       ..clear()
-      ..addAll(editQuoteNotification?.notificationCategories ?? []);
+      ..addAll(_oldQuoteNotificationModel?.notificationCategories ?? []);
 
-    if (editQuoteNotification?.notificationCustomIntervalSchedule != null) {
+    if (_oldQuoteNotificationModel?.notificationCustomIntervalSchedule != null) {
       _selectedScheduleType = ReminderScheduleEnum.customInterval;
       _customIntervalValue
         ..clear()
-        ..addAll(editQuoteNotification?.notificationCustomIntervalSchedule?.notificationSchedules ?? []);
-    } else if (editQuoteNotification?.notificationEqualSchedule != null) {
+        ..addAll(_oldQuoteNotificationModel?.notificationCustomIntervalSchedule?.notificationSchedules ?? []);
+    } else if (_oldQuoteNotificationModel?.notificationEqualSchedule != null) {
       _selectedScheduleType = ReminderScheduleEnum.equalInterval;
 
       setEqualIntervalEndValue(
-        end: editQuoteNotification?.notificationEqualSchedule?.notificationEndTime,
+        end: _oldQuoteNotificationModel?.notificationEqualSchedule?.notificationEndTime,
       );
 
       setEqualIntervalStartValue(
-        start: editQuoteNotification?.notificationEqualSchedule?.notificationStartTime,
+        start: _oldQuoteNotificationModel?.notificationEqualSchedule?.notificationStartTime,
       );
 
       setEqualIntervalIntervalValue(
-        interval: editQuoteNotification?.notificationEqualSchedule?.notificationInterval ?? 0,
+        interval: _oldQuoteNotificationModel?.notificationEqualSchedule?.notificationInterval ?? 0,
       );
     }
   }
@@ -58,7 +58,7 @@ final class _QuoteNotificationViewModel extends BaseViewModel with EqualInterval
   Future<void> save() async {
     try {
       if (formIsValid) {
-        if (editQuoteNotification != null) {
+        if (_oldQuoteNotificationModel != null) {
           await _saveEditedQuotedNotification();
         } else {
           await _saveNewQuoteNotification();
@@ -78,36 +78,35 @@ final class _QuoteNotificationViewModel extends BaseViewModel with EqualInterval
   /// await _saveNewReminder();
   /// ```
   Future<void> _saveNewQuoteNotification() async {
-    // final ReminderModel reminderModel = ReminderModel(
-    //   notificationId: const Uuid().v4(),
+    final QuoteNotificationModel quoteNotificationModel = QuoteNotificationModel(
+      notificationId: const Uuid().v4(),
+      notificationCategories: selectedCategoriesValue,
+      notificationDaysInWeek: selectedDaysOfWeekIndex,
+      notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+      notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
+    );
 
-    //   notificationDaysInWeek: selectedDaysOfWeekIndex,
-    //   notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
-    //   notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
-    // );
+    await runBusyFuture(
+      _quoteNotificationBoxService.addQuoteNotification(quoteNotificationModel),
+    );
 
-    // await runBusyFuture(
-    //   _reminderBoxService.addReminder(reminderModel),
-    // );
-
-    // await locator<AppRouter>().pop<ReminderModel>(reminderModel);
+    await locator<AppRouter>().pop();
   }
 
   Future<void> _saveEditedQuotedNotification() async {
-    // final ReminderModel reminderModel = ReminderModel(
-    //   notificationId: editQuoteNotification!.notificationId,
-    //   notificationDaysInWeek: selectedDaysOfWeekIndex,
-    //   notificationTitle: title,
-    //   notificationBody: message,
-    //   notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
-    //   notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
-    // );
+    final QuoteNotificationModel quoteNotificationModel = QuoteNotificationModel(
+      notificationId: _oldQuoteNotificationModel!.notificationId,
+      notificationCategories: selectedCategoriesValue,
+      notificationDaysInWeek: selectedDaysOfWeekIndex,
+      notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+      notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
+    );
 
-    // await runBusyFuture(
-    //   _reminderBoxService.updateReminder(reminderModel.notificationId, reminderModel),
-    // );
+    await runBusyFuture(
+      _quoteNotificationBoxService.updateQuoteNotification(quoteNotificationModel.notificationId, quoteNotificationModel),
+    );
 
-    // await locator<AppRouter>().pop<ReminderModel>(reminderModel);
+    await locator<AppRouter>().pop();
   }
 
   ///

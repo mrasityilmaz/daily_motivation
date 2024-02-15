@@ -32,7 +32,7 @@ final class _BottomButtonsSection extends ViewModelWidget<HomeViewModel> {
                         child: const CategoriesBottomSheet(),
                       );
                     },
-                    text: viewModel.selectedCategory?.name ?? '',
+                    text: viewModel.selectedCategories?.first.name ?? '',
                     textColor: Colors.white,
                     icon: const Icon(
                       CupertinoIcons.square_grid_2x2,
