@@ -11,17 +11,6 @@ final class _BodyWidget extends StatelessWidget {
     return CustomScrollView(
       controller: scrollController,
       slivers: [
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: context.screenPadding + context.paddingNormalBottom,
-            child: AdvancedButtonWidget.text(
-              expand: true,
-              text: 'Create your own mix',
-              onPressed: () {},
-              textStyle: context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
-            ),
-          ),
-        ),
         ...CategoryGroup.values.map(
           (e) => _CategoriesSection(
             categoryGroup: e,

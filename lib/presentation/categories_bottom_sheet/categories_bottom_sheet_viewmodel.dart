@@ -2,7 +2,15 @@ part of 'categories_bottom_sheet.dart';
 
 final class _CategoriesBottomSheetViewModel extends ReactiveViewModel {
   final QuoteAndCategoryService _categoryService = locator<QuoteAndCategoryService>();
+  final PremiumServices _premiumServices = locator<PremiumServices>();
+  final PremiumConstants _premiumConstants = locator<PremiumConstants>();
+
   QuoteAndCategoryService get listenableCategoryService => listenableServices.first as QuoteAndCategoryService;
+  PremiumServices get listenablePremiumServices => listenableServices[1] as PremiumServices;
+
+  PremiumConstants get premiumConstants => _premiumConstants;
+
+  bool get isPremium => listenablePremiumServices.isPremium;
 
   List<Categories> get selectedCategory => listenableCategoryService.selectedCategories;
 
@@ -23,5 +31,5 @@ final class _CategoriesBottomSheetViewModel extends ReactiveViewModel {
   }
 
   @override
-  List<ListenableServiceMixin> get listenableServices => [_categoryService];
+  List<ListenableServiceMixin> get listenableServices => [_categoryService, _premiumServices];
 }

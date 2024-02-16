@@ -1,6 +1,7 @@
 // ignore_for_file: comment_references
 
 import 'package:daily_motivation/core/constants/categories_enum.dart';
+import 'package:daily_motivation/core/constants/premium_constants/premium_constants.dart';
 import 'package:daily_motivation/core/services/logger_service.dart';
 import 'package:daily_motivation/data/models/quote_model/quote_model.dart';
 import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
@@ -14,6 +15,7 @@ import 'package:stacked/stacked.dart';
 final class HomeViewModel extends ReactiveViewModel {
   final QuoteAndCategoryService _categoryService = locator<QuoteAndCategoryService>();
   final ThemeConfigurationService _themeConfigurationService = locator<ThemeConfigurationService>();
+  final PremiumConstants _premiumConstants = locator<PremiumConstants>();
   QuoteAndCategoryService get listenableCategoryService => listenableServices.first as QuoteAndCategoryService;
   ThemeConfigurationService get listenableThemeConfigurationService => listenableServices[1] as ThemeConfigurationService;
 
@@ -49,18 +51,33 @@ final class HomeViewModel extends ReactiveViewModel {
     }
   }
 
-  @override
-  List<ListenableServiceMixin> get listenableServices => [_categoryService, _themeConfigurationService];
-
   ///
   ///
   ///  UI Controllers
   ///
   final PageController pageController = PageController();
 
+  Future<void> onPageChanged(int index) async {
+    try {
+      ///
+      /// Check every time the page changes if the user should watch an ad to unlock quote swipe.
+      /// If the user should watch an ad to unlock quote swipe, show an ad.
+      /// If the user has watched the ad, unlock the quote swipe.
+      ///
+      if (_premiumConstants.shouldUserWatchAdToUnlockQuoteSwipe(index: index)) {
+        debugPrint('User should watch ad to unlock quote swipe');
+      }
+    } catch (e, s) {
+      LoggerService.instance.catchLog(e, s);
+    }
+  }
+
   @override
   void dispose() {
     pageController.dispose();
     super.dispose();
   }
+
+  @override
+  List<ListenableServiceMixin> get listenableServices => [_categoryService, _themeConfigurationService];
 }

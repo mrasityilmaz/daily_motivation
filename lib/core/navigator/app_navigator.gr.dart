@@ -16,7 +16,8 @@ abstract class _$AppRouter extends RootStackRouter {
   @override
   final Map<String, PageFactory> pagesMap = {
     AddNewOrEditQuoteViewRoute.name: (routeData) {
-      final args = routeData.argsAs<AddNewOrEditQuoteViewRouteArgs>(orElse: () => const AddNewOrEditQuoteViewRouteArgs());
+      final args = routeData.argsAs<AddNewOrEditQuoteViewRouteArgs>(
+          orElse: () => const AddNewOrEditQuoteViewRouteArgs());
       return AutoRoutePage<QuoteHiveModel>(
         routeData: routeData,
         child: AddNewOrEditQuoteView<dynamic>(
@@ -26,7 +27,8 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     AddNewOrEditReminderViewRoute.name: (routeData) {
-      final args = routeData.argsAs<AddNewOrEditReminderViewRouteArgs>(orElse: () => const AddNewOrEditReminderViewRouteArgs());
+      final args = routeData.argsAs<AddNewOrEditReminderViewRouteArgs>(
+          orElse: () => const AddNewOrEditReminderViewRouteArgs());
       return AutoRoutePage<ReminderModel>(
         routeData: routeData,
         child: AddNewOrEditReminderView<dynamic>(
@@ -76,7 +78,8 @@ abstract class _$AppRouter extends RootStackRouter {
 
 /// generated route for
 /// [AddNewOrEditQuoteView<dynamic>]
-class AddNewOrEditQuoteViewRoute extends PageRouteInfo<AddNewOrEditQuoteViewRouteArgs> {
+class AddNewOrEditQuoteViewRoute
+    extends PageRouteInfo<AddNewOrEditQuoteViewRouteArgs> {
   AddNewOrEditQuoteViewRoute({
     Key? key,
     QuoteHiveModel? editQuote,
@@ -92,7 +95,8 @@ class AddNewOrEditQuoteViewRoute extends PageRouteInfo<AddNewOrEditQuoteViewRout
 
   static const String name = 'AddNewOrEditQuoteViewRoute';
 
-  static const PageInfo<AddNewOrEditQuoteViewRouteArgs> page = PageInfo<AddNewOrEditQuoteViewRouteArgs>(name);
+  static const PageInfo<AddNewOrEditQuoteViewRouteArgs> page =
+      PageInfo<AddNewOrEditQuoteViewRouteArgs>(name);
 }
 
 class AddNewOrEditQuoteViewRouteArgs {
@@ -113,7 +117,8 @@ class AddNewOrEditQuoteViewRouteArgs {
 
 /// generated route for
 /// [AddNewOrEditReminderView<dynamic>]
-class AddNewOrEditReminderViewRoute extends PageRouteInfo<AddNewOrEditReminderViewRouteArgs> {
+class AddNewOrEditReminderViewRoute
+    extends PageRouteInfo<AddNewOrEditReminderViewRouteArgs> {
   AddNewOrEditReminderViewRoute({
     Key? key,
     ReminderModel? reminder,
@@ -129,7 +134,8 @@ class AddNewOrEditReminderViewRoute extends PageRouteInfo<AddNewOrEditReminderVi
 
   static const String name = 'AddNewOrEditReminderViewRoute';
 
-  static const PageInfo<AddNewOrEditReminderViewRouteArgs> page = PageInfo<AddNewOrEditReminderViewRouteArgs>(name);
+  static const PageInfo<AddNewOrEditReminderViewRouteArgs> page =
+      PageInfo<AddNewOrEditReminderViewRouteArgs>(name);
 }
 
 class AddNewOrEditReminderViewRouteArgs {
