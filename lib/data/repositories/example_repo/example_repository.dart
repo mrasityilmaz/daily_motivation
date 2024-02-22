@@ -1,12 +1,12 @@
-import 'package:daily_motivation/core/errors/errors.dart';
-import 'package:daily_motivation/core/extensions/dartz_extension.dart';
-import 'package:daily_motivation/core/platform/network_info.dart';
-import 'package:daily_motivation/data/models/quote_model/quote_model.dart';
-import 'package:daily_motivation/domain/repositories/example_repository/data_sources/ilocal_repository.dart';
-import 'package:daily_motivation/domain/repositories/example_repository/data_sources/iremote_repository.dart';
-import 'package:daily_motivation/domain/repositories/example_repository/i_example_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
+import 'package:quotely/core/errors/errors.dart';
+import 'package:quotely/core/extensions/dartz_extension.dart';
+import 'package:quotely/core/platform/network_info.dart';
+import 'package:quotely/data/models/quote_model/quote_model.dart';
+import 'package:quotely/domain/repositories/example_repository/data_sources/ilocal_repository.dart';
+import 'package:quotely/domain/repositories/example_repository/data_sources/iremote_repository.dart';
+import 'package:quotely/domain/repositories/example_repository/i_example_repository.dart';
 
 @LazySingleton(as: IExampleRepository)
 class ExampleRepository implements IExampleRepository {

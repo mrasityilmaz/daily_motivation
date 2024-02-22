@@ -1,4 +1,4 @@
-name: daily_motivation
+name: quotely
 description: A new Flutter project.
 
 publish_to: 'none'
@@ -56,6 +56,7 @@ dependencies:
   flutter_slidable: ^3.0.1
   uuid: ^4.3.3
   logger: ^2.0.2+1
+  firebase_core: ^2.25.4
 
 ###
 ### Dependencies

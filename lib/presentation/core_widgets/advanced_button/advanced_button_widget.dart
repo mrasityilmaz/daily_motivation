@@ -1,7 +1,7 @@
-import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/core/services/logger_service.dart';
-import 'package:daily_motivation/presentation/core_widgets/animations/bounce_animation.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/core/services/logger_service.dart';
+import 'package:quotely/presentation/core_widgets/animations/bounce_animation.dart';
 
 part 'buttons_base/icon_button.dart';
 part 'buttons_base/icon_text_button.dart';

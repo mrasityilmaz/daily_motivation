@@ -1,5 +1,5 @@
-import 'package:daily_motivation/core/errors/errors.dart';
 import 'package:dartz/dartz.dart';
+import 'package:quotely/core/errors/errors.dart';
 
 typedef DataModel<T> = Either<Failure, T>;
 typedef TestRight<T> = Right<Failure, T>;

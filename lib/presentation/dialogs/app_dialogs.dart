@@ -1,15 +1,15 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/core/navigator/app_navigator.dart';
-import 'package:daily_motivation/injection/injection_container.dart';
-import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
-import 'package:daily_motivation/presentation/dialogs/lock_overlay_dialog.dart';
-import 'package:daily_motivation/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/core/navigator/app_navigator.dart';
+import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/dialogs/lock_overlay_dialog.dart';
+import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 
 final class AppDialogs {
   factory AppDialogs() => instance;

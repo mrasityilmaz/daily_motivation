@@ -1,22 +1,24 @@
 import 'dart:io';
 
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:daily_motivation/core/constants/default_fonts_enum.dart';
-import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/core/navigator/app_navigator.dart';
-import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
-import 'package:daily_motivation/data/services/theme_configuration_service/theme_configuration_service.dart';
-import 'package:daily_motivation/injection/injection_container.dart';
-import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
-import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
-import 'package:daily_motivation/presentation/dialogs/app_dialogs.dart';
-import 'package:daily_motivation/presentation/dialogs/dialog_bodies/show_or_pay_dialog_body.dart';
-import 'package:daily_motivation/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_pixels/image_pixels.dart';
+import 'package:quotely/core/constants/default_fonts_enum.dart';
+import 'package:quotely/core/constants/premium_constants/theme_constants_mixin.dart';
+import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/core/navigator/app_navigator.dart';
+import 'package:quotely/core/services/premium_services/premium_services.dart';
+import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
+import 'package:quotely/data/services/theme_configuration_service/theme_configuration_service.dart';
+import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
+import 'package:quotely/presentation/dialogs/app_dialogs.dart';
+import 'package:quotely/presentation/dialogs/dialog_bodies/show_or_pay_dialog_body.dart';
+import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:stacked/stacked.dart';
 
 part 'themes_bottom_sheet_viewmodel.dart';

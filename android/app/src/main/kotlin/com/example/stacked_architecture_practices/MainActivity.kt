@@ -1,4 +1,4 @@
-package com.example.daily_motivation
+package com.example.quotely
 
 import io.flutter.embedding.android.FlutterActivity
 

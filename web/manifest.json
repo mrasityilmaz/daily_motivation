@@ -1,6 +1,6 @@
 {
-    "name": "daily_motivation",
-    "short_name": "daily_motivation",
+    "name": "quotely",
+    "short_name": "quotely",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

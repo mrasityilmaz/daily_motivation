@@ -1,6 +1,8 @@
-part of 'premium_constants.dart';
+import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/services/premium_services/premium_services.dart';
+import 'package:quotely/injection/injection_container.dart';
 
-mixin _PremiumConstantCategoryMixin {
+mixin PremiumConstantCategoryMixin {
   final PremiumServices _premiumServices = locator<PremiumServices>();
 
   ///
@@ -16,7 +18,6 @@ mixin _PremiumConstantCategoryMixin {
   ///
   ///
 
-  @protected
   int get _maxCategoryCount => _premiumServices.isPremium ? kMaxPremiumCategoryCount : kMaxFreeCategoryCount;
 
   ///

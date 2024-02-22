@@ -1,10 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/core/navigator/app_navigator.dart';
-import 'package:daily_motivation/injection/injection_container.dart';
-import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/core/navigator/app_navigator.dart';
+import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 
 @immutable
 final class ShowOrPayDialogBody extends StatelessWidget {

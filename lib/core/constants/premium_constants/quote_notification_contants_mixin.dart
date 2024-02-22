@@ -1,6 +1,4 @@
-part of 'premium_constants.dart';
-
-mixin _PremiumConstantQuoteNotificationMixin {
+mixin PremiumConstantQuoteNotificationMixin {
   ///
   /// ##############################################################################
   ///

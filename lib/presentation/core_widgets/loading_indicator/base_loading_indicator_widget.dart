@@ -1,7 +1,7 @@
 import 'dart:ui';
 
-import 'package:daily_motivation/core/extensions/context_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/core/extensions/context_extension.dart';
 
 final class BaseLoadingIndicator extends StatelessWidget {
   const BaseLoadingIndicator({super.key, this.progressWidget, this.hasBackgroundColor = true});

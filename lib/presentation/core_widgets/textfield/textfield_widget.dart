@@ -1,11 +1,11 @@
 // ignore_for_file: use_if_null_to_convert_nulls_to_bools
 
-import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
-import 'package:daily_motivation/shared/theme/color_scheme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/shared/theme/color_scheme.dart';
 
 @immutable
 final class CustomTextFieldWidget extends StatelessWidget {

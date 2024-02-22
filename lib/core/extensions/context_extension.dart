@@ -1,8 +1,8 @@
 import 'dart:math';
 
-import 'package:daily_motivation/shared/app_theme.dart';
-import 'package:daily_motivation/shared/theme/color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/shared/app_theme.dart';
+import 'package:quotely/shared/theme/color_scheme.dart';
 
 extension ContextExtension on BuildContext {
   MediaQueryData get mediaQuery => MediaQuery.of(this);

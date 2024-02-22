@@ -5,19 +5,19 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "daily_motivation",
+			"name": "quotely",
 			"request": "launch",
 			"type": "dart",
 			
 		},
 		{
-			"name": "daily_motivation (profile mode)",
+			"name": "quotely (profile mode)",
 			"request": "launch",
 			"type": "dart",
 			"flutterMode": "profile"
 		},
 		{
-			"name": "daily_motivation (release mode)",
+			"name": "quotely (release mode)",
 			"request": "launch",
 			"type": "dart",
 			"flutterMode": "release"

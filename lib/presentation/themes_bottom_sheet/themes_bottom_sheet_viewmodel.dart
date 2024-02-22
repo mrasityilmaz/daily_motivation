@@ -1,8 +1,16 @@
 part of 'themes_bottom_sheet.dart';
 
-final class _ThemesBottomSheetViewModel extends ReactiveViewModel {
+final class _ThemesBottomSheetViewModel extends ReactiveViewModel with PremiumConstantThemeConfigMixin {
   final ThemeConfigurationService _themeConfigurationService = locator<ThemeConfigurationService>();
+
+  final PremiumServices _premiumServices = locator<PremiumServices>();
+
   ThemeConfigurationService get _listenableThemeConfigurationService => listenableServices.first as ThemeConfigurationService;
+  PremiumServices get _listenablePremiumServices => listenableServices[1] as PremiumServices;
+
+  bool get userIsPremium => _listenablePremiumServices.isPremium;
+
+  bool isThemeConfigPremium(int index) => shouldUserWatchAdToUnlockTheme(index: index, userIsPremium: userIsPremium);
 
   ThemeConfigurationModel get currentThemeConfiguration => _listenableThemeConfigurationService.currentThemeConfiguration;
 
@@ -16,5 +24,6 @@ final class _ThemesBottomSheetViewModel extends ReactiveViewModel {
   @override
   List<ListenableServiceMixin> get listenableServices => [
         _themeConfigurationService,
+        _premiumServices,
       ];
 }

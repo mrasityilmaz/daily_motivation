@@ -1,5 +1,5 @@
-import 'package:daily_motivation/presentation/core_widgets/loading_indicator/base_loading_indicator_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/presentation/core_widgets/loading_indicator/base_loading_indicator_widget.dart';
 import 'package:stacked/stacked.dart';
 
 final class ViewModelLoadingIndicator<T extends BaseViewModel> extends ViewModelWidget<T> {

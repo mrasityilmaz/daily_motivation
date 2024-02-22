@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:daily_motivation/data/models/quote_notification_model/quote_notification_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:quotely/data/models/quote_notification_model/quote_notification_model.dart';
 
 final class QuoteNotificationHiveAdapter extends TypeAdapter<QuoteNotificationModel> {
   @override

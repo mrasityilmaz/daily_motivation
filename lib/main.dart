@@ -1,13 +1,13 @@
 import 'dart:async';
 
-import 'package:daily_motivation/core/navigator/app_navigator.dart';
-import 'package:daily_motivation/core/services/logger_service.dart';
-import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
-import 'package:daily_motivation/injection/injection_container.dart';
-import 'package:daily_motivation/shared/app_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/core/navigator/app_navigator.dart';
+import 'package:quotely/core/services/logger_service.dart';
+import 'package:quotely/data/services/hive_service/hive_service.dart';
+import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/shared/app_theme.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
 void main() async {

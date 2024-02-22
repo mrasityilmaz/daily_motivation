@@ -27,7 +27,7 @@ final class _BodyWidget extends ViewModelWidget<_ThemesBottomSheetViewModel> {
               return _ImageBoxWidget(
                 font: currentFont,
                 backgroundPath: currentBackgroundPath,
-                isLocked: index > 8,
+                isLocked: viewModel.isThemeConfigPremium(index),
                 onChanged: (newBg) async {
                   await viewModel.updateThemeConfiguration(model: newBg).then((value) {
                     locator<AppRouter>().pop();

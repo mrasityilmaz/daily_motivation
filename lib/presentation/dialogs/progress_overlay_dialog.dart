@@ -2,9 +2,9 @@
 
 import 'dart:async';
 
-import 'package:daily_motivation/core/services/logger_service.dart';
-import 'package:daily_motivation/presentation/core_widgets/loading_indicator/base_loading_indicator_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/core/services/logger_service.dart';
+import 'package:quotely/presentation/core_widgets/loading_indicator/base_loading_indicator_widget.dart';
 
 final class ProgressOverlayDialog {
   factory ProgressOverlayDialog() => instance;

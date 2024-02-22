@@ -1,16 +1,16 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
-import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/core/services/logger_service.dart';
-import 'package:daily_motivation/data/models/quote_hive_model/quote_hive_model.dart';
-import 'package:daily_motivation/data/services/hive_service/boxes/liked_quote_service.dart';
-import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
-import 'package:daily_motivation/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/core/services/logger_service.dart';
+import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:quotely/data/services/hive_service/boxes/liked_quote_service.dart';
+import 'package:quotely/data/services/hive_service/hive_service.dart';
+import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:stacked/stacked.dart';
 
 part 'favorites_viewmodel.dart';

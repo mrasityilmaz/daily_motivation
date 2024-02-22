@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
 
 final class ThemeConfigHiveAdapter extends TypeAdapter<ThemeConfigurationModel> {
   @override

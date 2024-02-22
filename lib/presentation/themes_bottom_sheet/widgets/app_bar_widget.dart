@@ -16,6 +16,7 @@ final class _ThemesBottomSheetAppBar extends StatelessWidget implements Preferre
       actions: [
         AdvancedButtonWidget.text(
           text: 'Kilitleri Kaldır',
+          textColor: context.colors.onBackground,
           backgroundColor: Colors.transparent,
           onPressed: () {},
         ),

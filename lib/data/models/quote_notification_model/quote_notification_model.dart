@@ -2,10 +2,10 @@
 
 import 'dart:convert';
 
-import 'package:daily_motivation/core/constants/categories_enum.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:quotely/core/constants/categories_enum.dart';
 
 part 'quote_notification_model.freezed.dart';
 part 'quote_notification_model.g.dart';

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:daily_motivation/data/models/reminder_model/reminder_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:quotely/data/models/reminder_model/reminder_model.dart';
 
 final class ReminderHiveAdapter extends TypeAdapter<ReminderModel> {
   @override

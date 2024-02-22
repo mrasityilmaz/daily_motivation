@@ -39,7 +39,7 @@ final class _SubCategoriesButton extends ViewModelWidget<_CategoriesBottomSheetV
               );
             }
           : () async {
-              await viewModel.changeCategory(category: [category], locale: context.locale.languageCode).then((value) {});
+              await viewModel.changeCategory(category: category, locale: context.locale.languageCode).then((value) {});
             },
       padding: EdgeInsets.zero,
       child: Stack(

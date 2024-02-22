@@ -1,4 +1,4 @@
-// import 'package:daily_motivation/vendor/auto_size_text_override/auto_size_group_override.dart';
+// import 'package:quotely/vendor/auto_size_text_override/auto_size_group_override.dart';
 // import 'package:flutter/material.dart';
 
 // /// Flutter widget that automatically resizes text to fit perfectly within its

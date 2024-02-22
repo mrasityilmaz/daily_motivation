@@ -11,4 +11,9 @@ final class PremiumServices with ListenableServiceMixin {
   final ReactiveValue<bool> _isPremiumReactive = ReactiveValue<bool>(false);
 
   bool get isPremium => _isPremiumReactive.value;
+
+  void setPremiumStatus(bool value) {
+    _isPremiumReactive.value = value;
+    notifyListeners();
+  }
 }

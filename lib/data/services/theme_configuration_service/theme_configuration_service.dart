@@ -1,10 +1,10 @@
-import 'package:daily_motivation/core/constants/default_fonts_enum.dart';
-import 'package:daily_motivation/core/extensions/context_extension.dart';
-import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
-import 'package:daily_motivation/data/services/hive_service/boxes/theme_config_service.dart';
-import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
+import 'package:quotely/core/constants/default_fonts_enum.dart';
+import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
+import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
+import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:stacked/stacked.dart';
 
 part 'screen_design_tools_mixin.dart';

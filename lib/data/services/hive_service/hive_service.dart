@@ -1,16 +1,17 @@
-import 'package:daily_motivation/core/constants/hive_constants.dart';
-import 'package:daily_motivation/data/models/hive_adapters/quote_hive_adapter/quote_hive_adapter.dart';
-import 'package:daily_motivation/data/models/hive_adapters/quote_notification_hive_adapter/quote_notification_hive_adapter.dart';
-import 'package:daily_motivation/data/models/hive_adapters/reminder_hive_adapter/reminder_hive_adapter.dart';
-import 'package:daily_motivation/data/models/hive_adapters/theme_config_adapter/theme_config_adapter.dart';
-import 'package:daily_motivation/data/services/hive_service/boxes/liked_quote_service.dart';
-import 'package:daily_motivation/data/services/hive_service/boxes/my_quote_service.dart';
-import 'package:daily_motivation/data/services/hive_service/boxes/quote_notification_service.dart';
-import 'package:daily_motivation/data/services/hive_service/boxes/reminder_service.dart';
-import 'package:daily_motivation/data/services/hive_service/boxes/theme_config_service.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:quotely/core/constants/hive_constants.dart';
+import 'package:quotely/data/models/hive_adapters/quote_hive_adapter/quote_hive_adapter.dart';
+import 'package:quotely/data/models/hive_adapters/quote_notification_hive_adapter/quote_notification_hive_adapter.dart';
+import 'package:quotely/data/models/hive_adapters/reminder_hive_adapter/reminder_hive_adapter.dart';
+import 'package:quotely/data/models/hive_adapters/theme_config_adapter/theme_config_adapter.dart';
+import 'package:quotely/data/services/hive_service/boxes/category_service.dart';
+import 'package:quotely/data/services/hive_service/boxes/liked_quote_service.dart';
+import 'package:quotely/data/services/hive_service/boxes/my_quote_service.dart';
+import 'package:quotely/data/services/hive_service/boxes/quote_notification_service.dart';
+import 'package:quotely/data/services/hive_service/boxes/reminder_service.dart';
+import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
 
 @immutable
 final class HiveService {
@@ -30,6 +31,7 @@ final class HiveService {
   final ThemeConfigurationBoxService themeConfigurationBoxService = ThemeConfigurationBoxService(boxKey: HiveConstants.themeConfigurationBoxKey);
   final ReminderBoxService reminderBoxService = ReminderBoxService(boxKey: HiveConstants.remindersBoxKey);
   final QuoteNotificationBoxService quoteNotificationBoxService = QuoteNotificationBoxService(boxKey: HiveConstants.quoteNotificationBoxKey);
+  final CategoryBoxService categoryBoxService = CategoryBoxService(boxKey: HiveConstants.categoryBoxKey);
 
   ///
   ///
@@ -54,6 +56,7 @@ final class HiveService {
       ..registerAdapter(QuoteNotificationScheduleCustomIntervalModelHiveAdapter());
 
     await Future.wait([
+      categoryBoxService.initBox(),
       likedQuoteBoxService.initBox(),
       myQuoteBoxService.initBox(),
       themeConfigurationBoxService.initBox(),

@@ -1,27 +1,39 @@
 // ignore_for_file: comment_references
 
-import 'package:daily_motivation/core/constants/categories_enum.dart';
-import 'package:daily_motivation/core/constants/premium_constants/premium_constants.dart';
-import 'package:daily_motivation/core/services/logger_service.dart';
-import 'package:daily_motivation/data/models/quote_model/quote_model.dart';
-import 'package:daily_motivation/data/models/theme_configuration_model/theme_configuration_model.dart';
-import 'package:daily_motivation/data/services/category_service/quote_and_category_service.dart';
-import 'package:daily_motivation/data/services/hive_service/hive_service.dart';
-import 'package:daily_motivation/data/services/theme_configuration_service/theme_configuration_service.dart';
-import 'package:daily_motivation/injection/injection_container.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/constants/premium_constants/quote_swipe_constants_mixin.dart';
+import 'package:quotely/core/services/logger_service.dart';
+import 'package:quotely/core/services/premium_services/premium_services.dart';
+import 'package:quotely/data/models/quote_model/quote_model.dart';
+import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
+import 'package:quotely/data/services/hive_service/hive_service.dart';
+import 'package:quotely/data/services/quote_and_category_service/quote_and_category_service.dart';
+import 'package:quotely/data/services/theme_configuration_service/theme_configuration_service.dart';
+import 'package:quotely/injection/injection_container.dart';
 import 'package:stacked/stacked.dart';
 
-final class HomeViewModel extends ReactiveViewModel {
+final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwipeMixin {
+  ///
+  /// Define the services
+  ///
   final QuoteAndCategoryService _categoryService = locator<QuoteAndCategoryService>();
   final ThemeConfigurationService _themeConfigurationService = locator<ThemeConfigurationService>();
-  final PremiumConstants _premiumConstants = locator<PremiumConstants>();
+  final PremiumServices _premiumServices = locator<PremiumServices>();
+
+  ///
+  /// Getters for the services and the current state of the services
+  ///
   QuoteAndCategoryService get listenableCategoryService => listenableServices.first as QuoteAndCategoryService;
   ThemeConfigurationService get listenableThemeConfigurationService => listenableServices[1] as ThemeConfigurationService;
+  PremiumServices get listenablePremiumServices => listenableServices[2] as PremiumServices;
 
+  ///
+  /// Getters for the current values of the services
+  ///
   List<QuoteModel> get currentQuoteList => listenableCategoryService.currentQuotes;
 
-  List<Categories>? get selectedCategories => listenableCategoryService.selectedCategories;
+  Categories? get selectedCategories => listenableCategoryService.selectedCategory;
   ThemeConfigurationModel get currentThemeConfiguration => listenableThemeConfigurationService.currentThemeConfiguration;
 
   QuoteModel get currentQuote => currentQuoteList.isNotEmpty ? currentQuoteList[_currentPage] : QuoteModel.empty();
@@ -64,8 +76,10 @@ final class HomeViewModel extends ReactiveViewModel {
       /// If the user should watch an ad to unlock quote swipe, show an ad.
       /// If the user has watched the ad, unlock the quote swipe.
       ///
-      if (_premiumConstants.shouldUserWatchAdToUnlockQuoteSwipe(index: index)) {
+      if (shouldUserWatchAdToUnlockQuoteSwipe(index: index)) {
         debugPrint('User should watch ad to unlock quote swipe');
+
+        // TODO - Show ad and unlock quote swipe
       }
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
@@ -74,10 +88,12 @@ final class HomeViewModel extends ReactiveViewModel {
 
   @override
   void dispose() {
-    pageController.dispose();
+    pageController
+      ..removeListener(() {})
+      ..dispose();
     super.dispose();
   }
 
   @override
-  List<ListenableServiceMixin> get listenableServices => [_categoryService, _themeConfigurationService];
+  List<ListenableServiceMixin> get listenableServices => [_categoryService, _themeConfigurationService, _premiumServices];
 }

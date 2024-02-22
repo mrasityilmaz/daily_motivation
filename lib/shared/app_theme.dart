@@ -1,8 +1,8 @@
-import 'package:daily_motivation/injection/injection_container.dart';
-import 'package:daily_motivation/shared/theme/color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/shared/theme/color_scheme.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
 part 'theme/app_theme.dart';

@@ -2,6 +2,12 @@
 
 part of 'quote_and_category_service.dart';
 
+///
+/// This mixin contains the methods for reading quotes with the specified category and locale.
+/// It also contains the method for changing the selected category and notifying the listeners.
+/// This mixin is used in the [QuoteAndCategoryService] class.
+///
+///
 mixin _QuoteAndCategoryServiceMixin {
   final String _categoryPath = 'assets/quotes/categories/';
 
@@ -10,20 +16,20 @@ mixin _QuoteAndCategoryServiceMixin {
   ///
   ///
   Future<void> _changeSelectedCategory({
-    required List<Categories>? categoryKeys,
+    required Categories? categoryKey,
     required ValueChanged<List<QuoteModel>> onQuotesChanged,
     String locale = 'tr',
   }) async {
     try {
       final List<QuoteModel> quotes = List<QuoteModel>.empty(growable: true);
-      if (categoryKeys?.isEmpty == true || categoryKeys?.contains(Categories.general) == true) {
+      if (categoryKey == null || categoryKey == (Categories.general)) {
         await _readGeneralQuotes(locale: locale).then((value) {
           quotes
             ..clear()
             ..addAll(value);
         });
       } else {
-        await _readQuotesWithCategory(category: categoryKeys!.first, locale: locale).then((value) {
+        await _readQuotesWithCategory(category: categoryKey, locale: locale).then((value) {
           quotes
             ..clear()
             ..addAll(value);
@@ -33,8 +39,8 @@ mixin _QuoteAndCategoryServiceMixin {
       if (quotes.isNotEmpty) {
         onQuotesChanged.call(quotes);
       }
-    } catch (e) {
-      print(e);
+    } catch (e, s) {
+      LoggerService.instance.catchLog(e, s);
     }
   }
 

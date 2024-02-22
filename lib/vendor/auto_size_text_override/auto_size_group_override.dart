@@ -1,6 +1,6 @@
 // import 'dart:async';
 
-// import 'package:daily_motivation/vendor/auto_size_text_override/auto_size_text_override.dart';
+// import 'package:quotely/vendor/auto_size_text_override/auto_size_text_override.dart';
 
 // /// Controller to synchronize the fontSize of multiple AutoSizeTexts.
 // class CustomAutoSizeGroup {
