@@ -1,11 +1,14 @@
 import 'dart:async';
 
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:quotely/core/navigator/app_navigator.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
+import 'package:quotely/firebase_options.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/shared/app_theme.dart';
 import 'package:stacked_themes/stacked_themes.dart';
@@ -15,6 +18,11 @@ void main() async {
     WidgetsFlutterBinding.ensureInitialized();
     await ThemeManager.initialise();
     await EasyLocalization.ensureInitialized();
+    await MobileAds.instance.initialize();
+
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
 
     await HiveService.instance.init();
 

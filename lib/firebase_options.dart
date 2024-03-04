@@ -41,12 +41,6 @@ class DefaultFirebaseOptions {
           'DefaultFirebaseOptions have not been configured for linux - '
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
-      case TargetPlatform.fuchsia:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for fuchsia - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
-
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -56,7 +50,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyD8H7kl4h5IDp-mPyF_63XTnZHGkxaw5XA',
-    appId: '1:250333051303:android:ae0705228116e1909a5e82',
+    appId: '1:250333051303:android:c52639f12d92b5d49a5e82',
     messagingSenderId: '250333051303',
     projectId: 'quotely-app-52130',
     storageBucket: 'quotely-app-52130.appspot.com',
@@ -64,10 +58,10 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDcfRb_ld7p5LDxihtRC4RfQBa_xa8GxvA',
-    appId: '1:250333051303:ios:6ed944a3a21ec9659a5e82',
+    appId: '1:250333051303:ios:da04db4856c33d559a5e82',
     messagingSenderId: '250333051303',
     projectId: 'quotely-app-52130',
     storageBucket: 'quotely-app-52130.appspot.com',
-    iosBundleId: 'com.example.quotely',
+    iosBundleId: 'com.devrasityilmaz.quotely',
   );
 }

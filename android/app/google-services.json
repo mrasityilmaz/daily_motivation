@@ -7,28 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:250333051303:android:b68d751e69412e0b9a5e82",
+        "mobilesdk_app_id": "1:250333051303:android:c52639f12d92b5d49a5e82",
         "android_client_info": {
-          "package_name": "com.example.daily_motivation"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyD8H7kl4h5IDp-mPyF_63XTnZHGkxaw5XA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:250333051303:android:ae0705228116e1909a5e82",
-        "android_client_info": {
-          "package_name": "com.example.quotely"
+          "package_name": "com.devrasityilmaz.quotely"
         }
       },
       "oauth_client": [],
