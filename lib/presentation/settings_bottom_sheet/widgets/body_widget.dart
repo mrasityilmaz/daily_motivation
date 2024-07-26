@@ -10,7 +10,6 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
   Widget build(BuildContext context, _SettingsBottomSheetViewModel viewModel) {
     return CustomScrollView(
       controller: scrollController,
-      shrinkWrap: true,
       slivers: [
         SliverPadding(
           padding: context.screenPadding,
@@ -32,7 +31,7 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
                   children: [
                     Text(
                       'Preferences & Favorites',
-                      style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onBackground.withOpacity(.5)),
+                      style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onSurface.withOpacity(.5)),
                     ),
                     SizedBox(
                       height: context.normalValue,
@@ -41,31 +40,23 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
                       icon: CupertinoIcons.heart_fill,
                       iconColor: Colors.red.shade600,
                       title: 'Favoriler',
-                      onPressed: () async {
-                        await locator<AppRouter>().push(const FavoritesViewRoute());
-                      },
+                      onPressed: () async => viewModel.pushRoute(const FavoritesViewRoute()),
                     ),
                     _SettingsRowWidget(
                       icon: Platform.isAndroid ? Icons.format_quote_rounded : CupertinoIcons.quote_bubble,
                       title: 'Alıntılarım',
-                      onPressed: () async {
-                        await locator<AppRouter>().push(const MyQuotesViewRoute());
-                      },
+                      onPressed: () async => viewModel.pushRoute(const MyQuotesViewRoute()),
                     ),
                     _SettingsRowWidget(
                       icon: Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
                       title: 'Hatırlatıcılar',
-                      onPressed: () async {
-                        await locator<AppRouter>().push(const RemindersViewRoute());
-                      },
+                      onPressed: () async => viewModel.pushRoute(const RemindersViewRoute()),
                     ),
                     _SettingsRowWidget(
                       icon: Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
                       iconColor: context.colors.primary,
                       title: 'Alıntı Bildirimleri',
-                      onPressed: () async {
-                        await locator<AppRouter>().push(const QuoteNotificationsViewRoute());
-                      },
+                      onPressed: () async => viewModel.pushRoute(const QuoteNotificationsViewRoute()),
                     ),
                   ],
                 ),
@@ -77,27 +68,23 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
                   children: [
                     Text(
                       'Settings',
-                      style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onBackground.withOpacity(.5)),
+                      style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onSurface.withOpacity(.5)),
                     ),
                     SizedBox(
                       height: context.normalValue,
                     ),
                     _SettingsRowWidget(
                       icon: locator<ThemeService>().isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
-                      iconColor: locator<ThemeService>().isDarkMode ? context.colors.onBackground.withOpacity(.6) : Colors.amber.shade300,
+                      iconColor: locator<ThemeService>().isDarkMode ? context.colors.onSurface.withOpacity(.6) : Colors.amber.shade300,
                       title: 'Dark Mode',
-                      onPressed: () {
-                        locator<ThemeService>().toggleDarkLightTheme();
-                      },
+                      onPressed: viewModel.toggleTheme,
                       trailing: ConstrainedBox(
                         constraints: BoxConstraints.tight(const Size(50, 20)),
                         child: Switch.adaptive(
                           splashRadius: 12,
                           value: locator<ThemeService>().isDarkMode,
                           applyCupertinoTheme: true,
-                          onChanged: (value) {
-                            locator<ThemeService>().toggleDarkLightTheme();
-                          },
+                          onChanged: (a) => viewModel.toggleTheme(),
                         ),
                       ),
                     ),
@@ -127,12 +114,7 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
             ),
           ),
         ),
-        SliverSafeArea(
-          minimum: context.adaptiveScreenPaddingBottom + context.paddingMediumBottom,
-          sliver: const SliverToBoxAdapter(
-            child: SizedBox(),
-          ),
-        ),
+        const SliverBottomSafeWidget(),
       ],
     );
   }

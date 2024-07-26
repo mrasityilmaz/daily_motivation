@@ -12,7 +12,7 @@ final class _CategoriesSection extends StatelessWidget {
       title: Container(
         height: kToolbarHeight,
         decoration: BoxDecoration(
-          color: context.appColors.greyColor,
+          color: locator<ThemeService>().isDarkMode ? context.appColors.darkGreyColor : context.appColors.lightGreyColor,
         ),
         padding: context.screenPaddingHorizontal,
         child: Row(

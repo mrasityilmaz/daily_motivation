@@ -6,15 +6,6 @@ import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
 part 'quote_model.freezed.dart';
 part 'quote_model.g.dart';
 
-///
-/// If you want to [immutable] class, you should use [@Freezed()]
-///
-/// If you want to [mutable] class, you should use [@unfreezed]
-///
-///
-/// You can create another one class same like this class
-///
-
 @Freezed()
 class QuoteModel with _$QuoteModel, EquatableMixin {
   const factory QuoteModel({

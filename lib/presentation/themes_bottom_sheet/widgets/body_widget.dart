@@ -1,42 +1,21 @@
 part of '../themes_bottom_sheet.dart';
 
 @immutable
-final class _BodyWidget extends ViewModelWidget<_ThemesBottomSheetViewModel> {
+final class _BodyWidget extends StatelessWidget {
   const _BodyWidget({required this.scrollController});
 
   final ScrollController scrollController;
 
   @override
-  Widget build(BuildContext context, _ThemesBottomSheetViewModel viewModel) {
+  Widget build(
+    BuildContext context,
+  ) {
     return CustomScrollView(
       controller: scrollController,
       slivers: [
         SliverPadding(
           padding: context.screenPaddingVertical + context.screenPaddingHorizontal * .5,
-          sliver: SliverGrid.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              crossAxisSpacing: context.screenPaddingRight.right * .5,
-              mainAxisSpacing: context.screenPaddingRight.right * .5,
-              childAspectRatio: .85,
-            ),
-            itemBuilder: (context, index) {
-              final String currentBackgroundPath = viewModel.allBackgroundList[index];
-              final DefaultFontsEnum currentFont = viewModel.allDefaultFontList[index % viewModel.allDefaultFontList.length];
-
-              return _ImageBoxWidget(
-                font: currentFont,
-                backgroundPath: currentBackgroundPath,
-                isLocked: viewModel.isThemeConfigPremium(index),
-                onChanged: (newBg) async {
-                  await viewModel.updateThemeConfiguration(model: newBg).then((value) {
-                    locator<AppRouter>().pop();
-                  });
-                },
-              );
-            },
-            itemCount: viewModel.allBackgroundList.length,
-          ),
+          sliver: const _GridBuilder(),
         ),
         SliverSafeArea(
           minimum: context.adaptiveScreenPaddingBottom + context.paddingMediumBottom,

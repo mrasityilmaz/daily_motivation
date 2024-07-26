@@ -8,6 +8,7 @@ import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/category_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
+import 'package:quotely/injection/injection_container.dart';
 import 'package:stacked/stacked.dart';
 
 part 'quote_and_category_service_mixin.dart';
@@ -24,7 +25,7 @@ final class QuoteAndCategoryService with ListenableServiceMixin, _QuoteAndCatego
     await _fetchQuotesForSelectedCategory();
   }
 
-  final CategoryBoxService _categoryBoxService = HiveService.instance.categoryBoxService;
+  final CategoryBoxService _categoryBoxService = locator<HiveService>().categoryBoxService;
 
   ///
   // TODO - BUraya premium geldiğinde free kullanıcılar için yalnızca bir seçim yapma izni eklenicek
@@ -42,6 +43,10 @@ final class QuoteAndCategoryService with ListenableServiceMixin, _QuoteAndCatego
   Categories get selectedCategory => _selectedCategory.value;
   List<QuoteModel> get currentQuotes => _quotes.value;
 
+  ///
+  /// it will change local reactive value and then it will fetch new quotes for new category
+  /// lastly it writes the new category to box
+  ///
   Future<void> changeCategory({required Categories category, String locale = 'tr'}) async {
     try {
       _selectedCategory.value = category;

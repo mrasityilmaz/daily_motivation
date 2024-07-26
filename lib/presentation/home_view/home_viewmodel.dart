@@ -25,6 +25,7 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
   /// Getters for the services and the current state of the services
   ///
   QuoteAndCategoryService get listenableCategoryService => listenableServices.first as QuoteAndCategoryService;
+
   ThemeConfigurationService get listenableThemeConfigurationService => listenableServices[1] as ThemeConfigurationService;
   PremiumServices get listenablePremiumServices => listenableServices[2] as PremiumServices;
 
@@ -56,7 +57,8 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
       );
 
       pageController.addListener(() {
-        currentQuoteIsLiked.value = HiveService.instance.likedQuoteBoxService.isQuoteLiked(currentQuote.id);
+        debugPrint(pageController.page?.toString());
+        currentQuoteIsLiked.value = locator<HiveService>().likedQuoteBoxService.isQuoteLiked(currentQuote.id);
       });
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);

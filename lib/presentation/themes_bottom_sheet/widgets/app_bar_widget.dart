@@ -13,10 +13,11 @@ final class _ThemesBottomSheetAppBar extends StatelessWidget implements Preferre
         style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
       ),
       centerTitle: true,
+      forceMaterialTransparency: false,
       actions: [
         AdvancedButtonWidget.text(
           text: 'Kilitleri Kaldır',
-          textColor: context.colors.onBackground,
+          textColor: context.colors.onSurface,
           backgroundColor: Colors.transparent,
           onPressed: () {},
         ),

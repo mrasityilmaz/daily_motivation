@@ -1,8 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
 import 'package:quotely/data/services/hive_service/i_hivebox_service.dart';
 
+@immutable
 final class MyQuoteBoxService extends IHiveBoxService<QuoteHiveModel> {
   MyQuoteBoxService({required super.boxKey});
 

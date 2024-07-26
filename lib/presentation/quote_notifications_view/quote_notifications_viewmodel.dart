@@ -3,7 +3,7 @@ part of 'quote_notification_view.dart';
 final class _QuoteNotificationViewModel extends BaseViewModel with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin, SelectedCategoriesMixin {
   _QuoteNotificationViewModel();
 
-  final QuoteNotificationBoxService _quoteNotificationBoxService = HiveService.instance.quoteNotificationBoxService;
+  final QuoteNotificationBoxService _quoteNotificationBoxService = locator<HiveService>().quoteNotificationBoxService;
 
   late final QuoteNotificationModel? _oldQuoteNotificationModel = _quoteNotificationBoxService.quoteNotificationValue;
 

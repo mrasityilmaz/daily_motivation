@@ -177,7 +177,7 @@ final class CustomTextFieldWidget extends StatelessWidget {
                       backgroundColor: Colors.transparent,
                       icon: Icon(
                         obscuredValue ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
-                        color: hintTextColor ?? context.colors.onBackground.withOpacity(.6),
+                        color: hintTextColor ?? context.colors.onSurface.withOpacity(.6),
                       ),
                       onPressed: () {
                         isObscured.value = !isObscured.value;

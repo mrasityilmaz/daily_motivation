@@ -16,7 +16,7 @@ final class _SettingsRowWidget extends StatelessWidget {
     return Padding(
       padding: context.paddingLowBottom,
       child: AdvancedButtonWidget(
-        backgroundColor: context.colors.background,
+        backgroundColor: context.colors.surface,
         padding: context.paddingLowVertical * 1.2 + context.paddingLowHorizontal,
         onPressed: onPressed,
         child: Row(
@@ -43,7 +43,7 @@ final class _SettingsRowWidget extends StatelessWidget {
               Icon(
                 Icons.arrow_forward_ios_rounded,
                 size: 20,
-                color: context.colors.onBackground.withOpacity(.3),
+                color: context.colors.onSurface.withOpacity(.3),
               ),
             ],
           ],

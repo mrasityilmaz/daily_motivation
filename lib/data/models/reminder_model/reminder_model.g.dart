@@ -12,7 +12,7 @@ _$ReminderModelImpl _$$ReminderModelImplFromJson(Map<String, dynamic> json) =>
       notificationTitle: json['notificationTitle'] as String,
       notificationBody: json['notificationBody'] as String,
       notificationDaysInWeek: (json['notificationDaysInWeek'] as List<dynamic>)
-          .map((e) => e as int)
+          .map((e) => (e as num).toInt())
           .toList(),
       notificationEqualSchedule: json['notificationEqualSchedule'] == null
           ? null
@@ -45,7 +45,7 @@ _$ReminderNotificationEqualScheduleModelImpl
               _timeOfDayFromJson(json['notificationStartTime'] as String?),
           notificationEndTime:
               _timeOfDayFromJson(json['notificationEndTime'] as String?),
-          notificationInterval: json['notificationInterval'] as int?,
+          notificationInterval: (json['notificationInterval'] as num?)?.toInt(),
           notificationSchedules:
               _listTimeOfDayFromJson(json['notificationSchedules'] as String?),
         );

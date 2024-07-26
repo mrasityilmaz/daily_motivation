@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:injectable/injectable.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:quotely/core/constants/hive_constants.dart';
 import 'package:quotely/data/models/hive_adapters/quote_hive_adapter/quote_hive_adapter.dart';
@@ -13,15 +14,9 @@ import 'package:quotely/data/services/hive_service/boxes/quote_notification_serv
 import 'package:quotely/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
 
+@LazySingleton()
 @immutable
 final class HiveService {
-  factory HiveService() {
-    return instance;
-  }
-
-  HiveService._internal();
-  static final HiveService instance = HiveService._internal();
-
   ///
   ///
   ///

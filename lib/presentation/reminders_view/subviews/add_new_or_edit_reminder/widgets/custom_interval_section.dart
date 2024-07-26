@@ -2,7 +2,7 @@ part of '../add_new_or_edit_reminder_view.dart';
 
 @immutable
 final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminderViewModel> {
-  const _CustomIntervalSection({super.key});
+  const _CustomIntervalSection();
 
   @override
   Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
@@ -29,7 +29,7 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
                         child: Center(
                           child: Text(
                             '${index + 1}.',
-                            style: context.textTheme.titleSmall?.copyWith(color: context.colors.onBackground.withOpacity(.75), fontWeight: FontWeight.bold),
+                            style: context.textTheme.titleSmall?.copyWith(color: context.colors.onSurface.withOpacity(.75), fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -40,7 +40,7 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
                             shape: RoundedRectangleBorder(
                               borderRadius: context.radius8,
                             ),
-                            color: context.colors.onBackground.withOpacity(.05),
+                            color: context.colors.onSurface.withOpacity(.05),
                           ),
                           child: Center(child: Text(currentValue.format(context), style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold))),
                         ),
@@ -73,7 +73,7 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
                   Expanded(
                     child: AdvancedButtonWidget.text(
                       text: 'Add Time',
-                      backgroundColor: context.colors.background,
+                      backgroundColor: context.colors.surface,
                       shape: RoundedRectangleBorder(borderRadius: context.radius12, side: BorderSide(color: context.colors.primary, width: 1.5)),
                       expand: true,
                       textColor: context.colors.primary,

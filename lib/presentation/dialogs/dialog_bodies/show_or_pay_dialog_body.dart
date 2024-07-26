@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/core/navigator/app_navigator.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 
@@ -28,7 +28,7 @@ final class ShowOrPayDialogBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomDialog(
       backgroundColor: context.colors.surface,
-      elevation: 20,
+      elevation: 10,
       shape: RoundedRectangleBorder(
         borderRadius: context.radius16,
       ),
@@ -49,7 +49,7 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                     child: AdvancedButtonWidget.icon(
                       icon: const Icon(Icons.close_rounded),
                       onPressed: () {
-                        locator<AppRouter>().pop();
+                        locator<AppRouter>().maybePop();
                       },
                       backgroundColor: context.colors.onSurface.withOpacity(.1),
                     ),

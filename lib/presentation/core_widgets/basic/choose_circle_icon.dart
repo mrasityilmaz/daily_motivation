@@ -12,7 +12,7 @@ final class ChooseCircleIcon extends StatelessWidget {
       width: 16,
       height: 16,
       decoration: BoxDecoration(
-        color: context.colors.background,
+        color: context.colors.surface,
         shape: BoxShape.circle,
         border: Border.all(
           color: isSelected ? context.colors.primary : context.colors.primary.withOpacity(.5),
@@ -22,7 +22,7 @@ final class ChooseCircleIcon extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.all(2),
         decoration: BoxDecoration(
-          color: isSelected ? context.colors.primary : context.colors.background,
+          color: isSelected ? context.colors.primary : context.colors.surface,
           shape: BoxShape.circle,
         ),
       ),

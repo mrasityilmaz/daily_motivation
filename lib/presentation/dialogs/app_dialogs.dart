@@ -1,11 +1,12 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
+import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/core/navigator/app_navigator.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:quotely/presentation/dialogs/lock_overlay_dialog.dart';
@@ -49,7 +50,7 @@ final class AppDialogs {
       isDismissible: isDismissible,
       enableDrag: enableDrag,
       backgroundColor: backgroundColor ?? ctx.colors.primary,
-      barrierColor: barrierColor ?? ctx.colors.onBackground.withOpacity(.3),
+      barrierColor: barrierColor ?? ctx.colors.onSurface.withOpacity(.3),
       barrierLabel: barrierLabel,
       clipBehavior: clipBehavior,
       constraints: constraints,
@@ -70,7 +71,7 @@ final class AppDialogs {
   /// Custom Progress Show Dialog Function
   ///
 
-  FutureOr<T?> showDialog<T>(BuildContext context, {required Widget child, bool barrierDismissible = true, Alignment alignment = Alignment.center, Color? barrierColor}) async {
+  Future<T?> showDialog<T>(BuildContext context, {required Widget child, bool barrierDismissible = true, Alignment alignment = Alignment.center, Color? barrierColor}) async {
     ProgressOverlayDialog.instance.closeOverlay();
     LockOverlayDialog.instance.closeOverlay();
 
@@ -78,7 +79,7 @@ final class AppDialogs {
       context: context,
       duration: const Duration(milliseconds: 400),
       animationType: DialogTransitionType.scale,
-      curve: Curves.easeInOutExpo,
+      curve: Curves.ease,
       alignment: alignment,
       barrierColor: barrierColor ?? context.colors.scrim.withOpacity(.4),
       barrierDismissible: barrierDismissible,
@@ -154,5 +155,25 @@ final class AppDialogs {
         ),
       );
     }
+  }
+
+  Future<void> showBasicFlushBar(BuildContext context, {required String message}) async {
+    await Flushbar<void>(
+      title: '',
+      titleText: const SizedBox(),
+      messageText: Text(
+        message,
+        style: context.textTheme.titleSmall?.copyWith(color: context.colors.onSurface.withOpacity(.7), fontWeight: FontWeight.w600),
+      ),
+      duration: context.normalDuration,
+      animationDuration: context.duration250,
+      forwardAnimationCurve: Curves.ease,
+      backgroundColor: context.colors.onSurface.withOpacity(.05),
+      messageColor: context.colors.onSurface.withOpacity(.7),
+      reverseAnimationCurve: Curves.ease,
+      padding: context.screenPaddingHorizontal + context.screenPaddingBottom + context.screenPaddingTop * .5,
+      margin: context.screenPaddingHorizontal * 2,
+      borderRadius: BorderRadius.circular(10),
+    ).show(context);
   }
 }

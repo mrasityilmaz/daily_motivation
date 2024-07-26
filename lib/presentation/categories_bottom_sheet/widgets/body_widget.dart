@@ -16,12 +16,7 @@ final class _BodyWidget extends StatelessWidget {
             categoryGroup: e,
           ),
         ),
-        SliverSafeArea(
-          minimum: context.adaptiveScreenPaddingBottom + context.paddingMediumBottom,
-          sliver: const SliverToBoxAdapter(
-            child: SizedBox(),
-          ),
-        ),
+        const SliverBottomSafeWidget(),
       ],
     );
   }

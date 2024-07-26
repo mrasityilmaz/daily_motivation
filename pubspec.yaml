@@ -11,53 +11,55 @@ scripts:
   # run is a default script. To use it, simply type
   # in the command line: "rps" - that's all!
   model_build: "dart run build_runner build --delete-conflicting-outputs"
-  pod: "cd ios && arch -x86_64 pod install && cd .."
+  pod: "cd ios && pod install && cd .."
   clean_get: "flutter clean && flutter pub get"
 
 ### Scripts
 ##############################################################################################################################
 environment:
-  sdk: '>=3.1.0 <4.0.0'
+  sdk: '>=3.4.4 <4.0.0'
 ##############################################################################################################################
 ###
 ### Dependencies
 ###
 dependencies:
+  animated_custom_dropdown: ^3.0.0
+  auto_route: ^7.8.4
+  auto_size_text: ^3.0.0
+  cached_network_image: ^3.3.1
   cookie_jar: ^4.0.8
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
+  easy_localization: ^3.0.3
   envied: ^0.3.0+3
   equatable: ^2.0.0
+  firebase_core: ^2.25.4
   flutter:
     sdk: flutter
+  flutter_animated_dialog:
+    path: lib/vendor/animated_dialog/flutter_animated_dialog
+  flutter_box_transform: ^0.4.2
+  flutter_slidable: ^3.0.1
+  freezed_annotation: ^2.4.1
   get_it: ^7.6.4
+  google_fonts: ^6.1.0
+  google_mobile_ads: ^4.0.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  image_pixels: ^3.0.1
   injectable: ^2.3.0
   internet_connection_checker: ^1.0.0+1
-  freezed_annotation: ^2.4.1
+  logger: ^2.0.2+1
+  path_provider: ^2.1.2
   rest_api_package:
     git:
       url: https://github.com/mrasityilmaz/rest_api_package.git
-  stacked: ^3.4.1
-  google_fonts: ^6.1.0
-  stacked_themes: ^0.3.12
-  cached_network_image: ^3.3.1
-  auto_route: ^7.8.4
-  visibility_detector: ^0.4.0+2
   sliver_tools: ^0.2.12
-  path_provider: ^2.1.2
-  easy_localization: ^3.0.3
-  image_pixels: ^3.0.1
-  flutter_animated_dialog: ^2.0.1
-  animated_custom_dropdown: ^3.0.0
-  flutter_box_transform: ^0.4.2
-  auto_size_text: ^3.0.0
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
-  flutter_slidable: ^3.0.1
+  stacked: ^3.4.1
+  stacked_themes: ^0.3.12
   uuid: ^4.3.3
-  logger: ^2.0.2+1
-  firebase_core: ^2.25.4
-  google_mobile_ads: ^4.0.0
+  visibility_detector: ^0.4.0+2
+  another_flushbar: ^1.12.30
 
 ###
 ### Dependencies
@@ -68,6 +70,7 @@ dependencies:
 ### Dev Dependencies
 ###
 dev_dependencies:
+  auto_route_generator: ^7.3.2
   build_runner: ^2.4.6
 
   ###
@@ -78,6 +81,8 @@ dev_dependencies:
 
   flutter_test:
     sdk: flutter
+  freezed: ^2.4.1
+  hive_generator: ^2.0.1
 
   ###
   ### Injection Generator
@@ -88,10 +93,7 @@ dev_dependencies:
   ### Json Serialization
   ###
   json_serializable: ^6.7.1
-  freezed: ^2.4.1
   very_good_analysis: ^5.1.0
-  auto_route_generator: ^7.3.2
-  hive_generator: ^2.0.1
 ###
 ### Dev Dependencies
 ###

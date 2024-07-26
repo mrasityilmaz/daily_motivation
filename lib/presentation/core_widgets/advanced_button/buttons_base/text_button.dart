@@ -51,6 +51,7 @@ final class _TextButton extends StatelessWidget {
           padding: padding,
           elevation: 0,
           splashFactory: InkSparkle.constantTurbulenceSeedSplashFactory,
+          animationDuration: const Duration(milliseconds: 900),
         ),
         child: Text(
           text,

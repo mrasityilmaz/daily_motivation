@@ -1,17 +1,22 @@
-part of 'add_new_or_edit_quote_view.dart';
+import 'package:flutter/material.dart';
+import 'package:quotely/config/navigator/app_navigator.dart';
+import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/services/logger_service.dart';
+import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:quotely/data/services/hive_service/boxes/my_quote_service.dart';
+import 'package:quotely/data/services/hive_service/hive_service.dart';
+import 'package:quotely/injection/injection_container.dart';
+import 'package:stacked/stacked.dart';
+import 'package:uuid/uuid.dart';
 
-final class _AddNewQuoteViewModel extends BaseViewModel {
-  _AddNewQuoteViewModel({required this.editQuote});
+part 'mixins/ui_logic_mixin.dart';
+
+final class AddNewOrEditQuoteViewModel extends BaseViewModel with _UILogicMixin {
+  AddNewOrEditQuoteViewModel({required this.editQuote});
 
   final QuoteHiveModel? editQuote;
 
-  final MyQuoteBoxService _myQuoteBoxService = HiveService.instance.myQuoteBoxService;
-  late final TextEditingController quoteTextController;
-  late final TextEditingController authorTextController;
-
-  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
-  bool get isFormValid => formKey.currentState?.validate() ?? false;
+  final MyQuoteBoxService _myQuoteBoxService = locator<HiveService>().myQuoteBoxService;
 
   String get quote => quoteTextController.text;
 
@@ -36,7 +41,7 @@ final class _AddNewQuoteViewModel extends BaseViewModel {
           }),
         );
 
-        await locator<AppRouter>().pop<QuoteHiveModel?>(result);
+        await locator<AppRouter>().maybePop<QuoteHiveModel?>(result);
       }
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
@@ -44,27 +49,10 @@ final class _AddNewQuoteViewModel extends BaseViewModel {
   }
 
   QuoteHiveModel get newQuoteModel => QuoteHiveModel(
-        category: 'myquotes',
+        category: Categories.myquotes.key,
         author: author,
         id: const Uuid().v4(),
         createdAt: DateTime.now().toUtc(),
         quote: quote,
       );
-
-  void _clearTextFields() {
-    quoteTextController.clear();
-    authorTextController.clear();
-  }
-
-  void onReady() {
-    quoteTextController = TextEditingController(text: editQuote?.quote ?? '');
-    authorTextController = TextEditingController(text: editQuote?.author ?? '');
-  }
-
-  @override
-  void dispose() {
-    quoteTextController.dispose();
-    authorTextController.dispose();
-    super.dispose();
-  }
 }

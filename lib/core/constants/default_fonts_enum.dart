@@ -3,6 +3,10 @@ enum DefaultFontsEnum {
   alegreya('Alegreya'),
   alegreyaSans('Alegreya Sans'),
   alfaSlabOne('Alfa Slab One'),
+
+  ///
+  /// Since the heights and sizes of some fonts are inappropriate, min and max values ​​should be determined in this way.
+  ///
   allison('Allison', maxFontSize: 46, minFontSize: 18),
   architectsDaughter('Architects Daughter'),
   archivoNarrow('Archivo Narrow'),

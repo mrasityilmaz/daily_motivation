@@ -93,12 +93,11 @@ enum Categories {
   god(key: 'god', isPremium: false),
   religion(key: 'religion', isPremium: false);
 
+  const Categories({required this.key, required this.isPremium});
   final String key;
   final bool isPremium;
 
   String get iconPath => 'assets/new_category_icons/$key.webp';
 
   String get name => 'categoriesKey.$key'.tr();
-
-  const Categories({required this.key, required this.isPremium});
 }

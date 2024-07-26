@@ -19,7 +19,7 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
             SlidableAction(
               onPressed: (ctx) async => viewModel.onPressedDeleteReminderButton(reminder.notificationId),
               borderRadius: BorderRadius.circular(8),
-              backgroundColor: context.colors.background,
+              backgroundColor: context.colors.surface,
               label: 'Remove',
               icon: Platform.isAndroid ? Icons.delete_outline_rounded : CupertinoIcons.trash,
               padding: EdgeInsets.zero,
@@ -28,7 +28,7 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
             SlidableAction(
               onPressed: (ctx) async => viewModel.onTapEditReminder(reminder),
               borderRadius: BorderRadius.circular(8),
-              backgroundColor: context.colors.background,
+              backgroundColor: context.colors.surface,
               label: 'Edit',
               icon: Platform.isAndroid ? Icons.edit_note_rounded : CupertinoIcons.pencil_circle,
               padding: EdgeInsets.zero,
@@ -38,7 +38,7 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
 
         child: Container(
           width: double.maxFinite,
-          decoration: BoxDecoration(color: context.colors.onBackground.withOpacity(.05), borderRadius: context.radius8),
+          decoration: BoxDecoration(color: context.colors.onSurface.withOpacity(.05), borderRadius: context.radius8),
           padding: context.paddingLowHorizontal + context.paddingLowVertical * 1.2,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,7 +51,7 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
               const SizedBox(height: 2),
               Text(
                 reminder.notificationBody,
-                style: context.textTheme.titleSmall?.copyWith(color: context.colors.onBackground.withOpacity(.75)),
+                style: context.textTheme.titleSmall?.copyWith(color: context.colors.onSurface.withOpacity(.75)),
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
               ),

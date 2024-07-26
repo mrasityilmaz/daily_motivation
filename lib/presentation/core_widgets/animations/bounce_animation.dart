@@ -18,10 +18,11 @@ class BounceAnimationState extends State<BounceAnimation> with SingleTickerProvi
   void initState() {
     _animate = AnimationController(
       vsync: this,
+      animationBehavior: AnimationBehavior.preserve,
       duration: const Duration(
-        milliseconds: 150,
+        milliseconds: 100,
       ),
-      upperBound: 0.05,
+      upperBound: 0.03,
     )..addListener(() {
         setState(() {});
       });
@@ -45,9 +46,7 @@ class BounceAnimationState extends State<BounceAnimation> with SingleTickerProvi
 
   Future<void> startAnimation({required Future<void> Function() callback}) async {
     await _animate.forward();
-    await Future.wait([
-      callback(),
-      _animate.reverse(),
-    ]);
+    await _animate.reverse();
+    await callback();
   }
 }

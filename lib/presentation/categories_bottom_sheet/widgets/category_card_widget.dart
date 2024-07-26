@@ -1,7 +1,7 @@
 part of '../categories_bottom_sheet.dart';
 
 @immutable
-final class _SubCategoriesButton extends ViewModelWidget<_CategoriesBottomSheetViewModel> {
+final class _SubCategoriesButton extends ViewModelWidget<CategoriesBottomSheetViewModel> {
   const _SubCategoriesButton({
     required this.category,
   });
@@ -9,38 +9,24 @@ final class _SubCategoriesButton extends ViewModelWidget<_CategoriesBottomSheetV
   final Categories category;
 
   @override
-  Widget build(BuildContext context, _CategoriesBottomSheetViewModel viewModel) {
+  Widget build(BuildContext context, CategoriesBottomSheetViewModel viewModel) {
     final bool isSelected = viewModel.isCategorySelected(category);
     return AdvancedButtonWidget(
       expand: true,
-      backgroundColor: isSelected ? context.colors.primary.withOpacity(.75) : context.colors.primary.withOpacity(.2),
+      backgroundColor: isSelected ? context.colors.primary.withOpacity(.75) : context.colors.primary.withOpacity(.1),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
         side: BorderSide(
-          color: context.colors.primary.withOpacity(.3),
+          color: context.colors.primary.withOpacity(.1),
         ),
       ),
-      onPressed: category.isPremium
-          ? () async {
-              await AppDialogs.instance.showDialog<void>(
+      onPressed: isSelected
+          ? null
+          : () async => viewModel.changeCategory(
                 context,
-                child: ShowOrPayDialogBody(
-                  icon: Icon(
-                    Platform.isAndroid ? Icons.grid_view_rounded : CupertinoIcons.square_grid_2x2,
-                    size: kMinInteractiveDimension * 1.2,
-                    color: context.colors.primary,
-                  ),
-                  firstButtonText: 'Premium Ol',
-                  firstButtonOnPressed: () async {
-                    await locator<AppRouter>().pop();
-                  },
-                  title: 'Seçili Kategorinin Kilidini Aç',
-                ),
-              );
-            }
-          : () async {
-              await viewModel.changeCategory(category: category, locale: context.locale.languageCode).then((value) {});
-            },
+                category: category,
+                locale: context.locale.languageCode,
+              ),
       padding: EdgeInsets.zero,
       child: Stack(
         children: [
@@ -64,7 +50,7 @@ final class _SubCategoriesButton extends ViewModelWidget<_CategoriesBottomSheetV
               alignment: Alignment.topLeft,
               child: Text(
                 category.name,
-                style: context.textTheme.bodyMedium?.copyWith(color: isSelected ? context.colors.onPrimary : context.colors.onBackground.withOpacity(.75), fontWeight: FontWeight.w600),
+                style: context.textTheme.bodyMedium?.copyWith(color: isSelected ? context.colors.onPrimary : context.colors.onSurface.withOpacity(.75), fontWeight: FontWeight.w600),
               ),
             ),
           ),
@@ -81,7 +67,7 @@ final class _SubCategoriesButton extends ViewModelWidget<_CategoriesBottomSheetV
                     child: Icon(
                       CupertinoIcons.lock_fill,
                       size: 26,
-                      color: context.colors.onBackground,
+                      color: context.colors.onSurface,
                     ),
                   ),
                 ),

@@ -2,7 +2,7 @@ part of 'reminders_view.dart';
 
 final class _RemindersViewModel extends ReactiveViewModel with PremiumConstantReminderMixin {
   final PremiumServices _premiumServices = locator<PremiumServices>();
-  final ReminderBoxService _reminderBoxService = HiveService.instance.reminderBoxService;
+  final ReminderBoxService _reminderBoxService = locator<HiveService>().reminderBoxService;
 
   PremiumServices get _listenablePremiumServices => listenableServices.first as PremiumServices;
   bool get userIsPremium => _listenablePremiumServices.isPremium;

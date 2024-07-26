@@ -34,7 +34,8 @@ final class AppColorScheme {
 
   Color get primaryOrangeColor => const Color(0XffFFA500);
 
-  Color get greyColor => const Color(0xFFEAECF0);
+  Color get lightGreyColor => const Color(0xFFEAECF0);
+  Color get darkGreyColor => const Color(0xFF2E3440);
 }
 
 

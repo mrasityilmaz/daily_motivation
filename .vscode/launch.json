@@ -5,19 +5,38 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "quotely",
+			"name": "quotely_app",
 			"request": "launch",
-			"type": "dart",
-			
+			"type": "dart"
 		},
 		{
-			"name": "quotely (profile mode)",
+			"name": "quotely_app (profile mode)",
 			"request": "launch",
 			"type": "dart",
 			"flutterMode": "profile"
 		},
 		{
-			"name": "quotely (release mode)",
+			"name": "quotely_app (release mode)",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "release"
+		},
+		{
+			"name": "flutter_animated_dialog",
+			"cwd": "lib/vendor/animated_dialog/flutter_animated_dialog",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "flutter_animated_dialog (profile mode)",
+			"cwd": "lib/vendor/animated_dialog/flutter_animated_dialog",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "profile"
+		},
+		{
+			"name": "flutter_animated_dialog (release mode)",
+			"cwd": "lib/vendor/animated_dialog/flutter_animated_dialog",
 			"request": "launch",
 			"type": "dart",
 			"flutterMode": "release"

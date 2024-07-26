@@ -1,12 +1,12 @@
 part of '../favorites_view.dart';
 
 @immutable
-final class _QuoteRowWidget extends ViewModelWidget<_FavoritesViewModel> {
-  const _QuoteRowWidget({required this.quote}) : super(reactive: false);
+final class _QuoteRowWidget extends ViewModelWidget<FavoritesViewModel> {
+  const _QuoteRowWidget({required this.quote}) : super(reactive: true);
   final QuoteHiveModel quote;
 
   @override
-  Widget build(BuildContext context, _FavoritesViewModel viewModel) {
+  Widget build(BuildContext context, FavoritesViewModel viewModel) {
     return Padding(
       padding: context.paddingLowBottom,
       child: Slidable(
@@ -22,7 +22,7 @@ final class _QuoteRowWidget extends ViewModelWidget<_FavoritesViewModel> {
                 await viewModel.unLikeQuote(quote.id);
               },
               borderRadius: BorderRadius.circular(8),
-              backgroundColor: context.colors.background,
+              backgroundColor: context.colors.surface,
               label: 'Remove',
               icon: Platform.isAndroid ? Icons.delete_outline_rounded : CupertinoIcons.trash,
               padding: context.paddingLowBottom,
@@ -33,7 +33,7 @@ final class _QuoteRowWidget extends ViewModelWidget<_FavoritesViewModel> {
 
         child: Container(
           width: double.maxFinite,
-          decoration: BoxDecoration(color: context.colors.onBackground.withOpacity(.05), borderRadius: context.radius8),
+          decoration: BoxDecoration(color: context.colors.onSurface.withOpacity(.05), borderRadius: context.radius8),
           padding: context.paddingLowHorizontal + context.paddingLowVertical * 1.2,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,17 +47,15 @@ final class _QuoteRowWidget extends ViewModelWidget<_FavoritesViewModel> {
                 children: [
                   Text(
                     quote.author,
-                    style: context.textTheme.bodySmall?.copyWith(color: context.colors.onBackground.withOpacity(.7), fontWeight: FontWeight.w600, fontStyle: FontStyle.italic),
+                    style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.7), fontWeight: FontWeight.w600, fontStyle: FontStyle.italic),
                   ),
                   const Spacer(),
                   GestureDetector(
-                    onTap: () async {
-                      await Clipboard.setData(ClipboardData(text: '${quote.quote} \n - ${quote.author}'));
-                    },
+                    onTap: () async => viewModel.copyQuote(context, quote: quote),
                     child: Icon(
                       Icons.copy,
-                      color: context.colors.onBackground.withOpacity(.25),
-                      size: 16,
+                      color: context.colors.onSurface.withOpacity(.25),
+                      size: 18,
                     ),
                   ),
                 ],

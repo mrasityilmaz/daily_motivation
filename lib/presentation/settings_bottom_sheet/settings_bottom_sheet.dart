@@ -1,12 +1,14 @@
 import 'dart:io';
 
+import 'package:auto_route/auto_route.dart' as auto_route;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/core/navigator/app_navigator.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
+import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_widget.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
@@ -26,7 +28,7 @@ final class SettingsBottomSheet extends StatelessWidget {
       builder: (context, model, child) {
         return DraggableScrollableSheet(
           initialChildSize: 1,
-          minChildSize: .5,
+          minChildSize: .8,
           builder: (context, scrollController) => ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
             child: Stack(

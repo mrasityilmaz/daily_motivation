@@ -14,7 +14,7 @@ _$QuoteNotificationModelImpl _$$QuoteNotificationModelImplFromJson(
           .map((e) => $enumDecode(_$CategoriesEnumMap, e))
           .toList(),
       notificationDaysInWeek: (json['notificationDaysInWeek'] as List<dynamic>)
-          .map((e) => e as int)
+          .map((e) => (e as num).toInt())
           .toList(),
       notificationEqualSchedule: json['notificationEqualSchedule'] == null
           ? null
@@ -143,7 +143,7 @@ _$QuoteNotificationEqualScheduleModelImpl
               _timeOfDayFromJson(json['notificationStartTime'] as String?),
           notificationEndTime:
               _timeOfDayFromJson(json['notificationEndTime'] as String?),
-          notificationInterval: json['notificationInterval'] as int?,
+          notificationInterval: (json['notificationInterval'] as num?)?.toInt(),
           notificationSchedules:
               _listTimeOfDayFromJson(json['notificationSchedules'] as String?),
         );

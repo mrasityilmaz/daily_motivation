@@ -1,10 +1,12 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:quotely/core/constants/categories_enum.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/services/hive_service/i_hivebox_service.dart';
 
+@immutable
 final class CategoryBoxService extends IHiveBoxService<String> {
   CategoryBoxService({required super.boxKey});
 

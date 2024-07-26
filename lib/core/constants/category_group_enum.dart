@@ -125,11 +125,10 @@ enum CategoryGroup {
     Categories.religion,
   ]);
 
+  const CategoryGroup(this.key, this.subCategories);
   final String key;
 
   String get name => 'category_titles.$key'.tr();
 
   final List<Categories> subCategories;
-
-  const CategoryGroup(this.key, this.subCategories);
 }

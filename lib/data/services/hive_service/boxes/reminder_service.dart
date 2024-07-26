@@ -1,8 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/reminder_model/reminder_model.dart';
 import 'package:quotely/data/services/hive_service/i_hivebox_service.dart';
 
+@immutable
 final class ReminderBoxService extends IHiveBoxService<ReminderModel> {
   ReminderBoxService({required super.boxKey});
 

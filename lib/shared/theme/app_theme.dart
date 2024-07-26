@@ -8,17 +8,18 @@ sealed class _AppTheme {
 final class _AppDarkTheme implements _AppTheme {
   @override
   ColorScheme get colorScheme => ColorScheme.dark(
-        background: AppColorScheme.instance.blackColor,
-        onBackground: AppColorScheme.instance.greyColor,
+        surface: AppColorScheme.instance.blackColor,
+        onSurface: AppColorScheme.instance.lightGreyColor,
         onPrimary: Colors.white,
         primary: AppColorScheme.instance.primaryColor,
+        shadow: AppColorScheme.instance.blackColor.withOpacity(.1),
       );
 
   @override
   TextTheme get textTheme => GoogleFonts.plusJakartaSansTextTheme().apply(
-        displayColor: colorScheme.onBackground,
-        bodyColor: colorScheme.onBackground,
-        decorationColor: colorScheme.onBackground,
+        displayColor: colorScheme.onSurface,
+        bodyColor: colorScheme.onSurface,
+        decorationColor: colorScheme.onSurface,
       );
 
   ThemeData get themeData => ThemeData(
@@ -26,19 +27,19 @@ final class _AppDarkTheme implements _AppTheme {
         colorScheme: colorScheme,
         textTheme: textTheme,
         fontFamily: GoogleFonts.montserrat().fontFamily,
-        scaffoldBackgroundColor: colorScheme.background,
+        scaffoldBackgroundColor: colorScheme.surface,
         primaryColor: colorScheme.primary,
-        iconTheme: IconThemeData(color: colorScheme.onBackground),
+        iconTheme: IconThemeData(color: colorScheme.onSurface),
         inputDecorationTheme: InputDecorationTheme(
           hintStyle: textTheme.labelSmall,
-          fillColor: colorScheme.background,
+          fillColor: colorScheme.surface,
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: colorScheme.background.withOpacity(.9),
+          backgroundColor: colorScheme.surface.withOpacity(.9),
           selectedItemColor: colorScheme.primary,
         ),
         tabBarTheme: TabBarTheme(
-          overlayColor: MaterialStateProperty.all(Colors.transparent),
+          overlayColor: WidgetStateProperty.all(Colors.transparent),
           indicatorColor: colorScheme.primary,
           indicatorSize: TabBarIndicatorSize.tab,
         ),
@@ -48,7 +49,7 @@ final class _AppDarkTheme implements _AppTheme {
         chipTheme: ChipThemeData(
           brightness: Brightness.dark,
           selectedColor: colorScheme.primary,
-          backgroundColor: colorScheme.background,
+          backgroundColor: colorScheme.surface,
           side: BorderSide(color: colorScheme.primary, width: .7),
           labelStyle: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w500, color: colorScheme.primary),
         ),
@@ -56,23 +57,23 @@ final class _AppDarkTheme implements _AppTheme {
           backgroundColor: colorScheme.primary,
           foregroundColor: colorScheme.onPrimary,
         ),
-        popupMenuTheme: PopupMenuThemeData(color: colorScheme.background.withOpacity(.1), surfaceTintColor: Colors.amber),
+        popupMenuTheme: PopupMenuThemeData(color: colorScheme.surface.withOpacity(.1), surfaceTintColor: Colors.amber),
         drawerTheme: DrawerThemeData(
           elevation: 0,
-          shadowColor: colorScheme.onBackground.withOpacity(.5),
-          backgroundColor: colorScheme.background,
-          surfaceTintColor: colorScheme.onBackground,
+          shadowColor: colorScheme.onSurface.withOpacity(.5),
+          backgroundColor: colorScheme.surface,
+          surfaceTintColor: colorScheme.onSurface,
         ),
         appBarTheme: AppBarTheme(
-          backgroundColor: colorScheme.background,
-          iconTheme: IconThemeData(color: colorScheme.onBackground),
+          backgroundColor: colorScheme.surface,
+          iconTheme: IconThemeData(color: colorScheme.onSurface),
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
         dividerTheme: DividerThemeData(
-          color: colorScheme.onBackground.withOpacity(.2),
+          color: colorScheme.onSurface.withOpacity(.2),
           thickness: .3,
         ),
-        dividerColor: colorScheme.onBackground.withOpacity(.2),
+        dividerColor: colorScheme.onSurface.withOpacity(.2),
         extensions: [
           SignViewTheme(
             firstPrimary: AppColorScheme.instance.primarySwatch.shade700,
@@ -86,17 +87,18 @@ final class _AppDarkTheme implements _AppTheme {
 final class _AppLightTheme implements _AppTheme {
   @override
   ColorScheme get colorScheme => ColorScheme.light(
-        background: AppColorScheme.instance.backgroundColor,
-        onBackground: AppColorScheme.instance.blackColor,
+        surface: AppColorScheme.instance.backgroundColor,
+        onSurface: AppColorScheme.instance.blackColor,
         onPrimary: AppColorScheme.instance.backgroundColor,
         primary: AppColorScheme.instance.primaryColor,
+        shadow: AppColorScheme.instance.blackColor.withOpacity(.1),
       );
 
   @override
   TextTheme get textTheme => GoogleFonts.plusJakartaSansTextTheme().apply(
-        displayColor: colorScheme.onBackground,
-        bodyColor: colorScheme.onBackground,
-        decorationColor: colorScheme.onBackground,
+        displayColor: colorScheme.onSurface,
+        bodyColor: colorScheme.onSurface,
+        decorationColor: colorScheme.onSurface,
       );
 
   ThemeData get themeData => ThemeData(
@@ -104,52 +106,52 @@ final class _AppLightTheme implements _AppTheme {
         colorScheme: colorScheme,
         textTheme: textTheme,
         fontFamily: GoogleFonts.montserrat().fontFamily,
-        scaffoldBackgroundColor: colorScheme.background,
+        scaffoldBackgroundColor: colorScheme.surface,
         primaryColor: colorScheme.primary,
-        iconTheme: IconThemeData(color: colorScheme.onBackground),
+        iconTheme: IconThemeData(color: colorScheme.onSurface),
         inputDecorationTheme: InputDecorationTheme(
           hintStyle: textTheme.labelSmall,
-          fillColor: colorScheme.background,
+          fillColor: colorScheme.surface,
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: colorScheme.background.withOpacity(.9),
+          backgroundColor: colorScheme.surface.withOpacity(.9),
           selectedItemColor: colorScheme.primary,
         ),
         bottomSheetTheme: BottomSheetThemeData(
-          backgroundColor: colorScheme.background,
+          backgroundColor: colorScheme.surface,
         ),
         tabBarTheme: TabBarTheme(
-          overlayColor: MaterialStateProperty.all(Colors.transparent),
+          overlayColor: WidgetStateProperty.all(Colors.transparent),
           indicatorColor: colorScheme.primary,
           indicatorSize: TabBarIndicatorSize.tab,
         ),
         chipTheme: ChipThemeData(
           brightness: Brightness.light,
           selectedColor: colorScheme.primary,
-          backgroundColor: colorScheme.background,
+          backgroundColor: colorScheme.surface,
           side: BorderSide(color: colorScheme.primary, width: .7),
           labelStyle: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w500, color: colorScheme.primary),
         ),
         dividerTheme: DividerThemeData(
-          color: colorScheme.onBackground.withOpacity(.2),
+          color: colorScheme.onSurface.withOpacity(.2),
           thickness: .3,
         ),
-        dividerColor: colorScheme.onBackground.withOpacity(.2),
+        dividerColor: colorScheme.onSurface.withOpacity(.2),
         floatingActionButtonTheme: FloatingActionButtonThemeData(
           backgroundColor: colorScheme.primary,
           foregroundColor: colorScheme.onPrimary,
         ),
-        popupMenuTheme: PopupMenuThemeData(color: colorScheme.background.withOpacity(.1), surfaceTintColor: Colors.amber),
-        progressIndicatorTheme: ProgressIndicatorThemeData(color: colorScheme.primary, refreshBackgroundColor: colorScheme.background),
+        popupMenuTheme: PopupMenuThemeData(color: colorScheme.surface.withOpacity(.1), surfaceTintColor: Colors.amber),
+        progressIndicatorTheme: ProgressIndicatorThemeData(color: colorScheme.primary, refreshBackgroundColor: colorScheme.surface),
         drawerTheme: DrawerThemeData(
           elevation: 0,
-          shadowColor: colorScheme.onBackground.withOpacity(.5),
-          backgroundColor: colorScheme.background,
-          surfaceTintColor: colorScheme.onBackground,
+          shadowColor: colorScheme.onSurface.withOpacity(.5),
+          backgroundColor: colorScheme.surface,
+          surfaceTintColor: colorScheme.onSurface,
         ),
         appBarTheme: AppBarTheme(
-          backgroundColor: colorScheme.background,
-          iconTheme: IconThemeData(color: colorScheme.onBackground),
+          backgroundColor: colorScheme.surface,
+          iconTheme: IconThemeData(color: colorScheme.onSurface),
           systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
         extensions: [

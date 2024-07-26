@@ -5,6 +5,7 @@ import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
+import 'package:quotely/injection/injection_container.dart';
 import 'package:stacked/stacked.dart';
 
 part 'screen_design_tools_mixin.dart';
@@ -20,7 +21,7 @@ final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigu
     _initConfig();
     listenToReactiveValues([_themeConfiguration]);
   }
-  final ThemeConfigurationBoxService _configurationBoxService = HiveService.instance.themeConfigurationBoxService;
+  final ThemeConfigurationBoxService _configurationBoxService = locator<HiveService>().themeConfigurationBoxService;
 
   Future<void> init(BuildContext context) async {
     try {} catch (e) {

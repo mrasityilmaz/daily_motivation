@@ -5,7 +5,7 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualInter
 
   final ReminderModel? editReminderModel;
 
-  final ReminderBoxService _reminderBoxService = HiveService.instance.reminderBoxService;
+  final ReminderBoxService _reminderBoxService = locator<HiveService>().reminderBoxService;
   late final TextEditingController titleTextController;
   late final TextEditingController messageTextController;
 

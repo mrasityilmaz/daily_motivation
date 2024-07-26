@@ -5,7 +5,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:quotely/core/navigator/app_navigator.dart';
+import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/firebase_options.dart';
@@ -24,10 +24,9 @@ void main() async {
       options: DefaultFirebaseOptions.currentPlatform,
     );
 
-    await HiveService.instance.init();
-
     ///
     await configureDependencies();
+    await locator<HiveService>().init();
 
     /// Configure Dependencies for the GetIt Service Locator
     ///
@@ -55,6 +54,7 @@ void main() async {
   };
 }
 
+@immutable
 final class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

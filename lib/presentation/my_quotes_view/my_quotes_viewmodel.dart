@@ -1,7 +1,19 @@
-part of 'my_quotes_view.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:quotely/config/navigator/app_navigator.dart';
+import 'package:quotely/core/services/logger_service.dart';
+import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:quotely/data/services/hive_service/boxes/my_quote_service.dart';
+import 'package:quotely/data/services/hive_service/hive_service.dart';
+import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/presentation/dialogs/app_dialogs.dart';
+import 'package:stacked/stacked.dart';
 
-final class _MyQuotesViewModel extends BaseViewModel {
-  final MyQuoteBoxService _myQuoteBoxService = HiveService.instance.myQuoteBoxService;
+part 'mixins/ui_logic_mixin.dart';
+
+final class MyQuotesViewModel extends BaseViewModel with _UILogicMixin {
+  final MyQuoteBoxService _myQuoteBoxService = locator<HiveService>().myQuoteBoxService;
 
   final List<QuoteHiveModel> _myQuoteListStatic = List<QuoteHiveModel>.empty(growable: true);
   List<QuoteHiveModel> get _myQuoteListBasedHive => _myQuoteBoxService.myQuoteList;

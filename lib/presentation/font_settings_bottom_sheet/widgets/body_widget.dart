@@ -111,7 +111,7 @@ final class _BodyWidget extends ViewModelWidget<_FontSettingsBottomSheetViewMode
                             backgroundColor: Colors.transparent,
                             shape: RoundedRectangleBorder(
                               borderRadius: context.radius12,
-                              side: BorderSide(color: context.colors.background.withOpacity(.1)),
+                              side: BorderSide(color: context.colors.surface.withOpacity(.1)),
                             ),
                             icon: Icon(
                               buttonData.icon,
@@ -399,7 +399,7 @@ final class _QuoteAndAuthorWidget extends ViewModelWidget<_FontSettingsBottomShe
 
 @immutable
 final class __FontChild extends ViewModelWidget<_FontSettingsBottomSheetViewModel> {
-  const __FontChild({super.key});
+  const __FontChild();
 
   @override
   Widget build(BuildContext context, _FontSettingsBottomSheetViewModel viewModel) {
@@ -407,7 +407,7 @@ final class __FontChild extends ViewModelWidget<_FontSettingsBottomSheetViewMode
       padding: context.paddingNormalVertical + context.paddingLowHorizontal,
       child: CustomDropdown<DefaultFontsEnum>(
         decoration: CustomDropdownDecoration(
-          closedFillColor: context.colors.onBackground.withOpacity(.5),
+          closedFillColor: context.colors.onSurface.withOpacity(.5),
         ),
         overlayHeight: context.height * .6,
         items: viewModel.allDefaultFontList.map((e) => e).toList(),
@@ -435,10 +435,12 @@ final class __FontChild extends ViewModelWidget<_FontSettingsBottomSheetViewMode
             ],
           );
         },
-        onChanged: (p0) async {
-          viewModel.changeFont(
-            fontName: p0.fontFamily,
-          );
+        onChanged: (p0) {
+          if (p0 != null) {
+            viewModel.changeFont(
+              fontName: p0.fontFamily,
+            );
+          }
         },
       ),
     );
@@ -463,9 +465,9 @@ final class __AlignChild extends ViewModelWidget<_FontSettingsBottomSheetViewMod
           indicator: ShapeDecoration(
             shape: RoundedRectangleBorder(
               borderRadius: context.radius12,
-              side: BorderSide(color: context.colors.background.withOpacity(.1)),
+              side: BorderSide(color: context.colors.surface.withOpacity(.1)),
             ),
-            color: context.colors.background.withOpacity(.5),
+            color: context.colors.surface.withOpacity(.5),
           ),
           padding: EdgeInsets.zero,
           dividerHeight: 0,
@@ -499,7 +501,7 @@ final class __TextSizeChild extends ViewModelWidget<_FontSettingsBottomSheetView
                 valueIndicatorColor: Colors.white,
                 valueIndicatorTextStyle: const TextStyle(color: Colors.black),
                 thumbShape: CustomSliderThumbShape(
-                  borderColor: context.colors.onBackground.withOpacity(.2),
+                  borderColor: context.colors.onSurface.withOpacity(.2),
                   textColor: context.textTheme.labelSmall!.color,
                   text: viewModel.quoteFontSize.toStringAsFixed(1),
                 ),
@@ -541,9 +543,9 @@ final class __FontWeightChild extends ViewModelWidget<_FontSettingsBottomSheetVi
           indicator: ShapeDecoration(
             shape: RoundedRectangleBorder(
               borderRadius: context.radius12,
-              side: BorderSide(color: context.colors.background.withOpacity(.1)),
+              side: BorderSide(color: context.colors.surface.withOpacity(.1)),
             ),
-            color: context.colors.background.withOpacity(.5),
+            color: context.colors.surface.withOpacity(.5),
           ),
           padding: EdgeInsets.zero,
           dividerHeight: 0,

@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
-import 'package:quotely/data/services/hive_service/boxes/liked_quote_service.dart';
-import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
+import 'package:quotely/presentation/dialogs/app_dialogs.dart';
+import 'package:quotely/presentation/favorites_view/favorites_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
-part 'favorites_viewmodel.dart';
+part 'widgets/app_bar_widget.dart';
+part 'widgets/body_widget.dart';
 part 'widgets/quote_row_widget.dart';
 
 @immutable
@@ -24,54 +24,18 @@ final class FavoritesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.nonReactive(
-      viewModelBuilder: _FavoritesViewModel.new,
+      viewModelBuilder: FavoritesViewModel.new,
       builder: (context, model, child) {
-        return Stack(
+        return const Stack(
           children: [
             Scaffold(
-              appBar: AppBar(
-                backgroundColor: context.colors.surface,
-                title: Text(
-                  'Favorites',
-                  style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-                ),
-                centerTitle: true,
-              ),
-              body: const _FavoritesViewBodyWidget(),
+              appBar: _FavoritesAppBar(),
+              body: _FavoritesViewBodyWidget(),
             ),
-            const ViewModelLoadingIndicator<_FavoritesViewModel>(),
+            ViewModelLoadingIndicator<FavoritesViewModel>(),
           ],
         );
       },
-    );
-  }
-}
-
-@immutable
-final class _FavoritesViewBodyWidget extends ViewModelWidget<_FavoritesViewModel> {
-  const _FavoritesViewBodyWidget();
-
-  @override
-  Widget build(BuildContext context, _FavoritesViewModel viewModel) {
-    return CustomScrollView(
-      slivers: [
-        SliverPadding(
-          padding: context.screenPadding,
-          sliver: SliverList.builder(
-            itemCount: viewModel.likedQuoteList.length,
-            itemBuilder: (context, index) {
-              final quote = viewModel.likedQuoteList[index];
-              return _QuoteRowWidget(quote: quote);
-            },
-          ),
-        ),
-        SliverSafeArea(
-          minimum: context.adaptiveScreenPaddingBottom + context.paddingMediumBottom,
-          sliver: const SliverToBoxAdapter(
-            child: SizedBox(),
-          ),
-        ),
-      ],
     );
   }
 }

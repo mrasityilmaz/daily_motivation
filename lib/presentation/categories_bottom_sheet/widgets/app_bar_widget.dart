@@ -1,13 +1,14 @@
 part of '../categories_bottom_sheet.dart';
 
 @immutable
-final class _CategoriesBottomSheetAppBar extends SelectorViewModelWidget<_CategoriesBottomSheetViewModel, bool> implements PreferredSizeWidget {
+final class _CategoriesBottomSheetAppBar extends SelectorViewModelWidget<CategoriesBottomSheetViewModel, bool> implements PreferredSizeWidget {
   const _CategoriesBottomSheetAppBar();
 
   @override
   AppBar build(BuildContext context, bool isPremium) {
     return AppBar(
       backgroundColor: context.colors.surface,
+      forceMaterialTransparency: false,
       title: Text(
         'Categories',
         style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
@@ -19,7 +20,7 @@ final class _CategoriesBottomSheetAppBar extends SelectorViewModelWidget<_Catego
             text: 'Kilitleri Kaldır',
             backgroundColor: Colors.transparent,
             onPressed: () {},
-            textColor: context.colors.onBackground,
+            textColor: context.colors.onSurface,
           ),
         ],
       ],
@@ -30,7 +31,7 @@ final class _CategoriesBottomSheetAppBar extends SelectorViewModelWidget<_Catego
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
-  bool selector(_CategoriesBottomSheetViewModel viewModel) {
+  bool selector(CategoriesBottomSheetViewModel viewModel) {
     return viewModel.isPremium;
   }
 }

@@ -13,6 +13,7 @@ final class _AppBarWidget extends ViewModelWidget<_RemindersViewModel> implement
         style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
       ),
       centerTitle: true,
+      forceMaterialTransparency: false,
       actions: [
         if (!viewModel.hasReachedMaxReminderCount) ...[
           Padding(
@@ -30,7 +31,7 @@ final class _AppBarWidget extends ViewModelWidget<_RemindersViewModel> implement
                 label: Container(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: context.colors.background,
+                    color: context.colors.surface,
                   ),
                   child: Icon(
                     CupertinoIcons.add_circled_solid,
