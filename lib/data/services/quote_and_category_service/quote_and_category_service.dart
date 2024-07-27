@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/extensions/models_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/category_service.dart';
@@ -34,7 +35,7 @@ final class QuoteAndCategoryService with ListenableServiceMixin, _QuoteAndCatego
   ///
   /// Reactive Values
   ///
-  final ReactiveValue<List<QuoteModel>> _quotes = ReactiveValue<List<QuoteModel>>([]);
+  final ReactiveValue<List<QuoteModel>> _quotes = ReactiveValue<List<QuoteModel>>(List<QuoteModel>.empty(growable: true));
   late final ReactiveValue<Categories> _selectedCategory;
 
   ///

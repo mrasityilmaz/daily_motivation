@@ -24,6 +24,7 @@ environment:
 ###
 dependencies:
   animated_custom_dropdown: ^3.0.0
+  another_flushbar: ^1.12.30
   auto_route: ^7.8.4
   auto_size_text: ^3.0.0
   cached_network_image: ^3.3.1
@@ -39,6 +40,7 @@ dependencies:
   flutter_animated_dialog:
     path: lib/vendor/animated_dialog/flutter_animated_dialog
   flutter_box_transform: ^0.4.2
+  flutter_local_notifications: ^17.2.1+2
   flutter_slidable: ^3.0.1
   freezed_annotation: ^2.4.1
   get_it: ^7.6.4
@@ -59,7 +61,7 @@ dependencies:
   stacked_themes: ^0.3.12
   uuid: ^4.3.3
   visibility_detector: ^0.4.0+2
-  another_flushbar: ^1.12.30
+  flutter_timezone: ^2.1.0
 
 ###
 ### Dependencies

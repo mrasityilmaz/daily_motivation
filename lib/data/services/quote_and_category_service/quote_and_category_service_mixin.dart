@@ -93,6 +93,14 @@ mixin _QuoteAndCategoryServiceMixin {
     String locale = 'tr',
   }) async {
     try {
+      ///
+      /// Only category is a MyQuotes
+      /// Bc these stored on Hive
+      ///
+      if (category == Categories.myquotes) {
+        return _readMyQuotes();
+      }
+
       final String jsonString = await rootBundle.loadString('$_categoryPath${category.key}_quotes.json');
 
       if (locale == 'tr') {
@@ -108,6 +116,16 @@ mixin _QuoteAndCategoryServiceMixin {
 
         return quotesEn;
       }
+    } catch (e) {
+      return [];
+    }
+  }
+
+  Future<List<QuoteModel>> _readMyQuotes() async {
+    try {
+      final List<QuoteModel> myQuoteList = locator<HiveService>().myQuoteBoxService.myQuoteList.map((e) => e.toQuoteModel).toList();
+
+      return myQuoteList;
     } catch (e) {
       return [];
     }

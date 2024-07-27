@@ -4,18 +4,40 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/services/logger_service.dart';
+import 'package:quotely/core/services/notification_service/notification_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/firebase_options.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/shared/app_theme.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
+///
+///
+///
+
+@pragma('vm:entry-point')
+void notificationTapBackground(NotificationResponse notificationResponse) {
+  // ignore: avoid_print
+  print('notification(${notificationResponse.id}) action tapped: '
+      '${notificationResponse.actionId} with'
+      ' payload: ${notificationResponse.payload}');
+  if (notificationResponse.input?.isNotEmpty ?? false) {
+    // ignore: avoid_print
+    print(
+      'notification action tapped with input: ${notificationResponse.input}',
+    );
+  }
+}
+
 void main() async {
   await runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
+    await configureDependencies();
+    await locator<NotificationService>().initService();
     await ThemeManager.initialise();
     await EasyLocalization.ensureInitialized();
     await MobileAds.instance.initialize();
@@ -25,7 +47,7 @@ void main() async {
     );
 
     ///
-    await configureDependencies();
+
     await locator<HiveService>().init();
 
     /// Configure Dependencies for the GetIt Service Locator
@@ -66,6 +88,8 @@ final class MyApp extends StatelessWidget {
       lightTheme: AppTheme.instance.lightTheme,
       builder: (context, regularTheme, darkTheme, themeMode) {
         return MaterialApp.router(
+          themeAnimationCurve: Easing.emphasizedAccelerate,
+          themeAnimationDuration: Durations.medium1,
           title: 'Daily Motivation',
           debugShowCheckedModeBanner: false,
           theme: regularTheme,
