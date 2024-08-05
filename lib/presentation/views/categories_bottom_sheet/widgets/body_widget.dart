@@ -9,6 +9,7 @@ final class _BodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
+      clipBehavior: Clip.none,
       controller: scrollController,
       slivers: [
         ...CategoryGroup.values.map(

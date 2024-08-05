@@ -10,6 +10,7 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
 
   @override
   Widget build(BuildContext context, bool isSelected, CategoriesBottomSheetViewModel viewModel) {
+    debugPrint('Rebuild - $category');
     return AdvancedButtonWidget(
       expand: true,
       backgroundColor: isSelected ? context.colors.primary.withOpacity(.75) : context.colors.primary.withOpacity(.1),
@@ -38,7 +39,9 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
                 child: FittedBox(
                   alignment: Alignment.bottomRight,
                   fit: BoxFit.fitHeight,
-                  child: Image.asset(category.iconPath),
+                  child: Image.asset(
+                    category.iconPath,
+                  ),
                 ),
               ),
             ),

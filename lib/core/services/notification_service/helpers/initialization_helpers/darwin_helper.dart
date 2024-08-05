@@ -8,21 +8,21 @@ mixin _DarwinInitializationHelper {
   /// Constant Variables
   ///
   /// A notification action which triggers a App navigation event
-  final String navigationActionId = 'id_3';
+  final String _navigationActionId = 'id_3';
 
   /// Defines a iOS/MacOS notification category for text input actions.
-  final String darwinNotificationCategoryText = 'textCategory';
+  final String _darwinNotificationCategoryText = 'textCategory';
 
   /// Defines a iOS/MacOS notification category for plain actions.
-  final String darwinNotificationCategoryPlain = 'plainCategory';
+  final String _darwinNotificationCategoryPlain = 'plainCategory';
 
   ///
   /// *
   ///
   ///
-  late final List<DarwinNotificationCategory> darwinNotificationCategories = <DarwinNotificationCategory>[
+  late final List<DarwinNotificationCategory> _darwinNotificationCategories = <DarwinNotificationCategory>[
     DarwinNotificationCategory(
-      darwinNotificationCategoryText,
+      _darwinNotificationCategoryText,
       actions: <DarwinNotificationAction>[
         DarwinNotificationAction.text(
           'text_1',
@@ -33,7 +33,7 @@ mixin _DarwinInitializationHelper {
       ],
     ),
     DarwinNotificationCategory(
-      darwinNotificationCategoryPlain,
+      _darwinNotificationCategoryPlain,
       actions: <DarwinNotificationAction>[
         DarwinNotificationAction.plain('id_1', 'Action 1'),
         DarwinNotificationAction.plain(
@@ -44,7 +44,7 @@ mixin _DarwinInitializationHelper {
           },
         ),
         DarwinNotificationAction.plain(
-          navigationActionId,
+          _navigationActionId,
           'Action 3 (foreground)',
           options: <DarwinNotificationActionOption>{
             DarwinNotificationActionOption.foreground,
@@ -69,12 +69,15 @@ mixin _DarwinInitializationHelper {
 
   /// Note: permissions aren't requested here just to demonstrate that can be
   /// done later
-  late final DarwinInitializationSettings initializationSettingsDarwin = DarwinInitializationSettings(
+  late final DarwinInitializationSettings _initializationSettingsDarwin = DarwinInitializationSettings(
     requestAlertPermission: false,
     requestBadgePermission: false,
     requestSoundPermission: false,
     onDidReceiveLocalNotification: (int id, String? title, String? body, String? payload) async {
-      print('object');
+      print('ID : $id\n');
+      print('Title : $title\n');
+      print('Body : $body\n');
+      print('Payload : $payload\n');
 
       ///
       /// TODO - onDidReceiveLocalNotification
@@ -88,6 +91,6 @@ mixin _DarwinInitializationHelper {
       //    ),
       //  );
     },
-    notificationCategories: darwinNotificationCategories,
+    notificationCategories: _darwinNotificationCategories,
   );
 }

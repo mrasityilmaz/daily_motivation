@@ -25,7 +25,7 @@ final class _SettingsRowWidget extends StatelessWidget {
               padding: iconPadding ?? context.paddingLowTop * .5,
               child: Icon(
                 icon,
-                color: iconColor,
+                color: iconColor ?? context.colors.primary,
                 size: 30,
               ),
             ),

@@ -3,19 +3,19 @@
 part of '../notification_service.dart';
 
 @immutable
-final class _InitialConfigurationBase with _AndroidInitializationHelper, _DarwinInitializationHelper, _LinuxInitializationHelper, _NotificationConstantVariables {
+class _InitialConfigurationBase with _AndroidInitializationHelper, _DarwinInitializationHelper, _LinuxInitializationHelper {
   ///
   ///
   ///
-  final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+  final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
-  final MethodChannel platform = const MethodChannel('dexterx.dev/flutter_local_notifications_example');
+  final MethodChannel _platform = const MethodChannel('dexterx.dev/flutter_local_notifications_example');
 
   ///
   /// Configure Timezone
   ///
-
-  Future<void> configureLocalTimeZone() async {
+  @nonVirtual
+  Future<void> _configureLocalTimeZone() async {
     try {
       if (kIsWeb || Platform.isLinux) {
         return;
@@ -33,14 +33,15 @@ final class _InitialConfigurationBase with _AndroidInitializationHelper, _Darwin
   /// Indicates if the app was launched via notification.
   /// TODO - Configure initial route if the app was launched via notification
   ///
-  Future<void> configureAppLaunchDetails() async {
+  @nonVirtual
+  Future<void> _configureAppLaunchDetails() async {
     try {
       late final NotificationAppLaunchDetails? notificationAppLaunchDetails;
 
       if (!kIsWeb && Platform.isLinux) {
         notificationAppLaunchDetails = null;
       } else {
-        notificationAppLaunchDetails = await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
+        notificationAppLaunchDetails = await _flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
       }
 
       if (notificationAppLaunchDetails?.didNotificationLaunchApp ?? false) {
@@ -57,27 +58,28 @@ final class _InitialConfigurationBase with _AndroidInitializationHelper, _Darwin
   ///
   /// Base Initialization Settings
   ///
-  InitializationSettings get initializationSettings => InitializationSettings(
-        android: initializationSettingsAndroid,
-        iOS: initializationSettingsDarwin,
-        macOS: initializationSettingsDarwin,
-        linux: initializationSettingsLinux,
+  InitializationSettings get _initializationSettings => InitializationSettings(
+        android: _initializationSettingsAndroid,
+        iOS: _initializationSettingsDarwin,
+        macOS: _initializationSettingsDarwin,
+        linux: _initializationSettingsLinux,
       );
 
   ///
   /// Initialize Local Notification Plugin
   ///
-  Future<void> initializeLocalNotificationPlugin() async {
+  @nonVirtual
+  Future<void> _initializeLocalNotificationPlugin() async {
     try {
-      await flutterLocalNotificationsPlugin.initialize(
-        initializationSettings,
+      await _flutterLocalNotificationsPlugin.initialize(
+        _initializationSettings,
         onDidReceiveNotificationResponse: (NotificationResponse notificationResponse) {
-          print('object');
+          print(notificationResponse);
           switch (notificationResponse.notificationResponseType) {
             case NotificationResponseType.selectedNotification:
             //     selectNotificationStream.add(notificationResponse.payload);
             case NotificationResponseType.selectedNotificationAction:
-              if (notificationResponse.actionId == navigationActionId) {
+              if (notificationResponse.actionId == _navigationActionId) {
                 //  selectNotificationStream.add(notificationResponse.payload);
               }
           }
@@ -88,5 +90,15 @@ final class _InitialConfigurationBase with _AndroidInitializationHelper, _Darwin
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
+  }
+
+  ///
+  /// Init Notification Service
+  ///
+  @mustCallSuper
+  Future<void> initService() async {
+    await _configureLocalTimeZone();
+    await _configureAppLaunchDetails();
+    await _initializeLocalNotificationPlugin();
   }
 }

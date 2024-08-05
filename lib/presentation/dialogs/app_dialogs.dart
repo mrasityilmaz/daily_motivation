@@ -157,7 +157,7 @@ final class AppDialogs {
     }
   }
 
-  Future<void> showBasicFlushBar(BuildContext context, {required String message}) async {
+  Future<void> showBasicFlushBar(BuildContext context, {required String message, Duration? duration}) async {
     await Flushbar<void>(
       title: '',
       titleText: const SizedBox(),
@@ -165,13 +165,13 @@ final class AppDialogs {
         message,
         style: context.textTheme.titleSmall?.copyWith(color: context.colors.surface, fontWeight: FontWeight.w600),
       ),
-      duration: context.normalDuration,
-      animationDuration: context.duration250,
+      duration: duration ?? context.normalDuration,
+      animationDuration: duration != null ? Duration(milliseconds: duration.inMilliseconds ~/ 4) : context.duration250,
       forwardAnimationCurve: Curves.ease,
       backgroundColor: context.colors.surfaceTint,
       reverseAnimationCurve: Curves.ease,
       padding: context.screenPaddingHorizontal + context.screenPaddingBottom + context.screenPaddingTop * .5,
-      margin: context.screenPaddingHorizontal * 2,
+      margin: context.screenPaddingHorizontal * 2 + context.adaptiveScreenPaddingBottom,
       borderRadius: BorderRadius.circular(10),
     ).show(context);
   }

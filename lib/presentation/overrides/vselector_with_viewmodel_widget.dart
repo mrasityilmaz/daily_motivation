@@ -24,9 +24,15 @@ final class _DataProviderElement<T extends ChangeNotifier, K> extends ComponentE
   Widget build() {
     return Selector<T, K>(
       key: widget.key,
-      shouldRebuild: widget.shouldRebuild,
-      selector: (BuildContext context, T viewModel) => widget.selector(viewModel),
-      builder: (BuildContext _, K value, Widget? child) => widget.build(this, value, Provider.of<T>(this, listen: false)),
+      shouldRebuild: (K v1, K v2) {
+        return widget.shouldRebuild(v1, v2);
+      },
+      selector: (BuildContext context, T viewModel) {
+        return widget.selector(viewModel);
+      },
+      builder: (BuildContext _, K value, Widget? child) {
+        return widget.build(this, value, Provider.of<T>(this, listen: false));
+      },
       child: widget.staticChild,
     );
   }

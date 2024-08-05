@@ -20,9 +20,7 @@ final class _TopSection extends StatelessWidget {
                 onPressed: () async {
                   // locator<ThemeService>().toggleDarkLightTheme();
                   try {
-                    await locator<NotificationService>()
-                        .flutterLocalNotificationsPlugin
-                        .show(1, 'Test', 'Hello', const NotificationDetails(iOS: DarwinNotificationDetails(interruptionLevel: InterruptionLevel.critical)), payload: 'Payload Test');
+                    await locator<NotificationService>().showNotification();
                   } catch (e, s) {
                     LoggerService.instance.catchLog(e, s);
                   }

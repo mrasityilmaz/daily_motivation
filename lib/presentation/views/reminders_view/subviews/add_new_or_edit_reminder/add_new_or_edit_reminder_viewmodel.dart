@@ -1,6 +1,9 @@
 part of 'add_new_or_edit_reminder_view.dart';
 
-final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin {
+/// TODO - REFACTOR THIS PAGE
+
+final class _AddNewOrEditReminderViewModel extends BaseViewModel
+    with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin {
   _AddNewOrEditReminderViewModel({this.editReminderModel});
 
   final ReminderModel? editReminderModel;
@@ -102,19 +105,21 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualInter
   /// ```
   Future<void> _saveNewReminder() async {
     final ReminderModel reminderModel = ReminderModel(
-      notificationId: const Uuid().v4(),
+      notificationId: safeIntId.getId().toString(),
       notificationTitle: title,
       notificationBody: message,
       notificationDaysInWeek: selectedDaysOfWeekIndex,
-      notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
-      notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
+      notificationEqualSchedule:
+          selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+      notificationCustomIntervalSchedule:
+          selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
     );
 
     await runBusyFuture(
       _reminderBoxService.addReminder(reminderModel),
     );
 
-    await locator<AppRouter>().pop<ReminderModel>(reminderModel);
+    await locator<AppRouter>().maybePop<ReminderModel>(reminderModel);
   }
 
   Future<void> _saveEditedReminder() async {
@@ -123,15 +128,17 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel with EqualInter
       notificationDaysInWeek: selectedDaysOfWeekIndex,
       notificationTitle: title,
       notificationBody: message,
-      notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
-      notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
+      notificationEqualSchedule:
+          selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+      notificationCustomIntervalSchedule:
+          selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
     );
 
     await runBusyFuture(
       _reminderBoxService.updateReminder(reminderModel.notificationId, reminderModel),
     );
 
-    await locator<AppRouter>().pop<ReminderModel>(reminderModel);
+    await locator<AppRouter>().maybePop<ReminderModel>(reminderModel);
   }
 
   ///

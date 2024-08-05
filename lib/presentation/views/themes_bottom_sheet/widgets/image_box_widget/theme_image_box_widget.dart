@@ -24,6 +24,9 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
       ///
       cacheWidth: constraints.biggest.width.toInt(),
       cacheHeight: constraints.biggest.height.toInt(),
+      height: constraints.biggest.height,
+      width: constraints.biggest.width,
+
       fit: BoxFit.cover,
     ).image;
 
@@ -37,10 +40,7 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
           onTap: () async => _onTap(context, isLocked: isLocked, textColor: textColor, viewModel: viewModel),
           child: Container(
             decoration: BoxDecoration(
-              image: DecorationImage(
-                image: imageProvider,
-                fit: BoxFit.cover,
-              ),
+              image: DecorationImage(image: imageProvider, fit: BoxFit.contain),
               borderRadius: context.radius12,
               border: Border.all(color: context.colors.onSurface.withOpacity(.1)),
             ),

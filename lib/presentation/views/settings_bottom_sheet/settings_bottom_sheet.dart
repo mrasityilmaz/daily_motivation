@@ -5,10 +5,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/core/services/notification_service/notification_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_widget.dart';
+import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 

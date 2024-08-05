@@ -4,7 +4,7 @@ mixin _LinuxInitializationHelper {
   ///
   /// Main Linux Initialization Setting
   ///
-  final LinuxInitializationSettings initializationSettingsLinux = LinuxInitializationSettings(
+  final LinuxInitializationSettings _initializationSettingsLinux = LinuxInitializationSettings(
     defaultActionName: 'Open notification',
     defaultIcon: AssetsLinuxIcon('icons/app_icon.png'),
   );

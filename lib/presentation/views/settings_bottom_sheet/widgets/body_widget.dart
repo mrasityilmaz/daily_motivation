@@ -10,6 +10,7 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
   Widget build(BuildContext context, _SettingsBottomSheetViewModel viewModel) {
     return CustomScrollView(
       controller: scrollController,
+      physics: const BouncingScrollPhysics(decelerationRate: ScrollDecelerationRate.fast),
       slivers: [
         SliverPadding(
           padding: context.screenPadding,
@@ -54,7 +55,6 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
                     ),
                     _SettingsRowWidget(
                       icon: Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
-                      iconColor: context.colors.primary,
                       title: 'Alıntı Bildirimleri',
                       onPressed: () async => viewModel.pushRoute(const QuoteNotificationsViewRoute()),
                     ),
@@ -88,16 +88,39 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
                         ),
                       ),
                     ),
+                    ValueListenableBuilder(
+                      valueListenable: locator<NotificationService>().isNotificationPermissionGranted,
+                      builder: (context, value, child) {
+                        return _SettingsRowWidget(
+                          icon: Platform.isAndroid ? Icons.notifications_none_rounded : CupertinoIcons.bell,
+                          title: 'Notifications',
+                          onPressed: () {},
+                          trailing: ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(50, 20)),
+                            child: Switch.adaptive(
+                              splashRadius: 12,
+                              value: locator<NotificationService>().isNotificationPermissionGranted.value,
+                              applyCupertinoTheme: true,
+                              onChanged: (permissionValue) async {
+                                if (permissionValue) {
+                                  await locator<NotificationService>().requestNotificationPermission(openAppSettingsWhenPermanentlyDenied: true);
+                                } else {
+                                  await AppDialogs.instance.showBasicFlushBar(context, message: 'To turn off notifications, go to the app settings.', duration: context.normalDuration * 2);
+                                }
+                              },
+                            ),
+                          ),
+                        );
+                      },
+                    ),
                     _SettingsRowWidget(
                       icon: Platform.isAndroid ? Icons.feedback_outlined : CupertinoIcons.text_bubble,
-                      iconColor: context.colors.primary,
                       title: 'Give Feedback',
                       onPressed: () async {},
                     ),
                     _SettingsRowWidget(
                       icon: Icons.adaptive.share_outlined,
                       iconPadding: context.paddingLowVertical * .25,
-                      iconColor: context.colors.primary,
                       title: 'Share App',
                       onPressed: () async {},
                     ),

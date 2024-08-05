@@ -4,5 +4,5 @@ mixin _AndroidInitializationHelper {
   ///
   /// Main Android Initialization setting
   ///
-  final AndroidInitializationSettings initializationSettingsAndroid = const AndroidInitializationSettings('app_icon');
+  final AndroidInitializationSettings _initializationSettingsAndroid = const AndroidInitializationSettings('app_icon');
 }

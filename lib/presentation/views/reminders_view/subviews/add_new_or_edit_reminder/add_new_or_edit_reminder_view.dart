@@ -17,8 +17,8 @@ import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_lo
 import 'package:quotely/presentation/core_widgets/textfield/textfield_widget.dart';
 import 'package:quotely/presentation/core_widgets/textfield/textformfield_widget.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
+import 'package:safe_int_id/safe_int_id.dart';
 import 'package:stacked/stacked.dart';
-import 'package:uuid/uuid.dart';
 
 part 'add_new_or_edit_reminder_viewmodel.dart';
 part 'mixins/custom_interval_calculator_mixin.dart';
