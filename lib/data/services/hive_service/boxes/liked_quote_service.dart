@@ -7,9 +7,11 @@ import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
 
 @immutable
 final class LikedQuoteBoxService extends HiveBoxService<QuoteHiveModel> {
-  LikedQuoteBoxService({required super.boxName});
+  LikedQuoteBoxService({required super.boxName, super.fromJson = QuoteHiveModel.fromJson});
 
-  List<QuoteHiveModel> get likedQuoteList => box.getAll(box.keys).nonNulls.toList();
+  List<QuoteHiveModel> get likedQuoteList {
+    return box.getAll(box.keys).nonNulls.toList();
+  }
 
   bool isQuoteLiked(String quoteId) {
     return box.containsKey(quoteId);

@@ -1,12 +1,11 @@
 import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
-
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_notification_model/quote_notification_model.dart';
 
 @immutable
 final class QuoteNotificationBoxService extends HiveBoxService<QuoteNotificationModel> {
-  QuoteNotificationBoxService({required super.boxName});
+  QuoteNotificationBoxService({required super.boxName, super.fromJson = QuoteNotificationModel.fromJson});
 
   QuoteNotificationModel? get quoteNotificationValue => box.get(box.keys.first);
 

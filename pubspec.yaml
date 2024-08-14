@@ -46,7 +46,7 @@ dependencies:
   get_it: ^7.6.4
   google_fonts: ^6.1.0
   google_mobile_ads: ^4.0.0
-  hive: ^4.0.0-dev.2
+  # hive: ^4.0.0-dev.2
   #hive: ^2.2.3
   image_pixels: ^3.0.1
   injectable: ^2.3.0

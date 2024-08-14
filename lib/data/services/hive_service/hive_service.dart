@@ -42,6 +42,11 @@ final class HiveService {
       ],
     );
 
+    // Hive.defaultDirectory = await getApplicationDocumentsDirectory().then((value) => value.path);
+
+    // Hive.closeAllBoxes();
+    // Hive.deleteAllBoxesFromDisk();
+
     // Hive.defaultDirectory = appDocumentDir.path;
 
     // await Hive.deleteBoxFromDisk(HiveConstants.themeConfigurationBoxKey);
