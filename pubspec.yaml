@@ -46,8 +46,8 @@ dependencies:
   get_it: ^7.6.4
   google_fonts: ^6.1.0
   google_mobile_ads: ^4.0.0
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
+  hive: ^4.0.0-dev.2
+  #hive: ^2.2.3
   image_pixels: ^3.0.1
   injectable: ^2.3.0
   internet_connection_checker: ^1.0.0+1
@@ -64,6 +64,8 @@ dependencies:
   flutter_timezone: ^2.1.0
   permission_handler: ^11.3.1
   safe_int_id: ^1.1.1
+
+  bee_hive: ^0.0.1-dev.1
 
 ###
 ### Dependencies
@@ -86,7 +88,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^2.4.1
-  hive_generator: ^2.0.1
+
 
   ###
   ### Injection Generator

@@ -1,21 +1,18 @@
+import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_notification_model/quote_notification_model.dart';
-import 'package:quotely/data/services/hive_service/i_hivebox_service.dart';
 
 @immutable
-final class QuoteNotificationBoxService extends IHiveBoxService<QuoteNotificationModel> {
-  QuoteNotificationBoxService({required super.boxKey});
+final class QuoteNotificationBoxService extends HiveBoxService<QuoteNotificationModel> {
+  QuoteNotificationBoxService({required super.boxName});
 
-  @override
-  Box<QuoteNotificationModel> get box => Hive.box<QuoteNotificationModel>(boxKey);
-
-  QuoteNotificationModel? get quoteNotificationValue => box.values.firstOrNull;
+  QuoteNotificationModel? get quoteNotificationValue => box.get(box.keys.first);
 
   Future<void> addQuoteNotification(QuoteNotificationModel quoteNotificationModel) async {
     try {
-      await box.put(quoteNotificationModel.notificationId, quoteNotificationModel);
+      box.put(quoteNotificationModel.notificationId, quoteNotificationModel);
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
@@ -23,7 +20,7 @@ final class QuoteNotificationBoxService extends IHiveBoxService<QuoteNotificatio
 
   Future<void> deleteQuoteNotification(String key) async {
     try {
-      await box.delete(key);
+      box.delete(key);
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
@@ -31,15 +28,15 @@ final class QuoteNotificationBoxService extends IHiveBoxService<QuoteNotificatio
 
   Future<void> updateQuoteNotification(String key, QuoteNotificationModel quoteNotificationModel) async {
     try {
-      await box.put(key, quoteNotificationModel);
+      box.put(key, quoteNotificationModel);
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
   }
 
-  Future<void> clearQuoteNotifications() async {
+  void clearQuoteNotifications() {
     try {
-      await super.clearBox();
+      box.clear();
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }

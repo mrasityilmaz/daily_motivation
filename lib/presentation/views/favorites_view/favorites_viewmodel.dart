@@ -14,7 +14,8 @@ part 'mixins/ui_logic_mixin.dart';
 class FavoritesViewModel extends BaseViewModel with _MultipleChooseHelperMixin, _UILogicMixin {
   final LikedQuoteBoxService _likedQuoteBoxService = locator<HiveService>().likedQuoteBoxService;
 
-  List<QuoteHiveModel> get likedQuoteList => _likedQuoteBoxService.likedQuoteList..sort((a, b) => b.createdAt.compareTo(a.createdAt));
+  List<QuoteHiveModel> get likedQuoteList =>
+      _likedQuoteBoxService.likedQuoteList..sort((a, b) => b.createdAt.compareTo(a.createdAt));
 
   ///
   /// This function remove only unliked quotes from the box
@@ -34,7 +35,7 @@ class FavoritesViewModel extends BaseViewModel with _MultipleChooseHelperMixin, 
 
   Future<void> clearLikedQuotes() async {
     try {
-      await runBusyFuture(_likedQuoteBoxService.clearLikedQuotes());
+      _likedQuoteBoxService.clearLikedQuotes();
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }

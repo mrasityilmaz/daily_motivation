@@ -1,11 +1,15 @@
-part of '../themes_bottom_sheet_viewmodel.dart';
+part of '../themes_bottom_sheet.dart';
 
-mixin _UILogicMixin on ChangeNotifier {
+mixin _UILogicMixin on Widget {
   ///
   /// Button Action
   ///
 
-  Future<void> _onTapThemeBox(BuildContext context, {required bool isLocked, required Future<void> Function() onChanged}) async {
+  Future<void> onTapThemeBox(
+    BuildContext context, {
+    required bool isLocked,
+    required Future<void> Function() onChanged,
+  }) async {
     try {
       late final Future<bool?> future = ProgressOverlayDialog.instance.showProgressOverlay<bool>(
         context,

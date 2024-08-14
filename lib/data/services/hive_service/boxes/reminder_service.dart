@@ -1,21 +1,17 @@
+import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/reminder_model/reminder_model.dart';
-import 'package:quotely/data/services/hive_service/i_hivebox_service.dart';
 
 @immutable
-final class ReminderBoxService extends IHiveBoxService<ReminderModel> {
-  ReminderBoxService({required super.boxKey});
+final class ReminderBoxService extends HiveBoxService<ReminderModel> {
+  ReminderBoxService({required super.boxName});
 
-  @override
-  Box<ReminderModel> get box => Hive.box<ReminderModel>(boxKey);
-
-  List<ReminderModel> get reminderList => box.values.toList();
+  List<ReminderModel> get reminderList => box.getAll(box.keys).nonNulls.toList();
 
   Future<void> addReminder(ReminderModel reminder) async {
     try {
-      await box.put(reminder.notificationId, reminder);
+      box.put(reminder.notificationId, reminder);
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
@@ -23,7 +19,7 @@ final class ReminderBoxService extends IHiveBoxService<ReminderModel> {
 
   Future<void> deleteReminder(String key) async {
     try {
-      await box.delete(key);
+      box.delete(key);
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
@@ -31,15 +27,15 @@ final class ReminderBoxService extends IHiveBoxService<ReminderModel> {
 
   Future<void> updateReminder(String key, ReminderModel reminder) async {
     try {
-      await box.put(key, reminder);
+      box.put(key, reminder);
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
   }
 
-  Future<void> clearReminders() async {
+  void clearReminders() {
     try {
-      await super.clearBox();
+      box.clear();
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }

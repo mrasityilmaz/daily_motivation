@@ -1,8 +1,13 @@
 part of '../../themes_bottom_sheet.dart';
 
 @immutable
-final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> {
-  const _ImageBoxWidget({required this.index, required this.font, required this.backgroundPath, required this.constraints}) : super(reactive: false);
+final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> with _UILogicMixin {
+  const _ImageBoxWidget({
+    required this.index,
+    required this.font,
+    required this.backgroundPath,
+    required this.constraints,
+  }) : super(reactive: false);
   final DefaultFontsEnum font;
   final String backgroundPath;
   final int index;
@@ -37,7 +42,12 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
         final Color textColor = context.getXorColor(img.pixelColorAtAlignment!.call(const Alignment(0, -.1)));
         return InkWell(
           borderRadius: BorderRadius.circular(12),
-          onTap: () async => _onTap(context, isLocked: isLocked, textColor: textColor, viewModel: viewModel),
+          onTap: () async => _onTap(
+            context,
+            isLocked: isLocked,
+            textColor: textColor,
+            updateThemeConfigurationAndPop: viewModel.updateThemeConfigurationAndPop,
+          ),
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(image: imageProvider, fit: BoxFit.contain),
@@ -57,9 +67,17 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
     );
   }
 
-  Future<void> _onTap(BuildContext context, {required ThemesBottomSheetViewModel viewModel, required Color textColor, required bool isLocked}) async {
-    return viewModel.updateThemeConfigurationAndPop(
-      context,
+  ///
+  /// On Tab Image Box
+  ///
+  Future<void> _onTap(
+    BuildContext context, {
+    required Future<void> Function({required bool isLocked, required ThemeConfigurationModel model})
+        updateThemeConfigurationAndPop,
+    required Color textColor,
+    required bool isLocked,
+  }) async {
+    return updateThemeConfigurationAndPop(
       isLocked: isLocked,
       model: ThemeConfigurationModel(
         backgroundPath: backgroundPath,

@@ -1,21 +1,18 @@
+import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
-import 'package:quotely/data/services/hive_service/i_hivebox_service.dart';
 
 @immutable
-final class MyQuoteBoxService extends IHiveBoxService<QuoteHiveModel> {
-  MyQuoteBoxService({required super.boxKey});
+final class MyQuoteBoxService extends HiveBoxService<QuoteHiveModel> {
+  MyQuoteBoxService({required super.boxName});
 
-  @override
-  Box<QuoteHiveModel> get box => Hive.box<QuoteHiveModel>(boxKey);
-
-  List<QuoteHiveModel> get myQuoteList => box.values.toList();
+  List<QuoteHiveModel> get myQuoteList => box.getAll(box.keys).nonNulls.toList();
 
   Future<void> addMyQuote(QuoteHiveModel quoteModel) async {
     try {
-      await box.put(quoteModel.id, quoteModel);
+      box.put(quoteModel.id, quoteModel);
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
@@ -23,15 +20,15 @@ final class MyQuoteBoxService extends IHiveBoxService<QuoteHiveModel> {
 
   Future<void> deleteMyQuote(String quoteId) async {
     try {
-      await box.delete(quoteId);
+      box.delete(quoteId);
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
   }
 
-  Future<void> clearMyQuotes() async {
+  void clearMyQuotes() {
     try {
-      await super.clearBox();
+      box.clear();
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
     }
@@ -48,7 +45,7 @@ final class MyQuoteBoxService extends IHiveBoxService<QuoteHiveModel> {
           category: oldQuote.category,
           id: oldQuote.id,
         );
-        await box.put(oldQuote.id, editedQuote);
+        box.put(oldQuote.id, editedQuote);
       }
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);
