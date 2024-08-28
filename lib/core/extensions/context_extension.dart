@@ -55,7 +55,9 @@ extension PaddingExtensionSymetric on BuildContext {
 
   EdgeInsets get screenPaddingTop => const EdgeInsets.only(top: 12);
   EdgeInsets get screenPaddingBottom => const EdgeInsets.only(bottom: 12);
-  EdgeInsets get adaptiveScreenPaddingBottom => mediaQuery.viewPadding.bottom > 0 ? (screenPaddingBottom * .5) + paddingLowBottom : screenPaddingBottom + paddingLowBottom;
+  EdgeInsets get adaptiveScreenPaddingBottom => mediaQuery.viewPadding.bottom > 0
+      ? (screenPaddingBottom * .5) + paddingLowBottom
+      : screenPaddingBottom + paddingLowBottom;
   EdgeInsets get screenPadding => screenPaddingHorizontal + screenPaddingVertical;
   EdgeInsets get screenPaddingHorizontal => screenPaddingLeft + screenPaddingRight;
   EdgeInsets get screenPaddingRight => const EdgeInsets.only(right: 16);
@@ -100,11 +102,35 @@ extension DurationExtension on BuildContext {
 }
 
 extension RadiusExtension on BuildContext {
-  BorderRadiusGeometry get radius4 => BorderRadius.circular(4);
-  BorderRadiusGeometry get radius8 => BorderRadius.circular(8);
-  BorderRadiusGeometry get radius12 => BorderRadius.circular(12);
-  BorderRadiusGeometry get radius16 => BorderRadius.circular(16);
-  BorderRadiusGeometry get radius20 => BorderRadius.circular(20);
+  BorderRadius get radius4 => BorderRadius.circular(4);
+  BorderRadius get radius8 => BorderRadius.circular(8);
+  BorderRadius get radius12 => BorderRadius.circular(12);
+  BorderRadius get radius16 => BorderRadius.circular(16);
+  BorderRadius get radius20 => BorderRadius.circular(20);
+
+  BorderRadius get radius4Top => const BorderRadius.vertical(top: Radius.circular(4));
+  BorderRadius get radius8Top => const BorderRadius.vertical(top: Radius.circular(8));
+  BorderRadius get radius12Top => const BorderRadius.vertical(top: Radius.circular(12));
+  BorderRadius get radius16Top => const BorderRadius.vertical(top: Radius.circular(16));
+  BorderRadius get radius20Top => const BorderRadius.vertical(top: Radius.circular(20));
+
+  BorderRadius get radius4Bottom => const BorderRadius.vertical(bottom: Radius.circular(4));
+  BorderRadius get radius8Bottom => const BorderRadius.vertical(bottom: Radius.circular(8));
+  BorderRadius get radius12Bottom => const BorderRadius.vertical(bottom: Radius.circular(12));
+  BorderRadius get radius16Bottom => const BorderRadius.vertical(bottom: Radius.circular(16));
+  BorderRadius get radius20Bottom => const BorderRadius.vertical(bottom: Radius.circular(20));
+
+  BorderRadius get radius4Left => const BorderRadius.horizontal(left: Radius.circular(4));
+  BorderRadius get radius8Left => const BorderRadius.horizontal(left: Radius.circular(8));
+  BorderRadius get radius12Left => const BorderRadius.horizontal(left: Radius.circular(12));
+  BorderRadius get radius16Left => const BorderRadius.horizontal(left: Radius.circular(16));
+  BorderRadius get radius20Left => const BorderRadius.horizontal(left: Radius.circular(20));
+
+  BorderRadius get radius4Right => const BorderRadius.horizontal(right: Radius.circular(4));
+  BorderRadius get radius8Right => const BorderRadius.horizontal(right: Radius.circular(8));
+  BorderRadius get radius12Right => const BorderRadius.horizontal(right: Radius.circular(12));
+  BorderRadius get radius16Right => const BorderRadius.horizontal(right: Radius.circular(16));
+  BorderRadius get radius20Right => const BorderRadius.horizontal(right: Radius.circular(20));
 }
 
 Color _adjustColorBasedOnIntensity(Color originalColor) {

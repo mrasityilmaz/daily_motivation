@@ -70,9 +70,7 @@ mixin _DarwinInitializationHelper {
   /// Note: permissions aren't requested here just to demonstrate that can be
   /// done later
   late final DarwinInitializationSettings _initializationSettingsDarwin = DarwinInitializationSettings(
-    requestAlertPermission: false,
-    requestBadgePermission: false,
-    requestSoundPermission: false,
+    requestCriticalPermission: true,
     onDidReceiveLocalNotification: (int id, String? title, String? body, String? payload) async {
       print('ID : $id\n');
       print('Title : $title\n');

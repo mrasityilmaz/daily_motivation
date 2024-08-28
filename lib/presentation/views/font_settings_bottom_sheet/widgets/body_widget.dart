@@ -104,9 +104,12 @@ final class _BodyWidget extends ViewModelWidget<_FontSettingsBottomSheetViewMode
                     SliverList.builder(
                       itemCount: buttonList.length,
                       itemBuilder: (context, index) {
-                        final ({IconData icon, String text, VoidCallback onPressed, Widget child}) buttonData = buttonList[index];
+                        final ({IconData icon, String text, VoidCallback onPressed, Widget child}) buttonData =
+                            buttonList[index];
                         return Padding(
-                          padding: context.paddingLowLeft + context.paddingLowVertical + ((index == buttonList.length - 1) ? context.paddingLowRight : EdgeInsets.zero),
+                          padding: context.paddingLowLeft +
+                              context.paddingLowVertical +
+                              ((index == buttonList.length - 1) ? context.paddingLowRight : EdgeInsets.zero),
                           child: AdvancedButtonWidget.iconText(
                             backgroundColor: Colors.transparent,
                             shape: RoundedRectangleBorder(
@@ -411,7 +414,8 @@ final class __FontChild extends ViewModelWidget<_FontSettingsBottomSheetViewMode
         ),
         overlayHeight: context.height * .6,
         items: viewModel.allDefaultFontList.map((e) => e).toList(),
-        initialItem: DefaultFontsEnum.values.firstWhereOrNull((element) => element.fontFamily == viewModel.currentThemeConfiguration.fontName),
+        initialItem: DefaultFontsEnum.values
+            .firstWhere((element) => element.fontFamily == viewModel.currentThemeConfiguration.fontName),
         listItemBuilder: (context, item, isSelected, onItemSelect) {
           return Row(
             children: [
@@ -550,7 +554,9 @@ final class __FontWeightChild extends ViewModelWidget<_FontSettingsBottomSheetVi
           padding: EdgeInsets.zero,
           dividerHeight: 0,
           tabAlignment: TabAlignment.fill,
-          tabs: viewModel.fontTypeButtonList.map((e) => Tab(icon: Icon(e.icon), iconMargin: EdgeInsets.zero, child: Text(e.text))).toList(),
+          tabs: viewModel.fontTypeButtonList
+              .map((e) => Tab(icon: Icon(e.icon), iconMargin: EdgeInsets.zero, child: Text(e.text)))
+              .toList(),
         ),
       ),
     );
@@ -575,7 +581,9 @@ final class __TextColorChild extends ViewModelWidget<_FontSettingsBottomSheetVie
             itemBuilder: (context, index) {
               final bool isSelected = viewModel.textColorList[index] == viewModel.quoteTextStyle.color;
               return Padding(
-                padding: context.paddingLowLeft + context.paddingLowVertical + ((index == viewModel.textColorList.length - 1) ? context.paddingLowRight : EdgeInsets.zero),
+                padding: context.paddingLowLeft +
+                    context.paddingLowVertical +
+                    ((index == viewModel.textColorList.length - 1) ? context.paddingLowRight : EdgeInsets.zero),
                 child: AdvancedButtonWidget(
                   backgroundColor: viewModel.textColorList[index],
                   shape: RoundedRectangleBorder(
@@ -629,7 +637,9 @@ final class _ResizableContainer extends ViewModelWidget<_FontSettingsBottomSheet
       clampingRect: viewModel._themeConfigurationService.safeAreaRect,
       // constraints: const BoxConstraints(minHeight: kMinInteractiveDimension, minWidth: kMinInteractiveDimension),
       onChanged: (result, event) {
-        final double newfontSize = (((result.oldRect.width + result.oldRect.height) / 2) + ((result.rect.width + result.rect.height) / 2)) * .1;
+        final double newfontSize =
+            (((result.oldRect.width + result.oldRect.height) / 2) + ((result.rect.width + result.rect.height) / 2)) *
+                .1;
         viewModel
           ..setTextRect(result.rect)
           ..changeFontSize(fontSize: viewModel.quoteFontSize + newfontSize);

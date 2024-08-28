@@ -13,7 +13,8 @@ part 'theme_configuration_service_mixin.dart';
 
 @immutable
 @LazySingleton()
-final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigurationserviceMixin, _ScreenDesignToolsMixin {
+final class ThemeConfigurationService
+    with ListenableServiceMixin, _ThemeConfigurationserviceMixin, _ScreenDesignToolsMixin {
   ///
   ///
   ///
@@ -49,7 +50,6 @@ final class ThemeConfigurationService with ListenableServiceMixin, _ThemeConfigu
     }
   }
 
-  ////
   ///
   /// Init
   ///

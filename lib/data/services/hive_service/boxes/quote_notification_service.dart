@@ -7,7 +7,7 @@ import 'package:quotely/data/models/quote_notification_model/quote_notification_
 final class QuoteNotificationBoxService extends HiveBoxService<QuoteNotificationModel> {
   QuoteNotificationBoxService({required super.boxName, super.fromJson = QuoteNotificationModel.fromJson});
 
-  QuoteNotificationModel? get quoteNotificationValue => box.get(box.keys.first);
+  QuoteNotificationModel? get quoteNotificationValue => box.keys.isEmpty ? null : box.get(box.keys.first);
 
   Future<void> addQuoteNotification(QuoteNotificationModel quoteNotificationModel) async {
     try {

@@ -3,7 +3,8 @@
 part of '../notification_service.dart';
 
 @immutable
-class _InitialConfigurationBase with _AndroidInitializationHelper, _DarwinInitializationHelper, _LinuxInitializationHelper {
+class _InitialConfigurationBase
+    with _AndroidInitializationHelper, _DarwinInitializationHelper, _LinuxInitializationHelper {
   ///
   ///
   ///
@@ -74,9 +75,10 @@ class _InitialConfigurationBase with _AndroidInitializationHelper, _DarwinInitia
       await _flutterLocalNotificationsPlugin.initialize(
         _initializationSettings,
         onDidReceiveNotificationResponse: (NotificationResponse notificationResponse) {
-          print(notificationResponse);
+          stderr.write(notificationResponse.toString());
           switch (notificationResponse.notificationResponseType) {
             case NotificationResponseType.selectedNotification:
+              stderr.write(notificationResponse.payload);
             //     selectNotificationStream.add(notificationResponse.payload);
             case NotificationResponseType.selectedNotificationAction:
               if (notificationResponse.actionId == _navigationActionId) {

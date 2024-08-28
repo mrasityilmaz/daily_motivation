@@ -145,19 +145,19 @@ final class CustomTextFormFieldWidget extends StatelessWidget {
             //    hintText: hintText,
             hintStyle: hintTextStyle ?? context.textTheme.titleMedium?.copyWith(color: hintTextColor),
             border: OutlineInputBorder(
-              borderRadius: borderRadius ?? context.radius12.resolve(TextDirection.ltr),
+              borderRadius: borderRadius ?? context.radius12,
               borderSide: BorderSide(color: borderColor ?? context.colors.primary),
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius: borderRadius ?? context.radius12.resolve(TextDirection.ltr),
+              borderRadius: borderRadius ?? context.radius12,
               borderSide: BorderSide(color: borderColor ?? context.colors.primary),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: borderRadius ?? context.radius12.resolve(TextDirection.ltr),
+              borderRadius: borderRadius ?? context.radius12,
               borderSide: BorderSide(color: context.colors.primary),
             ),
             disabledBorder: OutlineInputBorder(
-              borderRadius: borderRadius ?? context.radius12.resolve(TextDirection.ltr),
+              borderRadius: borderRadius ?? context.radius12,
               borderSide: BorderSide(color: borderColor ?? context.colors.primary),
             ),
             labelText: hintText,

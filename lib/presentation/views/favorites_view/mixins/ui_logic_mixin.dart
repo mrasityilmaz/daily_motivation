@@ -1,6 +1,6 @@
 part of '../favorites_viewmodel.dart';
 
-mixin _UILogicMixin on ChangeNotifier {
+mixin _UILogicMixin {
   ///
   /// Button Action
   ///

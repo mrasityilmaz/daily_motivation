@@ -71,7 +71,13 @@ final class AppDialogs {
   /// Custom Progress Show Dialog Function
   ///
 
-  Future<T?> showDialog<T>(BuildContext context, {required Widget child, bool barrierDismissible = true, Alignment alignment = Alignment.center, Color? barrierColor}) async {
+  Future<T?> showDialog<T>(
+    BuildContext context, {
+    required Widget child,
+    bool barrierDismissible = true,
+    Alignment alignment = Alignment.center,
+    Color? barrierColor,
+  }) async {
     ProgressOverlayDialog.instance.closeOverlay();
     LockOverlayDialog.instance.closeOverlay();
 
@@ -157,8 +163,18 @@ final class AppDialogs {
     }
   }
 
-  Future<void> showBasicFlushBar(BuildContext context, {required String message, Duration? duration}) async {
-    await Flushbar<void>(
+  Future<void> showBasicFlushBar(
+    BuildContext context, {
+    required String message,
+    Duration? duration,
+    void Function()? onPressed,
+  }) async {
+    final Flushbar<void> flushbar = Flushbar<void>(
+      key: const ValueKey('basic_flushbar'),
+      onTap: (flushbar) async {
+        await flushbar.dismiss();
+        onPressed?.call();
+      },
       title: '',
       titleText: const SizedBox(),
       messageText: Text(
@@ -173,6 +189,8 @@ final class AppDialogs {
       padding: context.screenPaddingHorizontal + context.screenPaddingBottom + context.screenPaddingTop * .5,
       margin: context.screenPaddingHorizontal * 2 + context.adaptiveScreenPaddingBottom,
       borderRadius: BorderRadius.circular(10),
-    ).show(context);
+    );
+
+    await flushbar.show(context);
   }
 }

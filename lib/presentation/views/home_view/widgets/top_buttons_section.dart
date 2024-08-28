@@ -20,7 +20,10 @@ final class _TopSection extends StatelessWidget {
                 onPressed: () async {
                   // locator<ThemeService>().toggleDarkLightTheme();
                   try {
-                    await locator<NotificationService>().showNotification();
+                    // await locator<AppWorkManager>().schedulePeriodicTask();
+                    await locator<NotificationService>().showNotification(
+                      message: 'Hello from the buttons! - ${DateTime.now()}',
+                    );
                   } catch (e, s) {
                     LoggerService.instance.catchLog(e, s);
                   }

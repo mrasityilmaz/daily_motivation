@@ -40,7 +40,7 @@ final class _DataProviderElement<T extends ChangeNotifier, K> extends ComponentE
   @override
   void update(VSelectorViewModelWidget<T, K> newWidget) {
     super.update(newWidget);
-    assert(widget == newWidget);
+    assert(widget == newWidget, 'The new widget is same the old widget.');
     rebuild();
   }
 }

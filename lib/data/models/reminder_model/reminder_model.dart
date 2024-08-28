@@ -27,6 +27,8 @@ class ReminderModel extends Equatable with _$ReminderModel {
   @override
   List<Object?> get props => [
         notificationId,
+        notificationTitle,
+        notificationBody,
       ];
 }
 
@@ -43,7 +45,8 @@ class ReminderNotificationEqualScheduleModel extends Equatable with _$ReminderNo
     required List<TimeOfDay> notificationSchedules,
   }) = _ReminderNotificationEqualScheduleModel;
 
-  factory ReminderNotificationEqualScheduleModel.fromJson(Map<String, dynamic> json) => _$ReminderNotificationEqualScheduleModelFromJson(json);
+  factory ReminderNotificationEqualScheduleModel.fromJson(Map<String, dynamic> json) =>
+      _$ReminderNotificationEqualScheduleModelFromJson(json);
 
   const ReminderNotificationEqualScheduleModel._();
 
@@ -54,7 +57,8 @@ class ReminderNotificationEqualScheduleModel extends Equatable with _$ReminderNo
 }
 
 @Freezed()
-class ReminderNotificationScheduleCustomIntervalModel extends Equatable with _$ReminderNotificationScheduleCustomIntervalModel {
+class ReminderNotificationScheduleCustomIntervalModel extends Equatable
+    with _$ReminderNotificationScheduleCustomIntervalModel {
   const factory ReminderNotificationScheduleCustomIntervalModel({
     @JsonKey(
       fromJson: _listTimeOfDayFromJson,
@@ -63,7 +67,8 @@ class ReminderNotificationScheduleCustomIntervalModel extends Equatable with _$R
     required List<TimeOfDay> notificationSchedules,
   }) = _ReminderNotificationScheduleCustomIntervalModel;
 
-  factory ReminderNotificationScheduleCustomIntervalModel.fromJson(Map<String, dynamic> json) => _$ReminderNotificationScheduleCustomIntervalModelFromJson(json);
+  factory ReminderNotificationScheduleCustomIntervalModel.fromJson(Map<String, dynamic> json) =>
+      _$ReminderNotificationScheduleCustomIntervalModelFromJson(json);
 
   const ReminderNotificationScheduleCustomIntervalModel._();
 

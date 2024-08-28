@@ -40,34 +40,38 @@ final class _QuoteRowWidget extends ViewModelWidget<MyQuotesViewModel> {
           width: double.maxFinite,
           decoration: BoxDecoration(color: context.colors.onSurface.withOpacity(.05), borderRadius: context.radius8),
           padding: context.paddingLowHorizontal + context.paddingLowVertical * 1.2,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                quote.quote,
-                style: context.textTheme.titleSmall,
-              ),
-              const SizedBox(height: 4),
-              Row(
-                children: [
-                  if (quote.author.isNotEmpty) ...[
-                    Text(
-                      quote.author,
-                      style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.7), fontWeight: FontWeight.w600, fontStyle: FontStyle.italic),
-                    ),
-                  ],
-                  const Spacer(),
-                  GestureDetector(
-                    onTap: () async => viewModel.copyQuote(context, quote: quote),
-                    child: Icon(
+          child: GestureDetector(
+            onTap: () async => viewModel.copyQuote(context, quote: quote),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  quote.quote,
+                  style: context.textTheme.titleSmall,
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    if (quote.author.isNotEmpty) ...[
+                      Text(
+                        quote.author,
+                        style: context.textTheme.bodySmall?.copyWith(
+                          color: context.colors.onSurface.withOpacity(.7),
+                          fontWeight: FontWeight.w600,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                    ],
+                    const Spacer(),
+                    Icon(
                       Icons.copy,
                       color: context.colors.onSurface.withOpacity(.25),
                       size: 16,
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -7,7 +7,6 @@ final class _ThemesBottomSheetAppBar extends StatelessWidget implements Preferre
   @override
   AppBar build(BuildContext context) {
     return AppBar(
-      backgroundColor: context.colors.surface,
       title: Text(
         'Themes',
         style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),

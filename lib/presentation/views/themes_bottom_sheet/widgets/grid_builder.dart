@@ -14,14 +14,9 @@ final class _GridBuilder extends ViewModelWidget<ThemesBottomSheetViewModel> {
         childAspectRatio: .85,
       ),
       itemBuilder: (context, index) {
-        final String currentBackgroundPath = viewModel.allBackgroundList[index];
-        final DefaultFontsEnum currentFont = viewModel.allDefaultFontList[index % viewModel.allDefaultFontList.length];
-
         return LayoutBuilder(
           builder: (context, constraints) => _ImageBoxWidget(
             constraints: constraints,
-            font: currentFont,
-            backgroundPath: currentBackgroundPath,
             index: index,
           ),
         );

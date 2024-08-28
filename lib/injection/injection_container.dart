@@ -2,7 +2,6 @@ import 'package:cookie_jar/cookie_jar.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:quotely/core/constants/api_constants.dart';
-import 'package:quotely/core/extensions/list_extension.dart';
 import 'package:quotely/data/repositories/example_repo/data_sources/example_hive_repository.dart';
 import 'package:quotely/domain/repositories/example_repository/data_sources/ilocal_repository.dart';
 import 'package:quotely/injection/injection_container.config.dart';
@@ -30,9 +29,9 @@ enum DataType {
 Future<void> configureDependencies({String? defaultEnv}) async {
   if (defaultEnv == null) {
     const data = String.fromEnvironment('DATA_TYPE');
-    environmentTag = DataType.values.firstWhereOrDefault((element) => element.name == data, defaultValue: DataType.mock);
+    environmentTag = DataType.values.firstWhere((element) => element.name == data, orElse: () => DataType.mock);
   } else {
-    environmentTag = DataType.values.firstWhereOrDefault((element) => element.name == defaultEnv, defaultValue: DataType.mock);
+    environmentTag = DataType.values.firstWhere((element) => element.name == defaultEnv, orElse: () => DataType.mock);
   }
 
   ///

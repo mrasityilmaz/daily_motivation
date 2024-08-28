@@ -27,6 +27,7 @@ dependencies:
   another_flushbar: ^1.12.30
   auto_route: ^7.8.4
   auto_size_text: ^3.0.0
+  bee_hive: ^0.0.1-dev.1
   cached_network_image: ^3.3.1
   cookie_jar: ^4.0.8
   cupertino_icons: ^1.0.2
@@ -34,7 +35,8 @@ dependencies:
   easy_localization: ^3.0.3
   envied: ^0.3.0+3
   equatable: ^2.0.0
-  firebase_core: ^2.25.4
+  firebase_core: ^3.3.0
+  firebase_messaging: ^15.0.4
   flutter:
     sdk: flutter
   flutter_animated_dialog:
@@ -42,31 +44,27 @@ dependencies:
   flutter_box_transform: ^0.4.2
   flutter_local_notifications: ^17.2.1+2
   flutter_slidable: ^3.0.1
+  flutter_timezone: ^2.1.0
   freezed_annotation: ^2.4.1
   get_it: ^7.6.4
   google_fonts: ^6.1.0
   google_mobile_ads: ^4.0.0
-  # hive: ^4.0.0-dev.2
-  #hive: ^2.2.3
   image_pixels: ^3.0.1
   injectable: ^2.3.0
   internet_connection_checker: ^1.0.0+1
   logger: ^2.0.2+1
   path_provider: ^2.1.2
+  permission_handler: ^11.3.1
   rest_api_package:
     git:
       url: https://github.com/mrasityilmaz/rest_api_package.git
+  safe_int_id: ^1.1.1
   sliver_tools: ^0.2.12
   stacked: ^3.4.1
   stacked_themes: ^0.3.12
   uuid: ^4.3.3
   visibility_detector: ^0.4.0+2
-  flutter_timezone: ^2.1.0
-  permission_handler: ^11.3.1
-  safe_int_id: ^1.1.1
-
-  bee_hive: ^0.0.1-dev.1
-
+ 
 ###
 ### Dependencies
 ###
@@ -88,7 +86,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^2.4.1
-
 
   ###
   ### Injection Generator

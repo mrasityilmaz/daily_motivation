@@ -2,27 +2,20 @@ part of '../themes_bottom_sheet.dart';
 
 @immutable
 final class _BodyWidget extends StatelessWidget {
-  const _BodyWidget({required this.scrollController});
-
-  final ScrollController scrollController;
+  const _BodyWidget();
 
   @override
   Widget build(
     BuildContext context,
   ) {
     return CustomScrollView(
-      controller: scrollController,
+      controller: PrimaryScrollController.maybeOf(context),
       slivers: [
         SliverPadding(
           padding: context.screenPaddingVertical + context.screenPaddingHorizontal * .5,
           sliver: const _GridBuilder(),
         ),
-        SliverSafeArea(
-          minimum: context.adaptiveScreenPaddingBottom + context.paddingMediumBottom,
-          sliver: const SliverToBoxAdapter(
-            child: SizedBox(),
-          ),
-        ),
+        const SliverBottomSafeWidget(),
       ],
     );
   }

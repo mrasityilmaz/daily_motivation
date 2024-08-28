@@ -1,6 +1,6 @@
 part of '../my_quotes_viewmodel.dart';
 
-mixin _UILogicMixin on ChangeNotifier {
+mixin _UILogicMixin {
   ///
   /// Quote Copy Function
   ///

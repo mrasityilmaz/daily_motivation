@@ -134,6 +134,8 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel
           selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
     );
 
+    await locator<NotificationService>().scheduleNotifications(reminderModel: reminderModel);
+
     await runBusyFuture(
       _reminderBoxService.updateReminder(reminderModel.notificationId, reminderModel),
     );

@@ -1,6 +1,6 @@
 part of '../home_viewmodel.dart';
 
-mixin _UILogicMixin on ChangeNotifier {
+mixin _UILogicMixin {
   ///
   /// Show CategoriesBottomSheet
   ///

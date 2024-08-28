@@ -1,6 +1,7 @@
 import UIKit
 import Flutter
 import Firebase
+import FirebaseMessaging
 
 
 
@@ -11,18 +12,25 @@ import Firebase
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     
   ) -> Bool {
-    if #available(iOS 10.0, *) {
-      UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
-    }
+    FirebaseApp.configure()
+    
+    
+    // if #available(iOS 10.0, *) {
+    //   UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+    // }
+    UNUserNotificationCenter.current().delegate = self
     
     GeneratedPluginRegistrant.register(with: self)
   
-    if #available(iOS 13.0, *) {} 
-    else {
-          FirebaseApp.configure()
-    }
+    
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
+
+   func application(application: UIApplication,
+                 didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+          print("Device Token \(deviceToken)")        
+    Messaging.messaging().apnsToken = deviceToken
+}
 }
 
 

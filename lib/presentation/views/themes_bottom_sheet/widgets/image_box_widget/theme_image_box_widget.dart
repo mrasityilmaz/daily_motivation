@@ -1,21 +1,21 @@
 part of '../../themes_bottom_sheet.dart';
 
 @immutable
-final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> with _UILogicMixin {
+final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> with _ImageBoxUILogicMixin {
   const _ImageBoxWidget({
     required this.index,
-    required this.font,
-    required this.backgroundPath,
     required this.constraints,
   }) : super(reactive: false);
-  final DefaultFontsEnum font;
-  final String backgroundPath;
+
   final int index;
 
   final BoxConstraints constraints;
 
   @override
   Widget build(BuildContext context, ThemesBottomSheetViewModel viewModel) {
+    final String backgroundPath = viewModel.allBackgroundList[index];
+    final DefaultFontsEnum font = viewModel.allDefaultFontList[index % viewModel.allDefaultFontList.length];
+
     final bool isLocked = viewModel.isThemeConfigPremium(index);
 
     ///
@@ -39,14 +39,22 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
       imageProvider: imageProvider,
       defaultColor: context.colors.onSurface,
       builder: (context, img) {
-        final Color textColor = context.getXorColor(img.pixelColorAtAlignment!.call(const Alignment(0, -.1)));
+        final Color textColor =
+            context.getXorColor(img.pixelColorAtAlignment?.call(const Alignment(0, -.1)) ?? Colors.white);
         return InkWell(
-          borderRadius: BorderRadius.circular(12),
-          onTap: () async => _onTap(
+          borderRadius: context.radius12,
+          onTap: () async => onChooseThemeCallback(
             context,
             isLocked: isLocked,
-            textColor: textColor,
-            updateThemeConfigurationAndPop: viewModel.updateThemeConfigurationAndPop,
+            onChanged: () async => viewModel.updateThemeConfiguration(
+              model: ThemeConfigurationModel(
+                backgroundPath: backgroundPath,
+                fontName: font.fontFamily,
+                maxFontSize: font.maxFontSize,
+                minFontSize: font.minFontSize,
+                textColor: textColor,
+              ),
+            ),
           ),
           child: Container(
             decoration: BoxDecoration(
@@ -58,7 +66,8 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
             child: __ImageBoxTextSection(
               font: font,
               textColor: textColor,
-              fontNameTextColor: context.getXorColor(img.pixelColorAtAlignment!.call(Alignment.bottomCenter)),
+              fontNameTextColor:
+                  context.getXorColor(img.pixelColorAtAlignment?.call(Alignment.bottomCenter) ?? Colors.white),
               isLocked: isLocked,
             ),
           ),
@@ -67,25 +76,60 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
     );
   }
 
-  ///
-  /// On Tab Image Box
-  ///
-  Future<void> _onTap(
+  @override
+  Future<void> onChooseThemeCallback(
     BuildContext context, {
-    required Future<void> Function({required bool isLocked, required ThemeConfigurationModel model})
-        updateThemeConfigurationAndPop,
-    required Color textColor,
     required bool isLocked,
+    required Future<void> Function() onChanged,
   }) async {
-    return updateThemeConfigurationAndPop(
-      isLocked: isLocked,
-      model: ThemeConfigurationModel(
-        backgroundPath: backgroundPath,
-        fontName: font.fontFamily,
-        maxFontSize: font.maxFontSize,
-        minFontSize: font.minFontSize,
-        textColor: textColor,
-      ),
-    );
+    try {
+      late final Future<bool?> future = ProgressOverlayDialog.instance.showProgressOverlay<bool>(
+        context,
+        asyncProcess: () async {
+          await Future.delayed(Duration(milliseconds: isLocked ? 500 : 300), () async {
+            await onChanged.call();
+          });
+
+          return true;
+        },
+      ).then((result) async {
+        if (result == true) {
+          await locator<AppRouter>().maybePop();
+        }
+
+        return true;
+      });
+
+      ///
+      ///
+      ///
+
+      if (isLocked == false) {
+        await future;
+      } else {
+        await AppDialogs.instance.showDialog<bool?>(
+          context,
+          child: ShowOrPayDialogBody(
+            icon: Icon(
+              Platform.isAndroid ? Icons.format_paint_rounded : CupertinoIcons.paintbrush,
+              size: kMinInteractiveDimension * 1.2,
+              color: context.colors.primary,
+            ),
+            firstButtonText: 'Reklam İzle',
+            secondButtonText: 'Premium Ol',
+            firstButtonOnPressed: () async {
+              await locator<AppRouter>().maybePop().whenComplete(() async {
+                await future;
+              });
+            },
+            title: 'Seçili Temanın Kilidini Aç',
+          ),
+        );
+      }
+    } catch (e, s) {
+      await locator<AppRouter>().maybePop();
+      ProgressOverlayDialog.instance.closeOverlay();
+      LoggerService.instance.catchLog(e, s);
+    }
   }
 }

@@ -10,7 +10,6 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
 
   @override
   Widget build(BuildContext context, bool isSelected, CategoriesBottomSheetViewModel viewModel) {
-    debugPrint('Rebuild - $category');
     return AdvancedButtonWidget(
       expand: true,
       backgroundColor: isSelected ? context.colors.primary.withOpacity(.75) : context.colors.primary.withOpacity(.1),
@@ -22,10 +21,14 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
       ),
       onPressed: isSelected
           ? null
-          : () async => viewModel.changeCategory(
+          : () async => onChangeCategoryCallback(
                 context,
                 category: category,
-                locale: context.locale.languageCode,
+                onChangeFunction: () async => viewModel.changeCategory(
+                  context,
+                  category: category,
+                  locale: context.locale.languageCode,
+                ),
               ),
       padding: EdgeInsets.zero,
       child: Stack(
@@ -52,7 +55,10 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
               alignment: Alignment.topLeft,
               child: Text(
                 category.name,
-                style: context.textTheme.bodyMedium?.copyWith(color: isSelected ? context.colors.onPrimary : context.colors.onSurface.withOpacity(.75), fontWeight: FontWeight.w600),
+                style: context.textTheme.bodyMedium?.copyWith(
+                  color: isSelected ? context.colors.onPrimary : context.colors.onSurface.withOpacity(.75),
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),
@@ -104,5 +110,67 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
   @override
   bool selector(CategoriesBottomSheetViewModel viewModel) {
     return viewModel.isCategorySelected(category);
+  }
+
+  Future<void> onChangeCategoryCallback(
+    BuildContext context, {
+    required Categories category,
+    required Future<void> Function() onChangeFunction,
+  }) async {
+    try {
+      late final Future<bool?> future = ProgressOverlayDialog.instance.showProgressOverlay<bool>(
+        context,
+        asyncProcess: () async {
+          await Future.delayed(const Duration(milliseconds: 400), () async {
+            await onChangeFunction.call();
+          });
+
+          return true;
+        },
+      ).then((result) async {
+        if (result == true) {
+          await locator<AppRouter>().maybePop();
+        }
+        return true;
+      });
+
+      ///
+      /// If the category is a premium
+      ///
+      if (category.isPremium) {
+        await AppDialogs.instance.showDialog<void>(
+          context,
+          child: ShowOrPayDialogBody(
+            icon: Icon(
+              Platform.isAndroid ? Icons.grid_view_rounded : CupertinoIcons.square_grid_2x2,
+              size: kMinInteractiveDimension * 1.2,
+              color: context.colors.primary,
+            ),
+            firstButtonText: 'Premium Ol',
+            firstButtonOnPressed: () async {
+              await locator<AppRouter>().maybePop().whenComplete(() async {
+                await future;
+              });
+            },
+            title: 'Seçili Kategorinin Kilidini Aç',
+          ),
+        );
+      }
+
+      ///
+      /// Other
+      ///
+      else {
+        await future;
+      }
+
+      ///
+      ///
+      ///
+    } catch (e, s) {
+      await locator<AppRouter>().maybePop();
+      ProgressOverlayDialog.instance.closeOverlay();
+      LoggerService.instance.catchLog(e, s);
+    }
   }
 }

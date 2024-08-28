@@ -34,7 +34,8 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
   ///
   QuoteAndCategoryService get listenableCategoryService => listenableServices.first as QuoteAndCategoryService;
 
-  ThemeConfigurationService get listenableThemeConfigurationService => listenableServices[1] as ThemeConfigurationService;
+  ThemeConfigurationService get listenableThemeConfigurationService =>
+      listenableServices[1] as ThemeConfigurationService;
   PremiumServices get listenablePremiumServices => listenableServices[2] as PremiumServices;
 
   ///
@@ -43,7 +44,8 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
   List<QuoteModel> get currentQuoteList => listenableCategoryService.currentQuotes;
 
   Categories? get selectedCategory => listenableCategoryService.selectedCategory;
-  ThemeConfigurationModel get currentThemeConfiguration => listenableThemeConfigurationService.currentThemeConfiguration;
+  ThemeConfigurationModel get currentThemeConfiguration =>
+      listenableThemeConfigurationService.currentThemeConfiguration;
 
   QuoteModel get currentQuote => currentQuoteList.isNotEmpty ? currentQuoteList[_currentPage] : QuoteModel.empty();
   final ValueNotifier<bool> currentQuoteIsLiked = ValueNotifier<bool>(false);
@@ -100,15 +102,14 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
   ///
 
   Future<void> likeQuote({required bool isLiked}) async {
-    await HapticFeedback.mediumImpact().then((value) async {
-      if (isLiked) {
-        await locator<HiveService>().likedQuoteBoxService.unLikeQuote(currentQuote.id);
-        currentQuoteIsLiked.value = false;
-      } else {
-        await locator<HiveService>().likedQuoteBoxService.likeQuote(currentQuote.toHiveModel);
-        currentQuoteIsLiked.value = true;
-      }
-    });
+    if (isLiked) {
+      await locator<HiveService>().likedQuoteBoxService.unLikeQuote(currentQuote.id);
+      currentQuoteIsLiked.value = false;
+    } else {
+      await locator<HiveService>().likedQuoteBoxService.likeQuote(currentQuote.toHiveModel);
+      currentQuoteIsLiked.value = true;
+    }
+    await HapticFeedback.mediumImpact();
   }
 
   ///
@@ -124,5 +125,6 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
   }
 
   @override
-  List<ListenableServiceMixin> get listenableServices => [_categoryService, _themeConfigurationService, _premiumServices];
+  List<ListenableServiceMixin> get listenableServices =>
+      [_categoryService, _themeConfigurationService, _premiumServices];
 }

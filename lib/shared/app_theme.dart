@@ -5,24 +5,25 @@ import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/shared/theme/color_scheme.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
-part 'theme/app_theme.dart';
-part 'theme/custom/sign_view_theme.dart';
+part 'theme/custom_theme_configs/sign_view_theme.dart';
 
-final class AppTheme implements _AppDarkTheme, _AppLightTheme {
-  factory AppTheme() => instance;
+part 'theme/themes/dark_theme.dart';
+part 'theme/themes/light_theme.dart';
 
-  AppTheme._internal();
-  static final AppTheme instance = AppTheme._internal();
+@immutable
+final class AppThemeManager with _AppDarkTheme, _AppLightTheme {
+  factory AppThemeManager() => instance;
 
-  @override
+  const AppThemeManager._internal();
+  static const AppThemeManager instance = AppThemeManager._internal();
+
   ColorScheme get colorScheme => themeData.colorScheme;
 
-  @override
   TextTheme get textTheme => themeData.textTheme;
 
-  @override
-  ThemeData get themeData => locator<ThemeService>().isDarkMode ? darkTheme : lightTheme;
+  ThemeData get themeData => isDarkMode ? darkThemeData : lightThemeData;
 
-  ThemeData get darkTheme => _AppDarkTheme().themeData;
-  ThemeData get lightTheme => _AppLightTheme().themeData;
+  bool get isDarkMode => locator<ThemeService>().isDarkMode;
+
+  ThemeMode get themeMode => isDarkMode ? ThemeMode.dark : ThemeMode.light;
 }

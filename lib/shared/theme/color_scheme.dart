@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
 final class AppColorScheme {
-  AppColorScheme._init();
-  static AppColorScheme? _instace;
-  static AppColorScheme get instance {
-    _instace ??= AppColorScheme._init();
-    return _instace!;
-  }
+  factory AppColorScheme() => instance;
+
+  const AppColorScheme._internal();
+  static const AppColorScheme instance = AppColorScheme._internal();
 
   Color get primaryColor => const Color(0xFF6176f6);
 

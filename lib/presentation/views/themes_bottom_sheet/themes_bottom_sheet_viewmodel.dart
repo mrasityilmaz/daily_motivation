@@ -33,13 +33,10 @@ final class ThemesBottomSheetViewModel extends ReactiveViewModel with PremiumCon
   ///
   /// Update Theme Config Function
   ///
-  Future<void> updateThemeConfigurationAndPop({
-    required bool isLocked,
+  Future<void> updateThemeConfiguration({
     required ThemeConfigurationModel model,
   }) async {
-    await Future.delayed(Duration(milliseconds: isLocked ? 500 : 300), () async {
-      await _themeConfigurationService.changeThemeConfiguration(model: model);
-    });
+    await _themeConfigurationService.changeThemeConfiguration(model: model);
   }
 
   @override

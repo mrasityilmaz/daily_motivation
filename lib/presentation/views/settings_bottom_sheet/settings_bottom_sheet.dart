@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:auto_route/auto_route.dart' as auto_route;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/services/notification_service/notification_service.dart';
@@ -17,7 +18,9 @@ import 'package:stacked_themes/stacked_themes.dart';
 part 'settings_bottom_sheet_viewmodel.dart';
 part 'widgets/app_bar_widget.dart';
 part 'widgets/body_widget.dart';
+part 'widgets/preferences_and_favorites_section.dart';
 part 'widgets/settings_row_widget.dart';
+part 'widgets/settings_section.dart';
 
 @immutable
 final class SettingsBottomSheet extends StatelessWidget {
@@ -31,17 +34,19 @@ final class SettingsBottomSheet extends StatelessWidget {
         return DraggableScrollableSheet(
           initialChildSize: 1,
           minChildSize: .8,
-          builder: (context, scrollController) => ClipRRect(
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-            child: Stack(
-              children: [
-                Scaffold(
-                  backgroundColor: context.colors.surface,
-                  appBar: const _SettingsBottomSheetAppBar(),
-                  body: _BodyWidget(scrollController: scrollController),
-                ),
-                const ViewModelLoadingIndicator<_SettingsBottomSheetViewModel>(),
-              ],
+          builder: (context, scrollController) => PrimaryScrollController(
+            controller: scrollController,
+            child: ClipRRect(
+              borderRadius: context.radius16,
+              child: const Stack(
+                children: [
+                  Scaffold(
+                    appBar: _SettingsBottomSheetAppBar(),
+                    body: _BodyWidget(),
+                  ),
+                  ViewModelLoadingIndicator<_SettingsBottomSheetViewModel>(),
+                ],
+              ),
             ),
           ),
         );

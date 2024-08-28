@@ -8,7 +8,6 @@ import 'package:flutter_box_transform/flutter_box_transform.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quotely/core/constants/default_fonts_enum.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/core/extensions/list_extension.dart';
 import 'package:quotely/core/extensions/text_align_extension.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
@@ -38,7 +37,8 @@ final class FontSettingsBottomSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<_FontSettingsBottomSheetViewModel>.nonReactive(
-      viewModelBuilder: () => _FontSettingsBottomSheetViewModel(quoteModel: quoteModel, context: context, widgetDefaultRect: textAreaRect),
+      viewModelBuilder: () =>
+          _FontSettingsBottomSheetViewModel(quoteModel: quoteModel, context: context, widgetDefaultRect: textAreaRect),
       builder: (context, model, child) {
         return Stack(
           children: [

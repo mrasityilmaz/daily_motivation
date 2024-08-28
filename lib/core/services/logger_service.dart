@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:logger/logger.dart';
 
 @immutable
@@ -15,16 +15,22 @@ final class LoggerService {
   void printLog(
     String message,
   ) {
-    logger.i(
-      message,
-    );
+    if (kDebugMode) {
+      logger.i(
+        message,
+      );
+    }
   }
 
   void printErrorLog(Object e, StackTrace s) {
-    logger.t(e.toString(), stackTrace: s);
+    if (kDebugMode) {
+      logger.t(e.toString(), stackTrace: s);
+    }
   }
 
   void catchLog(Object e, StackTrace s) {
-    FlutterError.reportError(FlutterErrorDetails(exception: e, stack: s));
+    if (kDebugMode) {
+      FlutterError.reportError(FlutterErrorDetails(exception: e, stack: s));
+    }
   }
 }
