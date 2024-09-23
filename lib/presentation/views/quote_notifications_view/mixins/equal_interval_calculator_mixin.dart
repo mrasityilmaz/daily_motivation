@@ -1,11 +1,13 @@
 part of '../quote_notification_view.dart';
 
 mixin EqualIntervalCalculatorMixin on BaseViewModel {
-  final List<(int index, GlobalKey itemKey)> _equalIntervalKeyList = List<(int index, GlobalKey itemKey)>.generate(24, (index) => (index, GlobalKey()));
+  final List<(int index, GlobalKey itemKey)> _equalIntervalKeyList =
+      List<(int index, GlobalKey itemKey)>.generate(24, (index) => (index, GlobalKey()));
 
   List<(int index, GlobalKey itemKey)> get equalIntervalKeyList => _equalIntervalKeyList;
 
-  ({TimeOfDay start, TimeOfDay end, int? interval}) _equalIntervalValue = (start: const TimeOfDay(hour: 9, minute: 0), end: const TimeOfDay(hour: 22, minute: 0), interval: null);
+  ({TimeOfDay start, TimeOfDay end, int? interval}) _equalIntervalValue =
+      (start: const TimeOfDay(hour: 9, minute: 0), end: const TimeOfDay(hour: 22, minute: 0), interval: null);
 
   ({TimeOfDay start, TimeOfDay end, int? interval}) get equalIntervalValue => _equalIntervalValue;
 
@@ -13,7 +15,11 @@ mixin EqualIntervalCalculatorMixin on BaseViewModel {
   /// Set Start time of the equal interval
   ///
   void setEqualIntervalStartValue({TimeOfDay? start}) {
-    _equalIntervalValue = (start: start ?? _equalIntervalValue.start, end: _equalIntervalValue.end, interval: _equalIntervalValue.interval);
+    _equalIntervalValue = (
+      start: start ?? _equalIntervalValue.start,
+      end: _equalIntervalValue.end,
+      interval: _equalIntervalValue.interval
+    );
     notifyListeners();
   }
 
@@ -24,7 +30,11 @@ mixin EqualIntervalCalculatorMixin on BaseViewModel {
     if (end != null && _equalIntervalValue.start.hour > end.hour) {
       _equalIntervalValue = (start: end, end: _equalIntervalValue.start, interval: _equalIntervalValue.interval);
     } else {
-      _equalIntervalValue = (start: _equalIntervalValue.start, end: end ?? _equalIntervalValue.end, interval: _equalIntervalValue.interval);
+      _equalIntervalValue = (
+        start: _equalIntervalValue.start,
+        end: end ?? _equalIntervalValue.end,
+        interval: _equalIntervalValue.interval
+      );
     }
     notifyListeners();
   }

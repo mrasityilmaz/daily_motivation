@@ -166,3 +166,4 @@ final class NotificationService extends _InitialConfigurationBase with _Permissi
     await _flutterLocalNotificationsPlugin.cancelAll();
   }
 }
+

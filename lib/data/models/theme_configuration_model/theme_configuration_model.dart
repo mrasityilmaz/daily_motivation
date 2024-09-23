@@ -1,32 +1,27 @@
 // ignore_for_file: avoid_final_parameters, invalid_annotation_target
 
-import 'package:equatable/equatable.dart';
+import 'package:dart_mappable/dart_mappable.dart';
 import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'theme_configuration_model.freezed.dart';
-part 'theme_configuration_model.g.dart';
+part 'theme_configuration_model.mapper.dart';
 
-@Freezed()
-class ThemeConfigurationModel extends Equatable with _$ThemeConfigurationModel {
-  const factory ThemeConfigurationModel({
-    required String backgroundPath,
-    required String fontName,
-    required double maxFontSize,
-    required double minFontSize,
-    @JsonKey(fromJson: _intToColor, toJson: _colorToInt) required final Color textColor,
-  }) = _ThemeConfigurationModel;
+@MappableClass()
+class ThemeConfigurationModel with ThemeConfigurationModelMappable {
+  const ThemeConfigurationModel({
+    required this.backgroundPath,
+    required this.fontName,
+    required this.maxFontSize,
+    required this.minFontSize,
+    required this.textColor,
+  });
+  final String backgroundPath;
+  final String fontName;
+  final double maxFontSize;
+  final double minFontSize;
+  final Color textColor;
 
-  const ThemeConfigurationModel._();
-
-  factory ThemeConfigurationModel.fromJson(Map<String, dynamic> json) => _$ThemeConfigurationModelFromJson(json);
-
-  @override
-  List<Object?> get props => [
-        backgroundPath,
-        fontName,
-        textColor,
-      ];
+  static const fromMap = ThemeConfigurationModelMapper.fromMap;
+  static const fromJson = ThemeConfigurationModelMapper.fromJson;
 }
 
 int _colorToInt(Color color) {

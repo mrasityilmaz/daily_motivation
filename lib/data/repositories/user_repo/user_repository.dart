@@ -4,19 +4,19 @@ import 'package:quotely/core/errors/errors.dart';
 import 'package:quotely/core/extensions/dartz_extension.dart';
 import 'package:quotely/core/platform/network_info.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';
-import 'package:quotely/domain/repositories/example_repository/data_sources/ilocal_repository.dart';
-import 'package:quotely/domain/repositories/example_repository/data_sources/iremote_repository.dart';
-import 'package:quotely/domain/repositories/example_repository/i_example_repository.dart';
+import 'package:quotely/domain/repositories/user_repository/data_sources/ilocal_repository.dart';
+import 'package:quotely/domain/repositories/user_repository/data_sources/iremote_repository.dart';
+import 'package:quotely/domain/repositories/user_repository/i_user_repository.dart';
 
-@LazySingleton(as: IExampleRepository)
-class ExampleRepository implements IExampleRepository {
-  const ExampleRepository({
+@LazySingleton(as: IUserRepository)
+class UserRepository implements IUserRepository {
+  const UserRepository({
     required this.remoteDataSource,
     required this.localDataSource,
     required this.networkInfo,
   });
-  final IExampleRemoteRepository remoteDataSource;
-  final IExampleLocalRepository localDataSource;
+  final IUserRemoteRepository remoteDataSource;
+  final IUserLocalRepository localDataSource;
   final NetworkInfo networkInfo;
 
   @override

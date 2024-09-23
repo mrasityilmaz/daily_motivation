@@ -2,75 +2,32 @@
 
 import 'dart:convert';
 
-import 'package:equatable/equatable.dart';
+import 'package:dart_mappable/dart_mappable.dart';
 import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/data/models/quote_notification_model/custom_interval_model.dart';
+import 'package:quotely/data/models/quote_notification_model/equal_schedule_model.dart';
 
-part 'quote_notification_model.freezed.dart';
-part 'quote_notification_model.g.dart';
+part 'quote_notification_model.mapper.dart';
 
-@Freezed()
-class QuoteNotificationModel extends Equatable with _$QuoteNotificationModel {
-  const factory QuoteNotificationModel({
-    required String notificationId,
-    required List<Categories> notificationCategories,
-    required List<int> notificationDaysInWeek,
-    required QuoteNotificationEqualScheduleModel? notificationEqualSchedule,
-    required QuoteNotificationScheduleCustomIntervalModel? notificationCustomIntervalSchedule,
-  }) = _QuoteNotificationModel;
+@MappableClass()
+class QuoteNotificationModel with QuoteNotificationModelMappable {
+  const QuoteNotificationModel({
+    required this.notificationId,
+    required this.notificationCategories,
+    required this.notificationDaysInWeek,
+    this.notificationEqualSchedule,
+    this.notificationCustomIntervalSchedule,
+  });
 
-  const QuoteNotificationModel._();
+  final String notificationId;
+  final List<Categories> notificationCategories;
+  final List<int> notificationDaysInWeek;
+  final QuoteNotificationEqualScheduleModel? notificationEqualSchedule;
+  final QuoteNotificationScheduleCustomIntervalModel? notificationCustomIntervalSchedule;
 
-  factory QuoteNotificationModel.fromJson(Map<String, dynamic> json) => _$QuoteNotificationModelFromJson(json);
-
-  @override
-  List<Object?> get props => [
-        notificationId,
-      ];
-}
-
-@Freezed()
-class QuoteNotificationEqualScheduleModel extends Equatable with _$QuoteNotificationEqualScheduleModel {
-  const factory QuoteNotificationEqualScheduleModel({
-    @JsonKey(fromJson: _timeOfDayFromJson, toJson: _timeOfDayToJson) required TimeOfDay? notificationStartTime,
-    @JsonKey(fromJson: _timeOfDayFromJson, toJson: _timeOfDayToJson) required TimeOfDay? notificationEndTime,
-    required int? notificationInterval,
-    @JsonKey(
-      fromJson: _listTimeOfDayFromJson,
-      toJson: _listTimeOfDayToJson,
-    )
-    required List<TimeOfDay> notificationSchedules,
-  }) = _QuoteNotificationEqualScheduleModel;
-
-  factory QuoteNotificationEqualScheduleModel.fromJson(Map<String, dynamic> json) => _$QuoteNotificationEqualScheduleModelFromJson(json);
-
-  const QuoteNotificationEqualScheduleModel._();
-
-  @override
-  List<Object?> get props => [
-        this,
-      ];
-}
-
-@Freezed()
-class QuoteNotificationScheduleCustomIntervalModel extends Equatable with _$QuoteNotificationScheduleCustomIntervalModel {
-  const factory QuoteNotificationScheduleCustomIntervalModel({
-    @JsonKey(
-      fromJson: _listTimeOfDayFromJson,
-      toJson: _listTimeOfDayToJson,
-    )
-    required List<TimeOfDay> notificationSchedules,
-  }) = _QuoteNotificationScheduleCustomIntervalModel;
-
-  factory QuoteNotificationScheduleCustomIntervalModel.fromJson(Map<String, dynamic> json) => _$QuoteNotificationScheduleCustomIntervalModelFromJson(json);
-
-  const QuoteNotificationScheduleCustomIntervalModel._();
-
-  @override
-  List<Object?> get props => [
-        this,
-      ];
+  static const fromMap = QuoteNotificationModelMapper.fromMap;
+  static const fromJson = QuoteNotificationModelMapper.fromJson;
 }
 
 String? _timeOfDayToJson(TimeOfDay? timeOfDay) {

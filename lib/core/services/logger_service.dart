@@ -10,7 +10,11 @@ final class LoggerService {
   const LoggerService._internal();
   static const LoggerService instance = LoggerService._internal();
 
-  static final Logger logger = Logger();
+  static final Logger logger = Logger(
+    printer: PrettyPrinter(
+      colors: false,
+    ),
+  );
 
   void printLog(
     String message,

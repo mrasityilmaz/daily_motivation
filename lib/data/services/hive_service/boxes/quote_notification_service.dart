@@ -5,7 +5,7 @@ import 'package:quotely/data/models/quote_notification_model/quote_notification_
 
 @immutable
 final class QuoteNotificationBoxService extends HiveBoxService<QuoteNotificationModel> {
-  QuoteNotificationBoxService({required super.boxName, super.fromJson = QuoteNotificationModel.fromJson});
+  QuoteNotificationBoxService({required super.boxName, super.fromJson = QuoteNotificationModel.fromMap});
 
   QuoteNotificationModel? get quoteNotificationValue => box.keys.isEmpty ? null : box.get(box.keys.first);
 

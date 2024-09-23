@@ -16,10 +16,10 @@ part 'app_navigator.gr.dart';
 
 @LazySingleton()
 @AutoRouterConfig()
-class AppRouter extends _$AppRouter {
+final class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
-        CustomRoute(
+        CustomRoute<void>(
           page: OnboardViewRoute.page,
           transitionsBuilder: TransitionsBuilders.slideRightWithFade,
 

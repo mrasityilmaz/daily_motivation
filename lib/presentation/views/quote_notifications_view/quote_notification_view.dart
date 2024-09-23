@@ -3,12 +3,14 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/constants/categories_enum.dart';
 import 'package:quotely/core/constants/reminder_schedule_enum.dart';
 import 'package:quotely/core/extensions/categories_extension.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/services/logger_service.dart';
+import 'package:quotely/data/models/quote_notification_model/custom_interval_model.dart';
+import 'package:quotely/data/models/quote_notification_model/equal_schedule_model.dart';
 import 'package:quotely/data/models/quote_notification_model/quote_notification_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/quote_notification_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
@@ -86,7 +88,8 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                       children: [
                         Text(
                           'Notification Schedule',
-                          style: context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onSurface.withOpacity(.75)),
+                          style: context.textTheme.bodyLarge
+                              ?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onSurface.withOpacity(.75)),
                         ),
                         Row(
                           children: List.generate(7, (index) => index).map(
@@ -94,14 +97,17 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                               final bool isSelected = viewModel.isDaysOfWeekSelected(e);
                               return Expanded(
                                 child: Padding(
-                                  padding: context.paddingLowVertical + (e != 0 ? context.paddingLowLeft * .5 : EdgeInsets.zero),
+                                  padding: context.paddingLowVertical +
+                                      (e != 0 ? context.paddingLowLeft * .5 : EdgeInsets.zero),
                                   child: AdvancedButtonWidget(
                                     expand: true,
                                     backgroundColor: isSelected ? context.colors.primary : context.colors.surface,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(12),
                                       side: BorderSide(
-                                        color: isSelected ? context.colors.primary : context.colors.primary.withOpacity(.5),
+                                        color: isSelected
+                                            ? context.colors.primary
+                                            : context.colors.primary.withOpacity(.5),
                                       ),
                                     ),
                                     onPressed: () {
@@ -132,7 +138,9 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                           padding: context.paddingLowVertical * 1.5 + context.paddingLowHorizontal,
                           child: Row(
                             children: [
-                              ChooseCircleIcon(isSelected: viewModel.selectedScheduleType == ReminderScheduleEnum.equalInterval),
+                              ChooseCircleIcon(
+                                isSelected: viewModel.selectedScheduleType == ReminderScheduleEnum.equalInterval,
+                              ),
                               SizedBox(
                                 width: context.lowValue,
                               ),
@@ -142,7 +150,8 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                                   children: [
                                     Text(
                                       'Equal Interval',
-                                      style: context.textTheme.bodyMedium?.copyWith(color: context.colors.onSurface.withOpacity(.75)),
+                                      style: context.textTheme.bodyMedium
+                                          ?.copyWith(color: context.colors.onSurface.withOpacity(.75)),
                                     ),
                                     Row(
                                       children: [
@@ -152,7 +161,8 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                                             widthFactor: .8,
                                             child: Text(
                                               'Başlangıç ve bitiş saatlari arasında seçilen aralıkta bildirim gönderilir',
-                                              style: context.textTheme.labelMedium?.copyWith(color: context.colors.onSurface.withOpacity(.5)),
+                                              style: context.textTheme.labelMedium
+                                                  ?.copyWith(color: context.colors.onSurface.withOpacity(.5)),
                                             ),
                                           ),
                                         ),
@@ -177,7 +187,9 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                           padding: context.paddingLowVertical * 1.5 + context.paddingLowHorizontal,
                           child: Row(
                             children: [
-                              ChooseCircleIcon(isSelected: viewModel.selectedScheduleType == ReminderScheduleEnum.customInterval),
+                              ChooseCircleIcon(
+                                isSelected: viewModel.selectedScheduleType == ReminderScheduleEnum.customInterval,
+                              ),
                               SizedBox(
                                 width: context.lowValue,
                               ),
@@ -187,7 +199,8 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                                   children: [
                                     Text(
                                       'Custom Times',
-                                      style: context.textTheme.bodyMedium?.copyWith(color: context.colors.onSurface.withOpacity(.75)),
+                                      style: context.textTheme.bodyMedium
+                                          ?.copyWith(color: context.colors.onSurface.withOpacity(.75)),
                                     ),
                                     Row(
                                       children: [
@@ -197,7 +210,8 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                                             widthFactor: .8,
                                             child: Text(
                                               'İstenilen saatlerde bildirim gönderilir',
-                                              style: context.textTheme.labelMedium?.copyWith(color: context.colors.onSurface.withOpacity(.5)),
+                                              style: context.textTheme.labelMedium
+                                                  ?.copyWith(color: context.colors.onSurface.withOpacity(.5)),
                                             ),
                                           ),
                                         ),

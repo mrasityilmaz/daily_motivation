@@ -8,12 +8,23 @@ admin.initializeApp({
 
 const message = {
   data: {
-    title: 'Custom Data Title',
-    message: 'This is a data message',
+    title: 'Test-22',
+    message: 'Test-22',
   
   },
+
+  android: {
+    priority: 'high',
+  },
+  apns: {
+    payload: {
+      aps: {
+        'content-available': 1,
+      },
+    },
+  },
   
-  token: 'eV74DO5WzU6PqDg8Z83ee0:APA91bEFMU0E6outNbkTbNFTxdRHlYVh23oT4zbt5lIxzRPAydpOUTmOosQr3aKOGfe7wBchuEJQto_VrNDvjQp__fJ0ZXXf0JqutoPRlFTfICreWsCIr-iP00Sq9e9DOKg6CgaXXBTz', // veya topic: 'your_topic'
+  token: 'cx_jpstxAEHNlN_tQMevNS:APA91bEq6hY6vSc8j6GrDC67exjpQeUKs-Xo67GLl1cCHpQcBcAcKQQ5cWanHZoxq8K3gcHHiNtM8NtUNQ_TrDDd1NWUeKYXtFeBlfWHAf2MBbwPwf7P1QEolIREAitQxq0E852Ni_bv', // veya topic: 'your_topic'
 };
 
 admin.messaging().send(message)

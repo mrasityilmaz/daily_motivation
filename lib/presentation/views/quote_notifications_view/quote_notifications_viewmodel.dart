@@ -1,6 +1,7 @@
 part of 'quote_notification_view.dart';
 
-final class _QuoteNotificationViewModel extends BaseViewModel with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin, SelectedCategoriesMixin {
+final class _QuoteNotificationViewModel extends BaseViewModel
+    with EqualIntervalCalculatorMixin, CustomIntervalCalculatorMixin, SelectedCategoriesMixin {
   _QuoteNotificationViewModel();
 
   final QuoteNotificationBoxService _quoteNotificationBoxService = locator<HiveService>().quoteNotificationBoxService;
@@ -82,15 +83,17 @@ final class _QuoteNotificationViewModel extends BaseViewModel with EqualInterval
       notificationId: const Uuid().v4(),
       notificationCategories: selectedCategoriesValue,
       notificationDaysInWeek: selectedDaysOfWeekIndex,
-      notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
-      notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
+      notificationEqualSchedule:
+          selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+      notificationCustomIntervalSchedule:
+          selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
     );
 
     await runBusyFuture(
       _quoteNotificationBoxService.addQuoteNotification(quoteNotificationModel),
     );
 
-    await locator<AppRouter>().pop();
+    locator<AppRouter>().back();
   }
 
   Future<void> _saveEditedQuotedNotification() async {
@@ -98,15 +101,20 @@ final class _QuoteNotificationViewModel extends BaseViewModel with EqualInterval
       notificationId: _oldQuoteNotificationModel!.notificationId,
       notificationCategories: selectedCategoriesValue,
       notificationDaysInWeek: selectedDaysOfWeekIndex,
-      notificationEqualSchedule: selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
-      notificationCustomIntervalSchedule: selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
+      notificationEqualSchedule:
+          selectedScheduleType == ReminderScheduleEnum.equalInterval ? equalIntervalScheduleModel : null,
+      notificationCustomIntervalSchedule:
+          selectedScheduleType == ReminderScheduleEnum.customInterval ? customIntervalScheduleModel : null,
     );
 
     await runBusyFuture(
-      _quoteNotificationBoxService.updateQuoteNotification(quoteNotificationModel.notificationId, quoteNotificationModel),
+      _quoteNotificationBoxService.updateQuoteNotification(
+        quoteNotificationModel.notificationId,
+        quoteNotificationModel,
+      ),
     );
 
-    await locator<AppRouter>().pop();
+    locator<AppRouter>().back();
   }
 
   ///

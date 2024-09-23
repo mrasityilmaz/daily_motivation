@@ -35,7 +35,7 @@ part 'widgets/user_input_widgets/schedule_mode_button.dart';
 part 'widgets/weekdays_row_widget.dart';
 
 @immutable
-@RoutePage<ReminderModel>(name: 'AddNewOrEditReminderViewRoute')
+@RoutePage(name: 'AddNewOrEditReminderViewRoute')
 final class AddNewOrEditReminderView<T> extends StatelessWidget {
   const AddNewOrEditReminderView({super.key, this.reminder});
   final ReminderModel? reminder;

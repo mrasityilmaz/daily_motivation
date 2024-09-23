@@ -1,19 +1,17 @@
-import 'package:equatable/equatable.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:dart_mappable/dart_mappable.dart';
+import 'package:flutter/material.dart';
 import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
 
-part 'quote_model.freezed.dart';
-part 'quote_model.g.dart';
+part 'quote_model.mapper.dart';
 
-@Freezed()
-class QuoteModel with _$QuoteModel, EquatableMixin {
-  const factory QuoteModel({
-    required String category,
-    required String quote,
-    required String author,
-    required String id,
-  }) = _QuoteModel;
+@MappableClass()
+class QuoteModel with QuoteModelMappable {
+  const QuoteModel({
+    required this.category,
+    required this.quote,
+    required this.author,
+    required this.id,
+  });
 
   factory QuoteModel.empty() {
     return QuoteModel(
@@ -24,14 +22,13 @@ class QuoteModel with _$QuoteModel, EquatableMixin {
     );
   }
 
-  const QuoteModel._();
+  final String category;
+  final String quote;
+  final String author;
+  final String id;
 
-  factory QuoteModel.fromJson(Map<String, dynamic> json) => _$QuoteModelFromJson(json);
-
-  @override
-  List<Object?> get props => [
-        id,
-      ];
+  static const fromMap = QuoteModelMapper.fromMap;
+  static const fromJson = QuoteModelMapper.fromJson;
 
   QuoteHiveModel get toHiveModel => QuoteHiveModel(
         author: author,
@@ -41,11 +38,3 @@ class QuoteModel with _$QuoteModel, EquatableMixin {
         quote: quote,
       );
 }
-
-
-  // {
-  //           "category": "Sanat",
-  //           "quote": "Sanat gerçekleri tanımamıza yardımcı olan bir yalandır.",
-  //           "author": "Pablo Picasso",
-  //           "id": "ztxeghofz"
-  //       },

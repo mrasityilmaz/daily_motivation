@@ -17,6 +17,7 @@ final class HiveService {
   ///
 
   final LikedQuoteBoxService likedQuoteBoxService = LikedQuoteBoxService(boxName: HiveConstants.likedQuotesBoxKey);
+
   final MyQuoteBoxService myQuoteBoxService = MyQuoteBoxService(boxName: HiveConstants.myQuotesBoxKey);
   final ThemeConfigurationBoxService themeConfigurationBoxService =
       ThemeConfigurationBoxService(boxName: HiveConstants.themeConfigurationBoxKey);

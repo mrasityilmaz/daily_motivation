@@ -1,4 +1,4 @@
-abstract class IExampleLocalRepository {
+abstract class IUserLocalRepository {
   ///
   ///  Local repository interface
   ///  This is where you define your local data source methods

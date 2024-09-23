@@ -20,15 +20,19 @@ final class _TopSection extends StatelessWidget {
                 onPressed: () async {
                   // locator<ThemeService>().toggleDarkLightTheme();
                   try {
-                    // await locator<AppWorkManager>().schedulePeriodicTask();
-                    await locator<NotificationService>().showNotification(
-                      message: 'Hello from the buttons! - ${DateTime.now()}',
-                    );
+                    // // await locator<AppWorkManager>().schedulePeriodicTask();
+                    // await locator<NotificationService>().showNotification(
+                    //   message: 'Hello from the buttons! - ${DateTime.now()}',
+                    // );
                   } catch (e, s) {
                     LoggerService.instance.catchLog(e, s);
                   }
                 },
-                icon: Image.asset(Assets.crow_front_premium_png, width: 32, height: 32),
+                icon: Image.asset(
+                  Assets.crow_front_premium_png,
+                  width: 32,
+                  height: 32,
+                ),
               ),
             ),
           ),

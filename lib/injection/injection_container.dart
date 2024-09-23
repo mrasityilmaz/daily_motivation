@@ -2,20 +2,14 @@ import 'package:cookie_jar/cookie_jar.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:quotely/core/constants/api_constants.dart';
-import 'package:quotely/data/repositories/example_repo/data_sources/example_hive_repository.dart';
-import 'package:quotely/domain/repositories/example_repository/data_sources/ilocal_repository.dart';
+import 'package:quotely/data/repositories/user_repo/data_sources/user_hive_repository.dart';
+import 'package:quotely/domain/repositories/user_repository/data_sources/ilocal_repository.dart';
 import 'package:quotely/injection/injection_container.config.dart';
 import 'package:rest_api_package/requests/rest_api_request.dart';
 import 'package:rest_api_package/rest_api_package.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
 final locator = GetIt.instance;
-late final DataType environmentTag;
-
-enum DataType {
-  real,
-  mock,
-}
 
 @InjectableInit(
   generateForDir: [
@@ -26,44 +20,38 @@ enum DataType {
   preferRelativeImports: true, // default
   asExtension: false, // default
 )
-Future<void> configureDependencies({String? defaultEnv}) async {
-  if (defaultEnv == null) {
-    const data = String.fromEnvironment('DATA_TYPE');
-    environmentTag = DataType.values.firstWhere((element) => element.name == data, orElse: () => DataType.mock);
-  } else {
-    environmentTag = DataType.values.firstWhere((element) => element.name == defaultEnv, orElse: () => DataType.mock);
-  }
-
+void configureDependencies({String? defaultEnv}) {
   ///
   /// Registiration of RestApiHttpService
   ///
-  await _initSource<RestApiHttpService>(
-    source: RestApiHttpService(Dio(), DefaultCookieJar(), APIConstants.baseURL),
-  );
 
-  await _initSource<ThemeService>(
-    source: ThemeService.getInstance(),
-  );
+  locator
+    ..registerLazySingleton<RestApiHttpService>(
+      () => RestApiHttpService(Dio(), DefaultCookieJar(), APIConstants.baseURL),
+    )
+    ..registerLazySingleton<ThemeService>(
+      ThemeService.getInstance,
+    )
 
-  ///
-  /// Register all local repositories
-  ///
-  /// You have to register all local repositories here.
-  ///
-  await _initSource<IExampleLocalRepository>(source: ExampleHiveRepository());
+    ///
+    /// Register all local repositories
+    ///
+    /// You have to register all local repositories here.
+    ///
+    ..registerLazySingleton<IUserLocalRepository>(UserHiveRepository.new);
 
   $initGetIt(
     locator,
-    environment: environmentTag.name,
+    environment: getEnvironment(),
   );
 }
 
-///
-/// Register all sources
-///
-Future<void> _initSource<T extends Object>({required T source}) async {
-  // await source.init();
-  locator.registerLazySingleton<T>(
-    () => source,
-  );
+String getEnvironment() {
+  const data = String.fromEnvironment('ENVIRONMENT');
+  return switch (data) {
+    Environment.dev => Environment.dev,
+    Environment.prod => Environment.prod,
+    Environment.test => Environment.test,
+    _ => Environment.dev,
+  };
 }

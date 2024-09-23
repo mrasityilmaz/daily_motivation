@@ -1,11 +1,11 @@
 import 'package:injectable/injectable.dart';
 import 'package:quotely/core/extensions/dartz_extension.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';
-import 'package:quotely/domain/repositories/example_repository/data_sources/iremote_repository.dart';
+import 'package:quotely/domain/repositories/user_repository/data_sources/iremote_repository.dart';
 
-@Environment('real')
-@LazySingleton(as: IExampleRemoteRepository)
-class ExampleHttpRepository implements IExampleRemoteRepository {
+@Environment(Environment.prod)
+@LazySingleton(as: IUserRemoteRepository)
+class UserHttpRepository implements IUserRemoteRepository {
   @override
   Future<DataModel<QuoteModel>> getSomeData() async {
     // TODO: implement getWeather

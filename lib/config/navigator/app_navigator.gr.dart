@@ -9,73 +9,6 @@
 
 part of 'app_navigator.dart';
 
-abstract class _$AppRouter extends RootStackRouter {
-  // ignore: unused_element
-  _$AppRouter({super.navigatorKey});
-
-  @override
-  final Map<String, PageFactory> pagesMap = {
-    AddNewOrEditQuoteViewRoute.name: (routeData) {
-      final args = routeData.argsAs<AddNewOrEditQuoteViewRouteArgs>(
-          orElse: () => const AddNewOrEditQuoteViewRouteArgs());
-      return AutoRoutePage<QuoteHiveModel>(
-        routeData: routeData,
-        child: AddNewOrEditQuoteView<dynamic>(
-          key: args.key,
-          editQuote: args.editQuote,
-        ),
-      );
-    },
-    AddNewOrEditReminderViewRoute.name: (routeData) {
-      final args = routeData.argsAs<AddNewOrEditReminderViewRouteArgs>(
-          orElse: () => const AddNewOrEditReminderViewRouteArgs());
-      return AutoRoutePage<ReminderModel>(
-        routeData: routeData,
-        child: AddNewOrEditReminderView<dynamic>(
-          key: args.key,
-          reminder: args.reminder,
-        ),
-      );
-    },
-    FavoritesViewRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const FavoritesView(),
-      );
-    },
-    HomeViewRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const HomeView(),
-      );
-    },
-    MyQuotesViewRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const MyQuotesView(),
-      );
-    },
-    OnboardViewRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const OnboardView(),
-      );
-    },
-    QuoteNotificationsViewRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const QuoteNotificationsView(),
-      );
-    },
-    RemindersViewRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
-        routeData: routeData,
-        child: const RemindersView(),
-      );
-    },
-  };
-}
-
 /// generated route for
 /// [AddNewOrEditQuoteView<dynamic>]
 class AddNewOrEditQuoteViewRoute
@@ -95,8 +28,17 @@ class AddNewOrEditQuoteViewRoute
 
   static const String name = 'AddNewOrEditQuoteViewRoute';
 
-  static const PageInfo<AddNewOrEditQuoteViewRouteArgs> page =
-      PageInfo<AddNewOrEditQuoteViewRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<AddNewOrEditQuoteViewRouteArgs>(
+          orElse: () => const AddNewOrEditQuoteViewRouteArgs());
+      return AddNewOrEditQuoteView<dynamic>(
+        key: args.key,
+        editQuote: args.editQuote,
+      );
+    },
+  );
 }
 
 class AddNewOrEditQuoteViewRouteArgs {
@@ -134,8 +76,17 @@ class AddNewOrEditReminderViewRoute
 
   static const String name = 'AddNewOrEditReminderViewRoute';
 
-  static const PageInfo<AddNewOrEditReminderViewRouteArgs> page =
-      PageInfo<AddNewOrEditReminderViewRouteArgs>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<AddNewOrEditReminderViewRouteArgs>(
+          orElse: () => const AddNewOrEditReminderViewRouteArgs());
+      return AddNewOrEditReminderView<dynamic>(
+        key: args.key,
+        reminder: args.reminder,
+      );
+    },
+  );
 }
 
 class AddNewOrEditReminderViewRouteArgs {
@@ -165,7 +116,12 @@ class FavoritesViewRoute extends PageRouteInfo<void> {
 
   static const String name = 'FavoritesViewRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const FavoritesView();
+    },
+  );
 }
 
 /// generated route for
@@ -179,7 +135,12 @@ class HomeViewRoute extends PageRouteInfo<void> {
 
   static const String name = 'HomeViewRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const HomeView();
+    },
+  );
 }
 
 /// generated route for
@@ -193,7 +154,12 @@ class MyQuotesViewRoute extends PageRouteInfo<void> {
 
   static const String name = 'MyQuotesViewRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const MyQuotesView();
+    },
+  );
 }
 
 /// generated route for
@@ -207,7 +173,12 @@ class OnboardViewRoute extends PageRouteInfo<void> {
 
   static const String name = 'OnboardViewRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const OnboardView();
+    },
+  );
 }
 
 /// generated route for
@@ -221,7 +192,12 @@ class QuoteNotificationsViewRoute extends PageRouteInfo<void> {
 
   static const String name = 'QuoteNotificationsViewRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const QuoteNotificationsView();
+    },
+  );
 }
 
 /// generated route for
@@ -235,5 +211,10 @@ class RemindersViewRoute extends PageRouteInfo<void> {
 
   static const String name = 'RemindersViewRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const RemindersView();
+    },
+  );
 }

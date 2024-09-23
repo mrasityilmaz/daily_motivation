@@ -14,7 +14,7 @@ part 'widgets/app_bar_widget.dart';
 part 'widgets/body_widget.dart';
 
 @immutable
-@RoutePage<QuoteHiveModel>(name: 'AddNewOrEditQuoteViewRoute')
+@RoutePage(name: 'AddNewOrEditQuoteViewRoute')
 final class AddNewOrEditQuoteView<T> extends StatelessWidget {
   const AddNewOrEditQuoteView({super.key, this.editQuote});
   final QuoteHiveModel? editQuote;
