@@ -1,4 +1,4 @@
-import 'package:dartz/dartz.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:quotely/core/errors/errors.dart';
 import 'package:quotely/core/extensions/dartz_extension.dart';
@@ -8,8 +8,9 @@ import 'package:quotely/domain/repositories/user_repository/data_sources/ilocal_
 import 'package:quotely/domain/repositories/user_repository/data_sources/iremote_repository.dart';
 import 'package:quotely/domain/repositories/user_repository/i_user_repository.dart';
 
+@immutable
 @LazySingleton(as: IUserRepository)
-class UserRepository implements IUserRepository {
+final class UserRepository implements IUserRepository {
   const UserRepository({
     required this.remoteDataSource,
     required this.localDataSource,

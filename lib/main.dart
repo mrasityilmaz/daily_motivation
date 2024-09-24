@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -14,6 +13,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/core/services/notification_service/notification_service.dart';
+import 'package:quotely/data/firestore/collections/firestore_collections.dart';
 import 'package:quotely/data/models/user_model/user_model.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/firebase_options.dart';
@@ -102,16 +102,7 @@ void main() async {
         'Device Info: ${deviceInfo.data}',
       );
 
-      await FirebaseFirestore.instance
-          .collection('users')
-          .withConverter<UserModel?>(
-            fromFirestore: (snapshot, _) => snapshot.data() == null ? null : UserModel.fromMap(snapshot.data()!),
-            toFirestore: (model, _) {
-              return model!.toMap();
-            },
-          )
-          .doc('03B814EF-D5CF-4E8C-B1DC-85E92B248453')
-          .set(
+      await FireStoreCollections.users.collection.doc('03B814EF-D5CF-4E8C-B1DC-85E92B248453').set(
             UserModel(
               deviceId: '03B814EF-D5CF-4E8C-B1DC-85E92B248453',
               deviceToken: await getToken() ?? '',
