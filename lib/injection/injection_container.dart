@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:quotely/data/repositories/user_repo/data_sources/user_hive_repository.dart';
@@ -17,23 +19,35 @@ final locator = GetIt.instance;
   asExtension: false, // default
 )
 void configureDependencies({String? defaultEnv}) {
+  final environment = getEnvironment(defaultEnv: defaultEnv);
   locator
     ..registerLazySingleton<ThemeService>(
       ThemeService.getInstance,
     )
     ..registerLazySingleton<IUserLocalRepository>(UserHiveRepository.new);
 
+  /// Registering the Firestore instance based on the environment
+  if (environment == Environment.prod) {
+    locator.registerSingleton<FirebaseFirestore>(
+      FirebaseFirestore.instance,
+    );
+  } else {
+    locator.registerSingleton<FirebaseFirestore>(
+      FakeFirebaseFirestore(),
+    );
+  }
+
+  ///
+
   $initGetIt(
     locator,
-    environment: getEnvironment(),
-    environmentFilter: NoEnvOrContains(getEnvironment()),
+    environment: environment,
   );
 }
 
-String getEnvironment() {
-  const data = String.fromEnvironment('ENVIRONMENT');
+String getEnvironment({String? defaultEnv}) {
+  final data = defaultEnv ?? const String.fromEnvironment('ENVIRONMENT');
   return switch (data) {
-    Environment.dev => Environment.dev,
     Environment.prod => Environment.prod,
     Environment.test => Environment.test,
     _ => Environment.test,
