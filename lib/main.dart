@@ -14,7 +14,7 @@ import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/core/services/notification_service/notification_service.dart';
 import 'package:quotely/data/firestore/collections/firestore_collections.dart';
-import 'package:quotely/data/models/user_model/user_model.dart';
+import 'package:quotely/data/models/firestore_models/user_model/user_model.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/firebase_options.dart';
 import 'package:quotely/injection/injection_container.dart';

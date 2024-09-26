@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
-import 'package:quotely/core/constants/default_fonts_enum.dart';
+import 'package:quotely/core/constants/enums/default_fonts_enum.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';

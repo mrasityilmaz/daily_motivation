@@ -1,8 +1,3 @@
-import 'package:dart_mappable/dart_mappable.dart';
-
-part 'weekday_enum.mapper.dart';
-
-@MappableEnum(mode: ValuesMode.indexed)
 enum WeekdayEnum {
   monday(dayIndex: 0, shortNameEn: 'Mon', shortNameTr: 'Pzt'),
   tuesday(dayIndex: 1, shortNameEn: 'Tue', shortNameTr: 'Sal'),
@@ -17,7 +12,4 @@ enum WeekdayEnum {
   final int dayIndex;
   final String shortNameEn;
   final String shortNameTr;
-
-  static const fromMap = WeekdayEnumMapper.fromValue;
-  static const fromJson = WeekdayEnumMapper.fromValue;
 }

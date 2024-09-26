@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:quotely/core/errors/errors.dart';
 
-abstract mixin class FirestoreConverter<T extends Object> {
+abstract base mixin class FirestoreConverter<T extends Object> {
   const FirestoreConverter();
 
   @nonVirtual
@@ -13,7 +13,7 @@ abstract mixin class FirestoreConverter<T extends Object> {
     try {
       final data = snapshot.data();
 
-      if (data == null) return null;
+      if (data == null || !snapshot.exists) return null;
       return (T as FirestoreConverter<T>).convertFromMap(data);
     } catch (e, s) {
       debugPrint('FirebaseConverter.fromFirestore - $T: $e, $s');

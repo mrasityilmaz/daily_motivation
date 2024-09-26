@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_box_transform/flutter_box_transform.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quotely/core/constants/default_fonts_enum.dart';
+import 'package:quotely/core/constants/enums/default_fonts_enum.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/extensions/text_align_extension.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';

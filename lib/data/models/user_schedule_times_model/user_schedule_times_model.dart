@@ -1,13 +1,11 @@
-import 'dart:ffi';
-
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:flutter/material.dart';
-import 'package:quotely/core/constants/weekday_enum/weekday_enum.dart';
+import 'package:quotely/core/constants/enums/weekday_enum/weekday_enum.dart';
 
 part 'user_schedule_times_model.mapper.dart';
 
-@MappableRecord()
-typedef ScheduleTime = ({Uint8 hour, Uint8 minute});
+@MappableClass()
+typedef ScheduleTime = TimeOfDay;
 
 @immutable
 @MappableClass()
@@ -17,6 +15,7 @@ final class UserNotificationScheduleTimes with UserNotificationScheduleTimesMapp
     required this.whichTimesOfDay,
   });
 
+  @MappableEnum(mode: ValuesMode.indexed)
   final List<WeekdayEnum> whichDaysOfWeek;
   final List<ScheduleTime> whichTimesOfDay;
 

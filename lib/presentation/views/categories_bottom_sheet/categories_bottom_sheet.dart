@@ -1,12 +1,11 @@
 import 'dart:io';
-import 'dart:math' as math;
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/physics.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';
-import 'package:quotely/core/constants/categories_enum.dart';
-import 'package:quotely/core/constants/category_group_enum.dart';
+import 'package:quotely/core/constants/enums/categories_enum.dart';
+import 'package:quotely/core/constants/enums/category_group_enum.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/injection/injection_container.dart';

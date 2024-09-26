@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/constants/enums/categories_enum.dart';
 
 enum CategoryGroup {
   general('general', [

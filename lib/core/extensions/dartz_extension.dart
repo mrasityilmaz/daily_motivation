@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart' as dartz;
 import 'package:quotely/core/errors/errors.dart';
 
+// Thanks for @ramazanyigitt for this extension and the other many ideas and help
 typedef DataModel<T> = dartz.Either<Failure, T>;
 typedef Right<T> = dartz.Right<Failure, T>;
 typedef Left<T> = dartz.Left<Failure, T>;

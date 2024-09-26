@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
-import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/constants/enums/categories_enum.dart';
 import 'package:quotely/core/services/logger_service.dart';
 
 @immutable

@@ -38,8 +38,7 @@ dependencies:
   dartz: ^0.10.1
   device_info_plus: ^10.1.2
   easy_localization: ^3.0.3
-  envied: ^0.5.4+1
-  equatable: ^2.0.0
+  fake_cloud_firestore: ^3.0.0
   firebase_core: ^3.3.0
   firebase_messaging: ^15.0.4
   flutter:
@@ -60,9 +59,6 @@ dependencies:
   logger: ^2.0.2+1
   path_provider: ^2.1.2
   permission_handler: ^11.3.1
-  rest_api_package:
-    git:
-      url: https://github.com/mrasityilmaz/rest_api_package.git
   safe_int_id: ^1.1.1
   sliver_tools: ^0.2.12
   stacked: ^3.4.1

@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/constants/enums/categories_enum.dart';
 import 'package:quotely/core/constants/premium_constants/quote_swipe_constants_mixin.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';

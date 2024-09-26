@@ -1,5 +1,6 @@
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/data/models/user_schedule_times_model/user_schedule_times_model.dart';
 
 part 'equal_schedule_model.mapper.dart';
 
@@ -12,10 +13,10 @@ class QuoteNotificationEqualScheduleModel with QuoteNotificationEqualScheduleMod
     this.notificationInterval,
   });
 
-  final TimeOfDay? notificationStartTime;
-  final TimeOfDay? notificationEndTime;
+  final ScheduleTime? notificationStartTime;
+  final ScheduleTime? notificationEndTime;
   final int? notificationInterval;
-  final List<TimeOfDay> notificationSchedules;
+  final List<ScheduleTime> notificationSchedules;
 
   static const fromMap = QuoteNotificationEqualScheduleModelMapper.fromMap;
   static const fromJson = QuoteNotificationEqualScheduleModelMapper.fromJson;

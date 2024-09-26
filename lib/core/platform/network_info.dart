@@ -1,18 +1,19 @@
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
-abstract class NetworkInfo {
+abstract base class NetworkInfo {
   Future<bool> get isConnected;
 
   void onInternetChange({
-    required void Function() onConnect,
-    required void Function() onDisconnect,
-  }) {}
+    AsyncCallback? onConnect,
+    AsyncCallback? onDisconnect,
+  });
 }
 
+@immutable
 @LazySingleton(as: NetworkInfo)
-class NetworkInfoImpl implements NetworkInfo {
-  @factoryMethod
+final class NetworkInfoImpl implements NetworkInfo {
   InternetConnectionChecker get connectionChecker => InternetConnectionChecker();
 
   @override
@@ -20,15 +21,14 @@ class NetworkInfoImpl implements NetworkInfo {
 
   @override
   void onInternetChange({
-    required void Function() onConnect,
-    required void Function() onDisconnect,
+    AsyncCallback? onConnect,
+    AsyncCallback? onDisconnect,
   }) {
-    connectionChecker.onStatusChange.listen((status) {
-      if (status == InternetConnectionStatus.connected) {
-        onConnect();
-      } else {
-        onDisconnect();
-      }
+    connectionChecker.onStatusChange.listen((status) async {
+      return switch (status) {
+        InternetConnectionStatus.connected => await onConnect?.call(),
+        InternetConnectionStatus.disconnected => await onDisconnect?.call()
+      };
     });
   }
 }

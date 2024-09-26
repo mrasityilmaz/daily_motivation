@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/constants/enums/categories_enum.dart';
 import 'package:quotely/core/services/premium_services/premium_services.dart';
 import 'package:quotely/data/services/quote_and_category_service/quote_and_category_service.dart';
 import 'package:quotely/injection/injection_container.dart';

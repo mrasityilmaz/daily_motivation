@@ -1,4 +1,4 @@
-import 'package:quotely/core/constants/default_fonts_enum.dart';
+import 'package:quotely/core/constants/enums/default_fonts_enum.dart';
 import 'package:quotely/core/constants/premium_constants/theme_constants_mixin.dart';
 import 'package:quotely/core/services/premium_services/premium_services.dart';
 import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';

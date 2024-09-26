@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';
-import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/constants/enums/categories_enum.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/my_quote_service.dart';

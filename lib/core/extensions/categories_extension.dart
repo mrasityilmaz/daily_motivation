@@ -1,4 +1,4 @@
-import 'package:quotely/core/constants/categories_enum.dart';
+import 'package:quotely/core/constants/enums/categories_enum.dart';
 
 extension CategoriesExtension on List<Categories> {
   List<Categories> get premiumCategories {

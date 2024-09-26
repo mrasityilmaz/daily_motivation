@@ -35,7 +35,15 @@ final class UnExpectedFailure<T> extends Failure {
 }
 
 @immutable
-final class FirestoreException extends Failure implements Exception {
-  FirestoreException({this.errorMessage}) : super([errorMessage]);
+final class FailureException<T> extends Failure implements Exception {
+  FailureException({this.data, this.errorMessage}) : super([errorMessage, data]);
   final String? errorMessage;
+  final T? data;
+}
+
+@immutable
+final class FirestoreException<T extends Object?> extends Failure implements Exception {
+  FirestoreException({this.data, this.errorMessage}) : super([errorMessage, data]);
+  final String? errorMessage;
+  final T? data;
 }

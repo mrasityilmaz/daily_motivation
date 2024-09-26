@@ -9,7 +9,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_pixels/image_pixels.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';
-import 'package:quotely/core/constants/default_fonts_enum.dart';
+import 'package:quotely/core/constants/enums/default_fonts_enum.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
