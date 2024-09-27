@@ -1,15 +1,15 @@
 import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
 import 'package:quotely/core/services/logger_service.dart';
-import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:quotely/data/models/quote_model/quote_model.dart';
 
 @immutable
-final class MyQuoteBoxService extends HiveBoxService<QuoteHiveModel> {
-  MyQuoteBoxService({required super.boxName, super.fromJson = QuoteHiveModel.fromMap});
+final class MyQuoteBoxService extends HiveBoxService<QuoteModel> {
+  MyQuoteBoxService({required super.boxName, super.fromJson = QuoteModel.fromMap});
 
-  List<QuoteHiveModel> get myQuoteList => box.getAll(box.keys).nonNulls.toList();
+  List<QuoteModel> get myQuoteList => box.getAll(box.keys).nonNulls.toList();
 
-  Future<void> addMyQuote(QuoteHiveModel quoteModel) async {
+  Future<void> addMyQuote(QuoteModel quoteModel) async {
     try {
       box.put(quoteModel.id, quoteModel);
     } catch (e, s) {
@@ -33,7 +33,7 @@ final class MyQuoteBoxService extends HiveBoxService<QuoteHiveModel> {
     }
   }
 
-  Future<void> editMyQuotes({required QuoteHiveModel quoteHiveModel}) async {
+  Future<void> editMyQuotes({required QuoteModel quoteHiveModel}) async {
     try {
       final oldQuote = box.get(quoteHiveModel.id);
       if (oldQuote != null) {

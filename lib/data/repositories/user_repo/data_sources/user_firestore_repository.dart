@@ -8,9 +8,9 @@ import 'package:quotely/data/models/firestore_models/user_model/user_model.dart'
 import 'package:quotely/domain/repositories/user_repository/data_sources/iremote_repository.dart';
 
 @immutable
-@LazySingleton(as: IUserRemoteRepository, env: [Environment.prod])
-final class UserHttpRepository implements IUserRemoteRepository {
-  const UserHttpRepository();
+@LazySingleton(as: UserRemoteRepository, env: [Environment.prod])
+final class UserHttpRepositoryImpl implements UserRemoteRepository {
+  const UserHttpRepositoryImpl();
 
   CollectionReference<UserModel?> get _userCollection => FireStoreCollections.users.collection;
 

@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_widget.dart';
 import 'package:quotely/presentation/views/favorites_view/favorites_viewmodel.dart';

@@ -1,11 +1,11 @@
 part of '../favorites_view.dart';
 
 @immutable
-final class _FavoritesViewBodyWidget extends SelectorViewModelWidget<FavoritesViewModel, List<QuoteHiveModel>> {
+final class _FavoritesViewBodyWidget extends SelectorViewModelWidget<FavoritesViewModel, List<QuoteModel>> {
   const _FavoritesViewBodyWidget();
 
   @override
-  Widget build(BuildContext context, List<QuoteHiveModel> likedQuoteList) {
+  Widget build(BuildContext context, List<QuoteModel> likedQuoteList) {
     return CustomScrollView(
       slivers: [
         SliverPadding(
@@ -24,7 +24,7 @@ final class _FavoritesViewBodyWidget extends SelectorViewModelWidget<FavoritesVi
   }
 
   @override
-  List<QuoteHiveModel> selector(FavoritesViewModel viewModel) {
+  List<QuoteModel> selector(FavoritesViewModel viewModel) {
     return viewModel.likedQuoteList;
   }
 }

@@ -16,6 +16,7 @@ class QuoteNotificationScheduleCustomIntervalModelMapper
     if (_instance == null) {
       MapperContainer.globals.use(
           _instance = QuoteNotificationScheduleCustomIntervalModelMapper._());
+      MapperContainer.globals.useAll([TimeOfDayMapper()]);
     }
     return _instance!;
   }

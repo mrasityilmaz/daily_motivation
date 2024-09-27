@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/services/logger_service.dart';
-import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/my_quote_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/injection/injection_container.dart';
@@ -15,10 +15,10 @@ part 'mixins/ui_logic_mixin.dart';
 final class MyQuotesViewModel extends BaseViewModel with _UILogicMixin {
   final MyQuoteBoxService _myQuoteBoxService = locator<HiveService>().myQuoteBoxService;
 
-  final List<QuoteHiveModel> _myQuoteListStatic = List<QuoteHiveModel>.empty(growable: true);
-  List<QuoteHiveModel> get _myQuoteListBasedHive => _myQuoteBoxService.myQuoteList;
-  List<QuoteHiveModel> get myQuoteList => [..._myQuoteListStatic, ..._myQuoteListBasedHive]
-    ..sort((a, b) => b.createdAt.compareTo(a.createdAt))
+  final List<QuoteModel> _myQuoteListStatic = List<QuoteModel>.empty(growable: true);
+  List<QuoteModel> get _myQuoteListBasedHive => _myQuoteBoxService.myQuoteList;
+  List<QuoteModel> get myQuoteList => [..._myQuoteListStatic, ..._myQuoteListBasedHive]
+    ..sort((a, b) => (b.createdAt ?? DateTime.now()).compareTo(a.createdAt ?? DateTime.now()))
     ..toSet();
 
   Future<void> _deleteQuote(String quoteId) async {
@@ -29,8 +29,9 @@ final class MyQuotesViewModel extends BaseViewModel with _UILogicMixin {
     }
   }
 
-  void _addOrUpdateTemporarilyAddedQuote(QuoteHiveModel quoteModel) {
-    if (_myQuoteListBasedHive.any((element) => element.id != quoteModel.id) && _myQuoteListStatic.any((element) => element.id != quoteModel.id)) {
+  void _addOrUpdateTemporarilyAddedQuote(QuoteModel quoteModel) {
+    if (_myQuoteListBasedHive.any((element) => element.id != quoteModel.id) &&
+        _myQuoteListStatic.any((element) => element.id != quoteModel.id)) {
       _myQuoteListStatic.add(quoteModel);
     }
     notifyListeners();
@@ -38,7 +39,7 @@ final class MyQuotesViewModel extends BaseViewModel with _UILogicMixin {
 
   Future<void> onPressedAddMyQuoteButton() async {
     try {
-      final quote = await locator<AppRouter>().push<QuoteHiveModel?>(AddNewOrEditQuoteViewRoute());
+      final quote = await locator<AppRouter>().push<QuoteModel?>(AddNewOrEditQuoteViewRoute());
 
       if (quote != null) {
         debugPrint('Quote: $quote');
@@ -49,9 +50,10 @@ final class MyQuotesViewModel extends BaseViewModel with _UILogicMixin {
     }
   }
 
-  Future<void> onPressedEditMyQuoteButton({required QuoteHiveModel quoteHiveModel}) async {
+  Future<void> onPressedEditMyQuoteButton({required QuoteModel quoteHiveModel}) async {
     try {
-      final result = await locator<AppRouter>().push<QuoteHiveModel?>(AddNewOrEditQuoteViewRoute(editQuote: quoteHiveModel));
+      final result =
+          await locator<AppRouter>().push<QuoteModel?>(AddNewOrEditQuoteViewRoute(editQuote: quoteHiveModel));
       if (result != null) {
         debugPrint('Quote: $result');
         _addOrUpdateTemporarilyAddedQuote(result);

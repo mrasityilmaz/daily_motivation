@@ -15,7 +15,7 @@ class AddNewOrEditQuoteViewRoute
     extends PageRouteInfo<AddNewOrEditQuoteViewRouteArgs> {
   AddNewOrEditQuoteViewRoute({
     Key? key,
-    QuoteHiveModel? editQuote,
+    QuoteModel? editQuote,
     List<PageRouteInfo>? children,
   }) : super(
           AddNewOrEditQuoteViewRoute.name,
@@ -49,7 +49,7 @@ class AddNewOrEditQuoteViewRouteArgs {
 
   final Key? key;
 
-  final QuoteHiveModel? editQuote;
+  final QuoteModel? editQuote;
 
   @override
   String toString() {

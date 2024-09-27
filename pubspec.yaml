@@ -38,6 +38,7 @@ dependencies:
   dartz: ^0.10.1
   device_info_plus: ^10.1.2
   easy_localization: ^3.0.3
+  envied: ^0.5.4+1
   fake_cloud_firestore: ^3.0.0
   firebase_core: ^3.3.0
   firebase_messaging: ^15.0.4
@@ -49,7 +50,6 @@ dependencies:
   flutter_local_notifications: ^17.2.1+2
   flutter_slidable: ^3.0.1
   flutter_timezone: ^3.0.1
-  freezed_annotation: ^2.4.1
   get_it: ^7.6.4
   google_fonts: ^6.1.0
   google_mobile_ads: ^5.1.0
@@ -77,27 +77,12 @@ dependencies:
 dev_dependencies:
   auto_route_generator: ^9.0.0
   build_runner: ^2.4.11
-
-  ###
-  ### Lint
-  ###
   dart_mappable_builder: ^4.2.3
   envied_generator: ^0.5.4+1
   flutter_lints: ^4.0.0
-
   flutter_test:
     sdk: flutter
-  freezed: ^2.4.1
-
-  ###
-  ### Injection Generator
-  ###
   injectable_generator: ^2.4.0
-
-  ###
-  ### Json Serialization
-  ###
-  json_serializable: ^6.7.1
   very_good_analysis: ^6.0.0
 
 dependency_overrides:

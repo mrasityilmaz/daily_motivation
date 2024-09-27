@@ -3,8 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:quotely/core/errors/errors.dart';
 
 abstract base mixin class FirestoreConverter<T extends Object> {
-  const FirestoreConverter();
-
   @nonVirtual
   T? fromFirestore(
     DocumentSnapshot<Map<String, dynamic>> snapshot,
@@ -41,7 +39,9 @@ abstract base mixin class FirestoreConverter<T extends Object> {
     }
   }
 
+  /// Required to ensure that the model to be convertable from the map
   T convertFromMap(Map<String, dynamic> json);
 
+  /// Required to ensure that the model to be convertable to the map
   Map<String, dynamic> convertToMap();
 }

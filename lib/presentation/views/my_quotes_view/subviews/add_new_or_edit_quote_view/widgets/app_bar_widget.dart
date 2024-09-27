@@ -6,7 +6,7 @@ final class _AddNewOrEditAppBar extends StatelessWidget implements PreferredSize
     required this.editQuote,
   });
 
-  final QuoteHiveModel? editQuote;
+  final QuoteModel? editQuote;
 
   @override
   AppBar build(BuildContext context) {

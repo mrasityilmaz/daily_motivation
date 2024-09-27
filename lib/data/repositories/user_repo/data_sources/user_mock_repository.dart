@@ -8,10 +8,9 @@ import 'package:quotely/data/models/firestore_models/user_model/user_model.dart'
 import 'package:quotely/domain/repositories/user_repository/data_sources/iremote_repository.dart';
 
 @immutable
-@LazySingleton(as: IUserRemoteRepository, env: [Environment.test])
-final class UserMockRepository implements IUserRemoteRepository {
-  CollectionReference<Map<String, Object?>?> get _userCollection =>
-      FireStoreCollections.users.collectionWithoutConverter;
+@LazySingleton(as: UserRemoteRepository, env: [Environment.test])
+final class UserMockRepositoryImpl implements UserRemoteRepository {
+  CollectionReference<Map<String, Object?>?> get _collection => FireStoreCollections.users.collectionWithoutConverter;
 
   @override
   Future<DataModel<UserModel>> createNewUser({required UserModel userModel}) async {
@@ -22,7 +21,7 @@ final class UserMockRepository implements IUserRemoteRepository {
         return hasAlreadyCreated;
       }
       // Using set instead of add to avoid creating a new document with a random id
-      await _userCollection.doc(userModel.deviceId).set(userModel.toMap());
+      await _collection.doc(userModel.deviceId).set(userModel.toMap());
       return await findUserByDeviceId(deviceId: userModel.deviceId);
     } catch (error) {
       return Left(FirestoreException(errorMessage: error.toString()));
@@ -32,7 +31,7 @@ final class UserMockRepository implements IUserRemoteRepository {
   @override
   Future<DataModel<bool>> deleteUser({required String userId}) async {
     try {
-      await _userCollection.doc(userId).delete();
+      await _collection.doc(userId).delete();
 
       return const Right(true);
     } catch (error) {
@@ -43,7 +42,7 @@ final class UserMockRepository implements IUserRemoteRepository {
   @override
   Future<DataModel<UserModel>> updateUser({required UserModel userModel}) async {
     try {
-      await _userCollection.doc(userModel.deviceId).update(userModel.toMap());
+      await _collection.doc(userModel.deviceId).update(userModel.toMap());
       return await findUserByDeviceId(deviceId: userModel.deviceId);
     } catch (error) {
       return Left(FirestoreException(errorMessage: error.toString()));
@@ -53,7 +52,7 @@ final class UserMockRepository implements IUserRemoteRepository {
   @override
   Future<DataModel<UserModel>> findUserByDeviceId({required String deviceId}) async {
     try {
-      final user = await _userCollection.doc(deviceId).get().then((value) => value.data());
+      final user = await _collection.doc(deviceId).get().then((value) => value.data());
 
       if (user != null) {
         return Right(UserModel.fromMap(user));

@@ -47,7 +47,9 @@ mixin _QuoteAndCategoryServiceMixin {
   Future<List<QuoteModel>> _readGeneralQuotes({String locale = 'tr'}) async {
     try {
       return _readAllQuotesForMixedCategories(
-          categories: Categories.values.where((element) => element.isPremium == false).toList(), locale: locale);
+        categories: Categories.values.where((element) => element.isPremium == false).toList(),
+        locale: locale,
+      );
     } catch (e) {
       return [];
     }
@@ -126,8 +128,7 @@ mixin _QuoteAndCategoryServiceMixin {
 
   Future<List<QuoteModel>> _readMyQuotes() async {
     try {
-      final List<QuoteModel> myQuoteList =
-          locator<HiveService>().myQuoteBoxService.myQuoteList.map((e) => e.toQuoteModel).toList();
+      final List<QuoteModel> myQuoteList = locator<HiveService>().myQuoteBoxService.myQuoteList;
 
       return myQuoteList;
     } catch (e) {

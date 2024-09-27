@@ -106,7 +106,7 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
       await locator<HiveService>().likedQuoteBoxService.unLikeQuote(currentQuote.id);
       currentQuoteIsLiked.value = false;
     } else {
-      await locator<HiveService>().likedQuoteBoxService.likeQuote(currentQuote.toHiveModel);
+      await locator<HiveService>().likedQuoteBoxService.likeQuote(currentQuote);
       currentQuoteIsLiked.value = true;
     }
     await HapticFeedback.mediumImpact();

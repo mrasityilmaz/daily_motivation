@@ -7,14 +7,14 @@ import 'package:quotely/domain/repositories/user_repository/data_sources/iremote
 import 'package:quotely/domain/repositories/user_repository/i_user_repository.dart';
 
 @immutable
-@LazySingleton(as: IUserRepository)
-final class UserRepository implements IUserRepository {
-  const UserRepository({
+@LazySingleton(as: UserRepository)
+final class UserRepositoryImpl implements UserRepository {
+  const UserRepositoryImpl({
     required this.remoteDataSource,
     required this.localDataSource,
   });
-  final IUserRemoteRepository remoteDataSource;
-  final IUserLocalRepository localDataSource;
+  final UserRemoteRepository remoteDataSource;
+  final UserLocalRepository localDataSource;
 
   @override
   Future<DataModel<UserModel>> createNewUser({required UserModel userModel}) async {

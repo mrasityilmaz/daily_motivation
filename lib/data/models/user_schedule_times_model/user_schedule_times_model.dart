@@ -4,9 +4,6 @@ import 'package:quotely/core/constants/enums/weekday_enum/weekday_enum.dart';
 
 part 'user_schedule_times_model.mapper.dart';
 
-@MappableClass()
-typedef ScheduleTime = TimeOfDay;
-
 @immutable
 @MappableClass()
 final class UserNotificationScheduleTimes with UserNotificationScheduleTimesMappable {
@@ -17,7 +14,7 @@ final class UserNotificationScheduleTimes with UserNotificationScheduleTimesMapp
 
   @MappableEnum(mode: ValuesMode.indexed)
   final List<WeekdayEnum> whichDaysOfWeek;
-  final List<ScheduleTime> whichTimesOfDay;
+  final List<TimeOfDay> whichTimesOfDay;
 
   static const fromMap = UserNotificationScheduleTimesMapper.fromMap;
   static const fromJson = UserNotificationScheduleTimesMapper.fromJson;

@@ -2,10 +2,7 @@ part of 'firestore_collections.dart';
 
 mixin _CollectionHelper<T extends FirestoreConverter<T>> on Enum {
   CollectionReference<T?> get collection {
-    return firestore.collection(name).withConverter<T?>(
-          fromFirestore: (T as FirestoreConverter<T>).fromFirestore,
-          toFirestore: (T as FirestoreConverter<T>).toFirestore,
-        );
+    return firestore.collection(name).getWithConverter<T>();
   }
 
   // For testing with FakeFirestore

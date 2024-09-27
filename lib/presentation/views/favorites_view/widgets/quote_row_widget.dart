@@ -3,7 +3,7 @@ part of '../favorites_view.dart';
 @immutable
 final class _QuoteRowWidget extends ViewModelWidget<FavoritesViewModel> {
   const _QuoteRowWidget({required this.quote}) : super(reactive: false);
-  final QuoteHiveModel quote;
+  final QuoteModel quote;
 
   @override
   Widget build(BuildContext context, FavoritesViewModel viewModel) {

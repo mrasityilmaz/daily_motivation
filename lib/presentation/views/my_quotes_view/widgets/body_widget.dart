@@ -1,11 +1,11 @@
 part of '../my_quotes_view.dart';
 
 @immutable
-final class _MyQuotesViewBodyWidget extends SelectorViewModelWidget<MyQuotesViewModel, List<QuoteHiveModel>> {
+final class _MyQuotesViewBodyWidget extends SelectorViewModelWidget<MyQuotesViewModel, List<QuoteModel>> {
   const _MyQuotesViewBodyWidget();
 
   @override
-  Widget build(BuildContext context, List<QuoteHiveModel> myQuoteList) {
+  Widget build(BuildContext context, List<QuoteModel> myQuoteList) {
     return CustomScrollView(
       slivers: [
         SliverPadding(
@@ -24,7 +24,7 @@ final class _MyQuotesViewBodyWidget extends SelectorViewModelWidget<MyQuotesView
   }
 
   @override
-  List<QuoteHiveModel> selector(MyQuotesViewModel viewModel) {
+  List<QuoteModel> selector(MyQuotesViewModel viewModel) {
     return viewModel.myQuoteList;
   }
 }

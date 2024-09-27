@@ -8,7 +8,7 @@ import 'package:quotely/data/models/quote_notification_model/equal_schedule_mode
 part 'quote_notification_model.mapper.dart';
 
 @MappableClass()
-class QuoteNotificationModel with QuoteNotificationModelMappable {
+final class QuoteNotificationModel with QuoteNotificationModelMappable {
   const QuoteNotificationModel({
     required this.notificationId,
     required this.notificationCategories,

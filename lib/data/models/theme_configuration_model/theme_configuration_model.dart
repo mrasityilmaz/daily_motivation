@@ -2,11 +2,12 @@
 
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:flutter/material.dart';
+import 'package:quotely/data/models/core_mappers/color_mapper.dart';
 
 part 'theme_configuration_model.mapper.dart';
 
-@MappableClass()
-class ThemeConfigurationModel with ThemeConfigurationModelMappable {
+@MappableClass(includeCustomMappers: [ColorMapper()])
+final class ThemeConfigurationModel with ThemeConfigurationModelMappable {
   const ThemeConfigurationModel({
     required this.backgroundPath,
     required this.fontName,
@@ -22,12 +23,4 @@ class ThemeConfigurationModel with ThemeConfigurationModelMappable {
 
   static const fromMap = ThemeConfigurationModelMapper.fromMap;
   static const fromJson = ThemeConfigurationModelMapper.fromJson;
-}
-
-int _colorToInt(Color color) {
-  return color.value;
-}
-
-Color _intToColor(dynamic color) {
-  return Color(int.tryParse((color ?? Colors.white.value).toString()) ?? Colors.white.value);
 }

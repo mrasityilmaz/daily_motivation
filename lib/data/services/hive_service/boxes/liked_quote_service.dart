@@ -3,13 +3,13 @@ import 'dart:async';
 import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
 import 'package:quotely/core/services/logger_service.dart';
-import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:quotely/data/models/quote_model/quote_model.dart';
 
 @immutable
-final class LikedQuoteBoxService extends HiveBoxService<QuoteHiveModel> {
-  LikedQuoteBoxService({required super.boxName, super.fromJson = QuoteHiveModel.fromMap});
+final class LikedQuoteBoxService extends HiveBoxService<QuoteModel> {
+  LikedQuoteBoxService({required super.boxName, super.fromJson = QuoteModel.fromMap});
 
-  List<QuoteHiveModel> get likedQuoteList {
+  List<QuoteModel> get likedQuoteList {
     return box.getAll(box.keys).nonNulls.toList();
   }
 
@@ -17,7 +17,7 @@ final class LikedQuoteBoxService extends HiveBoxService<QuoteHiveModel> {
     return box.containsKey(quoteId);
   }
 
-  Future<void> likeQuote(QuoteHiveModel quoteModel) async {
+  Future<void> likeQuote(QuoteModel quoteModel) async {
     try {
       box.put(quoteModel.id, quoteModel);
     } catch (e, s) {

@@ -3,7 +3,7 @@ part of '../my_quotes_view.dart';
 @immutable
 final class _QuoteRowWidget extends ViewModelWidget<MyQuotesViewModel> {
   const _QuoteRowWidget({required this.quote}) : super(reactive: false);
-  final QuoteHiveModel quote;
+  final QuoteModel quote;
 
   @override
   Widget build(BuildContext context, MyQuotesViewModel viewModel) {

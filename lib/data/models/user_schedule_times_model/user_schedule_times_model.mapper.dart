@@ -15,7 +15,6 @@ class UserNotificationScheduleTimesMapper
     if (_instance == null) {
       MapperContainer.globals
           .use(_instance = UserNotificationScheduleTimesMapper._());
-      ScheduleTimeMapper.ensureInitialized();
     }
     return _instance!;
   }
@@ -105,7 +104,7 @@ abstract class UserNotificationScheduleTimesCopyWith<
     $Out> implements ClassCopyWith<$R, $In, $Out> {
   ListCopyWith<$R, WeekdayEnum, ObjectCopyWith<$R, WeekdayEnum, WeekdayEnum>>
       get whichDaysOfWeek;
-  ListCopyWith<$R, TimeOfDay, ScheduleTimeCopyWith<$R, TimeOfDay, TimeOfDay>>
+  ListCopyWith<$R, TimeOfDay, ObjectCopyWith<$R, TimeOfDay, TimeOfDay>>
       get whichTimesOfDay;
   $R call(
       {List<WeekdayEnum>? whichDaysOfWeek, List<TimeOfDay>? whichTimesOfDay});
@@ -131,9 +130,11 @@ class _UserNotificationScheduleTimesCopyWithImpl<$R, $Out>
           (v, t) => ObjectCopyWith(v, $identity, t),
           (v) => call(whichDaysOfWeek: v));
   @override
-  ListCopyWith<$R, TimeOfDay, ScheduleTimeCopyWith<$R, TimeOfDay, TimeOfDay>>
-      get whichTimesOfDay => ListCopyWith($value.whichTimesOfDay,
-          (v, t) => v.copyWith.$chain(t), (v) => call(whichTimesOfDay: v));
+  ListCopyWith<$R, TimeOfDay, ObjectCopyWith<$R, TimeOfDay, TimeOfDay>>
+      get whichTimesOfDay => ListCopyWith(
+          $value.whichTimesOfDay,
+          (v, t) => ObjectCopyWith(v, $identity, t),
+          (v) => call(whichTimesOfDay: v));
   @override
   $R call(
           {List<WeekdayEnum>? whichDaysOfWeek,
@@ -155,92 +156,4 @@ class _UserNotificationScheduleTimesCopyWithImpl<$R, $Out>
       $Out2> $chain<$R2, $Out2>(
           Then<$Out2, $R2> t) =>
       _UserNotificationScheduleTimesCopyWithImpl($value, $cast, t);
-}
-
-class ScheduleTimeMapper extends ClassMapperBase<TimeOfDay> {
-  ScheduleTimeMapper._();
-
-  static ScheduleTimeMapper? _instance;
-  static ScheduleTimeMapper ensureInitialized() {
-    if (_instance == null) {
-      MapperContainer.globals.use(_instance = ScheduleTimeMapper._());
-    }
-    return _instance!;
-  }
-
-  @override
-  final String id = 'TimeOfDay';
-
-  static int _$hour(TimeOfDay v) => v.hour;
-  static const Field<TimeOfDay, int> _f$hour = Field('hour', _$hour);
-  static int _$minute(TimeOfDay v) => v.minute;
-  static const Field<TimeOfDay, int> _f$minute = Field('minute', _$minute);
-
-  @override
-  final MappableFields<TimeOfDay> fields = const {
-    #hour: _f$hour,
-    #minute: _f$minute,
-  };
-
-  static TimeOfDay _instantiate(DecodingData data) {
-    return TimeOfDay(hour: data.dec(_f$hour), minute: data.dec(_f$minute));
-  }
-
-  @override
-  final Function instantiate = _instantiate;
-
-  static TimeOfDay fromMap(Map<String, dynamic> map) {
-    return ensureInitialized().decodeMap<TimeOfDay>(map);
-  }
-
-  static TimeOfDay fromJson(String json) {
-    return ensureInitialized().decodeJson<TimeOfDay>(json);
-  }
-}
-
-extension ScheduleTimeMapperExtension on TimeOfDay {
-  String toJson() {
-    return ScheduleTimeMapper.ensureInitialized().encodeJson<TimeOfDay>(this);
-  }
-
-  Map<String, dynamic> toMap() {
-    return ScheduleTimeMapper.ensureInitialized().encodeMap<TimeOfDay>(this);
-  }
-
-  ScheduleTimeCopyWith<TimeOfDay, TimeOfDay, TimeOfDay> get copyWith =>
-      _ScheduleTimeCopyWithImpl(this, $identity, $identity);
-}
-
-extension ScheduleTimeValueCopy<$R, $Out>
-    on ObjectCopyWith<$R, TimeOfDay, $Out> {
-  ScheduleTimeCopyWith<$R, TimeOfDay, $Out> get $asTimeOfDay =>
-      $base.as((v, t, t2) => _ScheduleTimeCopyWithImpl(v, t, t2));
-}
-
-abstract class ScheduleTimeCopyWith<$R, $In extends TimeOfDay, $Out>
-    implements ClassCopyWith<$R, $In, $Out> {
-  $R call({int? hour, int? minute});
-  ScheduleTimeCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
-}
-
-class _ScheduleTimeCopyWithImpl<$R, $Out>
-    extends ClassCopyWithBase<$R, TimeOfDay, $Out>
-    implements ScheduleTimeCopyWith<$R, TimeOfDay, $Out> {
-  _ScheduleTimeCopyWithImpl(super.value, super.then, super.then2);
-
-  @override
-  late final ClassMapperBase<TimeOfDay> $mapper =
-      ScheduleTimeMapper.ensureInitialized();
-  @override
-  $R call({int? hour, int? minute}) => $apply(FieldCopyWithData(
-      {if (hour != null) #hour: hour, if (minute != null) #minute: minute}));
-  @override
-  TimeOfDay $make(CopyWithData data) => TimeOfDay(
-      hour: data.get(#hour, or: $value.hour),
-      minute: data.get(#minute, or: $value.minute));
-
-  @override
-  ScheduleTimeCopyWith<$R2, TimeOfDay, $Out2> $chain<$R2, $Out2>(
-          Then<$Out2, $R2> t) =>
-      _ScheduleTimeCopyWithImpl($value, $cast, t);
 }

@@ -5,7 +5,6 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_pixels/image_pixels.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';

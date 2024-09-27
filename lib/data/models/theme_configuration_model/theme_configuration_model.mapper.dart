@@ -15,6 +15,7 @@ class ThemeConfigurationModelMapper
     if (_instance == null) {
       MapperContainer.globals
           .use(_instance = ThemeConfigurationModelMapper._());
+      MapperContainer.globals.useAll([ColorMapper()]);
     }
     return _instance!;
   }

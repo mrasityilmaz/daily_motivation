@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:quotely/core/constants/enums/categories_enum.dart';
-import 'package:quotely/core/extensions/models_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/category_service.dart';

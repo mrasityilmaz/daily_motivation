@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
-import 'package:quotely/data/models/quote_hive_model/quote_hive_model.dart';
+import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/data/models/reminder_model/reminder_model.dart';
 import 'package:quotely/presentation/views/favorites_view/favorites_view.dart';
 import 'package:quotely/presentation/views/home_view/home_view.dart';

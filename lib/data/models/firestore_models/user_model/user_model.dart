@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:quotely/data/firestore/firestore_converter.dart';
+import 'package:quotely/data/firestore/utility/firestore_converter.dart';
 import 'package:quotely/data/models/user_schedule_times_model/user_schedule_times_model.dart';
 
 part 'user_model.mapper.dart';

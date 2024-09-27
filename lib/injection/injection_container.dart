@@ -2,8 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
-import 'package:quotely/data/repositories/user_repo/data_sources/user_hive_repository.dart';
-import 'package:quotely/domain/repositories/user_repository/data_sources/ilocal_repository.dart';
 import 'package:quotely/injection/injection_container.config.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
@@ -20,11 +18,10 @@ final locator = GetIt.instance;
 )
 void configureDependencies({String? defaultEnv}) {
   final environment = getEnvironment(defaultEnv: defaultEnv);
-  locator
-    ..registerLazySingleton<ThemeService>(
-      ThemeService.getInstance,
-    )
-    ..registerLazySingleton<IUserLocalRepository>(UserHiveRepository.new);
+  //
+  locator.registerLazySingleton<ThemeService>(
+    ThemeService.getInstance,
+  );
 
   /// Registering the Firestore instance based on the environment
   if (environment == Environment.prod) {

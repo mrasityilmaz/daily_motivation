@@ -29,6 +29,9 @@ class QuoteModelMapper extends ClassMapperBase<QuoteModel> {
   static const Field<QuoteModel, String> _f$author = Field('author', _$author);
   static String _$id(QuoteModel v) => v.id;
   static const Field<QuoteModel, String> _f$id = Field('id', _$id);
+  static DateTime? _$createdAt(QuoteModel v) => v.createdAt;
+  static const Field<QuoteModel, DateTime> _f$createdAt =
+      Field('createdAt', _$createdAt, opt: true);
 
   @override
   final MappableFields<QuoteModel> fields = const {
@@ -36,6 +39,7 @@ class QuoteModelMapper extends ClassMapperBase<QuoteModel> {
     #quote: _f$quote,
     #author: _f$author,
     #id: _f$id,
+    #createdAt: _f$createdAt,
   };
 
   static QuoteModel _instantiate(DecodingData data) {
@@ -43,7 +47,8 @@ class QuoteModelMapper extends ClassMapperBase<QuoteModel> {
         category: data.dec(_f$category),
         quote: data.dec(_f$quote),
         author: data.dec(_f$author),
-        id: data.dec(_f$id));
+        id: data.dec(_f$id),
+        createdAt: data.dec(_f$createdAt));
   }
 
   @override
@@ -97,7 +102,12 @@ extension QuoteModelValueCopy<$R, $Out>
 
 abstract class QuoteModelCopyWith<$R, $In extends QuoteModel, $Out>
     implements ClassCopyWith<$R, $In, $Out> {
-  $R call({String? category, String? quote, String? author, String? id});
+  $R call(
+      {String? category,
+      String? quote,
+      String? author,
+      String? id,
+      DateTime? createdAt});
   QuoteModelCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
@@ -110,19 +120,26 @@ class _QuoteModelCopyWithImpl<$R, $Out>
   late final ClassMapperBase<QuoteModel> $mapper =
       QuoteModelMapper.ensureInitialized();
   @override
-  $R call({String? category, String? quote, String? author, String? id}) =>
+  $R call(
+          {String? category,
+          String? quote,
+          String? author,
+          String? id,
+          Object? createdAt = $none}) =>
       $apply(FieldCopyWithData({
         if (category != null) #category: category,
         if (quote != null) #quote: quote,
         if (author != null) #author: author,
-        if (id != null) #id: id
+        if (id != null) #id: id,
+        if (createdAt != $none) #createdAt: createdAt
       }));
   @override
   QuoteModel $make(CopyWithData data) => QuoteModel(
       category: data.get(#category, or: $value.category),
       quote: data.get(#quote, or: $value.quote),
       author: data.get(#author, or: $value.author),
-      id: data.get(#id, or: $value.id));
+      id: data.get(#id, or: $value.id),
+      createdAt: data.get(#createdAt, or: $value.createdAt));
 
   @override
   QuoteModelCopyWith<$R2, QuoteModel, $Out2> $chain<$R2, $Out2>(

@@ -15,6 +15,7 @@ class QuoteNotificationEqualScheduleModelMapper
     if (_instance == null) {
       MapperContainer.globals
           .use(_instance = QuoteNotificationEqualScheduleModelMapper._());
+      MapperContainer.globals.useAll([TimeOfDayMapper()]);
     }
     return _instance!;
   }

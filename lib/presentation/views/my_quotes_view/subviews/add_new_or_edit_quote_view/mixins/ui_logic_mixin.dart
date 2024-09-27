@@ -29,7 +29,7 @@ mixin _UILogicMixin on ChangeNotifier {
   ///
   /// UI Controllers Init and dispose
   ///
-  void onReady(QuoteHiveModel? editQuote) {
+  void onReady(QuoteModel? editQuote) {
     quoteTextController = TextEditingController(text: editQuote?.quote ?? '');
     authorTextController = TextEditingController(text: editQuote?.author ?? '');
   }
