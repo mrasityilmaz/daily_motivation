@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/shared/theme/color_scheme.dart';
-import 'package:stacked_themes/stacked_themes.dart';
 
 part 'theme/custom_theme_configs/sign_view_theme.dart';
-
 part 'theme/themes/dark_theme.dart';
 part 'theme/themes/light_theme.dart';
 
@@ -23,7 +20,7 @@ final class AppThemeManager with _AppDarkTheme, _AppLightTheme {
 
   ThemeData get themeData => isDarkMode ? darkThemeData : lightThemeData;
 
-  bool get isDarkMode => locator<ThemeService>().isDarkMode;
+  bool get isDarkMode => true;
 
   ThemeMode get themeMode => isDarkMode ? ThemeMode.dark : ThemeMode.light;
 }

@@ -40,9 +40,6 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
   static Timestamp? _$lastScheduledDate(UserModel v) => v.lastScheduledDate;
   static const Field<UserModel, Timestamp> _f$lastScheduledDate =
       Field('lastScheduledDate', _$lastScheduledDate, opt: true);
-  static Map<String, dynamic>? _$deviceInfo(UserModel v) => v.deviceInfo;
-  static const Field<UserModel, Map<String, dynamic>> _f$deviceInfo =
-      Field('deviceInfo', _$deviceInfo, opt: true);
 
   @override
   final MappableFields<UserModel> fields = const {
@@ -52,7 +49,6 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
     #deviceToken: _f$deviceToken,
     #scheduleTimes: _f$scheduleTimes,
     #lastScheduledDate: _f$lastScheduledDate,
-    #deviceInfo: _f$deviceInfo,
   };
 
   static UserModel _instantiate(DecodingData data) {
@@ -62,8 +58,7 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
         sendNotifications: data.dec(_f$sendNotifications),
         deviceToken: data.dec(_f$deviceToken),
         scheduleTimes: data.dec(_f$scheduleTimes),
-        lastScheduledDate: data.dec(_f$lastScheduledDate),
-        deviceInfo: data.dec(_f$deviceInfo));
+        lastScheduledDate: data.dec(_f$lastScheduledDate));
   }
 
   @override
@@ -118,16 +113,13 @@ abstract class UserModelCopyWith<$R, $In extends UserModel, $Out>
     implements ClassCopyWith<$R, $In, $Out> {
   UserNotificationScheduleTimesCopyWith<$R, UserNotificationScheduleTimes,
       UserNotificationScheduleTimes>? get scheduleTimes;
-  MapCopyWith<$R, String, dynamic, ObjectCopyWith<$R, dynamic, dynamic>>?
-      get deviceInfo;
   $R call(
       {String? timeZone,
       String? deviceId,
       bool? sendNotifications,
       String? deviceToken,
       UserNotificationScheduleTimes? scheduleTimes,
-      Timestamp? lastScheduledDate,
-      Map<String, dynamic>? deviceInfo});
+      Timestamp? lastScheduledDate});
   UserModelCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
@@ -145,30 +137,20 @@ class _UserModelCopyWithImpl<$R, $Out>
       get scheduleTimes =>
           $value.scheduleTimes?.copyWith.$chain((v) => call(scheduleTimes: v));
   @override
-  MapCopyWith<$R, String, dynamic, ObjectCopyWith<$R, dynamic, dynamic>>?
-      get deviceInfo => $value.deviceInfo != null
-          ? MapCopyWith(
-              $value.deviceInfo!,
-              (v, t) => ObjectCopyWith(v, $identity, t),
-              (v) => call(deviceInfo: v))
-          : null;
-  @override
   $R call(
           {String? timeZone,
           String? deviceId,
           bool? sendNotifications,
           Object? deviceToken = $none,
           Object? scheduleTimes = $none,
-          Object? lastScheduledDate = $none,
-          Object? deviceInfo = $none}) =>
+          Object? lastScheduledDate = $none}) =>
       $apply(FieldCopyWithData({
         if (timeZone != null) #timeZone: timeZone,
         if (deviceId != null) #deviceId: deviceId,
         if (sendNotifications != null) #sendNotifications: sendNotifications,
         if (deviceToken != $none) #deviceToken: deviceToken,
         if (scheduleTimes != $none) #scheduleTimes: scheduleTimes,
-        if (lastScheduledDate != $none) #lastScheduledDate: lastScheduledDate,
-        if (deviceInfo != $none) #deviceInfo: deviceInfo
+        if (lastScheduledDate != $none) #lastScheduledDate: lastScheduledDate
       }));
   @override
   UserModel $make(CopyWithData data) => UserModel(
@@ -179,8 +161,7 @@ class _UserModelCopyWithImpl<$R, $Out>
       deviceToken: data.get(#deviceToken, or: $value.deviceToken),
       scheduleTimes: data.get(#scheduleTimes, or: $value.scheduleTimes),
       lastScheduledDate:
-          data.get(#lastScheduledDate, or: $value.lastScheduledDate),
-      deviceInfo: data.get(#deviceInfo, or: $value.deviceInfo));
+          data.get(#lastScheduledDate, or: $value.lastScheduledDate));
 
   @override
   UserModelCopyWith<$R2, UserModel, $Out2> $chain<$R2, $Out2>(

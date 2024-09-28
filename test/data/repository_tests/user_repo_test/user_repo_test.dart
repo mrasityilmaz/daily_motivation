@@ -13,12 +13,6 @@ void main() {
     const UserModel userModel = UserModel(
       deviceId: '123',
       timeZone: 'Asia/Kolkata',
-      deviceInfo: {
-        'deviceName': 'iPhone 12',
-        'deviceModel': 'iPhone 12',
-        'deviceOs': 'iOS',
-        'deviceOsVersion': '14.5',
-      },
       deviceToken: '1234',
     );
 

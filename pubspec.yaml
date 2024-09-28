@@ -62,9 +62,9 @@ dependencies:
   safe_int_id: ^1.1.1
   sliver_tools: ^0.2.12
   stacked: ^3.4.1
-  stacked_themes: ^0.3.12
   uuid: ^4.3.3
   visibility_detector: ^0.4.0+2
+  flutter_udid: ^3.0.0
 
 ###
 ### Dependencies

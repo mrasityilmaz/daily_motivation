@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 
 @immutable
@@ -13,6 +14,14 @@ final class LoggerService {
   static final Logger logger = Logger(
     printer: PrettyPrinter(
       colors: false,
+      errorMethodCount: 1,
+      methodCount: 1,
+      levelColors: {
+        Level.debug: AnsiColor.fg(Colors.blue.value),
+        Level.info: AnsiColor.fg(Colors.green.value),
+        Level.warning: AnsiColor.fg(Colors.yellow.value),
+        Level.error: AnsiColor.fg(Colors.red.value),
+      },
     ),
   );
 

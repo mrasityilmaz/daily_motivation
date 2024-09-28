@@ -5,6 +5,8 @@ import 'package:quotely/domain/repositories/user_repository/data_sources/ilocal_
 @immutable
 @LazySingleton(as: UserLocalRepository)
 final class UserHiveRepositoryImpl implements UserLocalRepository {
+  const UserHiveRepositoryImpl();
+
   ///
   /// If you want to use Hive, you can use this class.
   /// You can use this class to save data to the local database and etc.

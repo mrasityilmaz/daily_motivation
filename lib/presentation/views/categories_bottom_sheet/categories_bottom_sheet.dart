@@ -19,7 +19,6 @@ import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:quotely/presentation/overrides/vselector_with_viewmodel_widget.dart';
 import 'package:quotely/presentation/views/categories_bottom_sheet/categories_bottom_sheet_viewmodel.dart';
 import 'package:stacked/stacked.dart';
-import 'package:stacked_themes/stacked_themes.dart';
 
 part 'widgets/app_bar_widget.dart';
 part 'widgets/body_widget.dart';

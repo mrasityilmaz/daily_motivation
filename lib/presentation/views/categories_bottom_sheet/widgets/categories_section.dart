@@ -12,7 +12,7 @@ final class _CategoriesSection extends StatelessWidget {
       title: Container(
         height: kToolbarHeight,
         decoration: BoxDecoration(
-          color: locator<ThemeService>().isDarkMode ? context.appColors.darkGreyColor : context.appColors.lightGreyColor,
+          color: true ? context.appColors.darkGreyColor : context.appColors.lightGreyColor,
         ),
         padding: context.screenPaddingHorizontal,
         child: Row(
@@ -21,7 +21,8 @@ final class _CategoriesSection extends StatelessWidget {
           ],
         ),
       ),
-      gridChildrenPadding: context.screenPaddingHorizontal * .5 + context.paddingMediumBottom + context.screenPaddingTop,
+      gridChildrenPadding:
+          context.screenPaddingHorizontal * .5 + context.paddingMediumBottom + context.screenPaddingTop,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         crossAxisSpacing: context.screenPaddingHorizontal.horizontal / 4,

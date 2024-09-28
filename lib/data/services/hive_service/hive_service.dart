@@ -1,6 +1,5 @@
 import 'package:bee_hive/bee_hive.dart';
-import 'package:flutter/material.dart';
-import 'package:injectable/injectable.dart';
+import 'package:flutter/foundation.dart';
 import 'package:quotely/core/constants/hive_constants.dart';
 import 'package:quotely/data/services/hive_service/boxes/category_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/liked_quote_service.dart';
@@ -9,8 +8,8 @@ import 'package:quotely/data/services/hive_service/boxes/quote_notification_serv
 import 'package:quotely/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
 
-@LazySingleton()
 @immutable
+// It's registered in injection_container.dart
 final class HiveService {
   ///
   ///
@@ -27,10 +26,8 @@ final class HiveService {
   final CategoryBoxService categoryBoxService = CategoryBoxService(boxName: HiveConstants.categoryBoxKey);
 
   ///
-  ///
-  ///
-  ///
-
+  /// Do not call this method directly. It's called by the `configureDependencies` method in the `injection_container.dart` file.
+  @nonVirtual
   Future<void> init() async {
     await HiveManager.instance.init(
       hiveBoxes: [
@@ -42,15 +39,5 @@ final class HiveService {
         categoryBoxService,
       ],
     );
-
-    // Hive.defaultDirectory = await getApplicationDocumentsDirectory().then((value) => value.path);
-
-    // Hive.closeAllBoxes();
-    // Hive.deleteAllBoxesFromDisk();
-
-    // Hive.defaultDirectory = appDocumentDir.path;
-
-    // await Hive.deleteBoxFromDisk(HiveConstants.themeConfigurationBoxKey);
-    // await Hive.deleteBoxFromDisk(HiveConstants.likedQuotesBoxKey);
   }
 }

@@ -10,7 +10,7 @@ class _InitialConfigurationBase
   ///
   final FlutterLocalNotificationsPlugin _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
-  final MethodChannel _platform = const MethodChannel('dexterx.dev/flutter_local_notifications_example');
+  late final String userTimeZone;
 
   ///
   /// Configure Timezone
@@ -22,8 +22,8 @@ class _InitialConfigurationBase
         return;
       }
       tz.initializeTimeZones();
-      final String timeZoneName = await FlutterTimezone.getLocalTimezone();
-      tz.setLocalLocation(tz.getLocation(timeZoneName));
+      userTimeZone = await FlutterTimezone.getLocalTimezone();
+      tz.setLocalLocation(tz.getLocation(userTimeZone));
       LoggerService.instance.printLog('configureLocalTimeZone');
     } catch (e, s) {
       LoggerService.instance.catchLog(e, s);

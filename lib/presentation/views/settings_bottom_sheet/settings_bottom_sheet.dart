@@ -13,7 +13,6 @@ import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_lo
 import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_widget.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:stacked/stacked.dart';
-import 'package:stacked_themes/stacked_themes.dart';
 
 part 'settings_bottom_sheet_viewmodel.dart';
 part 'widgets/app_bar_widget.dart';

@@ -10,6 +10,7 @@ import 'package:quotely/domain/repositories/user_repository/data_sources/iremote
 @immutable
 @LazySingleton(as: UserRemoteRepository, env: [Environment.test])
 final class UserMockRepositoryImpl implements UserRemoteRepository {
+  const UserMockRepositoryImpl();
   CollectionReference<Map<String, Object?>?> get _collection => FireStoreCollections.users.collectionWithoutConverter;
 
   @override
@@ -55,7 +56,7 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
       final user = await _collection.doc(deviceId).get().then((value) => value.data());
 
       if (user != null) {
-        return Right(UserModel.fromMap(user));
+        return Right(UserModel.userFromMap(user));
       }
       return Left(FirestoreException(errorMessage: 'User not found'));
     } catch (e) {

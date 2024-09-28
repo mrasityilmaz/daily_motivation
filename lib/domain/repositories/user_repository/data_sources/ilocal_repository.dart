@@ -1,4 +1,6 @@
 abstract class UserLocalRepository {
+  const UserLocalRepository();
+
   ///
   ///  Local repository interface
   ///  This is where you define your local data source methods

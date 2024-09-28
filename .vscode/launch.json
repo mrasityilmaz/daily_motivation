@@ -5,11 +5,29 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "quotely_app",
+			"name": "quotely_app (Debug) - Prod",
 			"request": "launch",
 			"type": "dart",
-			// "args": ["--no-enable-impeller"]
-			
+			"args": [
+				"ENVIRONMENT=prod",
+			]
+		},
+		{
+			"name": "quotely_app (Profile) - Prod",
+			"request": "launch",
+			"type": "dart",
+			"flutterMode": "profile",
+			"args": [
+				"ENVIRONMENT=prod",
+			]
+		},
+		{
+			"name": "quotely_app (Debug) - Test",
+			"request": "launch",
+			"type": "dart",
+			"args": [
+				"ENVIRONMENT=test",
+			]
 		},
 		{
 			"name": "quotely_app (profile mode)",
@@ -24,6 +42,5 @@
 			"type": "dart",
 			"flutterMode": "release"
 		},
-		
 	]
 }

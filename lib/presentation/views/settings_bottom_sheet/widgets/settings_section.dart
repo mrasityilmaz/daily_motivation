@@ -18,16 +18,15 @@ final class _SettingsSection extends StatelessWidget {
           height: context.normalValue,
         ),
         _SettingsRowWidget(
-          icon: locator<ThemeService>().isDarkMode ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
-          iconColor:
-              locator<ThemeService>().isDarkMode ? context.colors.onSurface.withOpacity(.6) : Colors.amber.shade300,
+          icon: true ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
+          iconColor: true ? context.colors.onSurface.withOpacity(.6) : Colors.amber.shade300,
           title: 'Dark Mode',
           onPressed: _toggleTheme,
           trailing: ConstrainedBox(
             constraints: BoxConstraints.tight(const Size(50, 20)),
             child: Switch.adaptive(
               splashRadius: 12,
-              value: locator<ThemeService>().isDarkMode,
+              value: true,
               applyCupertinoTheme: true,
               onChanged: (a) => _toggleTheme(),
             ),
@@ -98,9 +97,7 @@ final class _SettingsSection extends StatelessWidget {
     );
   }
 
-  void _toggleTheme() {
-    locator<ThemeService>().toggleDarkLightTheme();
-  }
+  void _toggleTheme() {}
 
   Future<void> _pushRoute(auto_route.PageRouteInfo<dynamic> route) async {
     await locator<AppRouter>().push(route);

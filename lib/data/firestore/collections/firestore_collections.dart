@@ -7,7 +7,7 @@ import 'package:quotely/injection/injection_container.dart';
 
 part 'collection_helper.dart';
 
-enum FireStoreCollections<T extends FirestoreConverter<T>> with _CollectionHelper<T> {
+enum FireStoreCollections<T extends Object> with _CollectionHelper<T> {
   users<UserModel>();
 
   const FireStoreCollections();

@@ -54,7 +54,9 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
   @override
   Future<DataModel<UserModel>> findUserByDeviceId({required String deviceId}) async {
     try {
-      final user = await _userCollection.doc(deviceId).get().then((value) => value.data());
+      final user = await _userCollection.doc(deviceId).get().then((value) {
+        return value.data();
+      });
 
       if (user != null) {
         return Right(user);
