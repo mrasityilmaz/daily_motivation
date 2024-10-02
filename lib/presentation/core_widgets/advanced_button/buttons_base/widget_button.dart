@@ -34,7 +34,7 @@ final class _WidgetButton extends StatelessWidget {
                   try {
                     await animate.currentState?.startAnimation(callback: () async => onPressed!.call());
                   } catch (e, s) {
-                    LoggerService.instance.catchLog(e, s);
+                    LoggerService.catchLog(e, s);
                   }
                 } else {
                   onPressed!.call();

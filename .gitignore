@@ -47,3 +47,6 @@ lib/injection/injection_container.config.dart
 functions/.env
 functions/src/credentials.json
 functions/src/serviceAccount.json
+functions/src/.prod.env
+functions/.env.default
+functions/.env.local

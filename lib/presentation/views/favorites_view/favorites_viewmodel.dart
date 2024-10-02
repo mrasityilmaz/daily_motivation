@@ -25,7 +25,7 @@ class FavoritesViewModel extends BaseViewModel with _MultipleChooseHelperMixin, 
     try {
       await runBusyFuture(_likedQuoteBoxService.unLikeQuote(quoteId), busyObject: ValueKey(quoteId));
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -37,7 +37,7 @@ class FavoritesViewModel extends BaseViewModel with _MultipleChooseHelperMixin, 
     try {
       _likedQuoteBoxService.clearLikedQuotes();
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 }

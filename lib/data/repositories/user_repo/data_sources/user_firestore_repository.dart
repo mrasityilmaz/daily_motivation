@@ -8,7 +8,7 @@ import 'package:quotely/data/models/firestore_models/user_model/user_model.dart'
 import 'package:quotely/domain/repositories/user_repository/data_sources/iremote_repository.dart';
 
 @immutable
-@LazySingleton(as: UserRemoteRepository, env: [Environment.prod])
+@Injectable(as: UserRemoteRepository, env: [Environment.prod])
 final class UserHttpRepositoryImpl implements UserRemoteRepository {
   const UserHttpRepositoryImpl();
 

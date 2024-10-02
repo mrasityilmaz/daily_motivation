@@ -17,7 +17,7 @@ final class CategoryBoxService extends HiveBoxService<String> {
     try {
       box.put(boxName, category.key);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -25,7 +25,7 @@ final class CategoryBoxService extends HiveBoxService<String> {
     try {
       box.clear();
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 }

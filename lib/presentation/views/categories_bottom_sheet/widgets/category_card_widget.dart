@@ -170,7 +170,7 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
     } catch (e, s) {
       await locator<AppRouter>().maybePop();
       ProgressOverlayDialog.instance.closeOverlay();
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 }

@@ -11,7 +11,7 @@ mixin _UILogicMixin {
         await AppDialogs.instance.showBasicFlushBar(context, message: 'Quote Copied');
       });
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 }

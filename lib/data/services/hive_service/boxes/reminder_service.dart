@@ -13,7 +13,7 @@ final class ReminderBoxService extends HiveBoxService<ReminderModel> {
     try {
       box.put(reminder.notificationId, reminder);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -21,7 +21,7 @@ final class ReminderBoxService extends HiveBoxService<ReminderModel> {
     try {
       box.delete(key);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -29,7 +29,7 @@ final class ReminderBoxService extends HiveBoxService<ReminderModel> {
     try {
       box.put(key, reminder);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -37,7 +37,7 @@ final class ReminderBoxService extends HiveBoxService<ReminderModel> {
     try {
       box.clear();
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 }

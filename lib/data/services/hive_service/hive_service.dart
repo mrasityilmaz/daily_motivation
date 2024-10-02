@@ -1,5 +1,6 @@
 import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:quotely/core/constants/hive_constants.dart';
 import 'package:quotely/data/services/hive_service/boxes/category_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/liked_quote_service.dart';
@@ -9,7 +10,7 @@ import 'package:quotely/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
 
 @immutable
-// It's registered in injection_container.dart
+@LazySingleton(order: 2)
 final class HiveService {
   ///
   ///
@@ -25,9 +26,8 @@ final class HiveService {
       QuoteNotificationBoxService(boxName: HiveConstants.quoteNotificationBoxKey);
   final CategoryBoxService categoryBoxService = CategoryBoxService(boxName: HiveConstants.categoryBoxKey);
 
-  ///
-  /// Do not call this method directly. It's called by the `configureDependencies` method in the `injection_container.dart` file.
   @nonVirtual
+  @PostConstruct(preResolve: true)
   Future<void> init() async {
     await HiveManager.instance.init(
       hiveBoxes: [

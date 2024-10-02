@@ -7,7 +7,7 @@ import 'package:quotely/domain/repositories/user_repository/data_sources/iremote
 import 'package:quotely/domain/repositories/user_repository/i_user_repository.dart';
 
 @immutable
-@LazySingleton(as: UserRepository)
+@Injectable(as: UserRepository, env: [Environment.prod, Environment.test])
 final class UserRepositoryImpl implements UserRepository {
   const UserRepositoryImpl({
     required this.remoteDataSource,

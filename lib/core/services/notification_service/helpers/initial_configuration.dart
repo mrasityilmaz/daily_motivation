@@ -13,6 +13,16 @@ class _InitialConfigurationBase
   late final String userTimeZone;
 
   ///
+  /// Init Notification Service
+  ///
+  @mustCallSuper
+  Future<void> initService() async {
+    await _configureLocalTimeZone();
+    await _configureAppLaunchDetails();
+    await _initializeLocalNotificationPlugin();
+  }
+
+  ///
   /// Configure Timezone
   ///
   @nonVirtual
@@ -24,9 +34,9 @@ class _InitialConfigurationBase
       tz.initializeTimeZones();
       userTimeZone = await FlutterTimezone.getLocalTimezone();
       tz.setLocalLocation(tz.getLocation(userTimeZone));
-      LoggerService.instance.printLog('configureLocalTimeZone');
+      LoggerService.printLog('configureLocalTimeZone');
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -50,9 +60,9 @@ class _InitialConfigurationBase
 
         /// TODO - USE [notificationPayload] if the app was launched via notification.
       }
-      LoggerService.instance.printLog('configureAppLaunchDetails');
+      LoggerService.printLog('configureAppLaunchDetails');
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -88,19 +98,9 @@ class _InitialConfigurationBase
         },
         onDidReceiveBackgroundNotificationResponse: notificationTapBackground,
       );
-      LoggerService.instance.printLog('initializeLocalNotificationPlugin');
+      LoggerService.printLog('initializeLocalNotificationPlugin');
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
-  }
-
-  ///
-  /// Init Notification Service
-  ///
-  @mustCallSuper
-  Future<void> initService() async {
-    await _configureLocalTimeZone();
-    await _configureAppLaunchDetails();
-    await _initializeLocalNotificationPlugin();
   }
 }

@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -10,20 +9,22 @@ part 'user_model.mapper.dart';
 @MappableClass()
 final class UserModel with UserModelMappable {
   const UserModel({
-    required this.timeZone,
+    required this.uid,
     required this.deviceId,
+    this.timeZone,
     this.sendNotifications = false,
     this.deviceToken,
     this.scheduleTimes,
     this.lastScheduledDate,
   });
 
+  final String uid;
   final String deviceId;
   final String? deviceToken;
   final bool sendNotifications;
   final UserNotificationScheduleTimes? scheduleTimes;
-  final String timeZone;
-  final Timestamp? lastScheduledDate;
+  final String? timeZone;
+  final DateTime? lastScheduledDate;
 
   static const userFromMap = UserModelMapper.fromMap;
   static const userFromJson = UserModelMapper.fromJson;

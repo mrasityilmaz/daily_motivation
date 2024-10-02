@@ -129,7 +129,7 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
     } catch (e, s) {
       await locator<AppRouter>().maybePop();
       ProgressOverlayDialog.instance.closeOverlay();
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 }

@@ -33,9 +33,9 @@
 //       await Workmanager().initialize(callbackDispatcher, isInDebugMode: kDebugMode);
 //       await Workmanager().checkBackgroundRefreshPermission();
 
-//       LoggerService.instance.printLog('WorkManager initialized');
+//       LoggerService.printLog('WorkManager initialized');
 //     } catch (e, s) {
-//       LoggerService.instance.catchLog(e, s);
+//       LoggerService.catchLog(e, s);
 //     }
 //   }
 
@@ -43,11 +43,11 @@
 //     try {
 //       final perm = await Workmanager().checkBackgroundRefreshPermission().then((permissionStatus) {
 //         if (permissionStatus == BackgroundRefreshPermissionState.available) {
-//           LoggerService.instance.printLog('Background refresh is enabled');
+//           LoggerService.printLog('Background refresh is enabled');
 
 //           return true;
 //         } else {
-//           LoggerService.instance.printLog('Background refresh is not enabled');
+//           LoggerService.printLog('Background refresh is not enabled');
 //           return false;
 //         }
 //       });
@@ -77,7 +77,7 @@
 
 //       await Workmanager().printScheduledTasks();
 //     } catch (e, s) {
-//       LoggerService.instance.catchLog(e, s);
+//       LoggerService.catchLog(e, s);
 //     }
 //   }
 // }

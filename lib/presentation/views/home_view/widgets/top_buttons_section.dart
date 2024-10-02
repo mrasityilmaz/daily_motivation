@@ -25,7 +25,7 @@ final class _TopSection extends StatelessWidget {
                     //   message: 'Hello from the buttons! - ${DateTime.now()}',
                     // );
                   } catch (e, s) {
-                    LoggerService.instance.catchLog(e, s);
+                    LoggerService.catchLog(e, s);
                   }
                 },
                 icon: Image.asset(

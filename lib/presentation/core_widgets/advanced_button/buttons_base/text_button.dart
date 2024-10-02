@@ -36,7 +36,7 @@ final class _TextButton extends StatelessWidget {
                   try {
                     await animate.currentState?.startAnimation(callback: () async => onPressed!.call());
                   } catch (e, s) {
-                    LoggerService.instance.catchLog(e, s);
+                    LoggerService.catchLog(e, s);
                   }
                 } else {
                   onPressed!.call();
@@ -55,7 +55,8 @@ final class _TextButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: textStyle?.copyWith(color: textColor ?? context.colors.onPrimary) ?? context.textTheme.bodyMedium?.copyWith(color: textColor ?? context.colors.onPrimary),
+          style: textStyle?.copyWith(color: textColor ?? context.colors.onPrimary) ??
+              context.textTheme.bodyMedium?.copyWith(color: textColor ?? context.colors.onPrimary),
         ),
       ),
     );

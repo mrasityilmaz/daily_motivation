@@ -21,12 +21,14 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
   @override
   final String id = 'UserModel';
 
-  static String _$timeZone(UserModel v) => v.timeZone;
-  static const Field<UserModel, String> _f$timeZone =
-      Field('timeZone', _$timeZone);
+  static String _$uid(UserModel v) => v.uid;
+  static const Field<UserModel, String> _f$uid = Field('uid', _$uid);
   static String _$deviceId(UserModel v) => v.deviceId;
   static const Field<UserModel, String> _f$deviceId =
       Field('deviceId', _$deviceId);
+  static String? _$timeZone(UserModel v) => v.timeZone;
+  static const Field<UserModel, String> _f$timeZone =
+      Field('timeZone', _$timeZone, opt: true);
   static bool _$sendNotifications(UserModel v) => v.sendNotifications;
   static const Field<UserModel, bool> _f$sendNotifications =
       Field('sendNotifications', _$sendNotifications, opt: true, def: false);
@@ -37,14 +39,15 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
       v.scheduleTimes;
   static const Field<UserModel, UserNotificationScheduleTimes>
       _f$scheduleTimes = Field('scheduleTimes', _$scheduleTimes, opt: true);
-  static Timestamp? _$lastScheduledDate(UserModel v) => v.lastScheduledDate;
-  static const Field<UserModel, Timestamp> _f$lastScheduledDate =
+  static DateTime? _$lastScheduledDate(UserModel v) => v.lastScheduledDate;
+  static const Field<UserModel, DateTime> _f$lastScheduledDate =
       Field('lastScheduledDate', _$lastScheduledDate, opt: true);
 
   @override
   final MappableFields<UserModel> fields = const {
-    #timeZone: _f$timeZone,
+    #uid: _f$uid,
     #deviceId: _f$deviceId,
+    #timeZone: _f$timeZone,
     #sendNotifications: _f$sendNotifications,
     #deviceToken: _f$deviceToken,
     #scheduleTimes: _f$scheduleTimes,
@@ -53,8 +56,9 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
 
   static UserModel _instantiate(DecodingData data) {
     return UserModel(
-        timeZone: data.dec(_f$timeZone),
+        uid: data.dec(_f$uid),
         deviceId: data.dec(_f$deviceId),
+        timeZone: data.dec(_f$timeZone),
         sendNotifications: data.dec(_f$sendNotifications),
         deviceToken: data.dec(_f$deviceToken),
         scheduleTimes: data.dec(_f$scheduleTimes),
@@ -114,12 +118,13 @@ abstract class UserModelCopyWith<$R, $In extends UserModel, $Out>
   UserNotificationScheduleTimesCopyWith<$R, UserNotificationScheduleTimes,
       UserNotificationScheduleTimes>? get scheduleTimes;
   $R call(
-      {String? timeZone,
+      {String? uid,
       String? deviceId,
+      String? timeZone,
       bool? sendNotifications,
       String? deviceToken,
       UserNotificationScheduleTimes? scheduleTimes,
-      Timestamp? lastScheduledDate});
+      DateTime? lastScheduledDate});
   UserModelCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(Then<$Out2, $R2> t);
 }
 
@@ -138,15 +143,17 @@ class _UserModelCopyWithImpl<$R, $Out>
           $value.scheduleTimes?.copyWith.$chain((v) => call(scheduleTimes: v));
   @override
   $R call(
-          {String? timeZone,
+          {String? uid,
           String? deviceId,
+          Object? timeZone = $none,
           bool? sendNotifications,
           Object? deviceToken = $none,
           Object? scheduleTimes = $none,
           Object? lastScheduledDate = $none}) =>
       $apply(FieldCopyWithData({
-        if (timeZone != null) #timeZone: timeZone,
+        if (uid != null) #uid: uid,
         if (deviceId != null) #deviceId: deviceId,
+        if (timeZone != $none) #timeZone: timeZone,
         if (sendNotifications != null) #sendNotifications: sendNotifications,
         if (deviceToken != $none) #deviceToken: deviceToken,
         if (scheduleTimes != $none) #scheduleTimes: scheduleTimes,
@@ -154,8 +161,9 @@ class _UserModelCopyWithImpl<$R, $Out>
       }));
   @override
   UserModel $make(CopyWithData data) => UserModel(
-      timeZone: data.get(#timeZone, or: $value.timeZone),
+      uid: data.get(#uid, or: $value.uid),
       deviceId: data.get(#deviceId, or: $value.deviceId),
+      timeZone: data.get(#timeZone, or: $value.timeZone),
       sendNotifications:
           data.get(#sendNotifications, or: $value.sendNotifications),
       deviceToken: data.get(#deviceToken, or: $value.deviceToken),

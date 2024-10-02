@@ -66,7 +66,7 @@ final class _QuoteNotificationViewModel extends BaseViewModel
         }
       }
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 

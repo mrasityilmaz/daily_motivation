@@ -1,24 +1,45 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:injectable/injectable.dart' show Environment;
 import 'package:quotely/core/extensions/dartz_extension.dart';
 import 'package:quotely/data/models/firestore_models/user_model/user_model.dart';
+import 'package:quotely/data/repositories/user_repo/data_sources/user_hive_repository.dart';
+import 'package:quotely/data/repositories/user_repo/data_sources/user_mock_repository.dart';
+import 'package:quotely/data/repositories/user_repo/user_repository.dart';
 import 'package:quotely/domain/repositories/user_repository/i_user_repository.dart';
 import 'package:quotely/injection/injection_container.dart';
 
 void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
-
   group('FakeFirestore User Collection Tests', () {
     late final UserRepository userMockRepository;
-    const UserModel userModel = UserModel(
+    final UserModel userModel = UserModel(
+      uid: '123',
       deviceId: '123',
       timeZone: 'Asia/Kolkata',
       deviceToken: '1234',
+      lastScheduledDate: DateTime.now().toUtc(),
     );
 
-    setUpAll(() {
-      configureDependencies(defaultEnv: Environment.test);
+    setUpAll(() async {
+      locator
+        ..registerSingleton<FirebaseFirestore>(
+          FakeFirebaseFirestore(),
+        )
+        ..registerFactory<UserRepository>(
+          () => const UserRepositoryImpl(
+            remoteDataSource: UserMockRepositoryImpl(),
+            localDataSource: UserHiveRepositoryImpl(),
+          ),
+        );
+
+      await locator.allReady();
+
       userMockRepository = locator<UserRepository>();
+    });
+
+    test('Dependency Check', () {
+      expect(userMockRepository, isA<UserRepository>());
+      expect(locator.isRegistered<UserRepository>(), true);
     });
 
     test('Create User', () async {
@@ -27,7 +48,17 @@ void main() {
 
       expect(result.asRight(), isA<UserModel>());
 
-      expect(result.asRight(), userModel);
+      expect(result.asRight().deviceId, userModel.deviceId);
+
+      expect(result.asRight().deviceToken, userModel.deviceToken);
+
+      expect(result.asRight().timeZone, userModel.timeZone);
+
+      expect(result.asRight().lastScheduledDate, userModel.lastScheduledDate);
+
+      expect(result.asRight().sendNotifications, userModel.sendNotifications);
+
+      expect(result.asRight().scheduleTimes, userModel.scheduleTimes);
     });
 
     test('Update User', () async {

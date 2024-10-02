@@ -21,7 +21,7 @@ final class LikedQuoteBoxService extends HiveBoxService<QuoteModel> {
     try {
       box.put(quoteModel.id, quoteModel);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -29,7 +29,7 @@ final class LikedQuoteBoxService extends HiveBoxService<QuoteModel> {
     try {
       box.delete(quoteId);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -37,7 +37,7 @@ final class LikedQuoteBoxService extends HiveBoxService<QuoteModel> {
     try {
       box.clear();
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 }

@@ -25,7 +25,7 @@ final class MyQuotesViewModel extends BaseViewModel with _UILogicMixin {
     try {
       await runBusyFuture(_myQuoteBoxService.deleteMyQuote(quoteId), busyObject: ValueKey(quoteId));
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -46,7 +46,7 @@ final class MyQuotesViewModel extends BaseViewModel with _UILogicMixin {
         _addOrUpdateTemporarilyAddedQuote(quote);
       }
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -59,7 +59,7 @@ final class MyQuotesViewModel extends BaseViewModel with _UILogicMixin {
         _addOrUpdateTemporarilyAddedQuote(result);
       } else {}
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 

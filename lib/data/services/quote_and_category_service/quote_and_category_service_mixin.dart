@@ -40,7 +40,7 @@ mixin _QuoteAndCategoryServiceMixin {
         onQuotesChanged.call(quotes);
       }
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 

@@ -91,7 +91,7 @@ final class _AddNewOrEditReminderViewModel extends BaseViewModel
         }
       }
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 

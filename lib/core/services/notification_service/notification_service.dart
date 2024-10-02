@@ -19,7 +19,7 @@ part 'helpers/initialization_helpers/darwin_helper.dart';
 part 'helpers/initialization_helpers/linux_helper.dart';
 part 'helpers/permission_handlers/permission_handler.dart';
 
-@lazySingleton
+@Injectable()
 final class NotificationService extends _InitialConfigurationBase with _PermissionHandlerMixin {
   NotificationService();
 
@@ -29,7 +29,7 @@ final class NotificationService extends _InitialConfigurationBase with _Permissi
 
     await super.initService();
 
-    LoggerService.instance.printLog('Notification Service initialized - ${DateTime.now()}');
+    LoggerService.printLog('Notification Service initialized - ${DateTime.now()}');
   }
 
   Future<void> showNotification({String message = 'Hello'}) async {
@@ -100,7 +100,7 @@ final class NotificationService extends _InitialConfigurationBase with _Permissi
 
       print(aa);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 

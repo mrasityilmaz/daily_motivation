@@ -23,7 +23,7 @@ mixin _PermissionHandlerMixin on _InitialConfigurationBase {
         isNotificationPermissionGranted.value = false;
       }
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
       isNotificationPermissionGranted.value = false;
     }
   }
@@ -33,9 +33,13 @@ mixin _PermissionHandlerMixin on _InitialConfigurationBase {
   /// Request Notification Permission
   ///
   @nonVirtual
-  Future<bool> requestNotificationPermission({VoidCallback? onGrantedAction, VoidCallback? onPermanentDeniedAction, bool openAppSettingsWhenPermanentlyDenied = false}) async {
+  Future<bool> requestNotificationPermission(
+      {VoidCallback? onGrantedAction,
+      VoidCallback? onPermanentDeniedAction,
+      bool openAppSettingsWhenPermanentlyDenied = false}) async {
     try {
-      final PermissionStatus status = await Permission.notification.onGrantedCallback(onGrantedAction).onPermanentlyDeniedCallback(() {
+      final PermissionStatus status =
+          await Permission.notification.onGrantedCallback(onGrantedAction).onPermanentlyDeniedCallback(() {
         onPermanentDeniedAction?.call();
         if (openAppSettingsWhenPermanentlyDenied) {
           openAppSettings();
@@ -44,7 +48,7 @@ mixin _PermissionHandlerMixin on _InitialConfigurationBase {
 
       final bool isGranted = status.isGranted || status.isLimited;
 
-      LoggerService.instance.printLog('NotificationPermissionStatus : $isGranted - $status');
+      LoggerService.printLog('NotificationPermissionStatus : $isGranted - $status');
 
       if (isGranted) {
         isNotificationPermissionGranted.value = true;
@@ -54,7 +58,7 @@ mixin _PermissionHandlerMixin on _InitialConfigurationBase {
         return false;
       }
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
       isNotificationPermissionGranted.value = false;
       return false;
     }

@@ -14,8 +14,8 @@ import 'package:quotely/presentation/views/reminders_view/subviews/add_new_or_ed
 
 part 'app_navigator.gr.dart';
 
-@LazySingleton()
 @AutoRouterConfig()
+@LazySingleton(order: 1)
 final class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [

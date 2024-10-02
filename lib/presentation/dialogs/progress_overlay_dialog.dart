@@ -62,7 +62,7 @@ final class ProgressOverlayDialog {
         _overlayEntry = null;
       }
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 }

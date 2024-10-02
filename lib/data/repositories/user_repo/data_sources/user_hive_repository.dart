@@ -3,7 +3,7 @@ import 'package:injectable/injectable.dart';
 import 'package:quotely/domain/repositories/user_repository/data_sources/ilocal_repository.dart';
 
 @immutable
-@LazySingleton(as: UserLocalRepository)
+@Injectable(as: UserLocalRepository)
 final class UserHiveRepositoryImpl implements UserLocalRepository {
   const UserHiveRepositoryImpl();
 

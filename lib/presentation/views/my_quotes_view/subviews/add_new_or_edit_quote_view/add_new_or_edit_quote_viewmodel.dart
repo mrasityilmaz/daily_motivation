@@ -44,7 +44,7 @@ final class AddNewOrEditQuoteViewModel extends BaseViewModel with _UILogicMixin 
         await locator<AppRouter>().maybePop<QuoteModel?>(result);
       }
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 

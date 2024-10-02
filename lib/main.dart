@@ -4,9 +4,12 @@ library main;
 import 'dart:async';
 import 'dart:io';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:dart_mappable/dart_mappable.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
@@ -19,9 +22,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/core/services/notification_service/notification_service.dart';
-import 'package:quotely/data/models/firestore_models/user_model/user_model.dart';
-import 'package:quotely/domain/repositories/user_repository/i_user_repository.dart';
-import 'package:quotely/firebase_options.dart';
+import 'package:quotely/data/services/user_service/user_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/main.init.dart';
 import 'package:quotely/shared/app_theme.dart';
@@ -83,8 +84,13 @@ void main() async {
     initializeMappers();
 
     await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
+        // options: DefaultFirebaseOptions.currentPlatform,
+        );
+
+    // await FirebaseAppCheck.instance.activate(
+    //   androidProvider: AndroidProvider.debug,
+    //   appleProvider: AppleProvider.appAttest,
+    // );
 
     await configureDependencies(defaultEnv: Environment.prod);
 
@@ -94,26 +100,42 @@ void main() async {
 
     await locator<NotificationService>().initService();
 
-    await locator<NotificationService>().cancelAllNotifications();
-
     await EasyLocalization.ensureInitialized();
 
     await MobileAds.instance.initialize();
 
-    // FirebaseFirestore.instance.useFirestoreEmulator('http://localhost:8080', 8080);
+    await FirebaseAuth.instance.setSettings(appVerificationDisabledForTesting: true);
+
+    FirebaseFirestore.instance.useFirestoreEmulator('localhost', 8082);
+    await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
+    FirebaseFunctions.instance.useFunctionsEmulator('localhost', 5001);
+
+    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+      if (user == null) {
+        print('User is currently signed out!');
+      } else {
+        LoggerService.printLog('User is signed in! - ${user.uid} - ${user.displayName}');
+      }
+    });
+    final UserService userService = UserService();
+    final String deviceId = await FlutterUdid.udid;
+
+    final userCustomToken = await userService.createCustomToken(uid: deviceId, deviceId: deviceId);
+
+    await userService.createUserWithCustomToken(token: userCustomToken);
 
     await DeviceInfoPlugin().deviceInfo.then((BaseDeviceInfo deviceInfo) async {
-      LoggerService.instance.printLog(
+      LoggerService.printLog(
         'Device Info: ${deviceInfo.data}',
       );
-      final String deviceId = await FlutterUdid.udid;
-      await locator<UserRepository>().createNewUser(
-        userModel: UserModel(
-          timeZone: locator<NotificationService>().userTimeZone,
-          deviceId: deviceId,
-          sendNotifications: locator<NotificationService>().isNotificationPermissionGranted.value,
-        ),
-      );
+
+      // await locator<UserRepository>().createNewUser(
+      //   userModel: UserModel(
+      //     timeZone: locator<NotificationService>().userTimeZone,
+      //     deviceId: deviceId,
+      //     sendNotifications: locator<NotificationService>().isNotificationPermissionGranted.value,
+      //   ),
+      // );
     });
 
     await FirebaseMessaging.instance.requestPermission();
@@ -137,13 +159,13 @@ void main() async {
     );
   }, (Object error, StackTrace stack) async {
     if (kDebugMode) {
-      LoggerService.instance.printErrorLog(error, stack);
+      LoggerService.printErrorLog(error, stack);
     }
   });
 
   FlutterError.onError = (FlutterErrorDetails details) async {
     if (kDebugMode) {
-      LoggerService.instance.printErrorLog(
+      LoggerService.printErrorLog(
         details.exception,
         details.stack ?? StackTrace.current,
       );

@@ -10,15 +10,15 @@ part of 'env.dart';
 // ignore_for_file: type=lint
 final class _Env {
   static const List<int> _enviedkeyapiKey = <int>[
-    2184164366,
-    3177800880,
-    2180430721,
+    2572956804,
+    2084834077,
+    2274765672,
   ];
 
   static const List<int> _envieddataapiKey = <int>[
-    2184164453,
-    3177800917,
-    2180430840,
+    2572956911,
+    2084834168,
+    2274765585,
   ];
 
   static final String apiKey = String.fromCharCodes(List<int>.generate(

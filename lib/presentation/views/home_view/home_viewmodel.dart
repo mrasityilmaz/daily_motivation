@@ -70,7 +70,7 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
         currentQuoteIsLiked.value = locator<HiveService>().likedQuoteBoxService.isQuoteLiked(currentQuote.id);
       });
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -93,7 +93,7 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
         // TODO - Show ad and unlock quote swipe
       }
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 

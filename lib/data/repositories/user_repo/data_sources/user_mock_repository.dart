@@ -8,7 +8,7 @@ import 'package:quotely/data/models/firestore_models/user_model/user_model.dart'
 import 'package:quotely/domain/repositories/user_repository/data_sources/iremote_repository.dart';
 
 @immutable
-@LazySingleton(as: UserRemoteRepository, env: [Environment.test])
+@Injectable(as: UserRemoteRepository, env: [Environment.test])
 final class UserMockRepositoryImpl implements UserRemoteRepository {
   const UserMockRepositoryImpl();
   CollectionReference<Map<String, Object?>?> get _collection => FireStoreCollections.users.collectionWithoutConverter;

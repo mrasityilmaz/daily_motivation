@@ -13,7 +13,7 @@ final class QuoteNotificationBoxService extends HiveBoxService<QuoteNotification
     try {
       box.put(quoteNotificationModel.notificationId, quoteNotificationModel);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -21,7 +21,7 @@ final class QuoteNotificationBoxService extends HiveBoxService<QuoteNotification
     try {
       box.delete(key);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -29,7 +29,7 @@ final class QuoteNotificationBoxService extends HiveBoxService<QuoteNotification
     try {
       box.put(key, quoteNotificationModel);
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 
@@ -37,7 +37,7 @@ final class QuoteNotificationBoxService extends HiveBoxService<QuoteNotification
     try {
       box.clear();
     } catch (e, s) {
-      LoggerService.instance.catchLog(e, s);
+      LoggerService.catchLog(e, s);
     }
   }
 }
