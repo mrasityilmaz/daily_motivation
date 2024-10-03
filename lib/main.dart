@@ -110,13 +110,6 @@ void main() async {
     await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
     FirebaseFunctions.instance.useFunctionsEmulator('localhost', 5001);
 
-    FirebaseAuth.instance.authStateChanges().listen((User? user) {
-      if (user == null) {
-        print('User is currently signed out!');
-      } else {
-        LoggerService.printLog('User is signed in! - ${user.uid} - ${user.displayName}');
-      }
-    });
     final UserService userService = UserService();
     final String deviceId = await FlutterUdid.udid;
 
@@ -202,7 +195,7 @@ final class MyApp extends StatelessWidget {
     return MaterialApp.router(
       themeAnimationCurve: Easing.emphasizedAccelerate,
       themeAnimationDuration: Durations.medium1,
-      title: 'Daily Motivation',
+      title: 'Quotely',
       debugShowCheckedModeBanner: false,
       theme: AppThemeManager.instance.themeData,
       darkTheme: AppThemeManager.instance.darkThemeData,

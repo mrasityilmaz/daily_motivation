@@ -1,18 +1,25 @@
-// import 'package:flutter/foundation.dart';
+import 'package:dart_mappable/dart_mappable.dart';
+import 'package:flutter/foundation.dart';
 
-// @immutable
-// final class UserSessionModel with UserSessionModelMappable {
-//   const UserSessionModel({
-//     required this.deviceId,
-//     required this.lastLoginTime,
-//     this.sessionToken,
-//     this.sessionTokenExpirationTime,
-//   });
+part 'user_session_model.mapper.dart';
 
-//   final String deviceId;
+@immutable
+@MappableClass()
+final class UserSessionModel with UserSessionModelMappable {
+  const UserSessionModel({
+    required this.deviceId,
+    required this.lastLoginTime,
+    this.sessionToken,
+    this.sessionTokenExpirationTime,
+  });
 
-//   final DateTime lastLoginTime;
+  final String deviceId;
 
-//   final String? sessionToken;
-//   final DateTime? sessionTokenExpirationTime;
-// }
+  final DateTime lastLoginTime;
+
+  final String? sessionToken;
+  final DateTime? sessionTokenExpirationTime;
+
+  static const fromMap = UserSessionModelMapper.fromMap;
+  static const fromJson = UserSessionModelMapper.fromJson;
+}

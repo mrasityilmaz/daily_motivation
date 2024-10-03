@@ -14,6 +14,7 @@ import 'data/models/theme_configuration_model/theme_configuration_model.dart'
     as p6;
 import 'data/models/user_schedule_times_model/user_schedule_times_model.dart'
     as p7;
+import 'data/models/user_session_model/user_session_model.dart' as p8;
 
 void initializeMappers() {
   p0.UserModelMapper.ensureInitialized();
@@ -26,4 +27,5 @@ void initializeMappers() {
   p5.ReminderNotificationScheduleCustomIntervalModelMapper.ensureInitialized();
   p6.ThemeConfigurationModelMapper.ensureInitialized();
   p7.UserNotificationScheduleTimesMapper.ensureInitialized();
+  p8.UserSessionModelMapper.ensureInitialized();
 }

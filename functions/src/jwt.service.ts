@@ -32,7 +32,7 @@ class JwtService {
 
     console.debug('userClaims', userClaims);
 
-    const generatedToken = await getAdminAuth().createCustomToken(userClaims.uid);
+    const generatedToken = await getAdminAuth().createCustomToken(userClaims.uid, { deviceId: userClaims.deviceId });
 
     if (!generatedToken) {
       throw new functions.https.HttpsError('internal', 'Error generating custom token');

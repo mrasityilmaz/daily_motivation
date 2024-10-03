@@ -1,13 +1,13 @@
 import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:quotely/core/constants/hive_constants.dart';
 import 'package:quotely/data/services/hive_service/boxes/category_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/liked_quote_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/my_quote_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/quote_notification_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
+import 'package:quotely/data/services/hive_service/boxes/user_session_service.dart';
 
 @immutable
 @LazySingleton(order: 2)
@@ -16,21 +16,21 @@ final class HiveService {
   ///
   ///
 
-  final LikedQuoteBoxService likedQuoteBoxService = LikedQuoteBoxService(boxName: HiveConstants.likedQuotesBoxKey);
+  final LikedQuoteBoxService likedQuoteBoxService = LikedQuoteBoxService();
 
-  final MyQuoteBoxService myQuoteBoxService = MyQuoteBoxService(boxName: HiveConstants.myQuotesBoxKey);
-  final ThemeConfigurationBoxService themeConfigurationBoxService =
-      ThemeConfigurationBoxService(boxName: HiveConstants.themeConfigurationBoxKey);
-  final ReminderBoxService reminderBoxService = ReminderBoxService(boxName: HiveConstants.remindersBoxKey);
-  final QuoteNotificationBoxService quoteNotificationBoxService =
-      QuoteNotificationBoxService(boxName: HiveConstants.quoteNotificationBoxKey);
-  final CategoryBoxService categoryBoxService = CategoryBoxService(boxName: HiveConstants.categoryBoxKey);
+  final MyQuoteBoxService myQuoteBoxService = MyQuoteBoxService();
+  final ThemeConfigurationBoxService themeConfigurationBoxService = ThemeConfigurationBoxService();
+  final ReminderBoxService reminderBoxService = ReminderBoxService();
+  final QuoteNotificationBoxService quoteNotificationBoxService = QuoteNotificationBoxService();
+  final CategoryBoxService categoryBoxService = CategoryBoxService();
+  final UserSessionBoxService userSessionBoxService = UserSessionBoxService();
 
   @nonVirtual
   @PostConstruct(preResolve: true)
   Future<void> init() async {
     await HiveManager.instance.init(
       hiveBoxes: [
+        userSessionBoxService,
         likedQuoteBoxService,
         myQuoteBoxService,
         themeConfigurationBoxService,

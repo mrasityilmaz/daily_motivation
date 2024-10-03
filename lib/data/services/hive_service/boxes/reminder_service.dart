@@ -1,11 +1,12 @@
 import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
+import 'package:quotely/core/constants/hive_constants.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/reminder_model/reminder_model.dart';
 
 @immutable
 final class ReminderBoxService extends HiveBoxService<ReminderModel> {
-  ReminderBoxService({required super.boxName, super.fromJson = ReminderModel.fromMap});
+  ReminderBoxService() : super(boxName: HiveConstants.remindersBoxKey, fromJson: ReminderModel.fromMap);
 
   List<ReminderModel> get reminderList => box.getAll(box.keys).nonNulls.toList();
 

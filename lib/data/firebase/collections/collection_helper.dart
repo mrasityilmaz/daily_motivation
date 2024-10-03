@@ -14,5 +14,6 @@ mixin _CollectionHelper<T extends Object> on Enum {
     return firestore.collection(name);
   }
 
+  @protected
   FirebaseFirestore get firestore => locator<FirebaseFirestore>();
 }

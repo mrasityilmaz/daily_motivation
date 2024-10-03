@@ -1,1 +1,0 @@
-enum FirebaseCallables { generateCustomToken, validateToken }

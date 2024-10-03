@@ -1,11 +1,12 @@
 import 'package:bee_hive/bee_hive.dart';
 import 'package:flutter/foundation.dart';
+import 'package:quotely/core/constants/hive_constants.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';
 
 @immutable
 final class MyQuoteBoxService extends HiveBoxService<QuoteModel> {
-  MyQuoteBoxService({required super.boxName, super.fromJson = QuoteModel.fromMap});
+  MyQuoteBoxService() : super(boxName: HiveConstants.myQuotesBoxKey, fromJson: QuoteModel.fromMap);
 
   List<QuoteModel> get myQuoteList => box.getAll(box.keys).nonNulls.toList();
 

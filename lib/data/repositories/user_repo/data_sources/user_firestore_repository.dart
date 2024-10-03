@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:quotely/core/errors/errors.dart';
 import 'package:quotely/core/extensions/dartz_extension.dart';
-import 'package:quotely/data/firestore/collections/firestore_collections.dart';
+import 'package:quotely/data/firebase/collections/firestore_collections.dart';
 import 'package:quotely/data/models/firestore_models/user_model/user_model.dart';
 import 'package:quotely/domain/repositories/user_repository/data_sources/iremote_repository.dart';
 

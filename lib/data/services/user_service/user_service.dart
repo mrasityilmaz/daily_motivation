@@ -1,5 +1,6 @@
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:quotely/data/firebase/callables/firebase_callables.dart';
 import 'package:quotely/data/models/firestore_models/user_model/user_model.dart';
 import 'package:quotely/domain/repositories/user_repository/i_user_repository.dart';
 import 'package:quotely/injection/injection_container.dart';
@@ -12,6 +13,12 @@ class UserService {
     required String deviceId,
   }) async {
     try {
+      FirebaseCallables.generateCustomToken.callable.call(
+        <String, dynamic>{
+          'uid': uid,
+          'deviceId': deviceId,
+        },
+      );
       final callableResult =
           await FirebaseFunctions.instance.httpsCallable('generateCustomToken').call<Map<String, dynamic>>(
         {
@@ -47,8 +54,7 @@ class UserService {
       if (currentUser != null) {
         print('User created with custom token: ${currentUser.uid}');
 
-        await locator<UserRepository>()
-            .createNewUser(userModel: UserModel(uid: currentUser.uid, deviceId: currentUser.uid));
+        await locator<UserRepository>().createNewUser(userModel: UserModel(deviceId: currentUser.uid));
       }
     } catch (e) {
       print(e);
