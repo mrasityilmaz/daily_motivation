@@ -18,6 +18,7 @@ final class HiveConstants {
   static const String _quoteNotificationBoxKey = '**quoteNotifications**$_version**';
   static const String _categoryBoxKey = '**category**$_version**';
   static const String _sessionBoxKey = '**session**$_version**';
+  static const String _userBoxKey = '**user**$_version**';
 
   static String get themeConfigurationBoxKey => _themeConfigurationBoxKey;
   static String get likedQuotesBoxKey => _likedQuotesBoxKey;
@@ -26,4 +27,5 @@ final class HiveConstants {
   static String get quoteNotificationBoxKey => _quoteNotificationBoxKey;
   static String get categoryBoxKey => _categoryBoxKey;
   static String get sessionBoxKey => _sessionBoxKey;
+  static String get userBoxKey => _userBoxKey;
 }

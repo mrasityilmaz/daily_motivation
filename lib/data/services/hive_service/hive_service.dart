@@ -7,6 +7,7 @@ import 'package:quotely/data/services/hive_service/boxes/my_quote_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/quote_notification_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
+import 'package:quotely/data/services/hive_service/boxes/user_box.dart';
 import 'package:quotely/data/services/hive_service/boxes/user_session_service.dart';
 
 @immutable
@@ -17,13 +18,13 @@ final class HiveService {
   ///
 
   final LikedQuoteBoxService likedQuoteBoxService = LikedQuoteBoxService();
-
   final MyQuoteBoxService myQuoteBoxService = MyQuoteBoxService();
   final ThemeConfigurationBoxService themeConfigurationBoxService = ThemeConfigurationBoxService();
   final ReminderBoxService reminderBoxService = ReminderBoxService();
   final QuoteNotificationBoxService quoteNotificationBoxService = QuoteNotificationBoxService();
   final CategoryBoxService categoryBoxService = CategoryBoxService();
   final UserSessionBoxService userSessionBoxService = UserSessionBoxService();
+  final UserBoxService userBoxService = UserBoxService();
 
   @nonVirtual
   @PostConstruct(preResolve: true)
@@ -31,6 +32,7 @@ final class HiveService {
     await HiveManager.instance.init(
       hiveBoxes: [
         userSessionBoxService,
+        userBoxService,
         likedQuoteBoxService,
         myQuoteBoxService,
         themeConfigurationBoxService,

@@ -3,9 +3,9 @@ import 'package:fake_cloud_firestore/fake_cloud_firestore.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:quotely/core/extensions/dartz_extension.dart';
 import 'package:quotely/data/models/firestore_models/user_model/user_model.dart';
-import 'package:quotely/data/repositories/user_repo/data_sources/user_hive_repository.dart';
-import 'package:quotely/data/repositories/user_repo/data_sources/user_mock_repository.dart';
-import 'package:quotely/data/repositories/user_repo/user_repository.dart';
+import 'package:quotely/data/repositories/user_repository/data_sources/user_hive_repository.dart';
+import 'package:quotely/data/repositories/user_repository/data_sources/user_mock_repository.dart';
+import 'package:quotely/data/repositories/user_repository/user_repository.dart';
 import 'package:quotely/domain/repositories/user_repository/i_user_repository.dart';
 import 'package:quotely/injection/injection_container.dart';
 

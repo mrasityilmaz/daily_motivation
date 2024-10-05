@@ -19,7 +19,7 @@ class FirebaseFunctions {
     {
       enforceAppCheck: false,
     },
-    async (req: CallableRequest<Claims>): Promise<{ token: string }> => {
+    async (req: CallableRequest<Claims>): Promise<string> => {
       try {
         console.debug('data', req.data);
 
@@ -30,9 +30,7 @@ class FirebaseFunctions {
         if (!token) {
           throw new functions.https.HttpsError('internal', 'Error generating custom token');
         } else {
-          return {
-            token: token,
-          };
+          return token;
         }
       } catch (error) {
         throw new functions.https.HttpsError('internal', 'Error generating custom token');

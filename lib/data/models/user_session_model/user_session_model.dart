@@ -10,7 +10,6 @@ final class UserSessionModel with UserSessionModelMappable {
     required this.deviceId,
     required this.lastLoginTime,
     this.sessionToken,
-    this.sessionTokenExpirationTime,
   });
 
   final String deviceId;
@@ -18,7 +17,6 @@ final class UserSessionModel with UserSessionModelMappable {
   final DateTime lastLoginTime;
 
   final String? sessionToken;
-  final DateTime? sessionTokenExpirationTime;
 
   static const fromMap = UserSessionModelMapper.fromMap;
   static const fromJson = UserSessionModelMapper.fromJson;

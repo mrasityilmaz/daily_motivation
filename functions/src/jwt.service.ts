@@ -6,7 +6,6 @@ import { getAdminAuth } from './firebase.admin';
  * Claims interface for custom token generation.
  */
 interface Claims {
-  uid: string;
   deviceId: string;
 }
 
@@ -25,14 +24,10 @@ class JwtService {
       throw new functions.https.HttpsError('invalid-argument', 'Claims are required');
     }
 
-    const userClaims: Claims = {
-      uid: claims.uid,
-      deviceId: claims.deviceId,
-    };
 
-    console.debug('userClaims', userClaims);
+    console.debug('userClaims', claims);
 
-    const generatedToken = await getAdminAuth().createCustomToken(userClaims.uid, { deviceId: userClaims.deviceId });
+    const generatedToken = await getAdminAuth().createCustomToken(claims.deviceId);
 
     if (!generatedToken) {
       throw new functions.https.HttpsError('internal', 'Error generating custom token');

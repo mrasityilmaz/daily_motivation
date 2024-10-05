@@ -1,8 +1,8 @@
 part of 'firebase_callables.dart';
 
-mixin _CallableHelper on Enum {
-  HttpsCallable get callable {
-    return functions.httpsCallable(name);
+mixin _CallableHelper<T extends Object> on Enum {
+  Future<HttpsCallableResult<R>> call<R>({required T parameters}) async {
+    return functions.httpsCallable(name).call(parameters);
   }
 
   @protected
