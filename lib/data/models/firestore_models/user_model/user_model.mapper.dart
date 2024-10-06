@@ -21,9 +21,8 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
   @override
   final String id = 'UserModel';
 
-  static String _$deviceId(UserModel v) => v.deviceId;
-  static const Field<UserModel, String> _f$deviceId =
-      Field('deviceId', _$deviceId);
+  static String _$uid(UserModel v) => v.uid;
+  static const Field<UserModel, String> _f$uid = Field('uid', _$uid);
   static String? _$timeZone(UserModel v) => v.timeZone;
   static const Field<UserModel, String> _f$timeZone =
       Field('timeZone', _$timeZone, opt: true);
@@ -43,7 +42,7 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
 
   @override
   final MappableFields<UserModel> fields = const {
-    #deviceId: _f$deviceId,
+    #uid: _f$uid,
     #timeZone: _f$timeZone,
     #sendNotifications: _f$sendNotifications,
     #deviceToken: _f$deviceToken,
@@ -53,7 +52,7 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
 
   static UserModel _instantiate(DecodingData data) {
     return UserModel(
-        deviceId: data.dec(_f$deviceId),
+        uid: data.dec(_f$uid),
         timeZone: data.dec(_f$timeZone),
         sendNotifications: data.dec(_f$sendNotifications),
         deviceToken: data.dec(_f$deviceToken),
@@ -114,7 +113,7 @@ abstract class UserModelCopyWith<$R, $In extends UserModel, $Out>
   UserNotificationScheduleTimesCopyWith<$R, UserNotificationScheduleTimes,
       UserNotificationScheduleTimes>? get scheduleTimes;
   $R call(
-      {String? deviceId,
+      {String? uid,
       String? timeZone,
       bool? sendNotifications,
       String? deviceToken,
@@ -138,14 +137,14 @@ class _UserModelCopyWithImpl<$R, $Out>
           $value.scheduleTimes?.copyWith.$chain((v) => call(scheduleTimes: v));
   @override
   $R call(
-          {String? deviceId,
+          {String? uid,
           Object? timeZone = $none,
           bool? sendNotifications,
           Object? deviceToken = $none,
           Object? scheduleTimes = $none,
           Object? lastScheduledDate = $none}) =>
       $apply(FieldCopyWithData({
-        if (deviceId != null) #deviceId: deviceId,
+        if (uid != null) #uid: uid,
         if (timeZone != $none) #timeZone: timeZone,
         if (sendNotifications != null) #sendNotifications: sendNotifications,
         if (deviceToken != $none) #deviceToken: deviceToken,
@@ -154,7 +153,7 @@ class _UserModelCopyWithImpl<$R, $Out>
       }));
   @override
   UserModel $make(CopyWithData data) => UserModel(
-      deviceId: data.get(#deviceId, or: $value.deviceId),
+      uid: data.get(#uid, or: $value.uid),
       timeZone: data.get(#timeZone, or: $value.timeZone),
       sendNotifications:
           data.get(#sendNotifications, or: $value.sendNotifications),

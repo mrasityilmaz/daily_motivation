@@ -1,64 +1,32 @@
-import 'package:cloud_functions/cloud_functions.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:quotely/data/firebase/callables/firebase_callables.dart';
-import 'package:quotely/data/models/callable_models/generate_token_model.dart';
+import 'package:flutter/foundation.dart';
+import 'package:injectable/injectable.dart';
 import 'package:quotely/data/models/firestore_models/user_model/user_model.dart';
+import 'package:quotely/data/services/hive_service/boxes/user_box.dart';
+import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/domain/repositories/user_repository/i_user_repository.dart';
 import 'package:quotely/injection/injection_container.dart';
+import 'package:stacked/stacked.dart';
 
-class UserService {
-  Future<void> checkAndCreateUser() async {}
+@immutable
+@Singleton(order: 3)
+final class UserService {
+  UserRepository get _userRepository => locator<UserRepository>();
+  UserBoxService get _userBoxService => locator<HiveService>().userBoxService;
 
-  Future<String> createCustomToken({
-    required String uid,
-    required String deviceId,
-  }) async {
+  late final ReactiveValue<UserModel?> _user = ReactiveValue<UserModel?>(null);
+  UserModel? get user => _user.value;
+
+  @protected
+  @PostConstruct(preResolve: true)
+  Future<void> initUser() async {
     try {
-      await FirebaseCallables.generateCustomToken.call<String>(
-        parameters: GenerateTokenModel(
-          deviceId,
-        ),
-      );
-      final callableResult =
-          await FirebaseFunctions.instance.httpsCallable('generateCustomToken').call<Map<String, dynamic>>(
-        {
-          'uid': uid,
-          'deviceId': deviceId,
-        },
-      );
-
-      if (callableResult.data.isNotEmpty && callableResult.data.containsKey('token')) {
-        return callableResult.data['token'] as String;
-      } else {
-        throw Exception('Token could not be created');
+      final UserModel? hasSigned =
+          await _userRepository.signInAnonymously().then((value) => value.fold((l) => null, (r) => r));
+      if (hasSigned != null) {
+        _user.value = hasSigned;
       }
-    } on FirebaseFunctionsException catch (error) {
-      print(error.code);
-      print(error.details);
-      print(error.message);
-      return '';
-    } catch (e) {
-      print(e);
-      return '';
-    }
-  }
-
-  Future<void> signIn({
-    required String token,
-  }) async {
-    try {
-      await FirebaseAuth.instance.signInWithCustomToken(token);
-      FirebaseAuth.instance.signOut()
-
-      final User? currentUser = FirebaseAuth.instance.currentUser;
-
-      if (currentUser != null) {
-        print('User created with custom token: ${currentUser.uid}');
-
-        await locator<UserRepository>().createNewUser(userModel: UserModel(deviceId: currentUser.uid));
-      }
-    } catch (e) {
-      print(e);
+    } catch (e, s) {
+      debugPrint('Error initializing user: $e, $s');
     }
   }
 }

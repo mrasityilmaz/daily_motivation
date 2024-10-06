@@ -1,10 +1,9 @@
+import 'package:quotely/data/models/firestore_models/user_model/user_model.dart';
+
 abstract class UserLocalRepository {
   const UserLocalRepository();
 
-  ///
-  ///  Local repository interface
-  ///  This is where you define your local data source methods
-  ///  For example:
-  ///  Future<Either<Failure, DataModel<Data>>> getDataFromLocal();
-  ///
+  void saveUser({required UserModel userModel});
+  UserModel? getUser();
+  void deleteUser();
 }

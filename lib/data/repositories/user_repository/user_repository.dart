@@ -22,8 +22,8 @@ final class UserRepositoryImpl implements UserRepository {
   }
 
   @override
-  Future<DataModel<bool>> deleteUser({required String userId}) {
-    return remoteDataSource.deleteUser(userId: userId);
+  Future<DataModel<bool>> deleteUser({required String uid}) {
+    return remoteDataSource.deleteUser(uid: uid);
   }
 
   @override
@@ -32,7 +32,17 @@ final class UserRepositoryImpl implements UserRepository {
   }
 
   @override
-  Future<DataModel<UserModel>> findUserByDeviceId({required String deviceId}) {
-    return remoteDataSource.findUserByDeviceId(deviceId: deviceId);
+  Future<DataModel<UserModel>> findUserByUid({required String uid}) async {
+    return remoteDataSource.findUserByUid(uid: uid);
+  }
+
+  @override
+  Future<DataModel<UserModel>> signInAnonymously() async {
+    final DataModel<UserModel> result = await remoteDataSource.signInAnonymously();
+
+    if (result.isRight()) {
+      localDataSource.saveUser(userModel: result.asRight());
+    }
+    return result;
   }
 }

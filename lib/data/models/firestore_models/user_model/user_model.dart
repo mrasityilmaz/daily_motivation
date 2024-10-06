@@ -9,7 +9,7 @@ part 'user_model.mapper.dart';
 @MappableClass()
 final class UserModel with UserModelMappable {
   const UserModel({
-    required this.deviceId,
+    required this.uid,
     this.timeZone,
     this.sendNotifications = false,
     this.deviceToken,
@@ -17,7 +17,7 @@ final class UserModel with UserModelMappable {
     this.lastScheduledDate,
   });
 
-  final String deviceId;
+  final String uid;
   final String? deviceToken;
   final bool sendNotifications;
   final UserNotificationScheduleTimes? scheduleTimes;

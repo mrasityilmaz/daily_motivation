@@ -8,7 +8,6 @@ import 'package:quotely/data/services/hive_service/boxes/quote_notification_serv
 import 'package:quotely/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
 import 'package:quotely/data/services/hive_service/boxes/user_box.dart';
-import 'package:quotely/data/services/hive_service/boxes/user_session_service.dart';
 
 @immutable
 @LazySingleton(order: 2)
@@ -23,7 +22,6 @@ final class HiveService {
   final ReminderBoxService reminderBoxService = ReminderBoxService();
   final QuoteNotificationBoxService quoteNotificationBoxService = QuoteNotificationBoxService();
   final CategoryBoxService categoryBoxService = CategoryBoxService();
-  final UserSessionBoxService userSessionBoxService = UserSessionBoxService();
   final UserBoxService userBoxService = UserBoxService();
 
   @nonVirtual
@@ -31,7 +29,6 @@ final class HiveService {
   Future<void> init() async {
     await HiveManager.instance.init(
       hiveBoxes: [
-        userSessionBoxService,
         userBoxService,
         likedQuoteBoxService,
         myQuoteBoxService,
