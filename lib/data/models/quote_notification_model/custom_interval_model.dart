@@ -11,6 +11,6 @@ class QuoteNotificationScheduleCustomIntervalModel with QuoteNotificationSchedul
   });
   final List<TimeOfDay> notificationSchedules;
 
-  static const fromMap = QuoteNotificationScheduleCustomIntervalModelMapper.fromMap;
   static const fromJson = QuoteNotificationScheduleCustomIntervalModelMapper.fromJson;
+  static const fromJsonString = QuoteNotificationScheduleCustomIntervalModelMapper.fromJsonString;
 }

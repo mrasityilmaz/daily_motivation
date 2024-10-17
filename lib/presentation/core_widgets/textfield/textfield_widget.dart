@@ -172,7 +172,7 @@ final class CustomTextFieldWidget extends StatelessWidget {
             suffixIconConstraints: const BoxConstraints(),
             suffixIcon: suffixIcon == null && isObscureText == true
                 ? Padding(
-                    padding: context.paddingLowRight * .5,
+                    padding: const PaddingConstants.lowRight() * .5,
                     child: AdvancedButtonWidget.icon(
                       backgroundColor: Colors.transparent,
                       icon: Icon(

@@ -8,7 +8,7 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
   @override
   Widget build(BuildContext context, _RemindersViewModel viewModel) {
     return Padding(
-      padding: context.paddingLowBottom,
+      padding: const PaddingConstants.lowBottom(),
       child: Slidable(
         // Specify a key if the Slidable is dismissible.
         key: ValueKey(reminder.notificationId),
@@ -39,7 +39,7 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
         child: Container(
           width: double.maxFinite,
           decoration: BoxDecoration(color: context.colors.onSurface.withOpacity(.05), borderRadius: context.radius8),
-          padding: context.paddingLowHorizontal + context.paddingLowVertical * 1.2,
+          padding: const PaddingConstants.lowHorizontal() + const PaddingConstants.lowVertical() * 1.2,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -56,13 +56,13 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
                 overflow: TextOverflow.ellipsis,
               ),
               Padding(
-                padding: context.paddingLowVertical,
+                padding: const PaddingConstants.lowVertical(),
                 child: Row(
                   children: (List<int>.from(reminder.notificationDaysInWeek, growable: false)..sort())
                       .map(
                         (e) => Container(
-                          margin: context.paddingLowRight * .5,
-                          padding: context.paddingLow * .5,
+                          margin: const PaddingConstants.lowRight() * .5,
+                          padding: const PaddingConstants.allLow() * .5,
                           decoration: ShapeDecoration(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(4),
@@ -97,14 +97,16 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
                           children: [
                             TextSpan(
                               text: reminder.notificationEqualSchedule!.notificationStartTime?.format(context),
-                              style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
+                              style: context.textTheme.titleSmall
+                                  ?.copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
                             ),
                             const TextSpan(
                               text: '\rto\r',
                             ),
                             TextSpan(
                               text: reminder.notificationEqualSchedule!.notificationEndTime?.format(context),
-                              style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
+                              style: context.textTheme.titleSmall
+                                  ?.copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
                             ),
                             TextSpan(
                               text: ' - ${reminder.notificationEqualSchedule!.notificationInterval!} times a day',
@@ -130,8 +132,10 @@ final class _ReminderRowWidget extends ViewModelWidget<_RemindersViewModel> {
                           children: reminder.notificationCustomIntervalSchedule!.notificationSchedules
                               .map(
                                 (e) => TextSpan(
-                                  text: "${e.format(context)}${reminder.notificationCustomIntervalSchedule!.notificationSchedules.last == e ? '' : ', '}",
-                                  style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
+                                  text:
+                                      "${e.format(context)}${reminder.notificationCustomIntervalSchedule!.notificationSchedules.last == e ? '' : ', '}",
+                                  style: context.textTheme.titleSmall
+                                      ?.copyWith(fontWeight: FontWeight.bold, color: context.colors.primary),
                                 ),
                               )
                               .toList(),

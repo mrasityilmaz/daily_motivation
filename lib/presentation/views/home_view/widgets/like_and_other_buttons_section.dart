@@ -7,7 +7,7 @@ final class _LikeAndOtherButtonsSection extends ViewModelWidget<HomeViewModel> {
   @override
   Widget build(BuildContext context, HomeViewModel viewModel) {
     return Padding(
-      padding: context.paddingLowRight,
+      padding: const PaddingConstants.lowRight(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,

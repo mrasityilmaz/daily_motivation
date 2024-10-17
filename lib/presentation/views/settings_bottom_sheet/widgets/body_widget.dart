@@ -10,13 +10,13 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
       controller: PrimaryScrollController.of(context),
       slivers: [
         SliverPadding(
-          padding: context.screenPadding,
+          padding: const PaddingConstants.screenPadding(),
           sliver: SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
                 Padding(
-                  padding: context.paddingLowTop + context.paddingNormalBottom * 2,
+                  padding: const PaddingConstants.onlyLowTop() + const PaddingConstants.onlyNormalBottom() * 2,
                   child: AdvancedButtonWidget.text(
                     text: 'Be Premium',
                     onPressed: () {},

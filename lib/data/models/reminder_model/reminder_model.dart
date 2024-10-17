@@ -23,8 +23,8 @@ final class ReminderModel with ReminderModelMappable {
   final ReminderNotificationEqualScheduleModel? notificationEqualSchedule;
   final ReminderNotificationScheduleCustomIntervalModel? notificationCustomIntervalSchedule;
 
-  static const fromMap = ReminderModelMapper.fromMap;
   static const fromJson = ReminderModelMapper.fromJson;
+  static const fromJsonString = ReminderModelMapper.fromJsonString;
 }
 
 @immutable
@@ -42,8 +42,8 @@ final class ReminderNotificationEqualScheduleModel with ReminderNotificationEqua
   final int? notificationInterval;
   final List<TimeOfDay> notificationSchedules;
 
-  static const fromMap = ReminderNotificationEqualScheduleModelMapper.fromMap;
   static const fromJson = ReminderNotificationEqualScheduleModelMapper.fromJson;
+  static const fromJsonString = ReminderNotificationEqualScheduleModelMapper.fromJsonString;
 }
 
 @immutable
@@ -56,6 +56,6 @@ final class ReminderNotificationScheduleCustomIntervalModel
 
   final List<TimeOfDay> notificationSchedules;
 
-  static const fromMap = ReminderNotificationScheduleCustomIntervalModelMapper.fromMap;
   static const fromJson = ReminderNotificationScheduleCustomIntervalModelMapper.fromJson;
+  static const fromJsonString = ReminderNotificationScheduleCustomIntervalModelMapper.fromJsonString;
 }

@@ -77,7 +77,7 @@ final class _BodyWidget extends ViewModelWidget<_FontSettingsBottomSheetViewMode
           color: context.appColors.surfaceColor,
         ),
         child: SafeArea(
-          minimum: context.adaptiveScreenPaddingBottom,
+          minimum: PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -96,7 +96,7 @@ final class _BodyWidget extends ViewModelWidget<_FontSettingsBottomSheetViewMode
               ),
               ConstrainedBox(
                 constraints: BoxConstraints.tightFor(
-                  height: kMinInteractiveDimension + context.paddingLowVertical.vertical,
+                  height: kMinInteractiveDimension + const PaddingConstants.lowVertical().vertical,
                 ),
                 child: CustomScrollView(
                   scrollDirection: Axis.horizontal,
@@ -107,9 +107,9 @@ final class _BodyWidget extends ViewModelWidget<_FontSettingsBottomSheetViewMode
                         final ({IconData icon, String text, VoidCallback onPressed, Widget child}) buttonData =
                             buttonList[index];
                         return Padding(
-                          padding: context.paddingLowLeft +
-                              context.paddingLowVertical +
-                              ((index == buttonList.length - 1) ? context.paddingLowRight : EdgeInsets.zero),
+                          padding: const PaddingConstants.lowLeft() +
+                              const PaddingConstants.lowVertical() +
+                              ((index == buttonList.length - 1) ? const PaddingConstants.lowRight() : EdgeInsets.zero),
                           child: AdvancedButtonWidget.iconText(
                             backgroundColor: Colors.transparent,
                             shape: RoundedRectangleBorder(
@@ -168,8 +168,8 @@ final class _QuoteAndAuthorWidget extends ViewModelWidget<_FontSettingsBottomShe
     // final RenderBox? renderBox = viewModel.autoSizeTextKey.currentContext?.findRenderObject() as RenderBox?;
     // final Rect widgetRect = (renderBox?.localToGlobal(Offset.zero) ?? Offset.zero) & (renderBox?.size ?? Size.zero);
     // final Rect safeArea = Rect.fromPoints(
-    //   Offset(context.screenPaddingHorizontal.left, screenSize * .15),
-    //   Offset(context.width - context.screenPaddingHorizontal.right, screenSize - ((screenSize * .15))),
+    //   Offset(const PaddingConstants.screenPaddingHorizontal().left, screenSize * .15),
+    //   Offset(context.width - const PaddingConstants.screenPaddingHorizontal().right, screenSize - ((screenSize * .15))),
     // );
 
     if (viewModel.textRect != null) {
@@ -355,7 +355,7 @@ final class _QuoteAndAuthorWidget extends ViewModelWidget<_FontSettingsBottomShe
     );
 
     // return Padding(
-    //   padding: context.screenPaddingHorizontal,
+    //   padding: const PaddingConstants.screenPaddingHorizontal(),
     //   child: FractionallySizedBox(
     //     heightFactor: .85,
     //     alignment: const Alignment(0, -.6),
@@ -407,7 +407,7 @@ final class __FontChild extends ViewModelWidget<_FontSettingsBottomSheetViewMode
   @override
   Widget build(BuildContext context, _FontSettingsBottomSheetViewModel viewModel) {
     return Padding(
-      padding: context.paddingNormalVertical + context.paddingLowHorizontal,
+      padding: const PaddingConstants.normalVertical() + const PaddingConstants.lowHorizontal(),
       child: CustomDropdown<DefaultFontsEnum>(
         decoration: CustomDropdownDecoration(
           closedFillColor: context.colors.onSurface.withOpacity(.5),
@@ -461,7 +461,7 @@ final class __AlignChild extends ViewModelWidget<_FontSettingsBottomSheetViewMod
       length: viewModel.textAlignList.length,
       initialIndex: viewModel.textAlignList.indexOf(viewModel.textAlign),
       child: Padding(
-        padding: context.paddingLow,
+        padding: const PaddingConstants.allLow(),
         child: TabBar(
           onTap: (value) {
             viewModel.setTextAlign(viewModel.textAlignList[value]);
@@ -496,7 +496,7 @@ final class __TextSizeChild extends ViewModelWidget<_FontSettingsBottomSheetView
   @override
   Widget build(BuildContext context, _FontSettingsBottomSheetViewModel viewModel) {
     return Padding(
-      padding: context.paddingLow + context.paddingLowBottom,
+      padding: const PaddingConstants.allLow() + const PaddingConstants.lowBottom(),
       child: Row(
         children: [
           Expanded(
@@ -539,7 +539,7 @@ final class __FontWeightChild extends ViewModelWidget<_FontSettingsBottomSheetVi
       length: 4,
       initialIndex: viewModel.selectedFontTypeIndex,
       child: Padding(
-        padding: context.paddingLow,
+        padding: const PaddingConstants.allLow(),
         child: TabBar(
           onTap: (value) {
             viewModel.fontTypeButtonList[value].onChange.call();
@@ -571,7 +571,7 @@ final class __TextColorChild extends ViewModelWidget<_FontSettingsBottomSheetVie
   Widget build(BuildContext context, _FontSettingsBottomSheetViewModel viewModel) {
     return ConstrainedBox(
       constraints: BoxConstraints.tightFor(
-        height: kMinInteractiveDimension + context.paddingLowVertical.vertical,
+        height: kMinInteractiveDimension + const PaddingConstants.lowVertical().vertical,
       ),
       child: CustomScrollView(
         scrollDirection: Axis.horizontal,
@@ -581,9 +581,11 @@ final class __TextColorChild extends ViewModelWidget<_FontSettingsBottomSheetVie
             itemBuilder: (context, index) {
               final bool isSelected = viewModel.textColorList[index] == viewModel.quoteTextStyle.color;
               return Padding(
-                padding: context.paddingLowLeft +
-                    context.paddingLowVertical +
-                    ((index == viewModel.textColorList.length - 1) ? context.paddingLowRight : EdgeInsets.zero),
+                padding: const PaddingConstants.lowLeft() +
+                    const PaddingConstants.lowVertical() +
+                    ((index == viewModel.textColorList.length - 1)
+                        ? const PaddingConstants.lowRight()
+                        : EdgeInsets.zero),
                 child: AdvancedButtonWidget(
                   backgroundColor: viewModel.textColorList[index],
                   shape: RoundedRectangleBorder(
@@ -610,7 +612,7 @@ final class __MoveAndResizeSizeChild extends ViewModelWidget<_FontSettingsBottom
   @override
   Widget build(BuildContext context, _FontSettingsBottomSheetViewModel viewModel) {
     return Padding(
-      padding: context.screenPaddingHorizontal + context.paddingLowVertical * .5,
+      padding: const PaddingConstants.screenPaddingHorizontal() + const PaddingConstants.lowVertical() * .5,
       child: Row(
         children: [
           const Text('Move and Resize'),

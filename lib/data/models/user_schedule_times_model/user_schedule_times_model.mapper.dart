@@ -46,23 +46,23 @@ class UserNotificationScheduleTimesMapper
   @override
   final Function instantiate = _instantiate;
 
-  static UserNotificationScheduleTimes fromMap(Map<String, dynamic> map) {
+  static UserNotificationScheduleTimes fromJson(Map<String, dynamic> map) {
     return ensureInitialized().decodeMap<UserNotificationScheduleTimes>(map);
   }
 
-  static UserNotificationScheduleTimes fromJson(String json) {
+  static UserNotificationScheduleTimes fromJsonString(String json) {
     return ensureInitialized().decodeJson<UserNotificationScheduleTimes>(json);
   }
 }
 
 mixin UserNotificationScheduleTimesMappable {
-  String toJson() {
+  String toJsonString() {
     return UserNotificationScheduleTimesMapper.ensureInitialized()
         .encodeJson<UserNotificationScheduleTimes>(
             this as UserNotificationScheduleTimes);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return UserNotificationScheduleTimesMapper.ensureInitialized()
         .encodeMap<UserNotificationScheduleTimes>(
             this as UserNotificationScheduleTimes);

@@ -14,7 +14,7 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
   CollectionReference<Map<String, Object?>?> get _collection => FireStoreCollections.users.collectionWithoutConverter;
 
   @override
-  Future<DataModel<UserModel>> createNewUser({required UserModel userModel}) async {
+  Future<EitherOr<UserModel>> createNewUser({required UserModel userModel}) async {
     try {
       final hasAlreadyCreated = await findUserByUid(uid: userModel.uid);
 
@@ -22,7 +22,7 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
         return hasAlreadyCreated;
       }
       // Using set instead of add to avoid creating a new document with a random id
-      await _collection.doc(userModel.uid).set(userModel.toMap());
+      await _collection.doc(userModel.uid).set(userModel.toJson());
       return await findUserByUid(uid: userModel.uid);
     } catch (error) {
       return Left(FirestoreException(errorMessage: error.toString()));
@@ -30,7 +30,7 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
   }
 
   @override
-  Future<DataModel<bool>> deleteUser({required String uid}) async {
+  Future<EitherOr<bool>> deleteUser({required String uid}) async {
     try {
       await _collection.doc(uid).delete();
 
@@ -41,9 +41,9 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
   }
 
   @override
-  Future<DataModel<UserModel>> updateUser({required UserModel userModel}) async {
+  Future<EitherOr<UserModel>> updateUser({required UserModel userModel}) async {
     try {
-      await _collection.doc(userModel.uid).update(userModel.toMap());
+      await _collection.doc(userModel.uid).update(userModel.toJson());
       return await findUserByUid(uid: userModel.uid);
     } catch (error) {
       return Left(FirestoreException(errorMessage: error.toString()));
@@ -51,22 +51,16 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
   }
 
   @override
-  Future<DataModel<UserModel>> findUserByUid({required String uid}) async {
+  Future<EitherOr<UserModel>> findUserByUid({required String uid}) async {
     try {
       final user = await _collection.doc(uid).get().then((value) => value.data());
 
       if (user != null) {
-        return Right(UserModel.userFromMap(user));
+        return Right(UserModel.fromJson(user));
       }
       return Left(FirestoreException(errorMessage: 'User not found'));
     } catch (e) {
       return Left(FirestoreException(errorMessage: e.toString()));
     }
-  }
-
-  @override
-  Future<DataModel<UserModel>> signInAnonymously() {
-    // TODO: implement signInAnonymously
-    throw UnimplementedError();
   }
 }

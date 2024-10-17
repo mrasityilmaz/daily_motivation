@@ -17,6 +17,7 @@ import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:quotely/presentation/dialogs/dialog_bodies/show_or_pay_dialog_body.dart';
 import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:quotely/presentation/overrides/vselector_with_viewmodel_widget.dart';
+import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/presentation/views/categories_bottom_sheet/categories_bottom_sheet_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 

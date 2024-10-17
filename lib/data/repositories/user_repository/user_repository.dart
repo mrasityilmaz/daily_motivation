@@ -17,32 +17,36 @@ final class UserRepositoryImpl implements UserRepository {
   final UserLocalRepository localDataSource;
 
   @override
-  Future<DataModel<UserModel>> createNewUser({required UserModel userModel}) async {
-    return remoteDataSource.createNewUser(userModel: userModel);
+  Future<EitherOr<UserModel>> createNewUser({required UserModel userModel}) async {
+    final EitherOr<UserModel> result = await remoteDataSource.createNewUser(userModel: userModel);
+
+    /// When user is created, save the user
+    if (result.isRight()) {
+      localDataSource.saveUser(userModel: result.asRight());
+    }
+
+    return result;
   }
 
   @override
-  Future<DataModel<bool>> deleteUser({required String uid}) {
+  Future<EitherOr<bool>> deleteUser({required String uid}) {
     return remoteDataSource.deleteUser(uid: uid);
   }
 
   @override
-  Future<DataModel<UserModel>> updateUser({required UserModel userModel}) {
-    return remoteDataSource.updateUser(userModel: userModel);
-  }
+  Future<EitherOr<UserModel>> updateUser({required UserModel userModel}) async {
+    final EitherOr<UserModel> result = await remoteDataSource.updateUser(userModel: userModel);
 
-  @override
-  Future<DataModel<UserModel>> findUserByUid({required String uid}) async {
-    return remoteDataSource.findUserByUid(uid: uid);
-  }
-
-  @override
-  Future<DataModel<UserModel>> signInAnonymously() async {
-    final DataModel<UserModel> result = await remoteDataSource.signInAnonymously();
-
+    /// When user is updated, save the user
     if (result.isRight()) {
       localDataSource.saveUser(userModel: result.asRight());
     }
+
     return result;
+  }
+
+  @override
+  Future<EitherOr<UserModel>> findUserByUid({required String uid}) async {
+    return remoteDataSource.findUserByUid(uid: uid);
   }
 }

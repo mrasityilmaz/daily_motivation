@@ -6,7 +6,7 @@ import 'package:quotely/data/models/quote_model/quote_model.dart';
 
 @immutable
 final class MyQuoteBoxService extends HiveBoxService<QuoteModel> {
-  MyQuoteBoxService() : super(boxName: HiveConstants.myQuotesBoxKey, fromJson: QuoteModel.fromMap);
+  MyQuoteBoxService() : super(boxName: HiveConstants.myQuotesBoxKey, fromJson: QuoteModel.fromJson);
 
   List<QuoteModel> get myQuoteList => box.getAll(box.keys).nonNulls.toList();
 

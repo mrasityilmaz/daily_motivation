@@ -6,7 +6,7 @@ import 'package:quotely/data/models/reminder_model/reminder_model.dart';
 
 @immutable
 final class ReminderBoxService extends HiveBoxService<ReminderModel> {
-  ReminderBoxService() : super(boxName: HiveConstants.remindersBoxKey, fromJson: ReminderModel.fromMap);
+  ReminderBoxService() : super(boxName: HiveConstants.remindersBoxKey, fromJson: ReminderModel.fromJson);
 
   List<ReminderModel> get reminderList => box.getAll(box.keys).nonNulls.toList();
 

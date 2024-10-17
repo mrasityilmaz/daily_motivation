@@ -35,7 +35,7 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
         children: [
           Positioned.fill(
             child: Padding(
-              padding: context.paddingLowRight * .5 + context.paddingLowBottom * .5,
+              padding: const PaddingConstants.lowRight() * .5 + const PaddingConstants.lowBottom() * .5,
               child: FractionallySizedBox(
                 heightFactor: .7,
                 alignment: Alignment.bottomRight,
@@ -50,7 +50,7 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
             ),
           ),
           Padding(
-            padding: context.paddingLow,
+            padding: const PaddingConstants.allLow(),
             child: Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -69,7 +69,7 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
                 alignment: Alignment.bottomLeft,
                 heightFactor: .5,
                 child: Padding(
-                  padding: context.paddingLow,
+                  padding: const PaddingConstants.allLow(),
                   child: FittedBox(
                     fit: BoxFit.fitHeight,
                     child: Icon(
@@ -89,7 +89,7 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
                 alignment: Alignment.bottomLeft,
                 heightFactor: .5,
                 child: Padding(
-                  padding: context.paddingLow,
+                  padding: const PaddingConstants.allLow(),
                   child: FittedBox(
                     fit: BoxFit.fitHeight,
                     child: Icon(

@@ -76,22 +76,22 @@ class ReminderModelMapper extends ClassMapperBase<ReminderModel> {
   @override
   final Function instantiate = _instantiate;
 
-  static ReminderModel fromMap(Map<String, dynamic> map) {
+  static ReminderModel fromJson(Map<String, dynamic> map) {
     return ensureInitialized().decodeMap<ReminderModel>(map);
   }
 
-  static ReminderModel fromJson(String json) {
+  static ReminderModel fromJsonString(String json) {
     return ensureInitialized().decodeJson<ReminderModel>(json);
   }
 }
 
 mixin ReminderModelMappable {
-  String toJson() {
+  String toJsonString() {
     return ReminderModelMapper.ensureInitialized()
         .encodeJson<ReminderModel>(this as ReminderModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return ReminderModelMapper.ensureInitialized()
         .encodeMap<ReminderModel>(this as ReminderModel);
   }
@@ -281,26 +281,26 @@ class ReminderNotificationEqualScheduleModelMapper
   @override
   final Function instantiate = _instantiate;
 
-  static ReminderNotificationEqualScheduleModel fromMap(
+  static ReminderNotificationEqualScheduleModel fromJson(
       Map<String, dynamic> map) {
     return ensureInitialized()
         .decodeMap<ReminderNotificationEqualScheduleModel>(map);
   }
 
-  static ReminderNotificationEqualScheduleModel fromJson(String json) {
+  static ReminderNotificationEqualScheduleModel fromJsonString(String json) {
     return ensureInitialized()
         .decodeJson<ReminderNotificationEqualScheduleModel>(json);
   }
 }
 
 mixin ReminderNotificationEqualScheduleModelMappable {
-  String toJson() {
+  String toJsonString() {
     return ReminderNotificationEqualScheduleModelMapper.ensureInitialized()
         .encodeJson<ReminderNotificationEqualScheduleModel>(
             this as ReminderNotificationEqualScheduleModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return ReminderNotificationEqualScheduleModelMapper.ensureInitialized()
         .encodeMap<ReminderNotificationEqualScheduleModel>(
             this as ReminderNotificationEqualScheduleModel);
@@ -446,27 +446,28 @@ class ReminderNotificationScheduleCustomIntervalModelMapper
   @override
   final Function instantiate = _instantiate;
 
-  static ReminderNotificationScheduleCustomIntervalModel fromMap(
+  static ReminderNotificationScheduleCustomIntervalModel fromJson(
       Map<String, dynamic> map) {
     return ensureInitialized()
         .decodeMap<ReminderNotificationScheduleCustomIntervalModel>(map);
   }
 
-  static ReminderNotificationScheduleCustomIntervalModel fromJson(String json) {
+  static ReminderNotificationScheduleCustomIntervalModel fromJsonString(
+      String json) {
     return ensureInitialized()
         .decodeJson<ReminderNotificationScheduleCustomIntervalModel>(json);
   }
 }
 
 mixin ReminderNotificationScheduleCustomIntervalModelMappable {
-  String toJson() {
+  String toJsonString() {
     return ReminderNotificationScheduleCustomIntervalModelMapper
             .ensureInitialized()
         .encodeJson<ReminderNotificationScheduleCustomIntervalModel>(
             this as ReminderNotificationScheduleCustomIntervalModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return ReminderNotificationScheduleCustomIntervalModelMapper
             .ensureInitialized()
         .encodeMap<ReminderNotificationScheduleCustomIntervalModel>(

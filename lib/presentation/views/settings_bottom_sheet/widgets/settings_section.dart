@@ -82,13 +82,13 @@ final class _SettingsSection extends StatelessWidget {
         ),
         _SettingsRowWidget(
           icon: Icons.adaptive.share_outlined,
-          iconPadding: context.paddingLowVertical * .25,
+          iconPadding: const PaddingConstants.lowVertical() * .25,
           title: 'Share App',
           onPressed: () async {},
         ),
         _SettingsRowWidget(
           icon: Icons.star_outline_outlined,
-          iconPadding: context.paddingLowVertical * .25,
+          iconPadding: const PaddingConstants.lowVertical() * .25,
           iconColor: Colors.amber.shade400,
           title: 'Rate Us',
           onPressed: () async {},

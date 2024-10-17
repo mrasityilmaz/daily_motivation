@@ -75,22 +75,22 @@ class QuoteNotificationModelMapper
   @override
   final Function instantiate = _instantiate;
 
-  static QuoteNotificationModel fromMap(Map<String, dynamic> map) {
+  static QuoteNotificationModel fromJson(Map<String, dynamic> map) {
     return ensureInitialized().decodeMap<QuoteNotificationModel>(map);
   }
 
-  static QuoteNotificationModel fromJson(String json) {
+  static QuoteNotificationModel fromJsonString(String json) {
     return ensureInitialized().decodeJson<QuoteNotificationModel>(json);
   }
 }
 
 mixin QuoteNotificationModelMappable {
-  String toJson() {
+  String toJsonString() {
     return QuoteNotificationModelMapper.ensureInitialized()
         .encodeJson<QuoteNotificationModel>(this as QuoteNotificationModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return QuoteNotificationModelMapper.ensureInitialized()
         .encodeMap<QuoteNotificationModel>(this as QuoteNotificationModel);
   }

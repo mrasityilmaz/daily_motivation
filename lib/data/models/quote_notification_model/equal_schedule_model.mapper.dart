@@ -66,25 +66,26 @@ class QuoteNotificationEqualScheduleModelMapper
   @override
   final Function instantiate = _instantiate;
 
-  static QuoteNotificationEqualScheduleModel fromMap(Map<String, dynamic> map) {
+  static QuoteNotificationEqualScheduleModel fromJson(
+      Map<String, dynamic> map) {
     return ensureInitialized()
         .decodeMap<QuoteNotificationEqualScheduleModel>(map);
   }
 
-  static QuoteNotificationEqualScheduleModel fromJson(String json) {
+  static QuoteNotificationEqualScheduleModel fromJsonString(String json) {
     return ensureInitialized()
         .decodeJson<QuoteNotificationEqualScheduleModel>(json);
   }
 }
 
 mixin QuoteNotificationEqualScheduleModelMappable {
-  String toJson() {
+  String toJsonString() {
     return QuoteNotificationEqualScheduleModelMapper.ensureInitialized()
         .encodeJson<QuoteNotificationEqualScheduleModel>(
             this as QuoteNotificationEqualScheduleModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return QuoteNotificationEqualScheduleModelMapper.ensureInitialized()
         .encodeMap<QuoteNotificationEqualScheduleModel>(
             this as QuoteNotificationEqualScheduleModel);

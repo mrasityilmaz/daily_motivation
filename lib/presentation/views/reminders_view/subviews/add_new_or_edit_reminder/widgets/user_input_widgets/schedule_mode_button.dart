@@ -12,7 +12,7 @@ final class __ScheduleModeSelectButton extends ViewModelWidget<_AddNewOrEditRemi
   Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
     return AdvancedButtonWidget(
       backgroundColor: context.colors.primary.withOpacity(.1),
-      padding: context.paddingLowVertical * 1.5 + context.paddingLowHorizontal,
+      padding: const PaddingConstants.lowVertical() * 1.5 + const PaddingConstants.lowHorizontal(),
       child: Row(
         children: [
           ChooseCircleIcon(isSelected: viewModel.selectedScheduleType == type),
@@ -35,7 +35,8 @@ final class __ScheduleModeSelectButton extends ViewModelWidget<_AddNewOrEditRemi
                         widthFactor: .8,
                         child: Text(
                           subTitle,
-                          style: context.textTheme.labelMedium?.copyWith(color: context.colors.onSurface.withOpacity(.5)),
+                          style:
+                              context.textTheme.labelMedium?.copyWith(color: context.colors.onSurface.withOpacity(.5)),
                         ),
                       ),
                     ),

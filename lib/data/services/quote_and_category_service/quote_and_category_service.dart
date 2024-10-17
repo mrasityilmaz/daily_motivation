@@ -74,7 +74,5 @@ final class QuoteAndCategoryService with ListenableServiceMixin, _QuoteAndCatego
       },
       locale: locale,
     );
-
-    notifyListeners();
   }
 }

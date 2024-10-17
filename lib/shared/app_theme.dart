@@ -11,8 +11,8 @@ part 'theme/themes/light_theme.dart';
 final class AppThemeManager with _AppDarkTheme, _AppLightTheme {
   factory AppThemeManager() => instance;
 
-  const AppThemeManager._internal();
-  static const AppThemeManager instance = AppThemeManager._internal();
+  AppThemeManager._internal();
+  static AppThemeManager instance = AppThemeManager._internal();
 
   ColorScheme get colorScheme => themeData.colorScheme;
 

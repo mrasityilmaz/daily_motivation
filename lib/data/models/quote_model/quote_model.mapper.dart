@@ -54,22 +54,22 @@ class QuoteModelMapper extends ClassMapperBase<QuoteModel> {
   @override
   final Function instantiate = _instantiate;
 
-  static QuoteModel fromMap(Map<String, dynamic> map) {
+  static QuoteModel fromJson(Map<String, dynamic> map) {
     return ensureInitialized().decodeMap<QuoteModel>(map);
   }
 
-  static QuoteModel fromJson(String json) {
+  static QuoteModel fromJsonString(String json) {
     return ensureInitialized().decodeJson<QuoteModel>(json);
   }
 }
 
 mixin QuoteModelMappable {
-  String toJson() {
+  String toJsonString() {
     return QuoteModelMapper.ensureInitialized()
         .encodeJson<QuoteModel>(this as QuoteModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return QuoteModelMapper.ensureInitialized()
         .encodeMap<QuoteModel>(this as QuoteModel);
   }

@@ -32,8 +32,8 @@ mixin _ScreenDesignToolsMixin {
     final double screenHeight = context.mediaQuery.size.height;
     final double topPadding = context.mediaQuery.padding.bottom + (screenHeight * .15 * .5);
 
-    final double leftPadding = context.screenPaddingHorizontal.left * .5;
-    final double rightPadding = context.screenPaddingHorizontal.right * .5;
+    final double leftPadding = const PaddingConstants.screenPaddingHorizontal().left * .5;
+    final double rightPadding = const PaddingConstants.screenPaddingHorizontal().right * .5;
 
     _safeAreaRect = Rect.fromPoints(
       Offset(leftPadding, topPadding),

@@ -2,7 +2,13 @@ part of '../settings_bottom_sheet.dart';
 
 @immutable
 final class _SettingsRowWidget extends StatelessWidget {
-  const _SettingsRowWidget({required this.icon, required this.title, required this.onPressed, this.iconColor, this.trailing, this.iconPadding});
+  const _SettingsRowWidget(
+      {required this.icon,
+      required this.title,
+      required this.onPressed,
+      this.iconColor,
+      this.trailing,
+      this.iconPadding});
 
   final IconData icon;
   final EdgeInsets? iconPadding;
@@ -14,15 +20,15 @@ final class _SettingsRowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.paddingLowBottom,
+      padding: const PaddingConstants.lowBottom(),
       child: AdvancedButtonWidget(
         backgroundColor: context.colors.surface,
-        padding: context.paddingLowVertical * 1.2 + context.paddingLowHorizontal,
+        padding: const PaddingConstants.lowVertical() * 1.2 + const PaddingConstants.lowHorizontal(),
         onPressed: onPressed,
         child: Row(
           children: [
             Padding(
-              padding: iconPadding ?? context.paddingLowTop * .5,
+              padding: iconPadding ?? const PaddingConstants.onlyLowTop() * .5,
               child: Icon(
                 icon,
                 color: iconColor ?? context.colors.primary,
@@ -30,7 +36,7 @@ final class _SettingsRowWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: context.screenPadding.left,
+              width: const PaddingConstants.screenPadding().left,
             ),
             Text(
               title,

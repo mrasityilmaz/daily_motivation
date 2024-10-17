@@ -29,6 +29,6 @@ final class QuoteModel with QuoteModelMappable {
   final String id;
   final DateTime? createdAt;
 
-  static const fromMap = QuoteModelMapper.fromMap;
   static const fromJson = QuoteModelMapper.fromJson;
+  static const fromJsonString = QuoteModelMapper.fromJsonString;
 }

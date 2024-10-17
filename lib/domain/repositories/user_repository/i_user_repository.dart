@@ -5,17 +5,14 @@ abstract class UserRepository {
   const UserRepository();
 
   /// {@macro UserRemoteRepository.createNewUser}
-  Future<DataModel<UserModel>> createNewUser({required UserModel userModel});
+  Future<EitherOr<UserModel>> createNewUser({required UserModel userModel});
 
   /// {@macro UserRemoteRepository.findUserByUid}
-  Future<DataModel<UserModel>> findUserByUid({required String uid});
+  Future<EitherOr<UserModel>> findUserByUid({required String uid});
 
   /// {@macro UserRemoteRepository.updateUser}
-  Future<DataModel<UserModel>> updateUser({required UserModel userModel});
+  Future<EitherOr<UserModel>> updateUser({required UserModel userModel});
 
   /// {@macro UserRemoteRepository.deleteUser}
-  Future<DataModel<bool>> deleteUser({required String uid});
-
-  /// {@macro UserRemoteRepository.signInAnonymously}
-  Future<DataModel<UserModel>> signInAnonymously();
+  Future<EitherOr<bool>> deleteUser({required String uid});
 }

@@ -45,7 +45,7 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                 Align(
                   alignment: Alignment.topLeft,
                   child: Padding(
-                    padding: context.paddingLow * .5,
+                    padding: const PaddingConstants.allLow() * .5,
                     child: AdvancedButtonWidget.icon(
                       icon: const Icon(Icons.close_rounded),
                       onPressed: () {
@@ -58,19 +58,19 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                 Align(
                   alignment: Alignment.topCenter,
                   child: Padding(
-                    padding: context.screenPaddingTop + context.paddingLow + context.paddingNormalTop,
+                    padding: context.screenPaddingTop + const PaddingConstants.allLow() + context.paddingNormalTop,
                     child: icon,
                   ),
                 ),
               ],
             ),
             Padding(
-              padding: context.screenPadding * .8,
+              padding: const PaddingConstants.screenPadding() * .8,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Padding(
-                    padding: context.paddingNormalTop + context.paddingLowBottom,
+                    padding: context.paddingNormalTop + const PaddingConstants.lowBottom(),
                     child: AutoSizeText(
                       title,
                       style: context.textTheme.titleMedium?.copyWith(

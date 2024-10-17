@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
 sealed class Failure extends Equatable {
@@ -28,10 +29,10 @@ final class CacheFailure extends Failure {
 }
 
 @immutable
-final class UnExpectedFailure<T> extends Failure {
+final class UnExpectedFailure extends Failure {
   UnExpectedFailure({this.errorMessage, this.data}) : super([errorMessage, data]);
   final String? errorMessage;
-  final T? data;
+  final dynamic data;
 }
 
 @immutable
@@ -46,4 +47,10 @@ final class FirestoreException<T extends Object?> extends Failure implements Exc
   FirestoreException({this.data, this.errorMessage}) : super([errorMessage, data]);
   final String? errorMessage;
   final T? data;
+}
+
+@immutable
+final class FirebaseAuthFailure extends Failure {
+  FirebaseAuthFailure({this.exception}) : super([exception]);
+  final FirebaseAuthException? exception;
 }

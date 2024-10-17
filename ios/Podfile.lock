@@ -1,19 +1,22 @@
 PODS:
+  - AppAuth (1.7.5):
+    - AppAuth/Core (= 1.7.5)
+    - AppAuth/ExternalUserAgent (= 1.7.5)
+  - AppAuth/Core (1.7.5)
+  - AppAuth/ExternalUserAgent (1.7.5):
+    - AppAuth/Core
   - AppCheckCore (11.0.0):
     - GoogleUtilities/Environment (~> 8.0)
     - GoogleUtilities/UserDefaults (~> 8.0)
     - PromisesObjC (~> 2.4)
-  - cloud_firestore (5.4.2):
+  - cloud_firestore (5.4.4):
     - Firebase/Firestore (= 11.2.0)
     - firebase_core
     - Flutter
-  - cloud_functions (5.1.2):
+  - cloud_functions (5.1.3):
     - Firebase/Functions (= 11.2.0)
     - firebase_core
     - Flutter
-  - connectivity_plus (0.0.1):
-    - Flutter
-    - FlutterMacOS
   - device_info_plus (0.0.1):
     - Flutter
   - Firebase/Auth (11.2.0):
@@ -42,7 +45,7 @@ PODS:
   - firebase_core (3.6.0):
     - Firebase/CoreOnly (= 11.2.0)
     - Flutter
-  - firebase_messaging (15.1.2):
+  - firebase_messaging (15.1.3):
     - Firebase/Messaging (= 11.2.0)
     - firebase_core
     - Flutter
@@ -124,15 +127,25 @@ PODS:
   - flutter_udid (0.0.1):
     - Flutter
     - SAMKeychain
-  - Google-Mobile-Ads-SDK (11.2.0):
+  - Google-Mobile-Ads-SDK (11.10.0):
     - GoogleUserMessagingPlatform (>= 1.1)
-  - google_mobile_ads (5.1.0):
+  - google_mobile_ads (5.2.0):
     - Flutter
-    - Google-Mobile-Ads-SDK (~> 11.2.0)
+    - Google-Mobile-Ads-SDK (~> 11.10.0)
     - webview_flutter_wkwebview
+  - google_sign_in_ios (0.0.1):
+    - AppAuth (>= 1.7.4)
+    - Flutter
+    - FlutterMacOS
+    - GoogleSignIn (~> 7.1)
+    - GTMSessionFetcher (>= 3.4.0)
   - GoogleDataTransport (10.1.0):
     - nanopb (~> 3.30910.0)
     - PromisesObjC (~> 2.4)
+  - GoogleSignIn (7.1.0):
+    - AppAuth (< 2.0, >= 1.7.3)
+    - GTMAppAuth (< 5.0, >= 4.1.1)
+    - GTMSessionFetcher/Core (~> 3.3)
   - GoogleUserMessagingPlatform (2.6.0)
   - GoogleUtilities/AppDelegateSwizzler (8.0.2):
     - GoogleUtilities/Environment
@@ -158,7 +171,14 @@ PODS:
   - GoogleUtilities/UserDefaults (8.0.2):
     - GoogleUtilities/Logger
     - GoogleUtilities/Privacy
+  - GTMAppAuth (4.1.1):
+    - AppAuth/Core (~> 1.7)
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3)
+  - GTMSessionFetcher (3.5.0):
+    - GTMSessionFetcher/Full (= 3.5.0)
   - GTMSessionFetcher/Core (3.5.0)
+  - GTMSessionFetcher/Full (3.5.0):
+    - GTMSessionFetcher/Core
   - isar_flutter_libs (1.0.0):
     - Flutter
   - leveldb-library (1.22.5)
@@ -178,6 +198,8 @@ PODS:
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
+  - sign_in_with_apple (0.0.1):
+    - Flutter
   - sqflite (0.0.3):
     - Flutter
     - FlutterMacOS
@@ -187,7 +209,6 @@ PODS:
 DEPENDENCIES:
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
   - cloud_functions (from `.symlinks/plugins/cloud_functions/ios`)
-  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/darwin`)
   - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
   - firebase_app_check (from `.symlinks/plugins/firebase_app_check/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
@@ -199,15 +220,18 @@ DEPENDENCIES:
   - flutter_timezone (from `.symlinks/plugins/flutter_timezone/ios`)
   - flutter_udid (from `.symlinks/plugins/flutter_udid/ios`)
   - google_mobile_ads (from `.symlinks/plugins/google_mobile_ads/ios`)
+  - google_sign_in_ios (from `.symlinks/plugins/google_sign_in_ios/darwin`)
   - isar_flutter_libs (from `.symlinks/plugins/isar_flutter_libs/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
+  - sign_in_with_apple (from `.symlinks/plugins/sign_in_with_apple/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/darwin`)
   - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
 
 SPEC REPOS:
   trunk:
+    - AppAuth
     - AppCheckCore
     - Firebase
     - FirebaseAppCheck
@@ -230,8 +254,10 @@ SPEC REPOS:
     - FirebaseSharedSwift
     - Google-Mobile-Ads-SDK
     - GoogleDataTransport
+    - GoogleSignIn
     - GoogleUserMessagingPlatform
     - GoogleUtilities
+    - GTMAppAuth
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
@@ -244,8 +270,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/cloud_firestore/ios"
   cloud_functions:
     :path: ".symlinks/plugins/cloud_functions/ios"
-  connectivity_plus:
-    :path: ".symlinks/plugins/connectivity_plus/darwin"
   device_info_plus:
     :path: ".symlinks/plugins/device_info_plus/ios"
   firebase_app_check:
@@ -269,6 +293,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_udid/ios"
   google_mobile_ads:
     :path: ".symlinks/plugins/google_mobile_ads/ios"
+  google_sign_in_ios:
+    :path: ".symlinks/plugins/google_sign_in_ios/darwin"
   isar_flutter_libs:
     :path: ".symlinks/plugins/isar_flutter_libs/ios"
   path_provider_foundation:
@@ -277,6 +303,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
+  sign_in_with_apple:
+    :path: ".symlinks/plugins/sign_in_with_apple/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/darwin"
   webview_flutter_wkwebview:
@@ -288,16 +316,16 @@ CHECKOUT OPTIONS:
     :tag: 11.2.0
 
 SPEC CHECKSUMS:
+  AppAuth: 501c04eda8a8d11f179dbe8637b7a91bb7e5d2fa
   AppCheckCore: e25aaaac234b333320b0bebb8fc21ed3576819ba
-  cloud_firestore: ffbf407692570e7cc01eb17758b9c36860e73178
-  cloud_functions: 0bf7b2fda03c93babef65a9903eaadc1f4254830
-  connectivity_plus: ddd7f30999e1faaef5967c23d5b6d503d10434db
+  cloud_firestore: 5cb927f1a8c9d748d6fdbf16c6b267956cb82c53
+  cloud_functions: 071fdf2c9ae0932ea9eb8b7d8aef4b014112a8ab
   device_info_plus: 97af1d7e84681a90d0693e63169a5d50e0839a0d
   Firebase: 98e6bf5278170668a7983e12971a66b2cd57fc8c
   firebase_app_check: fbbf60e36b93055b25d6d4ce80f5722f5be99863
   firebase_auth: 0c77e299a8f2d1c74d1b1f6b78b3d4d802c19f47
   firebase_core: 2bedc3136ec7c7b8561c6123ed0239387b53f2af
-  firebase_messaging: ef181a4e0d85767142b899d5bf86a24fc6a38492
+  firebase_messaging: 15d114e1a41fc31e4fbabcd48d765a19eec94a38
   FirebaseAppCheck: a6a1c1ca169d795212b9e70b5cfb880083a28e7c
   FirebaseAppCheckInterop: ea21450529cf0ebd132788dd8916a0269abc684f
   FirebaseAuth: 2a198b8cdbbbd457f08d74df7040feb0a0e7777a
@@ -321,11 +349,14 @@ SPEC CHECKSUMS:
   flutter_local_notifications: 4cde75091f6327eb8517fa068a0a5950212d2086
   flutter_timezone: ffb07bdad3c6276af8dada0f11978d8a1f8a20bb
   flutter_udid: a2482c67a61b9c806ef59dd82ed8d007f1b7ac04
-  Google-Mobile-Ads-SDK: 5a6d005a6cb5b5e8f4c7b69ca05cdea79c181139
-  google_mobile_ads: 9379c80fdfa9988fb0e105a407890ff8deb3cf86
+  Google-Mobile-Ads-SDK: 13e6e98edfd78ad8d8a791edb927658cc260a56f
+  google_mobile_ads: 2a538d8e42b1813809782792e48f8cf4374c2180
+  google_sign_in_ios: 07375bfbf2620bc93a602c0e27160d6afc6ead38
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
+  GoogleSignIn: d4281ab6cf21542b1cfaff85c191f230b399d2db
   GoogleUserMessagingPlatform: 0c3a08353e53ce8c2feab7addd0b652cde522450
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
+  GTMAppAuth: f69bd07d68cd3b766125f7e072c45d7340dea0de
   GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
   isar_flutter_libs: b69f437aeab9c521821c3f376198c4371fa21073
   leveldb-library: e8eadf9008a61f9e1dde3978c086d2b6d9b9dc28
@@ -336,6 +367,7 @@ SPEC CHECKSUMS:
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
+  sign_in_with_apple: f3bf75217ea4c2c8b91823f225d70230119b8440
   sqflite: 673a0e54cc04b7d6dba8d24fb8095b31c3a99eec
   webview_flutter_wkwebview: 2a23822e9039b7b1bc52e5add778e5d89ad488d1
 

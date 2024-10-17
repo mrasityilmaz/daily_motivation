@@ -10,7 +10,7 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
       slivers: [
         SliverToBoxAdapter(
           child: Padding(
-            padding: context.screenPadding,
+            padding: const PaddingConstants.screenPadding(),
             child: Form(
               key: viewModel.formKey,
               child: Column(
@@ -35,7 +35,7 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
           bottom: context.mediaQuery.viewPadding.bottom > 0,
           sliver: SliverToBoxAdapter(
             child: Padding(
-              padding: context.screenPaddingHorizontal + context.paddingNormalTop,
+              padding: const PaddingConstants.screenPaddingHorizontal() + context.paddingNormalTop,
               child: Row(
                 children: [
                   Expanded(

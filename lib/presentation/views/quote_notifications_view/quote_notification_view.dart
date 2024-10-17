@@ -12,7 +12,6 @@ import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_notification_model/custom_interval_model.dart';
 import 'package:quotely/data/models/quote_notification_model/equal_schedule_model.dart';
 import 'package:quotely/data/models/quote_notification_model/quote_notification_model.dart';
-import 'package:quotely/data/models/user_schedule_times_model/user_schedule_times_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/quote_notification_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/injection/injection_container.dart';
@@ -20,6 +19,7 @@ import 'package:quotely/presentation/core_widgets/advanced_button/advanced_butto
 import 'package:quotely/presentation/core_widgets/basic/choose_circle_icon.dart';
 import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
+import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:stacked/stacked.dart';
 import 'package:uuid/uuid.dart';
 
@@ -73,7 +73,7 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
       slivers: [
         SliverToBoxAdapter(
           child: Padding(
-            padding: context.screenPaddingVertical,
+            padding: const PaddingConstants.screenPaddingVertical(),
             child: Form(
               key: viewModel.formKey,
               child: Column(
@@ -83,7 +83,7 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                     height: context.normalValue,
                   ),
                   Padding(
-                    padding: context.screenPaddingHorizontal,
+                    padding: const PaddingConstants.screenPaddingHorizontal(),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -98,8 +98,8 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                               final bool isSelected = viewModel.isDaysOfWeekSelected(e);
                               return Expanded(
                                 child: Padding(
-                                  padding: context.paddingLowVertical +
-                                      (e != 0 ? context.paddingLowLeft * .5 : EdgeInsets.zero),
+                                  padding: const PaddingConstants.lowVertical() +
+                                      (e != 0 ? const PaddingConstants.lowLeft() * .5 : EdgeInsets.zero),
                                   child: AdvancedButtonWidget(
                                     expand: true,
                                     backgroundColor: isSelected ? context.colors.primary : context.colors.surface,
@@ -114,7 +114,7 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                                     onPressed: () {
                                       viewModel.addOrRemoveSelectedDaysOfWeekIndex(e);
                                     },
-                                    padding: context.paddingLow * .1,
+                                    padding: const PaddingConstants.allLow() * .1,
                                     child: AutoSizeText(
                                       'weekdays.${e + 1}wd'.tr(),
                                       style: context.textTheme.bodyMedium?.copyWith(
@@ -136,7 +136,7 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                         ),
                         AdvancedButtonWidget(
                           backgroundColor: context.colors.primary.withOpacity(.1),
-                          padding: context.paddingLowVertical * 1.5 + context.paddingLowHorizontal,
+                          padding: const PaddingConstants.lowVertical() * 1.5 + const PaddingConstants.lowHorizontal(),
                           child: Row(
                             children: [
                               ChooseCircleIcon(
@@ -185,7 +185,7 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                         ),
                         AdvancedButtonWidget(
                           backgroundColor: context.colors.primary.withOpacity(.1),
-                          padding: context.paddingLowVertical * 1.5 + context.paddingLowHorizontal,
+                          padding: const PaddingConstants.lowVertical() * 1.5 + const PaddingConstants.lowHorizontal(),
                           child: Row(
                             children: [
                               ChooseCircleIcon(
@@ -237,12 +237,14 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
           ),
         ),
         SliverSafeArea(
-          minimum: context.mediaQuery.viewPadding.bottom == 0 ? EdgeInsets.zero : context.adaptiveScreenPaddingBottom,
+          minimum: context.mediaQuery.viewPadding.bottom == 0
+              ? EdgeInsets.zero
+              : PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom),
           top: false,
           bottom: context.mediaQuery.viewPadding.bottom > 0,
           sliver: SliverToBoxAdapter(
             child: Padding(
-              padding: context.screenPaddingHorizontal + context.paddingNormalTop,
+              padding: const PaddingConstants.screenPaddingHorizontal() + const PaddingConstants.normalTop(),
               child: Row(
                 children: [
                   Expanded(

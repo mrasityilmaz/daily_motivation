@@ -7,7 +7,7 @@ final class _AddNewOrEditQuoteViewBodyWidget extends ViewModelWidget<AddNewOrEdi
   @override
   Widget build(BuildContext context, AddNewOrEditQuoteViewModel viewModel) {
     return Padding(
-      padding: context.screenPadding,
+      padding: const PaddingConstants.screenPadding(),
       child: Form(
         autovalidateMode: AutovalidateMode.onUserInteraction,
         key: viewModel.formKey,
@@ -42,7 +42,7 @@ final class _AddNewOrEditQuoteViewBodyWidget extends ViewModelWidget<AddNewOrEdi
               hintText: 'Author',
             ),
             Padding(
-              padding: context.paddingLowVertical * .5,
+              padding: const PaddingConstants.lowVertical() * .5,
               child: Row(
                 children: [
                   Icon(
@@ -53,14 +53,20 @@ final class _AddNewOrEditQuoteViewBodyWidget extends ViewModelWidget<AddNewOrEdi
                   const SizedBox(width: 4),
                   AutoSizeText(
                     'Author is optional\nIf not provided, it will be set to unvisible',
-                    style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.15), fontWeight: FontWeight.w600, fontStyle: FontStyle.italic),
+                    style: context.textTheme.bodySmall?.copyWith(
+                      color: context.colors.onSurface.withOpacity(.15),
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
                 ],
               ),
             ),
             const Spacer(),
             SafeArea(
-              minimum: context.mediaQuery.viewPadding.bottom == 0 ? EdgeInsets.zero : context.adaptiveScreenPaddingBottom,
+              minimum: context.mediaQuery.viewPadding.bottom == 0
+                  ? EdgeInsets.zero
+                  : PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom),
               top: false,
               bottom: context.mediaQuery.viewPadding.bottom > 0,
               child: Row(

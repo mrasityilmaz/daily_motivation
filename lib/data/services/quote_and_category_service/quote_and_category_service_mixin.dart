@@ -109,15 +109,15 @@ mixin _QuoteAndCategoryServiceMixin {
       if (locale == 'tr') {
         final List<dynamic> quotesTrRaw = jsonDecode(jsonString)['tr_quotes'] as List<dynamic>;
 
-        final List<QuoteModel> quotesTr = quotesTrRaw.map((e) => QuoteModel.fromMap(e as Map<String, dynamic>)).toList()
-          ..shuffle();
+        final List<QuoteModel> quotesTr =
+            quotesTrRaw.map((e) => QuoteModel.fromJson(e as Map<String, dynamic>)).toList()..shuffle();
 
         return quotesTr;
       } else {
         final List<dynamic> quotesEnRaw = jsonDecode(jsonString)['en_quotes'] as List<dynamic>;
 
-        final List<QuoteModel> quotesEn = quotesEnRaw.map((e) => QuoteModel.fromMap(e as Map<String, dynamic>)).toList()
-          ..shuffle();
+        final List<QuoteModel> quotesEn =
+            quotesEnRaw.map((e) => QuoteModel.fromJson(e as Map<String, dynamic>)).toList()..shuffle();
 
         return quotesEn;
       }

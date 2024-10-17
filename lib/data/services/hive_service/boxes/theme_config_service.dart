@@ -7,7 +7,7 @@ import 'package:quotely/data/models/theme_configuration_model/theme_configuratio
 @immutable
 final class ThemeConfigurationBoxService extends HiveBoxService<ThemeConfigurationModel> {
   ThemeConfigurationBoxService()
-      : super(boxName: HiveConstants.themeConfigurationBoxKey, fromJson: ThemeConfigurationModel.fromMap);
+      : super(boxName: HiveConstants.themeConfigurationBoxKey, fromJson: ThemeConfigurationModel.fromJson);
 
   ThemeConfigurationModel? get currentThemeConfiguration => box.get(boxName);
 

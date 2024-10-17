@@ -9,7 +9,7 @@ final class _FavoritesViewBodyWidget extends SelectorViewModelWidget<FavoritesVi
     return CustomScrollView(
       slivers: [
         SliverPadding(
-          padding: context.screenPadding,
+          padding: const PaddingConstants.screenPadding(),
           sliver: SliverList.builder(
             itemCount: likedQuoteList.length,
             itemBuilder: (context, index) {

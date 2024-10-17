@@ -60,22 +60,22 @@ class ThemeConfigurationModelMapper
   @override
   final Function instantiate = _instantiate;
 
-  static ThemeConfigurationModel fromMap(Map<String, dynamic> map) {
+  static ThemeConfigurationModel fromJson(Map<String, dynamic> map) {
     return ensureInitialized().decodeMap<ThemeConfigurationModel>(map);
   }
 
-  static ThemeConfigurationModel fromJson(String json) {
+  static ThemeConfigurationModel fromJsonString(String json) {
     return ensureInitialized().decodeJson<ThemeConfigurationModel>(json);
   }
 }
 
 mixin ThemeConfigurationModelMappable {
-  String toJson() {
+  String toJsonString() {
     return ThemeConfigurationModelMapper.ensureInitialized()
         .encodeJson<ThemeConfigurationModel>(this as ThemeConfigurationModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return ThemeConfigurationModelMapper.ensureInitialized()
         .encodeMap<ThemeConfigurationModel>(this as ThemeConfigurationModel);
   }

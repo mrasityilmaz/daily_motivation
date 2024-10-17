@@ -35,59 +35,6 @@ extension Themmeee on ThemeData {
   SignViewTheme get signViewTheme => extension<SignViewTheme>()!;
 }
 
-extension PaddingExtensionAll on BuildContext {
-  EdgeInsets get paddingLow => EdgeInsets.all(lowValue);
-  EdgeInsets get paddingNormal => EdgeInsets.all(normalValue);
-  EdgeInsets get paddingMedium => EdgeInsets.all(mediumValue);
-  EdgeInsets get paddingHigh => EdgeInsets.all(highValue);
-}
-
-extension PaddingExtensionSymetric on BuildContext {
-  EdgeInsets get paddingLowVertical => EdgeInsets.symmetric(vertical: lowValue);
-  EdgeInsets get paddingNormalVertical => EdgeInsets.symmetric(vertical: normalValue);
-  EdgeInsets get paddingMediumVertical => EdgeInsets.symmetric(vertical: mediumValue);
-  EdgeInsets get paddingHighVertical => EdgeInsets.symmetric(vertical: highValue);
-
-  EdgeInsets get paddingLowHorizontal => EdgeInsets.symmetric(horizontal: lowValue);
-  EdgeInsets get paddingNormalHorizontal => EdgeInsets.symmetric(horizontal: normalValue);
-  EdgeInsets get paddingMediumHorizontal => EdgeInsets.symmetric(horizontal: mediumValue);
-  EdgeInsets get paddingHighHorizontal => EdgeInsets.symmetric(horizontal: highValue);
-
-  EdgeInsets get screenPaddingTop => const EdgeInsets.only(top: 12);
-  EdgeInsets get screenPaddingBottom => const EdgeInsets.only(bottom: 12);
-  EdgeInsets get adaptiveScreenPaddingBottom => mediaQuery.viewPadding.bottom > 0
-      ? (screenPaddingBottom * .5) + paddingLowBottom
-      : screenPaddingBottom + paddingLowBottom;
-  EdgeInsets get screenPadding => screenPaddingHorizontal + screenPaddingVertical;
-  EdgeInsets get screenPaddingHorizontal => screenPaddingLeft + screenPaddingRight;
-  EdgeInsets get screenPaddingRight => const EdgeInsets.only(right: 16);
-  EdgeInsets get screenPaddingLeft => const EdgeInsets.only(left: 16);
-
-  EdgeInsets get screenPaddingVertical => const EdgeInsets.symmetric(vertical: 12);
-}
-
-extension PaddingExtensionSides on BuildContext {
-  EdgeInsets get paddingLowLeft => EdgeInsets.only(left: lowValue);
-  EdgeInsets get paddingLowRight => EdgeInsets.only(right: lowValue);
-  EdgeInsets get paddingLowTop => EdgeInsets.only(top: lowValue);
-  EdgeInsets get paddingLowBottom => EdgeInsets.only(bottom: lowValue);
-
-  EdgeInsets get paddingNormalLeft => EdgeInsets.only(left: normalValue);
-  EdgeInsets get paddingNormalRight => EdgeInsets.only(right: normalValue);
-  EdgeInsets get paddingNormalTop => EdgeInsets.only(top: normalValue);
-  EdgeInsets get paddingNormalBottom => EdgeInsets.only(bottom: normalValue);
-
-  EdgeInsets get paddingMediumLeft => EdgeInsets.only(left: mediumValue);
-  EdgeInsets get paddingMediumRight => EdgeInsets.only(right: mediumValue);
-  EdgeInsets get paddingMediumTop => EdgeInsets.only(top: mediumValue);
-  EdgeInsets get paddingMediumBottom => EdgeInsets.only(bottom: mediumValue);
-
-  EdgeInsets get paddingHighLeft => EdgeInsets.only(left: highValue);
-  EdgeInsets get paddingHighRight => EdgeInsets.only(right: highValue);
-  EdgeInsets get paddingHighTop => EdgeInsets.only(top: highValue);
-  EdgeInsets get paddingHighBottom => EdgeInsets.only(bottom: highValue);
-}
-
 extension PageExtension on BuildContext {
   Color get randomColor => Colors.primaries[Random().nextInt(17)];
 }

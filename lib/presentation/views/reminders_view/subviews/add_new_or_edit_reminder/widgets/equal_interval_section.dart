@@ -1,7 +1,8 @@
 part of '../add_new_or_edit_reminder_view.dart';
 
 @immutable
-final class _EqualIntervalSection extends SelectorViewModelWidget<_AddNewOrEditReminderViewModel, ReminderScheduleEnum?> {
+final class _EqualIntervalSection
+    extends SelectorViewModelWidget<_AddNewOrEditReminderViewModel, ReminderScheduleEnum?> {
   const _EqualIntervalSection();
 
   @override
@@ -18,7 +19,9 @@ final class _EqualIntervalSection extends SelectorViewModelWidget<_AddNewOrEditR
           ],
         ),
       ),
-      crossFadeState: selectedScheduleType == ReminderScheduleEnum.equalInterval ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+      crossFadeState: selectedScheduleType == ReminderScheduleEnum.equalInterval
+          ? CrossFadeState.showSecond
+          : CrossFadeState.showFirst,
     );
   }
 
@@ -35,7 +38,7 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
   @override
   Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
     return Padding(
-      padding: context.paddingNormalBottom + context.paddingLowTop,
+      padding: context.paddingNormalBottom + const PaddingConstants.onlyLowTop(),
       child: Row(
         children: [
           Expanded(
@@ -47,7 +50,9 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
                   onPressed: () async {
-                    await AppDialogs.instance.showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.start).then((value) {
+                    await AppDialogs.instance
+                        .showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.start)
+                        .then((value) {
                       if (value != null) {
                         viewModel.setEqualIntervalStartValue(start: value);
                       }
@@ -56,16 +61,18 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
                 ),
                 Padding(
                   padding: context.paddingLowLeft * .5,
-                  child: Text('Start at', style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.75))),
+                  child: Text('Start at',
+                      style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.75))),
                 ),
               ],
             ),
           ),
           Padding(
-            padding: context.paddingLowHorizontal + context.paddingLowBottom * 1.5,
+            padding: const PaddingConstants.lowHorizontal() + const PaddingConstants.lowBottom() * 1.5,
             child: Text(
               ':',
-              style: context.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onSurface.withOpacity(.5)),
+              style: context.textTheme.headlineSmall
+                  ?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onSurface.withOpacity(.5)),
             ),
           ),
           Expanded(
@@ -77,7 +84,9 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
                   onPressed: () async {
-                    await AppDialogs.instance.showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.end).then((value) {
+                    await AppDialogs.instance
+                        .showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.end)
+                        .then((value) {
                       if (value != null) {
                         viewModel.setEqualIntervalEndValue(end: value);
                       }
@@ -86,7 +95,8 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
                 ),
                 Padding(
                   padding: context.paddingLowLeft * .5,
-                  child: Text('End to', style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.75))),
+                  child: Text('End to',
+                      style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.75))),
                 ),
               ],
             ),

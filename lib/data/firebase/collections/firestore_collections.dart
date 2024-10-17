@@ -1,8 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:quotely/data/firebase/utility/firestore_converter.dart';
-// ignore: unused_import
-import 'package:quotely/data/firebase/utility/firestore_extensions.dart';
 import 'package:quotely/data/models/firestore_models/user_model/user_model.dart';
 import 'package:quotely/injection/injection_container.dart';
 

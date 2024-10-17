@@ -62,7 +62,7 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
               borderRadius: context.radius12,
               border: Border.all(color: context.colors.onSurface.withOpacity(.1)),
             ),
-            padding: context.paddingLow,
+            padding: const PaddingConstants.allLow(),
             child: __ImageBoxTextSection(
               font: font,
               textColor: textColor,

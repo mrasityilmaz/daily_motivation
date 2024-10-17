@@ -8,7 +8,7 @@ final class _QuoteRowWidget extends ViewModelWidget<FavoritesViewModel> {
   @override
   Widget build(BuildContext context, FavoritesViewModel viewModel) {
     return Padding(
-      padding: context.paddingLowBottom,
+      padding: const PaddingConstants.lowBottom(),
       child: Slidable(
         // Specify a key if the Slidable is dismissible.
         key: ValueKey(quote.id),
@@ -25,7 +25,7 @@ final class _QuoteRowWidget extends ViewModelWidget<FavoritesViewModel> {
               backgroundColor: context.colors.surface,
               label: 'Remove',
               icon: Platform.isAndroid ? Icons.delete_outline_rounded : CupertinoIcons.trash,
-              padding: context.paddingLowBottom,
+              padding: const PaddingConstants.lowBottom(),
               foregroundColor: Colors.red.shade600,
             ),
           ],
@@ -34,7 +34,7 @@ final class _QuoteRowWidget extends ViewModelWidget<FavoritesViewModel> {
         child: Container(
           width: double.maxFinite,
           decoration: BoxDecoration(color: context.colors.onSurface.withOpacity(.05), borderRadius: context.radius8),
-          padding: context.paddingLowHorizontal + context.paddingLowVertical * 1.2,
+          padding: const PaddingConstants.lowHorizontal() + const PaddingConstants.lowVertical() * 1.2,
           child: GestureDetector(
             onTap: () async => viewModel.copyQuote(context, quote: quote),
             child: Column(

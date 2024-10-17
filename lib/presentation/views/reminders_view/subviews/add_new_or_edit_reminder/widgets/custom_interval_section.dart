@@ -21,7 +21,7 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
               return Material(
                 key: ValueKey(index),
                 child: Padding(
-                  padding: context.paddingLowVertical,
+                  padding: const PaddingConstants.lowVertical(),
                   child: Row(
                     children: [
                       SizedBox(
@@ -29,20 +29,24 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
                         child: Center(
                           child: Text(
                             '${index + 1}.',
-                            style: context.textTheme.titleSmall?.copyWith(color: context.colors.onSurface.withOpacity(.75), fontWeight: FontWeight.bold),
+                            style: context.textTheme.titleSmall?.copyWith(
+                                color: context.colors.onSurface.withOpacity(.75), fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
-                          constraints: const BoxConstraints(minHeight: kMinInteractiveDimension * .95, maxHeight: kMinInteractiveDimension * .95),
+                          constraints: const BoxConstraints(
+                              minHeight: kMinInteractiveDimension * .95, maxHeight: kMinInteractiveDimension * .95),
                           decoration: ShapeDecoration(
                             shape: RoundedRectangleBorder(
                               borderRadius: context.radius8,
                             ),
                             color: context.colors.onSurface.withOpacity(.05),
                           ),
-                          child: Center(child: Text(currentValue.format(context), style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold))),
+                          child: Center(
+                              child: Text(currentValue.format(context),
+                                  style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold))),
                         ),
                       ),
                       InkWell(
@@ -74,11 +78,14 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
                     child: AdvancedButtonWidget.text(
                       text: 'Add Time',
                       backgroundColor: context.colors.surface,
-                      shape: RoundedRectangleBorder(borderRadius: context.radius12, side: BorderSide(color: context.colors.primary, width: 1.5)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: context.radius12, side: BorderSide(color: context.colors.primary, width: 1.5)),
                       expand: true,
                       textColor: context.colors.primary,
                       onPressed: () async {
-                        await AppDialogs.instance.showAdaptiveTimePicker(context, initialTime: TimeOfDay.now()).then((value) {
+                        await AppDialogs.instance
+                            .showAdaptiveTimePicker(context, initialTime: TimeOfDay.now())
+                            .then((value) {
                           if (value != null) {
                             viewModel.addCustomIntervalTimeValue(time: value);
                           }
@@ -95,7 +102,9 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
           ),
         ],
       ),
-      crossFadeState: viewModel.selectedScheduleType == ReminderScheduleEnum.customInterval ? CrossFadeState.showSecond : CrossFadeState.showFirst,
+      crossFadeState: viewModel.selectedScheduleType == ReminderScheduleEnum.customInterval
+          ? CrossFadeState.showSecond
+          : CrossFadeState.showFirst,
     );
   }
 }

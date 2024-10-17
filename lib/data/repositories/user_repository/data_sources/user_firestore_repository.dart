@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:quotely/core/errors/errors.dart';
 import 'package:quotely/core/extensions/dartz_extension.dart';
@@ -16,7 +16,7 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
   CollectionReference<UserModel?> get _userCollection => FireStoreCollections.users.collection;
 
   @override
-  Future<DataModel<UserModel>> createNewUser({required UserModel userModel}) async {
+  Future<EitherOr<UserModel>> createNewUser({required UserModel userModel}) async {
     try {
       final hasAlreadyCreated = await findUserByUid(uid: userModel.uid);
 
@@ -32,7 +32,7 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
   }
 
   @override
-  Future<DataModel<bool>> deleteUser({required String uid}) async {
+  Future<EitherOr<bool>> deleteUser({required String uid}) async {
     try {
       await _userCollection.doc(uid).delete();
 
@@ -43,9 +43,9 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
   }
 
   @override
-  Future<DataModel<UserModel>> updateUser({required UserModel userModel}) async {
+  Future<EitherOr<UserModel>> updateUser({required UserModel userModel}) async {
     try {
-      await _userCollection.doc(userModel.uid).update(userModel.toMap());
+      await _userCollection.doc(userModel.uid).update(userModel.toJson());
       return await findUserByUid(uid: userModel.uid);
     } catch (error) {
       return Left(FirestoreException(errorMessage: error.toString()));
@@ -53,7 +53,7 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
   }
 
   @override
-  Future<DataModel<UserModel>> findUserByUid({required String uid}) async {
+  Future<EitherOr<UserModel>> findUserByUid({required String uid}) async {
     try {
       final user = await _userCollection.doc(uid).get().then((value) {
         return value.data();
@@ -63,36 +63,6 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
         return Right(user);
       }
       return Left(FirestoreException(errorMessage: 'User not found'));
-    } catch (e) {
-      return Left(FirestoreException(errorMessage: e.toString()));
-    }
-  }
-
-  @override
-  Future<DataModel<UserModel>> signInAnonymously() async {
-    try {
-      if (FirebaseAuth.instance.currentUser != null) {
-        final UserModel? user = await findUserByUid(uid: FirebaseAuth.instance.currentUser!.uid)
-            .then((value) => value.fold((l) => null, (r) => r));
-
-        if (user != null) {
-          return Right(user);
-        }
-      }
-
-      final UserCredential userCredential = await FirebaseAuth.instance.signInAnonymously();
-
-      if (userCredential.user?.uid == null) {
-        return Left(FirestoreException(errorMessage: 'User could not be created'));
-      }
-
-      final newUser = await createNewUser(userModel: UserModel(uid: userCredential.user!.uid));
-
-      if (newUser.isRight()) {
-        return newUser;
-      }
-
-      return Left(FirestoreException(errorMessage: 'User could not be created'));
     } catch (e) {
       return Left(FirestoreException(errorMessage: e.toString()));
     }

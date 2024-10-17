@@ -9,13 +9,14 @@ final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotific
     return Column(
       children: [
         Padding(
-          padding: context.screenPaddingHorizontal,
+          padding: const PaddingConstants.screenPaddingHorizontal(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Notification Categories',
-                style: context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onBackground.withOpacity(.75)),
+                style: context.textTheme.bodyLarge
+                    ?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onBackground.withOpacity(.75)),
               ),
               Row(
                 children: [
@@ -28,7 +29,8 @@ final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotific
                   AutoSizeText(
                     'Maximum 3 categories can be selected',
                     maxLines: 2,
-                    style: context.textTheme.bodySmall?.copyWith(color: context.colors.onBackground.withOpacity(.4), fontStyle: FontStyle.italic),
+                    style: context.textTheme.bodySmall
+                        ?.copyWith(color: context.colors.onBackground.withOpacity(.4), fontStyle: FontStyle.italic),
                   ),
                 ],
               ),
@@ -46,10 +48,12 @@ final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotific
                 child: GridView.builder(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  padding: context.screenPaddingHorizontal,
+                  padding: const PaddingConstants.screenPaddingHorizontal(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 4,
-                    mainAxisExtent: ((context.width - context.screenPaddingHorizontal.horizontal) - (context.lowValue)) / 3,
+                    mainAxisExtent: ((context.width - const PaddingConstants.screenPaddingHorizontal().horizontal) -
+                            (context.lowValue)) /
+                        3,
                     mainAxisSpacing: context.lowValue * .5,
                     crossAxisSpacing: context.lowValue * .5,
                   ),
@@ -65,7 +69,7 @@ final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotific
                         ),
                       ),
                       onPressed: () => viewModel.addOrRemoveCategory(category: category),
-                      padding: context.paddingLowHorizontal + context.paddingLowVertical * .5,
+                      padding: const PaddingConstants.lowHorizontal() + const PaddingConstants.lowVertical() * .5,
                       child: LayoutBuilder(
                         builder: (BuildContext context, BoxConstraints constraints) {
                           return Row(
@@ -73,8 +77,11 @@ final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotific
                               Expanded(
                                 child: AutoSizeText(
                                   category.name,
-                                  style:
-                                      context.textTheme.titleSmall?.copyWith(color: isSelected ? context.colors.background : context.colors.onBackground.withOpacity(.6), fontWeight: FontWeight.bold),
+                                  style: context.textTheme.titleSmall?.copyWith(
+                                      color: isSelected
+                                          ? context.colors.background
+                                          : context.colors.onBackground.withOpacity(.6),
+                                      fontWeight: FontWeight.bold),
                                   maxLines: 1,
                                   maxFontSize: context.textTheme.titleSmall!.fontSize!,
                                   minFontSize: context.textTheme.labelSmall!.fontSize!,

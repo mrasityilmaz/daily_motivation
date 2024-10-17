@@ -20,38 +20,38 @@ class GenerateTokenModelMapper extends ClassMapperBase<GenerateTokenModel> {
   @override
   final String id = 'GenerateTokenModel';
 
-  static String _$deviceId(GenerateTokenModel v) => v.deviceId;
-  static const Field<GenerateTokenModel, String> _f$deviceId =
-      Field('deviceId', _$deviceId);
+  static String _$userId(GenerateTokenModel v) => v.userId;
+  static const Field<GenerateTokenModel, String> _f$userId =
+      Field('userId', _$userId);
 
   @override
   final MappableFields<GenerateTokenModel> fields = const {
-    #deviceId: _f$deviceId,
+    #userId: _f$userId,
   };
 
   static GenerateTokenModel _instantiate(DecodingData data) {
-    return GenerateTokenModel(data.dec(_f$deviceId));
+    return GenerateTokenModel(data.dec(_f$userId));
   }
 
   @override
   final Function instantiate = _instantiate;
 
-  static GenerateTokenModel fromMap(Map<String, dynamic> map) {
+  static GenerateTokenModel fromJson(Map<String, dynamic> map) {
     return ensureInitialized().decodeMap<GenerateTokenModel>(map);
   }
 
-  static GenerateTokenModel fromJson(String json) {
+  static GenerateTokenModel fromJsonString(String json) {
     return ensureInitialized().decodeJson<GenerateTokenModel>(json);
   }
 }
 
 mixin GenerateTokenModelMappable {
-  String toJson() {
+  String toJsonString() {
     return GenerateTokenModelMapper.ensureInitialized()
         .encodeJson<GenerateTokenModel>(this as GenerateTokenModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return GenerateTokenModelMapper.ensureInitialized()
         .encodeMap<GenerateTokenModel>(this as GenerateTokenModel);
   }
@@ -88,7 +88,7 @@ extension GenerateTokenModelValueCopy<$R, $Out>
 
 abstract class GenerateTokenModelCopyWith<$R, $In extends GenerateTokenModel,
     $Out> implements ClassCopyWith<$R, $In, $Out> {
-  $R call({String? deviceId});
+  $R call({String? userId});
   GenerateTokenModelCopyWith<$R2, $In, $Out2> $chain<$R2, $Out2>(
       Then<$Out2, $R2> t);
 }
@@ -102,11 +102,11 @@ class _GenerateTokenModelCopyWithImpl<$R, $Out>
   late final ClassMapperBase<GenerateTokenModel> $mapper =
       GenerateTokenModelMapper.ensureInitialized();
   @override
-  $R call({String? deviceId}) =>
-      $apply(FieldCopyWithData({if (deviceId != null) #deviceId: deviceId}));
+  $R call({String? userId}) =>
+      $apply(FieldCopyWithData({if (userId != null) #userId: userId}));
   @override
   GenerateTokenModel $make(CopyWithData data) =>
-      GenerateTokenModel(data.get(#deviceId, or: $value.deviceId));
+      GenerateTokenModel(data.get(#userId, or: $value.userId));
 
   @override
   GenerateTokenModelCopyWith<$R2, GenerateTokenModel, $Out2> $chain<$R2, $Out2>(

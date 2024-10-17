@@ -18,6 +18,6 @@ final class QuoteNotificationEqualScheduleModel with QuoteNotificationEqualSched
   final int? notificationInterval;
   final List<TimeOfDay> notificationSchedules;
 
-  static const fromMap = QuoteNotificationEqualScheduleModelMapper.fromMap;
   static const fromJson = QuoteNotificationEqualScheduleModelMapper.fromJson;
+  static const fromJsonString = QuoteNotificationEqualScheduleModelMapper.fromJsonString;
 }

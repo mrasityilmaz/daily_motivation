@@ -9,7 +9,7 @@ final class _RemindersViewBodyWidget extends SelectorViewModelWidget<_RemindersV
     return CustomScrollView(
       slivers: [
         SliverPadding(
-          padding: context.screenPadding,
+          padding: const PaddingConstants.screenPadding(),
           sliver: SliverList.builder(
             itemCount: reminderList.length,
             itemBuilder: (context, index) {

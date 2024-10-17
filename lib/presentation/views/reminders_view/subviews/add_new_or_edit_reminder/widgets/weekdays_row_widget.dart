@@ -12,7 +12,7 @@ final class __WeekDaysRow extends ViewModelWidget<_AddNewOrEditReminderViewModel
           final bool isSelected = viewModel.isDaysOfWeekSelected(e);
           return Expanded(
             child: Padding(
-              padding: context.paddingLowVertical + (e != 0 ? context.paddingLowLeft * .5 : EdgeInsets.zero),
+              padding: const PaddingConstants.lowVertical() + (e != 0 ? context.paddingLowLeft * .5 : EdgeInsets.zero),
               child: AdvancedButtonWidget(
                 expand: true,
                 backgroundColor: isSelected ? context.colors.primary : context.colors.surface,
@@ -25,7 +25,7 @@ final class __WeekDaysRow extends ViewModelWidget<_AddNewOrEditReminderViewModel
                 onPressed: () {
                   viewModel.addOrRemoveSelectedDaysOfWeekIndex(e);
                 },
-                padding: context.paddingLow * .1,
+                padding: const PaddingConstants.allLow() * .1,
                 child: AutoSizeText(
                   'weekdays.${e + 1}wd'.tr(),
                   style: context.textTheme.bodyMedium?.copyWith(

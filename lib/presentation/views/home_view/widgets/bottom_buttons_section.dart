@@ -10,7 +10,7 @@ final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel
       mainAxisSize: MainAxisSize.min,
       children: [
         Padding(
-          padding: context.paddingLow,
+          padding: const PaddingConstants.allLow(),
           child: Row(
             children: [
               ClipRRect(

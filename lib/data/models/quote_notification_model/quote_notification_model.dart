@@ -24,6 +24,6 @@ final class QuoteNotificationModel with QuoteNotificationModelMappable {
   final QuoteNotificationEqualScheduleModel? notificationEqualSchedule;
   final QuoteNotificationScheduleCustomIntervalModel? notificationCustomIntervalSchedule;
 
-  static const fromMap = QuoteNotificationModelMapper.fromMap;
   static const fromJson = QuoteNotificationModelMapper.fromJson;
+  static const fromJsonString = QuoteNotificationModelMapper.fromJsonString;
 }

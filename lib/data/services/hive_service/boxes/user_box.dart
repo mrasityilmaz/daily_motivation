@@ -5,7 +5,7 @@ import 'package:quotely/data/models/firestore_models/user_model/user_model.dart'
 
 @immutable
 final class UserBoxService extends HiveBoxService<UserModel> {
-  UserBoxService() : super(boxName: HiveConstants.userBoxKey, fromJson: UserModel.userFromMap);
+  UserBoxService() : super(boxName: HiveConstants.userBoxKey, fromJson: UserModel.fromJson);
 
   void saveUserData(UserModel userModel) {
     try {

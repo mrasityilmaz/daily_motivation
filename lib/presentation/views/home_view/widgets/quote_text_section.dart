@@ -15,7 +15,7 @@ final class _QuoteTextSection extends MultiSelectorViewModelWidget<HomeViewModel
     final ThemeConfigurationModel currentThemeConfiguration = selectors.selector1;
 
     return Padding(
-      padding: context.screenPaddingHorizontal,
+      padding: const PaddingConstants.screenPaddingHorizontal(),
       child: FractionallySizedBox(
         heightFactor: .85,
         alignment: const Alignment(0, -.6),

@@ -26,9 +26,9 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
   static String? _$timeZone(UserModel v) => v.timeZone;
   static const Field<UserModel, String> _f$timeZone =
       Field('timeZone', _$timeZone, opt: true);
-  static bool _$sendNotifications(UserModel v) => v.sendNotifications;
+  static bool? _$sendNotifications(UserModel v) => v.sendNotifications;
   static const Field<UserModel, bool> _f$sendNotifications =
-      Field('sendNotifications', _$sendNotifications, opt: true, def: false);
+      Field('sendNotifications', _$sendNotifications, opt: true);
   static String? _$deviceToken(UserModel v) => v.deviceToken;
   static const Field<UserModel, String> _f$deviceToken =
       Field('deviceToken', _$deviceToken, opt: true);
@@ -63,22 +63,22 @@ class UserModelMapper extends ClassMapperBase<UserModel> {
   @override
   final Function instantiate = _instantiate;
 
-  static UserModel fromMap(Map<String, dynamic> map) {
+  static UserModel fromJson(Map<String, dynamic> map) {
     return ensureInitialized().decodeMap<UserModel>(map);
   }
 
-  static UserModel fromJson(String json) {
+  static UserModel fromJsonString(String json) {
     return ensureInitialized().decodeJson<UserModel>(json);
   }
 }
 
 mixin UserModelMappable {
-  String toJson() {
+  String toJsonString() {
     return UserModelMapper.ensureInitialized()
         .encodeJson<UserModel>(this as UserModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return UserModelMapper.ensureInitialized()
         .encodeMap<UserModel>(this as UserModel);
   }
@@ -139,14 +139,14 @@ class _UserModelCopyWithImpl<$R, $Out>
   $R call(
           {String? uid,
           Object? timeZone = $none,
-          bool? sendNotifications,
+          Object? sendNotifications = $none,
           Object? deviceToken = $none,
           Object? scheduleTimes = $none,
           Object? lastScheduledDate = $none}) =>
       $apply(FieldCopyWithData({
         if (uid != null) #uid: uid,
         if (timeZone != $none) #timeZone: timeZone,
-        if (sendNotifications != null) #sendNotifications: sendNotifications,
+        if (sendNotifications != $none) #sendNotifications: sendNotifications,
         if (deviceToken != $none) #deviceToken: deviceToken,
         if (scheduleTimes != $none) #scheduleTimes: scheduleTimes,
         if (lastScheduledDate != $none) #lastScheduledDate: lastScheduledDate

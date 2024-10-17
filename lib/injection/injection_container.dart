@@ -39,7 +39,7 @@ Future<void> configureDependencies({String? defaultEnv}) async {
 }
 
 String getEnvironment({String? defaultEnv}) {
-  final data = defaultEnv ?? const String.fromEnvironment('ENVIRONMENT');
+  final data = (defaultEnv ?? const String.fromEnvironment('ENVIRONMENT')).toLowerCase();
   return switch (data) {
     Environment.prod => Environment.prod,
     Environment.test => Environment.test,

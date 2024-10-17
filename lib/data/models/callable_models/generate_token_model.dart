@@ -6,7 +6,7 @@ part 'generate_token_model.mapper.dart';
 @immutable
 @MappableClass()
 final class GenerateTokenModel with GenerateTokenModelMappable {
-  const GenerateTokenModel(this.deviceId);
+  const GenerateTokenModel(this.userId);
 
-  final String deviceId;
+  final String userId;
 }

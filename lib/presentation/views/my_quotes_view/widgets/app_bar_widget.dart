@@ -15,7 +15,7 @@ final class _MyQuotesAppBar extends ViewModelWidget<MyQuotesViewModel> implement
       centerTitle: true,
       actions: [
         Padding(
-          padding: context.screenPaddingRight * .5,
+          padding: const PaddingConstants.screenPaddingRight() * .5,
           child: AdvancedButtonWidget.icon(
             backgroundColor: context.colors.surface,
             shape: RoundedRectangleBorder(

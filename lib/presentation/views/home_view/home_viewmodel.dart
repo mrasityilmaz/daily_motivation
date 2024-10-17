@@ -65,13 +65,15 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
           _themeConfigurationService.init(context),
         ]),
       );
-
-      pageController.addListener(() {
-        currentQuoteIsLiked.value = locator<HiveService>().likedQuoteBoxService.isQuoteLiked(currentQuote.id);
-      });
     } catch (e, s) {
       LoggerService.catchLog(e, s);
     }
+  }
+
+  /// When the page changes, this method checks if the current quote is liked.
+  @protected
+  void checkCurrentQuoteIsLiked() {
+    currentQuoteIsLiked.value = locator<HiveService>().likedQuoteBoxService.isQuoteLiked(currentQuote.id);
   }
 
   ///
@@ -118,9 +120,6 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
 
   @override
   void dispose() {
-    pageController
-      ..removeListener(() {})
-      ..dispose();
     super.dispose();
   }
 

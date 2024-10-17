@@ -9,7 +9,7 @@ final class _MyQuotesViewBodyWidget extends SelectorViewModelWidget<MyQuotesView
     return CustomScrollView(
       slivers: [
         SliverPadding(
-          padding: context.screenPadding,
+          padding: const PaddingConstants.screenPadding(),
           sliver: SliverList.builder(
             itemCount: myQuoteList.length,
             itemBuilder: (context, index) {

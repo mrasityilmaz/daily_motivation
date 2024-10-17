@@ -1,6 +1,10 @@
 part of '../../app_theme.dart';
 
 mixin _AppLightTheme {
+  // Tek bir yerde GoogleFonts oluşturma
+  final _montserratFont = GoogleFonts.montserrat();
+  final _plusJakartaFont = GoogleFonts.plusJakartaSansTextTheme();
+
   ColorScheme get lightColorScheme => ColorScheme.light(
         surface: AppColorScheme.instance.backgroundColor,
         onSurface: AppColorScheme.instance.blackColor,
@@ -9,7 +13,7 @@ mixin _AppLightTheme {
         shadow: AppColorScheme.instance.blackColor.withOpacity(.1),
       );
 
-  TextTheme get lightTextTheme => GoogleFonts.plusJakartaSansTextTheme().apply(
+  TextTheme get lightTextTheme => _plusJakartaFont.apply(
         displayColor: lightColorScheme.onSurface,
         bodyColor: lightColorScheme.onSurface,
         decorationColor: lightColorScheme.onSurface,
@@ -19,7 +23,7 @@ mixin _AppLightTheme {
         primarySwatch: AppColorScheme.instance.primarySwatch,
         colorScheme: lightColorScheme,
         textTheme: lightTextTheme,
-        fontFamily: GoogleFonts.montserrat().fontFamily,
+        fontFamily: _montserratFont.fontFamily,
         scaffoldBackgroundColor: lightColorScheme.surface,
         primaryColor: lightColorScheme.primary,
         iconTheme: IconThemeData(color: lightColorScheme.onSurface),
@@ -27,26 +31,12 @@ mixin _AppLightTheme {
           hintStyle: lightTextTheme.labelSmall,
           fillColor: lightColorScheme.surface,
         ),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: lightColorScheme.surface.withOpacity(.9),
-          selectedItemColor: lightColorScheme.primary,
-        ),
+        bottomNavigationBarTheme: _buildBottomNavBarTheme(),
         bottomSheetTheme: BottomSheetThemeData(
           backgroundColor: lightColorScheme.surface,
         ),
-        tabBarTheme: TabBarTheme(
-          overlayColor: WidgetStateProperty.all(Colors.transparent),
-          indicatorColor: lightColorScheme.primary,
-          indicatorSize: TabBarIndicatorSize.tab,
-        ),
-        chipTheme: ChipThemeData(
-          brightness: Brightness.light,
-          selectedColor: lightColorScheme.primary,
-          backgroundColor: lightColorScheme.surface,
-          side: BorderSide(color: lightColorScheme.primary, width: .7),
-          labelStyle:
-              GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w500, color: lightColorScheme.primary),
-        ),
+        tabBarTheme: _buildTabBarTheme(),
+        chipTheme: _buildChipTheme(),
         dividerTheme: DividerThemeData(
           color: lightColorScheme.onSurface.withOpacity(.2),
           thickness: .3,
@@ -56,8 +46,10 @@ mixin _AppLightTheme {
           backgroundColor: lightColorScheme.primary,
           foregroundColor: lightColorScheme.onPrimary,
         ),
-        popupMenuTheme:
-            PopupMenuThemeData(color: lightColorScheme.surface.withOpacity(.1), surfaceTintColor: Colors.amber),
+        popupMenuTheme: PopupMenuThemeData(
+          color: lightColorScheme.surface.withOpacity(.1),
+          surfaceTintColor: Colors.amber,
+        ),
         progressIndicatorTheme: ProgressIndicatorThemeData(
           color: lightColorScheme.primary,
           refreshBackgroundColor: lightColorScheme.surface,
@@ -81,4 +73,36 @@ mixin _AppLightTheme {
           ),
         ],
       );
+
+  // BottomNavigationBarThemeData
+  BottomNavigationBarThemeData _buildBottomNavBarTheme() {
+    return BottomNavigationBarThemeData(
+      backgroundColor: lightColorScheme.surface.withOpacity(.9),
+      selectedItemColor: lightColorScheme.primary,
+    );
+  }
+
+  // TabBarTheme
+  TabBarTheme _buildTabBarTheme() {
+    return TabBarTheme(
+      overlayColor: WidgetStateProperty.all(Colors.transparent),
+      indicatorColor: lightColorScheme.primary,
+      indicatorSize: TabBarIndicatorSize.tab,
+    );
+  }
+
+  // ChipThemeData
+  ChipThemeData _buildChipTheme() {
+    return ChipThemeData(
+      brightness: Brightness.light,
+      selectedColor: lightColorScheme.primary,
+      backgroundColor: lightColorScheme.surface,
+      side: BorderSide(color: lightColorScheme.primary, width: .7),
+      labelStyle: _montserratFont.copyWith(
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+        color: lightColorScheme.primary,
+      ),
+    );
+  }
 }

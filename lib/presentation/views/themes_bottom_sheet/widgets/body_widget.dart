@@ -12,7 +12,8 @@ final class _BodyWidget extends StatelessWidget {
       controller: PrimaryScrollController.maybeOf(context),
       slivers: [
         SliverPadding(
-          padding: context.screenPaddingVertical + context.screenPaddingHorizontal * .5,
+          padding:
+              const PaddingConstants.screenPaddingVertical() + const PaddingConstants.screenPaddingHorizontal() * .5,
           sliver: const _GridBuilder(),
         ),
         const SliverBottomSafeWidget(),

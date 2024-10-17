@@ -9,6 +9,7 @@ import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_widget.dart';
+import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/presentation/views/my_quotes_view/my_quotes_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 

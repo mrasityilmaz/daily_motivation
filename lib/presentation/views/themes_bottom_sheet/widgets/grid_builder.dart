@@ -9,8 +9,8 @@ final class _GridBuilder extends ViewModelWidget<ThemesBottomSheetViewModel> {
     return SliverGrid.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
-        crossAxisSpacing: context.screenPaddingRight.right * .5,
-        mainAxisSpacing: context.screenPaddingRight.right * .5,
+        crossAxisSpacing: const PaddingConstants.screenPaddingRight().right * .5,
+        mainAxisSpacing: const PaddingConstants.screenPaddingRight().right * .5,
         childAspectRatio: .85,
       ),
       itemBuilder: (context, index) {

@@ -113,7 +113,7 @@ final class AppDialogs {
               insetPadding: EdgeInsets.zero,
               alignment: Alignment.center,
               contentPadding: EdgeInsets.zero,
-              actionsPadding: context.paddingLow * 1.2,
+              actionsPadding: const PaddingConstants.allLow() * 1.2,
               shape: RoundedRectangleBorder(borderRadius: context.radius12),
               actions: [
                 Row(
@@ -186,8 +186,10 @@ final class AppDialogs {
       forwardAnimationCurve: Curves.ease,
       backgroundColor: context.colors.surfaceTint,
       reverseAnimationCurve: Curves.ease,
-      padding: context.screenPaddingHorizontal + context.screenPaddingBottom + context.screenPaddingTop * .5,
-      margin: context.screenPaddingHorizontal * 2 + context.adaptiveScreenPaddingBottom,
+      padding: const PaddingConstants.screenPaddingHorizontal() +
+          context.screenPaddingBottom +
+          context.screenPaddingTop * .5,
+      margin: const PaddingConstants.screenPaddingHorizontal() * 2 + context.adaptiveScreenPaddingBottom,
       borderRadius: BorderRadius.circular(10),
     );
 

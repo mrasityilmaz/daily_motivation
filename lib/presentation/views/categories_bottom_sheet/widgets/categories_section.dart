@@ -14,19 +14,20 @@ final class _CategoriesSection extends StatelessWidget {
         decoration: BoxDecoration(
           color: true ? context.appColors.darkGreyColor : context.appColors.lightGreyColor,
         ),
-        padding: context.screenPaddingHorizontal,
+        padding: const PaddingConstants.allLow(),
         child: Row(
           children: [
             Text(categoryGroup.name, style: context.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold)),
           ],
         ),
       ),
-      gridChildrenPadding:
-          context.screenPaddingHorizontal * .5 + context.paddingMediumBottom + context.screenPaddingTop,
+      gridChildrenPadding: const PaddingConstants.screenPaddingHorizontal() * .5 +
+          const PaddingConstants.mediumBottom() +
+          const PaddingConstants.screenPaddingTop(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        crossAxisSpacing: context.screenPaddingHorizontal.horizontal / 4,
-        mainAxisSpacing: context.screenPaddingHorizontal.horizontal / 4,
+        crossAxisSpacing: const PaddingConstants.screenPaddingHorizontal().horizontal / 4,
+        mainAxisSpacing: const PaddingConstants.screenPaddingHorizontal().horizontal / 4,
         childAspectRatio: 2.3,
       ),
       items: categoryGroup.subCategories.map((s) {

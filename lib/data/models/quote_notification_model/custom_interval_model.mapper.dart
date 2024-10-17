@@ -46,27 +46,28 @@ class QuoteNotificationScheduleCustomIntervalModelMapper
   @override
   final Function instantiate = _instantiate;
 
-  static QuoteNotificationScheduleCustomIntervalModel fromMap(
+  static QuoteNotificationScheduleCustomIntervalModel fromJson(
       Map<String, dynamic> map) {
     return ensureInitialized()
         .decodeMap<QuoteNotificationScheduleCustomIntervalModel>(map);
   }
 
-  static QuoteNotificationScheduleCustomIntervalModel fromJson(String json) {
+  static QuoteNotificationScheduleCustomIntervalModel fromJsonString(
+      String json) {
     return ensureInitialized()
         .decodeJson<QuoteNotificationScheduleCustomIntervalModel>(json);
   }
 }
 
 mixin QuoteNotificationScheduleCustomIntervalModelMappable {
-  String toJson() {
+  String toJsonString() {
     return QuoteNotificationScheduleCustomIntervalModelMapper
             .ensureInitialized()
         .encodeJson<QuoteNotificationScheduleCustomIntervalModel>(
             this as QuoteNotificationScheduleCustomIntervalModel);
   }
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return QuoteNotificationScheduleCustomIntervalModelMapper
             .ensureInitialized()
         .encodeMap<QuoteNotificationScheduleCustomIntervalModel>(

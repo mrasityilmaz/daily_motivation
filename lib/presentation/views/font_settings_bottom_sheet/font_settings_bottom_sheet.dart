@@ -15,6 +15,7 @@ import 'package:quotely/data/services/theme_configuration_service/theme_configur
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
+import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/vendor/slider_shape_override.dart';
 import 'package:stacked/stacked.dart';
 

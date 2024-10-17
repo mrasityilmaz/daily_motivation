@@ -7,9 +7,19 @@ final class _TopSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.paddingLowHorizontal,
+      padding: const PaddingConstants.lowHorizontal(),
       child: Row(
         children: [
+          if (locator<UserService>().isLoggedIn) ...[
+            TextButton(
+              onPressed: () {
+                Clipboard.setData(ClipboardData(text: locator<UserService>().user!.uid));
+              },
+              child: Text(
+                locator<UserService>().user!.uid.substring(0, 8),
+              ),
+            ),
+          ],
           const Spacer(),
           ClipRRect(
             borderRadius: context.radius12,

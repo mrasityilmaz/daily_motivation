@@ -31,7 +31,7 @@ final class __Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      minimum: context.adaptiveScreenPaddingBottom + EdgeInsets.only(top: context.adaptiveScreenPaddingBottom.bottom),
+      minimum: PaddingConstants.adaptiveScreenPaddingVertical(MediaQuery.viewPaddingOf(context).bottom),
       child: const Column(
         children: [
           _TopSection(),

@@ -21,6 +21,6 @@ final class ThemeConfigurationModel with ThemeConfigurationModelMappable {
   final double minFontSize;
   final Color textColor;
 
-  static const fromMap = ThemeConfigurationModelMapper.fromMap;
   static const fromJson = ThemeConfigurationModelMapper.fromJson;
+  static const fromJsonString = ThemeConfigurationModelMapper.fromJsonString;
 }
