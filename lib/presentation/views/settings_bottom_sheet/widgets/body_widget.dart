@@ -16,7 +16,7 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
             child: Column(
               children: [
                 Padding(
-                  padding: const PaddingConstants.onlyLowTop() + const PaddingConstants.onlyNormalBottom() * 2,
+                  padding: const PaddingConstants.lowTop() + const PaddingConstants.normalBottom() * 2,
                   child: AdvancedButtonWidget.text(
                     text: 'Be Premium',
                     onPressed: () {},

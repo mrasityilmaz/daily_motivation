@@ -71,7 +71,7 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
           ),
           if (viewModel.customIntervalValue.length <= 24) ...[
             Padding(
-              padding: context.paddingNormalTop,
+              padding: const PaddingConstants.normalTop(),
               child: Row(
                 children: [
                   Expanded(

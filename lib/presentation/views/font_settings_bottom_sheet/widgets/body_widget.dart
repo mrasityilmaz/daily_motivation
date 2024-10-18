@@ -164,7 +164,7 @@ final class _QuoteAndAuthorWidget extends ViewModelWidget<_FontSettingsBottomShe
 
   @override
   Widget build(BuildContext context, _FontSettingsBottomSheetViewModel viewModel) {
-    // final screenSize = (context.mediaQuery.removeViewPadding().size.height - (context.adaptiveScreenPaddingBottom.bottom * 2)) * .85;
+    // final screenSize = (context.mediaQuery.removeViewPadding().size.height - (PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom).bottom * 2)) * .85;
     // final RenderBox? renderBox = viewModel.autoSizeTextKey.currentContext?.findRenderObject() as RenderBox?;
     // final Rect widgetRect = (renderBox?.localToGlobal(Offset.zero) ?? Offset.zero) & (renderBox?.size ?? Size.zero);
     // final Rect safeArea = Rect.fromPoints(

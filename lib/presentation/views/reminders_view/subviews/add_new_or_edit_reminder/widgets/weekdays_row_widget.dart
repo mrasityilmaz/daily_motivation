@@ -12,7 +12,8 @@ final class __WeekDaysRow extends ViewModelWidget<_AddNewOrEditReminderViewModel
           final bool isSelected = viewModel.isDaysOfWeekSelected(e);
           return Expanded(
             child: Padding(
-              padding: const PaddingConstants.lowVertical() + (e != 0 ? context.paddingLowLeft * .5 : EdgeInsets.zero),
+              padding: const PaddingConstants.lowVertical() +
+                  (e != 0 ? const PaddingConstants.lowLeft() * .5 : EdgeInsets.zero),
               child: AdvancedButtonWidget(
                 expand: true,
                 backgroundColor: isSelected ? context.colors.primary : context.colors.surface,

@@ -15,9 +15,9 @@ import 'package:quotely/data/models/quote_notification_model/quote_notification_
 import 'package:quotely/data/services/hive_service/boxes/quote_notification_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:quotely/presentation/core_widgets/basic/choose_circle_icon.dart';
-import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:stacked/stacked.dart';

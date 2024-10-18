@@ -5,6 +5,7 @@ import 'package:quotely/config/navigator/app_navigator.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/view_constants/padding_constants.dart';
 
 @immutable
 final class ShowOrPayDialogBody extends StatelessWidget {
@@ -58,7 +59,9 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                 Align(
                   alignment: Alignment.topCenter,
                   child: Padding(
-                    padding: context.screenPaddingTop + const PaddingConstants.allLow() + context.paddingNormalTop,
+                    padding: const PaddingConstants.screenPaddingTop() +
+                        const PaddingConstants.allLow() +
+                        const PaddingConstants.normalTop(),
                     child: icon,
                   ),
                 ),
@@ -70,7 +73,7 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Padding(
-                    padding: context.paddingNormalTop + const PaddingConstants.lowBottom(),
+                    padding: const PaddingConstants.normalTop() + const PaddingConstants.lowBottom(),
                     child: AutoSizeText(
                       title,
                       style: context.textTheme.titleMedium?.copyWith(

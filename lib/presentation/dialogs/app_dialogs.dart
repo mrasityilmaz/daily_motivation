@@ -11,6 +11,7 @@ import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:quotely/presentation/dialogs/lock_overlay_dialog.dart';
 import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
+import 'package:quotely/presentation/view_constants/padding_constants.dart';
 
 final class AppDialogs {
   factory AppDialogs() => instance;
@@ -187,9 +188,10 @@ final class AppDialogs {
       backgroundColor: context.colors.surfaceTint,
       reverseAnimationCurve: Curves.ease,
       padding: const PaddingConstants.screenPaddingHorizontal() +
-          context.screenPaddingBottom +
-          context.screenPaddingTop * .5,
-      margin: const PaddingConstants.screenPaddingHorizontal() * 2 + context.adaptiveScreenPaddingBottom,
+          const PaddingConstants.screenPaddingBottom() +
+          const PaddingConstants.screenPaddingTop() * .5,
+      margin: const PaddingConstants.screenPaddingHorizontal() * 2 +
+          PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom),
       borderRadius: BorderRadius.circular(10),
     );
 

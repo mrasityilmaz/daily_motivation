@@ -30,12 +30,14 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
           ),
         ),
         SliverSafeArea(
-          minimum: context.mediaQuery.viewPadding.bottom == 0 ? EdgeInsets.zero : context.adaptiveScreenPaddingBottom,
+          minimum: context.mediaQuery.viewPadding.bottom == 0
+              ? EdgeInsets.zero
+              : PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom),
           top: false,
           bottom: context.mediaQuery.viewPadding.bottom > 0,
           sliver: SliverToBoxAdapter(
             child: Padding(
-              padding: const PaddingConstants.screenPaddingHorizontal() + context.paddingNormalTop,
+              padding: const PaddingConstants.screenPaddingHorizontal() + const PaddingConstants.normalTop(),
               child: Row(
                 children: [
                   Expanded(

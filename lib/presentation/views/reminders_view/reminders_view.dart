@@ -14,9 +14,10 @@ import 'package:quotely/data/models/reminder_model/reminder_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/reminder_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
 import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
-import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
 import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_widget.dart';
+import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:stacked/stacked.dart';
 
 part 'reminders_viewmodel.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/presentation/view_constants/padding_constants.dart';
 
 @immutable
 final class SliverBottomSafeWidget extends StatelessWidget {
@@ -10,7 +10,8 @@ final class SliverBottomSafeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverSafeArea(
-      minimum: context.adaptiveScreenPaddingBottom + context.paddingMediumBottom,
+      minimum: PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom) +
+          const PaddingConstants.mediumBottom(),
       sliver: const SliverToBoxAdapter(
         child: SizedBox(),
       ),

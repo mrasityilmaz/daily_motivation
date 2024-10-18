@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quotely/presentation/core_widgets/loading_indicator/viewmodel_loading_indicator_widget.dart';
-import 'package:quotely/presentation/view_constants/radius_constants.dart';
+import 'package:quotely/core/extensions/validator_extension.dart';
+import 'package:quotely/presentation/components/viewmodel_draggable_sheet.dart';
+import 'package:quotely/presentation/core_widgets/textfield/textformfield_widget.dart';
 import 'package:stacked/stacked.dart';
 
 @immutable
@@ -11,22 +12,23 @@ final class LoginBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<LoginBottomSheetViewModel>.nonReactive(
       viewModelBuilder: LoginBottomSheetViewModel.new,
-      builder: (context, model, child) {
-        return DraggableScrollableSheet(
-          initialChildSize: 1,
-          minChildSize: .8,
-          builder: (context, scrollController) => PrimaryScrollController(
-            controller: scrollController,
-            child: const ClipRRect(
-              borderRadius: RadiusConstants.mediumTop(),
-              child: Stack(
-                children: [
-                  Scaffold(
-                    body: Column(),
-                  ),
-                  ViewModelLoadingIndicator<LoginBottomSheetViewModel>(),
-                ],
-              ),
+      builder: (context, viewModel, child) {
+        return ViewModelDraggableSheet<LoginBottomSheetViewModel>(
+          body: Scaffold(
+            body: Column(
+              children: [
+                CustomTextFormFieldWidget(
+                  controller: viewModel.emailController,
+                  // verticalTextAlign: TextAlignVertical.top,
+                  hintText: 'Email',
+                  maxLines: null,
+                  textInputType: TextInputType.emailAddress,
+                  textCapitalization: TextCapitalization.none,
+                  validator: (value) {
+                    return value.validateEmail;
+                  },
+                ),
+              ],
             ),
           ),
         );
@@ -37,4 +39,14 @@ final class LoginBottomSheet extends StatelessWidget {
 
 final class LoginBottomSheetViewModel extends BaseViewModel {
   LoginBottomSheetViewModel();
+
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 }

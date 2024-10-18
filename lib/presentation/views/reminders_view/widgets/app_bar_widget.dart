@@ -16,7 +16,7 @@ final class _AppBarWidget extends ViewModelWidget<_RemindersViewModel> implement
       actions: [
         if (!viewModel.hasReachedMaxReminderCount) ...[
           Padding(
-            padding: context.screenPaddingRight * .5,
+            padding: const PaddingConstants.screenPaddingRight() * .5,
             child: AdvancedButtonWidget.icon(
               backgroundColor: context.colors.surface,
               shape: RoundedRectangleBorder(

@@ -6,6 +6,7 @@ import 'package:quotely/data/models/theme_configuration_model/theme_configuratio
 import 'package:quotely/data/services/hive_service/boxes/theme_config_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:stacked/stacked.dart';
 
 part 'screen_design_tools_mixin.dart';

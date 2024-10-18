@@ -10,9 +10,9 @@ final class _EqualIntervalSection
     return AnimatedCrossFade(
       duration: const Duration(milliseconds: 300),
       firstChild: const SizedBox(),
-      secondChild: Padding(
-        padding: context.paddingNormalVertical,
-        child: const Column(
+      secondChild: const Padding(
+        padding: PaddingConstants.normalVertical(),
+        child: Column(
           children: [
             __TimeRangeRow(),
             __StartAndEndTimePickerRowWidget(),
@@ -38,7 +38,7 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
   @override
   Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
     return Padding(
-      padding: context.paddingNormalBottom + const PaddingConstants.onlyLowTop(),
+      padding: const PaddingConstants.normalBottom() + const PaddingConstants.lowTop(),
       child: Row(
         children: [
           Expanded(
@@ -60,9 +60,11 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
                   },
                 ),
                 Padding(
-                  padding: context.paddingLowLeft * .5,
-                  child: Text('Start at',
-                      style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.75))),
+                  padding: const PaddingConstants.lowLeft() * .5,
+                  child: Text(
+                    'Start at',
+                    style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.75)),
+                  ),
                 ),
               ],
             ),
@@ -94,9 +96,11 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
                   },
                 ),
                 Padding(
-                  padding: context.paddingLowLeft * .5,
-                  child: Text('End to',
-                      style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.75))),
+                  padding: const PaddingConstants.lowLeft() * .5,
+                  child: Text(
+                    'End to',
+                    style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.75)),
+                  ),
                 ),
               ],
             ),
@@ -123,7 +127,7 @@ final class __StartAndEndTimePickerRowWidget extends ViewModelWidget<_AddNewOrEd
                 final bool isSelected = viewModel.equalIntervalValue.interval == e.$1 + 1;
                 return Padding(
                   key: e.$2,
-                  padding: context.paddingLowLeft,
+                  padding: const PaddingConstants.lowLeft(),
                   child: AdvancedButtonWidget.text(
                     text: 'x${e.$1 + 1}',
                     textStyle: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
