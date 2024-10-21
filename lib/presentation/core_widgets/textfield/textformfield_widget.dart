@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/shared/theme/color_scheme.dart';
 
@@ -15,6 +15,7 @@ final class CustomTextFormFieldWidget extends StatelessWidget {
     required this.hintText,
     required this.validator,
     super.key,
+    this.focusNode,
     this.autofillHints,
     this.textStyle,
     this.hintTextStyle,
@@ -48,6 +49,7 @@ final class CustomTextFormFieldWidget extends StatelessWidget {
   })  : borderColor = AppColorScheme.instance.surfaceColor.withOpacity(.5),
         hintTextColor = AppColorScheme.instance.surfaceColor;
 
+  final FocusNode? focusNode;
   final String? Function(String?) validator;
   final Iterable<String>? autofillHints;
   final TextEditingController controller;
@@ -103,6 +105,7 @@ final class CustomTextFormFieldWidget extends StatelessWidget {
       valueListenable: isObscured,
       builder: (BuildContext context, bool obscuredValue, Widget? child) {
         return TextFormField(
+          focusNode: focusNode,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           validator: validator,
           autofillHints: autofillHints,
@@ -113,7 +116,11 @@ final class CustomTextFormFieldWidget extends StatelessWidget {
           inputFormatters: inputFormatter,
           keyboardType: textInputType,
           maxLength: maxLength,
-          maxLines: expands == true ? null : maxLines,
+          maxLines: expands == true
+              ? isObscureText == true
+                  ? 1
+                  : null
+              : maxLines,
           minLines: expands == true ? null : 1,
           expands: expands == true,
           readOnly: readOnly ?? false,
@@ -123,13 +130,10 @@ final class CustomTextFormFieldWidget extends StatelessWidget {
           obscuringCharacter: '*',
           onFieldSubmitted: onSubmitted,
           onTapOutside: (event) {
-            if (onTapOutside != null) {
-              onTapOutside!();
-            } else {
-              FocusManager.instance.primaryFocus?.unfocus();
+            FocusManager.instance.primaryFocus?.unfocus();
 
-              SystemChannels.textInput.invokeMethod('TextInput.hide');
-            }
+            SystemChannels.textInput.invokeMethod('TextInput.hide');
+            onTapOutside?.call();
           },
           style: textStyle ?? context.textTheme.titleMedium?.copyWith(color: textColor, fontWeight: FontWeight.w500),
           textCapitalization: textCapitalization ?? TextCapitalization.none,
@@ -176,9 +180,11 @@ final class CustomTextFormFieldWidget extends StatelessWidget {
             suffixIcon: suffixIcon == null && isObscureText == true
                 ? Padding(
                     padding: const PaddingConstants.lowRight() * .5,
-                    child: AdvancedButtonWidget.icon(
-                      backgroundColor: Colors.transparent,
-                      icon: Icon(
+                    child: CustomButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.transparent,
+                      ),
+                      child: Icon(
                         obscuredValue ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
                         color: hintTextColor ?? context.colors.onSurface.withOpacity(.6),
                       ),

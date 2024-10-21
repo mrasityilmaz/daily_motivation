@@ -16,11 +16,12 @@ import 'package:quotely/data/models/theme_configuration_model/theme_configuratio
 import 'package:quotely/data/services/user_service/user_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
-import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
 import 'package:quotely/presentation/overrides/multiselector_viewmodel_widget.dart';
 import 'package:quotely/presentation/overrides/vselector_with_viewmodel_widget.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/presentation/views/home_view/home_viewmodel.dart';
+import 'package:quotely/presentation/views/sign_view/login_bottom_sheet/login_view.dart';
 import 'package:stacked/stacked.dart';
 
 part 'widgets/bottom_buttons_section.dart';
@@ -44,6 +45,7 @@ final class HomeView extends StatelessWidget {
         return const Stack(
           children: [
             Scaffold(
+              resizeToAvoidBottomInset: false,
               extendBody: true,
               bottomNavigationBar: _BottomButtonsSection(),
               body: _MainBodyWidget(),

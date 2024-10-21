@@ -35,7 +35,7 @@ final class UserService extends _IUserService with _UserHelper, _AuthHelper {
       await getSignedUserAccount();
       await setUserRequiredFields();
     } catch (e, s) {
-      LoggerService.catchLog(e, s, 'UserService.initUser');
+      printCatchLog(e, s, 'initUser');
     }
   }
 

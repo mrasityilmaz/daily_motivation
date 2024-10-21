@@ -72,7 +72,7 @@ final class _AddNewOrEditQuoteViewBodyWidget extends ViewModelWidget<AddNewOrEdi
               child: Row(
                 children: [
                   Expanded(
-                    child: AdvancedButtonWidget.text(
+                    child: CustomButton.text(
                       text: 'Save',
                       textStyle: context.textTheme.titleMedium,
                       onPressed: () async => viewModel.saveQuote(),

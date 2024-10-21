@@ -1,7 +1,8 @@
 part of '../categories_bottom_sheet.dart';
 
 @immutable
-final class _CategoriesBottomSheetAppBar extends SelectorViewModelWidget<CategoriesBottomSheetViewModel, bool> implements PreferredSizeWidget {
+final class _CategoriesBottomSheetAppBar extends SelectorViewModelWidget<CategoriesBottomSheetViewModel, bool>
+    implements PreferredSizeWidget {
   const _CategoriesBottomSheetAppBar();
 
   @override
@@ -15,9 +16,8 @@ final class _CategoriesBottomSheetAppBar extends SelectorViewModelWidget<Categor
       centerTitle: true,
       actions: [
         if (!isPremium) ...[
-          AdvancedButtonWidget.text(
+          CustomButton.text(
             text: 'Kilitleri Kaldır',
-            backgroundColor: Colors.transparent,
             onPressed: () {},
             textColor: context.colors.onSurface,
           ),

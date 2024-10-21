@@ -3,7 +3,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quotely/config/navigator/app_navigator.dart';
+import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/constants/enums/categories_enum.dart';
 import 'package:quotely/core/constants/enums/reminder_schedule_enum.dart';
 import 'package:quotely/core/extensions/categories_extension.dart';
@@ -16,8 +16,8 @@ import 'package:quotely/data/services/hive_service/boxes/quote_notification_serv
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
-import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
 import 'package:quotely/presentation/core_widgets/basic/choose_circle_icon.dart';
+import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:stacked/stacked.dart';
@@ -100,17 +100,17 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                                 child: Padding(
                                   padding: const PaddingConstants.lowVertical() +
                                       (e != 0 ? const PaddingConstants.lowLeft() * .5 : EdgeInsets.zero),
-                                  child: AdvancedButtonWidget(
+                                  child: CustomButton.outlined(
                                     expand: true,
                                     backgroundColor: isSelected ? context.colors.primary : context.colors.surface,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(12),
-                                      side: BorderSide(
-                                        color: isSelected
-                                            ? context.colors.primary
-                                            : context.colors.primary.withOpacity(.5),
-                                      ),
-                                    ),
+                                    // shape: RoundedRectangleBorder(
+                                    //   borderRadius: BorderRadius.circular(12),
+                                    //   side: BorderSide(
+                                    //     color: isSelected
+                                    //         ? context.colors.primary
+                                    //         : context.colors.primary.withOpacity(.5),
+                                    //   ),
+                                    // ),
                                     onPressed: () {
                                       viewModel.addOrRemoveSelectedDaysOfWeekIndex(e);
                                     },
@@ -134,7 +134,7 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                         SizedBox(
                           height: context.lowValue,
                         ),
-                        AdvancedButtonWidget(
+                        CustomButton(
                           backgroundColor: context.colors.primary.withOpacity(.1),
                           padding: const PaddingConstants.lowVertical() * 1.5 + const PaddingConstants.lowHorizontal(),
                           child: Row(
@@ -183,7 +183,7 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
                         SizedBox(
                           height: context.lowValue,
                         ),
-                        AdvancedButtonWidget(
+                        CustomButton(
                           backgroundColor: context.colors.primary.withOpacity(.1),
                           padding: const PaddingConstants.lowVertical() * 1.5 + const PaddingConstants.lowHorizontal(),
                           child: Row(
@@ -248,7 +248,7 @@ final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotif
               child: Row(
                 children: [
                   Expanded(
-                    child: AdvancedButtonWidget.text(
+                    child: CustomButton.text(
                       text: 'Save',
                       textStyle: context.textTheme.titleMedium,
                       onPressed: () async => viewModel.save(),

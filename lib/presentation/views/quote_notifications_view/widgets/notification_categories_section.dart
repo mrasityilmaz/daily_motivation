@@ -16,13 +16,13 @@ final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotific
               Text(
                 'Notification Categories',
                 style: context.textTheme.bodyLarge
-                    ?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onBackground.withOpacity(.75)),
+                    ?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onSurface.withOpacity(.75)),
               ),
               Row(
                 children: [
                   Icon(
                     Icons.info_outlined,
-                    color: context.colors.onBackground.withOpacity(.4),
+                    color: context.colors.onSurface.withOpacity(.4),
                     size: 16,
                   ),
                   const SizedBox(width: 4),
@@ -30,7 +30,7 @@ final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotific
                     'Maximum 3 categories can be selected',
                     maxLines: 2,
                     style: context.textTheme.bodySmall
-                        ?.copyWith(color: context.colors.onBackground.withOpacity(.4), fontStyle: FontStyle.italic),
+                        ?.copyWith(color: context.colors.onSurface.withOpacity(.4), fontStyle: FontStyle.italic),
                   ),
                 ],
               ),
@@ -60,14 +60,8 @@ final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotific
                   itemBuilder: (context, index) {
                     final Categories category = Categories.values.freeCategories[index];
                     final bool isSelected = viewModel.isCategorySelected(category);
-                    return AdvancedButtonWidget(
+                    return CustomButton.outlined(
                       backgroundColor: context.colors.primary.withOpacity(isSelected ? 1 : .2),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        side: BorderSide(
-                          color: context.colors.primary.withOpacity(.3),
-                        ),
-                      ),
                       onPressed: () => viewModel.addOrRemoveCategory(category: category),
                       padding: const PaddingConstants.lowHorizontal() + const PaddingConstants.lowVertical() * .5,
                       child: LayoutBuilder(
@@ -78,10 +72,10 @@ final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotific
                                 child: AutoSizeText(
                                   category.name,
                                   style: context.textTheme.titleSmall?.copyWith(
-                                      color: isSelected
-                                          ? context.colors.background
-                                          : context.colors.onBackground.withOpacity(.6),
-                                      fontWeight: FontWeight.bold),
+                                    color:
+                                        isSelected ? context.colors.surface : context.colors.onSurface.withOpacity(.6),
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                   maxLines: 1,
                                   maxFontSize: context.textTheme.titleSmall!.fontSize!,
                                   minFontSize: context.textTheme.labelSmall!.fontSize!,

@@ -5,10 +5,30 @@ mixin _UILogicMixin {
   /// Show CategoriesBottomSheet
   ///
   Future<void> showCategoriesBottomSheet(BuildContext context) async {
-    await _showBottomSheet(
-      context,
-      child: const CategoriesBottomSheet(),
-    );
+    // await _showBottomSheet(
+    //   context,
+    //   child: const CategoriesBottomSheet(),
+    // );
+
+    await LoginView.showAsModalBottomSheet(context);
+
+    // await showMaterialModalBottomSheet<void>(
+    //   context: context,
+    //   animationCurve: Curves.fastOutSlowIn,
+    //   bounce: true,
+    //   duration: const Duration(milliseconds: 250),
+    //   builder: (context) => const Column(
+    //     mainAxisSize: MainAxisSize.min,
+    //     children: [
+    //       Gap.H(200),
+    //       Text('Hello'),
+    //       TextField(),
+    //       Gap.H(200),
+    //     ],
+    //   ),
+    // );
+
+    // await CategoriesBottomSheet.showBottomSheet<void>(context);
   }
 
   ///
@@ -38,10 +58,11 @@ mixin _UILogicMixin {
     await AppDialogs.instance.showModalBottomSheetDialog<void>(
       context,
       backgroundColor: Colors.transparent,
-      constraints: BoxConstraints(maxHeight: context.mediaQuery.size.height * .9),
+      constraints: BoxConstraints(maxHeight: context.height),
       elevation: 0,
       useRootNavigator: true,
       isScrollControlled: true,
+      useSafeArea: true,
       child: child,
     );
   }

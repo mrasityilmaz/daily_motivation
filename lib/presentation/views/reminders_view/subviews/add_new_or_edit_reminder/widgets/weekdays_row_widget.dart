@@ -14,15 +14,9 @@ final class __WeekDaysRow extends ViewModelWidget<_AddNewOrEditReminderViewModel
             child: Padding(
               padding: const PaddingConstants.lowVertical() +
                   (e != 0 ? const PaddingConstants.lowLeft() * .5 : EdgeInsets.zero),
-              child: AdvancedButtonWidget(
+              child: CustomButton.outlined(
                 expand: true,
                 backgroundColor: isSelected ? context.colors.primary : context.colors.surface,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  side: BorderSide(
-                    color: isSelected ? context.colors.primary : context.colors.primary.withOpacity(.5),
-                  ),
-                ),
                 onPressed: () {
                   viewModel.addOrRemoveSelectedDaysOfWeekIndex(e);
                 },

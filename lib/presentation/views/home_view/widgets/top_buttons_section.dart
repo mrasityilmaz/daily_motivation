@@ -25,11 +25,17 @@ final class _TopSection extends StatelessWidget {
             borderRadius: context.radius12,
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
-              child: AdvancedButtonWidget.icon(
+              child: CustomButton(
                 backgroundColor: context.colors.scrim.withOpacity(.3),
                 onPressed: () async {
                   // locator<ThemeService>().toggleDarkLightTheme();
                   try {
+                    // await LoginView.showBottomSheet<void>(context);
+                    // await SignUpView.showAsModalBottomSheet(context);
+                    await LoginView.showAsModalBottomSheet(context);
+
+                    // await locator<AppRouter>().pushWidget(const SignUpView());
+
                     // // await locator<AppWorkManager>().schedulePeriodicTask();
                     // await locator<NotificationService>().showNotification(
                     //   message: 'Hello from the buttons! - ${DateTime.now()}',
@@ -38,7 +44,7 @@ final class _TopSection extends StatelessWidget {
                     LoggerService.catchLog(e, s);
                   }
                 },
-                icon: Image.asset(
+                child: Image.asset(
                   Assets.crow_front_premium_png,
                   width: 32,
                   height: 32,

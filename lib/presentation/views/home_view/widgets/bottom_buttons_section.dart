@@ -17,17 +17,23 @@ final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel
                 borderRadius: context.radius12,
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
-                  child: AdvancedButtonWidget.iconText(
+                  child: CustomButton(
                     backgroundColor: context.colors.scrim.withOpacity(.3),
                     onPressed: () async => viewModel.showCategoriesBottomSheet(context),
-                    text: category.name,
-                    textColor: Colors.white,
-                    icon: const Icon(
-                      CupertinoIcons.square_grid_2x2,
-                      color: Colors.white,
-                      size: 32,
+                    child: Row(
+                      children: [
+                        Icon(
+                          Platform.isAndroid ? Icons.category_rounded : CupertinoIcons.square_grid_2x2,
+                          color: Colors.white,
+                          size: 32,
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          category.name,
+                          style: context.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                        ),
+                      ],
                     ),
-                    textStyle: context.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
                   ),
                 ),
               ),
@@ -36,10 +42,10 @@ final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel
                 borderRadius: context.radius12,
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
-                  child: AdvancedButtonWidget.icon(
+                  child: CustomButton(
                     backgroundColor: context.colors.scrim.withOpacity(.3),
                     onPressed: () async => viewModel.showThemesBottomSheet(context),
-                    icon: Icon(
+                    child: Icon(
                       Platform.isAndroid ? Icons.format_paint_rounded : CupertinoIcons.paintbrush,
                       color: Colors.white,
                       size: 32,
@@ -91,10 +97,10 @@ final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel
                 borderRadius: context.radius12,
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
-                  child: AdvancedButtonWidget.icon(
+                  child: CustomButton(
                     backgroundColor: context.colors.scrim.withOpacity(.3),
                     onPressed: () async => viewModel.showSettingsBottomSheet(context),
-                    icon: Icon(
+                    child: Icon(
                       Platform.isAndroid ? Icons.settings : CupertinoIcons.settings,
                       color: Colors.white,
                       size: 32,

@@ -22,7 +22,7 @@ final class _SettingsRowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const PaddingConstants.lowBottom(),
-      child: AdvancedButtonWidget(
+      child: CustomButton(
         backgroundColor: context.colors.surface,
         padding: const PaddingConstants.lowVertical() * 1.2 + const PaddingConstants.lowHorizontal(),
         onPressed: onPressed,

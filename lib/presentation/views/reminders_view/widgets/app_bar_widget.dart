@@ -17,16 +17,10 @@ final class _AppBarWidget extends ViewModelWidget<_RemindersViewModel> implement
         if (!viewModel.hasReachedMaxReminderCount) ...[
           Padding(
             padding: const PaddingConstants.screenPaddingRight() * .5,
-            child: AdvancedButtonWidget.icon(
+            child: CustomButton.outlined(
               backgroundColor: context.colors.surface,
-              shape: RoundedRectangleBorder(
-                borderRadius: context.radius8,
-                side: BorderSide(
-                  color: context.colors.primary,
-                  width: 2,
-                ),
-              ),
-              icon: Badge(
+              onPressed: viewModel.onTapAddNewReminder,
+              child: Badge(
                 label: Container(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
@@ -46,7 +40,6 @@ final class _AppBarWidget extends ViewModelWidget<_RemindersViewModel> implement
                   color: context.colors.primary,
                 ),
               ),
-              onPressed: viewModel.onTapAddNewReminder,
             ),
           ),
         ],

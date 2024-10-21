@@ -18,7 +18,7 @@ final class _MyQuotesViewBodyWidget extends SelectorViewModelWidget<MyQuotesView
             },
           ),
         ),
-        const SliverBottomSafeWidget(),
+        const SliverAdaptiveBottomSafeAreaWidget(),
       ],
     );
   }

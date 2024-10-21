@@ -16,16 +16,9 @@ final class _MyQuotesAppBar extends ViewModelWidget<MyQuotesViewModel> implement
       actions: [
         Padding(
           padding: const PaddingConstants.screenPaddingRight() * .5,
-          child: AdvancedButtonWidget.icon(
+          child: CustomButton.outlined(
             backgroundColor: context.colors.surface,
-            shape: RoundedRectangleBorder(
-              borderRadius: context.radius8,
-              side: BorderSide(
-                color: context.colors.primary,
-                width: 2,
-              ),
-            ),
-            icon: Icon(
+            child: Icon(
               Icons.add_rounded,
               color: context.colors.primary,
             ),

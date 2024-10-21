@@ -62,6 +62,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '250333051303',
     projectId: 'quotely-app-52130',
     storageBucket: 'quotely-app-52130.appspot.com',
+    iosClientId: '250333051303-0qpuobt9sgv515r08vqir93ncmob6b2s.apps.googleusercontent.com',
     iosBundleId: 'com.devrasityilmaz.quotely',
   );
 }

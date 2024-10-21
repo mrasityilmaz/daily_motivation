@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 
 @immutable
-final class SliverBottomSafeWidget extends StatelessWidget {
-  const SliverBottomSafeWidget({
+final class SliverAdaptiveBottomSafeAreaWidget extends StatelessWidget {
+  const SliverAdaptiveBottomSafeAreaWidget({
     super.key,
   });
 
@@ -11,7 +11,7 @@ final class SliverBottomSafeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverSafeArea(
       minimum: PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom) +
-          const PaddingConstants.mediumBottom(),
+          const PaddingConstants.highBottom(),
       sliver: const SliverToBoxAdapter(
         child: SizedBox(),
       ),

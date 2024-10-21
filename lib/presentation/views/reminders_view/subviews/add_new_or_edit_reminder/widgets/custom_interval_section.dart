@@ -30,14 +30,18 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
                           child: Text(
                             '${index + 1}.',
                             style: context.textTheme.titleSmall?.copyWith(
-                                color: context.colors.onSurface.withOpacity(.75), fontWeight: FontWeight.bold),
+                              color: context.colors.onSurface.withOpacity(.75),
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),
                       Expanded(
                         child: Container(
                           constraints: const BoxConstraints(
-                              minHeight: kMinInteractiveDimension * .95, maxHeight: kMinInteractiveDimension * .95),
+                            minHeight: kMinInteractiveDimension * .95,
+                            maxHeight: kMinInteractiveDimension * .95,
+                          ),
                           decoration: ShapeDecoration(
                             shape: RoundedRectangleBorder(
                               borderRadius: context.radius8,
@@ -45,8 +49,11 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
                             color: context.colors.onSurface.withOpacity(.05),
                           ),
                           child: Center(
-                              child: Text(currentValue.format(context),
-                                  style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold))),
+                            child: Text(
+                              currentValue.format(context),
+                              style: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
+                            ),
+                          ),
                         ),
                       ),
                       InkWell(
@@ -75,11 +82,9 @@ final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminder
               child: Row(
                 children: [
                   Expanded(
-                    child: AdvancedButtonWidget.text(
+                    child: CustomButton.outlinedText(
                       text: 'Add Time',
                       backgroundColor: context.colors.surface,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: context.radius12, side: BorderSide(color: context.colors.primary, width: 1.5)),
                       expand: true,
                       textColor: context.colors.primary,
                       onPressed: () async {

@@ -18,7 +18,7 @@ final class _FavoritesViewBodyWidget extends SelectorViewModelWidget<FavoritesVi
             },
           ),
         ),
-        const SliverBottomSafeWidget(),
+        const SliverAdaptiveBottomSafeAreaWidget(),
       ],
     );
   }

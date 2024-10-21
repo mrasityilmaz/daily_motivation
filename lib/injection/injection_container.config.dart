@@ -11,7 +11,7 @@
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
-import '../config/navigator/app_navigator.dart' as _i70;
+import '../config/navigator/app_router.dart' as _i857;
 import '../core/platform/network_info.dart' as _i461;
 import '../core/services/notification_service/notification_service.dart'
     as _i1000;
@@ -76,7 +76,7 @@ Future<_i174.GetIt> $initGetIt(
     () => const _i862.UserHttpRepositoryImpl(),
     registerFor: {_prod},
   );
-  gh.lazySingleton<_i70.AppRouter>(() => _i70.AppRouter());
+  gh.lazySingleton<_i857.AppRouter>(() => _i857.AppRouter());
   await gh.lazySingletonAsync<_i851.HiveService>(
     () {
       final i = _i851.HiveService();

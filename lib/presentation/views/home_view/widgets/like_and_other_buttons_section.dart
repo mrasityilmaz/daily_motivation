@@ -19,10 +19,9 @@ final class _LikeAndOtherButtonsSection extends ViewModelWidget<HomeViewModel> {
               child: ValueListenableBuilder(
                 valueListenable: viewModel.currentQuoteIsLiked,
                 builder: (BuildContext context, bool isLikedValue, Widget? child) {
-                  return AdvancedButtonWidget.icon(
+                  return CustomButton(
                     backgroundColor: context.colors.scrim.withOpacity(.3),
-                    bounceIt: true,
-                    icon: Icon(
+                    child: Icon(
                       isLikedValue ? CupertinoIcons.heart_fill : CupertinoIcons.heart,
                       size: 32,
                       color: isLikedValue ? Colors.red : Colors.white,
@@ -40,10 +39,9 @@ final class _LikeAndOtherButtonsSection extends ViewModelWidget<HomeViewModel> {
             borderRadius: context.radius12,
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
-              child: AdvancedButtonWidget.icon(
+              child: CustomButton(
                 backgroundColor: context.colors.scrim.withOpacity(.3),
-                bounceIt: true,
-                icon: const Icon(
+                child: const Icon(
                   CupertinoIcons.share,
                   size: 32,
                   color: Colors.white,

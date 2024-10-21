@@ -18,7 +18,7 @@ final class _RemindersViewBodyWidget extends SelectorViewModelWidget<_RemindersV
             },
           ),
         ),
-        const SliverBottomSafeWidget(),
+        const SliverAdaptiveBottomSafeAreaWidget(),
       ],
     );
   }

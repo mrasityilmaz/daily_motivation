@@ -61,7 +61,13 @@ mixin _AppDarkTheme {
           thickness: .3,
         ),
         dividerColor: darkColorScheme.onSurface.withOpacity(.2),
-        extensions: const [],
+        extensions: [
+          SignViewTheme(
+            firstPrimary: AppColorScheme.instance.primarySwatch.shade700,
+            secondPrimary: AppColorScheme.instance.primarySwatch.shade800,
+            thirdPrimary: AppColorScheme.instance.primarySwatch.shade900,
+          ),
+        ],
       );
 
   // BottomNavigationBarThemeData

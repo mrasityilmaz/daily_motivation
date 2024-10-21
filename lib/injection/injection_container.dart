@@ -19,7 +19,7 @@ Future<void> configureDependencies({String? defaultEnv}) async {
   final environment = getEnvironment(defaultEnv: defaultEnv);
 
   ///
-  /// Registering the Firestore instance based on the environment
+  /// Registering the Firestore instance based depend on the environment
   if (environment == Environment.prod) {
     locator.registerSingleton<FirebaseFirestore>(
       FirebaseFirestore.instance,

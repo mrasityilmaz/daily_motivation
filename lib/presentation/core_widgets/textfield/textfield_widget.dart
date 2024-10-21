@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/shared/theme/color_scheme.dart';
 
@@ -174,9 +174,11 @@ final class CustomTextFieldWidget extends StatelessWidget {
             suffixIcon: suffixIcon == null && isObscureText == true
                 ? Padding(
                     padding: const PaddingConstants.lowRight() * .5,
-                    child: AdvancedButtonWidget.icon(
-                      backgroundColor: Colors.transparent,
-                      icon: Icon(
+                    child: CustomButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.transparent,
+                      ),
+                      child: Icon(
                         obscuredValue ? CupertinoIcons.eye_slash : CupertinoIcons.eye,
                         color: hintTextColor ?? context.colors.onSurface.withOpacity(.6),
                       ),

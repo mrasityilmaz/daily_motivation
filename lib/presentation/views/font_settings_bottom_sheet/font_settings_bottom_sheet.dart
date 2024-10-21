@@ -14,7 +14,8 @@ import 'package:quotely/data/models/theme_configuration_model/theme_configuratio
 import 'package:quotely/data/services/theme_configuration_service/theme_configuration_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
-import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
+import 'package:quotely/presentation/view_constants/gap_constants.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/vendor/slider_shape_override.dart';
 import 'package:stacked/stacked.dart';

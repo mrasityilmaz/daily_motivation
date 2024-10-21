@@ -13,10 +13,9 @@ final class _ThemesBottomSheetAppBar extends StatelessWidget implements Preferre
       ),
       centerTitle: true,
       actions: [
-        AdvancedButtonWidget.text(
+        CustomButton.text(
           text: 'Kilitleri Kaldır',
           textColor: context.colors.onSurface,
-          backgroundColor: Colors.transparent,
           onPressed: () {},
         ),
       ],

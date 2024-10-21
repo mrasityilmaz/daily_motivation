@@ -2,22 +2,20 @@ part of '../categories_bottom_sheet.dart';
 
 @immutable
 final class _BodyWidget extends StatelessWidget {
-  const _BodyWidget({required this.scrollController});
-
-  final ScrollController scrollController;
+  const _BodyWidget();
 
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       clipBehavior: Clip.none,
-      controller: scrollController,
+      controller: ModalScrollController.of(context),
       slivers: [
         ...CategoryGroup.values.map(
           (e) => _CategoriesSection(
             categoryGroup: e,
           ),
         ),
-        const SliverBottomSafeWidget(),
+        const SliverAdaptiveBottomSafeAreaWidget(),
       ],
     );
   }

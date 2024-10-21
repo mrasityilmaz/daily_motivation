@@ -3,14 +3,15 @@ import 'dart:io';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quotely/config/navigator/app_navigator.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/constants/enums/categories_enum.dart';
 import 'package:quotely/core/constants/enums/category_group_enum.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
-import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_widget.dart';
 import 'package:quotely/presentation/core_widgets/slivers/mutli_sliver_grid.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
@@ -18,6 +19,7 @@ import 'package:quotely/presentation/dialogs/dialog_bodies/show_or_pay_dialog_bo
 import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:quotely/presentation/overrides/vselector_with_viewmodel_widget.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
+import 'package:quotely/presentation/view_constants/radius_constants.dart';
 import 'package:quotely/presentation/views/categories_bottom_sheet/categories_bottom_sheet_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
@@ -35,21 +37,20 @@ final class CategoriesBottomSheet extends StatelessWidget {
     return ViewModelBuilder<CategoriesBottomSheetViewModel>.nonReactive(
       viewModelBuilder: CategoriesBottomSheetViewModel.new,
       builder: (context, model, child) {
-        return DraggableScrollableSheet(
-          initialChildSize: 1,
-          minChildSize: .8,
-          builder: (context, scrollController) => ClipRRect(
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
-            child: Stack(
-              children: [
-                Scaffold(
-                  backgroundColor: context.colors.surface,
-                  appBar: const _CategoriesBottomSheetAppBar(),
-                  body: _BodyWidget(scrollController: scrollController),
-                ),
-                const ViewModelLoadingIndicator<CategoriesBottomSheetViewModel>(),
-              ],
-            ),
+        return const ClipRRect(
+          borderRadius: RadiusConstants.highTop(),
+          child: Stack(
+            fit: StackFit.expand,
+            clipBehavior: Clip.none,
+            children: [
+              Scaffold(
+                backgroundColor: Colors.transparent,
+                // backgroundColor: context.colors.surface,
+                appBar: _CategoriesBottomSheetAppBar(),
+                body: _BodyWidget(),
+              ),
+              ViewModelLoadingIndicator<CategoriesBottomSheetViewModel>(),
+            ],
           ),
         );
       },

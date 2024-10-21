@@ -45,7 +45,7 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AdvancedButtonWidget.text(
+                CustomButton.text(
                   text: viewModel.equalIntervalValue.start.format(context),
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
@@ -81,7 +81,7 @@ final class __TimeRangeRow extends ViewModelWidget<_AddNewOrEditReminderViewMode
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AdvancedButtonWidget.text(
+                CustomButton.text(
                   text: viewModel.equalIntervalValue.end.format(context),
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
@@ -128,18 +128,11 @@ final class __StartAndEndTimePickerRowWidget extends ViewModelWidget<_AddNewOrEd
                 return Padding(
                   key: e.$2,
                   padding: const PaddingConstants.lowLeft(),
-                  child: AdvancedButtonWidget.text(
+                  child: CustomButton.outlinedText(
                     text: 'x${e.$1 + 1}',
                     textStyle: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
                     backgroundColor: isSelected ? context.colors.primary : context.colors.surface,
                     textColor: !isSelected ? context.colors.primary : context.colors.surface,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: context.radius8,
-                      side: BorderSide(
-                        color: context.colors.primary,
-                        width: 2,
-                      ),
-                    ),
                     onPressed: () {
                       viewModel.setEqualIntervalIntervalValue(interval: e.$1 + 1, context: e.$2.currentContext);
                     },

@@ -12,7 +12,7 @@ import 'package:quotely/presentation/views/quote_notifications_view/quote_notifi
 import 'package:quotely/presentation/views/reminders_view/reminders_view.dart';
 import 'package:quotely/presentation/views/reminders_view/subviews/add_new_or_edit_reminder/add_new_or_edit_reminder_view.dart';
 
-part 'app_navigator.gr.dart';
+part 'app_router.gr.dart';
 
 @AutoRouterConfig()
 @LazySingleton(order: 1)

@@ -5,10 +5,10 @@ import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
-import 'package:quotely/config/navigator/app_navigator.dart';
+import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/injection/injection_container.dart';
-import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
 import 'package:quotely/presentation/dialogs/lock_overlay_dialog.dart';
 import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
@@ -120,7 +120,7 @@ final class AppDialogs {
                 Row(
                   children: [
                     Expanded(
-                      child: AdvancedButtonWidget.text(
+                      child: CustomButton.text(
                         text: 'OK',
                         onPressed: () {
                           Navigator.of(context).pop(time);

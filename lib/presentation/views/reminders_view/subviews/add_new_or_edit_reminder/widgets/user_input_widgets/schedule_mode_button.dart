@@ -10,7 +10,7 @@ final class __ScheduleModeSelectButton extends ViewModelWidget<_AddNewOrEditRemi
 
   @override
   Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
-    return AdvancedButtonWidget(
+    return CustomButton(
       backgroundColor: context.colors.primary.withOpacity(.1),
       padding: const PaddingConstants.lowVertical() * 1.5 + const PaddingConstants.lowHorizontal(),
       child: Row(

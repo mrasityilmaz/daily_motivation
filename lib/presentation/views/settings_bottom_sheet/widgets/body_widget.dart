@@ -17,7 +17,7 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
               children: [
                 Padding(
                   padding: const PaddingConstants.lowTop() + const PaddingConstants.normalBottom() * 2,
-                  child: AdvancedButtonWidget.text(
+                  child: CustomButton.text(
                     text: 'Be Premium',
                     onPressed: () {},
                     expand: true,
@@ -34,7 +34,7 @@ final class _BodyWidget extends ViewModelWidget<_SettingsBottomSheetViewModel> {
             ),
           ),
         ),
-        const SliverBottomSafeWidget(),
+        const SliverAdaptiveBottomSafeAreaWidget(),
       ],
     );
   }

@@ -41,7 +41,7 @@ final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewO
               child: Row(
                 children: [
                   Expanded(
-                    child: AdvancedButtonWidget.text(
+                    child: CustomButton.text(
                       text: 'Save',
                       textStyle: context.textTheme.titleMedium,
                       onPressed: () async => viewModel.save(),

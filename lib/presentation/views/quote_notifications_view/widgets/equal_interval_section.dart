@@ -46,7 +46,7 @@ final class __TimeRangeRow extends ViewModelWidget<_QuoteNotificationViewModel> 
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AdvancedButtonWidget.text(
+                CustomButton.text(
                   text: viewModel.equalIntervalValue.start.format(context),
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
@@ -82,7 +82,7 @@ final class __TimeRangeRow extends ViewModelWidget<_QuoteNotificationViewModel> 
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                AdvancedButtonWidget.text(
+                CustomButton.text(
                   text: viewModel.equalIntervalValue.end.format(context),
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
@@ -129,17 +129,11 @@ final class __StartAndEndTimePickerRowWidget extends ViewModelWidget<_QuoteNotif
                 return Padding(
                   key: e.$2,
                   padding: const PaddingConstants.lowLeft(),
-                  child: AdvancedButtonWidget.text(
+                  child: CustomButton.outlinedText(
                     text: 'x${e.$1 + 1}',
                     textStyle: context.textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
                     backgroundColor: isSelected ? context.colors.primary : context.colors.background,
                     textColor: !isSelected ? context.colors.primary : context.colors.background,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: context.radius8,
-                      side: BorderSide(
-                        color: context.colors.primary,
-                      ),
-                    ),
                     onPressed: () {
                       viewModel.setEqualIntervalIntervalValue(interval: e.$1 + 1, context: e.$2.currentContext);
                     },

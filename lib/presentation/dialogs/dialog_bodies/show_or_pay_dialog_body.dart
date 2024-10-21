@@ -1,10 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
-import 'package:quotely/config/navigator/app_navigator.dart';
+import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/injection/injection_container.dart';
-import 'package:quotely/presentation/core_widgets/advanced_button/advanced_button_widget.dart';
+import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 
 @immutable
@@ -47,12 +47,12 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                   alignment: Alignment.topLeft,
                   child: Padding(
                     padding: const PaddingConstants.allLow() * .5,
-                    child: AdvancedButtonWidget.icon(
-                      icon: const Icon(Icons.close_rounded),
+                    child: CustomButton(
                       onPressed: () {
                         locator<AppRouter>().maybePop();
                       },
                       backgroundColor: context.colors.onSurface.withOpacity(.1),
+                      child: const Icon(Icons.close_rounded),
                     ),
                   ),
                 ),
@@ -85,9 +85,8 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  AdvancedButtonWidget.text(
+                  CustomButton.text(
                     expand: true,
-                    bounceIt: true,
                     text: firstButtonText,
                     onPressed: firstButtonOnPressed,
                     textStyle: context.textTheme.bodyMedium?.copyWith(
@@ -98,9 +97,8 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                     SizedBox(
                       height: context.lowValue,
                     ),
-                    AdvancedButtonWidget.text(
+                    CustomButton.text(
                       expand: true,
-                      bounceIt: true,
                       text: secondButtonText!,
                       textStyle: context.textTheme.bodyMedium?.copyWith(
                         fontWeight: FontWeight.w600,

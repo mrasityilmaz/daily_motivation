@@ -16,7 +16,7 @@ final class _BodyWidget extends StatelessWidget {
               const PaddingConstants.screenPaddingVertical() + const PaddingConstants.screenPaddingHorizontal() * .5,
           sliver: const _GridBuilder(),
         ),
-        const SliverBottomSafeWidget(),
+        const SliverAdaptiveBottomSafeAreaWidget(),
       ],
     );
   }

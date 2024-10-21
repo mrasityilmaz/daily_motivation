@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quotely/presentation/view_constants/size_constants.dart';
 
 /// This class contains all the padding constants used in the app
 ///
@@ -6,19 +7,19 @@ import 'package:flutter/material.dart';
 ///
 /// ```dart
 /// // tiny < low < normal < medium < high
-/// // Value: 4
-/// static const double tinyValue = 4;
-/// // Value: 8
-/// static const double lowValue = 8;
-/// // Value: 12
-/// static const double normalValue = lowValue * 1.5;
-/// // Value: 16
-/// static const double mediumValue = lowValue * 2;
-/// // Value: 20
-/// static const double highValue = lowValue * 2.5;
+/// SizeConstants.tiny = 4;
+/// SizeConstants.low = 8;
+/// SizeConstants.normal = low * 1.5;
+/// SizeConstants.medium = low * 2;
+/// SizeConstants.high = low * 2.5;
 /// ```
 @immutable
 final class PaddingConstants extends EdgeInsets {
+  // ignore: unused_element
+  const PaddingConstants._() : super.all(0);
+
+  const PaddingConstants.zero() : super.all(0);
+
   // Paddings All
   const PaddingConstants.all(super.value) : super.all();
   const PaddingConstants.allTiny() : super.all(tinyValue);
@@ -122,18 +123,10 @@ final class PaddingConstants extends EdgeInsets {
   const PaddingConstants.screenPaddingVertical() : super.symmetric(vertical: normalValue);
   const PaddingConstants.screenPaddingHorizontal() : super.symmetric(horizontal: mediumValue);
 
-  /// Value: 4
-  static const double tinyValue = 4;
-
-  /// Value: 8
-  static const double lowValue = 8;
-
-  /// Value: 12
-  static const double normalValue = lowValue * 1.5;
-
-  /// Value: 16
-  static const double mediumValue = lowValue * 2;
-
-  /// Value: 20
-  static const double highValue = lowValue * 2.5;
+  // Padding Values
+  static const double tinyValue = SizeConstants.tiny;
+  static const double lowValue = SizeConstants.low;
+  static const double normalValue = SizeConstants.normal;
+  static const double mediumValue = SizeConstants.medium;
+  static const double highValue = SizeConstants.high;
 }

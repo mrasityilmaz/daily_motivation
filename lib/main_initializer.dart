@@ -13,7 +13,7 @@ import 'package:quotely/main.dart';
 import 'package:quotely/main.init.dart';
 
 @immutable
-final class AppInitializer {
+final class MainInitializer {
   /// Initializes of all the services and dependencies
   static Future<void> initialize() async {
     WidgetsFlutterBinding.ensureInitialized();
@@ -49,6 +49,8 @@ final class AppInitializer {
 
     // Disable EasyLocalization logger outputs
     EasyLocalization.logger.enableBuildModes = const [];
+
+    FlutterError.onError = onFlutterError;
   }
 
   /// When main zone error occurs

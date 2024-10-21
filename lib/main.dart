@@ -10,45 +10,53 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:quotely/app_initializer.dart';
-import 'package:quotely/config/navigator/app_navigator.dart';
+import 'package:quotely/config/navigator/app_router.dart';
+import 'package:quotely/core/constants/enums/locales.dart';
 import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/main_initializer.dart';
 import 'package:quotely/shared/app_theme.dart';
 
 /// This must be a top-level function
 @pragma('vm:entry-point')
-Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) => AppInitializer.fBMHandler(message);
+Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) => MainInitializer.fBMHandler(message);
 
 /// This must be a top-level function
 @pragma('vm:entry-point')
 void notificationTapBackground(NotificationResponse notificationResponse) =>
-    AppInitializer.notificationTapBackground(notificationResponse);
+    MainInitializer.notificationTapBackground(notificationResponse);
 
 void main() async {
   await runZonedGuarded(
     () async {
-      await AppInitializer.initialize();
-
+      await MainInitializer.initialize();
       runApp(
-        EasyLocalization(
-          supportedLocales: const [Locale('en', 'US'), Locale('tr', 'TR')],
-          path: 'assets/translations',
-          startLocale: const Locale('tr', 'TR'),
-          fallbackLocale: const Locale('tr', 'TR'),
-          useOnlyLangCode: true,
-          child: const MyApp(),
-        ),
+        const _EasyLocalizationWrapper(),
       );
     },
-    AppInitializer.onErrorZone,
+    MainInitializer.onErrorZone,
   );
-
-  FlutterError.onError = AppInitializer.onFlutterError;
 }
 
 @immutable
-final class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+final class _EasyLocalizationWrapper extends StatelessWidget {
+  const _EasyLocalizationWrapper();
+
+  @override
+  Widget build(BuildContext context) {
+    return EasyLocalization(
+      supportedLocales: Locales.values.map((e) => e.locale).toList(),
+      path: 'assets/translations',
+      startLocale: Locales.tr.locale,
+      fallbackLocale: Locales.tr.locale,
+      useOnlyLangCode: true,
+      child: const _MyApp(),
+    );
+  }
+}
+
+@immutable
+final class _MyApp extends StatelessWidget {
+  const _MyApp();
 
   // This widget is the root of your application.
   @override
@@ -58,7 +66,7 @@ final class MyApp extends StatelessWidget {
       themeAnimationDuration: Durations.medium1,
       title: 'Quotely',
       debugShowCheckedModeBanner: false,
-      theme: AppThemeManager.instance.themeData,
+      theme: AppThemeManager.instance.darkThemeData,
       darkTheme: AppThemeManager.instance.darkThemeData,
       themeMode: ThemeMode.dark,
       localizationsDelegates: context.localizationDelegates,

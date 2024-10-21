@@ -82,13 +82,9 @@ final class _CustomIntervalSection extends ViewModelWidget<_QuoteNotificationVie
               child: Row(
                 children: [
                   Expanded(
-                    child: AdvancedButtonWidget.text(
+                    child: CustomButton.outlinedText(
                       text: 'Add Time',
                       backgroundColor: context.colors.surface,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: context.radius12,
-                        side: BorderSide(color: context.colors.primary, width: 1.5),
-                      ),
                       expand: true,
                       textColor: context.colors.primary,
                       onPressed: () async {

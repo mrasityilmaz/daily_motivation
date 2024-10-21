@@ -110,18 +110,22 @@ final class _BodyWidget extends ViewModelWidget<_FontSettingsBottomSheetViewMode
                           padding: const PaddingConstants.lowLeft() +
                               const PaddingConstants.lowVertical() +
                               ((index == buttonList.length - 1) ? const PaddingConstants.lowRight() : EdgeInsets.zero),
-                          child: AdvancedButtonWidget.iconText(
+                          child: CustomButton.outlined(
                             backgroundColor: Colors.transparent,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: context.radius12,
-                              side: BorderSide(color: context.colors.surface.withOpacity(.1)),
-                            ),
-                            icon: Icon(
-                              buttonData.icon,
-                              color: Colors.white,
-                            ),
-                            text: buttonData.text,
                             onPressed: buttonData.onPressed,
+                            child: Row(
+                              children: [
+                                Icon(
+                                  buttonData.icon,
+                                  color: Colors.white,
+                                ),
+                                const Gap.tinyWidth(),
+                                Text(
+                                  buttonData.text,
+                                  style: context.textTheme.bodyMedium,
+                                ),
+                              ],
+                            ),
                           ),
                         );
                       },
@@ -586,12 +590,12 @@ final class __TextColorChild extends ViewModelWidget<_FontSettingsBottomSheetVie
                     ((index == viewModel.textColorList.length - 1)
                         ? const PaddingConstants.lowRight()
                         : EdgeInsets.zero),
-                child: AdvancedButtonWidget(
+                child: CustomButton.outlined(
                   backgroundColor: viewModel.textColorList[index],
-                  shape: RoundedRectangleBorder(
-                    borderRadius: context.radius12,
-                    side: isSelected ? BorderSide(color: context.colors.primary, width: 2) : BorderSide.none,
-                  ),
+                  // shape: RoundedRectangleBorder(
+                  //   borderRadius: context.radius12,
+                  //   side: isSelected ? BorderSide(color: context.colors.primary, width: 2) : BorderSide.none,
+                  // ),
                   child: const SizedBox(),
                   onPressed: () {
                     viewModel.changeTextColor(color: viewModel.textColorList[index]);
@@ -617,7 +621,7 @@ final class __MoveAndResizeSizeChild extends ViewModelWidget<_FontSettingsBottom
         children: [
           const Text('Move and Resize'),
           const Spacer(),
-          AdvancedButtonWidget.text(
+          CustomButton.text(
             text: 'Save',
             onPressed: viewModel.textRect != null ? () async {} : null,
           ),

@@ -10,15 +10,10 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
 
   @override
   Widget build(BuildContext context, bool isSelected, CategoriesBottomSheetViewModel viewModel) {
-    return AdvancedButtonWidget(
+    // TODOBURADA KALDIK
+    return CustomButton.outlined(
       expand: true,
       backgroundColor: isSelected ? context.colors.primary.withOpacity(.75) : context.colors.primary.withOpacity(.1),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-        side: BorderSide(
-          color: context.colors.primary.withOpacity(.1),
-        ),
-      ),
       onPressed: isSelected
           ? null
           : () async => onChangeCategoryCallback(
