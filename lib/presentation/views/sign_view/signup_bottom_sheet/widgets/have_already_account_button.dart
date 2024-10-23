@@ -2,9 +2,7 @@ part of '../signup_view.dart';
 
 @immutable
 final class _HaveAlreadyAccountButton extends StatelessWidget {
-  const _HaveAlreadyAccountButton({
-    super.key,
-  });
+  const _HaveAlreadyAccountButton();
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +13,12 @@ final class _HaveAlreadyAccountButton extends StatelessWidget {
       ),
       child: Text.rich(
         TextSpan(
-          text: 'I have an account?\t\t',
+          text: LocaleKeys.sign_already_have_account.tr(),
           style: context.textTheme.bodyMedium?.copyWith(color: context.colors.onSurface.withOpacity(.6)),
           children: [
+            const TextSpan(text: '\t\t'),
             TextSpan(
-              text: 'Log In',
+              text: LocaleKeys.sign_sign_in.tr(),
               style: context.textTheme.bodyMedium?.copyWith(color: context.colors.primary, fontWeight: FontWeight.w600),
               recognizer: TapGestureRecognizer()
                 ..onTap = () {

@@ -51,11 +51,14 @@ base mixin _UserHelper on _IUserService {
 
       final bool? notificationPermission = getFields.elementAtOrNull(2) as bool?;
 
+      final DateTime? createdAt = user?.createdAt != null ? null : DateTime.now();
+
       /// !Do not update any other fields here
       final settableUser = user!.copyWith(
         deviceToken: deviceToken,
         timeZone: timeZone,
         sendNotifications: notificationPermission,
+        createdAt: createdAt,
       );
 
       // If the user is not changed, then return

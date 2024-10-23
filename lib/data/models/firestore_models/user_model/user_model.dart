@@ -10,6 +10,7 @@ part 'user_model.mapper.dart';
 final class UserModel with UserModelMappable {
   const UserModel({
     required this.uid,
+    required this.createdAt,
     this.timeZone,
     this.sendNotifications,
     this.deviceToken,
@@ -74,6 +75,13 @@ final class UserModel with UserModelMappable {
   /// It's only setted when notifications are setup
   /// {@endtemplate}
   final DateTime? lastScheduledDate;
+
+  /// {@template UserModel.createdAt}
+  /// The date the user was created
+  /// This is used to determine if the user has signed up with email and if the user has not verified their email yet
+  /// If user not verified their email within 3 days, the user will be signed out and account will be deleted
+  /// {@endtemplate}
+  final DateTime createdAt;
 
   static const fromJson = UserModelMapper.fromJson;
   static const fromJsonString = UserModelMapper.fromJsonString;

@@ -10,8 +10,6 @@ mixin _UILogicMixin {
     //   child: const CategoriesBottomSheet(),
     // );
 
-    await LoginView.showAsModalBottomSheet(context);
-
     // await showMaterialModalBottomSheet<void>(
     //   context: context,
     //   animationCurve: Curves.fastOutSlowIn,

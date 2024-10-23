@@ -8,7 +8,8 @@ final class _EmailTextField extends ViewModelWidget<LoginViewModel> {
   Widget build(BuildContext context, LoginViewModel viewModel) {
     return CustomTextFormFieldWidget(
       controller: viewModel.emailController,
-      hintText: 'Email',
+      focusNode: viewModel.emailFocusNode,
+      hintText: LocaleKeys.sign_email.tr(),
       maxLines: null,
       textInputType: TextInputType.emailAddress,
       textCapitalization: TextCapitalization.none,
@@ -27,7 +28,8 @@ final class _PasswordTextField extends ViewModelWidget<LoginViewModel> {
   Widget build(BuildContext context, LoginViewModel viewModel) {
     return CustomTextFormFieldWidget(
       controller: viewModel.passwordController,
-      hintText: 'Password',
+      focusNode: viewModel.passwordFocusNode,
+      hintText: LocaleKeys.sign_password.tr(),
       textInputType: TextInputType.visiblePassword,
       textCapitalization: TextCapitalization.none,
       isObscureText: true,

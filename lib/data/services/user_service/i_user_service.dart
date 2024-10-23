@@ -54,4 +54,20 @@ abstract class _IUserService with LoggerHelper {
   /// It's required to call this function after the app is initialized and the user is signed in
   /// {@endtemplate}
   Future<void> setUserRequiredFields();
+
+  /// {@template UserService.userHasSignUpWithEmail}
+  /// Checks the provider data of the user
+  /// This function will check if the user has signed up with email
+  /// If the user has signed up with email, it will return true
+  /// Otherwise, it will return false
+  /// {@endtemplate}
+  bool get userHasSignUpWithEmail;
+
+  /// {@template UserService.sendEmailVerification}
+  /// This function will send an email verification to the user
+  /// If the user has signed up with email and the email is not verified
+  /// It will send an email verification to the user
+  /// Be careful, the user's requests will be blocked if you send too many requests
+  /// {@endtemplate}
+  Future<void> sendEmailVerification();
 }

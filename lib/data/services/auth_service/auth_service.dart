@@ -77,6 +77,12 @@ final class AuthService implements IAuthService {
       final userCredential = await FirebaseAuth.instance.signInWithCredential(oauthCredential);
 
       return Right(userCredential);
+    } on SignInWithAppleAuthorizationException catch (e, s) {
+      if (e.code == AuthorizationErrorCode.canceled) {
+        return Left(UnExpectedFailure(errorMessage: 'User canceled the sign in flow'));
+      }
+      LoggerService.catchLog(e, s);
+      return Left(UnExpectedFailure(errorMessage: e.toString()));
     } on FirebaseAuthException catch (e) {
       return Left(FirebaseAuthFailure(exception: e));
     } catch (e, s) {

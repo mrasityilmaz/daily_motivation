@@ -23,7 +23,7 @@ final class BaseLoadingIndicator extends StatelessWidget {
             child: SizedBox(
               height: kMinInteractiveDimension,
               width: kMinInteractiveDimension,
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator.adaptive(),
             ),
           ),
         ),

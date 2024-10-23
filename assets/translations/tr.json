@@ -113,5 +113,24 @@
 		"5wd": "Cum",
 		"6wd": "Cmt",
 		"7wd": "Paz"
+	},
+	"sign": {
+		"sign_in": "Giriş Yap",
+		"sign_up": "Kayıt Ol",
+		"sign_out": "Çıkış Yap",
+		"sign_in_with_google": "Google ile Giriş Yap",
+		"sign_in_with_apple": "Apple ile Giriş Yap",
+		"sign_in_with_email": "E-posta ile Giriş Yap",
+		"sign_up_with_email": "E-posta ile Kayıt Ol",
+		"welcome_back": "Tekrar hoş geldiniz!",
+		"sign_in_to_your_account": "Hesabınıza giriş yapın",
+		"create_your_account": "Hesabınızı oluşturun",
+		"forgot_password": "Şifremi unuttum",
+		"dont_have_account": "Hesabınız yok mu?",
+		"already_have_account": "Zaten hesabınız var mı?",
+		"email": "E-posta",
+		"password": "Şifre",
+		"password_confirm": "Şifreyi Onayla",
+		"or": "VEYA"
 	}
 }

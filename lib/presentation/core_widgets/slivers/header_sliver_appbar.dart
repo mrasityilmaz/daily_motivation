@@ -67,7 +67,7 @@ final class HeaderSliverAppBarWidget extends StatelessWidget {
                         children: [
                           Text(
                             expandedTitle,
-                            style: context.textTheme.headlineSmall?.copyWith(
+                            style: context.textTheme.titleMedium?.copyWith(
                               fontWeight: FontWeight.bold,
                               color: context.colors.onPrimary,
                               height: 1.1,

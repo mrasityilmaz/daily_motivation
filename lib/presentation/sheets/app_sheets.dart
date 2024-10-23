@@ -3,52 +3,43 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/presentation/view_constants/radius_constants.dart';
 
-@immutable
-final class Sheets {
-  const Sheets._();
+part 'sheet_base/i_app_sheets.dart';
+part 'sheet_base/sheet_helper.dart';
 
-  static Future<T?> showBottomSheet<T>(
-    BuildContext context, {
-    required Widget child,
-    bool isDismissible = true,
-    bool enableDrag = true,
-    bool useRootNavigator = false,
-    bool bounce = true,
-    bool expand = false,
-    Curve animationCurve = Curves.fastLinearToSlowEaseIn,
-    Duration duration = const Duration(milliseconds: 250),
-    Color? backgroundColor,
-    double? elevation,
-    ShapeBorder shape = const RoundedRectangleBorder(
+/// This class using a different way to handle the sheets.
+/// Because of, I wanna use the sheets as a route.
+/// So, I created this class to handle the sheets as a route, sheet, etc.
+///
+@immutable
+final class Sheets extends _IBaseSheets with _SheetBuilderHelper {
+  const Sheets({
+    required super.child,
+    super.isDismissible = true,
+    super.enableDrag = true,
+    super.useRootNavigator = false,
+    super.bounce = true,
+    super.expand = false,
+    super.animationCurve = Curves.fastLinearToSlowEaseIn,
+    super.duration = const Duration(milliseconds: 250),
+    super.backgroundColor,
+    super.elevation,
+    super.shape = const RoundedRectangleBorder(
       borderRadius: RadiusConstants.highTop(),
     ),
-    Clip? clipBehavior,
-    Color? barrierColor,
-    AnimationController? secondAnimation,
-    RouteSettings? settings,
-    double? closeProgressThreshold,
-    BoxConstraints? constraints,
-  }) async {
+    super.clipBehavior,
+    super.barrierColor,
+    super.secondAnimation,
+    super.settings,
+    super.closeProgressThreshold,
+    super.constraints,
+  });
+
+  /// Basicly, this method is using for show a bottom sheet.
+  @override
+  Future<T?> showBottomSheet<T>(BuildContext context) async {
     return showMaterialModalBottomSheet<T>(
       context: context,
-      builder: (context) {
-        late Widget innerChild;
-
-        innerChild = ConstrainedBox(
-          constraints: constraints ??
-              BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height - MediaQuery.viewPaddingOf(context).top),
-          child: child,
-        );
-
-        if (shape is RoundedRectangleBorder) {
-          innerChild = ClipRRect(
-            borderRadius: shape.borderRadius,
-            child: innerChild,
-          );
-        }
-
-        return innerChild;
-      },
+      builder: builderWithChildForSheet,
       backgroundColor: backgroundColor,
       elevation: elevation,
       shape: shape,
@@ -64,6 +55,34 @@ final class Sheets {
       duration: duration,
       settings: settings,
       closeProgressThreshold: closeProgressThreshold,
+    );
+  }
+
+  /// This method is using for create the sheet route.
+  /// It's required if you want to navigate to the sheet as a route.
+  @override
+  ModalSheetRoute<T> createSheetRoute<T>(BuildContext context) {
+    return ModalSheetRoute<T>(
+      builder: builderWithChildForSheet,
+      closeProgressThreshold: closeProgressThreshold,
+      containerBuilder: _materialContainerBuilder(
+        context,
+        backgroundColor: backgroundColor,
+        elevation: elevation,
+        shape: shape,
+        clipBehavior: clipBehavior,
+        theme: Theme.of(context),
+      ),
+      secondAnimationController: secondAnimation,
+      bounce: bounce,
+      expanded: expand,
+      barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+      isDismissible: isDismissible,
+      modalBarrierColor: barrierColor,
+      enableDrag: enableDrag,
+      animationCurve: animationCurve,
+      duration: duration,
+      settings: settings,
     );
   }
 }

@@ -11,6 +11,8 @@ import 'package:quotely/presentation/views/onboard_view/onboard_view.dart';
 import 'package:quotely/presentation/views/quote_notifications_view/quote_notification_view.dart';
 import 'package:quotely/presentation/views/reminders_view/reminders_view.dart';
 import 'package:quotely/presentation/views/reminders_view/subviews/add_new_or_edit_reminder/add_new_or_edit_reminder_view.dart';
+import 'package:quotely/presentation/views/sign_view/login_view/login_view.dart';
+import 'package:quotely/presentation/views/sign_view/signup_bottom_sheet/signup_view.dart';
 
 part 'app_router.gr.dart';
 
@@ -22,9 +24,10 @@ final class AppRouter extends RootStackRouter {
         CustomRoute<void>(
           page: OnboardViewRoute.page,
           transitionsBuilder: TransitionsBuilders.slideRightWithFade,
-
           // initial: true,
         ),
+        AutoRoute(page: LoginViewRoute.page),
+        AutoRoute(page: SignUpViewRoute.page),
         AutoRoute(page: HomeViewRoute.page, initial: true),
         AutoRoute(page: FavoritesViewRoute.page),
         AutoRoute(

@@ -32,7 +32,8 @@ final class _TopSection extends StatelessWidget {
                   try {
                     // await LoginView.showBottomSheet<void>(context);
                     // await SignUpView.showAsModalBottomSheet(context);
-                    await LoginView.showAsModalBottomSheet(context);
+                    await const LoginView().showAsModalBottomSheet<void>(context);
+                    // await const SignUpView().showAsModalBottomSheet<void>(context);
 
                     // await locator<AppRouter>().pushWidget(const SignUpView());
 

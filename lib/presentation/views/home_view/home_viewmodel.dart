@@ -15,7 +15,7 @@ import 'package:quotely/data/services/theme_configuration_service/theme_configur
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:quotely/presentation/views/settings_bottom_sheet/settings_bottom_sheet.dart';
-import 'package:quotely/presentation/views/sign_view/login_bottom_sheet/login_view.dart';
+import 'package:quotely/presentation/views/sign_view/login_view/login_view.dart';
 import 'package:quotely/presentation/views/themes_bottom_sheet/themes_bottom_sheet.dart';
 import 'package:stacked/stacked.dart' hide PageRouteInfo;
 

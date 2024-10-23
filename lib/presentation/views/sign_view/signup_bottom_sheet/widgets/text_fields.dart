@@ -10,7 +10,7 @@ final class _EmailTextField extends ViewModelWidget<SignUpViewModel> {
       focusNode: viewModel.emailFocusNode,
       controller: viewModel.emailController,
       validator: (p0) => p0.validateEmail,
-      hintText: 'Email',
+      hintText: LocaleKeys.sign_email.tr(),
       autofillHints: const [AutofillHints.email],
       textCapitalization: TextCapitalization.none,
       textInputType: TextInputType.emailAddress,
@@ -28,7 +28,7 @@ final class _PasswordTextField extends ViewModelWidget<SignUpViewModel> {
       focusNode: viewModel.passwordFocusNode,
       controller: viewModel.passwordController,
       validator: (p0) => p0.validatePassword,
-      hintText: 'Password',
+      hintText: LocaleKeys.sign_password.tr(),
       isObscureText: true,
       autofillHints: const [AutofillHints.newPassword],
       textCapitalization: TextCapitalization.none,
@@ -46,10 +46,10 @@ final class _ConfirmPasswordTextField extends ViewModelWidget<SignUpViewModel> {
     return CustomTextFormFieldWidget(
       focusNode: viewModel.rePasswordFocusNode,
       controller: viewModel.rePasswordController,
+      hintText: LocaleKeys.sign_password_confirm.tr(),
       validator: (p0) {
         return p0.validatePassword ?? p0.validateConfirmPassword(viewModel.passwordController.text);
       },
-      hintText: 'Password again',
       isObscureText: true,
       autofillHints: const [AutofillHints.newPassword],
       textCapitalization: TextCapitalization.none,

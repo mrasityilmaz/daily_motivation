@@ -15,13 +15,13 @@ import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:quotely/data/services/user_service/user_service.dart';
 import 'package:quotely/injection/injection_container.dart';
+import 'package:quotely/presentation/abstracts/multiselector_viewmodel_widget.dart';
+import 'package:quotely/presentation/abstracts/vselector_with_viewmodel_widget.dart';
 import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
 import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
-import 'package:quotely/presentation/overrides/multiselector_viewmodel_widget.dart';
-import 'package:quotely/presentation/overrides/vselector_with_viewmodel_widget.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/presentation/views/home_view/home_viewmodel.dart';
-import 'package:quotely/presentation/views/sign_view/login_bottom_sheet/login_view.dart';
+import 'package:quotely/presentation/views/sign_view/login_view/login_view.dart';
 import 'package:stacked/stacked.dart';
 
 part 'widgets/bottom_buttons_section.dart';

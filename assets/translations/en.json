@@ -113,5 +113,24 @@
 		"5wd": "Fri",
 		"6wd": "Sat",
 		"7wd": "Sun"
+	},
+	"sign": {
+		"sign_in": "Sign In",
+		"sign_up": "Sign Up",
+		"sign_out": "Sign Out",
+		"sign_in_with_google": "Sign In with Google",
+		"sign_in_with_apple": "Sign In with Apple",
+		"sign_in_with_email": "Sign In with Email",
+		"sign_up_with_email": "Sign Up with Email",
+		"welcome_back": "Welcome back!",
+		"sign_in_to_your_account": "Sign in to your account",
+		"create_your_account": "Create your account",
+		"forgot_password": "Forgot password",
+		"dont_have_account": "Don't have an account?",
+		"already_have_account": "Already have an account?",
+		"email": "Email",
+		"password": "Password",
+		"password_confirm": "Confirm Password",
+		"or": "OR"
 	}
 }
