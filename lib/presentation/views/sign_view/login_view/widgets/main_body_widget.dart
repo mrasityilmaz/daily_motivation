@@ -12,7 +12,7 @@ final class _LoginMainWidget extends ViewModelWidget<LoginViewModel> {
         return [
           HeaderSliverAppBarWidget(
             canPop: true,
-            primary: false,
+            primary: viewModel.primary,
             innerBoxIsScrolled: innerBoxIsScrolled,
             collapsedTitle: LocaleKeys.sign_sign_in.tr(),
             expandedTitle: LocaleKeys.sign_welcome_back.tr(),
@@ -27,6 +27,7 @@ final class _LoginMainWidget extends ViewModelWidget<LoginViewModel> {
         slivers: [
           SliverInjector(),
           SliverFillRemaining(
+            hasScrollBody: false,
             child: _BodyWidget(),
           ),
         ],
@@ -53,6 +54,7 @@ final class _BodyWidget extends ViewModelWidget<LoginViewModel> {
           _GoogleSignButton(),
           Gap.highHeight(),
           _DontHaveAnAccountButton(),
+          Gap.H(400),
         ],
       ),
     );

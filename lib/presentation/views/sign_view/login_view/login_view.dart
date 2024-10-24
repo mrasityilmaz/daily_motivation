@@ -15,7 +15,7 @@ import 'package:quotely/presentation/core_widgets/textfield/textformfield_widget
 import 'package:quotely/presentation/sheets/app_sheets.dart';
 import 'package:quotely/presentation/view_constants/gap_constants.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
-import 'package:quotely/presentation/views/sign_view/login_view/login_view_viewmodel.dart';
+import 'package:quotely/presentation/views/sign_view/login_view/viewmodel/login_viewmodel.dart';
 import 'package:quotely/presentation/views/sign_view/signup_bottom_sheet/signup_view.dart';
 import 'package:quotely/shared/translations/translations_keys.g.dart';
 import 'package:stacked/stacked.dart';
@@ -30,12 +30,19 @@ part 'widgets/text_fields.dart';
 @RoutePage(name: 'LoginViewRoute')
 @immutable
 final class LoginView extends StatelessSheetableWidget {
-  const LoginView({super.key});
+  const LoginView({
+    super.key,
+    // This means that this view is a primary view not a sheet view
+    super.primary = true,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<LoginViewModel>.nonReactive(
-      viewModelBuilder: () => LoginViewModel(ModalScrollController.of(context)),
+      viewModelBuilder: () => LoginViewModel(
+        primary: primary,
+        scrollController: createScrollController(context),
+      ),
       builder: (context, viewModel, child) {
         return const Stack(
           children: [
@@ -45,6 +52,13 @@ final class LoginView extends StatelessSheetableWidget {
         );
       },
     );
+  }
+
+  ScrollController? createScrollController(BuildContext context) {
+    if (primary) {
+      return ScrollController();
+    }
+    return ModalScrollController.of(context);
   }
 
   @override
@@ -59,7 +73,6 @@ final class LoginView extends StatelessSheetableWidget {
     return Sheets(
       child: this,
       closeProgressThreshold: .5,
-      bounce: false,
     );
   }
 

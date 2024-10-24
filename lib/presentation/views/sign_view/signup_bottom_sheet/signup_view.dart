@@ -14,7 +14,7 @@ import 'package:quotely/presentation/core_widgets/textfield/textformfield_widget
 import 'package:quotely/presentation/sheets/app_sheets.dart';
 import 'package:quotely/presentation/view_constants/gap_constants.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
-import 'package:quotely/presentation/views/sign_view/signup_bottom_sheet/signup_view_viewmodel.dart';
+import 'package:quotely/presentation/views/sign_view/signup_bottom_sheet/viewmodel/signup_view_viewmodel.dart';
 import 'package:quotely/shared/translations/translations_keys.g.dart';
 import 'package:stacked/stacked.dart';
 
@@ -26,12 +26,15 @@ part 'widgets/text_fields.dart';
 @RoutePage(name: 'SignUpViewRoute')
 @immutable
 final class SignUpView extends StatelessSheetableWidget {
-  const SignUpView({super.key});
+  const SignUpView({super.key, super.primary = true});
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<SignUpViewModel>.nonReactive(
-      viewModelBuilder: () => SignUpViewModel(scrollController: ModalScrollController.of(context)),
+      viewModelBuilder: () => SignUpViewModel(
+        scrollController: createScrollController(context),
+        primary: primary,
+      ),
       builder: (context, viewModel, child) {
         return const Stack(
           children: [
@@ -41,6 +44,13 @@ final class SignUpView extends StatelessSheetableWidget {
         );
       },
     );
+  }
+
+  ScrollController? createScrollController(BuildContext context) {
+    if (primary) {
+      return ScrollController();
+    }
+    return ModalScrollController.of(context);
   }
 
   @override

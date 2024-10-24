@@ -145,10 +145,17 @@ class HomeViewRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [LoginView]
-class LoginViewRoute extends PageRouteInfo<void> {
-  const LoginViewRoute({List<PageRouteInfo>? children})
-      : super(
+class LoginViewRoute extends PageRouteInfo<LoginViewRouteArgs> {
+  LoginViewRoute({
+    Key? key,
+    bool primary = true,
+    List<PageRouteInfo>? children,
+  }) : super(
           LoginViewRoute.name,
+          args: LoginViewRouteArgs(
+            key: key,
+            primary: primary,
+          ),
           initialChildren: children,
         );
 
@@ -157,9 +164,30 @@ class LoginViewRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const LoginView();
+      final args = data.argsAs<LoginViewRouteArgs>(
+          orElse: () => const LoginViewRouteArgs());
+      return LoginView(
+        key: args.key,
+        primary: args.primary,
+      );
     },
   );
+}
+
+class LoginViewRouteArgs {
+  const LoginViewRouteArgs({
+    this.key,
+    this.primary = true,
+  });
+
+  final Key? key;
+
+  final bool primary;
+
+  @override
+  String toString() {
+    return 'LoginViewRouteArgs{key: $key, primary: $primary}';
+  }
 }
 
 /// generated route for
@@ -240,10 +268,17 @@ class RemindersViewRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [SignUpView]
-class SignUpViewRoute extends PageRouteInfo<void> {
-  const SignUpViewRoute({List<PageRouteInfo>? children})
-      : super(
+class SignUpViewRoute extends PageRouteInfo<SignUpViewRouteArgs> {
+  SignUpViewRoute({
+    Key? key,
+    bool primary = true,
+    List<PageRouteInfo>? children,
+  }) : super(
           SignUpViewRoute.name,
+          args: SignUpViewRouteArgs(
+            key: key,
+            primary: primary,
+          ),
           initialChildren: children,
         );
 
@@ -252,7 +287,28 @@ class SignUpViewRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const SignUpView();
+      final args = data.argsAs<SignUpViewRouteArgs>(
+          orElse: () => const SignUpViewRouteArgs());
+      return SignUpView(
+        key: args.key,
+        primary: args.primary,
+      );
     },
   );
+}
+
+class SignUpViewRouteArgs {
+  const SignUpViewRouteArgs({
+    this.key,
+    this.primary = true,
+  });
+
+  final Key? key;
+
+  final bool primary;
+
+  @override
+  String toString() {
+    return 'SignUpViewRouteArgs{key: $key, primary: $primary}';
+  }
 }

@@ -12,6 +12,7 @@ final class _MainSignUpBody extends ViewModelWidget<SignUpViewModel> {
         return [
           HeaderSliverAppBarWidget(
             canPop: true,
+            primary: viewModel.primary,
             innerBoxIsScrolled: innerBoxIsScrolled,
             collapsedTitle: LocaleKeys.sign_sign_up.tr(),
             expandedTitle: LocaleKeys.sign_sign_up.tr(),

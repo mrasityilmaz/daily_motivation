@@ -11,22 +11,28 @@ import 'package:quotely/data/services/auth_service/auth_service.dart';
 import 'package:quotely/data/services/user_service/user_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/helpers/nested_scrollable_focus.dart';
-import 'package:stacked/stacked.dart';
+import 'package:quotely/presentation/views/sign_view/signup_bottom_sheet/viewmodel/base_signup_viewmodel.dart';
 
-part 'viewmodel_mixins/logic_helper.dart';
-
-final class SignUpViewModel extends BaseViewModel with _LogicHelper, NestedScrollableFocus {
-  SignUpViewModel({this.scrollController}) {
+final class SignUpViewModel extends SignUpViewModelInterface with NestedScrollableFocus {
+  SignUpViewModel({
+    required super.primary,
+    super.scrollController,
+  }) : super(
+          emailController: TextEditingController(),
+          emailFocusNode: FocusNode(),
+          passwordController: TextEditingController(),
+          passwordFocusNode: FocusNode(),
+          rePasswordController: TextEditingController(),
+          rePasswordFocusNode: FocusNode(),
+          formKey: GlobalKey<FormState>(),
+          authService: AuthService(),
+          userService: locator<UserService>(),
+          appRouter: locator<AppRouter>(),
+        ) {
     initFocusListener();
   }
 
-  // Do not dispose this scrollController because it is passed from the parent widget
-  final ScrollController? scrollController;
-
-  final AuthService _authService = AuthService();
-  final UserService _userService = locator<UserService>();
-  final AppRouter _appRouter = locator<AppRouter>();
-
+  @override
   Future<void> signUpWithEmailAndPassword() async {
     try {
       final bool formValidated = formKey.currentState?.validate() == true;
@@ -35,7 +41,7 @@ final class SignUpViewModel extends BaseViewModel with _LogicHelper, NestedScrol
       }
 
       await runBusyFuture(
-        _authService.createUserWithEmailAndPassword(
+        authService.createUserWithEmailAndPassword(
           email: emailController.text,
           password: passwordController.text,
         ),
@@ -47,22 +53,23 @@ final class SignUpViewModel extends BaseViewModel with _LogicHelper, NestedScrol
     }
   }
 
+  @override
   @protected
-  FutureOr<void> onSignResponse(
+  Future<void> onSignResponse(
     EitherOr<UserCredential> response,
-  ) {
-    response.fold(
+  ) async {
+    await response.fold(
       (l) async {
         debugPrint('User sign up failed');
         // TODO - show error message
-        await _appRouter.maybePopTop();
+        await appRouter.maybePopTop();
       },
       (r) async {
         debugPrint('User sign up success');
         // TODO - navigate to sign in
         // ignore: invalid_use_of_protected_member
-        await runBusyFuture(_userService.initUser()).then(
-          (_) => _appRouter.maybePopTop(),
+        await runBusyFuture(userService.initUser()).then(
+          (_) => appRouter.maybePopTop(),
         );
 
         // await sendEmailVerification();
@@ -75,4 +82,13 @@ final class SignUpViewModel extends BaseViewModel with _LogicHelper, NestedScrol
 
   @override
   ScrollController? get nestedScrollController => scrollController;
+
+  @override
+  void dispose() {
+    debugPrint('SignUpViewModel disposed');
+    super.dispose();
+    if (primary) {
+      scrollController?.dispose();
+    }
+  }
 }
