@@ -1,11 +1,11 @@
 part of '../quote_notification_view.dart';
 
 @immutable
-final class _CustomIntervalSection extends ViewModelWidget<_QuoteNotificationViewModel> {
+final class _CustomIntervalSection extends ViewModelWidget<QuoteNotificationViewModel> {
   const _CustomIntervalSection();
 
   @override
-  Widget build(BuildContext context, _QuoteNotificationViewModel viewModel) {
+  Widget build(BuildContext context, QuoteNotificationViewModel viewModel) {
     return AnimatedCrossFade(
       duration: const Duration(milliseconds: 300),
       firstChild: const SizedBox(),

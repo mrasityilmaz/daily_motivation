@@ -1,7 +1,7 @@
 part of '../../add_new_or_edit_reminder_view.dart';
 
 @immutable
-final class __ScheduleModeSelectButton extends ViewModelWidget<_AddNewOrEditReminderViewModel> {
+final class __ScheduleModeSelectButton extends ViewModelWidget<AddNewOrEditReminderViewModel> {
   const __ScheduleModeSelectButton({required this.type, required this.title, required this.subTitle});
 
   final ReminderScheduleEnum type;
@@ -9,7 +9,7 @@ final class __ScheduleModeSelectButton extends ViewModelWidget<_AddNewOrEditRemi
   final String subTitle;
 
   @override
-  Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
+  Widget build(BuildContext context, AddNewOrEditReminderViewModel viewModel) {
     return CustomButton(
       backgroundColor: context.colors.primary.withOpacity(.1),
       padding: const PaddingConstants.lowVertical() * 1.5 + const PaddingConstants.lowHorizontal(),

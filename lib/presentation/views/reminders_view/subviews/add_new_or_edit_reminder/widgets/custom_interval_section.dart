@@ -1,11 +1,11 @@
 part of '../add_new_or_edit_reminder_view.dart';
 
 @immutable
-final class _CustomIntervalSection extends ViewModelWidget<_AddNewOrEditReminderViewModel> {
+final class _CustomIntervalSection extends ViewModelWidget<AddNewOrEditReminderViewModel> {
   const _CustomIntervalSection();
 
   @override
-  Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
+  Widget build(BuildContext context, AddNewOrEditReminderViewModel viewModel) {
     return AnimatedCrossFade(
       duration: const Duration(milliseconds: 300),
       firstChild: const SizedBox(),

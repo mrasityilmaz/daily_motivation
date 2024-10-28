@@ -14,7 +14,14 @@ mixin _SheetBuilderHelper on _IBaseSheets {
           ? const BoxConstraints()
           : constraints ??
               BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height - MediaQuery.viewPaddingOf(context).top),
-      child: child,
+      child: Column(
+        children: [
+          if (showDragHandle) ...[
+            const SheetDragHandle(),
+          ],
+          Flexible(child: child),
+        ],
+      ),
     );
 
     if (shape is RoundedRectangleBorder) {
@@ -25,35 +32,5 @@ mixin _SheetBuilderHelper on _IBaseSheets {
     }
 
     return innerChild;
-  }
-
-  /// It's using in the [showMaterialModalBottomSheet] method.
-  /// I stole this method from the source code of package to create my custom sheet route creator.
-  WidgetWithChildBuilder _materialContainerBuilder(
-    BuildContext context, {
-    Color? backgroundColor,
-    double? elevation,
-    ThemeData? theme,
-    Clip? clipBehavior,
-    ShapeBorder? shape,
-  }) {
-    final bottomSheetTheme = Theme.of(context).bottomSheetTheme;
-    final color = backgroundColor ?? bottomSheetTheme.modalBackgroundColor ?? bottomSheetTheme.backgroundColor;
-    final effectiveElevation = elevation ?? bottomSheetTheme.elevation ?? 0.0;
-    final effectiveShape = shape ?? bottomSheetTheme.shape;
-    final effectiveClipBehavior = clipBehavior ?? bottomSheetTheme.clipBehavior ?? Clip.none;
-
-    Widget result(context, animation, Widget child) => Material(
-          color: color,
-          elevation: effectiveElevation,
-          shape: effectiveShape,
-          clipBehavior: effectiveClipBehavior,
-          child: child,
-        );
-    if (theme != null) {
-      return (context, animation, child) => Theme(data: theme, child: result(context, animation, child));
-    } else {
-      return result;
-    }
   }
 }

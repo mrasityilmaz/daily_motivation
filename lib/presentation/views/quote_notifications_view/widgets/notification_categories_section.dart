@@ -1,11 +1,11 @@
 part of '../quote_notification_view.dart';
 
 @immutable
-final class _NotificationcategoriesSection extends ViewModelWidget<_QuoteNotificationViewModel> {
+final class _NotificationcategoriesSection extends ViewModelWidget<QuoteNotificationViewModel> {
   const _NotificationcategoriesSection();
 
   @override
-  Widget build(BuildContext context, _QuoteNotificationViewModel viewModel) {
+  Widget build(BuildContext context, QuoteNotificationViewModel viewModel) {
     return Column(
       children: [
         Padding(

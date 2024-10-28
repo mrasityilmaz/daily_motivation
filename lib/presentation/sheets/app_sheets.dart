@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
+import 'package:quotely/presentation/sheets/widgets/drag_handle.dart';
 import 'package:quotely/presentation/view_constants/radius_constants.dart';
 
 part 'sheet_base/i_app_sheets.dart';
@@ -19,13 +20,14 @@ final class Sheets extends _IBaseSheets with _SheetBuilderHelper {
     super.useRootNavigator = false,
     super.bounce = true,
     super.expand = false,
-    super.animationCurve = Curves.fastLinearToSlowEaseIn,
-    super.duration = const Duration(milliseconds: 250),
-    super.backgroundColor,
-    super.elevation,
+    super.animationCurve = Curves.linearToEaseOut,
+    super.duration = Durations.medium2,
+    super.showDragHandle = false,
     super.shape = const RoundedRectangleBorder(
       borderRadius: RadiusConstants.highTop(),
     ),
+    super.backgroundColor,
+    super.elevation,
     super.clipBehavior,
     super.barrierColor,
     super.secondAnimation,
@@ -55,34 +57,6 @@ final class Sheets extends _IBaseSheets with _SheetBuilderHelper {
       duration: duration,
       settings: settings,
       closeProgressThreshold: closeProgressThreshold,
-    );
-  }
-
-  /// This method is using for create the sheet route.
-  /// It's required if you want to navigate to the sheet as a route.
-  @override
-  ModalSheetRoute<T> createSheetRoute<T>(BuildContext context) {
-    return ModalSheetRoute<T>(
-      builder: builderWithChildForSheet,
-      closeProgressThreshold: closeProgressThreshold,
-      containerBuilder: _materialContainerBuilder(
-        context,
-        backgroundColor: backgroundColor,
-        elevation: elevation,
-        shape: shape,
-        clipBehavior: clipBehavior,
-        theme: Theme.of(context),
-      ),
-      secondAnimationController: secondAnimation,
-      bounce: bounce,
-      expanded: expand,
-      barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
-      isDismissible: isDismissible,
-      modalBarrierColor: barrierColor,
-      enableDrag: enableDrag,
-      animationCurve: animationCurve,
-      duration: duration,
-      settings: settings,
     );
   }
 }

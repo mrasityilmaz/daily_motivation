@@ -22,7 +22,9 @@ final class QuoteAndCategoryService with ListenableServiceMixin, _QuoteAndCatego
   }
 
   Future<void> init() async {
-    await _fetchQuotesForSelectedCategory();
+    try {
+      await _fetchQuotesForSelectedCategory();
+    } catch (e) {}
   }
 
   final CategoryBoxService _categoryBoxService = locator<HiveService>().categoryBoxService;

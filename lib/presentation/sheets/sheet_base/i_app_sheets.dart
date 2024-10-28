@@ -3,18 +3,17 @@ part of '../app_sheets.dart';
 abstract class _IBaseSheets {
   const _IBaseSheets({
     required this.child,
-    this.isDismissible = true,
-    this.enableDrag = true,
-    this.useRootNavigator = false,
-    this.bounce = true,
-    this.expand = false,
-    this.animationCurve = Curves.fastLinearToSlowEaseIn,
-    this.duration = const Duration(milliseconds: 250),
+    required this.isDismissible,
+    required this.enableDrag,
+    required this.useRootNavigator,
+    required this.bounce,
+    required this.expand,
+    required this.animationCurve,
+    required this.duration,
+    required this.shape,
+    required this.showDragHandle,
     this.backgroundColor,
     this.elevation,
-    this.shape = const RoundedRectangleBorder(
-      borderRadius: RadiusConstants.highTop(),
-    ),
     this.clipBehavior,
     this.barrierColor,
     this.secondAnimation,
@@ -31,6 +30,7 @@ abstract class _IBaseSheets {
   final bool expand;
   final Curve animationCurve;
   final Duration duration;
+  final bool showDragHandle;
   final Color? backgroundColor;
   final double? elevation;
   final ShapeBorder shape;
@@ -47,7 +47,4 @@ abstract class _IBaseSheets {
 
   /// It's using for show the bottom sheet.
   Future<T?> showBottomSheet<T>(BuildContext context);
-
-  /// It's using for show the bottom sheet as a route.
-  ModalSheetRoute<T> createSheetRoute<T>(BuildContext context);
 }

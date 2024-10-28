@@ -12,7 +12,7 @@ import 'package:quotely/presentation/views/quote_notifications_view/quote_notifi
 import 'package:quotely/presentation/views/reminders_view/reminders_view.dart';
 import 'package:quotely/presentation/views/reminders_view/subviews/add_new_or_edit_reminder/add_new_or_edit_reminder_view.dart';
 import 'package:quotely/presentation/views/sign_view/login_view/login_view.dart';
-import 'package:quotely/presentation/views/sign_view/signup_bottom_sheet/signup_view.dart';
+import 'package:quotely/presentation/views/sign_view/signup_view/signup_view.dart';
 
 part 'app_router.gr.dart';
 

@@ -12,7 +12,7 @@ base class FirestoreConverter<T extends Object> {
     DocumentSnapshot<Map<String, dynamic>> snapshot,
     SnapshotOptions? options,
   ) {
-    assert(MapperContainer.globals.get<T>() != null, 'FirestoreConverter<T> - $T cannot be MappableObject');
+    assert(MapperContainer.globals.get<T>() != null, '$T must be MappableObject');
     try {
       final data = snapshot.data();
 
@@ -32,7 +32,7 @@ base class FirestoreConverter<T extends Object> {
     SetOptions? options,
   ) {
     try {
-      assert(MapperContainer.globals.get<T>() != null, 'FirestoreConverter<T> - $T cannot be MappableObject');
+      assert(MapperContainer.globals.get<T>() != null, '$T must be MappableObject');
       if (model == null) {
         throw FirestoreException(errorMessage: 'Model is null - $T');
       }

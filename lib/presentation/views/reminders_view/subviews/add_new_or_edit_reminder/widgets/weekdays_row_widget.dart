@@ -1,11 +1,11 @@
 part of '../add_new_or_edit_reminder_view.dart';
 
 @immutable
-final class __WeekDaysRow extends ViewModelWidget<_AddNewOrEditReminderViewModel> {
+final class __WeekDaysRow extends ViewModelWidget<AddNewOrEditReminderViewModel> {
   const __WeekDaysRow();
 
   @override
-  Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
+  Widget build(BuildContext context, AddNewOrEditReminderViewModel viewModel) {
     return Row(
       children: List.generate(7, (index) => index).map(
         (e) {

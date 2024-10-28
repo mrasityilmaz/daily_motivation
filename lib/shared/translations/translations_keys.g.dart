@@ -1,6 +1,8 @@
 // DO NOT EDIT. This is code generated via package:easy_localization/generate.dart
 
 abstract class  LocaleKeys {
+  static const remove = 'remove';
+  static const edit = 'edit';
   static const categoriesKey_general = 'categoriesKey.general';
   static const categoriesKey_myquotes = 'categoriesKey.myquotes';
   static const categoriesKey_favorites = 'categoriesKey.favorites';
@@ -131,5 +133,41 @@ abstract class  LocaleKeys {
   static const sign_password_confirm = 'sign.password_confirm';
   static const sign_or = 'sign.or';
   static const sign = 'sign';
+  static const account_account_ready_title = 'account.account_ready_title';
+  static const account_verify_email = 'account.verify_email';
+  static const account_dont_receive_email = 'account.dont_receive_email';
+  static const account_resend = 'account.resend';
+  static const account = 'account';
+  static const premium_upgrade_premium = 'premium.upgrade_premium';
+  static const premium = 'premium';
+  static const app_version = 'app.version';
+  static const app = 'app';
+  static const settings_preferences_and_favorites = 'settings.preferences_and_favorites';
+  static const settings_favorites = 'settings.favorites';
+  static const settings_my_quotes = 'settings.my_quotes';
+  static const settings_reminders = 'settings.reminders';
+  static const settings_quote_reminders = 'settings.quote_reminders';
+  static const settings_settings = 'settings.settings';
+  static const settings_dark_mode = 'settings.dark_mode';
+  static const settings_notifications = 'settings.notifications';
+  static const settings_language = 'settings.language';
+  static const settings_give_feedback = 'settings.give_feedback';
+  static const settings_share_app = 'settings.share_app';
+  static const settings_rate_us = 'settings.rate_us';
+  static const settings = 'settings';
+  static const warning_turn_off_notifications = 'warning.turn_off_notifications';
+  static const warning = 'warning';
+  static const reminders_reminders = 'reminders.reminders';
+  static const reminders_equal_interval_info = 'reminders.equal_interval_info';
+  static const reminders = 'reminders';
+  static const add_or_edit_reminder_message = 'add_or_edit_reminder.message';
+  static const add_or_edit_reminder_notification_message = 'add_or_edit_reminder.notification_message';
+  static const add_or_edit_reminder_notification_message_info = 'add_or_edit_reminder.notification_message_info';
+  static const add_or_edit_reminder = 'add_or_edit_reminder';
+  static const categories_categories = 'categories.categories';
+  static const categories = 'categories';
+  static const validations_notification_message_cannot_be_empty = 'validations.notification_message_cannot_be_empty';
+  static const validations_notification_message_cannot_be_smaller_than_3 = 'validations.notification_message_cannot_be_smaller_than_3';
+  static const validations = 'validations';
 
 }

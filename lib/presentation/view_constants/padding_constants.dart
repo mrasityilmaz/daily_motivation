@@ -75,11 +75,12 @@ final class PaddingConstants extends EdgeInsets {
   /// ```dart
   /// MediaQuery.viewPaddingOf(context).bottom
   /// ```
+  // TODO:
   PaddingConstants.adaptiveScreenPaddingBottom(double viewPaddingBottom)
       : super.only(
           bottom: () {
             if (viewPaddingBottom > 0) {
-              return (normalValue * .5) + lowValue;
+              return viewPaddingBottom;
             } else {
               return normalValue + lowValue;
             }
@@ -94,14 +95,14 @@ final class PaddingConstants extends EdgeInsets {
       : super.only(
           top: () {
             if (viewPaddingBottom > 0) {
-              return (normalValue * .5) + lowValue;
+              return viewPaddingBottom;
             } else {
               return normalValue + lowValue;
             }
           }(),
           bottom: () {
             if (viewPaddingBottom > 0) {
-              return (normalValue * .5) + lowValue;
+              return viewPaddingBottom;
             } else {
               return normalValue + lowValue;
             }
@@ -113,7 +114,6 @@ final class PaddingConstants extends EdgeInsets {
           left: mediumValue,
           right: mediumValue,
           top: normalValue,
-          bottom: normalValue,
         );
 
   const PaddingConstants.screenPaddingLeft() : super.only(left: mediumValue);

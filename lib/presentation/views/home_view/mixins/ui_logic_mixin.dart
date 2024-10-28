@@ -43,10 +43,7 @@ mixin _UILogicMixin {
   /// Show ThemesBottomSheet
   ///
   Future<void> showSettingsBottomSheet(BuildContext context) async {
-    await _showBottomSheet(
-      context,
-      child: const SettingsBottomSheet(),
-    );
+    await const SettingsView().showAsModalBottomSheet<void>(context);
   }
 
   ///

@@ -1,17 +1,18 @@
 part of '../../add_new_or_edit_reminder_view.dart';
 
 @immutable
-final class _NotificationMessageSection extends ViewModelWidget<_AddNewOrEditReminderViewModel> {
+final class _NotificationMessageSection extends ViewModelWidget<AddNewOrEditReminderViewModel> {
   const _NotificationMessageSection() : super(reactive: false);
 
   @override
-  Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
+  Widget build(BuildContext context, AddNewOrEditReminderViewModel viewModel) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           'Notification Message',
-          style: context.textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onSurface.withOpacity(.75)),
+          style: context.textTheme.bodyLarge
+              ?.copyWith(fontWeight: FontWeight.bold, color: context.colors.onSurface.withOpacity(.75)),
         ),
         Row(
           children: [
@@ -24,7 +25,8 @@ final class _NotificationMessageSection extends ViewModelWidget<_AddNewOrEditRem
             AutoSizeText(
               'This shows up under the notification title',
               maxLines: 2,
-              style: context.textTheme.bodySmall?.copyWith(color: context.colors.onSurface.withOpacity(.4), fontStyle: FontStyle.italic),
+              style: context.textTheme.bodySmall
+                  ?.copyWith(color: context.colors.onSurface.withOpacity(.4), fontStyle: FontStyle.italic),
             ),
           ],
         ),

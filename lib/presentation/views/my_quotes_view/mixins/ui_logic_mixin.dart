@@ -1,4 +1,4 @@
-part of '../my_quotes_viewmodel.dart';
+part of '../my_quotes_view.dart';
 
 mixin _UILogicMixin {
   ///

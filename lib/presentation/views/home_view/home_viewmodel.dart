@@ -14,8 +14,7 @@ import 'package:quotely/data/services/quote_and_category_service/quote_and_categ
 import 'package:quotely/data/services/theme_configuration_service/theme_configuration_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
-import 'package:quotely/presentation/views/settings_bottom_sheet/settings_bottom_sheet.dart';
-import 'package:quotely/presentation/views/sign_view/login_view/login_view.dart';
+import 'package:quotely/presentation/views/settings_view/settings_view.dart';
 import 'package:quotely/presentation/views/themes_bottom_sheet/themes_bottom_sheet.dart';
 import 'package:stacked/stacked.dart' hide PageRouteInfo;
 

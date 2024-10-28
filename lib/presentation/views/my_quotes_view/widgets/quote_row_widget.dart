@@ -1,7 +1,7 @@
 part of '../my_quotes_view.dart';
 
 @immutable
-final class _QuoteRowWidget extends ViewModelWidget<MyQuotesViewModel> {
+final class _QuoteRowWidget extends ViewModelWidget<MyQuotesViewModel> with _UILogicMixin {
   const _QuoteRowWidget({required this.quote}) : super(reactive: false);
   final QuoteModel quote;
 
@@ -41,7 +41,7 @@ final class _QuoteRowWidget extends ViewModelWidget<MyQuotesViewModel> {
           decoration: BoxDecoration(color: context.colors.onSurface.withOpacity(.05), borderRadius: context.radius8),
           padding: const PaddingConstants.lowHorizontal() + const PaddingConstants.lowVertical() * 1.2,
           child: GestureDetector(
-            onTap: () async => viewModel.copyQuote(context, quote: quote),
+            onTap: () async => copyQuote(context, quote: quote),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

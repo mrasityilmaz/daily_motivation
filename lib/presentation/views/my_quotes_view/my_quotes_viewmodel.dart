@@ -1,18 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/my_quote_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/injection/injection_container.dart';
-import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:stacked/stacked.dart';
 
-part 'mixins/ui_logic_mixin.dart';
-
-final class MyQuotesViewModel extends BaseViewModel with _UILogicMixin {
+final class MyQuotesViewModel extends BaseViewModel {
   final MyQuoteBoxService _myQuoteBoxService = locator<HiveService>().myQuoteBoxService;
 
   final List<QuoteModel> _myQuoteListStatic = List<QuoteModel>.empty(growable: true);

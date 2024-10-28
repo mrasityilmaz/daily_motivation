@@ -1,4 +1,6 @@
 {
+	"remove": "Remove",
+	"edit": "Edit",
 	"categoriesKey": {
 		"general": "General",
 		"myquotes": "My Quotes",
@@ -132,5 +134,50 @@
 		"password": "Password",
 		"password_confirm": "Confirm Password",
 		"or": "OR"
+	},
+	"account": {
+		"account_ready_title": "Congratulations!\nYour account is ready.",
+		"verify_email": "Just one more step! \nPlease verify your email address by checking your inbox. Then you can start enjoying\r\r🎉",
+		"dont_receive_email": "Didn't receive the email?",
+		"resend": "Resend"
+	},
+	"premium": {
+		"upgrade_premium": "Upgrade to Premium"
+	},
+	"app": {
+		"version": "Version: {version}"
+	},
+	"settings": {
+		"preferences_and_favorites": "Preferences and Favorites",
+		"favorites": "Favorites",
+		"my_quotes": "My Quotes",
+		"reminders": "Reminders",
+		"quote_reminders": "Quote Reminders",
+		"settings": "Settings",
+		"dark_mode": "Dark Mode",
+		"notifications": "Notifications",
+		"language": "Language",
+		"give_feedback": "Give Feedback",
+		"share_app": "Share App",
+		"rate_us": "Rate Us"
+	},
+	"warning": {
+		"turn_off_notifications": "To turn off notifications, go to the app settings."
+	},
+	"reminders": {
+		"reminders": "Reminders",
+		"equal_interval_info": "Start from {start} to {end} - {interval} times a day"
+	},
+	"add_or_edit_reminder": {
+		"message": "Message",
+		"notification_message": "Notification Message",
+		"notification_message_info": "This shows up under the notification title"
+	},
+	"categories": {
+		"categories": "Categories"
+	},
+	"validations": {
+		"notification_message_cannot_be_empty": "Message cannot be empty",
+		"notification_message_cannot_be_smaller_than_3": "Message cannot be smaller than 3 characters"
 	}
 }

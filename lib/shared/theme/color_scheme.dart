@@ -27,12 +27,12 @@ final class AppColorScheme {
 
   Color get backgroundColor => Colors.white;
 
-  Color get blackColor => Colors.black;
+  Color get lightGreyColor => const Color(0xFFF4EFEE);
+  Color get blackColor => const Color(0xFF13181B);
   Color get secondBlackColor => const Color(0xFF475467);
 
   Color get primaryOrangeColor => const Color(0XffFFA500);
 
-  Color get lightGreyColor => const Color(0xFFEAECF0);
   Color get darkGreyColor => const Color(0xFF2E3440);
 }
 
@@ -44,4 +44,4 @@ final class AppColorScheme {
 /// 627A95
 /// C4D0D5
 /// F6FFFF
-/// 
+///

@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
+import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/shared/theme/color_scheme.dart';
 

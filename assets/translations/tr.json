@@ -1,4 +1,6 @@
 {
+	"remove": "Kaldır",
+	"edit": "Düzenle",
 	"categoriesKey": {
 		"general": "Genel",
 		"myquotes": "Alıntılarım",
@@ -132,5 +134,50 @@
 		"password": "Şifre",
 		"password_confirm": "Şifreyi Onayla",
 		"or": "VEYA"
+	},
+	"account": {
+		"account_ready_title": "Tebrikler!\nHesabınız hazır.",
+		"verify_email": "Sadece bir adım kaldı! \nLütfen gelen kutunuzu kontrol ederek e-posta adresinizi doğrulayın. Ardından keyfini çıkarmaya başlayabilirsiniz\r\r🎉",
+		"dont_receive_email": "E-postayı almadınız mı?",
+		"resend": "Yeniden Gönder"
+	},
+	"premium": {
+		"upgrade_premium": "Premium'a Yükselt"
+	},
+	"app": {
+		"version": "Versiyon: {version}"
+	},
+	"settings": {
+		"preferences_and_favorites": "Tercihler ve Favoriler",
+		"favorites": "Favoriler",
+		"my_quotes": "Alıntılarım",
+		"reminders": "Hatırlatıcılar",
+		"quote_reminders": "Alıntı Bildirimleri",
+		"settings": "Ayarlar",
+		"dark_mode": "Koyu Mod",
+		"notifications": "Bildirimler",
+		"language": "Dil",
+		"give_feedback": "Geribildirim",
+		"share_app": "Uygulamayı Paylaş",
+		"rate_us": "Uygulamayı Oyla"
+	},
+	"warning": {
+		"turn_off_notifications": "Bildirimleri kapatmak için uygulama ayarlarına gidin."
+	},
+	"reminders": {
+		"reminders": "Hatırlatıcılar",
+		"equal_interval_info": "{start} ile {end} arasında - günde {interval} kere"
+	},
+	"add_or_edit_reminder": {
+		"message": "Mesaj",
+		"notification_message": "Bildirim Mesajı",
+		"notification_message_info": "Bildirim başlığının altında gösterilecek mesaj"
+	},
+	"categories": {
+		"categories": "Kategoriler"
+	},
+	"validations": {
+		"notification_message_cannot_be_empty": "Mesaj boş olamaz",
+		"notification_message_cannot_be_smaller_than_3": "Mesaj 3 karakterden küçük olamaz"
 	}
 }

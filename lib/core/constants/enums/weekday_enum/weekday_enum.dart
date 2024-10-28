@@ -1,3 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
+
 enum WeekdayEnum {
   monday(dayIndex: 0, shortNameEn: 'Mon', shortNameTr: 'Pzt'),
   tuesday(dayIndex: 1, shortNameEn: 'Tue', shortNameTr: 'Sal'),
@@ -12,4 +15,8 @@ enum WeekdayEnum {
   final int dayIndex;
   final String shortNameEn;
   final String shortNameTr;
+
+  String getDayName(BuildContext context) {
+    return context.locale.languageCode == 'en' ? shortNameEn : shortNameTr;
+  }
 }

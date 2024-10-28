@@ -8,7 +8,7 @@ import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/extensions/validator_extension.dart';
 import 'package:quotely/presentation/abstracts/sheetable_view.dart';
 import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
-import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
+import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/slivers/header_sliver_appbar.dart';
 import 'package:quotely/presentation/core_widgets/slivers/sliver_injector.dart';
 import 'package:quotely/presentation/core_widgets/textfield/textformfield_widget.dart';
@@ -16,7 +16,7 @@ import 'package:quotely/presentation/sheets/app_sheets.dart';
 import 'package:quotely/presentation/view_constants/gap_constants.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/presentation/views/sign_view/login_view/viewmodel/login_viewmodel.dart';
-import 'package:quotely/presentation/views/sign_view/signup_bottom_sheet/signup_view.dart';
+import 'package:quotely/presentation/views/sign_view/signup_view/signup_view.dart';
 import 'package:quotely/shared/translations/translations_keys.g.dart';
 import 'package:stacked/stacked.dart';
 
@@ -63,21 +63,11 @@ final class LoginView extends StatelessSheetableWidget {
 
   @override
   Future<T?> showAsModalBottomSheet<T>(BuildContext context) async {
-    return createSheetInstance().showBottomSheet(
-      context,
-    );
-  }
-
-  @override
-  Sheets createSheetInstance() {
     return Sheets(
       child: this,
       closeProgressThreshold: .5,
+    ).showBottomSheet(
+      context,
     );
-  }
-
-  @override
-  ModalSheetRoute<T> createSheetRoute<T>(BuildContext context, Widget child, AutoRoutePage<T> page) {
-    return createSheetInstance().createSheetRoute(context);
   }
 }

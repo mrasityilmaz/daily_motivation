@@ -2,7 +2,7 @@ part of '../home_view.dart';
 
 @immutable
 final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel, Categories> {
-  const _BottomButtonsSection() : super();
+  const _BottomButtonsSection();
 
   @override
   Widget build(BuildContext context, Categories category, HomeViewModel viewModel) {
@@ -14,12 +14,12 @@ final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel
           child: Row(
             children: [
               ClipRRect(
-                borderRadius: context.radius12,
+                borderRadius: const RadiusConstants.allNormal(),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
                   child: CustomButton(
                     backgroundColor: context.colors.scrim.withOpacity(.3),
-                    onPressed: () async => viewModel.showCategoriesBottomSheet(context),
+                    onPressed: () async => const CategoriesView().showAsModalBottomSheet<void>(context),
                     child: Row(
                       children: [
                         Icon(

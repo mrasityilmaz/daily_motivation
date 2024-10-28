@@ -4,7 +4,7 @@ import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/injection/injection_container.dart';
-import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
+import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 
 @immutable

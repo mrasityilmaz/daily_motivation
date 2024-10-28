@@ -8,7 +8,7 @@ import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/injection/injection_container.dart';
-import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
+import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/dialogs/lock_overlay_dialog.dart';
 import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
@@ -171,7 +171,7 @@ final class AppDialogs {
     void Function()? onPressed,
   }) async {
     final Flushbar<void> flushbar = Flushbar<void>(
-      key: const ValueKey('basic_flushbar'),
+      key: ValueKey('basic_flushbar_${context.hashCode}'),
       onTap: (flushbar) async {
         await flushbar.dismiss();
         onPressed?.call();

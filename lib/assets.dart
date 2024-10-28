@@ -11,6 +11,7 @@ import 'package:flutter/foundation.dart';
 @immutable
 final class Assets {
   Assets._();
+  static final _App_inner_icons app_inner_icons = _App_inner_icons._();
   static final _Backgrounds backgrounds = _Backgrounds._();
   static final _Category_icons category_icons = _Category_icons._();
   static final _New_category_icons new_category_icons = _New_category_icons._();
@@ -18,6 +19,14 @@ final class Assets {
   static final _Translations translations = _Translations._();
 
   static const String crow_front_premium_png = 'assets/crow-front-premium.png';
+
+}
+
+@immutable
+final class _App_inner_icons {
+  _App_inner_icons._();
+
+  final String verify_email_svg = 'assets/app_inner_icons/verify_email.svg';
 
 }
 

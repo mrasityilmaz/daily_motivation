@@ -1,11 +1,11 @@
 part of '../add_new_or_edit_reminder_view.dart';
 
 @immutable
-final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<_AddNewOrEditReminderViewModel> {
+final class _AddNewOrEditReminderViewBodyWidget extends ViewModelWidget<AddNewOrEditReminderViewModel> {
   const _AddNewOrEditReminderViewBodyWidget() : super(reactive: false);
 
   @override
-  Widget build(BuildContext context, _AddNewOrEditReminderViewModel viewModel) {
+  Widget build(BuildContext context, AddNewOrEditReminderViewModel viewModel) {
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(

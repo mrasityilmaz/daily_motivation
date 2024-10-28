@@ -3,30 +3,18 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/constants/enums/categories_enum.dart';
 import 'package:quotely/core/constants/enums/reminder_schedule_enum.dart';
 import 'package:quotely/core/extensions/categories_extension.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/core/services/logger_service.dart';
-import 'package:quotely/data/models/quote_notification_model/custom_interval_model.dart';
-import 'package:quotely/data/models/quote_notification_model/equal_schedule_model.dart';
-import 'package:quotely/data/models/quote_notification_model/quote_notification_model.dart';
-import 'package:quotely/data/services/hive_service/boxes/quote_notification_service.dart';
-import 'package:quotely/data/services/hive_service/hive_service.dart';
-import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
 import 'package:quotely/presentation/core_widgets/basic/choose_circle_icon.dart';
-import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
+import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
+import 'package:quotely/presentation/views/quote_notifications_view/viewmodel/quote_notifications_viewmodel.dart';
 import 'package:stacked/stacked.dart';
-import 'package:uuid/uuid.dart';
 
-part 'mixins/custom_interval_calculator_mixin.dart';
-part 'mixins/equal_interval_calculator_mixin.dart';
-part 'mixins/selected_categories_mixin.dart';
-part 'quote_notifications_viewmodel.dart';
 part 'widgets/custom_interval_section.dart';
 part 'widgets/equal_interval_section.dart';
 part 'widgets/notification_categories_section.dart';
@@ -39,7 +27,7 @@ final class QuoteNotificationsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.nonReactive(
-      viewModelBuilder: _QuoteNotificationViewModel.new,
+      viewModelBuilder: QuoteNotificationViewModel.new,
       onViewModelReady: (viewModel) => viewModel.onReady(),
       builder: (context, model, child) {
         return Stack(
@@ -55,7 +43,7 @@ final class QuoteNotificationsView extends StatelessWidget {
               ),
               body: const _QuoteNotificationViewBodyWidget(),
             ),
-            const ViewModelLoadingIndicator<_QuoteNotificationViewModel>(),
+            const ViewModelLoadingIndicator<QuoteNotificationViewModel>(),
           ],
         );
       },
@@ -64,11 +52,11 @@ final class QuoteNotificationsView extends StatelessWidget {
 }
 
 @immutable
-final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<_QuoteNotificationViewModel> {
+final class _QuoteNotificationViewBodyWidget extends ViewModelWidget<QuoteNotificationViewModel> {
   const _QuoteNotificationViewBodyWidget();
 
   @override
-  Widget build(BuildContext context, _QuoteNotificationViewModel viewModel) {
+  Widget build(BuildContext context, QuoteNotificationViewModel viewModel) {
     return CustomScrollView(
       slivers: [
         SliverToBoxAdapter(

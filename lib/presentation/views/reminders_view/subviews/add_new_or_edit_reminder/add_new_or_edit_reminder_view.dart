@@ -3,28 +3,19 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/constants/enums/reminder_schedule_enum.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
-import 'package:quotely/core/services/logger_service.dart';
-import 'package:quotely/core/services/notification_service/notification_service.dart';
 import 'package:quotely/data/models/reminder_model/reminder_model.dart';
-import 'package:quotely/data/services/hive_service/boxes/reminder_service.dart';
-import 'package:quotely/data/services/hive_service/hive_service.dart';
-import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
 import 'package:quotely/presentation/core_widgets/basic/choose_circle_icon.dart';
-import 'package:quotely/presentation/core_widgets/custom_button/custom_button.dart';
+import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/textfield/textfield_widget.dart';
 import 'package:quotely/presentation/core_widgets/textfield/textformfield_widget.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
-import 'package:safe_int_id/safe_int_id.dart';
+import 'package:quotely/presentation/views/reminders_view/subviews/add_new_or_edit_reminder/viewmodel/add_new_or_edit_reminder_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
-part 'add_new_or_edit_reminder_viewmodel.dart';
-part 'mixins/custom_interval_calculator_mixin.dart';
-part 'mixins/equal_interval_calculator_mixin.dart';
 part 'widgets/app_bar_widget.dart';
 part 'widgets/body_widget.dart';
 part 'widgets/custom_interval_section.dart';
@@ -44,7 +35,7 @@ final class AddNewOrEditReminderView<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.nonReactive(
-      viewModelBuilder: () => _AddNewOrEditReminderViewModel(editReminderModel: reminder),
+      viewModelBuilder: () => AddNewOrEditReminderViewModel(editReminderModel: reminder),
       onViewModelReady: (viewModel) => viewModel.onReady(),
       builder: (context, model, child) {
         return Stack(
@@ -53,7 +44,7 @@ final class AddNewOrEditReminderView<T> extends StatelessWidget {
               appBar: _AppBarWidget(reminder: reminder),
               body: const _AddNewOrEditReminderViewBodyWidget(),
             ),
-            const ViewModelLoadingIndicator<_AddNewOrEditReminderViewModel>(),
+            const ViewModelLoadingIndicator<AddNewOrEditReminderViewModel>(),
           ],
         );
       },
