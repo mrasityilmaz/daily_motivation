@@ -13,7 +13,7 @@ import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/abstracts/sheetable_view.dart';
 import 'package:quotely/presentation/abstracts/vselector_with_viewmodel_widget.dart';
-import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
+import 'package:quotely/presentation/components/viewmodel_builder.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_size_widget.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
@@ -39,17 +39,8 @@ final class CategoriesView extends StatelessSheetableWidget {
     return ViewModelBuilder<CategoriesBottomSheetViewModel>.nonReactive(
       viewModelBuilder: CategoriesBottomSheetViewModel.new,
       builder: (context, model, child) {
-        return Stack(
-          clipBehavior: Clip.none,
-          children: [
-            Scaffold(
-              appBar: _CategoriesBottomSheetAppBar(
-                primary: primary,
-              ),
-              body: const _BodyWidget(),
-            ),
-            const ViewModelLoadingIndicator<CategoriesBottomSheetViewModel>(),
-          ],
+        return const ViewModelBodyBuilder<CategoriesBottomSheetViewModel>(
+          body: _BodyWidget(),
         );
       },
     );
@@ -59,8 +50,6 @@ final class CategoriesView extends StatelessSheetableWidget {
   Future<T?> showAsModalBottomSheet<T>(BuildContext context) async {
     return Sheets(
       child: this,
-      bounce: false,
-      expand: true,
     ).showBottomSheet(
       context,
     );

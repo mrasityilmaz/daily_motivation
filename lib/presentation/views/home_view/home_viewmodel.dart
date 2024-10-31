@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quotely/core/constants/enums/categories_enum.dart';
 import 'package:quotely/core/constants/premium_constants/quote_swipe_constants_mixin.dart';
-import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/core/services/premium_services/premium_services.dart';
 import 'package:quotely/data/models/quote_model/quote_model.dart';
@@ -13,14 +12,9 @@ import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/data/services/quote_and_category_service/quote_and_category_service.dart';
 import 'package:quotely/data/services/theme_configuration_service/theme_configuration_service.dart';
 import 'package:quotely/injection/injection_container.dart';
-import 'package:quotely/presentation/dialogs/app_dialogs.dart';
-import 'package:quotely/presentation/views/settings_view/settings_view.dart';
-import 'package:quotely/presentation/views/themes_bottom_sheet/themes_bottom_sheet.dart';
 import 'package:stacked/stacked.dart' hide PageRouteInfo;
 
-part 'mixins/ui_logic_mixin.dart';
-
-final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwipeMixin, _UILogicMixin {
+final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwipeMixin {
   ///
   /// Define the services
   ///
@@ -31,20 +25,14 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
   ///
   /// Getters for the services and the current state of the services
   ///
-  QuoteAndCategoryService get listenableCategoryService => listenableServices.first as QuoteAndCategoryService;
-
-  ThemeConfigurationService get listenableThemeConfigurationService =>
-      listenableServices[1] as ThemeConfigurationService;
-  PremiumServices get listenablePremiumServices => listenableServices[2] as PremiumServices;
 
   ///
   /// Getters for the current values of the services
   ///
-  List<QuoteModel> get currentQuoteList => listenableCategoryService.currentQuotes;
+  List<QuoteModel> get currentQuoteList => _categoryService.currentQuotes;
 
-  Categories? get selectedCategory => listenableCategoryService.selectedCategory;
-  ThemeConfigurationModel get currentThemeConfiguration =>
-      listenableThemeConfigurationService.currentThemeConfiguration;
+  Categories get selectedCategory => _categoryService.selectedCategory;
+  ThemeConfigurationModel get currentThemeConfiguration => _themeConfigurationService.currentThemeConfiguration;
 
   QuoteModel get currentQuote => currentQuoteList.isNotEmpty ? currentQuoteList[_currentPage] : QuoteModel.empty();
   final ValueNotifier<bool> currentQuoteIsLiked = ValueNotifier<bool>(false);
@@ -83,6 +71,8 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
 
   Future<void> onPageChanged(int index) async {
     try {
+      checkCurrentQuoteIsLiked();
+
       ///
       /// Check every time the page changes if the user should watch an ad to unlock quote swipe.
       /// If the user should watch an ad to unlock quote swipe, show an ad.
@@ -102,7 +92,8 @@ final class HomeViewModel extends ReactiveViewModel with PremiumConstantQuoteSwi
   /// Quote Like Function
   ///
 
-  Future<void> likeQuote({required bool isLiked}) async {
+  Future<void> toggleLike() async {
+    final bool isLiked = locator<HiveService>().likedQuoteBoxService.isQuoteLiked(currentQuote.id);
     if (isLiked) {
       await locator<HiveService>().likedQuoteBoxService.unLikeQuote(currentQuote.id);
       currentQuoteIsLiked.value = false;

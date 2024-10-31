@@ -10,7 +10,7 @@ final class _CategoriesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverStickyHeader(
       header: Container(
-        height: kToolbarHeight,
+        height: kToolbarHeight * .8,
         decoration: BoxDecoration(
           color: true ? context.appColors.darkGreyColor : context.appColors.lightGreyColor,
         ),

@@ -5,13 +5,15 @@ final class _ThemesBottomSheetAppBar extends StatelessWidget implements Preferre
   const _ThemesBottomSheetAppBar();
 
   @override
-  AppBar build(BuildContext context) {
-    return AppBar(
+  SliverAppBar build(BuildContext context) {
+    return SliverAppBar(
+      floating: true,
       title: Text(
         'Themes',
         style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
       ),
       centerTitle: true,
+      primary: false,
       actions: [
         CustomButton.text(
           text: 'Kilitleri Kaldır',

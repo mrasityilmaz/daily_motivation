@@ -15,6 +15,7 @@ mixin _SheetBuilderHelper on _IBaseSheets {
           : constraints ??
               BoxConstraints(maxHeight: MediaQuery.sizeOf(context).height - MediaQuery.viewPaddingOf(context).top),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           if (showDragHandle) ...[
             const SheetDragHandle(),

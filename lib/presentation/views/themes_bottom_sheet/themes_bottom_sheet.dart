@@ -13,12 +13,14 @@ import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/models/theme_configuration_model/theme_configuration_model.dart';
 import 'package:quotely/injection/injection_container.dart';
-import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
+import 'package:quotely/presentation/abstracts/sheetable_view.dart';
+import 'package:quotely/presentation/components/viewmodel_builder.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_size_widget.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:quotely/presentation/dialogs/dialog_bodies/show_or_pay_dialog_body.dart';
 import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
+import 'package:quotely/presentation/sheets/app_sheets.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/presentation/views/themes_bottom_sheet/themes_bottom_sheet_viewmodel.dart';
 import 'package:stacked/stacked.dart';
@@ -31,36 +33,27 @@ part 'widgets/image_box_widget/text_in_box_widget.dart';
 part 'widgets/image_box_widget/theme_image_box_widget.dart';
 
 @immutable
-final class ThemesBottomSheet extends StatelessWidget {
-  const ThemesBottomSheet({super.key});
+final class ThemesBottomSheet extends StatelessSheetableWidget {
+  const ThemesBottomSheet({super.key}) : super(primary: false);
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<ThemesBottomSheetViewModel>.nonReactive(
       viewModelBuilder: ThemesBottomSheetViewModel.new,
       builder: (context, model, child) {
-        return DraggableScrollableSheet(
-          minChildSize: .8,
-          initialChildSize: 1,
-          builder: (context, scrollController) {
-            return PrimaryScrollController(
-              controller: scrollController,
-              child: ClipRRect(
-                borderRadius: context.radius16Top,
-                child: const Stack(
-                  children: [
-                    Scaffold(
-                      appBar: _ThemesBottomSheetAppBar(),
-                      body: _BodyWidget(),
-                    ),
-                    ViewModelLoadingIndicator<ThemesBottomSheetViewModel>(),
-                  ],
-                ),
-              ),
-            );
-          },
+        return const ViewModelBodyBuilder<ThemesBottomSheetViewModel>(
+          body: _BodyWidget(),
         );
       },
+    );
+  }
+
+  @override
+  Future<T?> showAsModalBottomSheet<T>(BuildContext context) async {
+    return Sheets(
+      child: this,
+    ).showBottomSheet(
+      context,
     );
   }
 }

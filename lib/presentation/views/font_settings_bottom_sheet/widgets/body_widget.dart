@@ -77,7 +77,7 @@ final class _BodyWidget extends ViewModelWidget<_FontSettingsBottomSheetViewMode
           color: context.appColors.surfaceColor,
         ),
         child: SafeArea(
-          minimum: PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom),
+          minimum: PaddingConstants.adaptiveScreenPaddingBottom(context),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [

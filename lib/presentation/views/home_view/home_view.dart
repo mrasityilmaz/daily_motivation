@@ -23,7 +23,9 @@ import 'package:quotely/presentation/view_constants/padding_constants.dart';
 import 'package:quotely/presentation/view_constants/radius_constants.dart';
 import 'package:quotely/presentation/views/categories_view/categories_view.dart';
 import 'package:quotely/presentation/views/home_view/home_viewmodel.dart';
+import 'package:quotely/presentation/views/settings_view/settings_view.dart';
 import 'package:quotely/presentation/views/sign_view/login_view/login_view.dart';
+import 'package:quotely/presentation/views/themes_bottom_sheet/themes_bottom_sheet.dart';
 import 'package:stacked/stacked.dart';
 
 part 'widgets/bottom_buttons_section.dart';

@@ -36,9 +36,7 @@ mixin _QuoteAndCategoryServiceMixin {
         });
       }
 
-      if (quotes.isNotEmpty) {
-        onQuotesChanged.call(quotes);
-      }
+      onQuotesChanged.call(quotes);
     } catch (e, s) {
       LoggerService.catchLog(e, s);
     }
@@ -103,6 +101,9 @@ mixin _QuoteAndCategoryServiceMixin {
       if (category == Categories.myquotes) {
         return _readMyQuotes();
       }
+      if (category == Categories.favorites) {
+        return _readMyFavoritesQuotes();
+      }
 
       final String jsonString = await rootBundle.loadString('$_categoryPath${category.key}_quotes.json');
 
@@ -129,6 +130,16 @@ mixin _QuoteAndCategoryServiceMixin {
   Future<List<QuoteModel>> _readMyQuotes() async {
     try {
       final List<QuoteModel> myQuoteList = locator<HiveService>().myQuoteBoxService.myQuoteList;
+
+      return myQuoteList;
+    } catch (e) {
+      return [];
+    }
+  }
+
+  Future<List<QuoteModel>> _readMyFavoritesQuotes() async {
+    try {
+      final List<QuoteModel> myQuoteList = locator<HiveService>().likedQuoteBoxService.likedQuoteList;
 
       return myQuoteList;
     } catch (e) {

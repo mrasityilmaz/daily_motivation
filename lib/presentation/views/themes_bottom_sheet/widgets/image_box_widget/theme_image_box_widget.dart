@@ -83,7 +83,7 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
     required Future<void> Function() onChanged,
   }) async {
     try {
-      late final Future<bool?> future = ProgressOverlayDialog.instance.showProgressOverlay<bool>(
+      late final Future<bool?> future = OverlayDialog().showProgressOverlay<bool>(
         context,
         asyncProcess: () async {
           await Future.delayed(Duration(milliseconds: isLocked ? 500 : 300), () async {
@@ -128,7 +128,7 @@ final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> 
       }
     } catch (e, s) {
       await locator<AppRouter>().maybePop();
-      ProgressOverlayDialog.instance.closeOverlay();
+      OverlayDialog().closeOverlay();
       LoggerService.catchLog(e, s);
     }
   }

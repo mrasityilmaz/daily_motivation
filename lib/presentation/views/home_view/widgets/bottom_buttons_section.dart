@@ -44,7 +44,7 @@ final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel
                   filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
                   child: CustomButton(
                     backgroundColor: context.colors.scrim.withOpacity(.3),
-                    onPressed: () async => viewModel.showThemesBottomSheet(context),
+                    onPressed: () async => const ThemesBottomSheet().showAsModalBottomSheet<void>(context),
                     child: Icon(
                       Platform.isAndroid ? Icons.format_paint_rounded : CupertinoIcons.paintbrush,
                       color: Colors.white,
@@ -99,7 +99,7 @@ final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel
                   filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
                   child: CustomButton(
                     backgroundColor: context.colors.scrim.withOpacity(.3),
-                    onPressed: () async => viewModel.showSettingsBottomSheet(context),
+                    onPressed: () async => const SettingsView().showAsModalBottomSheet<void>(context),
                     child: Icon(
                       Platform.isAndroid ? Icons.settings : CupertinoIcons.settings,
                       color: Colors.white,
@@ -118,7 +118,7 @@ final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel
 
   @override
   Categories selector(HomeViewModel viewModel) {
-    return viewModel.selectedCategory ?? Categories.general;
+    return viewModel.selectedCategory;
   }
 }
 

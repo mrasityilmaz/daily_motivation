@@ -18,7 +18,7 @@ final class Sheets extends _IBaseSheets with _SheetBuilderHelper {
     super.isDismissible = true,
     super.enableDrag = true,
     super.useRootNavigator = false,
-    super.bounce = true,
+    super.bounce = false,
     super.expand = false,
     super.animationCurve = Curves.linearToEaseOut,
     super.duration = Durations.medium2,

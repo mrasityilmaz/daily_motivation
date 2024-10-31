@@ -26,7 +26,7 @@ final class _LikeAndOtherButtonsSection extends ViewModelWidget<HomeViewModel> {
                       size: 32,
                       color: isLikedValue ? Colors.red : Colors.white,
                     ),
-                    onPressed: () async => viewModel.likeQuote(isLiked: isLikedValue),
+                    onPressed: () async => viewModel.toggleLike(),
                   );
                 },
               ),

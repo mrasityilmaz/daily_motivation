@@ -10,6 +10,7 @@ final class _BodyWidget extends StatelessWidget {
       clipBehavior: Clip.none,
       controller: ModalScrollController.of(context),
       slivers: [
+        const _CategoriesBottomSheetAppBar(),
         ...CategoryGroup.values.map(
           (e) => _CategoriesSection(
             categoryGroup: e,

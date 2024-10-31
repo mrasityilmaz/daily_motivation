@@ -71,44 +71,24 @@ final class PaddingConstants extends EdgeInsets {
 
   // Individual Paddings
 
-  /// Requires a [double] value to be passed
-  /// ```dart
-  /// MediaQuery.viewPaddingOf(context).bottom
-  /// ```
-  // TODO:
-  PaddingConstants.adaptiveScreenPaddingBottom(double viewPaddingBottom)
+  PaddingConstants.adaptiveScreenPaddingBottom(BuildContext context)
       : super.only(
-          bottom: () {
-            if (viewPaddingBottom > 0) {
-              return viewPaddingBottom;
-            } else {
-              return normalValue + lowValue;
-            }
-          }(),
+          bottom: getAdaptiveViewPaddingBottom(context),
         );
 
-  /// Requires a [double] value to be passed
-  /// ```dart
-  /// MediaQuery.viewPaddingOf(context).bottom
-  /// ```
-  PaddingConstants.adaptiveScreenPaddingVertical(double viewPaddingBottom)
+  PaddingConstants.adaptiveScreenPaddingVertical(BuildContext context)
       : super.only(
-          top: () {
-            if (viewPaddingBottom > 0) {
-              return viewPaddingBottom;
-            } else {
-              return normalValue + lowValue;
-            }
-          }(),
-          bottom: () {
-            if (viewPaddingBottom > 0) {
-              return viewPaddingBottom;
-            } else {
-              return normalValue + lowValue;
-            }
-          }(),
+          top: getAdaptiveViewPaddingBottom(context),
+          bottom: getAdaptiveViewPaddingBottom(context),
         );
 
+  PaddingConstants.adaptiveScreenPadding(BuildContext context)
+      : super.only(
+          left: mediumValue,
+          right: mediumValue,
+          top: normalValue,
+          bottom: getAdaptiveViewPaddingBottom(context),
+        );
   const PaddingConstants.screenPadding()
       : super.only(
           left: mediumValue,
@@ -129,4 +109,21 @@ final class PaddingConstants extends EdgeInsets {
   static const double normalValue = SizeConstants.normal;
   static const double mediumValue = SizeConstants.medium;
   static const double highValue = SizeConstants.high;
+
+  /// Some devices have a bottom padding due to the navigation bar or similar.
+  /// This method checks if there is a bottom padding and returns it.
+  /// If there is no padding, it returns the default padding.
+  ///
+  @protected
+  static double getAdaptiveViewPaddingBottom(BuildContext context) {
+    final double viewPaddingBottom = MediaQuery.viewPaddingOf(context).bottom;
+    final double viewInsetsBottom = MediaQuery.viewInsetsOf(context).bottom;
+    if (viewInsetsBottom > 0) {
+      return const PaddingConstants.screenPaddingBottom().bottom;
+    } else if (viewPaddingBottom > 0) {
+      return viewPaddingBottom + (const PaddingConstants.screenPaddingBottom().bottom * .5);
+    } else {
+      return const PaddingConstants.screenPaddingBottom().bottom;
+    }
+  }
 }

@@ -16,16 +16,12 @@ final class ThemesBottomSheetViewModel extends ReactiveViewModel with PremiumCon
   ///
   /// Getters
   ///
-  ThemeConfigurationService get _listenableThemeConfigurationService =>
-      listenableServices.first as ThemeConfigurationService;
-  PremiumServices get _listenablePremiumServices => listenableServices[1] as PremiumServices;
 
-  bool get userIsPremium => _listenablePremiumServices.isPremium;
+  bool get userIsPremium => _premiumServices.isPremium;
 
   bool isThemeConfigPremium(int index) => shouldUserWatchAdToUnlockTheme(index: index, userIsPremium: userIsPremium);
 
-  ThemeConfigurationModel get currentThemeConfiguration =>
-      _listenableThemeConfigurationService.currentThemeConfiguration;
+  ThemeConfigurationModel get currentThemeConfiguration => _themeConfigurationService.currentThemeConfiguration;
 
   List<String> get allBackgroundList => _themeConfigurationService.allBackgroundList;
   List<DefaultFontsEnum> get allDefaultFontList => _themeConfigurationService.defaultFontList;

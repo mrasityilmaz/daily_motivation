@@ -9,7 +9,6 @@ import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
-import 'package:quotely/presentation/dialogs/lock_overlay_dialog.dart';
 import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
 
@@ -79,8 +78,7 @@ final class AppDialogs {
     Alignment alignment = Alignment.center,
     Color? barrierColor,
   }) async {
-    ProgressOverlayDialog.instance.closeOverlay();
-    LockOverlayDialog.instance.closeOverlay();
+    OverlayDialog().closeOverlay();
 
     return showAnimatedDialog<T?>(
       context: context,
@@ -190,8 +188,8 @@ final class AppDialogs {
       padding: const PaddingConstants.screenPaddingHorizontal() +
           const PaddingConstants.screenPaddingBottom() +
           const PaddingConstants.screenPaddingTop() * .5,
-      margin: const PaddingConstants.screenPaddingHorizontal() * 2 +
-          PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom),
+      margin:
+          const PaddingConstants.screenPaddingHorizontal() * 2 + PaddingConstants.adaptiveScreenPaddingBottom(context),
       borderRadius: BorderRadius.circular(10),
     );
 

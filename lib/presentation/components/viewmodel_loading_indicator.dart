@@ -3,10 +3,11 @@ import 'package:quotely/presentation/core_widgets/loading_indicator/base_loading
 import 'package:stacked/stacked.dart';
 
 final class ViewModelLoadingIndicator<T extends BaseViewModel> extends SelectorViewModelWidget<T, bool> {
-  const ViewModelLoadingIndicator({super.key, this.progressWidget, this.hasBackgroundColor = false});
+  const ViewModelLoadingIndicator({super.key, this.progressWidget, this.hasBackgroundColor = false, this.isBusy});
 
   final Widget? progressWidget;
   final bool hasBackgroundColor;
+  final ValueChanged<bool>? isBusy;
 
   @override
   Widget build(
@@ -25,6 +26,8 @@ final class ViewModelLoadingIndicator<T extends BaseViewModel> extends SelectorV
 
   @override
   bool selector(T viewModel) {
-    return viewModel.isBusy;
+    final bool busyState = viewModel.isBusy;
+    this.isBusy?.call(busyState);
+    return busyState;
   }
 }

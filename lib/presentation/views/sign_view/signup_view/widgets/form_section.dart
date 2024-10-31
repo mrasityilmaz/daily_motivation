@@ -6,11 +6,12 @@ final class _FormSection extends ViewModelWidget<SignUpViewModel> {
 
   @override
   Widget build(BuildContext context, SignUpViewModel viewModel) {
-    return Padding(
-      padding: const PaddingConstants.screenPaddingHorizontal() + const PaddingConstants.normalTop() * 1.5,
-      child: Form(
-        key: viewModel.formKey,
+    return Form(
+      key: viewModel.formKey,
+      child: Padding(
+        padding: PaddingConstants.adaptiveScreenPadding(context),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             const _EmailTextField(),
             const Gap.mediumHeight(),

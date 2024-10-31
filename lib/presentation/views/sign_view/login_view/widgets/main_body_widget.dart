@@ -7,6 +7,8 @@ final class _LoginMainWidget extends ViewModelWidget<LoginViewModel> {
   @override
   Widget build(BuildContext context, LoginViewModel viewModel) {
     return NestedScrollView(
+      clipBehavior: Clip.none,
+      physics: const PageScrollPhysics(),
       controller: viewModel.scrollController,
       headerSliverBuilder: (nestedContext, innerBoxIsScrolled) {
         return [
@@ -22,7 +24,6 @@ final class _LoginMainWidget extends ViewModelWidget<LoginViewModel> {
       },
       body: const CustomScrollView(
         keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-        physics: ClampingScrollPhysics(),
         key: PageStorageKey<String>('LoginView'),
         slivers: [
           SliverInjector(),
@@ -54,7 +55,6 @@ final class _BodyWidget extends ViewModelWidget<LoginViewModel> {
           _GoogleSignButton(),
           Gap.highHeight(),
           _DontHaveAnAccountButton(),
-          Gap.H(400),
         ],
       ),
     );

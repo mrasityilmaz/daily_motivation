@@ -8,6 +8,7 @@ final class _PreferencesAndFavoritesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
         Text(
           LocaleKeys.settings_preferences_and_favorites.tr(),

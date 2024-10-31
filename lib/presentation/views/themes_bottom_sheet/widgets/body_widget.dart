@@ -8,15 +8,12 @@ final class _BodyWidget extends StatelessWidget {
   Widget build(
     BuildContext context,
   ) {
-    return CustomScrollView(
-      controller: PrimaryScrollController.maybeOf(context),
+    return const CustomScrollView(
+      clipBehavior: Clip.none,
       slivers: [
-        SliverPadding(
-          padding:
-              const PaddingConstants.screenPaddingVertical() + const PaddingConstants.screenPaddingHorizontal() * .5,
-          sliver: const _GridBuilder(),
-        ),
-        const SliverAdaptiveBottomSafeAreaWidget(),
+        _ThemesBottomSheetAppBar(),
+        _GridBuilder(),
+        SliverAdaptiveBottomSafeAreaWidget(),
       ],
     );
   }

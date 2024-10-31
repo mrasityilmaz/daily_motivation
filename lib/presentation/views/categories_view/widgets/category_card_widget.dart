@@ -39,7 +39,7 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
     required Future<void> Function() onChangeFunction,
   }) async {
     try {
-      late final Future<bool?> future = ProgressOverlayDialog.instance.showProgressOverlay<bool>(
+      late final Future<bool?> future = OverlayDialog().showProgressOverlay<bool>(
         context,
         asyncProcess: () async {
           await Future.delayed(const Duration(milliseconds: 400), () async {
@@ -90,7 +90,7 @@ final class _SubCategoriesButton extends VSelectorViewModelWidget<CategoriesBott
       ///
     } catch (e, s) {
       await locator<AppRouter>().maybePop();
-      ProgressOverlayDialog.instance.closeOverlay();
+      OverlayDialog().closeOverlay();
       LoggerService.catchLog(e, s);
     }
   }

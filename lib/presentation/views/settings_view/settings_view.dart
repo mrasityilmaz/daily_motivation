@@ -12,10 +12,9 @@ import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/core/services/notification_service/notification_service.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/abstracts/sheetable_view.dart';
-import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
+import 'package:quotely/presentation/components/viewmodel_builder.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/upgrade_premium.dart';
-import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_size_widget.dart';
 import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:quotely/presentation/sheets/app_sheets.dart';
 import 'package:quotely/presentation/view_constants/gap_constants.dart';
@@ -36,14 +35,11 @@ final class SettingsView extends StatelessSheetableWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<_SettingsBottomSheetViewModel>.nonReactive(
-      viewModelBuilder: _SettingsBottomSheetViewModel.new,
-      builder: (context, model, child) {
-        return const Stack(
-          children: [
-            _BodyWidget(),
-            ViewModelLoadingIndicator<_SettingsBottomSheetViewModel>(),
-          ],
+    return ViewModelBuilder<SettingsBottomSheetViewModel>.nonReactive(
+      viewModelBuilder: SettingsBottomSheetViewModel.new,
+      builder: (context, viewModel, child) {
+        return const ViewModelBodyBuilder<SettingsBottomSheetViewModel>(
+          body: _BodyWidget(),
         );
       },
     );
@@ -53,8 +49,6 @@ final class SettingsView extends StatelessSheetableWidget {
   Future<T?> showAsModalBottomSheet<T>(BuildContext context) async {
     return Sheets(
       child: this,
-      closeProgressThreshold: .8,
-      bounce: false,
       showDragHandle: true,
     ).showBottomSheet(
       context,

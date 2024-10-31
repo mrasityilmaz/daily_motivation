@@ -66,7 +66,7 @@ final class _AddNewOrEditQuoteViewBodyWidget extends ViewModelWidget<AddNewOrEdi
             SafeArea(
               minimum: context.mediaQuery.viewPadding.bottom == 0
                   ? EdgeInsets.zero
-                  : PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom),
+                  : PaddingConstants.adaptiveScreenPaddingBottom(context),
               top: false,
               bottom: context.mediaQuery.viewPadding.bottom > 0,
               child: Row(

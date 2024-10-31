@@ -4,10 +4,12 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/core/extensions/validator_extension.dart';
+import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/abstracts/sheetable_view.dart';
-import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
+import 'package:quotely/presentation/components/viewmodel_builder.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/slivers/header_sliver_appbar.dart';
 import 'package:quotely/presentation/core_widgets/slivers/sliver_injector.dart';
@@ -32,9 +34,7 @@ part 'widgets/text_fields.dart';
 final class LoginView extends StatelessSheetableWidget {
   const LoginView({
     super.key,
-    // This means that this view is a primary view not a sheet view
-    super.primary = true,
-  });
+  }) : super(primary: false);
 
   @override
   Widget build(BuildContext context) {
@@ -44,11 +44,8 @@ final class LoginView extends StatelessSheetableWidget {
         scrollController: createScrollController(context),
       ),
       builder: (context, viewModel, child) {
-        return const Stack(
-          children: [
-            _LoginMainWidget(),
-            ViewModelLoadingIndicator<LoginViewModel>(),
-          ],
+        return const ViewModelBodyBuilder<LoginViewModel>(
+          body: _LoginMainWidget(),
         );
       },
     );
@@ -65,7 +62,6 @@ final class LoginView extends StatelessSheetableWidget {
   Future<T?> showAsModalBottomSheet<T>(BuildContext context) async {
     return Sheets(
       child: this,
-      closeProgressThreshold: .5,
     ).showBottomSheet(
       context,
     );

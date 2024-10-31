@@ -3,18 +3,19 @@ part of '../categories_view.dart';
 @immutable
 final class _CategoriesBottomSheetAppBar extends SelectorViewModelWidget<CategoriesBottomSheetViewModel, bool>
     implements PreferredSizeWidget {
-  const _CategoriesBottomSheetAppBar({required this.primary});
-  final bool primary;
+  const _CategoriesBottomSheetAppBar();
 
   @override
-  AppBar build(BuildContext context, bool isPremium) {
-    return AppBar(
+  SliverAppBar build(BuildContext context, bool isPremium) {
+    return SliverAppBar(
       backgroundColor: context.colors.surface,
       title: Text(
         LocaleKeys.categories_categories.tr(),
         style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
       ),
+      primary: false,
       centerTitle: true,
+      pinned: true,
       // actions: [
       //   if (!isPremium) ...[
       //     CustomButton.text(

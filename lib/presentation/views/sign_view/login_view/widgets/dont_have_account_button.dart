@@ -8,7 +8,7 @@ final class _DontHaveAnAccountButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       top: false,
-      minimum: PaddingConstants.adaptiveScreenPaddingBottom(MediaQuery.viewPaddingOf(context).bottom),
+      minimum: PaddingConstants.adaptiveScreenPaddingBottom(context),
       child: Text.rich(
         TextSpan(
           text: LocaleKeys.sign_dont_have_account.tr(),
@@ -20,7 +20,10 @@ final class _DontHaveAnAccountButton extends StatelessWidget {
               style: context.textTheme.bodyMedium?.copyWith(color: context.colors.primary, fontWeight: FontWeight.w600),
               recognizer: TapGestureRecognizer()
                 ..onTap = () async {
-                  await const SignUpView().showAsModalBottomSheet<void>(context);
+                  await locator<AppRouter>().maybePop();
+                  if (context.mounted) {
+                    await const SignUpView().showAsModalBottomSheet<void>(context);
+                  }
                 },
             ),
           ],
