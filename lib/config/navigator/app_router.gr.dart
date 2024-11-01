@@ -144,25 +144,6 @@ class HomeViewRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [LoginView]
-class LoginViewRoute extends PageRouteInfo<void> {
-  const LoginViewRoute({List<PageRouteInfo>? children})
-      : super(
-          LoginViewRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'LoginViewRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const LoginView();
-    },
-  );
-}
-
-/// generated route for
 /// [MyQuotesView]
 class MyQuotesViewRoute extends PageRouteInfo<void> {
   const MyQuotesViewRoute({List<PageRouteInfo>? children})
@@ -234,44 +215,6 @@ class RemindersViewRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const RemindersView();
-    },
-  );
-}
-
-/// generated route for
-/// [SettingsView]
-class SettingsViewRoute extends PageRouteInfo<void> {
-  const SettingsViewRoute({List<PageRouteInfo>? children})
-      : super(
-          SettingsViewRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'SettingsViewRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const SettingsView();
-    },
-  );
-}
-
-/// generated route for
-/// [SignUpView]
-class SignUpViewRoute extends PageRouteInfo<void> {
-  const SignUpViewRoute({List<PageRouteInfo>? children})
-      : super(
-          SignUpViewRoute.name,
-          initialChildren: children,
-        );
-
-  static const String name = 'SignUpViewRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const SignUpView();
     },
   );
 }

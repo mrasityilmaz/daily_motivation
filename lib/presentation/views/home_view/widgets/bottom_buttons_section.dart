@@ -1,7 +1,7 @@
 part of '../home_view.dart';
 
 @immutable
-final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel, Categories> {
+final class _BottomButtonsSection extends SelectorWithViewModelWidget<HomeViewModel, Categories> {
   const _BottomButtonsSection();
 
   @override
@@ -99,7 +99,7 @@ final class _BottomButtonsSection extends VSelectorViewModelWidget<HomeViewModel
                   filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
                   child: CustomButton(
                     backgroundColor: context.colors.scrim.withOpacity(.3),
-                    onPressed: () async => const SettingsView().showAsModalBottomSheet<void>(context),
+                    onPressed: () async => const SettingsBottomSheet().showAsModalBottomSheet<void>(context),
                     child: Icon(
                       Platform.isAndroid ? Icons.settings : CupertinoIcons.settings,
                       color: Colors.white,

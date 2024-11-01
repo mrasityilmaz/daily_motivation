@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
-abstract class VSelectorViewModelWidget<T extends ChangeNotifier, K> extends Widget {
-  const VSelectorViewModelWidget({super.key});
+abstract class SelectorWithViewModelWidget<T extends ChangeNotifier, K> extends Widget {
+  const SelectorWithViewModelWidget({super.key});
 
   K selector(T viewModel);
   Widget? get staticChild => null;
@@ -15,10 +15,10 @@ abstract class VSelectorViewModelWidget<T extends ChangeNotifier, K> extends Wid
 }
 
 final class _DataProviderElement<T extends ChangeNotifier, K> extends ComponentElement {
-  _DataProviderElement(VSelectorViewModelWidget<T, K> super.widget);
+  _DataProviderElement(SelectorWithViewModelWidget<T, K> super.widget);
 
   @override
-  VSelectorViewModelWidget<T, K> get widget => super.widget as VSelectorViewModelWidget<T, K>;
+  SelectorWithViewModelWidget<T, K> get widget => super.widget as SelectorWithViewModelWidget<T, K>;
 
   @override
   Widget build() {
@@ -38,7 +38,7 @@ final class _DataProviderElement<T extends ChangeNotifier, K> extends ComponentE
   }
 
   @override
-  void update(VSelectorViewModelWidget<T, K> newWidget) {
+  void update(SelectorWithViewModelWidget<T, K> newWidget) {
     super.update(newWidget);
     assert(widget == newWidget, 'The new widget is same the old widget.');
     rebuild();

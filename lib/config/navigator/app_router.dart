@@ -7,13 +7,10 @@ import 'package:quotely/presentation/views/favorites_view/favorites_view.dart';
 import 'package:quotely/presentation/views/home_view/home_view.dart';
 import 'package:quotely/presentation/views/my_quotes_view/my_quotes_view.dart';
 import 'package:quotely/presentation/views/my_quotes_view/subviews/add_new_or_edit_quote_view/add_new_or_edit_quote_view.dart';
-import 'package:quotely/presentation/views/onboard_view/onboard_view.dart';
 import 'package:quotely/presentation/views/quote_notifications_view/quote_notification_view.dart';
 import 'package:quotely/presentation/views/reminders_view/reminders_view.dart';
 import 'package:quotely/presentation/views/reminders_view/subviews/add_new_or_edit_reminder/add_new_or_edit_reminder_view.dart';
-import 'package:quotely/presentation/views/settings_view/settings_view.dart';
-import 'package:quotely/presentation/views/sign_view/login_view/login_view.dart';
-import 'package:quotely/presentation/views/sign_view/signup_view/signup_view.dart';
+import 'package:quotely/presentation/views/sign_bottom_sheets/signup_bottom_sheet/widgets/onboard_view/onboard_view.dart';
 
 part 'app_router.gr.dart';
 
@@ -27,10 +24,6 @@ final class AppRouter extends RootStackRouter {
           transitionsBuilder: TransitionsBuilders.slideRightWithFade,
           // initial: true,
         ),
-        AutoRoute(page: LoginViewRoute.page),
-        AutoRoute(
-          page: SignUpViewRoute.page,
-        ),
         AutoRoute(page: HomeViewRoute.page, initial: true),
         AutoRoute(page: FavoritesViewRoute.page),
         AutoRoute(
@@ -42,15 +35,5 @@ final class AppRouter extends RootStackRouter {
         AutoRoute(page: RemindersViewRoute.page),
         AutoRoute(page: AddNewOrEditReminderViewRoute.page),
         AutoRoute(page: QuoteNotificationsViewRoute.page),
-        CustomRoute<void>(
-          page: SettingsViewRoute.page,
-          transitionsBuilder: (context, animation, secondaryAnimation, child) => SlideTransition(
-            position: Tween<Offset>(
-              begin: const Offset(1, 0),
-              end: Offset.zero,
-            ).animate(animation),
-            child: child,
-          ),
-        ),
       ];
 }

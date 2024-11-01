@@ -12,7 +12,12 @@
           "package_name": "com.devrasityilmaz.quotely"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "250333051303-dhad3d7aiknhgmkvb0j80tu07j3vvlcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD8H7kl4h5IDp-mPyF_63XTnZHGkxaw5XA"
@@ -20,9 +25,22 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250333051303-dhad3d7aiknhgmkvb0j80tu07j3vvlcn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "250333051303-0qpuobt9sgv515r08vqir93ncmob6b2s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.devrasityilmaz.quotely"
+              }
+            }
+          ]
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-1787445809116164~4729766622"
     }
   ],
   "configuration_version": "1"

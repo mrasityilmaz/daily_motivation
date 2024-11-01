@@ -1,7 +1,7 @@
 part of '../home_view.dart';
 
 @immutable
-final class _SwipableBodySection extends VSelectorViewModelWidget<HomeViewModel, List<QuoteModel>> {
+final class _SwipableBodySection extends SelectorWithViewModelWidget<HomeViewModel, List<QuoteModel>> {
   const _SwipableBodySection();
 
   @override

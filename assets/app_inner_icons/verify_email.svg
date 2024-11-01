@@ -1,0 +1,52 @@
+<svg width="170" height="142" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                                        <linearGradient id="b" x1="72" y1="0" x2="72" y2="96" gradientUnits="userSpaceOnUse">
+                                                            <stop offset=".13" stop-color="#EEF0F1"/>
+                                                            <stop offset=".849" stop-color="#F9FAFA"/>
+                                        </linearGradient>
+                                        <linearGradient id="c" x1="72" y1="0" x2="72" y2="96" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#475569" stop-opacity=".06"/>
+                                                            <stop offset="1" stop-color="#475569" stop-opacity=".04"/>
+                                        </linearGradient>
+                                        <linearGradient id="i" x1="85" y1="37" x2="85" y2="99" gradientUnits="userSpaceOnUse">
+                                                            <stop offset=".524" stop-color="#F4F5F6"/>
+                                                            <stop offset="1" stop-color="#EEF0F1"/>
+                                        </linearGradient>
+                                        <linearGradient id="p" x1="85" y1="3" x2="85" y2="65" gradientUnits="userSpaceOnUse">
+                                                            <stop offset=".25" stop-color="#FAFAFB"/>
+                                                            <stop offset="1" stop-color="#F4F5F6"/>
+                                        </linearGradient>
+                                        <linearGradient id="r" x1="85" y1="3.897" x2="85" y2="99" gradientUnits="userSpaceOnUse">
+                                                            <stop stop-color="#F9FAFA"/>
+                                                            <stop offset=".693" stop-color="#EEF0F1"/>
+                                        </linearGradient>
+                    </defs>
+                    <g>
+                                        <rect width="144" height="96" rx="8" transform="matrix(1 0 0 -1 13 99)" fill="url(#b)"/>
+                                        <rect x="-.5" y=".5" width="145" height="97" rx="8.5" transform="matrix(1 0 0 -1 13 100)" stroke="url(#c)"/>
+                    </g>
+                    <mask id="d" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="13" y="3" width="144" height="96">
+                                        <rect x="13" y="3" width="144" height="96" rx="8" fill="#000"/>
+                    </mask>
+                    <g mask="url(#d)">
+                                        <g opacity=".4">
+                                                            <path d="M16 99h138L93.555 44.687c-3.024-2.717-4.536-4.076-6.246-4.591a8 8 0 0 0-4.618 0c-1.71.515-3.222 1.874-6.246 4.591L16 99Z" fill="#334155" fill-opacity=".4"/>
+                                                            <path d="M24 99h122L94.528 41.621c-3.298-3.677-4.948-5.515-6.892-6.194a8 8 0 0 0-5.272 0c-1.944.679-3.594 2.517-6.892 6.194L24 99Z" fill="#334155" fill-opacity=".2"/>
+                                                            <path d="M16 99h138L94.362 35.04c-3.254-3.49-4.881-5.235-6.784-5.882a8 8 0 0 0-5.156 0c-1.903.647-3.53 2.392-6.784 5.882L16 99Z" fill="#334155" fill-opacity=".1"/>
+                                        </g>
+                                        <path d="M13 99h144L93.352 44.192c-2.963-2.551-4.445-3.827-6.108-4.313a8 8 0 0 0-4.488 0c-1.663.486-3.145 1.762-6.108 4.313L13 99Z" fill="url(#i)"/>
+                                        <path d="m14.5 97 62.155-53.338c2.961-2.542 4.442-3.812 6.102-4.296a8 8 0 0 1 4.482.003c1.66.485 3.14 1.757 6.098 4.302L156.5 98" stroke="#475569" stroke-opacity=".06"/>
+                                        <g style="mix-blend-mode:multiply" opacity=".7">
+                                                            <path d="M16 3h138L93.555 57.313c-3.024 2.717-4.536 4.076-6.246 4.591a8 8 0 0 1-4.618 0c-1.71-.515-3.222-1.874-6.246-4.591L16 3Z" fill="#334155" fill-opacity=".4"/>
+                                                            <path d="M24 3h122L94.528 60.379c-3.298 3.677-4.948 5.515-6.892 6.194a8 8 0 0 1-5.272 0c-1.944-.679-3.594-2.517-6.892-6.194L24 3Z" fill="#334155" fill-opacity=".2"/>
+                                                            <path d="M16 3h138L94.362 66.96c-3.254 3.49-4.881 5.235-6.784 5.882a8 8 0 0 1-5.156 0c-1.903-.647-3.53-2.392-6.784-5.882L16 3Z" fill="#334155" fill-opacity=".1"/>
+                                                            <path d="M21 3h128L89.428 68.157a6 6 0 0 1-8.856 0L21 3Z" fill="#334155" fill-opacity=".05"/>
+                                                            <path d="M15 2h140L89.083 63.209a6 6 0 0 1-8.166 0L15 2Z" fill="#334155" fill-opacity=".1"/>
+                                        </g>
+                                        <path d="m14.5 5 62.155 53.338c2.961 2.542 4.442 3.812 6.102 4.296a8 8 0 0 0 4.482-.003c1.66-.485 3.14-1.757 6.098-4.302L156.5 4" stroke="#475569" stroke-opacity=".06"/>
+                                        <path d="M13 3h144L93.352 57.808c-2.963 2.551-4.445 3.827-6.108 4.313a8 8 0 0 1-4.488 0c-1.663-.486-3.145-1.762-6.108-4.313L13 3Z" fill="url(#p)"/>
+                                        <path stroke="url(#r)" stroke-width="16" d="M13 3h144v96H13z"/>
+                                        <rect x="13.5" y="3.5" width="143" height="95" rx="7.5" stroke="#fff" stroke-opacity=".4"/>
+                    </g>
+
+</svg>
