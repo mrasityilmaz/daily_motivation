@@ -108,13 +108,13 @@
 		"religion": "Religions"
 	},
 	"weekdays": {
-		"1wd": "Mon",
-		"2wd": "Tue",
-		"3wd": "Wed",
-		"4wd": "Thu",
-		"5wd": "Fri",
-		"6wd": "Sat",
-		"7wd": "Sun"
+		"1": "Mon",
+		"2": "Tue",
+		"3": "Wed",
+		"4": "Thu",
+		"5": "Fri",
+		"6": "Sat",
+		"7": "Sun"
 	},
 	"sign": {
 		"sign_in": "Sign In",
@@ -179,5 +179,24 @@
 	"validations": {
 		"notification_message_cannot_be_empty": "Message cannot be empty",
 		"notification_message_cannot_be_smaller_than_3": "Message cannot be smaller than 3 characters"
-	}
+	},
+	"errors": {
+		"unknown_error": "An unknown error occurred",
+		"firebase_auth_exception": {
+			"invalid_email": "Invalid email address",
+			"user_disabled": "User account has been disabled",
+			"user_not_found": "No user found for this email address",
+			"wrong_password": "Wrong password or email address",
+			"too_many_requests": "Too many requests. Try again later",
+			"user_token_expired": "User token has expired",
+			"network_request_failed": "Network request failed",
+			"INVALID_LOGIN_CREDENTIALS": "Invalid email or password",
+			"invalid_credential": "Invalid email or password",
+			"operation_not_allowed": "Email/password accounts are not enabled",
+			"email_already_in_use": "This email address is already in use",
+			"weak_password": "Password is not strong enough"
+		}
+	},
+	"watch_ad": "Watch Ad",
+	"watch_ad_to_unlock": "Watch an Ad to unlock\nor\nUpgrade to Premium"
 }

@@ -13,7 +13,7 @@ final class _LikeAndOtherButtonsSection extends ViewModelWidget<HomeViewModel> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           ClipRRect(
-            borderRadius: context.radius12,
+            borderRadius: const RadiusConstants.allNormal(),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
               child: ValueListenableBuilder(
@@ -36,7 +36,7 @@ final class _LikeAndOtherButtonsSection extends ViewModelWidget<HomeViewModel> {
             height: context.lowValue,
           ),
           ClipRRect(
-            borderRadius: context.radius12,
+            borderRadius: const RadiusConstants.allNormal(),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
               child: CustomButton(

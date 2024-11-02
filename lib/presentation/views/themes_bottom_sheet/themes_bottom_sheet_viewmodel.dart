@@ -29,9 +29,9 @@ final class ThemesBottomSheetViewModel extends ReactiveViewModel with PremiumCon
   ///
   /// Update Theme Config Function
   ///
-  Future<void> updateThemeConfiguration({
-    required ThemeConfigurationModel model,
-  }) async {
+  Future<void> updateThemeConfiguration(
+    ThemeConfigurationModel model,
+  ) async {
     await _themeConfigurationService.changeThemeConfiguration(model: model);
   }
 

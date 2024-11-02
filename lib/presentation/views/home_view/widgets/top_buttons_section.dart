@@ -22,7 +22,7 @@ final class _TopSection extends StatelessWidget {
           ],
           const Spacer(),
           ClipRRect(
-            borderRadius: context.radius12,
+            borderRadius: const RadiusConstants.allNormal(),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
               child: CustomButton(

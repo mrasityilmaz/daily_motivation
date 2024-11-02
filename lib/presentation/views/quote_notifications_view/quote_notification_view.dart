@@ -10,8 +10,9 @@ import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/presentation/components/viewmodel_loading_indicator.dart';
 import 'package:quotely/presentation/core_widgets/basic/choose_circle_icon.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
-import 'package:quotely/presentation/dialogs/app_dialogs.dart';
+import 'package:quotely/presentation/dialogs/dialog_helper.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
+import 'package:quotely/presentation/view_constants/radius_constants.dart';
 import 'package:quotely/presentation/views/quote_notifications_view/viewmodel/quote_notifications_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 

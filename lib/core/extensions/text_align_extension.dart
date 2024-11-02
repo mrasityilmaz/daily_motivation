@@ -23,17 +23,17 @@ extension TextAlignExtension on TextAlign {
   Alignment get toAlignment {
     switch (this) {
       case TextAlign.center:
-        return const Alignment(0, 0);
+        return Alignment.center;
       case TextAlign.end:
-        return const Alignment(1, 0);
+        return Alignment.centerRight;
       case TextAlign.justify:
-        return const Alignment(0, 0);
+        return Alignment.center;
       case TextAlign.left:
-        return const Alignment(-1, 0);
+        return Alignment.centerLeft;
       case TextAlign.right:
-        return const Alignment(1, 0);
+        return Alignment.centerRight;
       case TextAlign.start:
-        return const Alignment(-1, 0);
+        return Alignment.centerLeft;
     }
   }
 }

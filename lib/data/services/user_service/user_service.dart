@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:injectable/injectable.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:quotely/core/errors/errors.dart';
 import 'package:quotely/core/extensions/dartz_extension.dart';
 import 'package:quotely/core/extensions/map_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';

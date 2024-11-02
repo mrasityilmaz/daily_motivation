@@ -94,6 +94,7 @@ final class PaddingConstants extends EdgeInsets {
           left: mediumValue,
           right: mediumValue,
           top: normalValue,
+          bottom: normalValue,
         );
 
   const PaddingConstants.screenPaddingLeft() : super.only(left: mediumValue);

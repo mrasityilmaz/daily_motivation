@@ -97,7 +97,9 @@ enum Categories {
   final String key;
   final bool isPremium;
 
-  String get iconPath => 'assets/new_category_icons/$key.webp';
+  String get iconPath {
+    return 'assets/new_category_icons/$key.webp';
+  }
 
   String get name => 'categoriesKey.$key'.tr();
 }

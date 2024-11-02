@@ -11,8 +11,9 @@ import 'package:quotely/presentation/core_widgets/basic/choose_circle_icon.dart'
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/textfield/textfield_widget.dart';
 import 'package:quotely/presentation/core_widgets/textfield/textformfield_widget.dart';
-import 'package:quotely/presentation/dialogs/app_dialogs.dart';
+import 'package:quotely/presentation/dialogs/dialog_helper.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
+import 'package:quotely/presentation/view_constants/radius_constants.dart';
 import 'package:quotely/presentation/views/reminders_view/subviews/add_new_or_edit_reminder/viewmodel/add_new_or_edit_reminder_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 

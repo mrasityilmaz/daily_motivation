@@ -30,6 +30,8 @@ base mixin _AuthHelper on _IUserService {
       } else {
         // TODO-handle error
       }
+    } on CustomException catch (e, s) {
+      printCatchLog(e, s, 'getSignedUserAccount');
     } catch (e, s) {
       printCatchLog(e, s, 'getSignedUserAccount');
     }

@@ -16,8 +16,8 @@ import 'package:quotely/presentation/abstracts/vselector_with_viewmodel_widget.d
 import 'package:quotely/presentation/components/viewmodel_builder.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/slivers/bottom_safe_size_widget.dart';
-import 'package:quotely/presentation/dialogs/app_dialogs.dart';
 import 'package:quotely/presentation/dialogs/dialog_bodies/show_or_pay_dialog_body.dart';
+import 'package:quotely/presentation/dialogs/dialog_helper.dart';
 import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:quotely/presentation/sheets/app_sheets.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';

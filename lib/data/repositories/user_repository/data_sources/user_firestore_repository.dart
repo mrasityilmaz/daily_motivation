@@ -27,7 +27,7 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
       await _userCollection.doc(userModel.uid).set(userModel);
       return await findUserByUid(uid: userModel.uid);
     } catch (error) {
-      return Left(FirestoreException(errorMessage: error.toString()));
+      return Left(UnExpectedException(errorMessage: error.toString()));
     }
   }
 
@@ -38,7 +38,7 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
 
       return const Right(true);
     } catch (error) {
-      return Left(FirestoreException(errorMessage: error.toString()));
+      return Left(UnExpectedException(errorMessage: error.toString()));
     }
   }
 
@@ -48,7 +48,7 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
       await _userCollection.doc(userModel.uid).update(userModel.toJson());
       return await findUserByUid(uid: userModel.uid);
     } catch (error) {
-      return Left(FirestoreException(errorMessage: error.toString()));
+      return Left(UnExpectedException(errorMessage: error.toString()));
     }
   }
 
@@ -62,9 +62,9 @@ final class UserHttpRepositoryImpl implements UserRemoteRepository {
       if (user != null) {
         return Right(user);
       }
-      return Left(FirestoreException(errorMessage: 'User not found'));
+      return Left(UnExpectedException(errorMessage: 'User not found'));
     } catch (e) {
-      return Left(FirestoreException(errorMessage: e.toString()));
+      return Left(UnExpectedException(errorMessage: e.toString()));
     }
   }
 }

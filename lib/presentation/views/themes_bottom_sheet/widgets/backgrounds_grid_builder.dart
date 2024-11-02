@@ -16,11 +16,13 @@ final class _GridBuilder extends ViewModelWidget<ThemesBottomSheetViewModel> {
           childAspectRatio: .85,
         ),
         itemBuilder: (context, index) {
-          return LayoutBuilder(
-            builder: (context, constraints) => _ImageBoxWidget(
-              constraints: constraints,
-              index: index,
-            ),
+          final String backgroundPath = viewModel.allBackgroundList[index];
+          // Background image is premium or not
+          final bool isPremium = viewModel.isThemeConfigPremium(index);
+
+          return _ImageBoxWidget(
+            backgroundPath: backgroundPath,
+            isPremium: isPremium,
           );
         },
         itemCount: viewModel.allBackgroundList.length,

@@ -1,22 +1,20 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:quotely/shared/translations/translations_keys.g.dart';
 
 enum WeekdayEnum {
-  monday(dayIndex: 0, shortNameEn: 'Mon', shortNameTr: 'Pzt'),
-  tuesday(dayIndex: 1, shortNameEn: 'Tue', shortNameTr: 'Sal'),
-  wednesday(dayIndex: 2, shortNameEn: 'Wed', shortNameTr: 'Çar'),
-  thursday(dayIndex: 3, shortNameEn: 'Thu', shortNameTr: 'Per'),
-  friday(dayIndex: 4, shortNameEn: 'Fri', shortNameTr: 'Cum'),
-  saturday(dayIndex: 5, shortNameEn: 'Sat', shortNameTr: 'Cmt'),
-  sunday(dayIndex: 6, shortNameEn: 'Sun', shortNameTr: 'Paz');
+  monday(dayIndex: 0),
+  tuesday(dayIndex: 1),
+  wednesday(dayIndex: 2),
+  thursday(dayIndex: 3),
+  friday(dayIndex: 4),
+  saturday(dayIndex: 5),
+  sunday(dayIndex: 6);
 
-  const WeekdayEnum({required this.dayIndex, required this.shortNameEn, required this.shortNameTr});
+  const WeekdayEnum({required this.dayIndex});
 
   final int dayIndex;
-  final String shortNameEn;
-  final String shortNameTr;
 
-  String getDayName(BuildContext context) {
-    return context.locale.languageCode == 'en' ? shortNameEn : shortNameTr;
+  String get dayName {
+    return tr('${LocaleKeys.weekdays}.${dayIndex + 1}');
   }
 }

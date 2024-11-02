@@ -43,8 +43,8 @@ final class _CustomIntervalSection extends ViewModelWidget<QuoteNotificationView
                             maxHeight: kMinInteractiveDimension * .95,
                           ),
                           decoration: ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: context.radius8,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: RadiusConstants.allLow(),
                             ),
                             color: context.colors.onSurface.withOpacity(.05),
                           ),
@@ -88,9 +88,7 @@ final class _CustomIntervalSection extends ViewModelWidget<QuoteNotificationView
                       expand: true,
                       textColor: context.colors.primary,
                       onPressed: () async {
-                        await AppDialogs.instance
-                            .showAdaptiveTimePicker(context, initialTime: TimeOfDay.now())
-                            .then((value) {
+                        await DialogHelper.showAdaptiveTimePicker(context, initialTime: TimeOfDay.now()).then((value) {
                           if (value != null) {
                             viewModel.addCustomIntervalTimeValue(time: value);
                           }

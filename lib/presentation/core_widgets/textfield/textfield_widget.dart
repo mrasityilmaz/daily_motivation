@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
+import 'package:quotely/presentation/view_constants/radius_constants.dart';
 import 'package:quotely/shared/theme/color_scheme.dart';
 
 @immutable
@@ -144,19 +145,19 @@ final class CustomTextFieldWidget extends StatelessWidget {
             //    hintText: hintText,
             hintStyle: hintTextStyle ?? context.textTheme.titleMedium?.copyWith(color: hintTextColor),
             border: OutlineInputBorder(
-              borderRadius: borderRadius ?? context.radius12,
+              borderRadius: borderRadius ?? const RadiusConstants.allNormal(),
               borderSide: BorderSide(color: borderColor ?? context.colors.primary),
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius: borderRadius ?? context.radius12,
+              borderRadius: borderRadius ?? const RadiusConstants.allNormal(),
               borderSide: BorderSide(color: borderColor ?? context.colors.primary),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: borderRadius ?? context.radius12,
+              borderRadius: borderRadius ?? const RadiusConstants.allNormal(),
               borderSide: BorderSide(color: context.colors.primary),
             ),
             disabledBorder: OutlineInputBorder(
-              borderRadius: borderRadius ?? context.radius12,
+              borderRadius: borderRadius ?? const RadiusConstants.allNormal(),
               borderSide: BorderSide(color: borderColor ?? context.colors.primary),
             ),
             labelText: hintText,

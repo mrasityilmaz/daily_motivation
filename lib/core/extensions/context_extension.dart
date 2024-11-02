@@ -4,13 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:quotely/shared/app_theme.dart';
 import 'package:quotely/shared/theme/color_scheme.dart';
 
-extension ContextExtension on BuildContext {
-  MediaQueryData get mediaQuery => MediaQuery.of(this);
-}
-
 extension MediaQueryExtension on BuildContext {
-  double get height => mediaQuery.size.height;
-  double get width => mediaQuery.size.width;
+  MediaQueryData get mediaQuery => MediaQuery.of(this);
+  double get height => MediaQuery.sizeOf(this).height;
+  double get width => MediaQuery.sizeOf(this).width;
 
   double get lowValue => height * 0.01;
   double get normalValue => height * 0.02;
@@ -37,47 +34,6 @@ extension Themmeee on ThemeData {
 
 extension PageExtension on BuildContext {
   Color get randomColor => Colors.primaries[Random().nextInt(17)];
-}
-
-extension DurationExtension on BuildContext {
-  Duration get duration150 => const Duration(milliseconds: 150);
-  Duration get duration200 => const Duration(milliseconds: 200);
-  Duration get duration250 => const Duration(milliseconds: 250);
-  Duration get duration300 => const Duration(milliseconds: 300);
-  Duration get lowDuration => const Duration(milliseconds: 500);
-  Duration get normalDuration => const Duration(seconds: 1);
-}
-
-extension RadiusExtension on BuildContext {
-  BorderRadius get radius4 => BorderRadius.circular(4);
-  BorderRadius get radius8 => BorderRadius.circular(8);
-  BorderRadius get radius12 => BorderRadius.circular(12);
-  BorderRadius get radius16 => BorderRadius.circular(16);
-  BorderRadius get radius20 => BorderRadius.circular(20);
-
-  BorderRadius get radius4Top => const BorderRadius.vertical(top: Radius.circular(4));
-  BorderRadius get radius8Top => const BorderRadius.vertical(top: Radius.circular(8));
-  BorderRadius get radius12Top => const BorderRadius.vertical(top: Radius.circular(12));
-  BorderRadius get radius16Top => const BorderRadius.vertical(top: Radius.circular(16));
-  BorderRadius get radius20Top => const BorderRadius.vertical(top: Radius.circular(20));
-
-  BorderRadius get radius4Bottom => const BorderRadius.vertical(bottom: Radius.circular(4));
-  BorderRadius get radius8Bottom => const BorderRadius.vertical(bottom: Radius.circular(8));
-  BorderRadius get radius12Bottom => const BorderRadius.vertical(bottom: Radius.circular(12));
-  BorderRadius get radius16Bottom => const BorderRadius.vertical(bottom: Radius.circular(16));
-  BorderRadius get radius20Bottom => const BorderRadius.vertical(bottom: Radius.circular(20));
-
-  BorderRadius get radius4Left => const BorderRadius.horizontal(left: Radius.circular(4));
-  BorderRadius get radius8Left => const BorderRadius.horizontal(left: Radius.circular(8));
-  BorderRadius get radius12Left => const BorderRadius.horizontal(left: Radius.circular(12));
-  BorderRadius get radius16Left => const BorderRadius.horizontal(left: Radius.circular(16));
-  BorderRadius get radius20Left => const BorderRadius.horizontal(left: Radius.circular(20));
-
-  BorderRadius get radius4Right => const BorderRadius.horizontal(right: Radius.circular(4));
-  BorderRadius get radius8Right => const BorderRadius.horizontal(right: Radius.circular(8));
-  BorderRadius get radius12Right => const BorderRadius.horizontal(right: Radius.circular(12));
-  BorderRadius get radius16Right => const BorderRadius.horizontal(right: Radius.circular(16));
-  BorderRadius get radius20Right => const BorderRadius.horizontal(right: Radius.circular(20));
 }
 
 Color _adjustColorBasedOnIntensity(Color originalColor) {

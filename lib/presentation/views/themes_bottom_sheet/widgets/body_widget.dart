@@ -8,13 +8,38 @@ final class _BodyWidget extends StatelessWidget {
   Widget build(
     BuildContext context,
   ) {
-    return const CustomScrollView(
-      clipBehavior: Clip.none,
-      slivers: [
-        _ThemesBottomSheetAppBar(),
-        _GridBuilder(),
-        SliverAdaptiveBottomSafeAreaWidget(),
-      ],
+    return DefaultTabController(
+      length: 2,
+      child: NestedScrollView(
+        physics: const NeverScrollableScrollPhysics(),
+        controller: ModalScrollController.of(context),
+        headerSliverBuilder: (context, innerBoxIsScrolled) {
+          return [
+            const _ThemesBottomSheetAppBar(),
+          ];
+        },
+        body: TabBarView(
+          clipBehavior: Clip.none,
+          controller: DefaultTabController.maybeOf(context),
+          physics: const BouncingScrollPhysics(),
+          children: const [
+            CustomScrollView(
+              clipBehavior: Clip.none,
+              slivers: [
+                _GridBuilder(),
+                SliverAdaptiveBottomSafeAreaWidget(),
+              ],
+            ),
+            CustomScrollView(
+              clipBehavior: Clip.none,
+              slivers: [
+                _FontListBuilder(),
+                SliverAdaptiveBottomSafeAreaWidget(),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

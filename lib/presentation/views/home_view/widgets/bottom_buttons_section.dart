@@ -39,7 +39,7 @@ final class _BottomButtonsSection extends SelectorWithViewModelWidget<HomeViewMo
               ),
               const Spacer(),
               ClipRRect(
-                borderRadius: context.radius12,
+                borderRadius: const RadiusConstants.allNormal(),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
                   child: CustomButton(
@@ -57,7 +57,7 @@ final class _BottomButtonsSection extends SelectorWithViewModelWidget<HomeViewMo
               //   width: context.lowValue,
               // ),
               // ClipRRect(
-              //   borderRadius: context.radius12,
+              //   borderRadius: const RadiusConstants.allNormal(),
               //   child: BackdropFilter(
               //     filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
               //     child: AdvancedButtonWidget.icon(
@@ -66,7 +66,7 @@ final class _BottomButtonsSection extends SelectorWithViewModelWidget<HomeViewMo
               //         // print(MatrixUtils.transformRect(
               //         //     ?.getTransformTo((viewModel.textAreaKey.currentContext?.findRenderObject() as RenderBox?)?.parent),
               //         //     Offset.zero & (viewModel.textAreaKey.currentContext?.findRenderObject() as RenderBox?)?.size));
-              //         await AppDialogs.instance.showModalBottomSheetDialog<void>(
+              //         await AppDialogs..showModalBottomSheetDialog<void>(
               //           context,
               //           backgroundColor: Colors.transparent,
               //           constraints: BoxConstraints(maxHeight: context.mediaQuery.size.height, minHeight: context.mediaQuery.size.height),
@@ -94,7 +94,7 @@ final class _BottomButtonsSection extends SelectorWithViewModelWidget<HomeViewMo
                 width: context.lowValue,
               ),
               ClipRRect(
-                borderRadius: context.radius12,
+                borderRadius: const RadiusConstants.allNormal(),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
                   child: CustomButton(

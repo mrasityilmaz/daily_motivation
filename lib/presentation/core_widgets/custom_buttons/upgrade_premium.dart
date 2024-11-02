@@ -8,27 +8,33 @@ import 'package:quotely/shared/translations/translations_keys.g.dart';
 
 @immutable
 final class UpgradePremiumButton extends StatelessWidget {
-  const UpgradePremiumButton({super.key, required this.onPressed});
+  UpgradePremiumButton({required this.onPressed, super.key, this.crownDimension = 32, this.textStyle})
+      : style = CustomButtonStyles.standart(expand: true);
+  UpgradePremiumButton.outlined({required this.onPressed, super.key, this.crownDimension = 32, this.textStyle})
+      : style = CustomButtonStyles.outlined(expand: true);
 
   final VoidCallback onPressed;
+  final double crownDimension;
+  final TextStyle? textStyle;
+  final ButtonStyle style;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      style: CustomButtonStyles.standart(expand: true),
+      style: style,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
             Assets.crow_front_premium_png,
-            width: 32,
-            height: 32,
+            width: crownDimension,
+            height: crownDimension,
           ),
           const Gap.mediumWidth(),
           Text(
             LocaleKeys.premium_upgrade_premium.tr(),
-            style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+            style: textStyle ?? context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
           ),
           const Gap.mediumWidth(),
         ],

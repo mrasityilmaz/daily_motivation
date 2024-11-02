@@ -9,8 +9,8 @@ mixin _CollectionHelper<T extends Object> on Enum {
         );
   }
 
-  // For testing with FakeFirestore
-  CollectionReference<Map<String, Object?>?> get collectionWithoutConverter {
+  /// For testing with FakeFirestore
+  CollectionReference<Map<String, Object?>?> get fakeCollectionWithoutConverter {
     return firestore.collection(name);
   }
 

@@ -107,13 +107,13 @@ abstract class  LocaleKeys {
   static const category_titles_hard_times = 'category_titles.hard_times';
   static const category_titles_religion = 'category_titles.religion';
   static const category_titles = 'category_titles';
-  static const weekdays_1wd = 'weekdays.1wd';
-  static const weekdays_2wd = 'weekdays.2wd';
-  static const weekdays_3wd = 'weekdays.3wd';
-  static const weekdays_4wd = 'weekdays.4wd';
-  static const weekdays_5wd = 'weekdays.5wd';
-  static const weekdays_6wd = 'weekdays.6wd';
-  static const weekdays_7wd = 'weekdays.7wd';
+  static const weekdays_1 = 'weekdays.1';
+  static const weekdays_2 = 'weekdays.2';
+  static const weekdays_3 = 'weekdays.3';
+  static const weekdays_4 = 'weekdays.4';
+  static const weekdays_5 = 'weekdays.5';
+  static const weekdays_6 = 'weekdays.6';
+  static const weekdays_7 = 'weekdays.7';
   static const weekdays = 'weekdays';
   static const sign_sign_in = 'sign.sign_in';
   static const sign_sign_up = 'sign.sign_up';
@@ -169,5 +169,22 @@ abstract class  LocaleKeys {
   static const validations_notification_message_cannot_be_empty = 'validations.notification_message_cannot_be_empty';
   static const validations_notification_message_cannot_be_smaller_than_3 = 'validations.notification_message_cannot_be_smaller_than_3';
   static const validations = 'validations';
+  static const errors_unknown_error = 'errors.unknown_error';
+  static const errors_firebase_auth_exception_invalid_email = 'errors.firebase_auth_exception.invalid_email';
+  static const errors_firebase_auth_exception_user_disabled = 'errors.firebase_auth_exception.user_disabled';
+  static const errors_firebase_auth_exception_user_not_found = 'errors.firebase_auth_exception.user_not_found';
+  static const errors_firebase_auth_exception_wrong_password = 'errors.firebase_auth_exception.wrong_password';
+  static const errors_firebase_auth_exception_too_many_requests = 'errors.firebase_auth_exception.too_many_requests';
+  static const errors_firebase_auth_exception_user_token_expired = 'errors.firebase_auth_exception.user_token_expired';
+  static const errors_firebase_auth_exception_network_request_failed = 'errors.firebase_auth_exception.network_request_failed';
+  static const errors_firebase_auth_exception_INVALID_LOGIN_CREDENTIALS = 'errors.firebase_auth_exception.INVALID_LOGIN_CREDENTIALS';
+  static const errors_firebase_auth_exception_invalid_credential = 'errors.firebase_auth_exception.invalid_credential';
+  static const errors_firebase_auth_exception_operation_not_allowed = 'errors.firebase_auth_exception.operation_not_allowed';
+  static const errors_firebase_auth_exception_email_already_in_use = 'errors.firebase_auth_exception.email_already_in_use';
+  static const errors_firebase_auth_exception_weak_password = 'errors.firebase_auth_exception.weak_password';
+  static const errors_firebase_auth_exception = 'errors.firebase_auth_exception';
+  static const errors = 'errors';
+  static const watch_ad = 'watch_ad';
+  static const watch_ad_to_unlock = 'watch_ad_to_unlock';
 
 }

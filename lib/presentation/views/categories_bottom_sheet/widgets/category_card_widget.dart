@@ -59,7 +59,7 @@ final class _SubCategoriesButton extends SelectorWithViewModelWidget<CategoriesB
       /// If the category is a premium
       ///
       if (category.isPremium) {
-        await AppDialogs.instance.showDialog<void>(
+        await DialogHelper.showDialog<void>(
           context,
           child: ShowOrPayDialogBody(
             icon: Icon(
@@ -67,8 +67,8 @@ final class _SubCategoriesButton extends SelectorWithViewModelWidget<CategoriesB
               size: kMinInteractiveDimension * 1.2,
               color: context.colors.primary,
             ),
-            firstButtonText: 'Premium Ol',
-            firstButtonOnPressed: () async {
+            watchAdText: 'Premium Ol',
+            watchAdPressed: () async {
               await locator<AppRouter>().maybePop().whenComplete(() async {
                 await future;
               });

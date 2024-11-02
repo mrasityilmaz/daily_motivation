@@ -89,10 +89,10 @@ final class _SettingsSection extends StatelessWidget {
       if (value) {
         await locator<NotificationService>().requestNotificationPermission(openAppSettingsWhenPermanentlyDenied: true);
       } else {
-        await AppDialogs.instance.showBasicFlushBar(
+        await DialogHelper.showBasicFlushBar(
           context,
           message: LocaleKeys.warning_turn_off_notifications.tr(),
-          duration: context.normalDuration * 2,
+          duration: Durations.extralong4 * 2,
           onPressed: openAppSettings,
         );
       }

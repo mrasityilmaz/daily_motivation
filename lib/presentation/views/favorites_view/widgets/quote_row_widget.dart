@@ -33,7 +33,10 @@ final class _QuoteRowWidget extends ViewModelWidget<FavoritesViewModel> {
 
         child: Container(
           width: double.maxFinite,
-          decoration: BoxDecoration(color: context.colors.onSurface.withOpacity(.05), borderRadius: context.radius8),
+          decoration: BoxDecoration(
+            color: context.colors.onSurface.withOpacity(.05),
+            borderRadius: const RadiusConstants.allLow(),
+          ),
           padding: const PaddingConstants.lowHorizontal() + const PaddingConstants.lowVertical() * 1.2,
           child: GestureDetector(
             onTap: () async => viewModel.copyQuote(context, quote: quote),

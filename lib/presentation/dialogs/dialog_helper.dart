@@ -2,87 +2,44 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:another_flushbar/flushbar.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_dialog/flutter_animated_dialog.dart';
 import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
+import 'package:quotely/presentation/dialogs/dialog_bodies/show_or_pay_dialog_body.dart';
 import 'package:quotely/presentation/dialogs/progress_overlay_dialog.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
+import 'package:quotely/presentation/view_constants/radius_constants.dart';
+import 'package:quotely/shared/translations/translations_keys.g.dart';
 
-final class AppDialogs {
-  factory AppDialogs() => instance;
+part 'prepared_dialogs/watch_ad_or_buy_premium_dialog.dart';
 
-  const AppDialogs._internal();
-  static const AppDialogs instance = AppDialogs._internal();
-
-  ///
-  /// Custom Success or Failure Dialog
-  ///
-
-  Future<T?> showModalBottomSheetDialog<T>(
-    BuildContext? context, {
-    required Widget child,
-    Color? backgroundColor,
-    String? barrierLabel,
-    double? elevation,
-    ShapeBorder? shape,
-    Clip? clipBehavior,
-    BoxConstraints? constraints,
-    Color? barrierColor,
-    bool isScrollControlled = false,
-    bool useRootNavigator = false,
-    bool isDismissible = true,
-    bool enableDrag = true,
-    bool? showDragHandle,
-    bool useSafeArea = false,
-    RouteSettings? routeSettings,
-    AnimationController? transitionAnimationController,
-    Offset? anchorPoint,
-  }) async {
-    final BuildContext ctx = context ?? locator<AppRouter>().navigatorKey.currentContext!;
-    return showModalBottomSheet<T>(
-      context: ctx,
-      isScrollControlled: isScrollControlled,
-      useRootNavigator: useRootNavigator,
-      isDismissible: isDismissible,
-      enableDrag: enableDrag,
-      backgroundColor: backgroundColor ?? ctx.colors.primary,
-      barrierColor: barrierColor ?? ctx.colors.onSurface.withOpacity(.3),
-      barrierLabel: barrierLabel,
-      clipBehavior: clipBehavior,
-      constraints: constraints,
-      elevation: elevation,
-      routeSettings: routeSettings,
-      shape: shape,
-      transitionAnimationController: transitionAnimationController,
-      useSafeArea: useSafeArea,
-      anchorPoint: anchorPoint,
-      showDragHandle: showDragHandle,
-      builder: (BuildContext context) {
-        return child;
-      },
-    );
-  }
+final class DialogHelper with _ShowAdOrBuyPremiumDialogHelper {
+  const DialogHelper._();
 
   ///
   /// Custom Progress Show Dialog Function
   ///
-
-  Future<T?> showDialog<T>(
+  static Future<T?> showDialog<T>(
     BuildContext context, {
     required Widget child,
     bool barrierDismissible = true,
     Alignment alignment = Alignment.center,
     Color? barrierColor,
+    bool closeOverlay = true,
   }) async {
-    OverlayDialog().closeOverlay();
+    if (closeOverlay) {
+      OverlayDialog().closeOverlay();
+    }
 
     return showAnimatedDialog<T?>(
       context: context,
-      duration: const Duration(milliseconds: 400),
+      duration: Durations.medium4,
       animationType: DialogTransitionType.scale,
       curve: Curves.ease,
       alignment: alignment,
@@ -92,7 +49,7 @@ final class AppDialogs {
     );
   }
 
-  Future<TimeOfDay?> showAdaptiveTimePicker(BuildContext context, {required TimeOfDay initialTime}) async {
+  static Future<TimeOfDay?> showAdaptiveTimePicker(BuildContext context, {required TimeOfDay initialTime}) async {
     if (Platform.isAndroid) {
       return showTimePicker(
         context: context,
@@ -113,7 +70,9 @@ final class AppDialogs {
               alignment: Alignment.center,
               contentPadding: EdgeInsets.zero,
               actionsPadding: const PaddingConstants.allLow() * 1.2,
-              shape: RoundedRectangleBorder(borderRadius: context.radius12),
+              shape: const RoundedRectangleBorder(
+                borderRadius: RadiusConstants.allNormal(),
+              ),
               actions: [
                 Row(
                   children: [
@@ -162,7 +121,7 @@ final class AppDialogs {
     }
   }
 
-  Future<void> showBasicFlushBar(
+  static Future<void> showBasicFlushBar(
     BuildContext context, {
     required String message,
     Duration? duration,
@@ -180,8 +139,9 @@ final class AppDialogs {
         message,
         style: context.textTheme.titleSmall?.copyWith(color: context.colors.surface, fontWeight: FontWeight.w600),
       ),
-      duration: duration ?? context.normalDuration,
-      animationDuration: duration != null ? Duration(milliseconds: duration.inMilliseconds ~/ 4) : context.duration250,
+      duration: duration ?? const Duration(seconds: 2),
+      animationDuration:
+          duration != null ? Duration(milliseconds: duration.inMilliseconds ~/ 4) : const Duration(milliseconds: 250),
       forwardAnimationCurve: Curves.ease,
       backgroundColor: context.colors.surfaceTint,
       reverseAnimationCurve: Curves.ease,
@@ -195,4 +155,20 @@ final class AppDialogs {
 
     await flushbar.show(context);
   }
+
+  /// Show Watch Ad or Buy Premium Dialog
+  ///
+  /// This function is used to show a dialog that asks the user to watch an ad or buy premium.
+  ///
+  /// `context` is the current context.
+  /// `params` is the parameters for the dialog.
+  ///
+  static Future<void> showWatchAdOrBuyPremiumDialog(
+    BuildContext context, {
+    required WatchAdOrBuyPremiumDialogParams params,
+  }) async =>
+      _ShowAdOrBuyPremiumDialogHelper.showWatchAdOrBuyPremiumDialog(
+        context,
+        params: params,
+      );
 }

@@ -19,7 +19,6 @@ final class Assets {
   static final _Translations translations = _Translations._();
 
   static const String crow_front_premium_png = 'assets/crow-front-premium.png';
-
 }
 
 @immutable
@@ -27,7 +26,6 @@ final class _App_inner_icons {
   _App_inner_icons._();
 
   final String verify_email_svg = 'assets/app_inner_icons/verify_email.svg';
-
 }
 
 @immutable
@@ -158,7 +156,6 @@ final class _Backgrounds {
   final String n97_webp = 'assets/backgrounds/97.webp';
   final String n98_webp = 'assets/backgrounds/98.webp';
   final String n99_webp = 'assets/backgrounds/99.webp';
-
 }
 
 @immutable
@@ -265,7 +262,6 @@ final class _Category_icons {
   final String n98_webp = 'assets/category_icons/98.webp';
   final String n99_webp = 'assets/category_icons/99.webp';
   final String art_webp = 'assets/category_icons/art.webp';
-
 }
 
 @immutable
@@ -363,7 +359,6 @@ final class _New_category_icons {
   final String wisdom_webp = 'assets/new_category_icons/wisdom.webp';
   final String work_webp = 'assets/new_category_icons/work.webp';
   final String work_out_webp = 'assets/new_category_icons/work_out.webp';
-
 }
 
 @immutable
@@ -458,7 +453,6 @@ final class _Categories {
   final String wisdom_quotes_json = 'assets/quotes/categories/wisdom_quotes.json';
   final String work_out_quotes_json = 'assets/quotes/categories/work_out_quotes.json';
   final String work_quotes_json = 'assets/quotes/categories/work_quotes.json';
-
 }
 
 @immutable
@@ -467,7 +461,6 @@ final class _En {
 
   final String boost_quotes_en_json = 'assets/quotes/en/boost_quotes_en.json';
   final String notification_quotes_en_json = 'assets/quotes/en/notification_quotes_en.json';
-
 }
 
 @immutable
@@ -476,7 +469,6 @@ final class _Tr {
 
   final String boost_quotes_tr_json = 'assets/quotes/tr/boost_quotes_tr.json';
   final String notification_quotes_tr_json = 'assets/quotes/tr/notification_quotes_tr.json';
-
 }
 
 @immutable
@@ -485,8 +477,6 @@ final class _Quotes {
   final _Categories categories = _Categories._();
   final _En en = _En._();
   final _Tr tr = _Tr._();
-
-
 }
 
 @immutable
@@ -495,6 +485,4 @@ final class _Translations {
 
   final String en_json = 'assets/translations/en.json';
   final String tr_json = 'assets/translations/tr.json';
-
 }
-

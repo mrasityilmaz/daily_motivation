@@ -50,8 +50,7 @@ final class __TimeRangeRow extends ViewModelWidget<AddNewOrEditReminderViewModel
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
                   onPressed: () async {
-                    await AppDialogs.instance
-                        .showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.start)
+                    await DialogHelper.showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.start)
                         .then((value) {
                       if (value != null) {
                         viewModel.setEqualIntervalStartValue(start: value);
@@ -86,8 +85,7 @@ final class __TimeRangeRow extends ViewModelWidget<AddNewOrEditReminderViewModel
                   expand: true,
                   textStyle: context.textTheme.titleMedium,
                   onPressed: () async {
-                    await AppDialogs.instance
-                        .showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.end)
+                    await DialogHelper.showAdaptiveTimePicker(context, initialTime: viewModel.equalIntervalValue.end)
                         .then((value) {
                       if (value != null) {
                         viewModel.setEqualIntervalEndValue(end: value);

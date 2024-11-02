@@ -5,7 +5,7 @@ import 'package:quotely/data/models/quote_model/quote_model.dart';
 import 'package:quotely/data/services/hive_service/boxes/liked_quote_service.dart';
 import 'package:quotely/data/services/hive_service/hive_service.dart';
 import 'package:quotely/injection/injection_container.dart';
-import 'package:quotely/presentation/dialogs/app_dialogs.dart';
+import 'package:quotely/presentation/dialogs/dialog_helper.dart';
 import 'package:stacked/stacked.dart';
 
 part 'mixins/multiple_choose_helper_mixin.dart';

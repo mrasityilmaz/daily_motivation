@@ -166,7 +166,7 @@ final class _WeekDaysRow extends StatelessWidget {
                   ),
                 ),
                 child: AutoSizeText(
-                  WeekdayEnum.values.elementAt(e).getDayName(context),
+                  WeekdayEnum.values.elementAt(e).dayName,
                   style: context.textTheme.bodySmall?.copyWith(
                     color: context.colors.primary,
                     fontWeight: FontWeight.bold,

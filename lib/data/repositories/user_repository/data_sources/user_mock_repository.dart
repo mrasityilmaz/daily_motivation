@@ -11,7 +11,8 @@ import 'package:quotely/domain/repositories/user_repository/data_sources/iremote
 @Injectable(as: UserRemoteRepository, env: [Environment.test])
 final class UserMockRepositoryImpl implements UserRemoteRepository {
   const UserMockRepositoryImpl();
-  CollectionReference<Map<String, Object?>?> get _collection => FireStoreCollections.users.collectionWithoutConverter;
+  CollectionReference<Map<String, Object?>?> get _collection =>
+      FireStoreCollections.users.fakeCollectionWithoutConverter;
 
   @override
   Future<EitherOr<UserModel>> createNewUser({required UserModel userModel}) async {
@@ -25,7 +26,7 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
       await _collection.doc(userModel.uid).set(userModel.toJson());
       return await findUserByUid(uid: userModel.uid);
     } catch (error) {
-      return Left(FirestoreException(errorMessage: error.toString()));
+      return Left(UnExpectedException(errorMessage: error.toString()));
     }
   }
 
@@ -36,7 +37,7 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
 
       return const Right(true);
     } catch (error) {
-      return Left(FirestoreException(errorMessage: error.toString()));
+      return Left(UnExpectedException(errorMessage: error.toString()));
     }
   }
 
@@ -46,7 +47,7 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
       await _collection.doc(userModel.uid).update(userModel.toJson());
       return await findUserByUid(uid: userModel.uid);
     } catch (error) {
-      return Left(FirestoreException(errorMessage: error.toString()));
+      return Left(UnExpectedException(errorMessage: error.toString()));
     }
   }
 
@@ -58,9 +59,9 @@ final class UserMockRepositoryImpl implements UserRemoteRepository {
       if (user != null) {
         return Right(UserModel.fromJson(user));
       }
-      return Left(FirestoreException(errorMessage: 'User not found'));
+      return Left(UnExpectedException(errorMessage: 'User not found'));
     } catch (e) {
-      return Left(FirestoreException(errorMessage: e.toString()));
+      return Left(UnExpectedException(errorMessage: e.toString()));
     }
   }
 }

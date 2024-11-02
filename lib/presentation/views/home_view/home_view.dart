@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:ui';
 
@@ -44,7 +45,19 @@ final class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.nonReactive(
       viewModelBuilder: HomeViewModel.new,
-      onViewModelReady: (viewModel) async => viewModel.init(context),
+      onViewModelReady: (viewModel) async {
+        unawaited(
+          Future.wait(
+            List.generate(124, (index) => 'assets/backgrounds/${index + 1}.webp').map(
+              (element) => precacheImage(
+                ExactAssetImage(element),
+                context,
+              ),
+            ),
+          ),
+        );
+        return viewModel.init(context);
+      },
       builder: (context, model, child) {
         return const Stack(
           children: [

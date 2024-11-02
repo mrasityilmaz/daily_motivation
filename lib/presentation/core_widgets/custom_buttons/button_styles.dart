@@ -66,7 +66,7 @@ final class CustomButtonStyles extends ButtonStyle {
   static WidgetStatePropertyAll<OutlinedBorder> cOutlineShape = WidgetStatePropertyAll(
     RoundedRectangleBorder(
       borderRadius: const RadiusConstants.allLow(),
-      side: BorderSide(color: AppThemeManager.instance.colorScheme.primary, width: 2),
+      side: BorderSide(color: AppThemeManager.instance.colorScheme.primary),
     ),
   );
 

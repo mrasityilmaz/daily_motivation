@@ -472,7 +472,7 @@ final class __AlignChild extends ViewModelWidget<_FontSettingsBottomSheetViewMod
           },
           indicator: ShapeDecoration(
             shape: RoundedRectangleBorder(
-              borderRadius: context.radius12,
+              borderRadius: const RadiusConstants.allNormal(),
               side: BorderSide(color: context.colors.surface.withOpacity(.1)),
             ),
             color: context.colors.surface.withOpacity(.5),
@@ -550,7 +550,7 @@ final class __FontWeightChild extends ViewModelWidget<_FontSettingsBottomSheetVi
           },
           indicator: ShapeDecoration(
             shape: RoundedRectangleBorder(
-              borderRadius: context.radius12,
+              borderRadius: const RadiusConstants.allNormal(),
               side: BorderSide(color: context.colors.surface.withOpacity(.1)),
             ),
             color: context.colors.surface.withOpacity(.5),
@@ -593,7 +593,7 @@ final class __TextColorChild extends ViewModelWidget<_FontSettingsBottomSheetVie
                 child: CustomButton.outlined(
                   backgroundColor: viewModel.textColorList[index],
                   // shape: RoundedRectangleBorder(
-                  //   borderRadius: context.radius12,
+                  //   borderRadius: const RadiusConstants.allNormal(),
                   //   side: isSelected ? BorderSide(color: context.colors.primary, width: 2) : BorderSide.none,
                   // ),
                   child: const SizedBox(),

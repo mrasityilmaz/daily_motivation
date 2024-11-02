@@ -14,7 +14,7 @@ import 'package:quotely/presentation/abstracts/sheetable_view.dart';
 import 'package:quotely/presentation/components/viewmodel_builder.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/upgrade_premium.dart';
-import 'package:quotely/presentation/dialogs/app_dialogs.dart';
+import 'package:quotely/presentation/dialogs/dialog_helper.dart';
 import 'package:quotely/presentation/sheets/app_sheets.dart';
 import 'package:quotely/presentation/view_constants/gap_constants.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';

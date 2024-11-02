@@ -8,6 +8,8 @@ import 'package:quotely/presentation/sheets/templates/information_sheet_template
 import 'package:quotely/presentation/view_constants/gap_constants.dart';
 import 'package:quotely/shared/translations/translations_keys.g.dart';
 
+/// This sheet is shown when the user's account is ready.
+/// If the user's email is not verified, it shows the email verification info.
 @immutable
 final class AccountReadySheet extends StatelessSheetableWidget {
   const AccountReadySheet({

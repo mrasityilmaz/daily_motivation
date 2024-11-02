@@ -5,33 +5,46 @@ import 'package:quotely/config/navigator/app_router.dart';
 import 'package:quotely/core/extensions/context_extension.dart';
 import 'package:quotely/injection/injection_container.dart';
 import 'package:quotely/presentation/core_widgets/custom_buttons/custom_button.dart';
+import 'package:quotely/presentation/core_widgets/custom_buttons/upgrade_premium.dart';
+import 'package:quotely/presentation/view_constants/gap_constants.dart';
 import 'package:quotely/presentation/view_constants/padding_constants.dart';
+import 'package:quotely/presentation/view_constants/radius_constants.dart';
 
 @immutable
 final class ShowOrPayDialogBody extends StatelessWidget {
   const ShowOrPayDialogBody({
     required this.icon,
     required this.title,
-    required this.firstButtonText,
-    required this.firstButtonOnPressed,
-    this.secondButtonText,
-    this.secondButtonOnPressed,
+    required this.watchAdPressed,
+    required this.watchAdText,
+    this.onlyWatchAd = false,
     super.key,
   });
+
+  /// The dialog only show the watch ad button if this is true.
+  final bool onlyWatchAd;
+
+  /// The icon to show in main content of the dialog.
   final Icon icon;
+
+  /// The title to show in main content of the dialog.
+  /// default value is "LocaleKeys.watch_ad_to_unlock.tr()"
   final String title;
-  final String firstButtonText;
-  final String? secondButtonText;
-  final VoidCallback firstButtonOnPressed;
-  final VoidCallback? secondButtonOnPressed;
+
+  /// The text to show in the watch ad button.
+  /// default value is "LocaleKeys.watch_ad.tr()"
+  final String watchAdText;
+
+  /// The callback to call when the watch ad button is pressed.
+  final VoidCallback watchAdPressed;
 
   @override
   Widget build(BuildContext context) {
     return CustomDialog(
       backgroundColor: context.colors.surface,
       elevation: 10,
-      shape: RoundedRectangleBorder(
-        borderRadius: context.radius16,
+      shape: const RoundedRectangleBorder(
+        borderRadius: RadiusConstants.allMedium(),
       ),
       child: ConstrainedBox(
         constraints: BoxConstraints(
@@ -61,19 +74,19 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                   child: Padding(
                     padding: const PaddingConstants.screenPaddingTop() +
                         const PaddingConstants.allLow() +
-                        const PaddingConstants.normalTop(),
+                        const PaddingConstants.normalTop() * 2,
                     child: icon,
                   ),
                 ),
               ],
             ),
             Padding(
-              padding: const PaddingConstants.screenPadding() * .8,
+              padding: const PaddingConstants.allLow(),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Padding(
-                    padding: const PaddingConstants.normalTop() + const PaddingConstants.lowBottom(),
+                    padding: const PaddingConstants.mediumVertical(),
                     child: AutoSizeText(
                       title,
                       style: context.textTheme.titleMedium?.copyWith(
@@ -81,29 +94,31 @@ final class ShowOrPayDialogBody extends StatelessWidget {
                       ),
                       maxFontSize: context.textTheme.titleMedium!.fontSize!,
                       minFontSize: 10,
-                      maxLines: 1,
+                      maxLines: 3,
+                      textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  CustomButton.text(
+                  CustomButton.outlinedText(
                     expand: true,
-                    text: firstButtonText,
-                    onPressed: firstButtonOnPressed,
+                    text: watchAdText,
+                    onPressed: watchAdPressed,
+                    backgroundColor: Color.lerp(context.colors.primary, context.colors.shadow, .55),
                     textStyle: context.textTheme.bodyMedium?.copyWith(
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  if (secondButtonText != null && secondButtonOnPressed != null) ...[
-                    SizedBox(
-                      height: context.lowValue,
-                    ),
-                    CustomButton.text(
-                      expand: true,
-                      text: secondButtonText!,
+                  if (!onlyWatchAd) ...[
+                    const Gap.lowHeight(),
+                    UpgradePremiumButton(
+                      crownDimension: 26,
                       textStyle: context.textTheme.bodyMedium?.copyWith(
                         fontWeight: FontWeight.w600,
                       ),
-                      onPressed: secondButtonOnPressed,
+                      onPressed: () {
+                        locator<AppRouter>().maybePop();
+                        //TODO: Implement Upgrade Premium Button
+                      },
                     ),
                   ],
                 ],

@@ -1,135 +1,139 @@
 part of '../../themes_bottom_sheet.dart';
 
 @immutable
-final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> with _ImageBoxUILogicMixin {
+final class _ImageBoxWidget extends ViewModelWidget<ThemesBottomSheetViewModel> {
   const _ImageBoxWidget({
-    required this.index,
-    required this.constraints,
+    required this.backgroundPath,
+    required this.isPremium,
   }) : super(reactive: false);
 
-  final int index;
-
-  final BoxConstraints constraints;
+  final String backgroundPath;
+  final bool isPremium;
 
   @override
   Widget build(BuildContext context, ThemesBottomSheetViewModel viewModel) {
-    final String backgroundPath = viewModel.allBackgroundList[index];
-    final DefaultFontsEnum font = viewModel.allDefaultFontList[index % viewModel.allDefaultFontList.length];
+    // Border radius of the image box
+    const BorderRadius borderRadius = RadiusConstants.allNormal();
 
-    final bool isLocked = viewModel.isThemeConfigPremium(index);
-
-    ///
-    /// ImageProvider for ImagePixel's to calculate text color
-    ///
-    final ImageProvider imageProvider = Image.asset(
-      backgroundPath,
-
-      ///
-      /// These parameters must be assigned because high-dimensional images may cause optimization problems.
-      ///
-      cacheWidth: constraints.biggest.width.toInt(),
-      cacheHeight: constraints.biggest.height.toInt(),
-      height: constraints.biggest.height,
-      width: constraints.biggest.width,
-
-      fit: BoxFit.cover,
-    ).image;
-
-    return ImagePixels(
-      imageProvider: imageProvider,
-      defaultColor: context.colors.onSurface,
-      builder: (context, img) {
-        final Color textColor =
-            context.getXorColor(img.pixelColorAtAlignment?.call(const Alignment(0, -.1)) ?? Colors.white);
-        return InkWell(
-          borderRadius: context.radius12,
-          onTap: () async => onChooseThemeCallback(
-            context,
-            isLocked: isLocked,
-            onChanged: () async => viewModel.updateThemeConfiguration(
-              model: ThemeConfigurationModel(
+    return InkWell(
+      borderRadius: borderRadius,
+      onTap: () async => onSelectedBackground(
+        context,
+        callback: viewModel.updateThemeConfiguration,
+        isPremium: isPremium,
+      ),
+      child: Ink(
+        padding: EdgeInsets.zero,
+        decoration: ShapeDecoration(
+          shape: RoundedRectangleBorder(
+            // Add 1 to the radius to prevent the little fix on the border bc of the border width
+            borderRadius: borderRadius.add(const RadiusConstants.all(Radius.circular(1))),
+            side: BorderSide(
+              color: context.colors.onSurface.withOpacity(.1),
+            ),
+          ),
+        ),
+        child: ClipRRect(
+          borderRadius: borderRadius,
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              // Background image
+              _ImageWidget(
                 backgroundPath: backgroundPath,
-                fontName: font.fontFamily,
-                maxFontSize: font.maxFontSize,
-                minFontSize: font.minFontSize,
-                textColor: textColor,
               ),
-            ),
+
+              // Abcd text widget
+              _AbcdTextWidget(
+                isPremium: isPremium,
+                currentThemeConfiguration: currentThemeConfiguration,
+              ),
+
+              // Lock icon
+              if (isPremium) ...[
+                const _LockIconWidget(),
+              ],
+            ],
           ),
-          child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(image: imageProvider, fit: BoxFit.contain),
-              borderRadius: context.radius12,
-              border: Border.all(color: context.colors.onSurface.withOpacity(.1)),
-            ),
-            padding: const PaddingConstants.allLow(),
-            child: __ImageBoxTextSection(
-              font: font,
-              textColor: textColor,
-              fontNameTextColor:
-                  context.getXorColor(img.pixelColorAtAlignment?.call(Alignment.bottomCenter) ?? Colors.white),
-              isLocked: isLocked,
-            ),
-          ),
-        );
-      },
+        ),
+      ),
     );
   }
 
-  @override
-  Future<void> onChooseThemeCallback(
+  /// Current theme configuration depending on the selected background
+  ThemeConfigurationModel get currentThemeConfiguration => ThemeConfigurationModel(
+        backgroundPath: backgroundPath,
+        fontName: DefaultFontsEnum.cormorant.fontFamily,
+        maxFontSize: DefaultFontsEnum.cormorant.maxFontSize,
+        minFontSize: DefaultFontsEnum.cormorant.minFontSize,
+        textColor: Colors.white,
+      );
+
+  /// This function will run the callback with an overlay.
+  Future<void> onSelectedBackground(
     BuildContext context, {
-    required bool isLocked,
-    required Future<void> Function() onChanged,
+    required AsyncValueSetter<ThemeConfigurationModel> callback,
+    required bool isPremium,
   }) async {
     try {
-      late final Future<bool?> future = OverlayDialog().showProgressOverlay<bool>(
+      late final actualJob = _overlayedCallback(
         context,
-        asyncProcess: () async {
-          await Future.delayed(Duration(milliseconds: isLocked ? 500 : 300), () async {
-            await onChanged.call();
-          });
+        callback: callback,
+      );
 
-          return true;
-        },
-      ).then((result) async {
-        if (result == true) {
-          await locator<AppRouter>().maybePop();
-        }
-
-        return true;
-      });
-
-      ///
-      ///
-      ///
-
-      if (isLocked == false) {
-        await future;
+      // If the theme is not premium, just call the actual job
+      if (!isPremium) {
+        await actualJob.call();
+        return;
       } else {
-        await AppDialogs.instance.showDialog<bool?>(
+        // If the theme is premium, show a dialog to user to watch an ad or buy premium
+        // Then user will decide to watch an ad or buy premium, if not, the actual job will not run
+        await DialogHelper.showWatchAdOrBuyPremiumDialog(
           context,
-          child: ShowOrPayDialogBody(
-            icon: Icon(
-              Platform.isAndroid ? Icons.format_paint_rounded : CupertinoIcons.paintbrush,
-              size: kMinInteractiveDimension * 1.2,
-              color: context.colors.primary,
-            ),
-            firstButtonText: 'Reklam İzle',
-            secondButtonText: 'Premium Ol',
-            firstButtonOnPressed: () async {
-              await locator<AppRouter>().maybePop().whenComplete(() async {
-                await future;
-              });
-            },
-            title: 'Seçili Temanın Kilidini Aç',
+          params: (
+            icon: Platform.isAndroid ? Icons.format_paint_rounded : CupertinoIcons.paintbrush,
+            title: null, // Default: LocaleKeys.watch_ad_to_unlock.tr(),
+            watchAdPressed: actualJob,
+            watchAdText: null, // Default: LocaleKeys.watch_ad.tr(),
           ),
         );
       }
     } catch (e, s) {
-      await locator<AppRouter>().maybePop();
-      OverlayDialog().closeOverlay();
       LoggerService.catchLog(e, s);
+    }
+  }
+
+  /// This is actual function that will change the theme configuration.
+  /// It will show an overlay dialog while changing the theme.
+  /// If the theme is premium, it will wait for 500ms, otherwise 300ms
+  /// Because the premium themes have a dialog before the theme change
+  AsyncCallback _overlayedCallback(
+    BuildContext context, {
+    required AsyncValueSetter<ThemeConfigurationModel> callback,
+  }) {
+    try {
+      return () async {
+        return OverlayDialog().showProgressOverlay<bool>(
+          context,
+          asyncProcess: () async {
+            // Wait for the animation for a better user experience
+            // If the theme is premium, wait for 500ms, otherwise 300ms
+            // Because the premium themes have a dialog before the theme change
+            await Future.delayed(Duration(milliseconds: isPremium ? 500 : 300), () async {
+              await callback.call(currentThemeConfiguration);
+            });
+
+            return true;
+          },
+        ).then((e) async {
+          if (e == true) {
+            // Close the current sheet
+            await locator<AppRouter>().maybePop();
+          }
+        });
+      };
+    } catch (e) {
+      rethrow;
     }
   }
 }

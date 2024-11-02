@@ -7,6 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:quotely/core/errors/errors.dart';
 import 'package:quotely/core/extensions/dartz_extension.dart';
+import 'package:quotely/core/extensions/error_extension.dart';
 import 'package:quotely/core/services/logger_service.dart';
 import 'package:quotely/data/services/auth_service/i_auth_service.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
@@ -25,14 +26,16 @@ final class AuthService implements IAuthService {
       );
 
       return Right(credential);
-    } on FirebaseAuthException catch (e) {
-      return Left(FirebaseAuthFailure(exception: e));
+    } on FirebaseAuthException catch (e, s) {
+      LoggerService.catchLog(e, s);
+      return Left(AppException(errorMessage: e.localizedErrorMessage));
     } catch (e, s) {
       LoggerService.catchLog(e, s);
-      return Left(UnExpectedFailure(errorMessage: e.toString()));
+      return Left(UnExpectedException(errorMessage: e.toString()));
     }
   }
 
+  //
   @override
   Future<EitherOr<UserCredential>> signInWithEmailAndPassword({required String email, required String password}) async {
     try {
@@ -42,14 +45,16 @@ final class AuthService implements IAuthService {
       );
 
       return Right(credential);
-    } on FirebaseAuthException catch (e) {
-      return Left(FirebaseAuthFailure(exception: e));
+    } on FirebaseAuthException catch (e, s) {
+      LoggerService.catchLog(e, s);
+      return Left(AppException(errorMessage: e.localizedErrorMessage));
     } catch (e, s) {
       LoggerService.catchLog(e, s);
-      return Left(UnExpectedFailure(errorMessage: e.toString()));
+      return Left(UnExpectedException(errorMessage: e.toString()));
     }
   }
 
+  //
   @override
   Future<EitherOr<UserCredential>> signInWithApple() async {
     try {
@@ -79,18 +84,20 @@ final class AuthService implements IAuthService {
       return Right(userCredential);
     } on SignInWithAppleAuthorizationException catch (e, s) {
       if (e.code == AuthorizationErrorCode.canceled) {
-        return Left(UnExpectedFailure(errorMessage: 'User canceled the sign in flow'));
+        return Left(UnExpectedException(errorMessage: 'User canceled the sign in flow'));
       }
       LoggerService.catchLog(e, s);
-      return Left(UnExpectedFailure(errorMessage: e.toString()));
-    } on FirebaseAuthException catch (e) {
-      return Left(FirebaseAuthFailure(exception: e));
+      return Left(UnExpectedException(errorMessage: e.toString()));
+    } on FirebaseAuthException catch (e, s) {
+      LoggerService.catchLog(e, s);
+      return Left(AppException(errorMessage: e.localizedErrorMessage));
     } catch (e, s) {
       LoggerService.catchLog(e, s);
-      return Left(UnExpectedFailure(errorMessage: e.toString()));
+      return Left(UnExpectedException(errorMessage: e.toString()));
     }
   }
 
+  //
   @override
   Future<EitherOr<UserCredential>> signInWithGoogle() async {
     try {
@@ -106,11 +113,12 @@ final class AuthService implements IAuthService {
       final userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
 
       return Right(userCredential);
-    } on FirebaseAuthException catch (e) {
-      return Left(FirebaseAuthFailure(exception: e));
+    } on FirebaseAuthException catch (e, s) {
+      LoggerService.catchLog(e, s);
+      return Left(AppException(errorMessage: e.localizedErrorMessage));
     } catch (e, s) {
       LoggerService.catchLog(e, s);
-      return Left(UnExpectedFailure(errorMessage: e.toString()));
+      return Left(UnExpectedException(errorMessage: e.toString()));
     }
   }
 

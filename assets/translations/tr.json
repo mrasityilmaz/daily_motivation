@@ -108,13 +108,13 @@
 		"religion": "Din"
 	},
 	"weekdays": {
-		"1wd": "Pzt",
-		"2wd": "Sal",
-		"3wd": "Çar",
-		"4wd": "Per",
-		"5wd": "Cum",
-		"6wd": "Cmt",
-		"7wd": "Paz"
+		"1": "Pzt",
+		"2": "Sal",
+		"3": "Çar",
+		"4": "Per",
+		"5": "Cum",
+		"6": "Cmt",
+		"7": "Paz"
 	},
 	"sign": {
 		"sign_in": "Giriş Yap",
@@ -179,5 +179,24 @@
 	"validations": {
 		"notification_message_cannot_be_empty": "Mesaj boş olamaz",
 		"notification_message_cannot_be_smaller_than_3": "Mesaj 3 karakterden küçük olamaz"
-	}
+	},
+	"errors": {
+		"unknown_error": "Bilinmeyen hata oluştu",
+		"firebase_auth_exception": {
+			"invalid_email": "Geçersiz e-posta adresi",
+			"user_disabled": "Kullanıcı devre dışı bırakıldı",
+			"user_not_found": "Bu e-posta adresine karşılık gelen bir kullanıcı bulunamadı",
+			"wrong_password": "Hatalı şifre veya e-posta adresi",
+			"too_many_requests": "Çok fazla istek gönderildi, lütfen daha sonra tekrar deneyin",
+			"user_token_expired": "Kullanıcı oturumu sona erdi",
+			"network_request_failed": "Ağ hatası oluştu",
+			"INVALID_LOGIN_CREDENTIALS": "Hatalı şifre veya e-posta adresi",
+			"invalid_credential": "Hatalı şifre veya e-posta adresi",
+			"operation_not_allowed": "E-posta/şifre hesapları etkin değil.",
+			"email_already_in_use": "Bu e-posta adresiyle zaten bir hesap var.",
+			"weak_password": "Şifre yeterince güçlü değil."
+		}
+	},
+	"watch_ad": "Reklam izle",
+	"watch_ad_to_unlock": "Kilidi açmak için reklam izleyin\nveya\nPremium'a yükseltin"
 }
